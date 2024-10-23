@@ -9,6 +9,7 @@ import {
   navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
 import { Button } from "./ui/button";
+import ArrowIcon from "./arrow";
 
 const services = [
   { title: "Cloud Consulting", href: "#cloud-consulting" },
@@ -83,16 +84,18 @@ const Navbar = () => {
                   Blog
                 </NavigationMenuLink>
               </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  className={navigationMenuTriggerStyle()}
+                  href="#blog"
+                >
+                  <Button className="w-fit border border-black  flex items-center justify-center px-8 py-3  text-base font-medium rounded-full text-white bg-orange-600 hover:bg-orange-700 md:py-4 md:text-lg md:px-10">
+                    Contact <ArrowIcon />
+                  </Button>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          <div className="hidden sm:ml-6 sm:flex sm:items-center">
-            <Button
-              variant="default"
-              className="bg-orange-600 hover:bg-orange-500"
-            >
-              CONTACT →
-            </Button>
-          </div>
         </div>
       </div>
     </nav>

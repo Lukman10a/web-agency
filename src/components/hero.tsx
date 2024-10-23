@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import ArrowIcon from "./arrow";
 
 const Hero = () => {
   return (
@@ -18,16 +19,20 @@ const Hero = () => {
         <div className="sm:mt-5 font-mono mt-8 flex justify-center items-center gap-4">
           <Button
             asChild
-            className="w-fit flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-orange-600 hover:bg-orange-700 md:py-4 md:text-lg md:px-10"
+            className="w-fit border border-black  flex items-center justify-center px-8 py-3  text-base font-medium rounded-full text-white bg-orange-600 hover:bg-orange-700 md:py-4 md:text-lg md:px-10"
           >
-            <Link href="#">OUR SERVICES →</Link>
+            <Link href="#">
+              OUR SERVICES <ArrowIcon />
+            </Link>
           </Button>
           <Button
             asChild
             variant={"outline"}
             className="w-fit flex items-center justify-center px-8 py-3 rounded-full text-base font-medium text-white md:py-4 md:text-lg md:px-10"
           >
-            <Link href="#">GET A FREE CONSULTATION →</Link>
+            <Link href="#">
+              GET A FREE CONSULTATION <ArrowIcon />
+            </Link>
           </Button>
         </div>
       </div>
