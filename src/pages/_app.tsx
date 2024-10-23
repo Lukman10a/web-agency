@@ -1,6 +1,21 @@
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import TopBanner from "@/components/top-banner";
+import { sora, notoSans, notoSansMono } from "@/lib/utils";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <div
+      className={`${sora.variable} ${notoSans.variable} ${notoSansMono.variable} flex flex-col min-h-screen bg-white font-sans`}
+    >
+      <TopBanner />
+      <Navbar />
+      <main className="flex-grow">
+        <Component {...pageProps} />
+      </main>
+      <Footer />
+    </div>
+  );
 }
