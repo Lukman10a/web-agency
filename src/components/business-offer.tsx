@@ -1,8 +1,8 @@
 import React from "react";
 import HomeCard from "./home-card";
-import Cardimage1 from "/public/assets/Cardimage1.png";
-import Cardimage2 from "/public/assets/Cardimage2.png";
-import Cardimage3 from "/public/assets/Cardimage3.png";
+import Cardimage1 from "/public/assets/cardimage1.png";
+import Cardimage2 from "/public/assets/cardimage2.png";
+import Cardimage3 from "/public/assets/cardimage3.png";
 
 const BusinessOffer = () => {
   const cardData = [
