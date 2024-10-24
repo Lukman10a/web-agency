@@ -7,7 +7,7 @@ import ArrowIcon from "@/components/icons/arrow";
 export default function Solution() {
   return (
     <section>
-      <div className="flex lg:flex-col items-center gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12">
+      <div className="flex md:flex-col items-center gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12">
         <article className="space-y-10">
           <h1 className="font-sora font-extrabold text-6xl animate-fade-in-up">
             <span className="block">Migrate, Optimize,</span>
