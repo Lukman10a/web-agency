@@ -21,7 +21,7 @@ const SecurityCertifications: React.FC = () => {
         </p>
       </header>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-4 gap-4 lg:grid-cols-2 sm:grid-cols-1">
         {[...Array(8)].map((_, index) => (
           <div
             key={index}
