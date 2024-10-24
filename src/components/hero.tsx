@@ -5,7 +5,7 @@ import ArrowIcon from "./icons/arrow";
 
 const Hero = () => {
   return (
-    <main className="bg-darkblue-850 w-11/12 rounded-xl  mx-auto max-w-7xl md:px-4  px-10 py-28">
+    <section className="bg-darkblue-850  rounded-xl  max-w-7xl md:px-4 px-10 mx-10 py-28">
       <div className="text-center">
         <h1 className="tracking-tight font-extrabold text-white md:text-5xl text-6xl">
           <span className="block">SECURE YOUR CLOUD,</span>
@@ -36,7 +36,7 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 
