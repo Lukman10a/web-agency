@@ -9,7 +9,7 @@ import {
   navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
 import { Button } from "./ui/button";
-import ArrowIcon from "./arrow";
+import ArrowIcon from "./icons/arrow";
 
 const services = [
   { title: "Cloud Consulting", href: "#cloud-consulting" },
