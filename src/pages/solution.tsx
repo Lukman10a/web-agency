@@ -16,7 +16,7 @@ export default function Solution() {
           <p className="font-medium text-xl animate-fade-in-up delay-[200ms] font-sans">
             We make sure you receive a tailor-made & cost-efficient cloud
             environment that is secure, scalable, easy to operate, and
-            built-to-last.
+            built-to-last
           </p>
           <Button className="border border-[#081348] flex gap-4 items-center bg-orange-650 w-fit rounded-2xl text-white transition duration-500 transform hover:scale-105 hover:bg-orange-600">
             <span>EXPLORE</span>
