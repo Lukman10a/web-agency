@@ -30,8 +30,8 @@ const navItems: NavItem[] = [
       { title: "Managed Consulting", href: "#managed-consulting" },
     ],
   },
-  { title: "About Us", href: "#about-us" },
-  { title: "Case Studies", href: "#case-studies" },
+  { title: "About Us", href: "about-us" },
+  { title: "Case Studies", href: "case-studies" },
   { title: "FAQ", href: "#faq" },
   { title: "Blog", href: "#blog" },
   {

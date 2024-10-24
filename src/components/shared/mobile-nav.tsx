@@ -31,16 +31,16 @@ export function MobileNav({ navItems, logo, siteName }: MobileNavProps) {
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="pr-0 bg-white ">
+      <SheetContent side="right" className="pr-0 bg-white font-mono">
         <MobileLink
           href="/"
           className="flex items-center"
           onOpenChange={setOpen}
         >
           {logo && <div className="mr-2 h-4 w-4">{logo}</div>}
-          <span className="font-bold">{siteName}</span>
+          <span className="font-bold text-orange-650">{siteName}</span>
         </MobileLink>
-        <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
+        <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6 ">
           <div className="flex flex-col space-y-2">
             {navItems.map((item, index) => (
               <div key={index} className="flex flex-col space-y-2 pt-6">
