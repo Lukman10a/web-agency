@@ -34,7 +34,7 @@ const BusinessOffer = () => {
   ];
 
   return (
-    <section className=" w-11/12 max-w-7xl mx-auto">
+    <section className=" w-11/12 max-w-7xl mx-auto overflow-hidden">
       <div className="relative p-[5em] sm:p-[2em] bg-gradient-to-r from-[#e3e7f7] to-[#fae8de] text-center w-full  rounded-2xl mb-[3em]">
         <BorderTrail
           style={{

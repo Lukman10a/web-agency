@@ -8,17 +8,17 @@ import WaveReveal from "./ui/wave-reveal";
 const Hero = () => {
   return (
     <Fragment>
-      <header className="bg-darkblue-850 rounded-xl max-w-7xl md:px-4 px-10  py-28 mx-auto">
+      <header className="bg-darkblue-850 rounded-xl max-w-7xl md:px-4 px-10 py-28 mx-auto w-full">
         <div className="text-center">
           <h1 className="tracking-tight font-sora font-extrabold text-white md:text-3xl text-6xl">
             <WaveReveal
               mode="word"
-              className="text-foreground md:text-3xl text-6xl"
+              className="text-foreground overflow-hidden"
               text="SECURE YOUR CLOUD,"
             />
             <WaveReveal
               mode="word"
-              className="text-foreground md:text-3xl text-6xl"
+              className="overflow-hidden"
               text="PROTECT YOUR BUSINESS"
             />
             {/* <span className="block">SECURE YOUR CLOUD,</span>
@@ -50,7 +50,7 @@ const Hero = () => {
           </div>
         </div>
       </header>
-      <div className="my-7 max-w-7xl mx-auto">
+      <div className="my-7 max-w-7xl mx-auto overflow-hidden">
         <PartnersSlider />
       </div>
     </Fragment>

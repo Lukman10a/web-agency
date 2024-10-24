@@ -23,48 +23,40 @@ export interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  {
-    title: "Services",
-    items: [
-      { title: "Cloud Consulting", href: "#cloud-consulting" },
-      { title: "Security Consulting", href: "#security-consulting" },
-      { title: "Managed Consulting", href: "#managed-consulting" },
-    ],
-  },
+  // {
+  //   title: "Services",
+  //   items: [
+  //     { title: "Cloud Consulting", href: "#cloud-consulting" },
+  //     { title: "Security Consulting", href: "#security-consulting" },
+  //     { title: "Managed Consulting", href: "#managed-consulting" },
+  //   ],
+  // },
   { title: "Solution", href: "/solution" },
-  { title: "About Us", href: "about-us" },
+  { title: "About Us", href: "/about-us" },
   { title: "Case Studies", href: "case-studies" },
   { title: "FAQ", href: "#faq" },
-  { title: "Blog", href: "#blog" },
-  {
-    title: "Contact",
-    href: "#contact",
-    disabled: false, // You can set this based on conditions
-    label: "Get in touch",
-  },
+  { title: "Blog", href: "/blog" },
 ];
 
 const Navbar = () => {
   return (
     <nav className="bg-white shadow-md px-6 text-black font-mono sm:px-6 lg:px-8">
       <div className="flex justify-between items-center h-16 max-w-7xl mx-auto">
-        <div className="flex">
-          <Link href="/">
-            <div className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-orange-600">
-                Teverse
-              </span>
-            </div>
-          </Link>
-        </div>
+        <Link href="/">
+          <div className="flex-shrink-0 flex items-center">
+            <span className="text-2xl font-bold text-orange-600 font-mono">
+              Teverse
+            </span>
+          </div>
+        </Link>
 
         {/* Mobile Navigation */}
-        <div className="md:flex hidden">
+        <div className="2md:flex hidden">
           <MobileNav navItems={navItems} siteName="Teverse" />
         </div>
 
         {/* Desktop Navigation */}
-        <div className="md:hidden">
+        <div className="2md:hidden">
           <NavigationMenu>
             <NavigationMenuList>
               {navItems.map((item) => (
