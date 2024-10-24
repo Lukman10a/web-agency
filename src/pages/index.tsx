@@ -5,6 +5,7 @@ import Testimonials from "@/components/what-client";
 import FAQSection from "@/components/FAQ";
 import WhyChooseUs from "@/components/why-choose-us";
 
+
 export default function Home() {
   return (
     <main className="flex flex-col mx-auto">
@@ -14,6 +15,7 @@ export default function Home() {
       <SecurityCertifications />
       <Testimonials />
       <FAQSection />
+      
     </main>
   );
 }

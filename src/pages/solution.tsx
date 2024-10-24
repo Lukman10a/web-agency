@@ -4,6 +4,9 @@ import solutionHero from "../../public/assets/solution-hero.png";
 import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/components/icons/arrow";
 import { StickyScrollRevealDemo } from "@/components/shared/solutions-list-scroll";
+import CloudPlatformSection from "@/components/page-two";
+import LARABuildingBlocks from "@/components/BuildingBlocks";
+import ContactSection from "@/components/lets-talk";
 
 export default function Solution() {
   return (
@@ -31,6 +34,9 @@ export default function Solution() {
         />
       </div>
       <StickyScrollRevealDemo />
+      <CloudPlatformSection />
+      <LARABuildingBlocks />
+      <ContactSection />
     </section>
   );
 }
