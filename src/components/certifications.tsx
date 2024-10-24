@@ -5,13 +5,13 @@ import Image from "next/image";
 const SecurityCertifications: React.FC = () => {
   return (
     <section
-      className="bg-[#FF9557]  p-16 px-24 space-y-4 text-center"
+      className="bg-[#FF9557]  p-16 px-24 space-y-4 text-center sm:p-12"
       aria-labelledby="certifications-heading"
     >
       <header>
         <h2
           id="certifications-heading"
-          className="md:text-5xl text-2xl font-extrabold py-4"
+          className="md:text-5xl sm:text-2xl text-2xl font-extrabold py-4"
         >
           Security Certifications
         </h2>
