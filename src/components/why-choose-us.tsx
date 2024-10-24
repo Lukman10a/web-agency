@@ -43,7 +43,10 @@ export default function WhyChooseUs() {
       </h2>
 
       {/* Benefits Section */}
-      <section className="flex gap-10 p-16" aria-labelledby="benefits-heading">
+      <section
+        className="sm:px-6 lg:px-8 flex lg:flex-col gap-10 p-16"
+        aria-labelledby="benefits-heading"
+      >
         {benefits.map((benefit, index) => (
           <article
             key={index}
@@ -58,14 +61,14 @@ export default function WhyChooseUs() {
 
       {/* Case Study Section */}
       <section
-        className="flex items-center m-10 rounded-lg gap-10 p-4 bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)]"
+        className="lg:flex-col flex items-center m-10 rounded-lg gap-10 p-4 bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] lg:py-10"
         aria-labelledby="case-study-heading"
       >
         <div className="flex-1">
           <Image src={securityImg} alt="Security Image" className="w-[550px]" />
         </div>
 
-        <div className="space-y-8 flex-1">
+        <div className="space-y-8 flex-1 flex flex-col lg:text-center lg:items-center ">
           <h3
             id="case-study-heading"
             className="text-5xl md:text-3xl font-semibold"
@@ -96,13 +99,13 @@ export default function WhyChooseUs() {
         >
           Leading Brands Trust Us
         </h2>
-        <div className="flex justify-center gap-12 flex-wrap">
+        <div className="grid grid-cols-4 sm:grid-cols-2 gap-12 place-items-center">
           {[lightbox, featherdev, boltshift, globalbank].map((brand, index) => (
             <Image
               key={index}
               src={brand}
               alt={`Brand ${index}`}
-              className="w-36"
+              className="w-36 "
             />
           ))}
         </div>
