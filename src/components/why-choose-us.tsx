@@ -9,7 +9,7 @@ import featherdev from "../../public/images/featherdev.svg";
 import boltshift from "../../public/images/boltshift.svg";
 import globalbank from "../../public/images/globalbank.svg";
 import ArrowIcon from "./icons/arrow";
-import { Button } from "./shared/button";
+import { Button } from "./ui/button";
 
 const benefits = [
   {

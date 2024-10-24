@@ -9,7 +9,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "../ui/navigation-menu";
-import { Button } from "./button";
+import { Button } from "../ui/button";
 import ArrowIcon from "../icons/arrow";
 import { MobileNav } from "./mobile-nav"; // Import MobileNav
 

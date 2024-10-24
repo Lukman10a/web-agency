@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Button } from "./button";
+import { Button } from "../ui/button";
 import { ScrollArea } from "../ui/scroll-area";
 import { NavItem } from "./navbar";
 import { Menu } from "lucide-react";
