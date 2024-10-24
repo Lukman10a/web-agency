@@ -1,9 +1,8 @@
+import BusinessOffer from "@/components/business-offer";
 import Hero from "@/components/hero";
 import Testimonials from "@/components/what-client";
 import SecurityCertifications from "@/components/certifications";
 import KeyBenefits from "@/components/why-choose";
-import FAQSection from "@/components/FAQ";
-
 
 export default function Home() {
   return (
@@ -12,8 +11,6 @@ export default function Home() {
       <KeyBenefits />
       <SecurityCertifications />
       <Testimonials />
-      <FAQSection />
-      
     </main>
   );
 }
