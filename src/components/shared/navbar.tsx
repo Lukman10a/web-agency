@@ -33,7 +33,7 @@ const navItems: NavItem[] = [
   // },
   { title: "Solution", href: "/solution" },
   { title: "About Us", href: "/about-us" },
-  { title: "Case Studies", href: "case-studies" },
+  { title: "Case Studies", href: "/case-studies" },
   { title: "FAQ", href: "#faq" },
   { title: "Blog", href: "/blog" },
 ];
@@ -44,9 +44,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center h-16 max-w-7xl mx-auto">
         <Link href="/">
           <div className="flex-shrink-0 flex items-center">
-            <span className="text-2xl font-bold text-orange-600 font-mono">
-              Teverse
-            </span>
+            <span className="text-2xl font-bold text-orange-600">Teverse</span>
           </div>
         </Link>
 

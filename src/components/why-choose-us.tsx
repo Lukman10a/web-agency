@@ -1,13 +1,13 @@
 import Image from "next/image";
 import React from "react";
-import efficiency from "../../public/images/efficiency.svg";
-import security from "../../public/images/security.svg";
-import expert from "../../public/images/expert.svg";
-import securityImg from "../../public/images/securityImg.png";
-import lightbox from "../../public/images/lightbox.svg";
-import featherdev from "../../public/images/featherdev.svg";
-import boltshift from "../../public/images/boltshift.svg";
-import globalbank from "../../public/images/globalbank.svg";
+import efficiency from "../../public/svg/efficiency.svg";
+import security from "../../public/svg/security.svg";
+import expert from "../../public/svg/expert.svg";
+import securityImg from "../../public/assets/securityImg.png";
+import lightbox from "../../public/svg/lightbox.svg";
+import featherdev from "../../public/svg/featherdev.svg";
+import boltshift from "../../public/svg/boltshift.svg";
+import globalbank from "../../public/svg/globalbank.svg";
 import ArrowIcon from "./icons/arrow";
 import { Button } from "./ui/button";
 

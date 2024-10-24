@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import solutionHero from "../../public/images/solution-hero.png";
+import solutionHero from "../../public/assets/solution-hero.png";
 import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/components/icons/arrow";
+import { StickyScrollRevealDemo } from "@/components/shared/solutions-list-scroll";
 
 export default function Solution() {
   return (
@@ -29,6 +30,7 @@ export default function Solution() {
           className="animate-fade-in-up delay-[500ms]"
         />
       </div>
+      <StickyScrollRevealDemo />
     </section>
   );
 }

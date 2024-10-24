@@ -1,5 +1,5 @@
 import React from "react";
-import amplitude from "../../public/images/amplitude.svg";
+import amplitude from "../../public/svg/amplitude.svg";
 import Image from "next/image";
 
 const SecurityCertifications: React.FC = () => {

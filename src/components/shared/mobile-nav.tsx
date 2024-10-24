@@ -44,7 +44,9 @@ export function MobileNav({ navItems, logo, siteName }: MobileNavProps) {
           <div className="flex flex-col space-y-2">
             {navItems.map((item, index) => (
               <div key={index} className="flex flex-col space-y-2 pt-6">
-                <h4 className="font-medium">{item.title}</h4>
+                <Link href={item.href as string} className="font-medium">
+                  {item.title}
+                </Link>
                 {item.items?.map((subItem) => (
                   <React.Fragment key={subItem.href}>
                     {!subItem.disabled && (
