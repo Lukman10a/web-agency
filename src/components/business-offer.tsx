@@ -1,5 +1,8 @@
 import React from "react";
 import HomeCard from "./home-card";
+import Cardimage1 from "../../public/assets/Cardimage1.png";
+import Cardimage2 from "../../public/assets/Cardimage2.png";
+import Cardimage3 from "../../public/assets/Cardimage3.png";
 
 const BusinessOffer = () => {
   const cardData = [
@@ -9,7 +12,7 @@ const BusinessOffer = () => {
         "Unlock the full potential of the cloud with our tailored strategies that streamline your operations and optimize costs. From cloud strategy and migration to multi-cloud solutions, we help you build a robust, scalable cloud environment that supports your business goals.",
       buttonText: "Explore Cloud Solutions",
       buttonLink: "/cloud",
-      imageSrc: "/assets/Cardimage1.png",
+      imageSrc: Cardimage1,
     },
     {
       title: "SECURITY CONSULTING",
@@ -17,7 +20,7 @@ const BusinessOffer = () => {
         "Safeguard your business with comprehensive security solutions tailored to your needs. We thoroughly assess and identify potential vulnerabilities in your systems, design robust and scalable security architectures, and implement solutions that protect your assets. ",
       buttonText: "Strengthen Security",
       buttonLink: "/security",
-      imageSrc: "/assets/Cardimage2.png",
+      imageSrc: Cardimage2,
     },
     {
       title: "MANAGED CONSULTING",
@@ -25,7 +28,7 @@ const BusinessOffer = () => {
         "Our 24/7 managed security services provide continuous protection against cyber threats, ensuring your business stays secure at all times. With real-time monitoring and proactive threat detection, we safeguard your operations so you can focus on growing your business while we take care of all your security needs",
       buttonText: "See Security Plans",
       buttonLink: "/managed",
-      imageSrc: "/assets/Cardimage3.png",
+      imageSrc: Cardimage3,
     },
   ];
 

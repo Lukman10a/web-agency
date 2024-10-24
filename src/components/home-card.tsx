@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import Link from "next/link";
 import { Button } from "./shared/button";
@@ -9,7 +9,7 @@ type HomeCardProps = {
   description: string;
   buttonText: string;
   buttonLink: string;
-  imageSrc: string;
+  imageSrc: string | StaticImageData;
   index: number;
 };
 const HomeCard: React.FC<HomeCardProps> = ({
