@@ -79,7 +79,7 @@ export default function WhyChooseUs() {
             controls, reducing incidents and boosting compliance.
           </p>
           <Button className="border  border-[#081348] flex gap-4 items-center bg-orange-650 w-fit rounded-2xl text-white ">
-            <span>Discover Solution</span>
+            <span>Discover Solutions</span>
             <ArrowIcon />
           </Button>
         </div>
