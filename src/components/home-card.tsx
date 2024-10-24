@@ -1,9 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import image from "../../public/assets/Container.png";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import ArrowIcon from "./arrow";
+import ArrowIcon from "./icons/arrow";
 
 type HomeCardProps = {
   title: string;
@@ -25,7 +24,8 @@ const HomeCard: React.FC<HomeCardProps> = ({
     <div
       className={`flex sm:flex-col gap-10 md:gap-4 bg-[#fcfcfc] border border-[#fcfcf] p-[1.2em] rounded-2xl mx-auto max-w-[95%] mb-[1.5em]  ${
         index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-      }`}>
+      }`}
+    >
       <div className=" w-2/5 md:w-1/2 sm:w-full  mb-0">
         <Image
           src={imageSrc}
@@ -44,7 +44,8 @@ const HomeCard: React.FC<HomeCardProps> = ({
         </p>
         <Button
           asChild
-          className="w-fit border border-black  flex items-center justify-center   text-[.9rem] 2md:text-[.7rem] font-light rounded-full text-white bg-orange-600 hover:bg-orange-700 mb-5">
+          className="w-fit border border-black  flex items-center justify-center   text-[.9rem] 2md:text-[.7rem] font-light rounded-full text-white bg-orange-600 hover:bg-orange-700 mb-5"
+        >
           <Link href={buttonLink}>
             {buttonText} <ArrowIcon />
           </Link>

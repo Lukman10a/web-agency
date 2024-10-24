@@ -72,8 +72,8 @@ export default function WhyChooseUs() {
             Security Architecture
           </h2>
           <p>
-            We improved a financial firm's security by implementing a custom
-            architecture with advanced threat detection and strict access
+            We improved a financial firm&apos;s security by implementing a
+            custom architecture with advanced threat detection and strict access
             controls, reducing incidents and boosting compliance.
           </p>
           <div className="border-[0.85px] border-[#081348] flex gap-4 items-center bg-orange-650 w-fit rounded-2xl text-white p-2 py-4">
