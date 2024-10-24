@@ -136,6 +136,10 @@ const config: Config = {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        gradient: {
+          "100": "hsla(22, 100%, 67%, 0.1)",
+          "200": "hsla(230, 80%, 16%, 0.1)"
+        }
       },
       gridTemplateColumns: {
         repeat4: "repeat(4, minmax(100px, 500px))",
