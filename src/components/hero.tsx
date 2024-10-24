@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Button } from "./ui/button";
+import { Button } from "./shared/button";
 import Link from "next/link";
 import ArrowIcon from "./icons/arrow";
 import lightbox from "../../public/images/lightbox.svg";

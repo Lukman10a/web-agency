@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button } from "./shared/button";
 import ArrowIcon from "./icons/arrow";
 
 type HomeCardProps = {

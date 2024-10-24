@@ -8,7 +8,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
-import { Button } from "./ui/button";
+import { Button } from "./shared/button";
 import ArrowIcon from "./icons/arrow";
 
 const services = [
