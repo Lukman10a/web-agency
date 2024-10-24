@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import React from 'react';
-import { FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa'; // For social icons
-import Link from 'next/link';
+import Image from "next/image";
+import React from "react";
+import { FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa"; // For social icons
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
@@ -9,10 +9,16 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 sm:grid-cols-1 gap-8">
           {/* Logo and Newsletter Section */}
-          <div className='py-5'>
-            <Image src='/assets/logo.png' width={150} height={150} alt='brand logo'/>
+          <div className="py-5">
+            <Image
+              src="/assets/logo.png"
+              width={150}
+              height={150}
+              alt="brand logo"
+            />
             <p className="mt-4 text-sm text-neutral-400">
-              Subscribe to our newsletter and get a 20% <br /> discount coupon for your next order.
+              Subscribe to our newsletter and get a 20% <br /> discount coupon
+              for your next order.
             </p>
             <Link
               href="mailto:hi@teversemultiuniverse"
@@ -50,33 +56,35 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className='flex justify-evenly'>
-          {/* Contact Us Section */}
-          <div>
-            <h4 className="text-lg font-semibold">Contact us</h4>
-            <p className="mt-2 text-sm text-neutral-400 ">contact@teversemulti</p>
-            <p className="text-sm text-neutral-400 py-3">+421 221 020 694</p>
-          </div>
+          <div className="grid grid-cols-3 lg:grid-cols-2">
+            {/* Contact Us Section */}
+            <div>
+              <h4 className="text-lg font-semibold">Contact us</h4>
+              <p className="mt-2 text-sm text-neutral-400 ">
+                contact@teversemulti
+              </p>
+              <p className="text-sm text-neutral-400 py-3">+421 221 020 694</p>
+            </div>
 
-          {/* Our Services Section */}
-          <div>
-            <h4 className="text-lg font-semibold">Our Services</h4>
-            <ul className="mt-2 space-y-2 text-neutral-400">
-              <li>Migration</li>
-              <li>Optimization</li>
-              <li>Kickstart</li>
-            </ul>
-          </div>
+            {/* Our Services Section */}
+            <div>
+              <h4 className="text-lg font-semibold">Our Services</h4>
+              <ul className="mt-2 space-y-2 text-neutral-400">
+                <li>Migration</li>
+                <li>Optimization</li>
+                <li>Kickstart</li>
+              </ul>
+            </div>
 
-          {/* Other Section */}
-          <div>
-            <h4 className="text-lg font-semibold">Other</h4>
-            <ul className="mt-2 space-y-2 text-neutral-400">
-              <li>Privacy Policies</li>
-              <li>Change Consents</li>
-            </ul>
+            {/* Other Section */}
+            <div>
+              <h4 className="text-lg font-semibold">Other</h4>
+              <ul className="mt-2 space-y-2 text-neutral-400">
+                <li>Privacy Policies</li>
+                <li>Change Consents</li>
+              </ul>
+            </div>
           </div>
-        </div>
         </div>
 
         {/* Copyright Section */}
