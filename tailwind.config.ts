@@ -138,8 +138,8 @@ const config: Config = {
         },
         gradient: {
           "100": "hsla(22, 100%, 67%, 0.1)",
-          "200": "hsla(230, 80%, 16%, 0.1)"
-        }
+          "200": "hsla(230, 80%, 16%, 0.1)",
+        },
       },
       gridTemplateColumns: {
         repeat4: "repeat(4, minmax(100px, 500px))",
@@ -150,6 +150,23 @@ const config: Config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      transitionTimingFunction: {
+        "minor-spring": "cubic-bezier(0.18,0.89,0.82,1.04)",
+      },
+      keyframes: {
+        "reveal-up": {
+          "0%": { opacity: "0", transform: "translateY(80%)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "reveal-down": {
+          "0%": { opacity: "0", transform: "translateY(-80%)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "content-blur": {
+          "0%": { filter: "blur(0.3rem)" },
+          "100%": { filter: "blur(0)" },
+        },
       },
     },
   },

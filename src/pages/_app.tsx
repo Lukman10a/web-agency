@@ -1,5 +1,5 @@
 import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/shared/navbar";
 import TopBanner from "@/components/top-banner";
 import { sora, notoSans, notoSansMono } from "@/lib/utils";
 import "@/styles/globals.css";
