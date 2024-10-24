@@ -12,6 +12,7 @@ import {
 import { Button } from "../ui/button";
 import ArrowIcon from "../icons/arrow";
 import { MobileNav } from "./mobile-nav"; // Import MobileNav
+import Link from "next/link";
 
 export interface NavItem {
   title: string;
@@ -30,6 +31,7 @@ const navItems: NavItem[] = [
       { title: "Managed Consulting", href: "#managed-consulting" },
     ],
   },
+  { title: "Solution", href: "/solution" },
   { title: "About Us", href: "about-us" },
   { title: "Case Studies", href: "case-studies" },
   { title: "FAQ", href: "#faq" },
@@ -47,9 +49,13 @@ const Navbar = () => {
     <nav className="bg-white shadow-md px-6 text-black font-mono sm:px-6 lg:px-8">
       <div className="flex justify-between items-center h-16 max-w-7xl mx-auto">
         <div className="flex">
-          <div className="flex-shrink-0 flex items-center">
-            <span className="text-2xl font-bold text-orange-600">Teverse</span>
-          </div>
+          <Link href="/">
+            <div className="flex-shrink-0 flex items-center">
+              <span className="text-2xl font-bold text-orange-600">
+                Teverse
+              </span>
+            </div>
+          </Link>
         </div>
 
         {/* Mobile Navigation */}
