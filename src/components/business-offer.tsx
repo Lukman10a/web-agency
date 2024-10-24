@@ -45,10 +45,11 @@ const BusinessOffer = () => {
         Services designed to <br /> Grow your business
       </h1>
 
-      <div className="items-center justify-center min-h-screen py-2">
+      <div className="items-center justify-center py-2">
         <div className=" justify-center">
           {cardData.map((card, index) => (
             <HomeCard
+              key={index}
               title={card.title}
               description={card.description}
               buttonText={card.buttonText}
