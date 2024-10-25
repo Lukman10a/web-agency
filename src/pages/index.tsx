@@ -4,6 +4,7 @@ import Hero from "@/components/hero";
 import Testimonials from "@/components/what-client";
 import FAQSection from "@/components/FAQ";
 import WhyChooseUs from "@/components/why-choose-us";
+import Booking from "@/components/booking";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <SecurityCertifications />
       <Testimonials />
       <FAQSection />
+      <Booking />
     </main>
   );
 }
