@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import ArrowIcon from "./icons/arrow";
 import { PartnersSlider } from "./shared/partners-slider";
-import WaveReveal from "./ui/wave-reveal";
+import WaveReveal from "./ui/animated/wave-reveal";
 
 const Hero = () => {
   return (
