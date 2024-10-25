@@ -13,6 +13,8 @@ import { Button } from "../ui/button";
 import ArrowIcon from "../icons/arrow";
 import { MobileNav } from "./mobile-nav"; // Import MobileNav
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export interface NavItem {
   title: string;
@@ -39,8 +41,15 @@ const navItems: NavItem[] = [
 ];
 
 const Navbar = () => {
+  const pathname = usePathname();
   return (
-    <nav className="bg-white shadow-md px-6 text-black font-mono sm:px-6 lg:px-8">
+    <nav
+      className={cn(
+        "bg-white shadow-md px-6 text-black font-mono sm:px-6 lg:px-8",
+        pathname !== "/" &&
+          "bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] shadow-none"
+      )}
+    >
       <div className="flex justify-between items-center h-16 max-w-7xl mx-auto">
         <Link href="/">
           <div className="flex-shrink-0 flex items-center">

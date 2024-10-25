@@ -1,7 +1,12 @@
-import React from "react";
+import OurValues from "@/components/shared/our-values";
+import React, { Fragment } from "react";
 
 const AboutUs = () => {
-  return <div>AboutUs</div>;
+  return (
+    <Fragment>
+      <OurValues />
+    </Fragment>
+  );
 };
 
 export default AboutUs;
