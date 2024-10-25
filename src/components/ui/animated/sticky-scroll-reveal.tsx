@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export const StickyScroll = ({
   content,
@@ -57,18 +58,19 @@ export const StickyScroll = ({
 
   useEffect(() => {
     setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
-  }, [activeCard, linearGradients]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeCard]);
 
   return (
     <motion.div
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-screen overflow-y-auto flex justify-center relative space-x-10 p-10"
+      className="h-[30rem]  overflow-y-auto flex justify-center sticky space-x-10 p-10 no-scrollbar px-14"
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl flex-1">
           {content.map((item, index) => (
             <div key={item.title + index} className="my-20">
               <motion.h2
@@ -78,7 +80,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-5xl font-sora font-bold text-slate-100"
+                className="text-4xl font-bold text-slate-100 md:text-2xl"
               >
                 {item.title}
               </motion.h2>
@@ -89,10 +91,13 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-lg text-slate-300 mt-10"
+                className="text-lg text-slate-300  mt-10 mb-4"
               >
                 {item.description}
               </motion.p>
+              <Link className="font-mono  text-gray-400" href={"/"}>
+                HOW IT WORKS
+              </Link>
             </div>
           ))}
           <div className="h-40" />
@@ -101,7 +106,7 @@ export const StickyScroll = ({
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "lg:hidden block h-60 w-80 rounded-md bg-white sticky top-10 overflow-hidden",
+          "lg:hidden block flex-1 h-70 w-80 rounded-md bg-white sticky top-0 overflow-hidden",
           contentClassName
         )}
       >

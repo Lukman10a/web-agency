@@ -68,10 +68,10 @@ export default function WhyChooseUs() {
           <Image src={securityImg} alt="Security Image" className="w-[550px]" />
         </div>
 
-        <div className="space-y-8 flex-1 flex flex-col lg:text-center lg:items-center ">
+        <div className="space-y-8 flex-1 flex flex-col lg:text-center lg:items-center">
           <h3
             id="case-study-heading"
-            className="text-5xl md:text-3xl font-semibold"
+            className="text-4xl md:text-2xl font-semibold"
           >
             Improved Security Posture for a Financial Firm with a Custom
             Security Architecture
