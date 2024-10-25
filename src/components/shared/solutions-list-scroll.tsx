@@ -1,5 +1,5 @@
 import React from "react";
-import { StickyScroll } from "../ui/sticky-scroll-reveal";
+import { StickyScroll } from "../ui/animated/sticky-scroll-reveal";
 import securityImg from "/public/assets/securityImg.png";
 import Image from "next/image";
 

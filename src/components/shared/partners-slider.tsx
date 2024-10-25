@@ -3,7 +3,7 @@ import featherdev from "/public/svg/featherdev.svg";
 import boltshift from "/public/svg/boltshift.svg";
 import globalbank from "/public/svg/globalbank.svg";
 import Image from "next/image";
-import Marquee from "../ui/marquee";
+import Marquee from "../ui/animated/marquee";
 
 export function PartnersSlider() {
   return (

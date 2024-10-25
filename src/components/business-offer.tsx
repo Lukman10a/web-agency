@@ -6,8 +6,7 @@ import Cardimage3 from "/public/assets/cardimage3.png";
 import { LuUploadCloud } from "react-icons/lu";
 import { GrShieldSecurity } from "react-icons/gr";
 import { BsCloudPlus } from "react-icons/bs";
-import { BorderTrail } from "./ui/border-trail";
-
+import { BorderTrail } from "./ui/animated/border-trail";
 
 const BusinessOffer = () => {
   const cardData = [
