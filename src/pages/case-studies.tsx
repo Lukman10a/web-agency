@@ -114,7 +114,7 @@ const CaseStudies = () => {
       </section>
 
       {/* Categories Section */}
-      <section className="flex items-center justify-center gap-10 p-10">
+      <section className="flex flex-wrap items-center justify-center gap-10 p-10">
         {categories.map((category, index) => (
           <p
             key={index}
