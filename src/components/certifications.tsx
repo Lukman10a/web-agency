@@ -1,17 +1,17 @@
 import React from "react";
-import amplitude from "../../public/images/amplitude.svg";
+import amplitude from "../../public/svg/amplitude.svg";
 import Image from "next/image";
 
 const SecurityCertifications: React.FC = () => {
   return (
     <section
-      className="bg-[#FF9557]  p-16 px-24 space-y-4 text-center"
+      className="bg-[#FF9557]  p-16 px-24 space-y-4 text-center sm:p-12"
       aria-labelledby="certifications-heading"
     >
       <header>
         <h2
           id="certifications-heading"
-          className="md:text-5xl text-2xl font-extrabold py-4"
+          className="md:text-5xl sm:text-2xl text-2xl font-extrabold py-4"
         >
           Security Certifications
         </h2>
@@ -21,7 +21,7 @@ const SecurityCertifications: React.FC = () => {
         </p>
       </header>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-4 gap-4 lg:grid-cols-2 sm:grid-cols-1">
         {[...Array(8)].map((_, index) => (
           <div
             key={index}
