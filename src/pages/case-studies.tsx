@@ -2,8 +2,14 @@ import ArrowIcon from "@/components/icons/arrow";
 import { Button } from "@/components/ui/button";
 import caseStudyHero from "../../public/assets/case-study-hero.png";
 import caseStudy from "../../public/assets/case-image.png";
+import lightbox from "../../public/svg/lightbox.svg";
+import featherdev from "../../public/svg/featherdev.svg";
+import boltshift from "../../public/svg/boltshift.svg";
+import globalbank from "../../public/svg/globalbank.svg";
 import Image from "next/image";
 import React from "react";
+import Testimonials from "@/components/what-client";
+import ContactSection from "@/components/lets-talk";
 
 const categories = [
   "ALL",
@@ -120,24 +126,67 @@ const CaseStudies = () => {
       </section>
 
       {/* Case Study Cards */}
-      <section className="grid grid-cols-3 gap-8 md:grid-cols-3 p-8">
-        {caseStudies.map((study) => (
-          <div
-            key={study.id}
-            className="rounded-xl shadow-lg space-y-2 bg-[#F6F2FF] p-6 "
-          >
-            <Image
-              src={study.image}
-              alt={study.title}
-              className="w-full rounded-xl bg-white"
-            />
-            <p className=" text-[#636363] py-2">{study.tags}</p>
-            <h3 className="font-semibold text-[#111827] text-2xl">
-              {study.title}
-            </h3>
-          </div>
-        ))}
+      <section>
+        <div className="grid grid-cols-3 gap-8 md:grid-cols-3 p-8">
+          {caseStudies.map((study) => (
+            <div
+              key={study.id}
+              className="rounded-xl shadow-lg space-y-2 bg-[#F6F2FF] p-6 "
+            >
+              <Image
+                src={study.image}
+                alt={study.title}
+                className="w-full rounded-xl bg-white"
+              />
+              <p className=" text-[#636363] py-2">{study.tags}</p>
+              <h3 className="font-semibold text-[#111827] text-2xl">
+                {study.title}
+              </h3>
+            </div>
+          ))}
+        </div>
+        <div className="flex justify-center py-4">
+          <Button className="border border-[#081348] flex gap-4 items-center bg-orange-650 w-fit rounded-2xl text-white ">
+            <span>SEE MORE</span>
+            <ArrowIcon />
+          </Button>
+        </div>
       </section>
+
+      {/* MORE CLIENTS */}
+      <section
+        className="py-6 pt-12 space-y-6 text-center"
+        aria-labelledby="brands-heading"
+      >
+        <h2
+          id="brands-heading"
+          className="text-5xl capitalize md:text-3xl font-medium mb-4 font-sora"
+        >
+          MORE CLIENTS
+        </h2>
+        <div className="grid grid-cols-4 sm:grid-cols-2 gap-12 place-items-center">
+          {[
+            lightbox,
+            featherdev,
+            boltshift,
+            globalbank,
+            lightbox,
+            featherdev,
+            boltshift,
+            globalbank,
+          ].map((brand, index) => (
+            <Image
+              key={index}
+              src={brand}
+              alt={`Brand ${index}`}
+              className="w-36 "
+            />
+          ))}
+        </div>
+      </section>
+
+      <Testimonials />
+      <ContactSection />
     </div>
   );
 };

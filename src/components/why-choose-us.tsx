@@ -90,7 +90,7 @@ export default function WhyChooseUs() {
 
       {/* Leading Brands Section */}
       <section
-        className="py-6 pt-12 space-y-4 text-center"
+        className="py-6 pt-12 space-y-6 text-center"
         aria-labelledby="brands-heading"
       >
         <h2
