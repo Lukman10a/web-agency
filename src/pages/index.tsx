@@ -8,14 +8,13 @@ import Booking from "@/components/booking";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-8">
+    <main className="flex flex-col mx-auto">
       <Hero />
       <BusinessOffer />
       <WhyChooseUs />
       <SecurityCertifications />
       <Testimonials />
       <FAQSection />
-      <Booking />
     </main>
   );
 }

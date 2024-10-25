@@ -3,7 +3,7 @@ import image from "../../public/assets/cardimage1.png";
 import Image, { StaticImageData } from "next/image";
 import ArrowIcon from "./icons/arrow";
 import Link from "next/link";
-import { Button } from "./shared/button";
+import { Button } from "./ui/button";
 
 const Booking = () => {
   return (
@@ -58,60 +58,6 @@ const Booking = () => {
           <p className="text-3xl font-sora font-semibold">50+</p>
           <div className="border-l border-gray-300 h-6"></div>
           <p className="text-gray-500 font-sans">AWS Projects</p>
-        </div>
-      </div>
-      <div className="bg-orange-650 py-16">
-        {/* Title */}
-        <div className="text-center mb-8">
-          <h2 className="text-4xl md:text-3xl  font-bold text-gray-900">
-            We are certified professionals
-          </h2>
-          <p className="text-lg md:text-sm text-gray-100 mt-4 w-[90%] mx-auto">
-            Your security is our priority. We hold top industry certifications
-            including
-            <br /> ISO, AWS, CISSP, and more.
-          </p>
-        </div>
-
-        {/* Certifications Badges */}
-        <div className="flex md:flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-6">
-          {/* First Row of Badges */}
-          <div className="flex space-x-6">
-            <img
-              src="/path-to-your-image/syspops-admin-badge.png"
-              alt="AWS SysOps Administrator Badge"
-              className="w-32 h-32"
-            />
-            <img
-              src="/path-to-your-image/security-badge.png"
-              alt="AWS Security Badge"
-              className="w-32 h-32"
-            />
-            <img
-              src="/path-to-your-image/solutions-architect-badge.png"
-              alt="AWS Solutions Architect Badge"
-              className="w-32 h-32"
-            />
-          </div>
-
-          {/* Second Row of Badges */}
-          <div className="flex space-x-6">
-            <img
-              src="/path-to-your-image/cloud-practitioner-badge.png"
-              alt="AWS Cloud Practitioner Badge"
-              className="w-32 h-32"
-            />
-            <img
-              src="/path-to-your-image/devops-engineer-badge.png"
-              alt="AWS DevOps Engineer Badge"
-              className="w-32 h-32"
-            />
-            <img
-              src="/path-to-your-image/data-analytics-badge.png"
-              alt="AWS Data Analytics Badge"
-              className="w-32 h-32"
-            />
-          </div>
         </div>
       </div>
     </section>
