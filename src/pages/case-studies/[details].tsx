@@ -71,7 +71,7 @@ export default function Details() {
         {categories.map((category, index) => (
           <button
             key={index}
-            className="text-lg border-[0.73px] border-[#262626] px-3 rounded-full cursor-pointer py-2 transition-all duration-300 transform hover:bg-[#FF9557] hover:scale-105 hover:text-white font-sans"
+            className="text-lg lg:text-base border-[0.73px] border-[#262626] px-3 rounded-full cursor-pointer py-2 transition-all duration-300 transform hover:bg-[#FF9557] hover:scale-105 hover:text-white font-sans"
             aria-label={`Category ${category}`}
           >
             {category}
@@ -82,7 +82,7 @@ export default function Details() {
       {/* Blog Title and Image Section */}
       <article className="text-center space-y-6">
         <header>
-          <h1 className="text-[#262626] px-24 font-sora font-semibold text-[50px]">
+          <h1 className="text-[#262626] px-24 font-sora font-semibold text-[50px] lg:text-[40px]">
             {query.title}
           </h1>
           <p>{query.tags}</p>
@@ -98,7 +98,7 @@ export default function Details() {
       </article>
 
       {/* Blog Content Section */}
-      <section className="flex gap-6 md:flex-row justify-between items-start space-y-6 md:space-y-0">
+      <section className="flex gap-6 md:flex-col justify-between items-start space-y-6 md:space-y-0">
         <aside
           aria-label="Blog Info"
           className="border-[#808080] border-2 rounded-xl p-8 py-16 text-center md:mr-6"
@@ -107,7 +107,7 @@ export default function Details() {
         </aside>
 
         <section className=" space-y-4 flex-1 text-left">
-          <h2 className="text-2xl font-bold text-[#262626]">
+          <h2 className="text-2xl lg:text-xl font-bold text-[#262626]">
             When Raiffeisenbank launched its first cloud application BAMAN, it
             marked a significant step in its strategic digital transformation.
           </h2>
@@ -133,7 +133,7 @@ export default function Details() {
         <h2 className="text-3xl font-semibold text-center text-[#262626]">
           Related Articles
         </h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 grid-cols-3 lg:grid-cols-2 sm:grid-cols-1">
           {[1, 2, 3].map((item) => (
             <article
               key={item}
