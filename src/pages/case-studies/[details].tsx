@@ -1,0 +1,167 @@
+// import { useRouter } from "next/router";
+// import blog_img from "../../../public/assets/blog_img.png";
+// import React from "react";
+// import Image from "next/image";
+
+// export default function Details() {
+//   const categories = ["ALL", "ENTERPRISES", "KICKSTART"];
+//   const { query, asPath } = useRouter();
+//   return (
+//     <div className="p-10 space-y-2">
+//       {/* Categories Section */}
+//       <section className="flex flex-wrap items-center justify-center gap-10 ">
+//         {categories.map((category, index) => (
+//           <p
+//             key={index}
+//             className="text-lg border-[0.73px] border-[#262626] px-3 rounded-full cursor-pointer p-2 transition-all duration-300 transform hover:bg-[#FF9557] hover:scale-105 hover:text-white font-sans"
+//           >
+//             {category}
+//           </p>
+//         ))}
+//       </section>
+
+//       <section className="text-center">
+//         <h1 className="text-[#262626] px-24 font-sora font-semibold text-[50px]">
+//           {query.title}
+//         </h1>
+//         <p>{query.tags}</p>
+//         <Image src={blog_img} alt="blog_img" className="py-6" />
+//         <div className="flex justify-between">
+//           <p className="border-[#808080] border-2 rounded-xl p-8 py-16 text-center">
+//             {query.title}
+//           </p>
+//           <div>
+//             <h3>
+//               When Raiffeisenbank launched its first cloud application BAMAN, it
+//               marked a significant step in its strategic digital transformation.
+//             </h3>
+//             <p>
+//               When Raiffeisenbank launched its first cloud application BAMAN, it
+//               marked a significant step in its strategic digital transformation.
+//               When Raiffeisenbank launched its first cloud application BAMAN, it
+//               marked a significant step in its strategic digital transformation.
+//               When Raiffeisenbank launched its first cloud application BAMAN, it
+//               marked a significant step in its strategic digital transformation.
+//               When Raiffeisenbank launched its first cloud application BAMAN, it
+//               marked a significant step in its strategic digital transformation.
+//             </p>
+//           </div>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// }
+
+import { useRouter } from "next/router";
+import blog_img from "../../../public/assets/blog_img.png";
+import React from "react";
+import Image from "next/image";
+
+export default function Details() {
+  const categories = ["ALL", "ENTERPRISES", "KICKSTART"];
+  const { query } = useRouter();
+
+  return (
+    <main className="p-10 space-y-8">
+      {/* Categories Section */}
+      <nav
+        aria-label="Categories"
+        className="flex flex-wrap items-center justify-center gap-4"
+      >
+        {categories.map((category, index) => (
+          <button
+            key={index}
+            className="text-lg border-[0.73px] border-[#262626] px-3 rounded-full cursor-pointer py-2 transition-all duration-300 transform hover:bg-[#FF9557] hover:scale-105 hover:text-white font-sans"
+            aria-label={`Category ${category}`}
+          >
+            {category}
+          </button>
+        ))}
+      </nav>
+
+      {/* Blog Title and Image Section */}
+      <article className="text-center space-y-6">
+        <header>
+          <h1 className="text-[#262626] px-24 font-sora font-semibold text-[50px]">
+            {query.title}
+          </h1>
+          <p>{query.tags}</p>
+        </header>
+
+        <figure className="py-6">
+          <Image
+            src={blog_img}
+            alt="Blog cover image"
+            className="rounded-lg shadow-lg"
+          />
+        </figure>
+      </article>
+
+      {/* Blog Content Section */}
+      <section className="flex gap-6 md:flex-row justify-between items-start space-y-6 md:space-y-0">
+        <aside
+          aria-label="Blog Info"
+          className="border-[#808080] border-2 rounded-xl p-8 py-16 text-center md:mr-6"
+        >
+          <p className="font-semibold">{query.title}</p>
+        </aside>
+
+        <section className=" space-y-4 flex-1 text-left">
+          <h2 className="text-2xl font-bold text-[#262626]">
+            When Raiffeisenbank launched its first cloud application BAMAN, it
+            marked a significant step in its strategic digital transformation.
+          </h2>
+          <p className="text-gray-700 leading-relaxed">
+            When Raiffeisenbank launched its first cloud application BAMAN, it
+            marked a significant step in its strategic digital transformation.
+            This cloud-based approach enables scalability, agility, and improved
+            customer experience. Leveraging CI/CD pipelines and observability
+            tools, the bank ensured seamless deployment and monitoring.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Furthermore, BAMAN aligns with the bank's long-term vision to adopt
+            cloud-native services across its operations, enhancing both internal
+            processes and customer-facing services. The adoption of cloud-based
+            strategies reflects a growing trend in the banking sector to improve
+            operational efficiency and cybersecurity.
+          </p>
+        </section>
+      </section>
+
+      {/* Related Articles Section */}
+      <section aria-label="Related Articles" className="mt-16 space-y-8">
+        <h2 className="text-3xl font-semibold text-center text-[#262626]">
+          Related Articles
+        </h2>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {[1, 2, 3].map((item) => (
+            <article
+              key={item}
+              className="bg-[#f9f9f9] p-6 rounded-lg shadow-md space-y-4"
+            >
+              <Image
+                src={blog_img}
+                alt="Related blog thumbnail"
+                className="rounded-lg"
+              />
+              <h3 className="text-xl font-bold text-[#262626]">
+                Exploring Cloud Strategies for Financial Services
+              </h3>
+              <p className="text-gray-600">
+                A deep dive into how cloud solutions are reshaping the financial
+                services industry with enhanced security, scalability, and
+                efficiency.
+              </p>
+              <a
+                href={`/blog/related-article-${item}`}
+                className="text-orange-600 font-semibold hover:underline"
+              >
+                Read more →
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+}
