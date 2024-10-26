@@ -127,7 +127,7 @@ const CaseStudies = () => {
 
       {/* Case Study Cards */}
       <section>
-        <div className="grid grid-cols-3 gap-8 md:grid-cols-3 p-8">
+        <div className="grid grid-cols-3 gap-8 sm:grid-cols-1 md:grid-cols-2 p-8">
           {caseStudies.map((study) => (
             <div
               key={study.id}
@@ -164,7 +164,7 @@ const CaseStudies = () => {
         >
           MORE CLIENTS
         </h2>
-        <div className="grid grid-cols-4 sm:grid-cols-2 gap-12 place-items-center">
+        <div className="grid grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-12 place-items-center">
           {[
             lightbox,
             featherdev,
