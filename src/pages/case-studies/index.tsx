@@ -135,11 +135,9 @@ const CaseStudies = () => {
                 pathname: `/case-studies/${study.slug}`,
                 query: { title: study.title, tags: study.tags },
               }}
+              key={study.id}
             >
-              <div
-                key={study.id}
-                className="rounded-xl shadow-lg space-y-2 bg-[#F6F2FF] p-6 "
-              >
+              <div className="rounded-xl shadow-lg space-y-2 bg-[#F6F2FF] p-6 ">
                 <Image
                   src={study.image}
                   alt={study.title}
