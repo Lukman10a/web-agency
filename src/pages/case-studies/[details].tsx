@@ -119,11 +119,11 @@ export default function Details() {
             tools, the bank ensured seamless deployment and monitoring.
           </p>
           <p className="text-gray-700 leading-relaxed">
-            Furthermore, BAMAN aligns with the bank's long-term vision to adopt
-            cloud-native services across its operations, enhancing both internal
-            processes and customer-facing services. The adoption of cloud-based
-            strategies reflects a growing trend in the banking sector to improve
-            operational efficiency and cybersecurity.
+            Furthermore, BAMAN aligns with the bank&apos;s long-term vision to
+            adopt cloud-native services across its operations, enhancing both
+            internal processes and customer-facing services. The adoption of
+            cloud-based strategies reflects a growing trend in the banking
+            sector to improve operational efficiency and cybersecurity.
           </p>
         </section>
       </section>
