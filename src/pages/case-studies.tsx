@@ -153,7 +153,7 @@ const CaseStudies = () => {
         </div>
       </section>
 
-      {/* MORE CLIENTS */}
+      {/* more clients */}
       <section
         className="py-6 pt-12 space-y-6 text-center"
         aria-labelledby="brands-heading"
