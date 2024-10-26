@@ -31,7 +31,7 @@ const ContactSection: React.FC = () => {
 
   return (
     <section className="py-16 bg-white space-y-14">
-      <div className="container mx-auto flex justify-center space-y-8 px-24">
+      <div className="container mx-auto flex justify-center space-y-8 px-24 md:px-10">
         {/* Left Side: Text */}
         <div className="container mx-auto lg:flex-col flex justify-between space-y-8">
           <div>
@@ -51,7 +51,7 @@ const ContactSection: React.FC = () => {
       </div>
 
       {/* Right Side: Form */}
-      <div className="flex justify-between px-24 space-y-8 lg:gap-8 md:flex-col">
+      <div className="flex justify-between px-24 space-y-8 lg:gap-8 md:flex-col md:px-10">
         {/* Image */}
         <div className="w-full flex">
           <Image
