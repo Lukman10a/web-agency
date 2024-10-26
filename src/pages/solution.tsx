@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { Fragment } from "react";
-import solutionHero from "../../public/assets/solution-hero.png";
+import solutionHero from "../../public/assets/solution-hero.gif";
 import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/components/icons/arrow";
 import { StickyScrollRevealDemo } from "@/components/shared/solutions-list-scroll";
@@ -12,7 +12,7 @@ export default function Solution() {
   return (
     <Fragment>
       <section className="flex md:flex-col items-center gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12">
-        <article className="space-y-10">
+        <div className="space-y-10 flex-[2]">
           <h1 className="font-sora font-extrabold text-6xl animate-fade-in-up">
             <span className="block">Migrate, Optimize,</span>
             <span className="block">Kickstart</span>
@@ -26,14 +26,18 @@ export default function Solution() {
             <span>EXPLORE</span>
             <ArrowIcon />
           </Button>
-        </article>
+        </div>
+        <div className="flex-1 rounded-lg overflow-hidden">
+          <video autoPlay loop={true} muted className="h-full w-full md:hidden">
+            <source src="/assets/solution-hero.mp4" type="video/mp4" />
+          </video>
+        </div>
         <Image
           src={solutionHero}
           alt="solution-hero"
-          className="animate-fade-in-up delay-500"
+          className="animate-fade-in-up delay-500 flex-1 rounded-lg hidden md:block"
         />
       </section>
-
       <StickyScrollRevealDemo />
       <CloudPlatformSection />
       <LARABuildingBlocks />
