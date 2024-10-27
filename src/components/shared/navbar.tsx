@@ -15,6 +15,7 @@ import { MobileNav } from "./mobile-nav"; // Import MobileNav
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export interface NavItem {
   title: string;
@@ -58,8 +59,15 @@ const Navbar = () => {
     >
       <div className="flex justify-between items-center h-16 max-w-7xl mx-auto">
         <Link href="/">
-          <div className="flex-shrink-0 flex items-center">
-            <span className="text-2xl font-bold text-orange-600">Teverse</span>
+          <div className="flex-shrink-0 flex items-center overflow-hidden">
+            <Image
+              src="/assets/logo-3.png"
+              width={200}
+              height={200}
+              alt="brand logo"
+              className="shadow-sm"
+            />
+            {/* <span className="text-2xl font-bold text-orange-600">Teverse</span> */}
           </div>
         </Link>
 
