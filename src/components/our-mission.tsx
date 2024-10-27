@@ -9,7 +9,8 @@ const Mission = () => {
       <div className="relative flex sm:flex-col gap-14 md:gap-4 p-[3em] rounded-2xl mx-auto max-w-[1300px] mb-[1.5em] ">
         <div
           className=" w-1/2 sm:w-full  mb-0 p-[1.2rem] 2md:p-4 bg-gradient-to-b from-[#0813481A] to-[#ff95572f]  rounded-3xl
-        ">
+        "
+        >
           <Image
             src={image}
             alt="Card image"
@@ -50,8 +51,8 @@ const Mission = () => {
           complex infrastructure challenges together. At some point, after
           welcoming more engineers we realized: ”Hey, we have a company!”
           Wanting to utilize our skills & knowledge, and being a “lazy” bunch
-          who doesn't want to do repetitive work, we developed LARA, our own
-          reference architecture. Today, it is the essence of our work along
+          who doesn&apos;t want to do repetitive work, we developed LARA, our
+          own reference architecture. Today, it is the essence of our work along
           with various fields of expertise, being a cloud one-stop-shop for our
           customers.
         </p>

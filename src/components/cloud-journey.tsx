@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ArrowIcon from "./icons/arrow";
 
@@ -176,8 +175,8 @@ const CloudJourney: React.FC = () => {
           </h1>
           <p className="text-[#808080] mb-6 font-sans text-[14px] ">
             Becoming cloud native might seem like an intimidating task, but
-            don't despair, we're here to guide you through the entire process of
-            your cloud journey.
+            don&apos;t despair, we&apos;re here to guide you through the entire
+            process of your cloud journey.
           </p>
         </div>
 
@@ -191,7 +190,8 @@ const CloudJourney: React.FC = () => {
                 activeTab === tab.id
                   ? "bg-orange-650 text-black hover:bg-[#081348] hover:text-white"
                   : "text-black "
-              }`}>
+              }`}
+            >
               {tab.label}
             </Button>
           ))}
@@ -205,7 +205,8 @@ const CloudJourney: React.FC = () => {
             size="icon"
             className="group rounded-full border-black hover:bg-[#081348]"
             onClick={handlePrev}
-            disabled={currentSlide === 0}>
+            disabled={currentSlide === 0}
+          >
             <ArrowIcon className="h-4 w-4 transform rotate-180 fill-black group-hover:fill-white" />
           </Button>
           <Button
@@ -216,7 +217,8 @@ const CloudJourney: React.FC = () => {
             disabled={
               activeTabContent &&
               currentSlide === activeTabContent.sliderContent.length - 1
-            }>
+            }
+          >
             <ArrowIcon className="fill-black h-4 w-4 group-hover:fill-white" />
           </Button>
         </div>
@@ -230,11 +232,13 @@ const CloudJourney: React.FC = () => {
           <div className="relative">
             <div
               ref={sliderRef}
-              className="flex gap-8  overflow-x-hidden snap-x snap-mandatory">
+              className="flex gap-8  overflow-x-hidden snap-x snap-mandatory"
+            >
               {activeTabContent.sliderContent.map((slide, index) => (
                 <div
                   key={index}
-                  className=" flex-shrink-0 max-w-[400px]  w-full snap-start mt-4">
+                  className=" flex-shrink-0 max-w-[400px]  w-full snap-start mt-4"
+                >
                   <div className="border-black rounded-lg border p-6 h-full">
                     <div className="flex justify-between">
                       <div className="text-black px-[4px] mb-2 border border-black rounded-2xl sm:text-[14px] flex justify-center items-center">

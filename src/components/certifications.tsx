@@ -1,7 +1,6 @@
 import React from "react";
 import amplitude from "../../public/svg/amplitude.svg";
 import Image from "next/image";
-import image from "../../public/assets/cardimage1.png";
 import sysops from "../../public/assets/sysops.png";
 import security from "../../public/assets/security.png";
 import archi from "../../public/assets/archi.png";
@@ -13,11 +12,13 @@ const SecurityCertifications: React.FC = () => {
   return (
     <section
       className="bg-[#FF9557] p-16 px-24 space-y-4 text-center sm:p-12"
-      aria-labelledby="certifications-heading">
+      aria-labelledby="certifications-heading"
+    >
       <header>
         <h2
           id="certifications-heading"
-          className="md:text-5xl sm:text-2xl text-2xl font-extrabold py-4">
+          className="md:text-5xl sm:text-2xl text-2xl font-extrabold py-4"
+        >
           Security Certifications
         </h2>
         <p>
@@ -30,7 +31,8 @@ const SecurityCertifications: React.FC = () => {
         {[...Array(8)].map((_, index) => (
           <div
             key={index}
-            className="rounded-xl shadow-[0px_3px_0px_0px_#050505] bg-white p-8 flex justify-center">
+            className="rounded-xl shadow-[0px_3px_0px_0px_#050505] bg-white p-8 flex justify-center"
+          >
             <Image src={amplitude} alt="Certification Logo" />
           </div>
         ))}

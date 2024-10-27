@@ -1,6 +1,6 @@
 import React from "react";
 import image from "../../public/assets/cardimage1.png";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import ArrowIcon from "./icons/arrow";
 import Link from "next/link";
 import { Button } from "./ui/button";
@@ -12,9 +12,6 @@ import devops from "../../public/assets/devops.png";
 import data from "../../public/assets/data.png";
 import star from "../../public/assets/starfour.png";
 import orangestar from "../../public/assets/orangestar.png";
-import bigstar from "../../public/assets/Star.png";
-
-import { useState } from "react";
 import CloudJourney from "./cloud-journey";
 
 const Booking = () => {
@@ -62,7 +59,8 @@ const Booking = () => {
             </p>
             <Button
               asChild
-              className="w-fit py-[1.6em] border border-black uppercase flex items-center justify-center   text-[.75rem] 2md:text-[.7rem] font-light rounded-full text-white bg-orange-600 hover:bg-orange-700">
+              className="w-fit py-[1.6em] border border-black uppercase flex items-center justify-center   text-[.75rem] 2md:text-[.7rem] font-light rounded-full text-white bg-orange-600 hover:bg-orange-700"
+            >
               <Link href="#">
                 BOOK A FREE CALL <ArrowIcon />
               </Link>

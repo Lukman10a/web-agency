@@ -55,7 +55,7 @@ const AboutUs = () => {
         />
       </section>
 
-      <ImagesReveal />
+      <ImagesReveal cards={cards} />
       <Mission />
       <AnimatedStatsBanner />
       <ImagesReveal cards={cards} />
