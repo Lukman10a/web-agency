@@ -30,7 +30,7 @@ export default function AWS() {
       description: [
         "Engineers and AWS Well Architected Design",
         "Competencies, Service Deliveries and Specializations",
-        "Case Studies and References",
+        "Case Studies and References.",
       ],
       imageSrc: Cardimage1,
     },
