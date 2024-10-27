@@ -45,7 +45,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   const isActive = (href: string) => {
-    return pathname.startsWith(href);
+    return pathname ? pathname.startsWith(href) : false; // Check for null
   };
 
   return (
