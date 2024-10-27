@@ -10,7 +10,7 @@ type HomeCardProps = {
   buttonText: string;
   buttonLink: string;
   imageSrc: string | StaticImageData;
-  titleIcon: ReactNode;
+  titleIcon?: ReactNode;
   index: number;
 };
 const HomeCard: React.FC<HomeCardProps> = ({
@@ -26,7 +26,8 @@ const HomeCard: React.FC<HomeCardProps> = ({
     <div
       className={`flex sm:flex-col gap-10 md:gap-4 bg-[#fcfcfc] border border-[#fcfcf] p-[1.2em] rounded-2xl mx-auto max-w-[95%] mb-[1.5em]  ${
         index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-      }`}>
+      }`}
+    >
       <div className=" w-2/5 md:w-1/2 sm:w-full  mb-0">
         <Image
           src={imageSrc}
@@ -50,7 +51,8 @@ const HomeCard: React.FC<HomeCardProps> = ({
         </p>
         <Button
           asChild
-          className="w-fit py-[1.6em] border border-black uppercase flex items-center justify-center   text-[.75rem] 2md:text-[.7rem] font-light rounded-full text-white bg-orange-600 hover:bg-orange-700">
+          className="w-fit py-[1.6em] border border-black uppercase flex items-center justify-center   text-[.75rem] 2md:text-[.7rem] font-light rounded-full text-white bg-orange-600 hover:bg-orange-700"
+        >
           <Link href={buttonLink}>
             {buttonText} <ArrowIcon />
           </Link>

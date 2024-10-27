@@ -56,7 +56,7 @@ const PinCard = ({
               {description}
             </p>
           </div>
-          <div className="relative flex-1 h-full w-3/4 overflow-hidden rounded-3xl">
+          <div className="relative flex-1 h-full w-3/4 overflow-hidden rounded-3xl md:w-full">
             <motion.div
               className={"w-full overflow-hidden rounded-3xl"}
               style={{ scale: imageScale }}
@@ -67,7 +67,7 @@ const PinCard = ({
                 height={300}
                 alt="project image"
                 className="w-full h-[300px]"
-                layout="responsive"
+                // layout="responsive"
                 // sizes="100vw"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
