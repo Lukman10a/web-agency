@@ -9,6 +9,7 @@ import data from "../../public/svg/data.svg";
 import devops from "../../public/svg/devops.svg";
 import mark from "../../public/svg/mark.svg";
 import Cardimage1 from "../../public/assets/cardimage1.png";
+import contact from "../../public/assets/contact.png";
 import React from "react";
 import Image from "next/image";
 
@@ -35,6 +36,20 @@ export default function AWS() {
     },
   ];
 
+  const categories = ["ALL", "ENTERPRISES", "KICKSTART"];
+
+  const consultingServices = [
+    "Performing detailed assessment and roadmap planning",
+    "Rapid deployment of your future infra - using LARA",
+    "Obtain IaC with full codebase - cost and performance optimized",
+    "Helping you get cloud-ready (replatform or refactor)",
+    "Ensuring smooth application onboarding process",
+  ];
+  const consultingServices2 = [
+    "Expert consulting in order to support the operation",
+    "Co-funding with AWS Migrations Acceleration Program (MAP)",
+  ];
+
   return (
     <div>
       {/* Hero Section */}
@@ -58,35 +73,29 @@ export default function AWS() {
         />
       </section>
 
-      {/*AWS Certifications Section */}
+      {/* AWS Certifications Section */}
       <section className="space-y-6 p-12">
         <h3 className="text-[#262626] text-center font-sora text-5xl font-semibold">
           We’re AWS certified
         </h3>
         <div className="flex justify-center flex-wrap">
-          <Image src={sysops} alt="sysops" />
-          <Image src={securityaws} alt="securityaws" />
-          <Image src={solution} alt="solution" />
-          <Image src={aws} alt="aws" />
-          <Image src={devops} alt="devops" />
-          <Image src={data} alt="data" />
+          {[sysops, securityaws, solution, aws, devops, data].map(
+            (cert, index) => (
+              <Image key={index} src={cert} alt="AWS certification" />
+            )
+          )}
         </div>
       </section>
 
-      <section
-        style={{
-          background:
-            "linear-gradient(270deg, rgba(255, 149, 87, 0.1) 0%, rgba(8, 19, 72, 0.1) 100%)",
-        }}
-        className="p-8"
-      >
+      {/* Why is this Important Section */}
+      <section className="p-8 bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)]">
         <h1 className="text-center py-12 text-5xl font-sora font-bold text-[#262626]">
           Why is this important?
         </h1>
         {cardData.map((card, index) => (
           <div
             key={index}
-            className={`flex items-center justify-between sm:flex-col  md:gap-4 bg-[#fcfcfc] border border-[#fcfcf] p-[1.2em] rounded-2xl mx-auto max-w-[95%] mb-[1.5em] ${
+            className={`flex items-center justify-between sm:flex-col md:gap-4 bg-[#fcfcfc] border border-[#fcfcf] p-[1.2em] rounded-2xl mx-auto max-w-[95%] mb-[1.5em] ${
               index % 2 === 0 ? "flex-row" : "flex-row-reverse"
             }`}
           >
@@ -101,20 +110,69 @@ export default function AWS() {
             </div>
             <div className="space-y-4 p-4">
               <h2 className="text-xl font-bold">{card.title}</h2>
-              <div className=" space-y-8">
+              <ul className="space-y-4">
                 {card.description.map((item, i) => (
-                  <div
-                    key={i}
-                    className="text-gray-700 flex items-center gap-2"
-                  >
+                  <li key={i} className="text-gray-700 flex items-center gap-2">
                     <Image src={mark} alt="mark" />
                     {item}
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
         ))}
+      </section>
+
+      {/* Categories Section */}
+      <section>
+        <div className="flex flex-wrap items-center justify-center gap-10 p-10 lg:gap-4">
+          {categories.map((category, index) => (
+            <button
+              key={index}
+              className="text-lg border border-[#262626] px-3 rounded-full cursor-pointer py-2 transition-all duration-300 transform hover:bg-[#FF9557] hover:scale-105 hover:text-white font-sans"
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+        <div className="text-center pb-4 px-8 space-y-4">
+          <h3 className="font-sora font-medium text-4xl">
+            Cloud success. With AWS.
+          </h3>
+          <p className="text-2xl px-16 lg:text-xl">
+            We guide companies on their journey when moving their product to
+            SaaS or planning an on-premise-to-cloud or cloud-to-cloud migration
+            to AWS.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 place-items-center lg:grid-cols-1">
+          <Image src={contact} alt="Contact us" className="w-[500px] md:py-2" />
+          <div className="flex gap-4 md:p-8 sm:flex-col">
+            <div className="space-y-4">
+              {consultingServices.map((service, index) => (
+                <div
+                  key={index}
+                  className="rounded-lg border border-[#081348] p-4 space-y-2"
+                >
+                  <Image src={mark} alt="mark" />
+                  <p>{service}</p>
+                </div>
+              ))}
+            </div>
+            <div className="space-y-4">
+              {consultingServices2.map((service, index) => (
+                <div
+                  key={index}
+                  className="rounded-lg border border-[#081348] p-4 space-y-2"
+                >
+                  <Image src={mark} alt="mark" />
+                  <p>{service}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
