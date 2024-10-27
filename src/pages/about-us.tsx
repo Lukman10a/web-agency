@@ -27,12 +27,12 @@ const AboutUs = () => {
   return (
     <Fragment>
       <section className="flex md:flex-col items-center gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12">
-        <div className="flex-[2] space-y-5">
+        <div className="flex-[3] space-y-5">
           <h1 className="font-sora font-extrabold text-6xl animate-fade-in-up md:text-4xl">
-            <span className="block">Behind the</span>
-            <span className="block">clouds</span>
+            <span className="block md:inline-block">Behind the </span>{" "}
+            <span className="block md:inline-block">clouds</span>
           </h1>
-          <p className="text-xl animate-fade-in-up delay-200 font-sans ">
+          <p className="text-xl animate-fade-in-up delay-200 font-mono">
             We make sure you receive a tailor-made & cost-efficient cloud
             environment that is secure, scalable, easy to operate, and
             built-to-last
@@ -42,8 +42,8 @@ const AboutUs = () => {
             <ArrowIcon />
           </Button>
         </div>
-        <div className="flex-1 rounded-lg overflow-hidden">
-          <video autoPlay loop={true} muted className="h-full w-full md:hidden">
+        <div className="flex-[2] rounded-lg overflow-hidden md:hidden">
+          <video autoPlay loop={true} muted className="h-full w-full ">
             <source src="/assets/animated-cloud.mp4" type="video/mp4" />
           </video>
         </div>

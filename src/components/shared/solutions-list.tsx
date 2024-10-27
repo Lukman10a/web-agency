@@ -19,7 +19,7 @@ export const ExpandableList = ({
   return (
     <div
       className={cn(
-        "relative flex  md:h-20   md:w-full w-20 min-w-10 cursor-pointer overflow-hidden  rounded-md transition-all delay-0 duration-300 ease-in-out",
+        "relative flex md:h-20 md:w-full w-20 min-w-10 cursor-pointer overflow-hidden  rounded-md transition-all delay-0 duration-300 ease-in-out",
         {
           "flex-grow md:h-auto": index === activeItem,
         },
@@ -28,7 +28,7 @@ export const ExpandableList = ({
       {...props}
     >
       <div
-        className="absolute inset-0 bg-black bg-opacity-25"
+        className="absolute inset-0 bg-black bg-opacity-35"
         aria-hidden="true"
       ></div>
       <Image
