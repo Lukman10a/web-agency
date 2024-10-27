@@ -182,6 +182,7 @@ export default function AWS() {
           </div>
         ))}
       </section>
+
       {/* Categories Section */}
       <section>
         <div className="flex flex-wrap items-center justify-center gap-10 p-10 lg:gap-4">
@@ -211,7 +212,7 @@ export default function AWS() {
             alt="Contact us"
             className="w-[500px] md:py-2 sm:px-6"
           />
-          <div className="flex gap-4 md:p-8 sm:flex-col">
+          <div className="flex gap-4 lg:p-10 lg:flex-col">
             <div className="space-y-3">
               {consultingServices.map((service, index) => (
                 <div
