@@ -132,7 +132,7 @@ const CaseStudies = () => {
           {caseStudies.map((study) => (
             <Link
               href={{
-                pathname: `/case-studies/${study.slug}`,
+                pathname: `/case-studies${study.slug}`,
                 query: { title: study.title, tags: study.tags },
               }}
               key={study.id}
