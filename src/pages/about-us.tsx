@@ -3,6 +3,7 @@ import OurValues from "@/components/shared/our-values";
 import React, { Fragment } from "react";
 import ArrowIcon from "@/components/icons/arrow";
 import { Button } from "@/components/ui/button";
+import Mission from "@/components/our-mission";
 
 const AboutUs = () => {
   return (
@@ -24,7 +25,9 @@ const AboutUs = () => {
           </Button>
         </div>
       </section>
+
       <ImagesReveal />
+      <Mission />
       <OurValues />
     </Fragment>
   );

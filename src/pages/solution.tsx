@@ -7,6 +7,7 @@ import { StickyScrollRevealDemo } from "@/components/shared/solutions-list-scrol
 import CloudPlatformSection from "@/components/page-two";
 import LARABuildingBlocks from "@/components/BuildingBlocks";
 import ContactSection from "@/components/lets-talk";
+import Booking from "@/components/booking";
 
 export default function Solution() {
   return (
@@ -35,6 +36,7 @@ export default function Solution() {
       </section>
 
       <StickyScrollRevealDemo />
+      <Booking />
       <CloudPlatformSection />
       <LARABuildingBlocks />
       <ContactSection />
