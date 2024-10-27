@@ -8,11 +8,15 @@ import aws from "../../public/svg/aws.svg";
 import data from "../../public/svg/data.svg";
 import devops from "../../public/svg/devops.svg";
 import mark from "../../public/svg/mark.svg";
+import black_mark from "../../public/svg/black_mark.svg";
 import Cardimage1 from "../../public/assets/cardimage1.png";
 import contact from "../../public/assets/contact.png";
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Testimonials from "@/components/what-client";
+import ContactSection from "@/components/lets-talk";
+import { Avatar, AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
 
 export default function AWS() {
   const cardData = [
@@ -51,12 +55,57 @@ export default function AWS() {
     "Co-funding with AWS Migrations Acceleration Program (MAP)",
   ];
 
+  interface Lara {
+    title: string;
+    quote: string;
+    image: string;
+  }
+
+  const lara: Lara[] = [
+    {
+      image: black_mark,
+      title: "AWS Organization and access management",
+      quote:
+        "Centrally govern your all environments, manage access rights, permissions and policies.",
+    },
+    {
+      image: black_mark,
+      title: "VPC and related services",
+      quote:
+        "Network foundation, app and edge networking, hybrid connectivity and security.",
+    },
+    {
+      image: black_mark,
+      title: "AWS Organization and access management",
+      quote:
+        "Centrally govern your all environments, manage access rights, permissions and policies.",
+    },
+    {
+      image: black_mark,
+      title: "VPC and related services",
+      quote:
+        "Network foundation, app and edge networking, hybrid connectivity and security.",
+    },
+    {
+      image: black_mark,
+      title: "Kubernetes",
+      quote:
+        "Operate kubernetes on your own infrastructure, experience ultimate scaling and cost savings.",
+    },
+    {
+      image: black_mark,
+      title: "Observability",
+      quote:
+        "Grafana, Loki, Thanos, Tempo, Opensearch, Elastic. You name it, we have it.",
+    },
+  ];
+
   return (
     <div>
       {/* Hero Section */}
-      <section className="flex md:flex-col items-center gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12">
+      <section className="flex md:flex-col items-center gap-10 lg:gap-6 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12">
         <article className="space-y-10">
-          <h1 className="font-sora font-extrabold text-6xl animate-fade-in-up">
+          <h1 className="font-sora font-extrabold text-6xl animate-fade-in-up lg:text-5xl">
             Amazon Web Services
           </h1>
           <p className="font-medium text-xl animate-fade-in-up delay-200 font-sans">
@@ -70,7 +119,7 @@ export default function AWS() {
         <Image
           src={awsHero}
           alt="case-study-hero"
-          className="animate-fade-in-up delay-500"
+          className="animate-fade-in-up delay-500 lg:w-[400px]"
         />
       </section>
 
@@ -157,29 +206,29 @@ export default function AWS() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 place-items-center lg:grid-cols-1">
+        <div className="grid grid-cols-2 place-items-center py-10 lg:grid-cols-1">
           <Image
             src={contact}
             alt="Contact us"
             className="w-[500px] md:py-2 sm:px-6"
           />
           <div className="flex gap-4 md:p-8 sm:flex-col">
-            <div className="space-y-4">
+            <div className="space-y-3">
               {consultingServices.map((service, index) => (
                 <div
                   key={index}
-                  className="rounded-lg border border-[#081348] p-4 space-y-2"
+                  className="rounded-lg border border-[#081348] p-3 space-y-2"
                 >
                   <Image src={mark} alt="mark" />
                   <p>{service}</p>
                 </div>
               ))}
             </div>
-            <div className="space-y-4">
+            <div className="space-y-3">
               {consultingServices2.map((service, index) => (
                 <div
                   key={index}
-                  className="rounded-lg border border-[#081348] p-4 space-y-2"
+                  className="rounded-lg border border-[#081348] p-3 space-y-2"
                 >
                   <Image src={mark} alt="mark" />
                   <p>{service}</p>
@@ -189,6 +238,51 @@ export default function AWS() {
           </div>
         </div>
       </section>
+
+      <section className="bg-white p-4">
+        <section className="rounded-xl bg-gradient-to-r from-gradient-100 to-gradient-200 py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                LARA building blocks{" "}
+              </h2>
+              <p className="mt-4 text-lg text-gray-600">
+                All of the componentes mentioned below are defined using
+                Infrastructure as Code, allowing for further customization and
+                reusability in different environments.{" "}
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-8 sm:grid-cols-1 md:grid-cols-2 grid-cols-2">
+              {lara.map((item, index) => (
+                <article
+                  key={index}
+                  className="bg-white space-y-4 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                >
+                  <Image src={black_mark} alt="black_mark" />
+                  <h3 className="text-[#262626] font-bold text-2xl">
+                    {item.title}
+                  </h3>
+                  <p className="text-[#262626] ">{item.quote}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+          <div className="flex justify-center pt-10">
+            <Button className="border border-[#081348] flex gap-4 items-center bg-orange-650 w-fit rounded-2xl text-white transition duration-500 transform hover:scale-105 hover:bg-orange-600">
+              <span>SEE MORE</span>
+              <ArrowIcon />
+            </Button>
+          </div>
+        </section>
+      </section>
+
+      <div className="bg-white p-4 ">
+        <div className="rounded-xl bg-gradient-to-r from-gradient-100 to-gradient-200">
+          <Testimonials />
+        </div>
+      </div>
+      <ContactSection />
     </div>
   );
 }
