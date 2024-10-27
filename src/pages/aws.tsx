@@ -12,6 +12,7 @@ import Cardimage1 from "../../public/assets/cardimage1.png";
 import contact from "../../public/assets/contact.png";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function AWS() {
   const cardData = [
@@ -75,13 +76,24 @@ export default function AWS() {
 
       {/* AWS Certifications Section */}
       <section className="space-y-6 p-12">
-        <h3 className="text-[#262626] text-center font-sora text-5xl font-semibold">
+        <h3 className="text-[#262626] text-center font-sora text-5xl font-semibold md:text-4xl sm:text-3xl">
           We’re AWS certified
         </h3>
-        <div className="flex justify-center flex-wrap">
+        <div className="flex justify-center flex-wrap sm:gap-4">
           {[sysops, securityaws, solution, aws, devops, data].map(
             (cert, index) => (
-              <Image key={index} src={cert} alt="AWS certification" />
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.5 }} // Initial state
+                animate={{ opacity: 1, scale: 1 }} // Animate to these values
+                transition={{ duration: 0.5, delay: index * 0.1 }} // Delay for each item
+              >
+                <Image
+                  src={cert}
+                  alt="AWS certification"
+                  className="transition-transform duration-300 ease-in-out hover:scale-105" // Optional hover effect
+                />
+              </motion.div>
             )
           )}
         </div>
@@ -89,7 +101,7 @@ export default function AWS() {
 
       {/* Why is this Important Section */}
       <section className="p-8 bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)]">
-        <h1 className="text-center py-12 text-5xl font-sora font-bold text-[#262626]">
+        <h1 className="text-center py-12 text-5xl md:text-4xl sm:text-3xl font-sora font-bold text-[#262626]">
           Why is this important?
         </h1>
         {cardData.map((card, index) => (
@@ -122,7 +134,6 @@ export default function AWS() {
           </div>
         ))}
       </section>
-
       {/* Categories Section */}
       <section>
         <div className="flex flex-wrap items-center justify-center gap-10 p-10 lg:gap-4">
