@@ -16,6 +16,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Testimonials from "@/components/what-client";
 import ContactSection from "@/components/lets-talk";
+import CategoryButtons from "@/components/shared/category-buttons";
 
 export default function AWS() {
   const cardData = [
@@ -185,16 +186,7 @@ export default function AWS() {
 
       {/* Categories Section */}
       <section>
-        <div className="flex flex-wrap items-center justify-center gap-10 p-10 lg:gap-4">
-          {categories.map((category, index) => (
-            <button
-              key={index}
-              className="text-lg border border-[#262626] px-3 rounded-full cursor-pointer py-2 transition-all duration-300 transform hover:bg-[#FF9557] hover:scale-105 hover:text-white font-sans"
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+        <CategoryButtons categories={categories} />
         <div className="text-center pb-4 px-8 space-y-4">
           <h3 className="font-sora font-medium text-4xl sm:text-3xl">
             Cloud success. With AWS

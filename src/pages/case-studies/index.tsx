@@ -11,6 +11,7 @@ import React from "react";
 import Testimonials from "@/components/what-client";
 import ContactSection from "@/components/lets-talk";
 import Link from "next/link";
+import CategoryButtons from "@/components/shared/category-buttons";
 
 const categories = [
   "ALL",
@@ -113,16 +114,7 @@ const CaseStudies = () => {
       </section>
 
       {/* Categories Section */}
-      <section className="flex flex-wrap items-center justify-center gap-10 p-10">
-        {categories.map((category, index) => (
-          <p
-            key={index}
-            className="text-lg border-[0.73px] border-[#262626] px-3 rounded-full cursor-pointer p-2 transition-all duration-300 transform hover:bg-[#FF9557] hover:scale-105 hover:text-white font-sans"
-          >
-            {category}
-          </p>
-        ))}
-      </section>
+      <CategoryButtons categories={categories} />
 
       {/* Case Study Cards */}
       <section>
