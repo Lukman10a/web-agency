@@ -132,10 +132,10 @@ const CaseStudies = () => {
           {caseStudies.map((study) => (
             <Link
               href={{
-                pathname: `case-studies${study.slug}`,
+                pathname: `/case-studies${study.slug}`,
                 query: { title: study.title, tags: study.tags },
               }}
-              as={`case-studies${study.slug}`}
+              as={`/case-studies${study.slug}`}
               key={study.id}
             >
               <div className="rounded-xl shadow-lg space-y-2 bg-[#F6F2FF] p-6 ">
