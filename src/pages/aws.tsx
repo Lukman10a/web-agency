@@ -16,7 +16,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Testimonials from "@/components/what-client";
 import ContactSection from "@/components/lets-talk";
-import { Avatar, AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
 
 export default function AWS() {
   const cardData = [
