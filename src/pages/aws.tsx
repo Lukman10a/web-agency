@@ -136,10 +136,10 @@ export default function AWS() {
           ))}
         </div>
         <div className="text-center pb-4 px-8 space-y-4">
-          <h3 className="font-sora font-medium text-4xl">
+          <h3 className="font-sora font-medium text-4xl sm:text-3xl">
             Cloud success. With AWS.
           </h3>
-          <p className="text-2xl px-16 lg:text-xl">
+          <p className="text-2xl px-16 lg:text-xl sm:px-6">
             We guide companies on their journey when moving their product to
             SaaS or planning an on-premise-to-cloud or cloud-to-cloud migration
             to AWS.
@@ -147,7 +147,11 @@ export default function AWS() {
         </div>
 
         <div className="grid grid-cols-2 place-items-center lg:grid-cols-1">
-          <Image src={contact} alt="Contact us" className="w-[500px] md:py-2" />
+          <Image
+            src={contact}
+            alt="Contact us"
+            className="w-[500px] md:py-2 sm:px-6"
+          />
           <div className="flex gap-4 md:p-8 sm:flex-col">
             <div className="space-y-4">
               {consultingServices.map((service, index) => (
