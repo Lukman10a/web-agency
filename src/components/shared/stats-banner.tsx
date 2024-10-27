@@ -37,7 +37,7 @@ export default function AnimatedStatsBanner() {
   const clustersCount = useAnimatedCounter(100);
 
   return (
-    <div className="w-full bg-darkblue-900 text-white py-8 px-4">
+    <div className="w-full bg-darkblue-900 text-white py-8 px-10">
       <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-8 font-sora">
         <StatItem value={`${yearsCount}yr.`} label="In the game" />
         <StatItem value={`${expertsCount}`} label="Cloud experts" />

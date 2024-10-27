@@ -53,8 +53,8 @@ const AboutUs = () => {
           className="animate-fade-in-up delay-500 flex-1 rounded-lg hidden md:block"
         />
       </section>
-      <ImagesReveal cards={cards} />
       <AnimatedStatsBanner />
+      <ImagesReveal cards={cards} />
       <OurValues />
     </Fragment>
   );
