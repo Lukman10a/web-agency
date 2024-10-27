@@ -148,7 +148,7 @@ export default function AWS() {
         </div>
         <div className="text-center pb-4 px-8 space-y-4">
           <h3 className="font-sora font-medium text-4xl sm:text-3xl">
-            Cloud success. With AWS.
+            Cloud success. With AWS
           </h3>
           <p className="text-2xl px-16 lg:text-xl sm:px-6">
             We guide companies on their journey when moving their product to
