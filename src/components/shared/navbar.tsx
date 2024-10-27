@@ -37,12 +37,17 @@ const navItems: NavItem[] = [
   { title: "About Us", href: "/about-us" },
   { title: "Case Studies", href: "/case-studies" },
   { title: "AWS", href: "/aws" },
-  { title: "FAQ", href: "#faq" },
+  { title: "FAQ", href: "faq" },
   { title: "Blog", href: "/blog" },
 ];
 
 const Navbar = () => {
   const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    return pathname.startsWith(href);
+  };
+
   return (
     <nav
       className={cn(
@@ -79,14 +84,14 @@ const Navbar = () => {
                           {item.items.map((subItem) => (
                             <li key={subItem.title} className="row-span-3">
                               <NavigationMenuLink asChild>
-                                <a
+                                <Link
                                   className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                                  href={subItem.href}
+                                  href={subItem.href as string}
                                 >
                                   <div className="mb-2 text-lg font-medium">
                                     {subItem.title}
                                   </div>
-                                </a>
+                                </Link>
                               </NavigationMenuLink>
                             </li>
                           ))}
@@ -95,10 +100,16 @@ const Navbar = () => {
                     </>
                   ) : (
                     <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                      href={item.href}
+                      className={cn(
+                        navigationMenuTriggerStyle(),
+                        "font-mono",
+                        isActive(item.href || "")
+                          ? "border-orange-600 font-bold border-b-2 rounded-none "
+                          : "text-gray-700"
+                      )}
+                      asChild
                     >
-                      {item.title}
+                      <Link href={item.href as string}>{item.title}</Link>
                     </NavigationMenuLink>
                   )}
                 </NavigationMenuItem>
@@ -106,7 +117,7 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   className={navigationMenuTriggerStyle()}
-                  href="#contact"
+                  href="/contact"
                 >
                   <Button className="w-fit border border-black flex items-center justify-center px-8 py-3 text-base font-medium rounded-full text-white bg-orange-600 hover:bg-orange-700 md:py-4 md:text-lg md:px-10">
                     Contact <ArrowIcon />
