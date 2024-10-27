@@ -22,8 +22,7 @@ const Footer: React.FC = () => {
             </p>
             <Link
               href="mailto:hi@teversemultiuniverse"
-              className="block mt-2 text-lg font-semibold text-white"
-            >
+              className="block mt-2 text-lg font-semibold text-white">
               hi@teversemultiuniverse
             </Link>
 
@@ -33,24 +32,21 @@ const Footer: React.FC = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black bg-orange-650 rounded-full p-2"
-              >
+                className="text-black bg-orange-650 rounded-full p-2">
                 <FaInstagram size={24} />
               </Link>
               <Link
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black bg-orange-650 rounded-full p-2"
-              >
+                className="text-black bg-orange-650 rounded-full p-2">
                 <FaYoutube size={24} />
               </Link>
               <Link
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black bg-orange-650 rounded-full p-2"
-              >
+                className="text-black bg-orange-650 rounded-full p-2">
                 <FaLinkedin size={24} />
               </Link>
             </div>

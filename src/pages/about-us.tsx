@@ -4,6 +4,7 @@ import animatedCloud from "../../public/assets/animated-cloud.gif";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
+import Mission from "@/components/our-mission";
 import ImagesReveal from "@/components/ui/animated/image-reveal";
 import OurValues from "@/components/shared/our-values";
 import AnimatedStatsBanner from "@/components/shared/stats-banner";
@@ -53,6 +54,9 @@ const AboutUs = () => {
           className="animate-fade-in-up delay-500 flex-1 rounded-lg hidden md:block"
         />
       </section>
+
+      <ImagesReveal />
+      <Mission />
       <AnimatedStatsBanner />
       <ImagesReveal cards={cards} />
       <OurValues />
