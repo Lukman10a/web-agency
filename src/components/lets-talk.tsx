@@ -33,7 +33,7 @@ const ContactSection: React.FC = () => {
     <section className="py-16 bg-white space-y-14">
       <div className="container mx-auto flex justify-center space-y-8 px-24 md:px-10">
         {/* Left Side: Text */}
-        <div className=" container mx-auto flex justify-between space-y-8">
+        <div className=" container mx-auto flex justify-between space-y-8 sm:flex-col">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl text-left">
               Let’s talk!

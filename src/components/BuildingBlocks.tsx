@@ -44,43 +44,40 @@ const LARABuildingBlocks: React.FC = () => {
             LARA building blocks
           </h2>
           <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
-            All of the components mentioned below are defined using
-            Infrastructure as Code, allowing for further customization and
-            reusability in different environments.
+            All of the components mentioned below are defined using Infrastructure as Code, allowing for further customization and reusability in different environments.
           </p>
         </div>
 
         {/* Building Blocks Grid */}
-<div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 grid-cols-2 px-4 md:px-16 relative">
-  {blocks.map((block, index) => (
-    <div
-      key={index}
-      className="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300 relative"
-    >
-      <div className="items-center mb-4 space-y-2">
-        <Image src="/assets/darkmark.png" width={20} height={20} alt="check mark" />
-        <h4 className="text-lg font-semibold text-gray-900">
-          {block.title}
-        </h4>
-      </div>
-      <p className="text-gray-600">{block.description}</p>
+        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 grid-cols-2 px-4 md:px-16 relative">
+          {blocks.map((block, index) => (
+            <div
+              key={index}
+              className="bg-white sm:bg-gray-100 p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300 relative sm:shadow-lg"
+            >
+              <div className="sm:text-center items-center mb-4 space-y-2">
+                <Image src="/assets/darkmark.png" width={20} height={20} alt="check mark" />
+                <h4 className="text-lg font-semibold text-gray-900">
+                  {block.title}
+                </h4>
+              </div>
+              <p className="text-gray-600 sm:text-left">{block.description}</p>
 
-      {/* Star image behind the last item in the second column */}
-      {index === blocks.length - 1 && (
-        <div className="absolute -bottom-8 right-1 sm:-bottom-8 sm:right-1 md:-bottom-16 md:right-8 lg:-bottom-20 lg:right-20 xl:-bottom-24 xl:right-24">
-          <Image
-            src="/assets/Star.png"
-            alt="Star"
-            width={100} // Smaller size for mobile
-            height={100}
-            className="sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px] xl:w-[180px] xl:h-[180px]"
-          />
+              {/* Star image behind the last item in the second column */}
+              {index === blocks.length - 1 && (
+                <div className="absolute -bottom-8 right-1 sm:-bottom-8 sm:right-1 md:-bottom-16 md:right-8 lg:-bottom-20 lg:right-20 xl:-bottom-24 xl:right-24">
+                  <Image
+                    src="/assets/Star.png"
+                    alt="Star"
+                    width={100} // Smaller size for mobile
+                    height={100}
+                    className="sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px] xl:w-[180px] xl:h-[180px]"
+                  />
+                </div>
+              )}
+            </div>
+          ))}
         </div>
-      )}
-    </div>
-  ))}
-</div>
-
 
         {/* CTA Button */}
         <div className="mt-10 text-center">

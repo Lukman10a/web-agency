@@ -8,6 +8,7 @@ import Mission from "@/components/our-mission";
 import ImagesReveal from "@/components/ui/animated/image-reveal";
 import OurValues from "@/components/shared/our-values";
 import AnimatedStatsBanner from "@/components/shared/stats-banner";
+import TeamSection from "@/components/Cloud";
 
 const cards = [
   {
@@ -58,7 +59,9 @@ const AboutUs = () => {
       <ImagesReveal cards={cards} />
       <Mission />
       <OurValues />
+      <TeamSection />
     </Fragment>
+    
   );
 };
 
