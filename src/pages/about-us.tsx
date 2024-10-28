@@ -9,6 +9,8 @@ import ImagesReveal from "@/components/ui/animated/image-reveal";
 import OurValues from "@/components/shared/our-values";
 import AnimatedStatsBanner from "@/components/shared/stats-banner";
 import TeamSection from "@/components/Cloud";
+import ContactSection from "@/components/lets-talk";
+import Testimonials from "@/components/what-client";
 
 const cards = [
   {
@@ -60,6 +62,8 @@ const AboutUs = () => {
       <Mission />
       <OurValues />
       <TeamSection />
+      <Testimonials />
+      <ContactSection />
     </Fragment>
     
   );

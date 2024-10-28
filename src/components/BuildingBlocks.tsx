@@ -57,7 +57,7 @@ const LARABuildingBlocks: React.FC = () => {
             >
               <div className="sm:text-center items-center mb-4 space-y-2">
                 <Image src="/assets/darkmark.png" width={20} height={20} alt="check mark" />
-                <h4 className="text-lg font-semibold text-gray-900">
+                <h4 className="text-lg font-semibold text-gray-900 sm:text-left">
                   {block.title}
                 </h4>
               </div>
