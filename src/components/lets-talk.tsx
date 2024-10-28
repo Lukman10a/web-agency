@@ -44,7 +44,7 @@ const ContactSection: React.FC = () => {
               minutes.
             </p>
           </div>
-          <button className="px-6 py-3 bg-orange-650 ring-1 ring-darkblue-850 text-white rounded-full font-semibold hover:bg-orange-600 transition duration-300">
+          <button className="px-6 py-3 sm:w-full  bg-orange-650 ring-1 ring-darkblue-850 text-white rounded-full font-semibold hover:bg-orange-600 transition duration-300">
             Schedule Your Call →
           </button>
         </div>
@@ -53,7 +53,7 @@ const ContactSection: React.FC = () => {
       </div>
 
       {/* Right Side: Form */}
-      <div className="flex justify-between px-24 space-y-8 ">
+      <div className="flex sm:flex-col justify-between px-24 space-y-8 ">
         {/* Image */}
         <div className="w-full flex">
           <Image
@@ -124,7 +124,7 @@ const ContactSection: React.FC = () => {
               <div>
                 <button
                   type="submit"
-                  className="flex items-center mt-10 justify-center px-6 py-3 border border-black text-sm font-medium rounded-full shadow-sm text-neutral-800 bg-transparent  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+                  className="sm:w-full  flex items-center mt-10 justify-center px-6 py-3 border border-black text-sm font-medium rounded-full shadow-sm text-neutral-800 bg-transparent  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
                 >
                   Submit Form →
                 </button>
