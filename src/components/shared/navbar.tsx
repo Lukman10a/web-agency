@@ -1,5 +1,5 @@
 // Navbar.tsx
-import React from "react";
+import React, { useState } from "react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -26,14 +26,6 @@ export interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  // {
-  //   title: "Services",
-  //   items: [
-  //     { title: "Cloud Consulting", href: "#cloud-consulting" },
-  //     { title: "Security Consulting", href: "#security-consulting" },
-  //     { title: "Managed Consulting", href: "#managed-consulting" },
-  //   ],
-  // },
   { title: "Solution", href: "/solution" },
   { title: "About Us", href: "/about-us" },
   { title: "Case Studies", href: "/case-studies" },
@@ -44,10 +36,9 @@ const navItems: NavItem[] = [
 
 const Navbar = () => {
   const pathname = usePathname();
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
 
-  const isActive = (href: string) => {
-    return pathname ? pathname.startsWith(href) : false; // Check for null
-  };
+  const isActive = (href: string) => pathname?.startsWith(href);
 
   return (
     <nav
@@ -67,13 +58,17 @@ const Navbar = () => {
               alt="brand logo"
               className="shadow-sm"
             />
-            {/* <span className="text-2xl font-bold text-orange-600">Teverse</span> */}
           </div>
         </Link>
 
         {/* Mobile Navigation */}
         <div className="2md:flex hidden">
-          <MobileNav navItems={navItems} siteName="Teverse" />
+          <MobileNav
+            navItems={navItems}
+            siteName="Teverse"
+            isOpen={isMobileOpen}
+            toggleOpen={() => setIsMobileOpen(!isMobileOpen)}
+          />
         </div>
 
         {/* Desktop Navigation */}
@@ -93,8 +88,8 @@ const Navbar = () => {
                             <li key={subItem.title} className="row-span-3">
                               <NavigationMenuLink asChild>
                                 <Link
-                                  className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                                   href={subItem.href as string}
+                                  className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                                 >
                                   <div className="mb-2 text-lg font-medium">
                                     {subItem.title}
@@ -112,7 +107,7 @@ const Navbar = () => {
                         navigationMenuTriggerStyle(),
                         "font-mono",
                         isActive(item.href || "")
-                          ? "border-orange-600 font-bold border-b-2 rounded-none "
+                          ? "border-orange-600 font-bold border-b-2 rounded-none"
                           : "text-gray-700"
                       )}
                       asChild

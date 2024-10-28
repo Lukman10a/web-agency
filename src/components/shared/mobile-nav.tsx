@@ -15,17 +15,23 @@ interface MobileNavProps {
   navItems: NavItem[];
   logo?: React.ReactNode;
   siteName: string;
+  isOpen: boolean;
+  toggleOpen: () => void;
 }
 
-export function MobileNav({ navItems, logo, siteName }: MobileNavProps) {
-  const [open, setOpen] = React.useState(false);
-
+export function MobileNav({
+  navItems,
+  logo,
+  siteName,
+  isOpen,
+  toggleOpen,
+}: MobileNavProps) {
   return (
-    <Sheet open={open} onOpenChange={setOpen}>
+    <Sheet open={isOpen} onOpenChange={toggleOpen}>
       <SheetTrigger asChild>
         <Button
           variant="ghost"
-          className="mr-2 px-0 text-xl  hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0"
+          className="mr-2 px-0 text-xl hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0"
         >
           <Menu />
           <span className="sr-only">Toggle Menu</span>
@@ -34,8 +40,8 @@ export function MobileNav({ navItems, logo, siteName }: MobileNavProps) {
       <SheetContent side="right" className="pr-0 bg-white font-mono">
         <MobileLink
           href="/"
+          onOpenChange={toggleOpen}
           className="flex items-center"
-          onOpenChange={setOpen}
         >
           {logo && <div className="mr-2 h-4 w-4">{logo}</div>}
           <span className="font-bold text-orange-650">{siteName}</span>
@@ -44,15 +50,19 @@ export function MobileNav({ navItems, logo, siteName }: MobileNavProps) {
           <div className="flex flex-col space-y-2">
             {navItems.map((item, index) => (
               <div key={index} className="flex flex-col space-y-2 pt-6">
-                <Link href={item.href as string} className="font-medium">
+                <MobileLink
+                  href={item.href as string}
+                  onOpenChange={toggleOpen}
+                  className="font-medium"
+                >
                   {item.title}
-                </Link>
+                </MobileLink>
                 {item.items?.map((subItem) => (
                   <React.Fragment key={subItem.href}>
                     {!subItem.disabled && (
                       <MobileLink
                         href={subItem.href || "#"}
-                        onOpenChange={setOpen}
+                        onOpenChange={toggleOpen}
                         className="text-muted-foreground"
                       >
                         {subItem.title}
@@ -75,7 +85,7 @@ export function MobileNav({ navItems, logo, siteName }: MobileNavProps) {
 }
 
 interface MobileLinkProps extends LinkProps {
-  onOpenChange?: (open: boolean) => void;
+  onOpenChange?: () => void;
   children: React.ReactNode;
   className?: string;
 }
@@ -93,7 +103,7 @@ function MobileLink({
       href={href}
       onClick={() => {
         router.push(href.toString());
-        onOpenChange?.(false);
+        onOpenChange?.(); // Close menu on link click
       }}
       className={cn(className)}
       {...props}
