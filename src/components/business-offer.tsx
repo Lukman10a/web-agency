@@ -3,33 +3,39 @@ import HomeCard from "./home-card";
 import Cardimage1 from "/public/assets/cardimage1.png";
 import Cardimage2 from "/public/assets/cardimage2.png";
 import Cardimage3 from "/public/assets/cardimage3.png";
-import { BorderTrail } from "./ui/border-trail";
+import { LuUploadCloud } from "react-icons/lu";
+import { GrShieldSecurity } from "react-icons/gr";
+import { BsCloudPlus } from "react-icons/bs";
+import { BorderTrail } from "./ui/animated/border-trail";
 
 const BusinessOffer = () => {
   const cardData = [
     {
-      title: "CLOUD CONSULTING",
+      title: "CLOUD",
       description:
         "Unlock the full potential of the cloud with our tailored strategies that streamline your operations and optimize costs. From cloud strategy and migration to multi-cloud solutions, we help you build a robust, scalable cloud environment that supports your business goals.",
       buttonText: "Explore Cloud Solutions",
       buttonLink: "/cloud",
       imageSrc: Cardimage1,
+      titleIcon: <LuUploadCloud />,
     },
     {
-      title: "SECURITY CONSULTING",
+      title: "SECURITY",
       description:
         "Safeguard your business with comprehensive security solutions tailored to your needs. We thoroughly assess and identify potential vulnerabilities in your systems, design robust and scalable security architectures, and implement solutions that protect your assets. ",
       buttonText: "Strengthen Security",
       buttonLink: "/security",
       imageSrc: Cardimage2,
+      titleIcon: <GrShieldSecurity />,
     },
     {
-      title: "MANAGED CONSULTING",
+      title: "MANAGED",
       description:
         "Our 24/7 managed security services provide continuous protection against cyber threats, ensuring your business stays secure at all times. With real-time monitoring and proactive threat detection, we safeguard your operations so you can focus on growing your business while we take care of all your security needs",
       buttonText: "See Security Plans",
       buttonLink: "/managed",
       imageSrc: Cardimage3,
+      titleIcon: <BsCloudPlus />,
     },
   ];
 
@@ -66,6 +72,7 @@ const BusinessOffer = () => {
               buttonText={card.buttonText}
               buttonLink={card.buttonLink}
               imageSrc={card.imageSrc}
+              titleIcon={card.titleIcon}
               index={index}
             />
           ))}
