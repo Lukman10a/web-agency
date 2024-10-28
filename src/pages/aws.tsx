@@ -17,6 +17,8 @@ import { motion } from "framer-motion";
 import Testimonials from "@/components/what-client";
 import ContactSection from "@/components/lets-talk";
 import CategoryButtons from "@/components/shared/category-buttons";
+import AWSection from "@/components/AWSection";
+import AwsLara from "@/components/AwsLara";
 
 export default function AWS() {
   const cardData = [
@@ -230,7 +232,8 @@ export default function AWS() {
           </div>
         </div>
       </section>
-
+      <AWSection />
+      <AwsLara />
       <section className="bg-white p-4">
         <section className="rounded-xl bg-gradient-to-r from-gradient-100 to-gradient-200 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -274,6 +277,7 @@ export default function AWS() {
           <Testimonials />
         </div>
       </div>
+      
       <ContactSection />
     </div>
   );
