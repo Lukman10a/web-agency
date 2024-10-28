@@ -53,7 +53,7 @@ const ContactSection: React.FC = () => {
       </div>
 
       {/* Right Side: Form */}
-      <div className="flex sm:flex-col justify-between px-24 space-y-8 ">
+      <div className="flex sm:flex-col justify-between sm:px-5 px-24 space-y-8 ">
         {/* Image */}
         <div className="w-full flex">
           <Image
