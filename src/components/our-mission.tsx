@@ -6,11 +6,8 @@ import { BorderTrail } from "./ui/animated/border-trail";
 const Mission = () => {
   return (
     <section className="px-8">
-      <div className="relative flex sm:flex-col gap-14 md:gap-4 p-[3em] rounded-2xl mx-auto max-w-[1300px] mb-[1.5em] ">
-        <div
-          className=" w-1/2 sm:w-full  mb-0 p-[1.2rem] 2md:p-4 bg-gradient-to-b from-[#0813481A] to-[#ff95572f]  rounded-3xl
-        "
-        >
+      <div className="relative flex sm:flex-col gap-14 md:gap-4 p-[3em] rounded-2xl mx-auto max-w-[1300px] mb-[1.5em]">
+        <div className="w-1/2 sm:w-full  mb-0 p-[1.2rem] 2md:p-4 bg-gradient-to-b from-[#0813481A] to-[#ff95572f]  rounded-3xl">
           <Image
             src={image}
             alt="Card image"
@@ -34,7 +31,7 @@ const Mission = () => {
         </div>
       </div>
 
-      <div className="relative p-[5em] sm:p-[2em] bg-gradient-to-r from-[#e3e7f7] to-[#fae8de] text-center w-full  rounded-2xl mb-[3em] max-w-[1400px] mx-auto">
+      <div className="relative overflow-hidden p-[5em] sm:p-[2em] bg-gradient-to-r from-[#e3e7f7] to-[#fae8de] text-center w-full  rounded-2xl mb-[3em] max-w-[1400px] mx-auto">
         <BorderTrail
           style={{
             boxShadow:
@@ -45,7 +42,6 @@ const Mission = () => {
         <h3 className="font-sora font-bold text-[2.5rem] 2md:text-[1.7rem] md:text-[1.2rem] mb-[1em] md:mb-[.4em] h-10 leading-tight ">
           MATCH MADE IN CLOUD
         </h3>
-
         <p className="mx-auto text-[1.6rem] 2md:text-[1.3rem] md:text-[1rem] ">
           In the beginning, we were just three engineers who enjoyed solving
           complex infrastructure challenges together. At some point, after

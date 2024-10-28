@@ -40,14 +40,13 @@ const BusinessOffer = () => {
   ];
 
   return (
-    <section className=" w-11/12 max-w-7xl mx-auto overflow-hidden">
+    <section className="w-11/12 max-w-7xl mx-auto overflow-hidden">
       <div className="relative p-[5em] sm:p-[2em] bg-gradient-to-r from-[#e3e7f7] to-[#fae8de] text-center w-full  rounded-2xl mb-[3em]">
         <BorderTrail
           style={{
             boxShadow:
               "0px 0px 60px 30px rgb(255 255 255 / 50%), 0 0 100px 60px rgb(0 0 0 / 50%), 0 0 140px 90px rgb(0 0 0 / 50%)",
           }}
-          size={100}
         />
         <p className="mx-auto text-[1.8rem] 2md:text-[1.5rem] md:text-[1.2rem]">
           At Teverse, we specialize in transforming businesses through cutting
