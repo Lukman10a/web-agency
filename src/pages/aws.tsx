@@ -198,7 +198,7 @@ export default function AWS() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 place-items-center py-10 lg:grid-cols-1">
+        <div className="grid grid-cols-2 place-items-center p-12 lg:grid-cols-1">
           <Image
             src={contact}
             alt="Contact us"
