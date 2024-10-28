@@ -37,7 +37,6 @@ const Mission = () => {
             boxShadow:
               "0px 0px 60px 30px rgb(255 255 255 / 50%), 0 0 100px 60px rgb(0 0 0 / 50%), 0 0 140px 90px rgb(0 0 0 / 50%)",
           }}
-          size={100}
         />
         <h3 className="font-sora font-bold text-[2.5rem] 2md:text-[1.7rem] md:text-[1.2rem] mb-[1em] md:mb-[.4em] h-10 leading-tight ">
           MATCH MADE IN CLOUD

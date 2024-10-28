@@ -36,6 +36,12 @@ body {
   }
 }
 
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

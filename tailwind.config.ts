@@ -182,11 +182,16 @@ const config: typeof Config = {
           "0%": { opacity: "0", transform: "translateY(10px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        trail: {
+          "0%": { "--angle": "0deg" },
+          "100%": { "--angle": "360deg" },
+        },
       },
       animation: {
         "marquee-horizontal": "marquee-x var(--duration) infinite linear",
         "marquee-vertical": "marquee-y var(--duration) linear infinite",
         "fade-in-up": "fadeInUp 0.7s ease-in-out forwards",
+        trail: "trail var(--duration) linear infinite",
       },
     },
   },
