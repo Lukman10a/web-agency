@@ -7,7 +7,7 @@ const ContactSection: React.FC = () => {
       <div className="container mx-auto flex justify-center space-y-8 px-24">
         
         {/* Left Side: Text */}
-        <div className=" container mx-auto flex justify-between space-y-8">
+        <div className=" container mx-auto flex justify-between space-y-8 sm:flex-col">
           <div>
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl text-left">
             Let’s talk!
@@ -17,16 +17,18 @@ const ContactSection: React.FC = () => {
             drafting a roadmap of your cloud journey. All within 30 minutes.
           </p>
           </div>
-          <button className="px-6 py-3 bg-orange-650 ring-1 ring-darkblue-850 text-white rounded-full font-semibold hover:bg-orange-600 transition duration-300">
-            Schedule Your Call →
+          <div className="mt-10 text-center sm:w-full">
+          <button className="px-6 sm:text-sm sm:px-10 py-3 bg-orange-650 text-white font-semibold rounded-full ring-1 ring-darkblue-850 shadow-md hover:bg-orange-600 transition duration-300 ease-in-out">
+            Schedule your call &rarr;
           </button>
+        </div>
         </div>
 
         
       </div>
 
       {/* Right Side: Form */}
-      <div className="flex justify-between px-24 space-y-8 ">
+      <div className="flex justify-between px-24 space-y-8 sm:flex-col">
         {/* Image */}
         <div className="w-full flex">
           <Image
@@ -40,7 +42,7 @@ const ContactSection: React.FC = () => {
       
       <div className="container mx-auto px-4 mt-12 flex flex-col md:flex-row items-start justify-between space-y-8 md:space-y-0">
         <div className="">
-          <h3 className="text-4xl font-extrabold tracking-wide text-gray-900">
+          <h3 className="text-4xl sm:text-2xl font-extrabold tracking-wide text-gray-900">
             Cloud <span className="text-orange-650 underline">experts</span><br /> on duty
           </h3>
           <p className="text-gray-600 mt-4">
