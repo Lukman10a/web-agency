@@ -212,7 +212,7 @@ const CloudJourney: React.FC = () => {
           <Button
             variant="outline"
             size="icon"
-            className="group rounded-full  border-black hover:bg-[#081348]"
+            className="group rounded-full border-black hover:bg-[#081348]"
             onClick={handleNext}
             disabled={
               activeTabContent &&

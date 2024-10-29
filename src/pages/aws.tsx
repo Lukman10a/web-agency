@@ -105,15 +105,15 @@ export default function AWS() {
   return (
     <div>
       {/* Hero Section */}
-      <header className="flex md:flex-col items-center gap-10 lg:gap-6 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12">
+      <header className="flex items-center gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12 lg:gap-6 md:flex-col">
         <article className="space-y-10">
-          <h1 className="font-sora font-extrabold text-6xl animate-fade-in-up lg:text-5xl">
+          <h1 className="animate-fade-in-up font-sora text-6xl font-extrabold lg:text-5xl">
             Amazon Web Services
           </h1>
-          <p className="font-medium text-xl animate-fade-in-up delay-200 font-sans">
+          <p className="animate-fade-in-up font-sans text-xl font-medium delay-200">
             Labyrinth Labs is an Advanced Service Partner
           </p>
-          <Button className="border border-[#081348] flex gap-4 items-center bg-orange-650 w-fit rounded-2xl text-white transition duration-500 transform hover:scale-105 hover:bg-orange-600">
+          <Button className="flex w-fit transform items-center gap-4 rounded-2xl border border-[#081348] bg-orange-650 text-white transition duration-500 hover:scale-105 hover:bg-orange-600">
             <span>EXPLORE</span>
             <ArrowIcon />
           </Button>
@@ -127,10 +127,10 @@ export default function AWS() {
 
       {/* AWS Certifications Section */}
       <section className="space-y-6 p-12">
-        <h3 className="text-[#262626] text-center font-sora text-5xl font-semibold md:text-4xl sm:text-3xl">
+        <h3 className="text-center font-sora text-5xl font-semibold text-[#262626] md:text-4xl sm:text-3xl">
           We’re AWS certified
         </h3>
-        <div className="flex justify-center flex-wrap sm:gap-4">
+        <div className="flex flex-wrap justify-center sm:gap-4">
           {[sysops, securityaws, solution, aws, devops, data].map(
             (cert, index) => (
               <motion.div
@@ -145,24 +145,24 @@ export default function AWS() {
                   className="transition-transform duration-300 ease-in-out hover:scale-105" // Optional hover effect
                 />
               </motion.div>
-            )
+            ),
           )}
         </div>
       </section>
 
       {/* Why is this Important Section */}
-      <section className="p-8 bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)]">
-        <h1 className="text-center py-12 text-5xl md:text-4xl sm:text-3xl font-sora font-bold text-[#262626]">
+      <section className="bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] p-8">
+        <h1 className="py-12 text-center font-sora text-5xl font-bold text-[#262626] md:text-4xl sm:text-3xl">
           Why is this important?
         </h1>
         {cardData.map((card, index) => (
           <div
             key={index}
-            className={`flex items-center justify-between sm:flex-col md:gap-4 bg-[#fcfcfc] border border-[#fcfcf] p-[1.2em] rounded-2xl mx-auto max-w-[95%] mb-[1.5em] ${
+            className={`mx-auto mb-[1.5em] flex max-w-[95%] items-center justify-between rounded-2xl border border-[#fcfcf] bg-[#fcfcfc] p-[1.2em] md:gap-4 sm:flex-col ${
               index % 2 === 0 ? "flex-row" : "flex-row-reverse"
             }`}
           >
-            <div className="w-2/5 md:w-1/2 sm:w-full mb-0">
+            <div className="mb-0 w-2/5 md:w-1/2 sm:w-full">
               <Image
                 src={card.imageSrc}
                 alt="Card image"
@@ -175,7 +175,7 @@ export default function AWS() {
               <h2 className="text-xl font-bold">{card.title}</h2>
               <ul className="space-y-4">
                 {card.description.map((item, i) => (
-                  <li key={i} className="text-gray-700 flex items-center gap-2">
+                  <li key={i} className="flex items-center gap-2 text-gray-700">
                     <Image src={mark} alt="mark" />
                     {item}
                   </li>
@@ -189,11 +189,11 @@ export default function AWS() {
       {/* Categories Section */}
       <section>
         <CategoryButtons categories={categories} />
-        <div className="text-center pb-4 px-8 space-y-4">
-          <h3 className="font-sora font-medium text-4xl sm:text-3xl">
+        <div className="space-y-4 px-8 pb-4 text-center">
+          <h3 className="font-sora text-4xl font-medium sm:text-3xl">
             Cloud success. With AWS
           </h3>
-          <p className="text-2xl px-16 lg:text-xl sm:px-6">
+          <p className="px-16 text-2xl lg:text-xl sm:px-6">
             We guide companies on their journey when moving their product to
             SaaS or planning an on-premise-to-cloud or cloud-to-cloud migration
             to AWS.
@@ -206,12 +206,12 @@ export default function AWS() {
             alt="Contact us"
             className="w-[500px] md:py-2 sm:px-6"
           />
-          <div className="flex gap-4 lg:p-10 lg:flex-col">
+          <div className="flex gap-4 lg:flex-col lg:p-10">
             <div className="space-y-3">
               {consultingServices.map((service, index) => (
                 <div
                   key={index}
-                  className="rounded-lg border border-[#081348] p-3 space-y-2"
+                  className="space-y-2 rounded-lg border border-[#081348] p-3"
                 >
                   <Image src={mark} alt="mark" />
                   <p>{service}</p>
@@ -222,7 +222,7 @@ export default function AWS() {
               {consultingServices2.map((service, index) => (
                 <div
                   key={index}
-                  className="rounded-lg border border-[#081348] p-3 space-y-2"
+                  className="space-y-2 rounded-lg border border-[#081348] p-3"
                 >
                   <Image src={mark} alt="mark" />
                   <p>{service}</p>
@@ -236,7 +236,7 @@ export default function AWS() {
       <AwsLara />
       <section className="bg-white p-4">
         <section className="rounded-xl bg-gradient-to-r from-gradient-100 to-gradient-200 py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 lg:px-8 sm:px-6">
             <div className="text-center">
               <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
                 LARA building blocks{" "}
@@ -248,23 +248,23 @@ export default function AWS() {
               </p>
             </div>
 
-            <div className="mt-10 grid gap-8 sm:grid-cols-1 md:grid-cols-2 grid-cols-2">
+            <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-2 sm:grid-cols-1">
               {lara.map((item, index) => (
                 <article
                   key={index}
-                  className="bg-white space-y-4 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                  className="space-y-4 rounded-lg bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg"
                 >
                   <Image src={black_mark} alt="black_mark" />
-                  <h3 className="text-[#262626] font-bold text-2xl">
+                  <h3 className="text-2xl font-bold text-[#262626]">
                     {item.title}
                   </h3>
-                  <p className="text-[#262626] ">{item.quote}</p>
+                  <p className="text-[#262626]">{item.quote}</p>
                 </article>
               ))}
             </div>
           </div>
           <div className="flex justify-center pt-10">
-            <Button className="border border-[#081348] flex gap-4 items-center bg-orange-650 w-fit rounded-2xl text-white transition duration-500 transform hover:scale-105 hover:bg-orange-600">
+            <Button className="flex w-fit transform items-center gap-4 rounded-2xl border border-[#081348] bg-orange-650 text-white transition duration-500 hover:scale-105 hover:bg-orange-600">
               <span>SEE MORE</span>
               <ArrowIcon />
             </Button>
@@ -272,7 +272,7 @@ export default function AWS() {
         </section>
       </section>
 
-      <div className="bg-white p-4 ">
+      <div className="bg-white p-4">
         <div className="rounded-xl bg-gradient-to-r from-gradient-100 to-gradient-200">
           <Testimonials />
         </div>

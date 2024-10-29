@@ -16,7 +16,7 @@ const Hero = () => {
           gridGap={6}
           color="#6B7280"
           maxOpacity={0.5}
-          flickerChance={0.1}
+          flickerChance={0.15}
           width={1400}
           height={800}
         />
