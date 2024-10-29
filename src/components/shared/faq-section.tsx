@@ -44,7 +44,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
                 </h3>
 
                 <button
-                  className={`ml-4 flex h-8 w-8 sm:w-10 items-center justify-center rounded-full transition-colors ${
+                  className={`ml-4 flex h-8 w-8 sm:w-12 sm:h-12 items-center justify-center rounded-full transition-colors ${
                     activeIndex === index
                       ? "bg-darkblue-900 text-white"
                       : "bg-gray-200 text-blue-600"
