@@ -12,7 +12,7 @@ import Booking from "@/components/booking";
 export default function Solution() {
   return (
     <Fragment>
-      <section className="flex md:flex-col items-center gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12">
+      <header className="flex md:flex-col items-center gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12">
         <div className="space-y-10 flex-[3] md:flex-1">
           <h1 className="font-sora font-extrabold text-6xl animate-fade-in-up">
             <span className="block">Migrate, Optimize,</span>
@@ -38,7 +38,7 @@ export default function Solution() {
           alt="solution-hero"
           className="animate-fade-in-up delay-500 flex-1 rounded-lg hidden md:block"
         />
-      </section>
+      </header>
       <StickyScrollRevealDemo />
       <Booking />
       <CloudPlatformSection />

@@ -23,7 +23,7 @@ const SecurityCertifications: React.FC = () => {
         </h2>
         <p>
           Your security is our priority. We hold top industry certifications
-          including ISO, AWS, CISSP, and more.
+          including ISO, AWS, CISSP, and more
         </p>
       </header>
 

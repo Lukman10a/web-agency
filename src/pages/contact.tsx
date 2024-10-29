@@ -1,3 +1,4 @@
+
 import ContactOffice from "@/components/contactOffice";
 import ContactPage from "@/components/contactPage";
 
@@ -9,3 +10,11 @@ export default function Solution() {
         </div>
     )
 }
+
+import React from "react";
+
+const Contact = () => {
+  return <div>Contact</div>;
+};
+
+export default Contact;
