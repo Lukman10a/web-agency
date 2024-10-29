@@ -119,12 +119,14 @@ const Navbar = () => {
               ))}
               <NavigationMenuItem>
                 <NavigationMenuLink
+                  asChild
                   className={navigationMenuTriggerStyle()}
-                  href="/contact"
                 >
-                  <Button className="w-fit border border-black flex items-center justify-center px-8 py-3 text-base font-medium rounded-full text-white bg-orange-600 hover:bg-orange-700 md:py-4 md:text-lg md:px-10">
-                    Contact <ArrowIcon />
-                  </Button>
+                  <Link href="/contact">
+                    <Button className="w-fit border border-black flex items-center justify-center px-8 py-3 text-base font-medium rounded-full text-white bg-orange-600 hover:bg-orange-700 md:py-4 md:text-lg md:px-10">
+                      Contact <ArrowIcon />
+                    </Button>{" "}
+                  </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>

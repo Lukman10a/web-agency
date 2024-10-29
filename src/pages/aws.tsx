@@ -105,7 +105,7 @@ export default function AWS() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="flex md:flex-col items-center gap-10 lg:gap-6 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12">
+      <header className="flex md:flex-col items-center gap-10 lg:gap-6 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12">
         <article className="space-y-10">
           <h1 className="font-sora font-extrabold text-6xl animate-fade-in-up lg:text-5xl">
             Amazon Web Services
@@ -123,7 +123,7 @@ export default function AWS() {
           alt="case-study-hero"
           className="animate-fade-in-up delay-500 lg:w-[400px]"
         />
-      </section>
+      </header>
 
       {/* AWS Certifications Section */}
       <section className="space-y-6 p-12">
@@ -277,7 +277,7 @@ export default function AWS() {
           <Testimonials />
         </div>
       </div>
-      
+
       <ContactSection />
     </div>
   );

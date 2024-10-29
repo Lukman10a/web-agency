@@ -31,49 +31,49 @@ const ContactSection: React.FC = () => {
 
   return (
     <section className="py-16 bg-white space-y-14">
-      <div className="container mx-auto flex justify-center space-y-8 px-24 md:px-10">
+      <div className="container mx-auto flex justify-center  space-y-8 px-24 md:px-10">
         {/* Left Side: Text */}
-        <div className=" container mx-auto flex justify-between space-y-8 sm:flex-col">
+        <div className="container mx-auto flex justify-between gap-9 space-y-8 md:flex-col">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl text-left">
               Let’s talk!
             </h2>
             <p className="text-gray-600 text-lg text-left">
-              Quick intro to what we’re all about, answering questions <br />
+              Quick intro to what we’re all about, answering questions{" "}
+              <br className="2md:hidden" />
               and drafting a roadmap of your cloud journey. All within 30
               minutes.
             </p>
           </div>
-          <button className="px-6 py-3 sm:w-full  bg-orange-650 ring-1 ring-darkblue-850 text-white rounded-full font-semibold hover:bg-orange-600 transition duration-300">
+          <button className="px-6 py-3 sm:w-full bg-orange-650 ring-1 ring-darkblue-850 text-white rounded-full font-semibold hover:bg-orange-600 transition duration-300">
             Schedule Your Call →
           </button>
         </div>
-
-        
       </div>
 
       {/* Right Side: Form */}
-      <div className="flex sm:flex-col justify-between sm:px-5 px-24 space-y-8 ">
+      <div className="flex md:flex-wrap justify-between sm:px-5 px-24 gap-5 ">
         {/* Image */}
-        <div className="w-full flex">
+        <div className="w-full ">
           <Image
             src="/assets/contact.png"
             alt="Cloud Service"
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg aspect-square md:w-full "
             width={400}
             height={400}
           />
         </div>
-      
-      <div className="container mx-auto px-4 mt-12 flex flex-col md:flex-row items-start justify-between space-y-8 md:space-y-0">
-        <div className="">
-          <h3 className="text-4xl font-extrabold tracking-wide text-gray-900">
-            Cloud <span className="text-orange-650 underline">experts</span><br /> on duty
-          </h3>
-          <p className="text-gray-600 mt-4">
-            Want to skip the intro call and get straight to it? Tell us what’s
-            up and our tech experts will get back to you ASAP.
-          </p>
+
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-start justify-between space-y-8 md:space-y-0">
+          <div className="">
+            <h3 className="text-4xl font-extrabold tracking-wide text-gray-900">
+              Cloud <span className="text-orange-650 underline">experts</span>
+              <br className="md:hidden" /> on duty
+            </h3>
+            <p className="text-gray-600 mt-4">
+              Want to skip the intro call and get straight to it? Tell us what’s
+              up and our tech experts will get back to you ASAP.
+            </p>
 
             <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
               <div>
@@ -121,14 +121,12 @@ const ContactSection: React.FC = () => {
                 </label>
               </div>
 
-              <div>
-                <button
-                  type="submit"
-                  className="sm:w-full  flex items-center mt-10 justify-center px-6 py-3 border border-black text-sm font-medium rounded-full shadow-sm text-neutral-800 bg-transparent  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
-                >
-                  Submit Form →
-                </button>
-              </div>
+              <button
+                type="submit"
+                className="sm:w-full  flex items-center mt-10 justify-center px-6 py-3 border border-black text-sm font-medium rounded-full shadow-sm text-neutral-800 bg-transparent  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+              >
+                Submit Form →
+              </button>
             </form>
           </div>
         </div>
