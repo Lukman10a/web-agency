@@ -2,7 +2,7 @@
 import ContactOffice from "@/components/contactOffice";
 import ContactPage from "@/components/contactPage";
 
-export default function Solution() {
+export default function Contact() {
     return (
         <div>
             <ContactPage />
@@ -13,8 +13,3 @@ export default function Solution() {
 
 import React from "react";
 
-const Contact = () => {
-  return <div>Contact</div>;
-};
-
-export default Contact;
