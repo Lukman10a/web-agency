@@ -35,7 +35,7 @@ const ContactPage: React.FC = () => {
         {/* Left Side: Text */}
         <div className=" container mx-auto flex flex-col justify-center space-y-8 sm:flex-col">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-5xl py-3 text-center">
+            <h2 className="text-5xl font-bold text-gray-900 sm:text-5xl py-3 text-center">
               Let’s talk!
             </h2>
             <p className="text-gray-600 text-lg text-center">
