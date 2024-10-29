@@ -7,11 +7,12 @@ import { StaticImageData } from "next/image";
 
 type Post = {
   id: number;
-  imageSrc: string | StaticImageData;
+  image: string | StaticImageData;
   date: string;
   title: string;
   categories: string[];
 };
+
 
 const posts: Post[] = [
   {

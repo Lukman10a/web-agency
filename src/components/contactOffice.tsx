@@ -40,7 +40,7 @@ const ContactOffice: React.FC = () => {
           <div className="text-4xl sm:text-xl font-bold">We’re here for you, <h2>call us!</h2></div>
         </div>
         <div className="flex sm:flex-col items-center sm:space-x-2 space-x-4 sm:space-y-4">
-          <img
+          <Image
             src="https://via.placeholder.com/50"
             alt="Ivan Sakin"
             className="w-12 h-12 rounded-full"

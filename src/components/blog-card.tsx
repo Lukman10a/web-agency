@@ -3,9 +3,8 @@ import React from "react";
 import image from "/public/assets/blog-card.png";
 import Link from "next/link";
 
-interface BlogCardProps {}
 
-const BlogCard: React.FC<BlogCardProps> = () => {
+const BlogCard = () => {
   return (
     <div className="p-[2em] 2md:p-[1em] w-[90%] max-w-[1100px] my-10 mx-auto flex sm:flex-col gap-12 lg:gap-8 md:gap-4 bg-gradient-to-r from-[#0813481A] to-[#FF95571A] rounded-3xl sm:rounded-2xl">
       <div className="w-1/2 sm:w-full">

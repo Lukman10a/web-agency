@@ -293,8 +293,6 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import CloudJourney from "./cloud-journey";
 import image from "../../public/assets/cardimage1.png";
-import star from "../../public/assets/starfour.png";
-import orangestar from "../../public/assets/orangestar.png";
 import sysops from "../../public/assets/sysops.png";
 import security from "../../public/assets/security.png";
 import archi from "../../public/assets/archi.png";
