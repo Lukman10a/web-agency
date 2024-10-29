@@ -8,7 +8,6 @@ import aws from "../../public/svg/aws.svg";
 import data from "../../public/svg/data.svg";
 import devops from "../../public/svg/devops.svg";
 import mark from "../../public/svg/mark.svg";
-import black_mark from "../../public/svg/black_mark.svg";
 import Cardimage1 from "../../public/assets/cardimage1.png";
 import contact from "../../public/assets/contact.png";
 import React from "react";
@@ -57,7 +56,6 @@ export default function AWS() {
     "Expert consulting in order to support the operation",
     "Co-funding with AWS Migrations Acceleration Program (MAP)",
   ];
-
 
   return (
     <div>
@@ -191,7 +189,7 @@ export default function AWS() {
       </section>
       <AWSection />
       <AwsLara />
-     <LARA/>
+      <LARA />
 
       <div className="bg-white p-4">
         <div className="rounded-xl bg-gradient-to-r from-gradient-100 to-gradient-200">
