@@ -16,8 +16,8 @@ import { motion } from "framer-motion";
 import Testimonials from "@/components/what-client";
 import ContactSection from "@/components/lets-talk";
 import CategoryButtons from "@/components/shared/category-buttons";
-import AWSection from "@/components/AWSection";
-import AwsLara from "@/components/AwsLara";
+import AWSection from "@/components/aws-section";
+import AwsLara from "@/components/aws-lara";
 import LARA from "@/components/shared/lara";
 
 export default function AWS() {

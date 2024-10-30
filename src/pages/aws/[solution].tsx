@@ -1,12 +1,12 @@
-import AwsLara from "@/components/AwsLara";
+import AwsLara from "@/components/aws-lara";
 import ContactSection from "@/components/lets-talk";
 import CallToAction from "@/components/shared/callToAction";
 import LARA from "@/components/shared/lara";
 import Image from "next/image";
 import black_mark from "/public/svg/black_mark.svg";
 import React from "react";
-import EksAWSection from "@/components/EksAws";
-import { awsServices } from "@/components/AWSection";
+import EksAWSection from "@/components/eks-aws";
+import { awsServices } from "@/components/aws-section";
 import { useRouter } from "next/router";
 
 // Benefit Component
