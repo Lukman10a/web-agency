@@ -13,7 +13,7 @@ interface WorkItemProps {
   title: string;
   description: string;
   tags: string[];
-  images: string[]; // Multiple images for the carousel
+  imageSrcs: string[]; // Array of image sources for the carousel
 }
 
 // AWS Solutions Card Component
@@ -27,41 +27,24 @@ const SolutionCard: React.FC<SolutionCardProps> = ({ title, description, linkTex
   </div>
 );
 
-// Main AWS Solutions Section
-const AWSSolutions: React.FC = () => (
-  <section className="bg-gradient-to-r from-gradient-100 to-gradient-200 py-16 px-4 mx-6 rounded-lg">
-    <div className="max-w-7xl mx-auto">
-      <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-10">AWS Solutions</h2>
-      <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 grid-cols-3">
-        <SolutionCard title="EKS" description="Amazing Kubernetes services" linkText="Show more" />
-        <SolutionCard title="EKS" description="Amazing Kubernetes services" linkText="Show more" />
-        <SolutionCard title="EKS" description="Amazing Kubernetes services" linkText="Show more" />
-      </div>
-      <div className="absolute right-10 bottom-0 sm:right-1 sm:bottom-8 md:bottom-16">
-        <Image src="/assets/Star.png" alt="Decorative Star" width={80} height={80} />
-      </div>
-    </div>
-  </section>
-);
-
 // Our Work Section with Carousel
-const WorkItem: React.FC<WorkItemProps> = ({ title, description, tags, images }) => {
+const WorkItem: React.FC<WorkItemProps> = ({ title, description, tags, imageSrcs }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Go to the next slide
   const handleNext = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % imageSrcs.length);
   };
 
   // Go to the previous slide
   const handlePrev = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + imageSrcs.length) % imageSrcs.length);
   };
 
   return (
     <section className="bg-white py-16 px-4">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl font-extrabold text-gray-900 mb-4">Our Work</h2>
+        <h2 className="text-3xl font-extrabold text-gray-900 mb-4">Our Work with Eks</h2>
         <div className="text-center">
           <h3 className="text-xl font-bold text-gray-900">{title}</h3>
           <p className="text-gray-600 mt-4 mb-4">{description}</p>
@@ -74,7 +57,7 @@ const WorkItem: React.FC<WorkItemProps> = ({ title, description, tags, images })
           </div>
           <div className="relative flex justify-center mx-auto">
             <Image
-              src={images[currentSlide]}
+              src={imageSrcs[currentSlide]}
               alt="Work Example"
               width={1200}
               height={600}
@@ -101,16 +84,15 @@ const WorkItem: React.FC<WorkItemProps> = ({ title, description, tags, images })
 };
 
 // Main Component
-const AWSection: React.FC = () => (
+const EksAWSection: React.FC = () => (
   <div>
-    <AWSSolutions />
     <WorkItem
-      title="Launching BAMAN: Raiffeisen bank’s Strategic Move to Cloud Application"
-      description="Ready-made, battle-tested and proven building blocks for rapid set up of well architected infrastructure."
+      title="Unified Log Aggregation Tool for EKS Services"
+      description="Dataddo needed to build a unified logging platform to collect and analyze logs from"
       tags={['Banking', 'Cloud', 'Enterprise', 'Security']}
-      images={['/assets/work.png', '/assets/work.png', '/assets/work.png']} // Add paths for carousel images
+      imageSrcs={['/assets/work.png', '/assets/work.png', '/assets/work.png']} // Array of images for carousel
     />
   </div>
 );
 
-export default AWSection;
+export default EksAWSection;

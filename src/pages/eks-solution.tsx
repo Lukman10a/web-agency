@@ -5,6 +5,7 @@ import LARA from "@/components/shared/lara";
 import Image from "next/image";
 import black_mark from "../../public/svg/black_mark.svg";
 import React from "react";
+import EksAWSection from "@/components/EksAws";
 
 // Benefit Component
 const Benefit = ({
@@ -105,10 +106,12 @@ export default function EKSSolution() {
           services.
         </p>
       </section>
+      <EksAWSection />
       <div className="flex justify-center lg:px-6">
         <CallToAction />
       </div>
       <AwsLara />
+     
       <LARA />
       <ContactSection />
     </section>
