@@ -7,6 +7,9 @@ import cloud from "../../public/assets/cloud.png";
 import devops from "../../public/assets/devops.png";
 import data from "../../public/assets/data.png";
 import star from "../../public/assets/starfour.png";
+import ArrowIcon from "./icons/arrow";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 const badges = [
   { src: sysops, alt: "AWS SysOps Administrator Badge" },
@@ -204,6 +207,15 @@ export const AWSCertifications = () => {
             className="w-32 md:h-24 md:w-24"
           />
         </div>
+      </div>
+
+      <div className="flex justify-center py-6">
+        <Link href="/aws">
+          <Button className="flex w-fit transform items-center gap-4 rounded-2xl border border-[#081348] bg-orange-650 text-black transition duration-500 hover:scale-105 hover:bg-black hover:text-white">
+            <span>EXPLORE</span>
+            <ArrowIcon />
+          </Button>
+        </Link>
       </div>
     </div>
   );
