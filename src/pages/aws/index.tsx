@@ -106,7 +106,7 @@ export default function AWS() {
       </section>
 
       {/* Why is this Important Section */}
-      <section className="bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] p-8">
+      <section className="bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] p-8 sm:p-4">
         <h1 className="py-12 text-center font-sora text-5xl font-bold text-[#262626] md:text-4xl sm:text-3xl">
           Why is this important?
         </h1>
