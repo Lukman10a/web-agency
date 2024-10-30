@@ -8,6 +8,7 @@ import CloudPlatformSection from "@/components/page-two";
 import LARABuildingBlocks from "@/components/building-blocks";
 import ContactSection from "@/components/lets-talk";
 import Booking from "@/components/booking";
+import Link from "next/link";
 
 export default function Solution() {
   return (
@@ -23,10 +24,12 @@ export default function Solution() {
             environment that is secure, scalable, easy to operate, and
             built-to-last
           </p>
-          <Button className="flex w-fit transform items-center gap-4 rounded-2xl border border-[#081348] bg-orange-650 text-white transition duration-500 hover:scale-105 hover:bg-orange-600">
-            <span>EXPLORE</span>
-            <ArrowIcon />
-          </Button>
+          <Link href="#">
+            <Button className="flex w-fit transform items-center gap-4 rounded-2xl border border-[#081348] bg-orange-650 text-white transition duration-500 hover:scale-105 hover:bg-orange-600">
+              <span>EXPLORE</span>
+              <ArrowIcon />
+            </Button>
+          </Link>
         </div>
         <div className="flex-[2] overflow-hidden rounded-lg md:hidden">
           <video autoPlay loop muted className="h-full w-full">
