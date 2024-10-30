@@ -4,6 +4,9 @@ import PostCard from "@/components/post-card";
 import React, { useState } from "react";
 import postImage from "/public/assets/post-image.png";
 import { StaticImageData } from "next/image";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import ArrowIcon from "@/components/icons/arrow";
 
 type Post = {
   id: number;
@@ -131,7 +134,7 @@ const Index: React.FC = () => {
           ))}
         </div>
 
-        <div className="grid sm:grid-cols-1 2md:grid-cols-2 grid-cols-3 gap-[2px] border mx-5">
+        <div className="grid sm:grid-cols-1 2md:grid-cols-2 grid-cols-3 gap-[2px] mx-5">
           {filteredPosts.map((post) => (
             <PostCard
               key={post.id}
@@ -145,22 +148,13 @@ const Index: React.FC = () => {
         </div>
 
         <div className="flex justify-center mt-8">
-          <button className="bg-orange-650 text-white px-6 py-2 rounded-full flex items-center">
-            READ MORE
-            <svg
-              className="w-4 h-4 ml-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
+          <Button
+            asChild
+            className="w-fit py-[1.6em] border border-black uppercase flex items-center justify-center   text-[.75rem] 2md:text-[.7rem] font-light rounded-full text-white bg-orange-600 hover:bg-orange-700">
+            <Link href="3">
+              READ MORE <ArrowIcon />
+            </Link>
+          </Button>
         </div>
       </div>
       <Newsletter />
