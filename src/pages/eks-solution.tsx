@@ -29,7 +29,7 @@ export default function EKSSolution() {
     },
     {
       title: "Super Scalable",
-      description: "Easily scale your apps to meet your changing demands",
+      description: "Easily scale your apps to meet your changing demands.",
     },
     {
       title: "Highly Available",
