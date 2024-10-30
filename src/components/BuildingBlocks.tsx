@@ -36,8 +36,12 @@ const LARABuildingBlocks: React.FC = () => {
   ];
 
   return (
+    <section className="bg-gradient-to-r from-gradient-100 to-gradient-200 py-16 rounded-3xl mx-10">
+      <div className="max-w-7xl mx-auto px-14 sm:px-6 lg:px-8 relative">
+
     <section className="mx-auto rounded-3xl bg-gradient-to-r from-gradient-100 to-gradient-200 py-16">
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8 sm:px-6">
+
         {/* Heading Section */}
         <div className="mb-10 text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -51,6 +55,8 @@ const LARABuildingBlocks: React.FC = () => {
         </div>
 
         {/* Building Blocks Grid */}
+        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 grid-cols-2 sm:mx-auto px-4 md:px-16 relative">
+
         <div className="relative grid grid-cols-2 gap-6 px-4 md:grid-cols-2 md:px-16 sm:grid-cols-1 sm:px-2">
           {blocks.map((block, index) => (
             <div
