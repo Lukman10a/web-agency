@@ -39,8 +39,8 @@ export default function Expandable({
   return (
     <div
       className={cn(
-        "flex sm:flex-col flex-row sm:h-auto h-96 w-full gap-1 overflow-x-auto sm:overflow-x-visible",
-        className
+        "flex h-96 w-full flex-row gap-1 overflow-x-auto md:flex-col sm:h-auto sm:overflow-x-visible",
+        className,
       )}
     >
       {list.map((item, index) => (

@@ -19,11 +19,11 @@ export const ExpandableList = ({
   return (
     <div
       className={cn(
-        "relative flex md:h-20 md:w-full w-20 min-w-10 cursor-pointer overflow-hidden  rounded-md transition-all delay-0 duration-300 ease-in-out",
+        "relative flex w-20 min-w-10 cursor-pointer overflow-hidden rounded-md transition-all delay-0 duration-300 ease-in-out md:h-20 md:w-full",
         {
           "flex-grow md:h-auto": index === activeItem,
         },
-        className
+        className,
       )}
       {...props}
     >
@@ -39,16 +39,16 @@ export const ExpandableList = ({
         })}
       />
       {index === activeItem && (
-        <div className="absolute md:bottom-4 md:left-4  text-white bottom-8 left-8">
+        <div className="absolute bottom-8 left-8 text-white md:bottom-4 md:left-4">
           <WaveReveal
             duration="1000ms"
-            className="items-start justify-start sm:text-xl md:text-2xl text-6xl"
+            className="items-start justify-start text-6xl 2md:text-4xl md:text-2xl sm:text-xl"
             text={item.title}
             mode="word"
             direction="up"
           />
 
-          <p className="text-lg text-slate-200 sm:text-base mt-10 mb-4 md:px-2 px-6 ">
+          <p className="mb-4 mt-10 px-6 text-lg text-slate-200 md:px-2 sm:text-base">
             {item.description}
           </p>
         </div>
