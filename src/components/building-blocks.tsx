@@ -41,7 +41,7 @@ const LARABuildingBlocks: React.FC = () => {
         </div>
 
         {/* Building Blocks Grid */}
-        <div className="grid grid-cols-1 gap-6 px-4 md:grid-cols-2 md:px-16 sm:grid-cols-2">
+        <div className="grid grid-cols-2 gap-6 px-4 md:px-4 sm:grid-cols-1">
           {blocks.map((block, index) => (
             <div
               key={index}
