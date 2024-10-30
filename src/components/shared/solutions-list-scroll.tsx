@@ -59,7 +59,7 @@ import Expandable from "../ui/animated/expandable-carousel";
 const items = [
   {
     image: securityImg,
-    title: "Migrate my existing solution to the cloud",
+    title: "Migrate my existing solution to the cloud",
     description:
       "As an experienced cloud partner, we prepare the target infrastructure, make the cloud adoption process smooth, less risky and help you make your services cloud-ready before you hop on.",
   },
@@ -71,7 +71,7 @@ const items = [
   },
   {
     image: bigData,
-    title: "Kickstart my new cloud project",
+    title: "Kickstart my new cloud project",
     description:
       "In early stages you work with limited resources to make the MVP fly. Focus on your core business and our experienced crew will manage the cloud super-efficiently, as it plays a big part in your success.",
   },
@@ -79,7 +79,7 @@ const items = [
 
 export function StickyScrollRevealDemo() {
   return (
-    <div className="w-11/12 mx-auto my-3">
+    <div className="mx-auto my-3 w-11/12">
       {/* <StickyScroll content={content} /> */}
       <Expandable list={items} />
     </div>

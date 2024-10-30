@@ -142,7 +142,7 @@ const CloudJourney: React.FC = () => {
       setCurrentSlide((prev) => {
         const newSlide = Math.min(
           prev + 1,
-          activeTabContent.sliderContent.length - 1
+          activeTabContent.sliderContent.length - 1,
         );
         scrollToSlide(newSlide);
         return newSlide;
@@ -167,29 +167,29 @@ const CloudJourney: React.FC = () => {
   const activeTabContent = tabContent.find((tab) => tab.id === activeTab);
 
   return (
-    <div className="max-w-6xl mx-auto p-8 md:px-4 font-sans relative ">
-      <div className="flex gap-8 2md:gap-2 justify-between 2md:flex-col mb-4">
-        <div className="max-w-[500px] 2md:max-w-full 2md:mb-0">
-          <h1 className="text-3xl font-semibold mb-2 font-sora">
+    <div className="relative mx-auto max-w-6xl p-8 font-sans md:px-4">
+      <div className="mb-4 flex justify-between gap-8 2md:flex-col 2md:gap-2">
+        <div className="max-w-[500px] 2md:mb-0 2md:max-w-full">
+          <h1 className="mb-2 font-sora text-3xl font-semibold">
             Your Cloud Journey
           </h1>
-          <p className="text-[#808080] mb-6 font-sans text-[14px] ">
+          <p className="mb-6 font-sans text-[14px] text-[#808080]">
             Becoming cloud native might seem like an intimidating task, but
             don&apos;t despair, we&apos;re here to guide you through the entire
             process of your cloud journey.
           </p>
         </div>
 
-        <div className="flex space-x-4 md:space-x-2 self-center 2md:self-start">
+        <div className="flex space-x-4 self-center 2md:self-start md:space-x-2">
           {tabContent.map((tab) => (
             <Button
               key={tab.id}
               variant={activeTab === tab.id ? "default" : "outline"}
               onClick={() => setActiveTab(tab.id)}
-              className={`font-sans border border-black rounded-full md:text-[.6rem] 2md:text-[.8rem] ${
+              className={`rounded-full border border-black font-sans 2md:text-[.8rem] md:text-[.6rem] ${
                 activeTab === tab.id
                   ? "bg-orange-650 text-black hover:bg-[#081348] hover:text-white"
-                  : "text-black "
+                  : "text-black"
               }`}
             >
               {tab.label}
@@ -198,7 +198,7 @@ const CloudJourney: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center mb-6 absolute right-8">
+      <div className="absolute right-8 mb-6 flex items-center justify-between">
         <div className="flex space-x-2">
           <Button
             variant="outline"
@@ -207,7 +207,7 @@ const CloudJourney: React.FC = () => {
             onClick={handlePrev}
             disabled={currentSlide === 0}
           >
-            <ArrowIcon className="h-4 w-4 transform rotate-180 fill-black group-hover:fill-white" />
+            <ArrowIcon className="h-4 w-4 rotate-180 transform fill-black group-hover:fill-white" />
           </Button>
           <Button
             variant="outline"
@@ -219,40 +219,40 @@ const CloudJourney: React.FC = () => {
               currentSlide === activeTabContent.sliderContent.length - 1
             }
           >
-            <ArrowIcon className="fill-black h-4 w-4 group-hover:fill-white" />
+            <ArrowIcon className="h-4 w-4 fill-black group-hover:fill-white" />
           </Button>
         </div>
       </div>
 
       {activeTabContent && (
         <div>
-          <h2 className="text-xl font-semibold mb-4 md:text-[16px] font-sans text-[#808080]">
+          <h2 className="mb-4 font-sans text-xl font-semibold text-[#808080] md:text-[16px]">
             {activeTabContent.description}
           </h2>
           <div className="relative">
             <div
               ref={sliderRef}
-              className="flex gap-8  overflow-x-hidden snap-x snap-mandatory"
+              className="flex snap-x snap-mandatory gap-8 overflow-x-hidden"
             >
               {activeTabContent.sliderContent.map((slide, index) => (
                 <div
                   key={index}
-                  className=" flex-shrink-0 max-w-[400px]  w-full snap-start mt-4"
+                  className="mt-4 w-full max-w-[400px] flex-shrink-0 snap-start"
                 >
-                  <div className="border-black rounded-lg border p-6 h-full">
+                  <div className="h-full rounded-lg border border-black p-6">
                     <div className="flex justify-between">
-                      <div className="text-black px-[4px] mb-2 border border-black rounded-2xl sm:text-[14px] flex justify-center items-center">
+                      <div className="mb-2 flex items-center justify-center rounded-2xl border border-black px-[4px] text-black sm:text-[14px]">
                         {slide.time}
                       </div>
-                      <div className="px-[3px] items-center text-black font-semibold mb-2 border border-black rounded-2xl sm:text-[14px] flex justify-center">
+                      <div className="mb-2 flex items-center justify-center rounded-2xl border border-black px-[3px] font-semibold text-black sm:text-[14px]">
                         {String(index + 1).padStart(2, "0")}
                       </div>
                     </div>
 
-                    <h3 className="text-2xl font-semibold mb-2 font-sora">
+                    <h3 className="mb-2 font-sora text-2xl font-semibold">
                       {slide.title}
                     </h3>
-                    <p className="text-[#808080] text-[15px]">
+                    <p className="text-[15px] text-[#808080]">
                       {slide.description}
                     </p>
                   </div>

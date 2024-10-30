@@ -48,7 +48,7 @@ const Booking: React.FC = () => (
     </div>
 
     {/* Stats */}
-    <div className="container mx-auto mb-16 flex max-w-7xl justify-between gap-7 border-b border-t p-6 md:flex-wrap">
+    <div className="container mx-auto mb-16 flex max-w-7xl justify-between gap-7 border-b border-t p-6 md:flex-wrap md:items-center">
       {stats.map((stat, index) => (
         <div key={index} className="flex items-center gap-3 text-center">
           <p className="font-sora text-3xl font-bold">{stat.count}</p>
@@ -64,7 +64,7 @@ const Booking: React.FC = () => (
     <CloudJourney />
 
     {/* LARA Card */}
-    <div className="relative mx-auto mb-[1.5em] flex max-w-[1300px] gap-14 rounded-2xl border border-[#fcfcf] bg-[#fcfcfc] bg-gradient-to-r from-[#0813481A] to-[#FF95571A] p-[3em] 2md:mx-6 md:gap-4 sm:flex-col">
+    <div className="relative mx-auto mb-[1.5em] flex max-w-[1300px] gap-14 rounded-2xl border border-[#fcfcf] bg-[#fcfcfc] bg-gradient-to-r from-[#0813481A] to-[#FF95571A] p-[3em] 2md:mx-6 md:gap-4 sm:flex-col sm:gap-8">
       <div className="mb-0 w-1/2 sm:w-full">
         <Image
           src={image}

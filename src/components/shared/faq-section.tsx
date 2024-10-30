@@ -39,12 +39,14 @@ const FAQSection: React.FC<FAQSectionProps> = ({
                 className="flex cursor-pointer items-center justify-between"
                 onClick={() => toggleFAQ(index)}
               >
-                <h3 className={`text-lg sm:text-base font-medium ${questionColor}`}>
+                <h3
+                  className={`text-lg font-medium sm:text-base ${questionColor}`}
+                >
                   {faq.question}
                 </h3>
 
                 <button
-                  className={`ml-4 flex h-8 w-8 sm:w-12 sm:h-12 items-center justify-center rounded-full transition-colors ${
+                  className={`ml-4 flex h-8 w-8 items-center justify-center rounded-full transition-colors sm:w-14 ${
                     activeIndex === index
                       ? "bg-darkblue-900 text-white"
                       : "bg-gray-200 text-blue-600"
