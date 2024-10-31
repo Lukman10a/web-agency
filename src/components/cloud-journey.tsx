@@ -183,6 +183,7 @@ const CloudJourney: React.FC = () => {
         <div className="flex space-x-4 self-center 2md:self-start md:space-x-2">
           {tabContent.map((tab) => (
             <Button
+              id="cloud-journey"
               key={tab.id}
               variant={activeTab === tab.id ? "default" : "outline"}
               onClick={() => setActiveTab(tab.id)}
@@ -198,6 +199,7 @@ const CloudJourney: React.FC = () => {
         </div>
       </div>
 
+      <div className="flex justify-between items-center mb-6 absolute sm:static right-8">
       <div className="absolute right-8 mb-6 flex items-center justify-between">
         <div className="flex space-x-2">
           <Button

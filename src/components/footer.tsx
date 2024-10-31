@@ -66,9 +66,21 @@ const Footer: React.FC = () => {
             <div>
               <h4 className="text-lg font-semibold">Our Services</h4>
               <ul className="mt-2 space-y-2 text-neutral-400">
-                <li>Migration</li>
-                <li>Optimization</li>
-                <li>Kickstart</li>
+                <li>
+                  <a href="/solution/?section=migration#cloud-journey">
+                    Migration
+                  </a>
+                </li>
+                <li>
+                  <a href="/solution/?section=optimization#cloud-journey">
+                    Optimization
+                  </a>
+                </li>
+                <li>
+                  <a href="/solution/?section=kickstart#cloud-journey">
+                    Kickstart
+                  </a>
+                </li>
               </ul>
             </div>
 

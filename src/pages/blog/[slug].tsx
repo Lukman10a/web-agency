@@ -91,7 +91,7 @@ const PostDetails = () => {
 
         <div className="sticky top-0 z-50 mx-auto mb-8 flex w-full items-center justify-around bg-darkblue-900 py-[1em] text-white 2md:py-[.75em] sm:mb-4 sm:py-[.5em]">
           {data.sections.map((section, index) => (
-            <Link href={`#${section}`} key={section}>
+            <a href={`#${section}`} key={section}>
               <div
                 className={`flex cursor-pointer items-center space-x-2 text-center ${
                   activeSection === section
@@ -103,11 +103,12 @@ const PostDetails = () => {
                 <p className="font-sora text-3xl font-semibold 2md:text-[20px] md:text-[15px] sm:-mr-1">
                   {String(index + 1).padStart(2, "0")}
                 </p>
+                <p className="font-sans border-l border-gray-400 pl-2 sm:pl-1 sm:-ml-6 2md:text-[14px] md:text-[10px]">
                 <p className="border-l pl-2 font-sans 2md:text-[14px] md:text-[10px] sm:-ml-6 sm:pl-1">
                   {section}
                 </p>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -272,6 +273,11 @@ const PostDetails = () => {
           </section>
         </div>
         <div>
+          <div className="flex flex-wrap gap-2 mb-6 justify-center mx-auto ">
+            {tags.map((tag) => (
+              <button
+                key={tag}
+                className="px-5 py-3  border text-white bg-darkblue-900  rounded-full text-sm sm:text-[10px] cursor-default">
           <div className="mx-auto mb-6 flex flex-wrap justify-center gap-2">
             {tags.map((tag) => (
               <button

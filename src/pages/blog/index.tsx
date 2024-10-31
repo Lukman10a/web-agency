@@ -115,7 +115,7 @@ const Index: React.FC = () => {
       <BlogCard />
 
       <div className="container mx-auto px-4 py-8 max-w-[1200px] ">
-        <h2 className="text-3xl font-bold mb-6 mx-auto text-center">
+        <h2 className="text-3xl font-semibold mb-6 mx-auto text-center font-sora">
           Latest Insight
         </h2>
 
