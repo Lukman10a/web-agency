@@ -12,7 +12,7 @@ const Newsletter: React.FC = () => {
   };
 
   return (
-    <div className="bg-orange-650 rounded-3xl sm:rounded-2xl px-16 py-20 md:p-12 sm:px-6 my-10  mx-auto flex 2md:flex-col justify-between gap-8 sm:gap-16 w-[90%]  max-w-[1300px]">
+    <div className="bg-orange-650 rounded-3xl shadow-lg sm:rounded-2xl px-16 py-20 md:p-12 sm:px-6 my-10  mx-auto flex 2md:flex-col justify-between gap-8 sm:gap-16 w-[90%]  max-w-[1300px]">
       <div className="space-y-4 w-1/2 2md:w-full sm:self-end">
         <p className="text-black text-xl">Newsletter</p>
         <h2 className="text-6xl lg:text-5xl sm:text-[40px] font-bold text-black leading-tight font-sora">

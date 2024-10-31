@@ -14,7 +14,6 @@ import star from "../../public/assets/starfour.png";
 import orangestar from "../../public/assets/orangestar.png";
 import bigstar from "../../public/assets/Star.png";
 
-import { useState } from "react";
 import CloudJourney from "./cloud-journey";
 
 const Booking = () => {

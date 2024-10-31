@@ -92,7 +92,7 @@ const PostDetails = () => {
 
         <div className="bg-darkblue-900 w-full mx-auto py-[1em] 2md:py-[.75em] sm:py-[.5em] flex justify-around items-center mb-8 sm:mb-4 text-white sticky top-0 z-50">
           {data.sections.map((section, index) => (
-            <Link href={`#${section}`} key={section}>
+            <a href={`#${section}`} key={section}>
               <div
                 className={`text-center flex items-center space-x-2 cursor-pointer ${
                   activeSection === section
@@ -103,11 +103,11 @@ const PostDetails = () => {
                 <p className="text-3xl font-sora font-semibold 2md:text-[20px] md:text-[15px] sm:-mr-1">
                   {String(index + 1).padStart(2, "0")}
                 </p>
-                <p className="font-sans border-l pl-2 sm:pl-1 sm:-ml-6 2md:text-[14px] md:text-[10px]">
+                <p className="font-sans border-l border-gray-400 pl-2 sm:pl-1 sm:-ml-6 2md:text-[14px] md:text-[10px]">
                   {section}
                 </p>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -272,11 +272,11 @@ const PostDetails = () => {
           </section>
         </div>
         <div>
-          <div className="flex flex-wrap gap-2 mb-6 justify-center mx-auto">
+          <div className="flex flex-wrap gap-2 mb-6 justify-center mx-auto ">
             {tags.map((tag) => (
               <button
                 key={tag}
-                className="px-5 py-3  border text-white bg-darkblue-900  rounded-full text-sm sm:text-[10px]">
+                className="px-5 py-3  border text-white bg-darkblue-900  rounded-full text-sm sm:text-[10px] cursor-default">
                 {tag}
               </button>
             ))}
