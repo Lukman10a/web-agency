@@ -1,30 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-
-// Form Logic: Handle form state and submission
-const useContactForm = () => {
-  const [formData, setFormData] = useState({
-    message: "",
-    email: "",
-    terms: false,
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { id, value, type, checked } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [id]: type === "checkbox" ? checked : value,
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Handle form submission logic here (e.g., API call)
-    console.log("Form submitted:", formData);
-  };
-
-  return { formData, handleChange, handleSubmit };
-};
+import useContactForm from "@/hooks/use-contact";
 
 const ContactSection: React.FC = () => {
   const { formData, handleChange, handleSubmit } = useContactForm(); // Destructure form logic

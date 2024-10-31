@@ -183,6 +183,7 @@ const CloudJourney: React.FC = () => {
         <div className="flex space-x-4 self-center 2md:self-start md:space-x-2">
           {tabContent.map((tab) => (
             <Button
+              id="cloud-journey"
               key={tab.id}
               variant={activeTab === tab.id ? "default" : "outline"}
               onClick={() => setActiveTab(tab.id)}
@@ -198,70 +199,72 @@ const CloudJourney: React.FC = () => {
         </div>
       </div>
 
-      <div className="absolute right-8 mb-6 flex items-center justify-between">
-        <div className="flex space-x-2">
-          <Button
-            variant="outline"
-            size="icon"
-            className="group rounded-full border-black hover:bg-[#081348]"
-            onClick={handlePrev}
-            disabled={currentSlide === 0}
-          >
-            <ArrowIcon className="h-4 w-4 rotate-180 transform fill-black group-hover:fill-white" />
-          </Button>
-          <Button
-            variant="outline"
-            size="icon"
-            className="group rounded-full border-black hover:bg-[#081348]"
-            onClick={handleNext}
-            disabled={
-              activeTabContent &&
-              currentSlide === activeTabContent.sliderContent.length - 1
-            }
-          >
-            <ArrowIcon className="h-4 w-4 fill-black group-hover:fill-white" />
-          </Button>
-        </div>
-      </div>
-
-      {activeTabContent && (
-        <div>
-          <h2 className="mb-4 font-sans text-xl font-semibold text-[#808080] md:text-[16px]">
-            {activeTabContent.description}
-          </h2>
-          <div className="relative">
-            <div
-              ref={sliderRef}
-              className="flex snap-x snap-mandatory gap-8 overflow-x-hidden"
+      <div className="absolute right-8 mb-6 flex items-center justify-between sm:static">
+        <div className="absolute right-8 mb-6 flex items-center justify-between">
+          <div className="flex space-x-2">
+            <Button
+              variant="outline"
+              size="icon"
+              className="group rounded-full border-black hover:bg-[#081348]"
+              onClick={handlePrev}
+              disabled={currentSlide === 0}
             >
-              {activeTabContent.sliderContent.map((slide, index) => (
-                <div
-                  key={index}
-                  className="mt-4 w-full max-w-[400px] flex-shrink-0 snap-start"
-                >
-                  <div className="h-full rounded-lg border border-black p-6">
-                    <div className="flex justify-between">
-                      <div className="mb-2 flex items-center justify-center rounded-2xl border border-black px-[4px] text-black sm:text-[14px]">
-                        {slide.time}
-                      </div>
-                      <div className="mb-2 flex items-center justify-center rounded-2xl border border-black px-[3px] font-semibold text-black sm:text-[14px]">
-                        {String(index + 1).padStart(2, "0")}
-                      </div>
-                    </div>
-
-                    <h3 className="mb-2 font-sora text-2xl font-semibold">
-                      {slide.title}
-                    </h3>
-                    <p className="text-[15px] text-[#808080]">
-                      {slide.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+              <ArrowIcon className="h-4 w-4 rotate-180 transform fill-black group-hover:fill-white" />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              className="group rounded-full border-black hover:bg-[#081348]"
+              onClick={handleNext}
+              disabled={
+                activeTabContent &&
+                currentSlide === activeTabContent.sliderContent.length - 1
+              }
+            >
+              <ArrowIcon className="h-4 w-4 fill-black group-hover:fill-white" />
+            </Button>
           </div>
         </div>
-      )}
+
+        {activeTabContent && (
+          <div>
+            <h2 className="mb-4 font-sans text-xl font-semibold text-[#808080] md:text-[16px]">
+              {activeTabContent.description}
+            </h2>
+            <div className="relative">
+              <div
+                ref={sliderRef}
+                className="flex snap-x snap-mandatory gap-8 overflow-x-hidden"
+              >
+                {activeTabContent.sliderContent.map((slide, index) => (
+                  <div
+                    key={index}
+                    className="mt-4 w-full max-w-[400px] flex-shrink-0 snap-start"
+                  >
+                    <div className="h-full rounded-lg border border-black p-6">
+                      <div className="flex justify-between">
+                        <div className="mb-2 flex items-center justify-center rounded-2xl border border-black px-[4px] text-black sm:text-[14px]">
+                          {slide.time}
+                        </div>
+                        <div className="mb-2 flex items-center justify-center rounded-2xl border border-black px-[3px] font-semibold text-black sm:text-[14px]">
+                          {String(index + 1).padStart(2, "0")}
+                        </div>
+                      </div>
+
+                      <h3 className="mb-2 font-sora text-2xl font-semibold">
+                        {slide.title}
+                      </h3>
+                      <p className="text-[15px] text-[#808080]">
+                        {slide.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
