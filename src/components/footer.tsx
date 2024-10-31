@@ -6,8 +6,8 @@ import Link from "next/link";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-darkblue-900 py-12 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 sm:grid-cols-1 gap-8">
+      <div className="mx-auto max-w-7xl px-4 lg:px-8 sm:px-6">
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-1">
           {/* Logo and Newsletter Section */}
           <div className="py-5">
             <Image
@@ -22,44 +22,48 @@ const Footer: React.FC = () => {
             </p>
             <Link
               href="mailto:hi@teversemultiuniverse"
-              className="block mt-2 text-lg font-semibold text-white">
+              className="mt-2 block text-lg font-semibold text-white"
+            >
               hi@teversemultiuniverse
             </Link>
 
             {/* Social Media Icons */}
-            <div className="flex space-x-4 mt-10">
+            <div className="mt-10 flex space-x-4">
               <Link
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black bg-orange-650 rounded-full p-2">
+                className="rounded-full bg-orange-650 p-2 text-black"
+              >
                 <FaInstagram size={24} />
               </Link>
               <Link
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black bg-orange-650 rounded-full p-2">
+                className="rounded-full bg-orange-650 p-2 text-black"
+              >
                 <FaYoutube size={24} />
               </Link>
               <Link
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black bg-orange-650 rounded-full p-2">
+                className="rounded-full bg-orange-650 p-2 text-black"
+              >
                 <FaLinkedin size={24} />
               </Link>
             </div>
           </div>
 
-          <div className="grid grid-cols-3 lg:grid-cols-2 gap-2">
+          <div className="grid grid-cols-3 gap-2 lg:grid-cols-2">
             {/* Contact Us Section */}
             <div>
               <h4 className="text-lg font-semibold">Contact us</h4>
-              <p className="mt-2 text-sm text-neutral-400 ">
+              <p className="mt-2 text-sm text-neutral-400">
                 contact@teversemulti
               </p>
-              <p className="text-sm text-neutral-400 py-3">+421 221 020 694</p>
+              <p className="py-3 text-sm text-neutral-400">+421 221 020 694</p>
             </div>
 
             {/* Our Services Section */}
@@ -67,19 +71,19 @@ const Footer: React.FC = () => {
               <h4 className="text-lg font-semibold">Our Services</h4>
               <ul className="mt-2 space-y-2 text-neutral-400">
                 <li>
-                  <a href="/solution/?section=migration#cloud-journey">
+                  <Link href="/solution/?section=migration#cloud-journey">
                     Migration
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/solution/?section=optimization#cloud-journey">
+                  <Link href="/solution/?section=optimization#cloud-journey">
                     Optimization
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/solution/?section=kickstart#cloud-journey">
+                  <Link href="/solution/?section=kickstart#cloud-journey">
                     Kickstart
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

@@ -103,7 +103,7 @@ const PostDetails = () => {
                 <p className="font-sora text-3xl font-semibold 2md:text-[20px] md:text-[15px] sm:-mr-1">
                   {String(index + 1).padStart(2, "0")}
                 </p>
-                <p className="font-sans border-l border-gray-400 pl-2 sm:pl-1 sm:-ml-6 2md:text-[14px] md:text-[10px]">
+                <p className="border-l border-gray-400 pl-2 font-sans 2md:text-[14px] md:text-[10px] sm:-ml-6 sm:pl-1"></p>
                 <p className="border-l pl-2 font-sans 2md:text-[14px] md:text-[10px] sm:-ml-6 sm:pl-1">
                   {section}
                 </p>
@@ -273,66 +273,71 @@ const PostDetails = () => {
           </section>
         </div>
         <div>
-          <div className="flex flex-wrap gap-2 mb-6 justify-center mx-auto ">
-            {tags.map((tag) => (
-              <button
-                key={tag}
-                className="px-5 py-3  border text-white bg-darkblue-900  rounded-full text-sm sm:text-[10px] cursor-default">
           <div className="mx-auto mb-6 flex flex-wrap justify-center gap-2">
             {tags.map((tag) => (
               <button
                 key={tag}
-                className="rounded-full border bg-darkblue-900 px-5 py-3 text-sm text-white sm:text-[10px]"
+                className="cursor-default rounded-full border bg-darkblue-900 px-5 py-3 text-sm text-white sm:text-[10px]"
               >
-                {tag}
+                <div className="mx-auto mb-6 flex flex-wrap justify-center gap-2">
+                  {tags.map((tag) => (
+                    <button
+                      key={tag}
+                      className="rounded-full border bg-darkblue-900 px-5 py-3 text-sm text-white sm:text-[10px]"
+                    >
+                      {tag}
+                    </button>
+                  ))}
+                </div>
               </button>
             ))}
-          </div>
 
-          <div className="mx-auto mb-24 flex w-[85%] max-w-[700px] justify-center gap-3 md:flex-col">
-            <div className="flex gap-3 p-3 text-center md:flex-col">
-              <span className="inline-block h-12 w-12 rounded-full bg-[#8080802d] md:self-center"></span>
-              <p className="self-center">
-                Martin Satoshi - Head of Engineering
+            <div className="mx-auto mb-24 flex w-[85%] max-w-[700px] justify-center gap-3 md:flex-col">
+              <div className="flex gap-3 p-3 text-center md:flex-col">
+                <span className="inline-block h-12 w-12 rounded-full bg-[#8080802d] md:self-center"></span>
+                <p className="self-center">
+                  Martin Satoshi - Head of Engineering
+                </p>
+              </div>
+              <div className="flex gap-2 self-center border-l border-darkblue-950 py-2 pl-5 md:self-center md:border-none">
+                <Link href="#">
+                  <PiWhatsappLogo size={36} color="#081348" />
+                </Link>
+                <Link href="#">
+                  <PiInstagramLogo size={36} color="#081348" />
+                </Link>
+                <Link href="#">
+                  <LuTwitter size={36} color="#081348" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="container mx-auto max-w-[1200px] px-4 py-8">
+              <h2 className="mx-auto mb-6 text-center font-sora text-3xl font-bold">
+                Similar articles
+              </h2>
+              <p className="mx-auto mb-12 w-1/2 text-center text-xl text-[#808080] 2md:w-[75%] md:text-[1rem]">
+                Have some time to read more? Here are our top picks if this
+                topic interested you.
               </p>
-            </div>
-            <div className="flex gap-2 self-center border-l border-darkblue-950 py-2 pl-5 md:self-center md:border-none">
-              <Link href="#">
-                <PiWhatsappLogo size={36} color="#081348" />
-              </Link>
-              <Link href="#">
-                <PiInstagramLogo size={36} color="#081348" />
-              </Link>
-              <Link href="#">
-                <LuTwitter size={36} color="#081348" />
-              </Link>
-            </div>
-          </div>
-
-          <div className="container mx-auto max-w-[1200px] px-4 py-8">
-            <h2 className="mx-auto mb-6 text-center font-sora text-3xl font-bold">
-              Similar articles
-            </h2>
-            <p className="mx-auto mb-12 w-1/2 text-center text-xl text-[#808080] 2md:w-[75%] md:text-[1rem]">
-              Have some time to read more? Here are our top picks if this topic
-              interested you.
-            </p>
-            <div className="mx-5 grid grid-cols-3 gap-[2px] 2md:grid-cols-2 sm:grid-cols-1">
-              {similarPosts.map((post) => (
-                <PostCard
-                  key={post.id}
-                  imageUrl={post.image}
-                  date={post.date}
-                  title={post.title}
-                  category={post.categories[0]}
-                  id={post.id} // Assuming primary category is the first one
-                />
-              ))}
+              <div className="mx-5 grid grid-cols-3 gap-[2px] 2md:grid-cols-2 sm:grid-cols-1">
+                {similarPosts.map((post) => (
+                  <PostCard
+                    key={post.id}
+                    imageUrl={post.image}
+                    date={post.date}
+                    title={post.title}
+                    category={post.categories[0]}
+                    id={post.id} // Assuming primary category is the first one
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
       <Newsletter />
+      {/* </div> */}
     </section>
   );
 };
