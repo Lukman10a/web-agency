@@ -1,7 +1,8 @@
-// Import required dependencies
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import GenericWorkItem from "./our-solutions-carousel";
+
 
 interface SolutionCardProps {
   title: string;
@@ -10,12 +11,6 @@ interface SolutionCardProps {
   slug: string;
 }
 
-interface WorkItemProps {
-  title: string;
-  description: string;
-  tags: string[];
-  images: string[];
-}
 
 export const awsServices = [
   {
@@ -129,7 +124,7 @@ export const awsServices = [
   },
 ];
 
-// AWS Solutions Card Component
+
 const SolutionCard: React.FC<SolutionCardProps> = ({
   title,
   description,
@@ -144,8 +139,6 @@ const SolutionCard: React.FC<SolutionCardProps> = ({
     </Link>
   </article>
 );
-
-// Main AWS Solutions Section
 
 const AWSSolutions: React.FC = () => {
   return (
@@ -178,64 +171,137 @@ const AWSSolutions: React.FC = () => {
   );
 };
 
-// Our Work Section with Carousel
-const WorkItem: React.FC<WorkItemProps> = ({
-  title,
-  description,
-  tags,
-  images,
-}) => {
+const OurWorkAws: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [direction, setDirection] = useState<"next" | "prev">("next");
 
-  const handleNext = () =>
-    setCurrentSlide((prev) => (prev + 1) % images.length);
-  const handlePrev = () =>
-    setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
+  const AwsworkItems = [
+    {
+      title: "Launching BAMAN: Raiffeisen bank\'s Strategic Move to Cloud Application",
+      description:
+        "Ready made, battle tested and proven building blocks for rapid set up of well architected infrastructure.",
+      tags: ["Banking", "Cloud", "Enterprise", "Security"],
+      images: [
+        "/assets/3d-tech-1.png",
+        "/assets/3d-tech-2.png",
+        "/assets/3d-tech-3.png",
+      ],
+    },
+    {
+      title: "Real-time Data Processing for Financial Transactions",
+      description:
+        "A system for processing financial transactions in real-time to enhance accuracy and speed.",
+      tags: ["Finance", "Real-time", "Processing"],
+      images: [
+        "/assets/3d-tech-2.png",
+        "/assets/work5.png",
+        "/assets/work6.png",
+      ],
+    },
+    {
+      title: "Automated Security Compliance Checker",
+      description:
+        "An automated tool that checks compliance with security standards for cloud applications.",
+      tags: ["Security", "Automation", "Compliance"],
+      images: [
+        "/assets/3d-tech-3.png",
+        "/assets/work8.png",
+        "/assets/work9.png",
+      ],
+    },
+  ];
+
+  const renderImage = (src: string) => (
+    <Image
+      src={src}
+      alt="Work Example"
+      width={1000}
+      height={600}
+      className="contain h-[400px] rounded-lg"
+    />
+  );
+
+  const handleNext = () => {
+    if (currentSlide < AwsworkItems.length - 1) {
+      setDirection("next");
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentSlide((prev) => prev + 1);
+        setIsTransitioning(false);
+      }, 400); 
+    }
+  };
+
+  const handlePrev = () => {
+    if (currentSlide > 0) {
+      setDirection("prev");
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentSlide((prev) => prev - 1);
+        setIsTransitioning(false);
+      }, 400);
+    }
+  };
+
+  const currentWorkItem = AwsworkItems[currentSlide];
 
   return (
-    <section className="bg-white px-4 py-16">
-      <div className="mx-auto max-w-7xl text-center">
-        <h2 className="mb-4 text-3xl font-extrabold text-gray-900">Our Work</h2>
-        <h3 className="text-xl font-bold text-gray-900">{title}</h3>
-        <p className="mb-4 mt-4 text-gray-600">{description}</p>
-        <div className="mb-4 flex flex-wrap justify-center gap-2">
-          {tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full px-3 py-1 text-xs font-medium text-gray-700 ring-1 ring-neutral-700"
-            >
-              {tag}
-            </span>
-          ))}
+    <section className="overflow-hidden"> {/* Prevent horizontal scroll */}
+      <div
+        className={`transition-transform duration-300 ease-in-out ${
+          isTransitioning
+            ? direction === "next"
+              ? "translate-x-full opacity-0" // Slide out to left when moving to the next
+              : "-translate-x-full opacity-0" // Slide out to right when moving to the previous
+            : "translate-x-0 opacity-100" // Show current item
+        }`}
+      >
+        <GenericWorkItem
+          header=""
+          title={currentWorkItem.title}
+          description={currentWorkItem.description}
+          tags={currentWorkItem.tags}
+          images={currentWorkItem.images}
+          renderImage={renderImage}
+          currentSlide={0}
+        />
+      </div>
+      <div className="mb-8 flex justify-between w-2/3 items-center mx-auto">
+        <div className="flex gap-4">
+          <button
+            onClick={handlePrev}
+            disabled={currentSlide === 0}
+            aria-label="Previous Slide"
+            className={`${
+              currentSlide === 0 ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+          >
+            <Image
+              src="/assets/prevArrow.png"
+              width={50}
+              height={50}
+              alt="Previous arrow"
+            />
+          </button>
+
+          <button
+            onClick={handleNext}
+            disabled={currentSlide === AwsworkItems.length - 1}
+            aria-label="Next Slide"
+            className={`${
+              currentSlide === AwsworkItems.length - 1 ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+          >
+            <Image
+              src="/assets/nextArrow.png"
+              width={50}
+              height={50}
+              alt="Next arrow"
+            />
+          </button>
         </div>
-        <div className="relative mx-auto flex justify-center">
-          <Image
-            src={images[currentSlide]}
-            alt="Work Example"
-            width={1200}
-            height={600}
-            className="rounded-lg"
-          />
-        </div>
-        <div className="mx-14 mt-8 flex justify-between">
-          <div className="flex items-center gap-3">
-            <button onClick={handlePrev} aria-label="Previous Slide">
-              <Image
-                src="/assets/prevArrow.png"
-                width={50}
-                height={50}
-                alt="Previous arrow"
-              />
-            </button>
-            <button onClick={handleNext} aria-label="Next Slide">
-              <Image
-                src="/assets/nextArrow.png"
-                width={50}
-                height={50}
-                alt="Next arrow"
-              />
-            </button>
-          </div>
+        <div>
           <button className="rounded-full bg-orange-600 px-6 py-3 font-semibold text-white shadow-md transition duration-300 ease-in-out hover:bg-orange-500">
             ALL SOLUTIONS &rarr;
           </button>
@@ -245,16 +311,11 @@ const WorkItem: React.FC<WorkItemProps> = ({
   );
 };
 
-// Main Component
+
 const AWSection: React.FC = () => (
   <>
     <AWSSolutions />
-    <WorkItem
-      title="Launching BAMAN: Raiffeisen bank’s Strategic Move to Cloud Application"
-      description="Ready-made, battle-tested and proven building blocks for rapid setup of well-architected infrastructure."
-      tags={["Banking", "Cloud", "Enterprise", "Security"]}
-      images={["/assets/work.png", "/assets/work.png", "/assets/work.png"]} // Add paths for carousel
-    />
+    <OurWorkAws />
   </>
 );
 
