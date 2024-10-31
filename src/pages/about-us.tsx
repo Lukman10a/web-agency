@@ -8,6 +8,9 @@ import Mission from "@/components/our-mission";
 import ImagesReveal from "@/components/ui/animated/image-reveal";
 import OurValues from "@/components/shared/our-values";
 import AnimatedStatsBanner from "@/components/shared/stats-banner";
+import TeamSection from "@/components/Cloud";
+import ContactSection from "@/components/lets-talk";
+import Testimonials from "@/components/what-client";
 
 const cards = [
   {
@@ -27,7 +30,7 @@ const cards = [
 const AboutUs = () => {
   return (
     <Fragment>
-      <section className="flex md:flex-col items-center gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12">
+      <header className="flex md:flex-col items-center gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12">
         <div className="flex-[3] space-y-5">
           <h1 className="font-sora font-extrabold text-6xl animate-fade-in-up md:text-4xl">
             <span className="block md:inline-block">Behind the </span>{" "}
@@ -53,13 +56,14 @@ const AboutUs = () => {
           alt="animated-hero"
           className="animate-fade-in-up delay-500 flex-1 rounded-lg hidden md:block"
         />
-      </section>
-
-      <ImagesReveal />
-      <Mission />
+      </header>
       <AnimatedStatsBanner />
       <ImagesReveal cards={cards} />
+      <Mission />
       <OurValues />
+      <TeamSection />
+      <Testimonials />
+      <ContactSection />
     </Fragment>
   );
 };

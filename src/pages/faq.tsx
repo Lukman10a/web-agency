@@ -5,7 +5,7 @@ import FAQSection from "@/components/shared/faq-section";
 import ContactSection from "@/components/lets-talk";
 
 export default function FAQ() {
-  const categories = ["Questions", "GENERAL", "SOLUTIONS", "PEOPLE", "TECH"];
+  const categories = ["QUESTIONS", "GENERAL", "SOLUTIONS", "PEOPLE", "TECH"];
 
   interface FAQItem {
     question: string;
@@ -43,7 +43,7 @@ export default function FAQ() {
   return (
     <section>
       <div className="text-center space-y-5 pt-12">
-        <h1 className="text-[#262626] text-6xl font-sora font-bold lg:text-5xl md:text-4xl">
+        <h1 className="text-[#262626] text-5xl font-sora font-bold lg:text-5xl md:text-4xl sm:text-3xl">
           <span className="block">Frequently asked</span>
           <span className="block">questions (FAQ)</span>
         </h1>
@@ -56,12 +56,12 @@ export default function FAQ() {
 
           <input
             type="text"
-            className="w-full md:w-2/3 border-2 border-[#808080] rounded-3xl pl-10 py-2  placeholder:text-[#808080] focus:border-[#FF9557] focus:ring-[#FF9557]"
+            className="w-full md:w-2/3 border-2 border-[#808080] rounded-3xl pl-10 py-2  placeholder:text-[#808080] placeholder:text-sm focus:border-[#FF9557] focus:ring-[#FF9557]"
             placeholder="Search for a keyword here..."
           />
         </div>
 
-        <p className="text-[#808080] text-xl">
+        <p className="text-[#808080] text-xl sm:text-lg">
           Or choose a category to quickly fit your needs
         </p>
       </div>

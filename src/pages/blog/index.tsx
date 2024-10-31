@@ -10,11 +10,12 @@ import ArrowIcon from "@/components/icons/arrow";
 
 type Post = {
   id: number;
-  imageSrc: string | StaticImageData;
+  image: string | StaticImageData;
   date: string;
   title: string;
   categories: string[];
 };
+
 
 const posts: Post[] = [
   {

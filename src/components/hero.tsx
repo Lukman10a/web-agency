@@ -4,13 +4,24 @@ import Link from "next/link";
 import ArrowIcon from "./icons/arrow";
 import { PartnersSlider } from "./shared/partners-slider";
 import WaveReveal from "./ui/animated/wave-reveal";
+import FlickeringGrid from "./ui/flickering-grid";
 
 const Hero = () => {
   return (
     <Fragment>
-      <header className="w-11/12 bg-[url('/assets/dot-bg.png')] bg-darkblue-950 bg-cover rounded-xl max-w-7xl md:px-4 px-10 py-28 mx-auto md:w-full md:rounded-none">
+      <header className="isolate w-11/12 overflow-hidden relative bg-darkblue-950 bg-cover rounded-xl max-w-7xl md:px-4 px-10 py-28 mx-auto md:w-full md:rounded-none">
+        <FlickeringGrid
+          className="z-0 absolute inset-0 size-full "
+          squareSize={4}
+          gridGap={6}
+          color="#6B7280"
+          maxOpacity={0.5}
+          flickerChance={0.15}
+          width={1400}
+          height={800}
+        />
         <>
-          <div className="text-center">
+          <div className="text-center z-[1] relative">
             <h1 className="tracking-tight font-sora font-extrabold text-white md:text-3xl text-6xl">
               <WaveReveal
                 mode="word"

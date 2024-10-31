@@ -1,75 +1,52 @@
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-
-// Form Logic: Handle form state and submission
-const useContactForm = () => {
-  const [formData, setFormData] = useState({
-    message: "",
-    email: "",
-    terms: false,
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { id, value, type, checked } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [id]: type === "checkbox" ? checked : value,
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Handle form submission logic here (e.g., API call)
-    console.log("Form submitted:", formData);
-  };
-
-  return { formData, handleChange, handleSubmit };
-};
+import useContactForm from "@/hooks/use-contact";
 
 const ContactSection: React.FC = () => {
   const { formData, handleChange, handleSubmit } = useContactForm(); // Destructure form logic
 
   return (
-    <section className="py-16 bg-white space-y-14">
+    <section className="space-y-14 bg-white py-16">
       <div className="container mx-auto flex justify-center space-y-8 px-24 md:px-10">
         {/* Left Side: Text */}
-        <div className="container mx-auto lg:flex-col flex justify-between space-y-8">
+        <div className="container mx-auto flex justify-between gap-9 space-y-8 md:flex-col">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl text-left">
+            <h2 className="text-left text-3xl font-bold text-gray-900 sm:text-4xl">
               Let’s talk!
             </h2>
-            <p className="text-gray-600 text-lg text-left">
-              Quick intro to what we’re all about, answering questions <br />
+            <p className="text-left text-lg text-gray-600">
+              Quick intro to what we’re all about, answering questions{" "}
+              <br className="2md:hidden" />
               and drafting a roadmap of your cloud journey. All within 30
               minutes.
             </p>
           </div>
-          <button className="px-6 py-3 lg:w-fit bg-orange-650 ring-1 ring-darkblue-850 text-white rounded-full font-semibold hover:bg-orange-600 transition duration-300">
+          <button className="rounded-full bg-orange-650 px-6 py-3 font-semibold text-white ring-1 ring-darkblue-850 transition duration-300 hover:bg-orange-600 sm:w-full">
             Schedule Your Call →
           </button>
         </div>
       </div>
 
       {/* Right Side: Form */}
-      <div className="flex justify-between px-24 space-y-8 lg:gap-8 md:flex-col md:px-10">
+      <div className="flex justify-between gap-5 px-24 md:flex-wrap sm:px-5">
         {/* Image */}
-        <div className="w-full flex">
+        <div className="w-full">
           <Image
             src="/assets/contact.png"
             alt="Cloud Service"
-            className="rounded-lg shadow-lg"
+            className="aspect-square rounded-lg shadow-lg md:w-full"
             width={400}
             height={400}
           />
         </div>
 
-        <div className="container mx-auto px-4 mt-12 flex flex-col md:flex-row items-start justify-between space-y-8 md:space-y-0">
+        <div className="container mx-auto flex flex-col items-start justify-between space-y-8 px-4 md:flex-row md:space-y-0">
           <div className="">
             <h3 className="text-4xl font-extrabold tracking-wide text-gray-900">
               Cloud <span className="text-orange-650 underline">experts</span>
-              <br /> on duty
+              <br className="md:hidden" /> on duty
             </h3>
-            <p className="text-gray-600 mt-4">
+            <p className="mt-4 text-gray-600">
               Want to skip the intro call and get straight to it? Tell us what’s
               up and our tech experts will get back to you ASAP.
             </p>
@@ -84,7 +61,7 @@ const ContactSection: React.FC = () => {
                   id="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="block w-full p-3 border-b-2 border-b-gray-300 outline-none shadow-sm"
+                  className="block w-full border-b-2 border-b-gray-300 p-3 shadow-sm outline-none"
                   placeholder="Message"
                 />
               </div>
@@ -98,7 +75,7 @@ const ContactSection: React.FC = () => {
                   id="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="block w-full p-3 border-b-2 border-b-gray-300 outline-none shadow-sm"
+                  className="block w-full border-b-2 border-b-gray-300 p-3 shadow-sm outline-none"
                   placeholder="Email address"
                 />
               </div>
@@ -110,7 +87,7 @@ const ContactSection: React.FC = () => {
                   type="checkbox"
                   checked={formData.terms}
                   onChange={handleChange}
-                  className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
+                  className="h-4 w-4 rounded border-gray-300 text-orange-600 focus:ring-orange-500"
                 />
                 <label
                   htmlFor="terms"
@@ -120,14 +97,12 @@ const ContactSection: React.FC = () => {
                 </label>
               </div>
 
-              <div>
-                <button
-                  type="submit"
-                  className="flex items-center mt-10 justify-center px-6 py-3 border border-black text-sm font-medium rounded-full shadow-sm text-neutral-800 bg-transparent  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
-                >
-                  Submit Form →
-                </button>
-              </div>
+              <button
+                type="submit"
+                className="mt-10 flex items-center justify-center rounded-full border border-black bg-transparent px-6 py-3 text-sm font-medium text-neutral-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 sm:w-full"
+              >
+                Submit Form →
+              </button>
             </form>
           </div>
         </div>

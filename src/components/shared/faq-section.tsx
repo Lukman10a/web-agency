@@ -30,25 +30,23 @@ const FAQSection: React.FC<FAQSectionProps> = ({
   };
 
   return (
-    <section className={`${bgColor} py-16 w-full`}>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* <h2 className="text-3xl font-extrabold text-center text-gray-900 sm:text-4xl mb-6">
-          FREQUENTLY ASKED QUESTIONS
-        </h2> */}
-
-        <div className=" space-y-4">
+    <section className={`${bgColor} w-full py-16`}>
+      <div className="mx-auto max-w-4xl px-4 lg:px-8 sm:px-4">
+        <div className="space-y-4">
           {faqData.map((faq, index) => (
             <div key={index} className="border-b pb-4">
               <div
-                className="flex justify-between items-center cursor-pointer"
+                className="flex cursor-pointer items-center justify-between"
                 onClick={() => toggleFAQ(index)}
               >
-                <h3 className={`text-lg font-medium ${questionColor}`}>
+                <h3
+                  className={`text-lg font-medium sm:text-base ${questionColor}`}
+                >
                   {faq.question}
                 </h3>
 
                 <button
-                  className={`flex items-center justify-center w-8 h-8 rounded-full ml-4 transition-colors ${
+                  className={`ml-4 flex h-8 w-8 items-center justify-center rounded-full transition-colors sm:w-14 ${
                     activeIndex === index
                       ? "bg-darkblue-900 text-white"
                       : "bg-gray-200 text-blue-600"

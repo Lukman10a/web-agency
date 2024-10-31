@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
 
 interface PostCardProps {
-  imageUrl: string;
+  imageUrl: string | StaticImageData
   category: string;
   date: string;
   title: string;

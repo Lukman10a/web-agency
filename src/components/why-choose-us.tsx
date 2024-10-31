@@ -4,12 +4,9 @@ import efficiency from "../../public/svg/efficiency.svg";
 import security from "../../public/svg/security.svg";
 import expert from "../../public/svg/expert.svg";
 import securityImg from "../../public/assets/securityImg.png";
-import lightbox from "../../public/svg/lightbox.svg";
-import featherdev from "../../public/svg/featherdev.svg";
-import boltshift from "../../public/svg/boltshift.svg";
-import globalbank from "../../public/svg/globalbank.svg";
 import ArrowIcon from "./icons/arrow";
 import { Button } from "./ui/button";
+import { PartnersSlider } from "./shared/partners-slider";
 
 const benefits = [
   {
@@ -99,15 +96,8 @@ export default function WhyChooseUs() {
         >
           Leading Brands Trust Us
         </h2>
-        <div className="grid grid-cols-4 sm:grid-cols-2 gap-12 place-items-center">
-          {[lightbox, featherdev, boltshift, globalbank].map((brand, index) => (
-            <Image
-              key={index}
-              src={brand}
-              alt={`Brand ${index}`}
-              className="w-36 "
-            />
-          ))}
+        <div className="my-7 max-w-7xl mx-auto overflow-hidden">
+          <PartnersSlider />
         </div>
       </section>
     </section>
