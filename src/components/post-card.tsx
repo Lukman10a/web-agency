@@ -3,11 +3,11 @@ import Link from "next/link";
 import React from "react";
 
 interface PostCardProps {
-  imageUrl: string | StaticImageData
+  imageUrl: string | StaticImageData;
   category: string;
   date: string;
   title: string;
-  id: number;
+  id: number | string;
 }
 
 const PostCard: React.FC<PostCardProps> = ({
@@ -17,8 +17,10 @@ const PostCard: React.FC<PostCardProps> = ({
   title,
   id,
 }) => {
+  // console.log({ category });
+
   return (
-    <div className="mb-2 max-w-[400px] mx-auto p-2">
+    <div className="mx-auto mb-2 max-w-[400px] p-2">
       <div className="">
         <Image
           src={imageUrl}
@@ -30,9 +32,10 @@ const PostCard: React.FC<PostCardProps> = ({
       </div>
       <div className="w-[90%]">
         <p className="mb-2">
-          <span className="font-semibold font-inter">{category}</span> - {date}
+          <span className="font-inter font-semibold uppercase">{category}</span>{" "}
+          - <span>{date}</span>
         </p>
-        <h1 className="font-bold font-sans">
+        <h1 className="font-sans font-bold">
           <Link href={`/blog/${id}`} className="hover:underline">
             {title}
           </Link>

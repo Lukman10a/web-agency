@@ -20,14 +20,17 @@ type Post = {
   category: string;
 };
 
-type Category = {
-  name: string;
-};
+const categories = [
+  "ALL",
+  "ENTERPRISES",
+  "KICKSTART",
+  "LARA",
+  "MIGRATION",
+  "SAAS",
+  "SERVERLESS",
+];
 
-const Index: React.FC<{ posts: Post[]; categories: Category[] }> = ({
-  posts,
-  categories,
-}) => {
+const Index: React.FC<{ posts: Post[] }> = ({ posts }) => {
   const [activeCategory, setActiveCategory] = useState<string>("ALL");
 
   const filteredPosts =
@@ -45,6 +48,8 @@ const Index: React.FC<{ posts: Post[]; categories: Category[] }> = ({
     console.log("Active Category:", activeCategory);
   }, [activeCategory, filteredPosts]);
 
+  //   console.log("Post Category:", post.);
+
   return (
     <section className="mx-auto border">
       <BlogCard />
@@ -54,21 +59,19 @@ const Index: React.FC<{ posts: Post[]; categories: Category[] }> = ({
         </h2>
 
         <div className="mx-auto mb-6 flex flex-wrap justify-center gap-2">
-          {["ALL", ...categories.map((category) => category.name)].map(
-            (category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`rounded-full border border-black px-4 py-2 text-sm uppercase ${
-                  activeCategory === category
-                    ? "bg-orange-650 text-white"
-                    : "text-gray-800"
-                }`}
-              >
-                {category}
-              </button>
-            ),
-          )}
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`rounded-full border border-black px-4 py-2 text-sm ${
+                activeCategory === category
+                  ? "bg-orange-650 text-white"
+                  : "text-gray-800"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
         </div>
 
         <section className="mx-5 grid grid-cols-3 gap-[2px] 2md:grid-cols-2 sm:grid-cols-1">
@@ -102,26 +105,19 @@ const Index: React.FC<{ posts: Post[]; categories: Category[] }> = ({
 
 export const getStaticProps: GetStaticProps = async () => {
   const postsData = await reader.collections.posts.all();
-  const categoriesData = await reader.collections.categories.all();
 
   const posts = postsData.map((post) => ({
     id: post.slug,
-    image: post.entry.banner
-      ? `/content/posts/${post.slug}/${post.entry.banner}`
-      : "/path/to/default/image.jpg", // Adjust default image path
+    image:
+      `/content/posts/${post.slug}/${post.entry.banner}` ||
+      "/path/to/default/image.jpg", // Adjust default image path
     date: post.entry.date,
     title: post.entry.title,
     category: post.entry.category,
   }));
 
-  const categories = categoriesData.map((category) => ({
-    name: category.entry.name,
-  }));
-
-  console.log({ categories });
-
   return {
-    props: { posts, categories },
+    props: { posts },
   };
 };
 
