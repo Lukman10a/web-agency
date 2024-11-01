@@ -277,18 +277,9 @@ const PostDetails = () => {
             {tags.map((tag) => (
               <button
                 key={tag}
-                className="cursor-default rounded-full border bg-darkblue-900 px-5 py-3 text-sm text-white sm:text-[10px]"
+                className="rounded-full border bg-darkblue-900 px-5 py-3 text-sm text-white sm:text-[10px]"
               >
-                <div className="mx-auto mb-6 flex flex-wrap justify-center gap-2">
-                  {tags.map((tag) => (
-                    <button
-                      key={tag}
-                      className="rounded-full border bg-darkblue-900 px-5 py-3 text-sm text-white sm:text-[10px]"
-                    >
-                      {tag}
-                    </button>
-                  ))}
-                </div>
+                {tag}
               </button>
             ))}
 
