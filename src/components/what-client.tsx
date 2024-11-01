@@ -1,5 +1,5 @@
 import React from "react";
-import Image from 'next/image';
+import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 interface Testimonial {
@@ -15,42 +15,42 @@ const testimonials: Testimonial[] = [
       "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
     name: "Petr Nemeth",
     title: "CEO at Datadoo, Inc.",
-    image: "/path/to/image1.jpg",
+    image: "/assets/cardimage1.png",
   },
   {
     quote:
       "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
     name: "Petr Nemeth",
     title: "CEO at Datadoo, Inc.",
-    image: "/path/to/image1.jpg",
+    image: "/assets/cardimage1.png",
   },
   {
     quote:
       "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
     name: "Petr Nemeth",
     title: "CEO at Datadoo, Inc.",
-    image: "/path/to/image1.jpg",
+    image: "/assets/cardimage1.png",
+  },
+  {
+    quote:
+      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
+    name: "Petr Nemeth",
+    title: "CEO at Datadoo, Inc",
+    image: "/assets/cardimage1.png",
   },
   {
     quote:
       "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
     name: "Petr Nemeth",
     title: "CEO at Datadoo, Inc.",
-    image: "/path/to/image1.jpg",
+    image: "/assets/cardimage1.png",
   },
   {
     quote:
       "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
     name: "Petr Nemeth",
     title: "CEO at Datadoo, Inc.",
-    image: "/path/to/image1.jpg",
-  },
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc.",
-    image: "/path/to/image1.jpg",
+    image: "/assets/cardimage1.png",
   },
   // Additional testimonials can be added here...
 ];
@@ -58,7 +58,7 @@ const testimonials: Testimonial[] = [
 const Testimonials: React.FC = () => {
   return (
     <section className="bg-gradient-to-r from-gradient-100 to-gradient-200 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 lg:px-8 sm:px-6">
         {/* Section Header */}
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -70,17 +70,23 @@ const Testimonials: React.FC = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="mt-10 grid gap-8 sm:grid-cols-1 md:grid-cols-2 grid-cols-3 relative">
+        <div className="relative mt-10 grid grid-cols-3 gap-8 md:grid-cols-2 sm:grid-cols-1">
           {testimonials.map((testimonial, index) => (
             <article
               key={index}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 relative"
+              className="relative rounded-lg bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg"
             >
-              <p className="text-gray-700 mb-4">{testimonial.quote}</p>
-              <div className="flex items-center mt-4">
+              <p className="mb-4 text-gray-700">{testimonial.quote}</p>
+              <div className="mt-4 flex items-center">
                 <Avatar>
-                  <AvatarImage src={testimonial.image} alt={`${testimonial.name}'s avatar`} />
-                  <AvatarFallback>{testimonial.name[0]}{testimonial.name.split(" ")[1][0]}</AvatarFallback>
+                  <AvatarImage
+                    src={testimonial.image}
+                    alt={`${testimonial.name}'s avatar`}
+                  />
+                  <AvatarFallback>
+                    {testimonial.name[0]}
+                    {testimonial.name.split(" ")[1][0]}
+                  </AvatarFallback>
                 </Avatar>
 
                 <div className="ml-4">
@@ -93,13 +99,13 @@ const Testimonials: React.FC = () => {
 
               {/* Star image behind the last testimonial item */}
               {index === testimonials.length - 1 && (
-                <div className="absolute -bottom-8 right-1 sm:-bottom-8 sm:right-1 md:-bottom-16 md:right-8 lg:-bottom-20 lg:right-20 xl:-bottom-24 xl:right-24">
+                <div className="absolute -bottom-8 right-1 xl:-bottom-24 xl:right-24 lg:-bottom-20 lg:right-20 md:-bottom-16 md:right-8 sm:-bottom-8 sm:right-1">
                   <Image
                     src="/assets/Star.png"
                     alt="Star"
                     width={100}
                     height={100}
-                    className="sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px] xl:w-[180px] xl:h-[180px]"
+                    className="xl:h-[180px] xl:w-[180px] lg:h-[150px] lg:w-[150px] md:h-[120px] md:w-[120px] sm:h-[100px] sm:w-[100px]"
                   />
                 </div>
               )}

@@ -37,7 +37,7 @@ const Hero = () => {
             <p className="mt-3 font-mono text-base text-gray-300 lg:mx-0 md:mt-5 md:text-xl sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg">
               We provide expert consulting services to help businesses achieve
               secure, efficient, and scalable cloud environments. From cloud
-              migration to security audits, we&lsquo;ve got you covered.
+              migration to security audits, we&lsquo;ve got you covered
             </p>
             <div className="mt-8 flex items-center justify-center gap-4 font-mono md:flex-wrap sm:mt-5">
               <Button
