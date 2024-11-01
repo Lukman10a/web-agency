@@ -1,40 +1,40 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
-const LARABuildingBlocks: React.FC = () => {
-  const blocks = [
-    {
-      title: "AWS Organization and access management",
-      description:
-        "Centrally govern all your environments, manage access rights, permissions, and policies.",
-    },
-    {
-      title: "VPC and related services",
-      description:
-        "Network foundation, app and edge networking, hybrid connectivity, and security.",
-    },
-    {
-      title: "Kubernetes",
-      description:
-        "Operate Kubernetes on your own infrastructure, experience ultimate scaling and cost savings.",
-    },
-    {
-      title: "Observability",
-      description:
-        "Grafana, Loki, Thanos, Tempo, Opensearch, Elastic. You name it, we have it.",
-    },
-    {
-      title: "Serverless Computing",
-      description:
-        "Build and deploy serverless applications with AWS Lambda, API Gateway, and more.",
-    },
-    {
-      title: "Data Lakes and Analytics",
-      description:
-        "Collect, store, and analyze data at scale with AWS Lake Formation, Glue, and Redshift.",
-    },
-  ];
+const blocks = [
+  {
+    title: "AWS Organization and access management",
+    description:
+      "Centrally govern all your environments, manage access rights, permissions, and policies.",
+  },
+  {
+    title: "VPC and related services",
+    description:
+      "Network foundation, app and edge networking, hybrid connectivity, and security.",
+  },
+  {
+    title: "Kubernetes",
+    description:
+      "Operate Kubernetes on your own infrastructure, experience ultimate scaling and cost savings.",
+  },
+  {
+    title: "Observability",
+    description:
+      "Grafana, Loki, Thanos, Tempo, Opensearch, Elastic. You name it, we have it.",
+  },
+  {
+    title: "Serverless Computing",
+    description:
+      "Build and deploy serverless applications with AWS Lambda, API Gateway, and more.",
+  },
+  {
+    title: "Data Lakes and Analytics",
+    description:
+      "Collect, store, and analyze data at scale with AWS Lake Formation, Glue, and Redshift.",
+  },
+];
 
+const LARABuildingBlocks: React.FC = () => {
   const [showAll, setShowAll] = useState(false);
 
   // Determine the blocks to show based on `showAll` state

@@ -167,7 +167,7 @@ const CloudJourney: React.FC = () => {
   const activeTabContent = tabContent.find((tab) => tab.id === activeTab);
 
   return (
-    <div className="relative mx-auto max-w-6xl p-8 font-sans md:px-4">
+    <section className="relative mx-auto max-w-6xl p-8 font-sans md:px-4">
       <div className="mb-4 flex justify-between gap-8 2md:flex-col 2md:gap-2">
         <div className="max-w-[500px] 2md:mb-0 2md:max-w-full">
           <h1 className="mb-2 font-sora text-3xl font-semibold">
@@ -199,8 +199,11 @@ const CloudJourney: React.FC = () => {
         </div>
       </div>
 
-      <div className="absolute right-8 mb-6 flex items-center justify-between sm:static">
-        <div className="absolute right-8 mb-6 flex items-center justify-between">
+      <div className="relative mb-6">
+        <div className="right-8 mb-6 flex items-center justify-between">
+          <h2 className="mb-4 font-sans text-xl font-semibold text-[#808080] md:text-[16px]">
+            {activeTabContent?.description}
+          </h2>
           <div className="flex space-x-2">
             <Button
               variant="outline"
@@ -225,12 +228,8 @@ const CloudJourney: React.FC = () => {
             </Button>
           </div>
         </div>
-
         {activeTabContent && (
-          <div>
-            <h2 className="mb-4 font-sans text-xl font-semibold text-[#808080] md:text-[16px]">
-              {activeTabContent.description}
-            </h2>
+          <>
             <div className="relative">
               <div
                 ref={sliderRef}
@@ -262,10 +261,10 @@ const CloudJourney: React.FC = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

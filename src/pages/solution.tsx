@@ -9,6 +9,9 @@ import LARABuildingBlocks from "@/components/building-blocks";
 import ContactSection from "@/components/lets-talk";
 import Booking from "@/components/booking";
 import Link from "next/link";
+import { AWSCertifications } from "@/components/certifications";
+import CloudJourney from "@/components/cloud-journey";
+import image from "../../public/assets/cardimage1.png";
 
 export default function Solution() {
   return (
@@ -24,12 +27,16 @@ export default function Solution() {
             environment that is secure, scalable, easy to operate, and
             built-to-last
           </p>
-          <Link href="#">
-            <Button className="flex w-fit transform items-center gap-4 rounded-2xl border border-[#081348] bg-orange-650 text-white transition duration-500 hover:scale-105 hover:bg-orange-600">
+
+          <Button
+            asChild
+            className="flex w-fit transform items-center gap-4 rounded-2xl border border-[#081348] bg-orange-650 text-white transition duration-500 hover:scale-105 hover:bg-orange-600"
+          >
+            <Link href="#">
               <span>EXPLORE</span>
               <ArrowIcon />
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
         <div className="flex-[2] overflow-hidden rounded-lg md:hidden">
           <video autoPlay loop muted className="h-full w-full">
@@ -44,6 +51,35 @@ export default function Solution() {
       </header>
       <StickyScrollRevealDemo />
       <Booking />
+      {/* Certification Section */}
+      <AWSCertifications />
+      {/* Cloud Journey */}
+      <CloudJourney />
+      {/* LARA Card */}
+      <section className="relative mx-auto mb-[1.5em] flex max-w-7xl gap-14 rounded-2xl border border-[#fcfcf] bg-[#fcfcfc] bg-gradient-to-r from-[#0813481A] to-[#FF95571A] p-[3em] 2md:mx-6 md:gap-4 sm:flex-col sm:gap-8">
+        <div className="mb-0 w-1/2 sm:w-full">
+          <Image
+            src={image}
+            alt="Card image"
+            className="mr-4 w-full sm:mb-2"
+            width={500}
+            height={500}
+          />
+        </div>
+        <div className="relative w-1/2 gap-2 self-center sm:w-full sm:self-auto">
+          <h3 className="mb-[1em] flex h-10 w-full items-center justify-start gap-[.3em] font-sora text-4xl font-semibold leading-tight 2md:text-3xl">
+            What the “hack” is LARA?!{" "}
+          </h3>
+          <p className="mb-[1em] w-[90%] font-sans text-sm 2md:w-[100%] 2md:leading-tight md:text-[.85rem]">
+            LARA is designed to help companies build an infrastructure for
+            hosting their services quickly & reliably, according to AWS best
+            practices and based on open source.{" "}
+          </p>
+          <p className="font-sora text-lg font-semibold uppercase 2md:text-[.8rem]">
+            Our Unique Cloud Native Platform
+          </p>
+        </div>
+      </section>
       <CloudPlatformSection />
       <LARABuildingBlocks />
       <ContactSection />
