@@ -34,7 +34,6 @@ const PostDetails = () => {
     date: "12-JANUARY-2024 | 9 AM | Saturday",
     title:
       "Utilizing the AWS Well-Architected Framework for Optimal Cloud Infrastructure",
-
     categories: ["ENTERPRISES", "MIGRATION", "SERVERLESS"],
     sections: ["INTRODUCTION", "SIX PILLARS", "PROCESS"],
   };

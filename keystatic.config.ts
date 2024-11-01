@@ -9,10 +9,18 @@ export default config({
     posts: collection({
       label: "Posts",
       slugField: "title",
-      path: "src/content/posts/*",
+      path: "public/content/posts/*",
       format: { contentField: "content" },
       schema: {
         title: fields.slug({ name: { label: "Title" } }),
+        banner: fields.image({
+          label: "Banner",
+        }),
+        date: fields.date({
+          label: "Published Date",
+          validation: { isRequired: true },
+          defaultValue: new Date().toISOString(),
+        }),
         content: fields.markdoc({ label: "Content" }),
         author: fields.relationship({
           label: "Author",
@@ -44,17 +52,12 @@ export default config({
     // Authors Collection
     authors: collection({
       label: "Authors",
-      path: "content/authors/*",
+      path: "public/content/authors/*",
       slugField: "name",
       schema: {
-        name: fields.text({
-          label: "Name",
-          validation: { isRequired: true },
-        }),
-
-        bio: fields.text({
+        name: fields.slug({ name: { label: "Name" } }),
+        content: fields.markdoc({
           label: "Bio",
-          multiline: true,
         }),
         avatar: fields.image({
           label: "Avatar",
@@ -65,16 +68,63 @@ export default config({
     // Categories Collection
     categories: collection({
       label: "Categories",
-      path: "content/categories/*",
+      path: "public/content/categories/*",
       slugField: "name",
       schema: {
-        name: fields.text({
-          label: "name",
-          validation: { isRequired: true },
-        }),
-        description: fields.text({
+        name: fields.slug({ name: { label: "Name" } }),
+        content: fields.text({
           label: "Description",
           multiline: true,
+        }),
+      },
+    }),
+
+    // Projects Case Studies Collection
+    caseStudies: collection({
+      label: "Case Studies",
+      path: "content/case-studies/*",
+      slugField: "title",
+      schema: {
+        title: fields.slug({
+          name: { label: "Title", validation: { isRequired: true } },
+        }),
+        description: fields.text({
+          label: "Short Description",
+          multiline: true,
+          validation: { isRequired: true },
+        }),
+        client: fields.text({
+          label: "Client",
+          validation: { isRequired: true },
+        }),
+        date: fields.date({
+          label: "Date",
+          validation: { isRequired: true },
+        }),
+        featuredImage: fields.image({
+          label: "Featured Image",
+          validation: { isRequired: false },
+        }),
+        content: fields.markdoc({
+          label: "Content",
+        }),
+        tags: fields.array(
+          fields.text({
+            label: "Tag",
+          }),
+          {
+            label: "Tags",
+            itemLabel: (props) => props.value,
+          },
+        ),
+        projectLink: fields.url({
+          label: "Project Link",
+          validation: { isRequired: false },
+        }),
+        outcome: fields.text({
+          label: "Outcome/Impact",
+          multiline: true,
+          validation: { isRequired: false },
         }),
       },
     }),
