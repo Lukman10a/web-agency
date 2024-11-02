@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import image from "../../public/assets/mission.png";
-import { BorderTrail } from "./ui/animated/border-trail";
+// import { BorderTrail } from "./ui/animated/border-trail";
 
 const Mission = () => {
   return (
@@ -32,12 +32,12 @@ const Mission = () => {
       </div>
 
       <div className="relative mx-auto mb-[3em] w-full max-w-[1400px] overflow-hidden rounded-2xl bg-gradient-to-r from-[#e3e7f7] to-[#fae8de] p-[5em] text-center sm:p-[2em]">
-        <BorderTrail
+        {/* <BorderTrail
           style={{
             boxShadow:
               "0px 0px 60px 30px rgb(255 255 255 / 50%), 0 0 100px 60px rgb(0 0 0 / 50%), 0 0 140px 90px rgb(0 0 0 / 50%)",
           }}
-        />
+        /> */}
         <h3 className="mb-[1em] h-10 font-sora text-[2.5rem] font-bold leading-tight 2md:text-[1.7rem] md:mb-[.4em] md:text-[1.2rem]">
           MATCH MADE IN CLOUD
         </h3>
