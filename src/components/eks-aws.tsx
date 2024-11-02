@@ -80,25 +80,25 @@ const EksAWSection: React.FC = () => {
   return (
     <section className="overflow-hidden"> {/* Prevent horizontal scroll */}
       <div
-        className={`transition-transform duration-300 ease-in-out ${
+         className={`transition-all duration-500 ease-in-out transform ${
           isTransitioning
             ? direction === "next"
-              ? "translate-x-full opacity-0" // Slide out to left when moving to the next
-              : "-translate-x-full opacity-0" // Slide out to right when moving to the previous
-            : "translate-x-0 opacity-100" // Show current item
+              ? "translate-x-20 opacity-0"
+              : "-translate-x-20 opacity-0"
+            : "translate-x-0 opacity-100"
         }`}
       >
         <GenericWorkItem
           header="with EKS"
-          title={currentWorkItem.title}
-          description={currentWorkItem.description}
-          tags={currentWorkItem.tags}
-          images={currentWorkItem.images}
+          title={currentWorkItem?.title}
+          description={currentWorkItem?.description}
+          tags={currentWorkItem?.tags}
+          images={currentWorkItem?.images}
           renderImage={renderImage}
           currentSlide={0}
         />
       </div>
-      <div className="mb-8 flex justify-between w-2/3 items-center mx-auto">
+      <div className="mb-8 flex sm:flex-col justify-between w-2/3 items-center mx-auto">
         <div className="flex gap-4">
           <button
             onClick={handlePrev}
@@ -132,7 +132,7 @@ const EksAWSection: React.FC = () => {
             />
           </button>
         </div>
-        <div>
+        <div className="sm:mt-4">
           <button className="rounded-full bg-orange-600 px-6 py-3 font-semibold text-white shadow-md transition duration-300 ease-in-out hover:bg-orange-500">
             ALL SOLUTIONS &rarr;
           </button>
