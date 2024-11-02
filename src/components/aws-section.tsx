@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GenericWorkItem from "./our-solutions-carousel";
@@ -52,7 +52,7 @@ export const awsServices = [
   {
     title: "RDS",
     description: "Amazon Relational Database Service",
-    slug: "/amazon-rational-database-service",
+    slug: "amazon-rational-database-service",
     serviceDescription:
       "RDS simplifies the setup, operation, and scaling of relational databases in the cloud.",
     benefitItems: [
@@ -175,7 +175,8 @@ const OurWorkAws: React.FC = () => {
 
   const AwsworkItems = [
     {
-      title: "Launching BAMAN: Raiffeisen bank's Strategic Move to Cloud Application",
+      title:
+        "Launching BAMAN: Raiffeisen bank's Strategic Move to Cloud Application",
       description:
         "Ready made, battle tested and proven building blocks for rapid set up of well architected infrastructure.",
       tags: ["Banking", "Cloud", "Enterprise", "Security"],
@@ -246,7 +247,7 @@ const OurWorkAws: React.FC = () => {
   return (
     <section className="overflow-hidden">
       <div
-        className={`transition-all duration-500 ease-in-out transform ${
+        className={`transform transition-all duration-500 ease-in-out ${
           isTransitioning
             ? direction === "next"
               ? "translate-x-20 opacity-0"
@@ -264,14 +265,14 @@ const OurWorkAws: React.FC = () => {
           currentSlide={0}
         />
       </div>
-      <div className="mb-8 flex sm:flex-col justify-between w-2/3 items-center mx-auto">
+      <div className="mx-auto mb-8 flex w-2/3 items-center justify-between sm:flex-col">
         <div className="flex gap-4">
           <button
             onClick={handlePrev}
             disabled={currentSlide === 0}
             aria-label="Previous Slide"
             className={`${
-              currentSlide === 0 ? "opacity-50 cursor-not-allowed" : ""
+              currentSlide === 0 ? "cursor-not-allowed opacity-50" : ""
             }`}
           >
             <Image
@@ -288,7 +289,7 @@ const OurWorkAws: React.FC = () => {
             aria-label="Next Slide"
             className={`${
               currentSlide === AwsworkItems.length - 1
-                ? "opacity-50 cursor-not-allowed"
+                ? "cursor-not-allowed opacity-50"
                 : ""
             }`}
           >
@@ -309,7 +310,6 @@ const OurWorkAws: React.FC = () => {
     </section>
   );
 };
-
 
 const AWSection: React.FC = () => (
   <>
