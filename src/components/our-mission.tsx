@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import image from "../../public/assets/mission.png";
-import { BorderTrail } from "./ui/animated/border-trail";
+// import { BorderTrail } from "./ui/animated/border-trail";
 
 const Mission = () => {
   return (
