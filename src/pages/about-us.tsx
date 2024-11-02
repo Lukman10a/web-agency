@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Mission from "@/components/our-mission";
 import ImagesReveal from "@/components/ui/animated/image-reveal";
-import OurValues from "@/components/shared/our-values";
+// import OurValues from "@/components/shared/our-values";
 import AnimatedStatsBanner from "@/components/shared/stats-banner";
 import TeamSection from "@/components/Cloud";
 import ContactSection from "@/components/lets-talk";
@@ -60,7 +60,7 @@ const AboutUs = () => {
       <AnimatedStatsBanner />
       <ImagesReveal cards={cards} />
       <Mission />
-      <OurValues />
+      {/* <OurValues /> */}
       <TeamSection />
       <Testimonials />
       <ContactSection />
