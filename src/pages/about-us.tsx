@@ -30,31 +30,31 @@ const cards = [
 const AboutUs = () => {
   return (
     <Fragment>
-      <header className="flex md:flex-col items-center gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12">
+      <header className="flex items-center gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12 md:flex-col">
         <div className="flex-[3] space-y-5">
-          <h1 className="font-sora font-extrabold text-6xl animate-fade-in-up md:text-4xl">
+          <h1 className="animate-fade-in-up font-sora text-6xl font-extrabold md:text-4xl">
             <span className="block md:inline-block">Behind the </span>{" "}
             <span className="block md:inline-block">clouds</span>
           </h1>
-          <p className="text-xl animate-fade-in-up delay-200 font-mono">
+          <p className="animate-fade-in-up font-mono text-xl delay-200">
             We make sure you receive a tailor-made & cost-efficient cloud
             environment that is secure, scalable, easy to operate, and
             built-to-last
           </p>
-          <Button className="border border-[#081348] flex gap-4 items-center bg-orange-650 w-fit rounded-2xl text-white transition duration-500 transform hover:scale-105 hover:bg-orange-600">
+          <Button className="flex w-fit transform items-center gap-4 rounded-2xl border border-[#081348] bg-orange-650 text-white transition duration-500 hover:scale-105 hover:bg-orange-600">
             <span>EXPLORE</span>
             <ArrowIcon />
           </Button>
         </div>
-        <div className="flex-[2] rounded-lg overflow-hidden md:hidden">
-          <video autoPlay loop={true} muted className="h-full w-full ">
+        <div className="flex-[2] overflow-hidden rounded-lg md:hidden">
+          <video autoPlay loop={true} muted className="h-full w-full">
             <source src="/assets/animated-cloud.mp4" type="video/mp4" />
           </video>
         </div>
         <Image
           src={animatedCloud}
           alt="animated-hero"
-          className="animate-fade-in-up delay-500 flex-1 rounded-lg hidden md:block"
+          className="hidden flex-1 animate-fade-in-up rounded-lg delay-500 md:block"
         />
       </header>
       <AnimatedStatsBanner />

@@ -107,7 +107,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const posts = postsData.map((post) => ({
     id: post.slug,
     image: post.entry.banner
-      ? `/content/posts/${post.slug}/${post.entry.banner}`
+      ? `${post.entry.banner}`
       : "/path/to/default/image.jpg", // Adjust default image path
     date: post.entry.date,
     title: post.entry.title,

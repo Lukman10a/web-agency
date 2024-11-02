@@ -25,10 +25,11 @@ export default function PostPage({
       <h1>{post.title}</h1>
       {post.banner && (
         <Image
-          src={`/content/posts/future-of-dev-ops-in-the-world-of-ai/${post.banner}`}
+          src={`${post.banner}`}
           alt={post.title}
           width={200}
           height={200}
+          className="w-full"
         />
       )}
       <p>{post.date}</p>

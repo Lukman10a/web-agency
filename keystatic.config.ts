@@ -15,6 +15,7 @@ export default config({
         title: fields.slug({ name: { label: "Title" } }),
         banner: fields.image({
           label: "Banner",
+          publicPath: "/content/posts/",
         }),
         date: fields.date({
           label: "Published Date",

@@ -25,7 +25,7 @@ const PostCard: React.FC<PostCardProps> = ({
         <Image
           src={imageUrl}
           alt="Post image"
-          className="mb-3 w-full rounded-xl sm:rounded-lg"
+          className="mb-3 aspect-video w-full rounded-xl object-cover sm:rounded-lg"
           width={500}
           height={500}
         />

@@ -76,41 +76,6 @@ export default function Details() {
           </p>
         </section>
       </section>
-
-      {/* Related Articles Section */}
-      <section aria-label="Related Articles" className="mt-16 space-y-8">
-        <h2 className="text-center text-3xl font-semibold text-[#262626]">
-          Related Articles
-        </h2>
-        <div className="grid grid-cols-3 gap-8 lg:grid-cols-2 sm:grid-cols-1">
-          {[1, 2, 3].map((item) => (
-            <article
-              key={item}
-              className="space-y-4 rounded-lg bg-[#f9f9f9] p-6 shadow-md"
-            >
-              <Image
-                src={blog_img}
-                alt="Related blog thumbnail"
-                className="rounded-lg"
-              />
-              <h3 className="text-xl font-bold text-[#262626]">
-                Exploring Cloud Strategies for Financial Services
-              </h3>
-              <p className="text-gray-600">
-                A deep dive into how cloud solutions are reshaping the financial
-                services industry with enhanced security, scalability, and
-                efficiency.
-              </p>
-              <a
-                href={`/blog/related-article-${item}`}
-                className="font-semibold text-orange-600 hover:underline"
-              >
-                Read more →
-              </a>
-            </article>
-          ))}
-        </div>
-      </section>
     </main>
   );
 }
