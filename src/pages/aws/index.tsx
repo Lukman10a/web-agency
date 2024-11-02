@@ -83,9 +83,9 @@ export default function AWS() {
       {/* AWS Certifications Section */}
       <section className="space-y-6 p-12">
         <h3 className="text-center font-sora text-5xl font-semibold text-[#262626] md:text-4xl sm:text-3xl">
-          We're AWS certified
+          We&apos;re AWS certified
         </h3>
-        <div className="flex flex-wrap sm:grid sm:grid-cols-2 sm:min-w-10 justify-center sm:gap-4">
+        <div className="flex flex-wrap justify-center sm:grid sm:min-w-10 sm:grid-cols-2 sm:gap-4">
           {[sysops, securityaws, solution, aws, devops, data].map(
             (cert, index) => (
               <motion.div
@@ -161,7 +161,7 @@ export default function AWS() {
             alt="Contact us"
             className="w-[500px] md:py-2 sm:px-6"
           />
-          <div className="flex gap-4  sm:flex-wrap lg:p-10">
+          <div className="flex gap-4 lg:p-10 sm:flex-wrap">
             <div className="space-y-3">
               {consultingServices.map((service, index) => (
                 <div
