@@ -36,7 +36,7 @@ export default function ImagesReveal({
         {cards.map((card, i) => (
           <motion.img
             key={i}
-            className="relative md:-ml-10 size-80 2md:size-60 rounded-2xl border-[6px] border-white object-cover shadow-xl -ml-20 md:size-40"
+            className="relative md:-ml-10 size-80 2md:size-60 rounded-2xl border-[6px] border-white object-cover shadow-xl -ml-20 md:size-40 sm:size-32"
             src={card.src as string}
             custom={{ index: i, angle: card.angle }}
             initial="hidden"
