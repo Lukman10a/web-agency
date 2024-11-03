@@ -1,6 +1,7 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { Sora, Noto_Sans, Noto_Sans_Mono } from "next/font/google";
+import { Node } from "@markdoc/markdoc";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -24,6 +25,14 @@ export const notoSansMono = Noto_Sans_Mono({
   variable: "--font-noto-mono",
 });
 
+// Function to create unique IDs from heading text
+export const createId = (text: string): string => {
+  return text
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "");
+};
+
 // Source example
 export type Heading = {
   title: string;
@@ -31,14 +40,14 @@ export type Heading = {
   level?: number;
 };
 
-export type Node = {
+export type HeadingNode = {
   name: string;
   attributes?: { [key: string]: never };
-  children?: Array<Node | string>;
+  children?: Array<HeadingNode | string>;
 };
 
 export function collectHeadings(
-  node: Node,
+  node: HeadingNode,
   sections: Heading[] = [],
 ): Heading[] {
   if (!node) return sections;
@@ -70,3 +79,26 @@ export function collectHeadings(
 }
 // const content = Markdoc.transform(ast);
 // const headings = collectHeadings(content);
+
+export function addIdsToHeadings(node: Node) {
+  if (node.type === "heading") {
+    const text = node.children
+      .map((child) => (typeof child === "string" ? child : ""))
+      .join(" ")
+      .trim();
+
+    // Generate a slug-style ID based on the text content
+    const id = text
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^a-z0-9-]/g, "");
+    node.attributes.id = id;
+  }
+
+  // Recursively process child nodes
+  if (node.children) {
+    node.children = node.children.map(addIdsToHeadings);
+  }
+
+  return node;
+}

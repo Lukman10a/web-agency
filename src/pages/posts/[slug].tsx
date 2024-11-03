@@ -5,7 +5,15 @@ import Markdoc from "@markdoc/markdoc";
 import keystaticConfig from "../../../keystatic.config";
 import React from "react";
 import Image from "next/image";
-import { collectHeadings, Heading, Node } from "@/lib/utils";
+import { collectHeadings, Heading, HeadingNode } from "@/lib/utils";
+import { Calendar } from "lucide-react";
+import { PiInstagramLogo, PiWhatsappLogo } from "react-icons/pi";
+import { LuTwitter } from "react-icons/lu";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
+import TableOfContents from "@/components/table-of-content";
+// import { config as markdocConfig } from "../../../markdoc.config";
 
 const reader = createReader(process.cwd(), keystaticConfig);
 
@@ -14,48 +22,108 @@ export default function PostPage({
   content,
   headings,
 }: {
-  post: { title: string; banner?: string; date: string };
+  post: {
+    title: string;
+    banner?: string;
+    date: string;
+    author: string;
+    category: string;
+    tags: string[];
+  };
   content: React.ReactNode;
   headings: Heading[];
 }) {
   if (!post) return <div>Post not found</div>;
 
   return (
-    <article className="prose prose-xl mx-auto w-full py-5">
-      <h1>{post.title}</h1>
-      {post.banner && (
-        <Image
-          src={`${post.banner}`}
-          alt={post.title}
-          width={200}
-          height={200}
-          className="w-full"
-        />
-      )}
-      <p>{post.date}</p>
+    <section className="my-4">
+      <div className="mx-auto w-[90%] max-w-[800px] space-y-4 text-center">
+        <div className="flex items-center justify-center gap-4">
+          <Badge className="uppercase">{post.category}</Badge>
+          <Separator orientation="vertical" />
+          <p className="flex gap-3 text-[#636363]">
+            <Calendar /> {post.date}
+          </p>
+        </div>
 
-      {headings && headings?.length > 0 && (
-        <nav className="toc mb-6">
-          <h2>Table of Contents</h2>
-          <ul>
-            {headings.map((heading) => (
-              <li
-                key={heading.id}
-                style={{ marginLeft: `${(heading.level! - 1) * 16}px` }}
-              >
-                <a href={`#${heading.id}`}>{heading.title}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
+        <h1 className="font-sora text-[2.5rem] font-semibold leading-tight 2md:text-[1.8rem] sm:text-[1.4rem]">
+          {post.title}
+        </h1>
+        <div className="mx-auto flex justify-center gap-3 md:flex-col">
+          <div className="flex gap-3 p-3 text-center md:flex-col">
+            <span className="inline-block h-12 w-12 rounded-full bg-[#8080802d] md:self-center"></span>
+            <p className="self-center">{post.author} - Head of Engineering</p>
+          </div>
+          <div className="flex gap-2 self-center border-l border-darkblue-950 py-2 pl-5 md:self-center md:border-none">
+            <Link href="#">
+              <PiWhatsappLogo size={36} color="#081348" />
+            </Link>
+            <Link href="#">
+              <PiInstagramLogo size={36} color="#081348" />
+            </Link>
+            <Link href="#">
+              <LuTwitter size={36} color="#081348" />
+            </Link>
+          </div>
+        </div>
+      </div>
 
-      <div
-        dangerouslySetInnerHTML={{
-          __html: content as string,
-        }}
-      ></div>
-    </article>
+      <section className="mx-auto w-full max-w-[100ch] py-5">
+        {post.banner && (
+          <Image
+            src={`${post.banner}`}
+            alt={post.title}
+            width={200}
+            height={200}
+            className="aspect-video w-full"
+          />
+        )}
+
+        <div className="relative flex gap-4">
+          {headings && headings?.length > 0 && (
+            <TableOfContents headings={headings} />
+          )}
+
+          <article
+            className="prose prose-lg flex-[3] prose-h2:text-center prose-h2:font-sora prose-h2:text-orange-650"
+            dangerouslySetInnerHTML={{
+              __html: content as string,
+            }}
+          ></article>
+        </div>
+      </section>
+
+      <div className="mx-auto mb-6 gap-2">
+        <div className="flex items-center justify-center gap-4">
+          {post.tags.map((tag) => (
+            <Badge
+              className="text-md bg-darkblue-650 py-2 font-normal uppercase"
+              key={tag}
+            >
+              {tag}
+            </Badge>
+          ))}
+        </div>
+
+        <div className="mx-auto flex justify-center gap-3 md:flex-col">
+          <div className="flex gap-3 p-3 text-center md:flex-col">
+            <span className="inline-block h-12 w-12 rounded-full bg-[#8080802d] md:self-center"></span>
+            <p className="self-center">{post.author} - Head of Engineering</p>
+          </div>
+          <div className="flex gap-2 self-center border-l border-darkblue-950 py-2 pl-5 md:self-center md:border-none">
+            <Link href="#">
+              <PiWhatsappLogo size={36} color="#081348" />
+            </Link>
+            <Link href="#">
+              <PiInstagramLogo size={36} color="#081348" />
+            </Link>
+            <Link href="#">
+              <LuTwitter size={36} color="#081348" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -68,13 +136,20 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const content = Markdoc.renderers.html(renderable);
   // Generate ToC from the transformed Markdoc node
-  const headings = collectHeadings(renderable as Node);
+  const headings = collectHeadings(renderable as HeadingNode);
 
   console.log({ headings });
 
   return {
     props: {
-      post: { title: post.title, banner: post.banner, date: post.date },
+      post: {
+        title: post.title,
+        banner: post.banner,
+        date: post.date,
+        author: post.author,
+        tags: post.tags,
+        category: post.category,
+      },
       content,
       headings,
     },

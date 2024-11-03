@@ -55,6 +55,7 @@ export default config({
       label: "Authors",
       path: "public/content/authors/*",
       slugField: "name",
+      format: { contentField: "content" },
       schema: {
         name: fields.slug({ name: { label: "Name" } }),
         content: fields.markdoc({
@@ -62,6 +63,7 @@ export default config({
         }),
         avatar: fields.image({
           label: "Avatar",
+          publicPath: "/content/authors/",
         }),
       },
     }),

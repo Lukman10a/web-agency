@@ -17,8 +17,6 @@ const PostCard: React.FC<PostCardProps> = ({
   title,
   id,
 }) => {
-  // console.log({ category });
-
   return (
     <div className="mx-auto mb-2 max-w-[400px] p-2">
       <div className="">
@@ -31,9 +29,9 @@ const PostCard: React.FC<PostCardProps> = ({
         />
       </div>
       <div className="w-[90%]">
-        <p className="mb-2">
-          <span className="font-inter font-semibold uppercase">{category}</span>{" "}
-          - <span>{date}</span>
+        <p className="font-inter mb-2">
+          <span className="uppercase">{category}</span> -{" "}
+          <span className="text-[#636363]">{date}</span>
         </p>
         <h1 className="font-sans font-bold">
           <Link href={`/blog/${id}`} className="hover:underline">
