@@ -39,7 +39,9 @@ export default function PostPage({
     <section className="my-4">
       <div className="mx-auto w-[90%] max-w-[800px] space-y-4 text-center">
         <div className="flex items-center justify-center gap-4">
-          <Badge className="uppercase">{post.category}</Badge>
+          <Badge className="bg-orange-650 py-2 uppercase">
+            {post.category}
+          </Badge>
           <Separator orientation="vertical" />
           <p className="flex gap-3 text-[#636363]">
             <Calendar /> {post.date}
@@ -99,7 +101,7 @@ export default function PostPage({
         <div className="flex items-center justify-center gap-4">
           {post.tags.map((tag) => (
             <Badge
-              className="text-md bg-darkblue-650 py-2 font-normal uppercase"
+              className="text-md bg-darkblue-800 font-normal uppercase"
               key={tag}
             >
               {tag}
