@@ -25,6 +25,17 @@ export const notoSansMono = Noto_Sans_Mono({
   variable: "--font-noto-mono",
 });
 
+export const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({
+      block: "start",
+      behavior: "smooth",
+    });
+    window.location.hash = `#${id}`;
+  }
+};
+
 // Function to create unique IDs from heading text
 export const createId = (text: string): string => {
   return text

@@ -13,7 +13,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import TableOfContents from "@/components/table-of-content";
-// import { config as markdocConfig } from "../../../markdoc.config";
+import { config as markdocConfig } from "../../../markdoc.config";
 
 const reader = createReader(process.cwd(), keystaticConfig);
 
@@ -79,10 +79,12 @@ export default function PostPage({
           />
         )}
 
-        <div className="relative flex gap-4">
-          {headings && headings?.length > 0 && (
-            <TableOfContents headings={headings} />
-          )}
+        <div className="flex gap-4">
+          <div className="sticky top-0">
+            {headings && headings?.length > 0 && (
+              <TableOfContents headings={headings} />
+            )}
+          </div>
 
           <article
             className="prose prose-lg flex-[3] prose-h2:text-center prose-h2:font-sora prose-h2:text-orange-650"
@@ -132,7 +134,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!post) return { notFound: true };
 
   const { node } = await post.content();
-  const renderable = Markdoc.transform(node);
+  const renderable = Markdoc.transform(node, markdocConfig);
 
   const content = Markdoc.renderers.html(renderable);
   // Generate ToC from the transformed Markdoc node

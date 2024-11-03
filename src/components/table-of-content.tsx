@@ -1,16 +1,28 @@
 "use client";
 
-import { cn, Heading } from "@/lib/utils";
+import { useHash } from "@/hooks/use-hash";
+import { cn, Heading, scrollToSection } from "@/lib/utils";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Component({ headings }: { headings: Heading[] }) {
-  const pathname = usePathname();
-  const currentSection = pathname?.split("#")[1]; // Default active section
+  const hash = useHash();
+  const [currentSection, setCurrentSection] = useState<string | null>(
+    headings[0].id as string,
+  ); // State to manage current section
+
+  useEffect(() => {
+    const section = hash.replace("#", ""); // Extract current section ID
+
+    if (section) {
+      setCurrentSection(() => section); // Update state
+      scrollToSection(section); // Scroll to the section
+    }
+  }, [hash]);
 
   return (
     <nav
-      className="sticky my-20 w-64 space-y-4 font-mono"
+      className="my-20 w-64 space-y-4 font-mono"
       aria-label="Table of contents"
     >
       <h2 className="font-bold">Table of Contents</h2>
@@ -19,7 +31,7 @@ export default function Component({ headings }: { headings: Heading[] }) {
         return (
           <Link
             key={item.id}
-            href={`#${item.id}`} // Updated href to include a hash for anchor links
+            href={`#${item.id}`} // Link to section using hash
             className={cn(
               "group flex items-start gap-4 text-sm text-muted-foreground no-underline transition-colors hover:text-foreground",
               isActive && "text-foreground",
