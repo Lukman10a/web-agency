@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import blog_img from "../../../public/assets/blog_img.png";
-import Raiffeisen from "../../../public/assets/Raiffeisen.png";
+import Raiffeisen from "../../../public/assets/raiffeisen.png";
 import React from "react";
 import Image from "next/image";
 import Testimonials from "@/components/what-client";
