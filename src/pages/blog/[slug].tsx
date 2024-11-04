@@ -99,11 +99,11 @@ const PostDetails = () => {
                 }`}
                 onClick={() => handleSelectSection(section)}
               >
-                <p className="font-sora text-3xl font-semibold 2md:text-[20px] md:text-[15px] sm:-mr-1">
+                <p className="-mr-4 font-sora text-3xl font-semibold 2md:text-[20px] md:text-[15px]">
                   {String(index + 1).padStart(2, "0")}
                 </p>
                 <p className="border-l border-gray-400 pl-2 font-sans 2md:text-[14px] md:text-[10px] sm:-ml-6 sm:pl-1"></p>
-                <p className="border-l pl-2 font-sans 2md:text-[14px] md:text-[10px] sm:-ml-6 sm:pl-1">
+                <p className="border-l pl-2 font-sans 2md:text-[14px] md:text-[10px] sm:-ml-6 sm:pl-[4px]">
                   {section}
                 </p>
               </div>
