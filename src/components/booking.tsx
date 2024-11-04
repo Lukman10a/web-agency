@@ -4,13 +4,12 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import image from "../../public/assets/cardimage1.png";
 import ArrowIcon from "./icons/arrow";
-import { Separator } from "@/components/ui/separator";
 
 const stats = [
-  { count: "100+", label: "Clusters" },
   { count: "1000+", label: "Nodes" },
+  { count: "100+", label: "Clusters" },
   { count: "50+", label: "AWS Projects" },
-];
+]
 
 const Booking: React.FC = () => (
   <section className="mx-4">
@@ -48,11 +47,11 @@ const Booking: React.FC = () => (
     </div>
 
     {/* Stats */}
-    <div className="container mx-auto mb-16 flex max-w-7xl justify-between gap-7 border-b border-t p-6 md:flex-wrap md:items-center">
+    <div className="container mx-auto mb-16 flex max-w-7xl justify-evenly  md:flex-wrap sm:gap-7 md:items-center">
       {stats.map((stat, index) => (
-        <div key={index} className="flex items-center gap-3 text-center">
+        <div key={index} className="flex flex-col items-center text-center ring-1 ring-neutral-400 px-20 space-y-3 py-10 rounded-xl transition-transform transform hover:-translate-y-2 sm:-translate-y-0">
+          <Image src="/assets/starts.png" width={50} height={50} alt="start image" />
           <p className="font-sora text-3xl font-bold">{stat.count}</p>
-          <Separator orientation="vertical" />
           <p className="text-gray-500">{stat.label}</p>
         </div>
       ))}
