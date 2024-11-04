@@ -6,7 +6,6 @@ import expert from "../../public/svg/expert.svg";
 import improvedsecurity from "../../public/assets/improvedsecurity.png";
 import ArrowIcon from "./icons/arrow";
 import { Button } from "./ui/button";
-import { PartnersSlider } from "./shared/partners-slider";
 import MoreClients from "./more-clients";
 
 const benefits = [

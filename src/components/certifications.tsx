@@ -7,18 +7,15 @@ import cloud from "../../public/assets/cloud.png";
 import devops from "../../public/assets/devops.png";
 import data from "../../public/assets/data.png";
 import star from "../../public/assets/starfour.png";
-import ArrowIcon from "./icons/arrow";
-import { Button } from "./ui/button";
-import Link from "next/link";
 
-const badges = [
-  { src: sysops, alt: "AWS SysOps Administrator Badge" },
-  { src: security, alt: "AWS Security Badge" },
-  { src: archi, alt: "AWS Solutions Architect Badge" },
-  { src: cloud, alt: "AWS Cloud Practitioner Badge" },
-  { src: devops, alt: "AWS DevOps Engineer Badge" },
-  { src: data, alt: "AWS Data Analytics Badge" },
-];
+// const badges = [
+//   { src: sysops, alt: "AWS SysOps Administrator Badge" },
+//   { src: security, alt: "AWS Security Badge" },
+//   { src: archi, alt: "AWS Solutions Architect Badge" },
+//   { src: cloud, alt: "AWS Cloud Practitioner Badge" },
+//   { src: devops, alt: "AWS DevOps Engineer Badge" },
+//   { src: data, alt: "AWS Data Analytics Badge" },
+// ];
 
 const SecurityCertifications: React.FC = () => {
   return (
