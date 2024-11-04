@@ -1,6 +1,9 @@
-import type { Config } from "tailwindcss";
+/** @type {import('tailwindcss').Config} */
 
-const config: Config = {
+import type { Config } from "tailwindcss";
+import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
+
+const config: typeof Config = {
   darkMode: ["class"],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -138,8 +141,8 @@ const config: Config = {
         },
         gradient: {
           "100": "hsla(22, 100%, 67%, 0.1)",
-          "200": "hsla(230, 80%, 16%, 0.1)"
-        }
+          "200": "hsla(230, 80%, 16%, 0.1)",
+        },
       },
       gridTemplateColumns: {
         repeat4: "repeat(4, minmax(100px, 500px))",
@@ -151,9 +154,64 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      transitionTimingFunction: {
+        "minor-spring": "cubic-bezier(0.18,0.89,0.82,1.04)",
+      },
+      keyframes: {
+        "reveal-up": {
+          "0%": { opacity: "0", transform: "translateY(80%)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "reveal-down": {
+          "0%": { opacity: "0", transform: "translateY(-80%)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "content-blur": {
+          "0%": { filter: "blur(0.3rem)" },
+          "100%": { filter: "blur(0)" },
+        },
+        "marquee-x": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-y": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        trail: {
+          "0%": { "--angle": "0deg" },
+          "100%": { "--angle": "360deg" },
+        },
+      },
+      animation: {
+        "marquee-horizontal": "marquee-x var(--duration) infinite linear",
+        "marquee-vertical": "marquee-y var(--duration) linear infinite",
+        "fade-in-up": "fadeInUp 0.7s ease-in-out forwards",
+        trail: "trail var(--duration) linear infinite",
+      },
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+    addVariablesForColors,
+  ],
 };
 export default config;
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function addVariablesForColors({ addBase, theme }: any) {
+  const allColors = flattenColorPalette(theme("colors"));
+  const newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}

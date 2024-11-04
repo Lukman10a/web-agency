@@ -4,9 +4,10 @@ import { SVGProps } from "react";
 const ArrowIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={20}
+    width={24}
     height={16}
     fill="#fff"
+    viewBox="0 0 24 16"
     {...props}
   >
     <path

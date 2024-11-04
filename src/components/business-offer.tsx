@@ -1,38 +1,54 @@
 import React from "react";
 import HomeCard from "./home-card";
+import Cardimage1 from "/public/assets/cardimage1.png";
+import Cardimage2 from "/public/assets/cardimage2.png";
+import Cardimage3 from "/public/assets/cardimage3.png";
+import { LuUploadCloud } from "react-icons/lu";
+import { GrShieldSecurity } from "react-icons/gr";
+import { BsCloudPlus } from "react-icons/bs";
+import { BorderTrail } from "./ui/animated/border-trail";
 
 const BusinessOffer = () => {
   const cardData = [
     {
-      title: "CLOUD CONSULTING",
+      title: "CLOUD",
       description:
         "Unlock the full potential of the cloud with our tailored strategies that streamline your operations and optimize costs. From cloud strategy and migration to multi-cloud solutions, we help you build a robust, scalable cloud environment that supports your business goals.",
       buttonText: "Explore Cloud Solutions",
       buttonLink: "/cloud",
-      imageSrc: "/assets/Cardimage1.png",
+      imageSrc: Cardimage1,
+      titleIcon: <LuUploadCloud />,
     },
     {
-      title: "SECURITY CONSULTING",
+      title: "SECURITY",
       description:
         "Safeguard your business with comprehensive security solutions tailored to your needs. We thoroughly assess and identify potential vulnerabilities in your systems, design robust and scalable security architectures, and implement solutions that protect your assets. ",
       buttonText: "Strengthen Security",
       buttonLink: "/security",
-      imageSrc: "/assets/Cardimage2.png",
+      imageSrc: Cardimage2,
+      titleIcon: <GrShieldSecurity />,
     },
     {
-      title: "MANAGED CONSULTING",
+      title: "MANAGED",
       description:
         "Our 24/7 managed security services provide continuous protection against cyber threats, ensuring your business stays secure at all times. With real-time monitoring and proactive threat detection, we safeguard your operations so you can focus on growing your business while we take care of all your security needs",
       buttonText: "See Security Plans",
       buttonLink: "/managed",
-      imageSrc: "/assets/Cardimage3.png",
+      imageSrc: Cardimage3,
+      titleIcon: <BsCloudPlus />,
     },
   ];
 
   return (
-    <section className="w-11/12 max-w-7xl mx-auto ">
-      <div className="p-[5em] sm:p-[2em] bg-gradient-to-r from-[#e3e7f7] to-[#fae8de] text-center w-full  rounded-2xl mb-[3em]">
-        <p className=" mx-auto text-[1.8rem] 2md:text-[1.5rem] md:text-[1.2rem]">
+    <section className="w-11/12 max-w-7xl mx-auto overflow-hidden">
+      <div className="relative p-[5em] sm:p-[2em] bg-gradient-to-r from-[#e3e7f7] to-[#fae8de] text-center w-full  rounded-2xl mb-[3em]">
+        <BorderTrail
+          style={{
+            boxShadow:
+              "0px 0px 60px 30px rgb(255 255 255 / 50%), 0 0 100px 60px rgb(0 0 0 / 50%), 0 0 140px 90px rgb(0 0 0 / 50%)",
+          }}
+        />
+        <p className="mx-auto text-[1.8rem] 2md:text-[1.5rem] md:text-[1.2rem]">
           At Teverse, we specialize in transforming businesses through cutting
           edge cloud solutions and security services. Whether you need cloud
           migration, optimization, or robust security architecture, our team is
@@ -55,6 +71,7 @@ const BusinessOffer = () => {
               buttonText={card.buttonText}
               buttonLink={card.buttonLink}
               imageSrc={card.imageSrc}
+              titleIcon={card.titleIcon}
               index={index}
             />
           ))}

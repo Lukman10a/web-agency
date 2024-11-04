@@ -49,7 +49,7 @@ const OurValuesSection: React.FC = () => {
   });
 
   return (
-    <section ref={targetRef} className="relative bg-gray-100 py-10 font-sora">
+    <section ref={targetRef} className="relative bg-gray-100 py-10">
       
       {/* Sticky Header */}
       <motion.div 
