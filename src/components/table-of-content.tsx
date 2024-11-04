@@ -29,34 +29,36 @@ export default function TableOfContents({ headings }: { headings: Heading[] }) {
       aria-label="Table of contents"
     >
       <h2 className="font-bold">Table of Contents</h2>
-      {headings.map((item, index) => {
-        const isActive = item.id === currentSection;
-        return (
-          <Link
-            key={item.id}
-            href={`#${item.id}`} // Link to section using hash
-            className={cn(
-              "group flex items-start gap-4 text-sm text-muted-foreground no-underline transition-colors hover:text-foreground",
-              isActive && "text-foreground",
-            )}
-            onClick={() => handleSelectSection(item.id as string)}
-          >
-            <div className="flex items-center gap-2">
-              <div
-                className={cn(
-                  "flex h-6 w-6 items-center justify-center rounded-full",
-                  isActive && "bg-[#ff7b72] text-white",
-                )}
-              >
-                {String(index + 1).padStart(2, "0")}
+      {headings
+        .filter((item) => [2, 3].includes(item.level as number))
+        .map((item, index) => {
+          const isActive = item.id === currentSection;
+          return (
+            <Link
+              key={item.id}
+              href={`#${item.id}`} // Link to section using hash
+              className={cn(
+                "group flex items-start gap-4 text-sm text-muted-foreground no-underline transition-colors hover:text-foreground",
+                isActive && "text-foreground",
+              )}
+              onClick={() => handleSelectSection(item.id as string)}
+            >
+              <div className="flex items-center gap-2">
+                <div
+                  className={cn(
+                    "flex h-6 w-6 items-center justify-center rounded-full",
+                    isActive && "bg-[#ff7b72] text-white",
+                  )}
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </div>
               </div>
-            </div>
-            <span className="mt-0.5 whitespace-pre-line leading-tight">
-              {item.title}
-            </span>
-          </Link>
-        );
-      })}
+              <span className="mt-0.5 whitespace-pre-line leading-tight">
+                {item.title}
+              </span>
+            </Link>
+          );
+        })}
     </nav>
   );
 }
