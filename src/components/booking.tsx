@@ -8,7 +8,7 @@ import ArrowIcon from "./icons/arrow";
 const stats = [
   { count: "1000+", label: "Nodes" },
   { count: "100+", label: "Clusters" },
-  { count: "50+", label: "AWS Project" },
+  { count: "50+", label: "AWS Projects" },
 ]
 
 const Booking: React.FC = () => (
