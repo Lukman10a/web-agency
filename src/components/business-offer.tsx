@@ -40,8 +40,8 @@ const BusinessOffer = () => {
   ];
 
   return (
-    <section className="w-11/12 max-w-7xl mx-auto overflow-hidden">
-      <div className="relative p-[5em] sm:p-[2em] bg-gradient-to-r from-[#e3e7f7] to-[#fae8de] text-center w-full  rounded-2xl mb-[3em]">
+    <section className="mx-auto mb-16 w-11/12 max-w-7xl overflow-hidden">
+      <div className="relative mb-[3em] w-full rounded-2xl bg-gradient-to-r from-[#e3e7f7] to-[#fae8de] p-[5em] text-center sm:p-[2em]">
         <BorderTrail
           style={{
             boxShadow:
@@ -56,25 +56,27 @@ const BusinessOffer = () => {
           infrastructure.
         </p>
       </div>
+      <div className="rounded-2xl bg-orange-100 p-2 pt-16">
+        <h1 className="mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold uppercase leading-tight lg:text-[2rem] md:text-[1.6rem]">
+          <span className="text-orange-650">Services</span> designed to <br />{" "}
+          Grow your business
+        </h1>
 
-      <h1 className="font-sora text-[2.5rem] lg:text-[2rem] md:text-[1.6rem] uppercase font-semibold text-center mx-auto leading-tight mb-[1em]">
-        Services designed to <br /> Grow your business
-      </h1>
-
-      <div className="items-center justify-center py-2">
-        <div className=" justify-center">
-          {cardData.map((card, index) => (
-            <HomeCard
-              key={index}
-              title={card.title}
-              description={card.description}
-              buttonText={card.buttonText}
-              buttonLink={card.buttonLink}
-              imageSrc={card.imageSrc}
-              titleIcon={card.titleIcon}
-              index={index}
-            />
-          ))}
+        <div className="items-center justify-center py-2">
+          <div className="justify-center">
+            {cardData.map((card, index) => (
+              <HomeCard
+                key={index}
+                title={card.title}
+                description={card.description}
+                buttonText={card.buttonText}
+                buttonLink={card.buttonLink}
+                imageSrc={card.imageSrc}
+                titleIcon={card.titleIcon}
+                index={index}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
