@@ -23,6 +23,11 @@ export default config({
           defaultValue: new Date().toISOString(),
         }),
         content: fields.markdoc({ label: "Content" }),
+        featured: fields.checkbox({
+          label: "Featured",
+          description: "Mark this post as featured.",
+          defaultValue: false,
+        }),
         author: fields.relationship({
           label: "Author",
           collection: "authors",

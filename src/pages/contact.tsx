@@ -19,7 +19,7 @@ export default function Contact() {
               <p className="text-center text-lg text-gray-600">
                 Quick intro to what we’re all about, answering questions <br />
                 and drafting a roadmap of your cloud journey. All within 30
-                minutes.
+                minutes
               </p>
             </div>
             <button className="mx-auto flex w-1/4 justify-center rounded-full bg-orange-650 px-6 py-3 text-center font-semibold text-white ring-1 ring-darkblue-850 transition duration-300 hover:bg-orange-600 sm:w-full sm:px-2">

@@ -51,7 +51,7 @@ export default function PostPage({
         <h1 className="font-sora text-[2.5rem] font-semibold leading-tight 2md:text-[1.8rem] sm:text-[1.4rem]">
           {post.title}
         </h1>
-        <div className="mx-auto flex justify-center gap-3 md:flex-col">
+        <div className="mx-auto flex items-center justify-center gap-3 md:flex-col">
           <div className="flex gap-3 p-3 text-center md:flex-col">
             <span className="inline-block h-12 w-12 rounded-full bg-[#8080802d] md:self-center"></span>
             <p className="self-center">{post.author} - Head of Engineering</p>
@@ -81,8 +81,8 @@ export default function PostPage({
           />
         )}
 
-        <div className="flex gap-4">
-          <div className="sticky top-0">
+        <div className="flex gap-4 p-4 sm:flex-col">
+          <div className="sticky top-0 sm:hidden">
             {headings && headings?.length > 0 && (
               <TableOfContents headings={headings} />
             )}
