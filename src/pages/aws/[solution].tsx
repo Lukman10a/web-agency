@@ -4,7 +4,6 @@ import CallToAction from "@/components/shared/callToAction";
 import LARA from "@/components/shared/lara";
 import Image from "next/image";
 import black_mark from "/public/svg/black_mark.svg";
-import React from "react";
 import EksAWSection from "@/components/eks-aws";
 import { awsServices } from "@/components/aws-section";
 import { useRouter } from "next/router";

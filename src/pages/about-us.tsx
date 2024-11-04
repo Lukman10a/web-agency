@@ -11,6 +11,7 @@ import AnimatedStatsBanner from "@/components/shared/stats-banner";
 import TeamSection from "@/components/Cloud";
 import ContactSection from "@/components/lets-talk";
 import Testimonials from "@/components/what-client";
+import OurValuesSection from "@/components/our-values";
 
 const cards = [
   {
@@ -60,6 +61,7 @@ const AboutUs = () => {
       <AnimatedStatsBanner />
       <ImagesReveal cards={cards} />
       <Mission />
+      <OurValuesSection />
       {/* <OurValues /> */}
       <TeamSection />
       <Testimonials />
