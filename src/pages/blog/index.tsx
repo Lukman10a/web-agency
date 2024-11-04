@@ -1,7 +1,7 @@
 // pages/index.tsx
 import { GetStaticProps } from "next";
 import { createReader } from "@keystatic/core/reader";
-import BlogCard from "@/components/blog-card";
+import FeaturedPost from "@/components/featured-card";
 import Newsletter from "@/components/newsletter";
 import PostCard from "@/components/post-card";
 import React, { useEffect, useState } from "react";
@@ -18,6 +18,7 @@ type Post = {
   date: string;
   title: string;
   category: string;
+  featured: boolean;
 };
 
 type Category = {
@@ -29,6 +30,8 @@ const Index: React.FC<{ posts: Post[]; categories: Category[] }> = ({
   categories,
 }) => {
   const [activeCategory, setActiveCategory] = useState<string>("ALL");
+
+  const featuredPost = posts.find((post) => post.featured);
 
   const filteredPosts =
     activeCategory === "ALL"
@@ -47,12 +50,20 @@ const Index: React.FC<{ posts: Post[]; categories: Category[] }> = ({
 
   return (
     <section className="mx-auto border">
-      <BlogCard />
+      {featuredPost && (
+        <FeaturedPost
+          imageSrc={featuredPost.image}
+          altText="Featured post image"
+          date={featuredPost.date}
+          category={featuredPost.category}
+          title={featuredPost.title}
+          link={`/blog/${featuredPost.id}`}
+        />
+      )}
       <div className="container mx-auto max-w-[1200px] px-4 py-8">
         <h2 className="mx-auto mb-6 text-center font-sora text-3xl font-semibold">
           Latest Insight
         </h2>
-
         <div className="mx-auto mb-6 flex flex-wrap justify-center gap-2">
           {["ALL", ...categories.map((category) => category.name)].map(
             (category) => (
@@ -112,6 +123,7 @@ export const getStaticProps: GetStaticProps = async () => {
     date: post.entry.date,
     title: post.entry.title,
     category: post.entry.category,
+    featured: post.entry.featured,
   }));
 
   const categories = categoriesData.map((category) => ({

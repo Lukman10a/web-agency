@@ -1,7 +1,7 @@
 // pages/index.tsx
 import { GetStaticProps } from "next";
 import { createReader } from "@keystatic/core/reader";
-import BlogCard from "@/components/blog-card";
+// import BlogCard from "@/components/featured-card";
 import Newsletter from "@/components/newsletter";
 import PostCard from "@/components/post-card";
 import React, { useEffect, useState } from "react";
@@ -52,7 +52,7 @@ const Index: React.FC<{ posts: Post[] }> = ({ posts }) => {
 
   return (
     <section className="mx-auto border">
-      <BlogCard />
+      {/* <BlogCard /> */}
       <div className="container mx-auto max-w-[1200px] px-4 py-8">
         <h2 className="mx-auto mb-6 text-center font-sora text-3xl font-semibold">
           Latest Insight
