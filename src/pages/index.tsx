@@ -8,6 +8,7 @@ import KeyBenefits from "@/components/why-choose";
 import FAQSection from "@/components/FAQ";
 
 import WhyChooseUs from "@/components/why-choose-us";
+import PartnershipSection from "@/components/partnerships";
 
 
 export default function Home() {
@@ -23,6 +24,11 @@ export default function Home() {
       <WhyChooseUs />
       <SecurityCertifications />
       <Testimonials />
+<<<<<<< Updated upstream
+=======
+      <FAQSection />
+      <PartnershipSection />
+>>>>>>> Stashed changes
     </main>
   );
 }
