@@ -34,7 +34,7 @@ const PostCard: React.FC<PostCardProps> = ({
           <span className="text-[#636363]">{date}</span>
         </p>
         <h1 className="font-sans font-bold">
-          <Link href={`/blog/${id}`} className="hover:underline">
+          <Link href={`/posts/${id}`} className="hover:underline">
             {title}
           </Link>
         </h1>

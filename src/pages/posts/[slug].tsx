@@ -81,8 +81,8 @@ export default function PostPage({
           />
         )}
 
-        <div className="flex gap-4 p-4">
-          <div className="sticky top-0 sm:hidden">
+        <div className="flex gap-4 p-4 sm:flex-col">
+          <div className="sticky top-0">
             {headings && headings?.length > 0 && (
               <TableOfContents headings={headings} />
             )}
