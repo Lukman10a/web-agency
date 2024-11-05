@@ -55,6 +55,7 @@ const AboutUs = () => {
         <Image
           src={animatedCloud}
           alt="animated-hero"
+          unoptimized
           className="hidden flex-1 animate-fade-in-up rounded-lg delay-500 md:block"
         />
       </header>

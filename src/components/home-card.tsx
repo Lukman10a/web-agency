@@ -46,7 +46,7 @@ const HomeCard: React.FC<HomeCardProps> = ({
           <span className="min-w-min sm:text-[1rem]">CONSULTING</span>
         </h3>
 
-        <p className="mb-[1.5em] w-[90%] font-sans text-[.9rem] font-[400] leading-normal 2md:w-[100%] 2md:leading-tight md:text-[.85rem]">
+        <p className="mb-[1.5em] w-[90%] font-sans text-lg leading-normal text-gray-500 2md:w-[100%]">
           {description}
         </p>
         <Button
