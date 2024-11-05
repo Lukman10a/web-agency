@@ -30,7 +30,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
   };
 
   return (
-    <section className={`${bgColor} w-full py-16`}>
+    <section className={`${bgColor} w-full pt-4`}>
       <div className="mx-auto max-w-4xl px-4 lg:px-8 sm:px-4">
         <div className="space-y-4">
           {faqData.map((faq, index) => (
