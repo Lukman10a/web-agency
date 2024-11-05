@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const PartnershipSection: React.FC = () => {
   return (
-    <section className="flex justify-between sm:flex-wrap md:flex-row items-center gap-8 py-8 px-14 bg-gray-50">
+    <section className="flex justify-between sm:flex-wrap md:flex-row items-center gap-8 py-4 px-14">
       {/* Text Section */}
       <div className=" text-left font-sora">
         <h2 className="text-2xl font-bold text-gray-800 mb-2">
