@@ -38,7 +38,7 @@ const HomeCard: React.FC<HomeCardProps> = ({
         />
       </div>
       <div className="w-3/5 self-center md:w-1/2 sm:w-full sm:self-auto">
-        <h3 className="mb-[.3em] flex h-10 w-full items-center justify-start gap-[.3em] font-sora text-3xl font-semibold 2md:text-[1.2rem]">
+        <h3 className="mb-[.3em] flex h-10 w-full items-center justify-start gap-[.3em] font-sora text-3xl font-semibold 2md:text-lg">
           <span className="min-w-min">{title}</span>
           <span className="flex items-center justify-center rounded-3xl border border-darkblue-900 bg-orange-600 p-[.3em] text-[.85em] font-extralight text-darkblue-900 sm:text-[1rem]">
             {titleIcon}
@@ -46,7 +46,7 @@ const HomeCard: React.FC<HomeCardProps> = ({
           <span className="min-w-min sm:text-[1rem]">CONSULTING</span>
         </h3>
 
-        <p className="mb-[1.5em] w-[90%] font-sans text-lg leading-normal text-gray-500 2md:w-[100%]">
+        <p className="mb-[1.5em] w-[90%] font-sans text-lg leading-normal text-gray-500 2md:w-[100%] md:text-base">
           {description}
         </p>
         <Button

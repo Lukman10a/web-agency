@@ -64,7 +64,7 @@ export default function WhyChooseUs() {
 
       {/* Case Study Section */}
       <section
-        className="m-10 mx-auto flex w-11/12 max-w-[1300px] items-center gap-10 rounded-2xl bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] px-28 py-8 xl:px-16 lg:gap-6 lg:px-8 lg:py-4 md:flex-col md:py-8 sm:p-6"
+        className="m-10 mx-auto flex w-11/12 max-w-7xl items-center gap-10 rounded-2xl bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] px-28 py-8 xl:px-16 lg:gap-6 lg:px-8 lg:py-4 md:flex-col md:py-8 sm:p-6"
         aria-labelledby="case-study-heading"
       >
         <div className="w-1/2 flex-1 md:w-full">
@@ -83,7 +83,7 @@ export default function WhyChooseUs() {
             Improved Security Posture for a Financial Firm with a Custom
             Security Architecture
           </h3>
-          <p className="mb-[1.5em] w-full font-sora text-[14px] xl:text-[12px]">
+          <p className="mb-[1.5em] w-full">
             We improved a financial firm&apos;s security by implementing a
             custom architecture with advanced threat detection and strict access
             controls, reducing incidents and boosting compliance.
@@ -94,7 +94,6 @@ export default function WhyChooseUs() {
           </Button>
         </div>
       </section>
-
       <MoreClients />
     </section>
   );
