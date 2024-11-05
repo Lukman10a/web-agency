@@ -1,7 +1,7 @@
-import React, { useRef, useEffect, useState } from 'react';
-import Image from 'next/image';
-import { useScroll, motion, MotionValue } from 'framer-motion';
-import { Badge } from './ui/badge';
+import React, { useRef, useEffect, useState } from "react";
+import Image from "next/image";
+import { useScroll, motion, MotionValue } from "framer-motion";
+import { Badge } from "./ui/badge";
 
 interface ValueData {
   title: string;
@@ -41,11 +41,10 @@ const valuesData: ValueData[] = [
   },
 ];
 
-
 const calculateTransform = (
-  scrollYProgress: MotionValue<number>, 
-  index: number, 
-  total: number
+  scrollYProgress: MotionValue<number>,
+  index: number,
+  total: number,
 ) => {
   const progress = scrollYProgress.get();
   const scale = progress < index / total ? 1 : 1;
@@ -55,25 +54,39 @@ const calculateTransform = (
 
 const OurValuesSection: React.FC = () => {
   const targetRef = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({ target: targetRef, offset: ["start start", "end end"] });
-  
-  const [transforms, setTransforms] = useState<{ scale: number; opacity: number }[]>(valuesData.map(() => ({ scale: 1, opacity: 1 })));
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start start", "end end"],
+  });
+
+  const [transforms, setTransforms] = useState<
+    { scale: number; opacity: number }[]
+  >(valuesData.map(() => ({ scale: 1, opacity: 1 })));
 
   useEffect(() => {
     const total = valuesData.length;
-    const newTransforms = valuesData.map((_, index) => calculateTransform(scrollYProgress, index, total));
+    const newTransforms = valuesData.map((_, index) =>
+      calculateTransform(scrollYProgress, index, total),
+    );
     setTransforms(newTransforms);
   }, [scrollYProgress]);
 
   return (
     <section ref={targetRef} className="relative bg-gray-100 py-10 font-sora">
       {/* Sticky Header */}
-      <motion.div className="sticky top-0 bg-gray-100 py-4 z-10 grid grid-cols-1 space-y-4 mx-auto">
-      <Badge variant="outline" className='mx-auto text-center'>Our Values</Badge>
-        <h2 className="text-center font-bold text-3xl text-gray-800">OUR VALUES</h2>
+      <motion.div className="sticky top-0 z-10 mx-auto grid grid-cols-1 space-y-4 bg-gray-100 py-4">
+        <Badge variant="outline" className="mx-auto text-center">
+          Our Values
+        </Badge>
+        <h2 className="text-center text-3xl font-bold text-gray-800">
+          OUR VALUES
+        </h2>
         <div className="flex flex-col items-center">
-          <p className="text-xl text-center text-[#808080] mx-auto md:w-full md:text-base">
-            Transforming businesses to become <span className="block md:inline">cloud-native and future-ready.</span>
+          <p className="mx-auto text-center text-xl text-[#808080] md:w-full md:text-base">
+            Transforming businesses to become{" "}
+            <span className="block md:inline">
+              cloud-native and future-ready.
+            </span>
           </p>
         </div>
       </motion.div>
@@ -91,10 +104,10 @@ const OurValuesSection: React.FC = () => {
                 opacity: opacity,
                 backgroundColor: value.backgroundColor,
               }}
-              className="flex gap-4 sticky top-24 w-3/4 mx-auto sm:flex-col md:flex-row rounded-2xl p-4 lg:p-6 space-y-4 md:space-y-0 md:space-x-4 transition-opacity duration-500 transform"
+              className="sticky top-24 mx-auto flex w-3/4 transform gap-4 space-y-4 rounded-2xl p-4 transition-opacity duration-500 lg:p-6 md:flex-row md:space-x-4 md:space-y-0 sm:flex-col"
             >
-              <div className="w-1/2 flex flex-col justify-center px-10 text-left">
-                <h3 className="text-3xl font-bold mb-2">{value.title}</h3>
+              <div className="flex w-1/2 flex-col justify-center px-10 text-left">
+                <h3 className="mb-2 text-3xl font-bold">{value.title}</h3>
                 <p className="text-lg text-gray-600">{value.description}</p>
               </div>
               <div className="h-[400px]">
@@ -103,7 +116,7 @@ const OurValuesSection: React.FC = () => {
                   width={300}
                   height={300}
                   alt={`${value.title} image`}
-                  className="w-full h-full p-10 rounded-4xl"
+                  className="rounded-4xl h-full w-full p-10"
                 />
               </div>
             </motion.div>
