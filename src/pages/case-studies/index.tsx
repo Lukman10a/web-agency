@@ -96,7 +96,7 @@ const CaseStudies = () => {
             <h1 className="mb-[.3em] animate-fade-in-up font-sora text-6xl font-extrabold xl:text-5xl md:text-4xl">
               Been there, done that
             </h1>
-            <p className="mb-[1.5em] w-[85%] animate-fade-in-up font-sans text-[#808080] delay-200 md:w-full md:text-[14px]">
+            <p className="mb-[1.5em] w-[85%] animate-fade-in-up font-sans text-xl text-[#808080] delay-200 md:w-full">
               We make sure you receive a tailor-made & cost <br /> efficient
               cloud environment that is secure, scalable, easy to operate, and
               built-to-last.

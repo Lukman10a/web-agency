@@ -37,7 +37,7 @@ const AboutUs = () => {
             <span className="block md:inline-block">Behind the </span>{" "}
             <span className="block md:inline-block">clouds</span>
           </h1>
-          <p className="animate-fade-in-up font-mono text-xl delay-200">
+          <p className="animate-fade-in-up text-xl delay-200">
             We make sure you receive a tailor-made & cost-efficient cloud
             environment that is secure, scalable, easy to operate, and
             built-to-last

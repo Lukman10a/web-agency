@@ -57,8 +57,8 @@ const testimonials: Testimonial[] = [
 
 const Testimonials: React.FC = () => {
   return (
-    <section className="bg-gradient-to-r from-gradient-100 to-gradient-200 py-16">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8 sm:px-6">
+    <section className="mx-auto max-w-7xl rounded-lg bg-gradient-to-r from-gradient-100 to-gradient-200 px-10 py-16 xl:mx-8 lg:px-8 sm:px-6">
+      <div className="">
         {/* Section Header */}
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
