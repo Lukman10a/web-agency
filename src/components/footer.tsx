@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-3 gap-2 lg:grid-cols-2">
             {/* Contact Us Section */}
             <div>
-              <h4 className="text-lg font-semibold">Contact us</h4>
+              <h4 className="font-sora text-lg font-semibold">Contact us</h4>
               <p className="mt-2 text-sm text-neutral-400">
                 contact@teversemulti
               </p>
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
 
             {/* Our Services Section */}
             <div>
-              <h4 className="text-lg font-semibold">Our Services</h4>
+              <h4 className="font-sora text-lg font-semibold">Our Services</h4>
               <ul className="mt-2 space-y-2 text-neutral-400">
                 <li>
                   <Link href="/solution/?section=migration#cloud-journey">
@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
 
             {/* Other Section */}
             <div>
-              <h4 className="text-lg font-semibold">Other</h4>
+              <h4 className="font-sora text-lg font-semibold">Other</h4>
               <ul className="mt-2 space-y-2 text-neutral-400">
                 <li>Privacy Policies</li>
                 <li>Change Consents</li>

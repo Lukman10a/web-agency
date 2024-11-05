@@ -3,10 +3,10 @@ import React from "react";
 import efficiency from "../../public/svg/efficiency.svg";
 import security from "../../public/svg/security.svg";
 import expert from "../../public/svg/expert.svg";
-import securityImg from "../../public/assets/securityImg.png";
+import improvedsecurity from "../../public/assets/improvedsecurity.png";
 import ArrowIcon from "./icons/arrow";
 import { Button } from "./ui/button";
-import { PartnersSlider } from "./shared/partners-slider";
+import MoreClients from "./more-clients";
 
 const benefits = [
   {
@@ -34,23 +34,29 @@ export default function WhyChooseUs() {
     <section className="py-10">
       {/* Section: Why Choose Us */}
 
-      <h2 className="text-5xl md:text-3xl text-center font-bold font-sora">
-        <span className="block">Why Choose Us? Key</span>
-        <span className="block">Benefits for Your Business</span>
-      </h2>
+      <h1 className="mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold leading-tight lg:text-[2rem] md:text-[1.6rem]">
+        Why <span className="text-orange-650">Choose</span> Us? <br /> Key
+        Benefits for Your Business
+      </h1>
 
       {/* Benefits Section */}
       <section
-        className="sm:px-6 lg:px-8 flex lg:flex-col gap-10 p-16"
+        className="mx-auto mb-24 flex w-[90%] max-w-[1200px] gap-12 p-4 xl:gap-6 lg:flex-col sm:mb-12"
         aria-labelledby="benefits-heading"
       >
         {benefits.map((benefit, index) => (
           <article
             key={index}
-            className="mx-4 flex flex-col items-center space-y-4 text-center"
+            className="rounde mx-auto flex max-w-[400px] flex-col items-center space-y-4 rounded-2xl border p-8 text-center"
           >
-            <Image src={benefit.img} alt={benefit.title} />
-            <h3 className="font-semibold text-2xl">{benefit.title}</h3>
+            <Image
+              src={benefit.img}
+              alt={benefit.title}
+              className="rounded-full border p-2"
+            />
+            <h3 className="text-2xl font-semibold sm:text-xl">
+              {benefit.title}
+            </h3>
             <p className="text-[#808080]">{benefit.description}</p>
           </article>
         ))}
@@ -58,48 +64,37 @@ export default function WhyChooseUs() {
 
       {/* Case Study Section */}
       <section
-        className="lg:flex-col flex items-center m-10 rounded-lg gap-10 p-4 bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] lg:py-10"
+        className="m-10 mx-auto flex w-11/12 max-w-7xl items-center gap-10 rounded-2xl bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] px-28 py-8 xl:px-16 lg:gap-6 lg:px-8 lg:py-4 md:flex-col md:py-8 sm:p-6"
         aria-labelledby="case-study-heading"
       >
-        <div className="flex-1">
-          <Image src={securityImg} alt="Security Image" className="w-[550px]" />
+        <div className="w-1/2 flex-1 md:w-full">
+          <Image
+            src={improvedsecurity}
+            alt="Security Image"
+            className="w-full"
+          />
         </div>
 
-        <div className="space-y-8 flex-1 flex flex-col lg:text-center lg:items-center">
+        <div className="flex w-1/2 flex-1 flex-col md:w-full md:text-center">
           <h3
             id="case-study-heading"
-            className="text-4xl md:text-2xl font-semibold"
+            className="mb-[.7em] w-[95%] font-sora text-3xl font-semibold xl:text-2xl lg:text-[20px] lg:leading-tight md:w-full"
           >
             Improved Security Posture for a Financial Firm with a Custom
             Security Architecture
           </h3>
-          <p>
+          <p className="mb-[1.5em] w-full">
             We improved a financial firm&apos;s security by implementing a
             custom architecture with advanced threat detection and strict access
             controls, reducing incidents and boosting compliance.
           </p>
-          <Button className="border  border-[#081348] flex gap-4 items-center bg-orange-650 w-fit rounded-2xl text-white ">
+          <Button className="flex w-fit items-center gap-4 rounded-3xl border border-[#081348] bg-orange-650 font-sans text-white xl:text-[12px] md:w-full sm:mb-4">
             <span>Discover Solutions</span>
             <ArrowIcon />
           </Button>
         </div>
       </section>
-
-      {/* Leading Brands Section */}
-      <section
-        className="py-6 pt-12 space-y-6 text-center"
-        aria-labelledby="brands-heading"
-      >
-        <h2
-          id="brands-heading"
-          className="text-5xl capitalize md:text-3xl font-medium mb-4 font-sora"
-        >
-          Leading Brands Trust Us
-        </h2>
-        <div className="my-7 max-w-7xl mx-auto overflow-hidden">
-          <PartnersSlider />
-        </div>
-      </section>
+      <MoreClients />
     </section>
   );
 }

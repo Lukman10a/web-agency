@@ -16,7 +16,24 @@ export function PartnersSlider() {
             alt={`Brand ${index}`}
             className="w-36"
           />
-        )
+        ),
+      )}
+    </Marquee>
+  );
+}
+
+export function PartnersSliderReverse() {
+  return (
+    <Marquee className="overflow-hidden" applyMask pauseOnHover reverse>
+      {[lightbox, featherdev, globalbank, boltshift, globalbank].map(
+        (brand, index) => (
+          <Image
+            key={index}
+            src={brand}
+            alt={`Brand ${index}`}
+            className="w-36"
+          />
+        ),
       )}
     </Marquee>
   );

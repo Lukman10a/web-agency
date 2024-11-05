@@ -1,6 +1,10 @@
 import Image from "next/image";
 import React, { Fragment } from "react";
+import Link from "next/link";
+
 import solutionHero from "../../public/assets/cloud-provider.gif";
+import image from "../../public/assets/cardimage1.png";
+
 import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/components/icons/arrow";
 import { StickyScrollRevealDemo } from "@/components/shared/solutions-list-scroll";
@@ -8,10 +12,8 @@ import CloudPlatformSection from "@/components/page-two";
 import LARABuildingBlocks from "@/components/building-blocks";
 import ContactSection from "@/components/lets-talk";
 import Booking from "@/components/booking";
-import Link from "next/link";
-import { AWSCertifications } from "@/components/certifications";
 import CloudJourney from "@/components/cloud-journey";
-import image from "../../public/assets/cardimage1.png";
+import SecurityCertifications from "@/components/certifications";
 
 export default function Solution() {
   return (
@@ -22,7 +24,7 @@ export default function Solution() {
             <span className="block">Migrate, Optimize,</span>
             <span className="block">Kickstart</span>
           </h1>
-          <p className="animate-fade-in-up font-mono text-xl delay-200">
+          <p className="animate-fade-in-up text-xl delay-200">
             We make sure you receive a tailor-made & cost-efficient cloud
             environment that is secure, scalable, easy to operate, and
             built-to-last
@@ -52,7 +54,7 @@ export default function Solution() {
       <StickyScrollRevealDemo />
       <Booking />
       {/* Certification Section */}
-      <AWSCertifications />
+      <SecurityCertifications />
       {/* Cloud Journey */}
       <CloudJourney />
       {/* LARA Card */}

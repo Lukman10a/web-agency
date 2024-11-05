@@ -23,7 +23,7 @@ const valuesData: ValueData[] = [
     description:
       "Our engineers are dedicated to adapting and improving their skills to deliver optimal solutions.",
     image: "/assets/cardimage2.png",
-    backgroundColor: "#FFDECB", 
+    backgroundColor: "#FFDECB",
   },
   {
     title: "Innovation First",
