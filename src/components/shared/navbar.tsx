@@ -25,6 +25,7 @@ export interface NavItem {
 }
 
 const navItems: NavItem[] = [
+  { title: "Software", href: "/software" },
   { title: "Solution", href: "/solution" },
   { title: "About Us", href: "/about-us" },
   { title: "Case Studies", href: "/case-studies" },
