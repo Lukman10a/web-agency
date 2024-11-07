@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const SuccessStory = () => {
   return (
-    <section className="mx-auto mb-8 w-[90%] max-w-[1400px] rounded-[36px] bg-[#FFF4EE80] lg:rounded-3xl">
+    <section className="mx-auto mb-24 w-[90%] max-w-[1400px] rounded-[36px] bg-[#FFF4EE80] lg:rounded-3xl">
       <div className="mx-auto w-[90%] py-24 lg:py-12">
         <h3 className="mb-6 text-center text-4xl font-semibold md:text-3xl">
           Success Stories
@@ -17,7 +17,7 @@ const SuccessStory = () => {
         </div>
         <Button
           asChild
-          className="bottom-10 mx-auto flex w-fit items-center justify-center rounded-full bg-orange-600 px-[3.5em] py-[1em] font-normal text-white hover:bg-gray-700"
+          className="bottom-10 mx-auto flex w-fit items-center justify-center rounded-full bg-orange-600 px-[3.5em] py-[1em] font-normal text-white hover:bg-darkblue-950"
         >
           <Link href="#">Read more</Link>
         </Button>
