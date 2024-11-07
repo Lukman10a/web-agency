@@ -1,3 +1,6 @@
+import HelpSection from "@/components/need-help";
+import NewsletterSection from "@/components/software-newsletter";
+import SolutionsSection from "@/components/solution-section";
 import React from "react";
 import WhyTeverse from "@/components/why-teverse";
 import Score from "@/components/score";
@@ -7,11 +10,14 @@ import Resources from "@/components/resources";
 
 export default function Software() {
   return (
-    <div>
+    <main>
+      <SolutionsSection />
+      <HelpSection />
+      <NewsletterSection />
       <WhyTeverse />
       <Score />
       <SuccessStory />
       <Resources />
-    </div>
+      </main>
   );
 }
