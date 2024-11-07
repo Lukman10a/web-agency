@@ -29,7 +29,7 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
           height={500}
         />
         <div className="w-full border border-black bg-white py-8 lg:py-6">
-          <div className="mx-auto w-[80%]">
+          <div className="mx-auto w-[85%]">
             <p className="mb-4 text-2xl lg:text-[22px]">{title}</p>
             <p className="mb-4 text-xl lg:text-[18px]">Published on {date}</p>
             <div className="mb-4 flex flex-wrap gap-2">
