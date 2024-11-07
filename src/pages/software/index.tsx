@@ -13,11 +13,11 @@ export default function Software() {
     <main>
       <SolutionsSection />
       <HelpSection />
-      <NewsletterSection />
       <WhyTeverse />
       <Score />
       <SuccessStory />
       <Resources />
-      </main>
+      <NewsletterSection />
+    </main>
   );
 }

@@ -33,7 +33,7 @@ const WhyTeverse: React.FC = () => {
           Why Terverse
         </h2>
         <p className="mb-10 w-[60%] text-lg text-[#8F8F8F] xl:w-[80%] 2md:w-full 2md:text-center 2md:text-base md:w-full">
-          Whether you're scaling your model for production or starting from
+          Whether you&apos;re scaling your model for production or starting from
           scratch, we meet you where you are on your journey and help you get
           your solution launched. Learn more about our generative AI solutions.
         </p>
