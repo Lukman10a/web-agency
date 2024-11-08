@@ -38,3 +38,36 @@ export function PartnersSliderReverse() {
     </Marquee>
   );
 }
+
+// import Image, { StaticImageData } from "next/image";
+// import Marquee from "../ui/animated/marquee";
+
+// interface PartnersSliderProps {
+//   images: StaticImageData[];
+//   reverse?: boolean;
+//   className?: string;
+// }
+
+// export function PartnersSlider({
+//   images,
+//   reverse = false,
+//   className = "",
+// }: PartnersSliderProps) {
+//   return (
+//     <Marquee
+//       className={`overflow-hidden ${className}`}
+//       applyMask
+//       pauseOnHover
+//       reverse={reverse}
+//     >
+//       {images.map((image, index) => (
+//         <Image
+//           key={index}
+//           src={image}
+//           alt={`Brand ${index}`}
+//           className="w-36"
+//         />
+//       ))}
+//     </Marquee>
+//   );
+// }

@@ -3,7 +3,7 @@ import React from "react";
 
 export default function SoftwareHero() {
   return (
-    <div
+    <section
       className="m-2 grid grid-cols-2 place-items-center rounded-3xl p-20 md:gap-10 md:p-6 sm:grid-cols-1 sm:gap-8 sm:p-4"
       style={{
         background:
@@ -32,6 +32,6 @@ export default function SoftwareHero() {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
