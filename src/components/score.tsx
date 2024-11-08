@@ -22,8 +22,8 @@ const Score = () => {
   return (
     <section>
       <div className="mx-auto flex w-[90%] max-w-[1500px] justify-center gap-6 py-16 2md:flex-col">
-        {cardData.map((data) => (
-          <ScoreCard title={data.title} icon={data.icon} />
+        {cardData.map((data, index) => (
+          <ScoreCard title={data.title} icon={data.icon} key={index} />
         ))}
       </div>
     </section>
