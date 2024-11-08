@@ -16,7 +16,6 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
   image,
   date,
   category,
-  buttonLink,
 }) => {
   return (
     <div className="w-full">
@@ -33,9 +32,12 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
             <p className="mb-4 text-2xl lg:text-[22px]">{title}</p>
             <p className="mb-4 text-xl lg:text-[18px]">Published on {date}</p>
             <div className="mb-4 flex flex-wrap gap-2">
-              {category.map((category, index) => (
-                <span className="rounded-3xl border border-black px-6 py-1 text-xs">
-                  {category}
+              {category.map((cat, idx) => (
+                <span
+                  className="rounded-3xl border border-black px-6 py-1 text-xs"
+                  key={idx.toString()}
+                >
+                  {cat}
                 </span>
               ))}
             </div>

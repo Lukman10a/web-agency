@@ -40,8 +40,9 @@ const Resources = () => {
         <Link href="#">All Resources</Link>
       </Button>
       <div className="flex w-full gap-2 2md:flex-col">
-        {cardData.map((card) => (
+        {cardData.map((card, index) => (
           <ResourceCard
+            key={index}
             title={card.title}
             date={card.date}
             category={card.category}
