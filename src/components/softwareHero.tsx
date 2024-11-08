@@ -4,7 +4,7 @@ import React from "react";
 export default function SoftwareHero() {
   return (
     <div
-      className="m-2 grid grid-cols-2 place-items-center rounded-3xl p-20 md:gap-12 md:p-10 sm:grid-cols-1 sm:gap-8 sm:p-4"
+      className="m-2 grid grid-cols-2 place-items-center rounded-3xl p-20 md:gap-10 md:p-6 sm:grid-cols-1 sm:gap-8 sm:p-4"
       style={{
         background:
           "linear-gradient(61.83deg, rgba(80, 206, 245, 0.2) 32.56%, rgba(255, 149, 87, 0.2) 100%)",
@@ -18,15 +18,19 @@ export default function SoftwareHero() {
         className="rounded-2xl bg-white"
       />
       <div className="space-y-6 self-center">
-        <p className="rounded-3xl border-2 border-[#808080] p-2 px-3 text-[#808080] md:text-sm sm:text-xs">
-          AWS PREMIER SERVICES & SOFTWARE PARTNER
-        </p>
-        <h2 className="text-6xl font-semibold text-[#262626] lg:text-5xl md:text-4xl sm:text-3xl">
+        <div className="flex sm:justify-center">
+          <p className="inline-block rounded-3xl border-2 border-[#808080] p-2 px-3 text-[#808080] md:text-sm sm:text-xs">
+            AWS PREMIER SERVICES & SOFTWARE PARTNER
+          </p>
+        </div>
+        <h2 className="text-6xl font-semibold text-[#262626] lg:text-5xl md:text-4xl sm:text-center sm:text-3xl">
           AWS Cloud & AI Workloads, Built Securely
         </h2>
-        <button className="rounded-full bg-[#FF9557] p-2 px-6 text-white">
-          See our Solutions
-        </button>
+        <div className="flex sm:justify-center">
+          <button className="rounded-full bg-[#FF9557] p-2 px-6 text-white">
+            See our Solutions
+          </button>
+        </div>
       </div>
     </div>
   );
