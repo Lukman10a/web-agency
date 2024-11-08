@@ -13,7 +13,6 @@ export default function Software() {
   return (
     <main>
       <SoftwareHero />
-      {/* <PartnersSlider images={images} /> */}
       <PartnersSlider />
       <SolutionsSection />
       <HelpSection />
