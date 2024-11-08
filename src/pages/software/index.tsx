@@ -7,10 +7,12 @@ import Score from "@/components/score";
 import SuccessStory from "@/components/success-story";
 
 import Resources from "@/components/resources";
+import SoftwareHero from "@/components/softwareHero";
 
 export default function Software() {
   return (
     <main>
+      <SoftwareHero />
       <SolutionsSection />
       <HelpSection />
       <WhyTeverse />
