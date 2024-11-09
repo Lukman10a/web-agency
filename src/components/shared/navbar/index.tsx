@@ -28,17 +28,17 @@ export interface NavItem {
 const navItems: NavItem[] = [
   {
     title: "Software",
-    href: "/software",
+    // href: "/software",
     items: [
       {
-        title: "Terverse Control",
-        href: "/software/terverse-control",
+        title: "Teverse Control",
+        href: "/software/teverse-control",
         label:
           "Cloud services platform providing visibility, guidance & support for your cloud",
       },
       {
-        title: "Terverse Gateway",
-        href: "/software/terverse-control",
+        title: "Teverse Gateway",
+        href: "/software/teverse-control",
         label:
           "AWS guidance for efficient cloud growth and foundational best practices",
       },
