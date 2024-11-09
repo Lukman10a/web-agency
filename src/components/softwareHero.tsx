@@ -24,7 +24,7 @@ export default function SoftwareHero() {
           </p>
         </div>
         <h2 className="text-6xl font-semibold text-[#262626] lg:text-5xl md:text-4xl sm:text-center sm:text-3xl">
-          AWS Cloud & AI Workloads, Built Securely
+          AWS Cloud & AI Workloads, Built Securely.
         </h2>
         <div className="flex sm:justify-center">
           <button className="rounded-full bg-[#FF9557] p-2 px-6 text-white">
