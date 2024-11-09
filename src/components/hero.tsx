@@ -61,7 +61,7 @@ const Hero = () => {
           </div>
         </>
       </header>
-      <div className="mx-auto my-7 max-w-7xl overflow-hidden">
+      <div className="my-7 max-w-7xl overflow-hidden">
         <PartnersSlider />
       </div>
     </Fragment>

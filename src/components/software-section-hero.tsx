@@ -4,7 +4,7 @@ import React from "react";
 export default function SoftwareHero() {
   return (
     <section
-      className="m-2 grid grid-cols-2 place-items-center rounded-3xl p-20 md:gap-10 md:p-6 sm:grid-cols-1 sm:gap-8 sm:p-4"
+      className="grid grid-cols-2 place-items-center p-20 md:gap-10 md:p-6 sm:grid-cols-1 sm:gap-8 sm:p-4"
       style={{
         background:
           "linear-gradient(61.83deg, rgba(80, 206, 245, 0.2) 32.56%, rgba(255, 149, 87, 0.2) 100%)",

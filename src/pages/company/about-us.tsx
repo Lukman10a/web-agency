@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
-import ArrowIcon from "@/components/icons/arrow";
-import animatedCloud from "../../public/assets/animated-cloud.gif";
 import Image from "next/image";
 
+import animatedCloud from "/public/assets/animated-cloud.gif";
 import { Button } from "@/components/ui/button";
+import ArrowIcon from "@/components/icons/arrow";
 import Mission from "@/components/our-mission";
 import ImagesReveal from "@/components/ui/animated/image-reveal";
 // import OurValues from "@/components/shared/our-values";
