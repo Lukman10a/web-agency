@@ -90,8 +90,9 @@ export default config({
     // Projects Case Studies Collection
     caseStudies: collection({
       label: "Case Studies",
-      path: "content/case-studies/*",
+      path: "public/content/case-studies/*",
       slugField: "title",
+      format: { contentField: "content" },
       schema: {
         title: fields.slug({
           name: { label: "Title", validation: { isRequired: true } },
@@ -111,6 +112,7 @@ export default config({
         }),
         featuredImage: fields.image({
           label: "Featured Image",
+          publicPath: "/content/case-studies/",
           validation: { isRequired: false },
         }),
         content: fields.markdoc({
