@@ -61,7 +61,7 @@ export function MobileNav({
           <span className="text-2xl font-bold text-orange-650">{siteName}</span>
         </MobileLink>
         <ScrollArea className="my-4 h-[calc(100vh-8rem)] pb-10 pr-3">
-          <Accordion type="multiple" className="w-full">
+          <Accordion type="single" className="w-full">
             {navItems.map((item, index) => (
               <AccordionItem value={`item-${index}`} key={index}>
                 <AccordionTrigger
