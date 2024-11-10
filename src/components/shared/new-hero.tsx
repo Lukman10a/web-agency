@@ -8,7 +8,7 @@ type NewHeroProps = {
 
 const NewHero: React.FC<NewHeroProps> = ({ reverse = false }) => {
   return (
-    <section className="mx-auto mb-8 w-[90%] max-w-[1400px] rounded-3xl bg-gradient-to-r from-[rgba(80,206,245,0.2)] to-[rgba(255,149,87,0.2)] px-16 py-24 xl:w-full xl:rounded-t-none lg:p-12 lg:py-16 2md:w-full md:px-0">
+    <section className="mx-auto mb-32 w-[90%] max-w-[1400px] rounded-3xl bg-gradient-to-r from-[rgba(80,206,245,0.2)] to-[rgba(255,149,87,0.2)] px-16 py-24 xl:w-full xl:rounded-t-none lg:p-12 lg:py-16 2md:w-full md:mb-16 md:px-0">
       <div
         className={`mx-auto flex w-[95%] max-w-[1000px] gap-12 2md:gap-8 md:w-[85%] md:flex-col md:gap-6 ${
           reverse ? "flex-row-reverse" : "flex-row"

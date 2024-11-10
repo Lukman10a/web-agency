@@ -8,6 +8,7 @@ import PartnershipSection from "@/components/partnerships";
 
 export default function Home() {
   return (
+    // <main className="mx-auto flex flex-col">
     <main className="flex flex-col gap-8">
       <Hero />
       <BusinessOffer />

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const WhatIsTeverse = () => {
   return (
-    <section className="mx-auto mb-16 flex w-[90%] max-w-[1200px] gap-10 lg:gap-2 md:w-[85%] md:flex-col-reverse md:gap-4">
+    <section className="mx-auto mb-32 flex w-[90%] max-w-[1200px] gap-10 lg:gap-2 md:mb-16 md:w-[85%] md:flex-col-reverse md:gap-4">
       <div className="mx-auto flex h-[600px] w-1/2 gap-6 lg:gap-4 md:h-[100vw] md:w-[85%] sm:w-[100%]">
         <div className="h-[85%] w-1/2 self-end">
           <div className="h-full w-full rounded-xl bg-[#E4E4E4]"></div>
