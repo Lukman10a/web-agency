@@ -92,7 +92,7 @@ const OurValuesSection: React.FC = () => {
       </motion.div>
 
       {/* Cards Section */}
-      <div className="space-y-8">
+      <div className="space-y-8 sm:p-4">
         {valuesData.map((value, index) => {
           const { scale, opacity } = transforms[index];
 
@@ -104,19 +104,19 @@ const OurValuesSection: React.FC = () => {
                 opacity: opacity,
                 backgroundColor: value.backgroundColor,
               }}
-              className="sticky top-24 mx-auto flex w-3/4 transform gap-4 space-y-4 rounded-2xl p-4 transition-opacity duration-500 lg:p-6 md:flex-row md:space-x-4 md:space-y-0 sm:flex-col"
+              className="sticky top-24 mx-auto flex sm:w-full w-3/4 transform gap-4 space-y-4 rounded-2xl p-4 transition-opacity duration-500 lg:p-6 md:flex-row md:space-x-4 md:space-y-0 sm:flex-col"
             >
-              <div className="flex w-1/2 flex-col justify-center px-10 text-left">
-                <h3 className="mb-2 text-3xl font-bold">{value.title}</h3>
-                <p className="text-lg text-gray-600">{value.description}</p>
+              <div className="flex sm:w-full w-1/2 flex-col justify-center px-10 sm:px-4 text-left">
+                <h3 className="mb-2 sm:text-lg text-3xl font-bold">{value.title}</h3>
+                <p className="text-lg sm:text-sm text-gray-600">{value.description}</p>
               </div>
-              <div className="h-[400px]">
+              <div className="h-[400px] sm:h-[10rem]">
                 <Image
                   src={value.image}
                   width={300}
                   height={300}
                   alt={`${value.title} image`}
-                  className="rounded-4xl h-full w-full p-10"
+                  className="rounded-4xl h-full w-full p-10 sm:p-0"
                 />
               </div>
             </motion.div>
