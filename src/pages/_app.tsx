@@ -9,7 +9,8 @@ import Head from "next/head";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div
-      className={`${sora.variable} ${notoSans.variable} ${notoSansMono.variable} flex flex-col min-h-screen bg-white font-sans`}>
+      className={`${sora.variable} ${notoSans.variable} ${notoSansMono.variable} flex min-h-screen flex-col bg-white font-sans`}
+    >
       <Head>
         <title>Teverse</title>
       </Head>
