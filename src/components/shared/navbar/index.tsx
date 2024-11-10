@@ -28,7 +28,7 @@ export interface NavItem {
 const navItems: NavItem[] = [
   {
     title: "Software",
-    href: "/software",
+    // href: "/software",
     items: [
       {
         title: "Teverse Control",
@@ -62,7 +62,7 @@ const navItems: NavItem[] = [
   },
   {
     title: "Industries",
-    href: "/industry",
+    // href: "/industry",
     label: "Explore the industries we serve with tailored cloud solutions",
     items: [
       {
@@ -116,7 +116,7 @@ const navItems: NavItem[] = [
   },
   {
     title: "Company",
-    href: "/company",
+    // href: "/company",
     label: "Learn more about our mission, team, and opportunities",
     items: [
       {

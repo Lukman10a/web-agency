@@ -10,7 +10,7 @@ const TeverseControlHero: React.FC = () => {
             "linear-gradient(to top right, rgba(80, 206, 245, 0.2), rgba(255, 149, 87, 0.2))",
         }}
       >
-        <div className="relative z-10 h-screen space-y-4 pt-7 sm:h-80">
+        <div className="relative h-screen space-y-4 pt-7 sm:h-80">
           <p className="mb-4 inline-block rounded-full bg-transparent px-3 py-1 text-xs tracking-wide text-[#808080] ring-1 ring-[#808080]">
             AWS PREMIER SERVICES & SOFTWARE PARTNER
           </p>
