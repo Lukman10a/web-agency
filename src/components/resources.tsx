@@ -29,7 +29,7 @@ const Resources = () => {
     },
   ];
   return (
-    <section className="mx-auto mb-16 w-full max-w-[1200px]">
+    <section className="mx-auto mb-16 w-[90%] max-w-[1200px]">
       <h2 className="mb-[.7em] text-5xl 2md:text-center md:text-4xl">
         Stay Ahead of the Curve
       </h2>

@@ -53,39 +53,39 @@ interface PostDetailsProps {
   headings: Heading[];
 }
 
+const similarPosts = [
+  {
+    id: 1,
+    image: postImage,
+    date: "20/JAN/2025",
+    title:
+      "Launching BAMAN: Raiffeisen bank's strategic Move to Cloud Application",
+    categories: ["KICKSTART", "MIGRATION", "LARA"],
+  },
+  {
+    id: 2,
+    image: postImage,
+    date: "20/JAN/2025",
+    title:
+      "Launching BAMAN: Raiffeisen bank's strategic Move to Cloud Application",
+    categories: ["MIGRATION", "SERVERLESS"],
+  },
+  {
+    id: 3,
+    image: postImage,
+    date: "20/JAN/2025",
+    title:
+      "Launching BAMAN: Raiffeisen bank's strategic Move to Cloud Application",
+    categories: ["LARA", "MIGRATION", "KICKSTART"],
+  },
+];
+
 // Component
 const PostDetails: React.FC<PostDetailsProps> = ({
   post,
   content,
   headings,
 }) => {
-  const similarPosts = [
-    {
-      id: 1,
-      image: postImage,
-      date: "20/JAN/2025",
-      title:
-        "Launching BAMAN: Raiffeisen bank's strategic Move to Cloud Application",
-      categories: ["KICKSTART", "MIGRATION", "LARA"],
-    },
-    {
-      id: 2,
-      image: postImage,
-      date: "20/JAN/2025",
-      title:
-        "Launching BAMAN: Raiffeisen bank's strategic Move to Cloud Application",
-      categories: ["MIGRATION", "SERVERLESS"],
-    },
-    {
-      id: 3,
-      image: postImage,
-      date: "20/JAN/2025",
-      title:
-        "Launching BAMAN: Raiffeisen bank's strategic Move to Cloud Application",
-      categories: ["LARA", "MIGRATION", "KICKSTART"],
-    },
-  ];
-
   return (
     <section>
       <div className="w-full">

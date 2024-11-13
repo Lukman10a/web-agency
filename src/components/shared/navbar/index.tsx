@@ -38,38 +38,114 @@ const navItems: NavItem[] = [
       },
       {
         title: "Teverse Gateway",
-        href: "/software/teverse-control",
+        href: "/software/teverse-gateway",
         label:
           "AWS guidance for efficient cloud growth and foundational best practices",
       },
+      {
+        title: "Teverse Cloud Score",
+        href: "/software/cloud-score",
+        label:
+          "Proprietary scoring of your cloud architecture against AWS best practices",
+      },
+      {
+        title: "Teverse Cloud Secure",
+        href: "/software/cloud-secure",
+        label: "Fully managed security, detection, and response",
+      },
     ],
   },
-  { title: "Solution", href: "/solution" },
+  {
+    title: "Solution",
+    href: "/solution",
+    label: "Explore our cloud solutions and services for your business needs",
+  },
+  {
+    title: "Industries",
+    // href: "/industry",
+    label: "Explore the industries we serve with tailored cloud solutions",
+    items: [
+      {
+        title: "Healthcare",
+        href: "/industry/healthcare",
+        label:
+          "Learn how we support healthcare organizations with cloud solutions",
+      },
+      {
+        title: "Life Sciences",
+        href: "/industry/life-sciences",
+        label: "Discover our cloud services tailored for life sciences",
+      },
+      {
+        title: "Retail",
+        href: "/industry/retail",
+        label: "See how we help retail businesses thrive in the cloud",
+      },
+      {
+        title: "Software",
+        href: "/industry/software",
+        label: "Optimize software development with our cloud expertise",
+      },
+      {
+        title: "Finance",
+        href: "/industry/finance",
+        label: "Explore cloud solutions designed for the finance sector",
+      },
+      {
+        title: "Media",
+        href: "/industry/media",
+        label: "Empower media companies with robust cloud capabilities",
+      },
+    ],
+  },
+  {
+    title: "Resources",
+    label: "Access our case studies, blog, and more resources",
+    items: [
+      {
+        title: "Case Studies",
+        href: "/case-studies",
+        label: "Explore real-world examples of our solutions in action",
+      },
+      {
+        title: "Blog",
+        href: "/blog",
+        label: "Read insights, tips, and industry news on our blog",
+      },
+    ],
+  },
   {
     title: "Company",
-    href: "/about-us",
+    // href: "/company",
+    label: "Learn more about our mission, team, and opportunities",
     items: [
       {
         title: "About Us",
         href: "/company/about-us",
+        label: "Discover our company's mission, vision, and values",
       },
       {
         title: "Careers",
         href: "/company/careers",
+        label: "Explore career opportunities with our team",
       },
       {
         title: "Press & News",
         href: "/company/press",
+        label: "Stay up-to-date with our latest news and media coverage",
       },
       {
         title: "FAQ",
         href: "/company/faq",
+        label: "Get answers to frequently asked questions",
       },
     ],
   },
-  { title: "Case Studies", href: "/case-studies" },
-  { title: "AWS", href: "/aws" },
-  { title: "Blog", href: "/blog" },
+  {
+    title: "AWS",
+    href: "/aws",
+    label: "Discover our AWS services and support offerings",
+  },
 ];
 
 const Navbar = () => {
@@ -117,7 +193,14 @@ const Navbar = () => {
                 <NavigationMenuItem key={item.title}>
                   {item.items ? (
                     <>
-                      <NavigationMenuTrigger>
+                      <NavigationMenuTrigger
+                        className={cn(
+                          "font-mono",
+                          isActive(item?.href as string)
+                            ? "rounded-none border-b-2 border-orange-600 font-bold"
+                            : "text-gray-700",
+                        )}
+                      >
                         {item.title}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>

@@ -40,7 +40,7 @@ const AboutUs = () => {
           <p className="animate-fade-in-up text-xl delay-200">
             We make sure you receive a tailor-made & cost-efficient cloud
             environment that is secure, scalable, easy to operate, and
-            built-to-last
+            built-to-last.
           </p>
           <Button className="flex w-fit transform items-center gap-4 rounded-2xl border border-[#081348] bg-orange-650 text-white transition duration-500 hover:scale-105 hover:bg-orange-600">
             <span>EXPLORE</span>
