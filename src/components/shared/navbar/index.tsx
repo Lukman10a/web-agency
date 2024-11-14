@@ -62,6 +62,11 @@ const navItems: NavItem[] = [
     ],
   },
   {
+    title: "Services",
+    href: "/services",
+    label: "",
+  },
+  {
     title: "Solution",
     href: "/solution",
     label: "Explore our cloud solutions and services for your business needs",
