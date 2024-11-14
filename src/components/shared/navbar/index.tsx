@@ -43,6 +43,12 @@ const navItems: NavItem[] = [
           "AWS guidance for efficient cloud growth and foundational best practices",
       },
       {
+        title: "Teverse Engagements",
+        href: "/software/cloud-engagements",
+        label:
+          "Get transparent reporting and live updates on your team’s status",
+      },
+      {
         title: "Teverse Cloud Score",
         href: "/software/cloud-score",
         label:
