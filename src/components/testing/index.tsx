@@ -1,6 +1,8 @@
 import { useRef } from "react";
+
 import { motion, useScroll } from "framer-motion";
 import { Code2, Palette, Rocket, Shield } from "lucide-react";
+
 import { ServiceCard } from "./card";
 
 const services = [

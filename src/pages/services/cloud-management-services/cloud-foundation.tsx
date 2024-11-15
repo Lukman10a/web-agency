@@ -1,17 +1,19 @@
+import React from "react";
+
+import clock from "/public/svg/awsBuild.svg";
+import finOps from "/public/svg/finOps.svg";
+import headphone from "/public/svg/headphone.svg";
+import industry from "/public/svg/industry.svg";
+import infraOps from "/public/svg/infraOps.svg";
+import palm from "/public/svg/palm.svg";
+
 import AwsBuild from "@/components/aws-build";
+import Preverity from "@/components/preverity";
+import Resources from "@/components/resources";
+import FAQSection from "@/components/shared/FAQ";
 import NewHero from "@/components/shared/new-hero";
 import ServicesCard from "@/components/shared/services-card";
-import React from "react";
-import clock from "/public/svg/awsBuild.svg";
-import headphone from "/public/svg/headphone.svg";
-import palm from "/public/svg/palm.svg";
-import finOps from "/public/svg/finOps.svg";
-import infraOps from "/public/svg/infraOps.svg";
-import industry from "/public/svg/industry.svg";
 import VegaCard from "@/components/vega-card";
-import Preverity from "@/components/preverity";
-import FAQSection from "@/components/shared/FAQ";
-import Resources from "@/components/resources";
 
 const cardData = [
   {

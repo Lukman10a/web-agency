@@ -1,7 +1,9 @@
+import { useEffect, useState } from "react";
+
+import { StaticImageData } from "next/image";
+
 import { cn } from "@/lib/utils";
 
-import { useState, useEffect } from "react";
-import { StaticImageData } from "next/image";
 import { ExpandableList } from "@/components/shared/solutions-list";
 
 interface ExpandableProps {

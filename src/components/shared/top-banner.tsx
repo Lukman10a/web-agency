@@ -1,7 +1,10 @@
 import React from "react";
-import Arrow from "../icons/arrow";
+
 import { usePathname } from "next/navigation";
+
 import { cn } from "@/lib/utils";
+
+import Arrow from "../icons/arrow";
 
 const TopBanner = () => {
   const pathname = usePathname();

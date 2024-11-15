@@ -113,7 +113,7 @@ const createDelay = ({
 const createAnimatedNodes = (
   args: ReducedValue,
   word: string,
-  index: number
+  index: number,
 ): ReducedValue => {
   const {
     nodes,
@@ -141,7 +141,7 @@ const createAnimatedNodes = (
       ["animate-[reveal-down,content-blur]"]: !isUp && blur,
       ["animate-[reveal-up,content-blur]"]: isUp && blur,
     },
-    args.className
+    args.className,
   );
   const node = (
     <span
@@ -216,7 +216,7 @@ export default function WaveReveal({
     <div
       className={cn(
         "relative flex flex-wrap justify-center whitespace-pre md:px-2 md:text-4xl font-black px-6 text-6xl",
-        className
+        className,
       )}
     >
       {nodes}

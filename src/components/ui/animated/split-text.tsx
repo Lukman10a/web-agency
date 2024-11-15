@@ -1,6 +1,9 @@
 // SplitText.tsx
 import { useRef, useState } from "react";
-import { cn } from "@/lib/utils"; // Make sure you have a `cn` utility for conditional classnames
+
+import { cn } from "@/lib/utils";
+
+// Make sure you have a `cn` utility for conditional classnames
 
 interface SplitTextProps {
   text: string;
@@ -21,7 +24,7 @@ const SplitText: React.FC<SplitTextProps> = ({
     <div
       className={cn(
         "relative mx-auto cursor-pointer text-4xl font-black uppercase text-yellow-500 md:text-5xl lg:text-9xl",
-        className
+        className,
       )}
     >
       {/* Invisible text for size maintenance */}

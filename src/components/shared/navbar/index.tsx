@@ -1,4 +1,13 @@
 import React, { useState } from "react";
+
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+import { cn } from "@/lib/utils";
+
+import ArrowIcon from "../../icons/arrow";
+import { Button } from "../../ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -8,14 +17,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "../../ui/navigation-menu";
-import { Button } from "../../ui/button";
-import ArrowIcon from "../../icons/arrow";
-import { MobileNav } from "./mobile-nav";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
 import { ListItem } from "./ListItem";
+import { MobileNav } from "./mobile-nav";
 
 export interface NavItem {
   title: string;

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import ArrowIcon from "../icons/arrow";
 
 const Newsletter: React.FC = () => {

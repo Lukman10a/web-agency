@@ -1,5 +1,6 @@
 // components/Clients.tsx
 import React from "react";
+
 import { PartnersSlider, PartnersSliderReverse } from "./partners-slider";
 
 const MoreClients: React.FC = () => {

@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
+
+import Link from "next/link";
+
+import { cn } from "@/lib/utils";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 export const StickyScroll = ({
   content,
@@ -35,7 +37,7 @@ export const StickyScroll = ({
         }
         return acc;
       },
-      0
+      0,
     );
     setActiveCard(closestBreakpointIndex);
   });
@@ -52,7 +54,7 @@ export const StickyScroll = ({
   ];
 
   const [backgroundGradient, setBackgroundGradient] = useState(
-    linearGradients[0]
+    linearGradients[0],
   );
 
   useEffect(() => {
@@ -106,7 +108,7 @@ export const StickyScroll = ({
         style={{ background: backgroundGradient }}
         className={cn(
           "lg:hidden block flex-1 h-70 w-80 rounded-md bg-white sticky top-0 overflow-hidden",
-          contentClassName
+          contentClassName,
         )}
       >
         {content[activeCard].content ?? null}

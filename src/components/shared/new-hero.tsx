@@ -1,11 +1,9 @@
 // import Image from "next/image";
 // import React from "react";
 // import { Button } from "../ui/button";
-
 // type NewHeroProps = {
 //   reverse?: boolean;
 // };
-
 // const NewHero: React.FC<NewHeroProps> = ({ reverse = false }) => {
 //   return (
 //     <section className="mx-auto mb-32 w-[90%] max-w-[1400px] rounded-3xl bg-gradient-to-r from-[rgba(80,206,245,0.2)] to-[rgba(255,149,87,0.2)] px-16 py-24 xl:w-full xl:rounded-t-none lg:p-12 lg:py-16 2md:w-full md:mb-16 md:px-0">
@@ -25,7 +23,6 @@
 //             <span>See our Solutions</span>
 //           </Button>
 //         </div>
-
 //         <div className="image w-[45%] rounded-2xl border bg-white md:w-full md:text-center sm:rounded-lg">
 //           <Image
 //             src="/public/assets/contact"
@@ -39,11 +36,11 @@
 //     </section>
 //   );
 // };
-
 // export default NewHero;
+import React from "react";
 
 import Image from "next/image";
-import React from "react";
+
 import { Button } from "../ui/button";
 
 type NewHeroProps = {

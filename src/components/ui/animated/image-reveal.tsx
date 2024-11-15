@@ -1,6 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
+
 import { StaticImageData } from "next/image";
+
+import { motion } from "framer-motion";
 
 interface CustomProps {
   index: number;

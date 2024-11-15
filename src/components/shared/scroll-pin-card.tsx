@@ -1,7 +1,10 @@
 "use client";
-import Image from "next/image";
-import { useTransform, motion, useScroll, MotionValue } from "framer-motion";
+
 import { useRef } from "react";
+
+import Image from "next/image";
+
+import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 
 type ProjectCardProps = {
   i: number;

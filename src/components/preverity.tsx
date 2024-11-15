@@ -1,8 +1,11 @@
-import Image from "next/image";
 import React from "react";
-import preverity from "/public/svg/preverity.svg";
-import { Button } from "./ui/button";
+
+import Image from "next/image";
 import Link from "next/link";
+
+import preverity from "/public/svg/preverity.svg";
+
+import { Button } from "./ui/button";
 
 const Preverity = () => {
   return (

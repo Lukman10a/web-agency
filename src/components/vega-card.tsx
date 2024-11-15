@@ -1,6 +1,8 @@
 import React from "react";
-import vega from "/public/svg/vega.svg";
+
 import Image from "next/image";
+
+import vega from "/public/svg/vega.svg";
 
 const VegaCard = () => {
   return (

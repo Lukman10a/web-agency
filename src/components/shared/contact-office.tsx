@@ -1,6 +1,10 @@
-import React from 'react';
-import Image from 'next/image';
-import CallToAction from './shared/callToAction';
+import React from "react";
+
+import Image from "next/image";
+
+import CallToAction from "./callToAction";
+
+// import CallToAction from "./shared/callToAction";
 
 const ContactOffice: React.FC = () => {
   return (
@@ -12,9 +16,16 @@ const ContactOffice: React.FC = () => {
             key={index}
             className="border border-gray-300 rounded-2xl p-6 flex flex-col items-start space-y-4 shadow-sm"
           >
-            <div className='flex gap-3 items-center'>
-                <Image src="/assets/location.png" width={20} height={20} alt="location image" />
-                <div className="text-sm text-gray-500 font-semibold">OFFICE #{index}</div>
+            <div className="flex gap-3 items-center">
+              <Image
+                src="/assets/location.png"
+                width={20}
+                height={20}
+                alt="location image"
+              />
+              <div className="text-sm text-gray-500 font-semibold">
+                OFFICE #{index}
+              </div>
             </div>
             <h3 className="text-lg font-bold">Bratislava HQ</h3>
             <div className="text-gray-600">
@@ -27,7 +38,7 @@ const ContactOffice: React.FC = () => {
       </div>
 
       {/* Call to Action Section */}
-      <CallToAction/>
+      <CallToAction />
     </div>
   );
 };

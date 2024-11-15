@@ -1,7 +1,10 @@
-import { useScroll } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { Badge } from "@/components/ui/badge";
+
 import Lenis from "@studio-freight/lenis";
+import { useScroll } from "framer-motion";
+
+import { Badge } from "@/components/ui/badge";
+
 import PinCard from "./scroll-pin-card";
 
 export const projects = [

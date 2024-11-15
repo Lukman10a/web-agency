@@ -1,6 +1,9 @@
-import { cn } from "@/lib/utils";
-import Image, { StaticImageData } from "next/image";
 import { HTMLAttributes } from "react";
+
+import Image, { StaticImageData } from "next/image";
+
+import { cn } from "@/lib/utils";
+
 import WaveReveal from "../ui/animated/wave-reveal";
 
 interface ImageProps extends HTMLAttributes<HTMLDivElement> {

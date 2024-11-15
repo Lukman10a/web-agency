@@ -1,7 +1,8 @@
+import React from "react";
+
 import CardSection from "@/components/card-section";
 import NewHero from "@/components/shared/new-hero";
 import WhatIsTeverse from "@/components/What-is-teverse";
-import React from "react";
 
 const disciplines = [
   "Infrastructure as Code",

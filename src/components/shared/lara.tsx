@@ -1,8 +1,11 @@
 import React from "react";
+
+import Image from "next/image";
+
 import ArrowIcon from "@/components/icons/arrow";
 import { Button } from "@/components/ui/button";
+
 import black_mark from "../../../public/svg/black_mark.svg";
-import Image from "next/image";
 
 export default function LARA() {
   interface Lara {

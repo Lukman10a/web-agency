@@ -1,4 +1,4 @@
-import { motion, useTransform, MotionValue } from "framer-motion";
+import { motion, MotionValue, useTransform } from "framer-motion";
 import { LucideIcon } from "lucide-react";
 
 interface ServiceCardProps {

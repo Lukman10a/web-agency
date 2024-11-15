@@ -1,7 +1,8 @@
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
-import { Sora, Noto_Sans, Noto_Sans_Mono } from "next/font/google";
+import { Noto_Sans, Noto_Sans_Mono, Sora } from "next/font/google";
+
 import { Node } from "@markdoc/markdoc";
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));

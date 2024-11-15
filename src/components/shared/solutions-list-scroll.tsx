@@ -1,13 +1,16 @@
 import React from "react";
+
 import securityImg from "/public/assets/3d-tech-1.png";
-import database from "/public/assets/database.png";
 import bigData from "/public/assets/big-data.png";
+import database from "/public/assets/database.png";
+
 import Expandable from "../ui/animated/expandable-carousel";
+
 // import Image from "next/image";
 
 // const content = [
 //   {
-//     title: "Migrate my existing solution to the cloud",
+//     title: "Migrate my existing solution to the cloud",
 //     description:
 //       "As an experienced cloud partner, we prepare the target infrastructure, make the cloud adoption process smooth, less risky and help you make your services cloud-ready before you hop on.",
 //     content: (
