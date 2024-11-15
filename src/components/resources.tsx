@@ -32,16 +32,20 @@ const Resources = () => {
     },
   ];
   return (
-    <section className="mx-auto mb-16 w-[90%] max-w-[1200px]">
-      <h2 className="mb-[.7em] text-5xl 2md:text-center md:text-4xl">
-        Stay Ahead of the Curve
-      </h2>
-      <Button
-        asChild
-        className="mb-16 flex w-fit items-center justify-center rounded-full bg-orange-600 px-[3.5em] py-[1em] font-normal text-white hover:bg-darkblue-950 2md:mx-auto"
-      >
-        <Link href="#">All Resources</Link>
-      </Button>
+    <section className="mx-auto mb-24 w-[90%] max-w-[1200px] 2md:w-[85%] sm:mb-16">
+      <span className="tag inline-block rounded-3xl border border-[#808080] bg-white px-6 py-2 text-xs text-[#808080] 2md:text-[10px] md:mb-2">
+        RESOURCES
+      </span>
+      <h3 className="mb-[.5em] mt-4 w-[60%] font-sora text-3xl font-medium 2md:w-full md:mx-auto md:mb-[.4em] md:text-2xl sm:w-full">
+        Find <span className="text-orange-650">In-Depth </span> Guides,
+        Articles, AWS Best Practices and More
+      </h3>
+      <p className="mb-[1.5em] w-[90%] text-[#808080] sm:text-justify">
+        Continue your cloud journey by learning from our cloud experts. We share
+        insights and best practices on everything from app development and
+        migrations to cost optimization and generative AI. 
+      </p>
+
       <div className="flex w-full gap-2 2md:flex-col">
         {cardData.map((card, index) => (
           <ResourceCard
