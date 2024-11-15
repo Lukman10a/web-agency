@@ -1,12 +1,14 @@
-import Image from "next/image";
 import React from "react";
-import efficiency from "../../public/svg/efficiency.svg";
-import security from "../../public/svg/security.svg";
-import expert from "../../public/svg/expert.svg";
+
+import Image from "next/image";
+
 import improvedsecurity from "../../public/assets/improvedsecurity.png";
+import efficiency from "../../public/svg/efficiency.svg";
+import expert from "../../public/svg/expert.svg";
+import security from "../../public/svg/security.svg";
 import ArrowIcon from "./icons/arrow";
+import MoreClients from "./shared/more-clients";
 import { Button } from "./ui/button";
-import MoreClients from "./more-clients";
 
 const benefits = [
   {

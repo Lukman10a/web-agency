@@ -1,8 +1,10 @@
-import CategoryButtons from "@/components/shared/category-buttons";
 import React from "react";
+
 import { Search } from "lucide-react";
-import FAQSection from "@/components/shared/faq-section";
+
 import ContactSection from "@/components/lets-talk";
+import CategoryButtons from "@/components/shared/category-buttons";
+import FAQSection from "@/components/shared/faq-section";
 
 export default function FAQ() {
   const categories = ["QUESTIONS", "GENERAL", "SOLUTIONS", "PEOPLE", "TECH"];

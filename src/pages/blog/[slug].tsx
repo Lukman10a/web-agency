@@ -1,30 +1,28 @@
 "use client";
 
 import React from "react";
+
+import { GetStaticPaths, GetStaticProps } from "next";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { GetStaticProps, GetStaticPaths } from "next";
+
+import postImage from "/public/assets/post-image.png";
+import { collectHeadings, Heading, HeadingNode } from "@/lib/utils";
 import { createReader } from "@keystatic/core/reader";
 import Markdoc from "@markdoc/markdoc";
-
-// Component imports
-import Newsletter from "@/components/newsletter";
-import PostCard from "@/components/post-card";
-import TableOfContents from "@/components/table-of-content";
-import { Separator } from "@/components/ui/separator";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
-// Icon imports
-import { PiWhatsappLogo, PiInstagramLogo } from "react-icons/pi";
-import { LuTwitter } from "react-icons/lu";
 import { Calendar } from "lucide-react";
+import { LuTwitter } from "react-icons/lu";
+import { PiInstagramLogo, PiWhatsappLogo } from "react-icons/pi";
 
-// Utility and config imports
-import { collectHeadings, Heading, HeadingNode } from "@/lib/utils";
+import PostCard from "@/components/post-card";
+import Newsletter from "@/components/shared/newsletter";
+import TableOfContents from "@/components/table-of-content";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+
 import keystaticConfig from "../../../keystatic.config";
 import { config as markdocConfig } from "../../../markdoc.config";
-import postImage from "/public/assets/post-image.png";
 
 // Create a Keystatic reader instance
 const reader = createReader(process.cwd(), keystaticConfig);

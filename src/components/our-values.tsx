@@ -1,6 +1,9 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+
 import Image from "next/image";
-import { useScroll, motion, MotionValue } from "framer-motion";
+
+import { motion, MotionValue, useScroll } from "framer-motion";
+
 import { Badge } from "./ui/badge";
 
 interface ValueData {
@@ -107,8 +110,12 @@ const OurValuesSection: React.FC = () => {
               className="sticky top-24 mx-auto flex sm:w-full w-3/4 transform gap-4 space-y-4 rounded-2xl p-4 transition-opacity duration-500 lg:p-6 md:flex-row md:space-x-4 md:space-y-0 sm:flex-col"
             >
               <div className="flex sm:w-full w-1/2 flex-col justify-center px-10 sm:px-4 text-left">
-                <h3 className="mb-2 sm:text-lg text-3xl font-bold">{value.title}</h3>
-                <p className="text-lg sm:text-sm text-gray-600">{value.description}</p>
+                <h3 className="mb-2 sm:text-lg text-3xl font-bold">
+                  {value.title}
+                </h3>
+                <p className="text-lg sm:text-sm text-gray-600">
+                  {value.description}
+                </p>
               </div>
               <div className="h-[400px] sm:h-[10rem]">
                 <Image

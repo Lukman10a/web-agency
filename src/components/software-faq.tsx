@@ -1,4 +1,5 @@
 import React from "react";
+
 import FAQSection from "./shared/faq-section";
 
 interface FAQItem {
@@ -26,13 +27,14 @@ const faqData: FAQItem[] = [
 
 const SoftwareFAQ: React.FC = () => {
   return (
-    <section className="py-16 mx-4 rounded-xl "
-    style={{
-        background:
-          "linear-gradient(61.83deg, #FBFBFB 32.56%, #FFFFFF 100%)",
-      }}>
-      <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-extrabold text-center text-gray-900 sm:text-lg md:text-xl">
+    <section
+      className="mx-4 rounded-xl py-16"
+      style={{
+        background: "linear-gradient(61.83deg, #FBFBFB 32.56%, #FFFFFF 100%)",
+      }}
+    >
+      <div className="mx-auto max-w-7xl px-4 py-4 lg:px-8 sm:px-6">
+        <h2 className="text-center text-3xl font-extrabold text-gray-900 md:text-xl sm:text-lg">
           FREQUENTLY ASKED QUESTIONS
         </h2>
         <FAQSection faqData={faqData} />

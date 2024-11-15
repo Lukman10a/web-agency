@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
+
 import GenericWorkItem from "./our-solutions-carousel";
 
 interface SolutionCardProps {

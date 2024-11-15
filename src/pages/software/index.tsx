@@ -1,15 +1,14 @@
 import React from "react";
 
-import HelpSection from "@/components/need-help";
-import NewsletterSection from "@/components/software-newsletter";
-import SolutionsSection from "@/components/solution-section";
-import WhyTeverse from "@/components/why-teverse";
-import Score from "@/components/score";
-import SuccessStory from "@/components/success-story";
 import Resources from "@/components/resources";
-import SoftwareHero from "@/components/software-section-hero";
-
+import Score from "@/components/score";
+import HelpSection from "@/components/shared/need-help";
 import { PartnersSlider } from "@/components/shared/partners-slider";
+import NewsletterSection from "@/components/software-newsletter";
+import SoftwareHero from "@/components/software-section-hero";
+import SolutionsSection from "@/components/solution-section";
+import SuccessStory from "@/components/success-story";
+import WhyTeverse from "@/components/why-teverse";
 
 export default function Software() {
   return (

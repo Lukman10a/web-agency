@@ -1,7 +1,9 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
+
 import { Button } from "@/components/ui/button";
+
 import ArrowIcon from "./icons/arrow";
 
 interface SlideContent {

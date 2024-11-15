@@ -1,7 +1,9 @@
 import React from "react";
-import ScoreCard from "./score-card";
-import net from "/public/svg/score_image.svg";
+
 import cert from "/public/svg/cert.svg";
+import net from "/public/svg/score_image.svg";
+
+import ScoreCard from "./score-card";
 
 const Score = () => {
   const cardData = [

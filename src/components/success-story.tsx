@@ -1,7 +1,9 @@
 import React from "react";
+
+import Link from "next/link";
+
 import StoryCard from "./story-card";
 import { Button } from "./ui/button";
-import Link from "next/link";
 
 const SuccessStory = () => {
   return (

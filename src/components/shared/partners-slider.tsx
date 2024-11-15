@@ -1,13 +1,15 @@
-import lightbox from "/public/svg/lightbox.svg";
-import featherdev from "/public/svg/featherdev.svg";
+import Image from "next/image";
+
 import boltshift from "/public/svg/boltshift.svg";
+import featherdev from "/public/svg/featherdev.svg";
 import globalbank from "/public/svg/globalbank.svg";
+import lightbox from "/public/svg/lightbox.svg";
+import magellan from "/public/svg/magellan.svg";
+import playbill from "/public/svg/playbill.svg";
 import radar from "/public/svg/radar.svg";
 import space from "/public/svg/space.svg";
 import thrive from "/public/svg/thrive.svg";
-import magellan from "/public/svg/magellan.svg";
-import playbill from "/public/svg/playbill.svg";
-import Image from "next/image";
+
 import Marquee from "../ui/animated/marquee";
 
 const partners = [

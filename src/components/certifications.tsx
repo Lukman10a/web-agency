@@ -1,12 +1,14 @@
 import React from "react";
+
 import Image from "next/image";
-import sysops from "../../public/assets/sysops.png";
-import security from "../../public/assets/security.png";
+
 import archi from "../../public/assets/archi.png";
 import cloud from "../../public/assets/cloud.png";
-import devops from "../../public/assets/devops.png";
 import data from "../../public/assets/data.png";
+import devops from "../../public/assets/devops.png";
+import security from "../../public/assets/security.png";
 import star from "../../public/assets/starfour.png";
+import sysops from "../../public/assets/sysops.png";
 
 // const badges = [
 //   { src: sysops, alt: "AWS SysOps Administrator Badge" },

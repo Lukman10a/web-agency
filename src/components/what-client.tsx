@@ -1,5 +1,7 @@
 import React from "react";
+
 import Image from "next/image";
+
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 interface Testimonial {

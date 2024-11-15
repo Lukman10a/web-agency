@@ -43,6 +43,12 @@ const navItems: NavItem[] = [
           "AWS guidance for efficient cloud growth and foundational best practices",
       },
       {
+        title: "Teverse Engagements",
+        href: "/software/cloud-engagements",
+        label:
+          "Get transparent reporting and live updates on your team’s status",
+      },
+      {
         title: "Teverse Cloud Score",
         href: "/software/cloud-score",
         label:
@@ -56,13 +62,69 @@ const navItems: NavItem[] = [
     ],
   },
   {
+    title: "Services",
+    items: [
+      {
+        title: " Cloud Managed Services",
+        href: "/services",
+        items: [
+          {
+            title: "Cloud Foundation",
+            href: "/services/cloud-managed/foundation",
+            label: "Manage costs, support your teams, and build to scale.",
+          },
+          {
+            title: "Cloud One",
+            href: "/services/cloud-managed/one",
+            label:
+              "Our comprehensive service for AWS optimization, operations, and security",
+          },
+        ],
+      },
+      {
+        title: "AWS",
+        href: "/aws",
+        label: "Discover our AWS services and support offerings",
+      },
+      {
+        title: "Professional Services",
+        href: "/services/professional-services",
+        items: [
+          {
+            title: "AWS Migration",
+            label: "Minimize downtime, forecast costs, and migrate efficiently",
+          },
+          {
+            title: "AWS Mordernization",
+            label: "Containerization, serverless, and microservices",
+          },
+          {
+            title: "Data, Analytics & Machine Learning ",
+            label:
+              "Leverage data analytics and machine learning to elevate your business",
+          },
+        ],
+      },
+      {
+        title: "AI Management Services",
+        href: "/services/ai-management",
+        items: [
+          {
+            title: "AI Foundation",
+            label:
+              "Cost management and foundational best practices for AI solutions on AWS",
+          },
+        ],
+      },
+    ],
+  },
+  {
     title: "Solution",
     href: "/solution",
     label: "Explore our cloud solutions and services for your business needs",
   },
   {
     title: "Industries",
-    // href: "/industry",
     label: "Explore the industries we serve with tailored cloud solutions",
     items: [
       {
@@ -141,18 +203,82 @@ const navItems: NavItem[] = [
       },
     ],
   },
-  {
-    title: "AWS",
-    href: "/aws",
-    label: "Discover our AWS services and support offerings",
-  },
 ];
+
+// const renderNavContent = (items: NavItem[]) => {
+//   // Group items by section
+//   const sections = items.reduce(
+//     (acc, item) => {
+//       const section = item.section || "default";
+//       if (!acc[section]) {
+//         acc[section] = [];
+//       }
+//       acc[section].push(item);
+//       return acc;
+//     },
+//     {} as Record<string, NavItem[]>,
+//   );
+
+//   return (
+//     <div className="grid grid-cols-3 gap-6 bg-gradient-to-b from-white to-orange-50/50 p-6">
+//       {Object.entries(sections).map(([sectionName, sectionItems]) => (
+//         <div key={sectionName} className="space-y-4">
+//           <ListItemV2
+//             title={
+//               sectionName === "default" ? sectionItems[0].title : sectionName
+//             }
+//             href="#"
+//             isSection
+//           />
+//           <ul className="space-y-4">
+//             {sectionItems.map((item) => (
+//               <ListItemV2
+//                 key={item.title}
+//                 title={item.title}
+//                 href={item.href || "#"}
+//                 description={item.label}
+//               />
+//             ))}
+//           </ul>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
 
 const Navbar = () => {
   const pathname = usePathname();
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const isActive = (href: string) => pathname?.startsWith(href);
+
+  const renderNavItems = (items: NavItem[]) => {
+    return items.map((item) => (
+      <ListItem key={item.title} title={item.title} href={item?.href as string}>
+        {item.items ? (
+          <>
+            <hr className="my-3" />
+            <ul className="ml-4 mt-2 space-y-2">
+              {item.items.map((subItem) => (
+                <li key={subItem.title} className="list-disc">
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href={subItem.href || "#"}
+                      className="block text-sm text-muted-foreground hover:text-foreground"
+                    >
+                      {subItem.title}
+                    </Link>
+                  </NavigationMenuLink>
+                </li>
+              ))}
+            </ul>
+          </>
+        ) : (
+          item.label
+        )}
+      </ListItem>
+    ));
+  };
 
   return (
     <nav
@@ -205,16 +331,19 @@ const Navbar = () => {
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <ul className="grid w-[600px] grid-cols-2 gap-3 p-6 lg:w-[500px] lg:grid-cols-[.75fr_1fr] md:w-[400px]">
-                          {item.items.map((subItem) => (
+                          {/* {renderNavContent(item.items)} */}
+                          {renderNavItems(item.items)}
+
+                          {/* {item.items.map((subItem) => (
                             <ListItem
                               key={subItem.title}
                               title={subItem.title}
                               href={subItem.href as string}
-                              // icon={subItem.icon}
+           
                             >
                               {subItem.label}
                             </ListItem>
-                          ))}
+                          ))} */}
                         </ul>
                       </NavigationMenuContent>
                     </>

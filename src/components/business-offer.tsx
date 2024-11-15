@@ -1,11 +1,13 @@
 import React from "react";
-import HomeCard from "./home-card";
+
 import Cardimage1 from "/public/assets/cardimage1.png";
 import Cardimage2 from "/public/assets/cardimage2.png";
 import Cardimage3 from "/public/assets/cardimage3.png";
-import { LuUploadCloud } from "react-icons/lu";
-import { GrShieldSecurity } from "react-icons/gr";
 import { BsCloudPlus } from "react-icons/bs";
+import { GrShieldSecurity } from "react-icons/gr";
+import { LuUploadCloud } from "react-icons/lu";
+
+import HomeCard from "./home-card";
 import { BorderTrail } from "./ui/animated/border-trail";
 
 const BusinessOffer = () => {
