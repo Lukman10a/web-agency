@@ -4,6 +4,9 @@ import Image from "next/image";
 
 import animatedCloud from "/public/assets/animated-cloud.gif";
 
+import ImagesReveal from "@/components/ui/animated/image-reveal";
+import { Button } from "@/components/ui/button";
+
 import TeamSection from "@/components/Cloud";
 import ArrowIcon from "@/components/icons/arrow";
 import ContactSection from "@/components/lets-talk";
@@ -11,8 +14,6 @@ import Mission from "@/components/our-mission";
 import OurValuesSection from "@/components/our-values";
 // import OurValues from "@/components/shared/our-values";
 import AnimatedStatsBanner from "@/components/shared/stats-banner";
-import ImagesReveal from "@/components/ui/animated/image-reveal";
-import { Button } from "@/components/ui/button";
 import Testimonials from "@/components/what-client";
 
 const cards = [

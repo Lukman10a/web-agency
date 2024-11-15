@@ -14,13 +14,14 @@ import solution from "/public/svg/solution.svg";
 import sysops from "/public/svg/sysops.svg";
 import { motion } from "framer-motion";
 
+import { Button } from "@/components/ui/button";
+
 import AwsLara from "@/components/aws-lara";
 import AWSection from "@/components/aws-section";
 import ArrowIcon from "@/components/icons/arrow";
 import ContactSection from "@/components/lets-talk";
 import CategoryButtons from "@/components/shared/category-buttons";
 import LARA from "@/components/shared/lara";
-import { Button } from "@/components/ui/button";
 import Testimonials from "@/components/what-client";
 
 export default function AWS() {

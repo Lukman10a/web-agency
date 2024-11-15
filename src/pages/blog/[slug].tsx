@@ -7,19 +7,21 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 import postImage from "/public/assets/post-image.png";
-import { collectHeadings, Heading, HeadingNode } from "@/lib/utils";
 import { createReader } from "@keystatic/core/reader";
 import Markdoc from "@markdoc/markdoc";
 import { Calendar } from "lucide-react";
 import { LuTwitter } from "react-icons/lu";
 import { PiInstagramLogo, PiWhatsappLogo } from "react-icons/pi";
 
-import PostCard from "@/components/post-card";
-import Newsletter from "@/components/shared/newsletter";
-import TableOfContents from "@/components/table-of-content";
+import { collectHeadings, Heading, HeadingNode } from "@/lib/utils";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+
+import PostCard from "@/components/post-card";
+import Newsletter from "@/components/shared/newsletter";
+import TableOfContents from "@/components/table-of-content";
 
 import keystaticConfig from "../../../keystatic.config";
 import { config as markdocConfig } from "../../../markdoc.config";

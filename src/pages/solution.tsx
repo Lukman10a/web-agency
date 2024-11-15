@@ -3,6 +3,8 @@ import React, { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { Button } from "@/components/ui/button";
+
 import Booking from "@/components/booking";
 import LARABuildingBlocks from "@/components/building-blocks";
 import SecurityCertifications from "@/components/certifications";
@@ -11,7 +13,6 @@ import ArrowIcon from "@/components/icons/arrow";
 import ContactSection from "@/components/lets-talk";
 import CloudPlatformSection from "@/components/page-two";
 import { StickyScrollRevealDemo } from "@/components/shared/solutions-list-scroll";
-import { Button } from "@/components/ui/button";
 
 import image from "../../public/assets/cardimage1.png";
 import solutionHero from "../../public/assets/cloud-provider.gif";
