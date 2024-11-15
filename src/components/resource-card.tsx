@@ -19,7 +19,7 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
 }) => {
   return (
     <div className="w-full">
-      <div className="flex w-[90%] max-w-[350px] flex-col 2md:mx-auto 2md:mb-6">
+      <div className="flex w-[90%] max-w-[350px] flex-col 2md:mx-auto 2md:mb-6 2md:w-full">
         <Image
           src={image}
           alt="Card image"

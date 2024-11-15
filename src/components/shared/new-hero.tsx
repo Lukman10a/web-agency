@@ -62,9 +62,9 @@ const NewHero: React.FC<NewHeroProps> = ({
   tag = false,
 }) => {
   return (
-    <section className="mx-auto mb-32 w-[90%] max-w-[1400px] rounded-3xl bg-gradient-to-r from-[rgba(80,206,245,0.2)] to-[rgba(255,149,87,0.2)] px-16 py-24 xl:w-full xl:rounded-t-none lg:p-12 lg:py-16 2md:w-full md:mb-16 md:px-0">
+    <section className="mx-auto mb-32 bg-gradient-to-r from-[rgba(80,206,245,0.2)] to-[rgba(255,149,87,0.2)] px-16 py-20 xl:rounded-t-none lg:p-12 lg:py-16 md:mb-16 md:px-0 sm:mb-12">
       <div
-        className={`mx-auto flex w-[95%] max-w-[1000px] gap-12 2md:gap-8 md:w-[85%] md:flex-col-reverse md:gap-6 ${
+        className={`mx-auto flex w-[95%] max-w-[1200px] gap-12 2md:gap-8 md:w-[85%] md:flex-col md:gap-6 ${
           reverse ? "flex-row-reverse" : "flex-row"
         }`}
       >
@@ -85,7 +85,7 @@ const NewHero: React.FC<NewHeroProps> = ({
           </Button>
         </div>
 
-        <div className="image w-[45%] rounded-2xl border bg-white md:w-full md:text-center sm:rounded-lg">
+        <div className="image mx-auto w-[45%] max-w-[400px] self-end rounded-2xl border bg-white md:w-full md:text-center sm:rounded-lg">
           <Image
             src="/public/assets/contact"
             alt="Security Image"

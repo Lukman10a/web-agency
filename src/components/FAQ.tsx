@@ -26,10 +26,10 @@ const faqData: FAQItem[] = [
 
 const FAQ: React.FC = () => {
   return (
-    <section className="bg-white py-16 w-full ">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-5xl font-extrabold text-center text-gray-900 md:text-4xl sm:text-3xl">
-          FREQUENTLY ASKED QUESTIONS
+    <section className="mx-auto mb-24 w-[85%] max-w-[1200px] rounded-2xl bg-[#FBFBFB] py-16 xl:w-full xl:rounded-none sm:mb-16">
+      <div className="mx-auto w-[90%]">
+        <h2 className="mb-4 text-center font-sora text-4xl font-medium text-gray-900 sm:text-2xl">
+          Frequently asked question
         </h2>
         <FAQSection faqData={faqData} />
       </div>
