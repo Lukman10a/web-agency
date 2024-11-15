@@ -70,7 +70,7 @@ const navItems: NavItem[] = [
         items: [
           {
             title: "Cloud Foundation",
-            href: "/services/cloud-managed/foundation",
+            href: "/services/cloud-management-services/cloud-foundation",
             label: "Manage costs, support your teams, and build to scale.",
           },
           {
