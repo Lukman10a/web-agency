@@ -1,8 +1,10 @@
-import Image, { StaticImageData } from "next/image";
 import React, { ReactNode } from "react";
+
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { Button } from "./ui/button";
+
 import ArrowIcon from "./icons/arrow";
+import { Button } from "./ui/button";
 
 type HomeCardProps = {
   title: string;

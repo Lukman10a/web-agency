@@ -1,18 +1,22 @@
 // pages/posts/[slug].tsx
-import { GetStaticProps, GetStaticPaths } from "next";
+import { Calendar } from "lucide-react";
+import React from "react";
+import { LuTwitter } from "react-icons/lu";
+import { PiInstagramLogo, PiWhatsappLogo } from "react-icons/pi";
+
+import { GetStaticPaths, GetStaticProps } from "next";
+import Image from "next/image";
+import Link from "next/link";
+
+import { collectHeadings, Heading, HeadingNode } from "@/lib/utils";
 import { createReader } from "@keystatic/core/reader";
 import Markdoc from "@markdoc/markdoc";
-import keystaticConfig from "../../../keystatic.config";
-import React from "react";
-import Image from "next/image";
-import { collectHeadings, Heading, HeadingNode } from "@/lib/utils";
-import { Calendar } from "lucide-react";
-import { PiInstagramLogo, PiWhatsappLogo } from "react-icons/pi";
-import { LuTwitter } from "react-icons/lu";
+
+import TableOfContents from "@/components/table-of-content";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
-import TableOfContents from "@/components/table-of-content";
+
+import keystaticConfig from "../../../keystatic.config";
 import { config as markdocConfig } from "../../../markdoc.config";
 
 const reader = createReader(process.cwd(), keystaticConfig);

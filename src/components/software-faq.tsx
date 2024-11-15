@@ -1,4 +1,5 @@
 import React from "react";
+
 import FAQSection from "./shared/faq-section";
 
 interface FAQItem {

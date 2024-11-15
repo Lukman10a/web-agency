@@ -1,9 +1,11 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
+import Link from "next/link";
+
 import { useHash } from "@/hooks/use-hash";
 import { cn, Heading, scrollToSection } from "@/lib/utils";
-import Link from "next/link";
-import { useEffect, useState } from "react";
 
 export default function TableOfContents({ headings }: { headings: Heading[] }) {
   const hash = useHash();

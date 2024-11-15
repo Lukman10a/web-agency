@@ -1,12 +1,14 @@
+import Image from "next/image";
+import { useRouter } from "next/router";
+
+import black_mark from "/public/svg/black_mark.svg";
+
 import AwsLara from "@/components/aws-lara";
+import { awsServices } from "@/components/aws-section";
+import EksAWSection from "@/components/eks-aws";
 import ContactSection from "@/components/lets-talk";
 import CallToAction from "@/components/shared/callToAction";
 import LARA from "@/components/shared/lara";
-import Image from "next/image";
-import black_mark from "/public/svg/black_mark.svg";
-import EksAWSection from "@/components/eks-aws";
-import { awsServices } from "@/components/aws-section";
-import { useRouter } from "next/router";
 
 // Benefit Component
 const Benefit = ({

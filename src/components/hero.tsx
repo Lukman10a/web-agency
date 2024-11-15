@@ -1,9 +1,11 @@
 import React, { Fragment } from "react";
-import { Button } from "./ui/button";
+
 import Link from "next/link";
+
 import ArrowIcon from "./icons/arrow";
 import { PartnersSlider } from "./shared/partners-slider";
 import WaveReveal from "./ui/animated/wave-reveal";
+import { Button } from "./ui/button";
 import FlickeringGrid from "./ui/flickering-grid";
 
 const Hero = () => {

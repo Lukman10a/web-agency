@@ -1,4 +1,5 @@
 import React from "react";
+
 import TeverseCard from "./teverse-card";
 
 const WhyTeverse: React.FC = () => {
