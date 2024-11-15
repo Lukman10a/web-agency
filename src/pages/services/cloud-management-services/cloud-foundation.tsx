@@ -10,7 +10,7 @@ import infraOps from "/public/svg/infraOps.svg";
 import industry from "/public/svg/industry.svg";
 import VegaCard from "@/components/vega-card";
 import Preverity from "@/components/preverity";
-import FAQSection from "@/components/FAQ";
+import FAQSection from "@/components/shared/FAQ";
 import Resources from "@/components/resources";
 
 const cardData = [
