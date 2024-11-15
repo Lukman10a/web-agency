@@ -2,7 +2,7 @@
 import { GetStaticProps } from "next";
 import { createReader } from "@keystatic/core/reader";
 // import BlogCard from "@/components/featured-card";
-import Newsletter from "@/components/newsletter";
+import Newsletter from "@/components/shared/newsletter";
 import PostCard from "@/components/post-card";
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";

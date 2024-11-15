@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import Testimonials from "@/components/what-client";
 import ContactSection from "@/components/lets-talk";
 import CategoryButtons from "@/components/shared/category-buttons";
-import MoreClients from "@/components/more-clients";
+import MoreClients from "@/components/shared/more-clients";
 
 import caseStudyHero from "../../../public/assets/case-study-hero.png";
 import defaultImage from "../../../public/assets/case-image.png";

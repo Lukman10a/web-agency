@@ -8,7 +8,7 @@ import { createReader } from "@keystatic/core/reader";
 import Markdoc from "@markdoc/markdoc";
 
 // Component imports
-import Newsletter from "@/components/newsletter";
+import Newsletter from "@/components/shared/newsletter";
 import PostCard from "@/components/post-card";
 import TableOfContents from "@/components/table-of-content";
 import { Separator } from "@/components/ui/separator";

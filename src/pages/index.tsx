@@ -2,7 +2,7 @@ import BusinessOffer from "@/components/business-offer";
 import Hero from "@/components/hero";
 import Testimonials from "@/components/what-client";
 import SecurityCertifications from "@/components/certifications";
-import FAQSection from "@/components/FAQ";
+import FAQSection from "@/components/shared/FAQ";
 import WhyChooseUs from "@/components/why-choose-us";
 import PartnershipSection from "@/components/partnerships";
 

@@ -6,7 +6,7 @@ import expert from "../../public/svg/expert.svg";
 import improvedsecurity from "../../public/assets/improvedsecurity.png";
 import ArrowIcon from "./icons/arrow";
 import { Button } from "./ui/button";
-import MoreClients from "./more-clients";
+import MoreClients from "./shared/more-clients";
 
 const benefits = [
   {

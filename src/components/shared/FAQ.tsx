@@ -1,5 +1,5 @@
 import React from "react";
-import FAQSection from "./shared/faq-section";
+import FAQSection from "./faq-section";
 
 interface FAQItem {
   question: string;
@@ -26,9 +26,9 @@ const faqData: FAQItem[] = [
 
 const FAQ: React.FC = () => {
   return (
-    <section className="bg-white py-16 w-full ">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-5xl font-extrabold text-center text-gray-900 md:text-4xl sm:text-3xl">
+    <section className="w-full bg-white py-16">
+      <div className="mx-auto max-w-4xl px-4 lg:px-8 sm:px-6">
+        <h2 className="text-center text-5xl font-extrabold text-gray-900 md:text-4xl sm:text-3xl">
           FREQUENTLY ASKED QUESTIONS
         </h2>
         <FAQSection faqData={faqData} />

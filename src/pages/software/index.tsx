@@ -1,6 +1,6 @@
 import React from "react";
 
-import HelpSection from "@/components/need-help";
+import HelpSection from "@/components/shared/need-help";
 import NewsletterSection from "@/components/software-newsletter";
 import SolutionsSection from "@/components/solution-section";
 import WhyTeverse from "@/components/why-teverse";
