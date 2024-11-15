@@ -1,5 +1,7 @@
-import Image from "next/image";
 import React from "react";
+
+import Image from "next/image";
+
 import star from "/public/assets/story_star.png";
 import image from "/public/svg/story_image.svg";
 

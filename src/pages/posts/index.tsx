@@ -1,13 +1,17 @@
 // pages/index.tsx
+import React, { useEffect, useState } from "react";
+
 import { GetStaticProps } from "next";
+import Link from "next/link";
+
 import { createReader } from "@keystatic/core/reader";
+
+import ArrowIcon from "@/components/icons/arrow";
+import PostCard from "@/components/post-card";
 // import BlogCard from "@/components/featured-card";
 import Newsletter from "@/components/shared/newsletter";
-import PostCard from "@/components/post-card";
-import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import ArrowIcon from "@/components/icons/arrow";
+
 import keystaticConfig from "../../../keystatic.config";
 
 const reader = createReader(process.cwd(), keystaticConfig);

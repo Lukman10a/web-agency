@@ -1,19 +1,20 @@
-import Image from "next/image";
 import React, { Fragment } from "react";
+
+import Image from "next/image";
 import Link from "next/link";
 
-import solutionHero from "../../public/assets/cloud-provider.gif";
-import image from "../../public/assets/cardimage1.png";
-
-import { Button } from "@/components/ui/button";
-import ArrowIcon from "@/components/icons/arrow";
-import { StickyScrollRevealDemo } from "@/components/shared/solutions-list-scroll";
-import CloudPlatformSection from "@/components/page-two";
-import LARABuildingBlocks from "@/components/building-blocks";
-import ContactSection from "@/components/lets-talk";
 import Booking from "@/components/booking";
-import CloudJourney from "@/components/cloud-journey";
+import LARABuildingBlocks from "@/components/building-blocks";
 import SecurityCertifications from "@/components/certifications";
+import CloudJourney from "@/components/cloud-journey";
+import ArrowIcon from "@/components/icons/arrow";
+import ContactSection from "@/components/lets-talk";
+import CloudPlatformSection from "@/components/page-two";
+import { StickyScrollRevealDemo } from "@/components/shared/solutions-list-scroll";
+import { Button } from "@/components/ui/button";
+
+import image from "../../public/assets/cardimage1.png";
+import solutionHero from "../../public/assets/cloud-provider.gif";
 
 export default function Solution() {
   return (

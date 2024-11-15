@@ -1,7 +1,9 @@
 import React from "react";
+
 import Image, { StaticImageData } from "next/image";
-import { Button } from "./ui/button";
 import Link from "next/link";
+
+import { Button } from "./ui/button";
 
 interface ResourceCardProps {
   title: string;

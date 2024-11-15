@@ -1,7 +1,7 @@
 import React from "react";
 
 interface GenericWorkItemProps<T> {
-  header:string;
+  header: string;
   title: string;
   description: string;
   tags: string[];
@@ -23,7 +23,9 @@ const GenericWorkItem = <T,>({
   return (
     <article className="bg-white px-4 py-16">
       <div className="mx-auto max-w-7xl text-center">
-        <h2 className="mb-4 text-3xl font-extrabold text-gray-900">Our Work {header}</h2>
+        <h2 className="mb-4 text-3xl font-extrabold text-gray-900">
+          Our Work {header}
+        </h2>
         <h3 className="text-xl font-bold text-gray-900">{title}</h3>
         <p className="mb-4 mt-4 text-gray-600">{description}</p>
         <div className="mb-4 flex flex-wrap justify-center gap-2">

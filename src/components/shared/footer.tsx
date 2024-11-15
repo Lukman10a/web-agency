@@ -1,7 +1,10 @@
-import Image from "next/image";
 import React from "react";
-import { FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa"; // For social icons
+
+import Image from "next/image";
+// For social icons
 import Link from "next/link";
+
+import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (

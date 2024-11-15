@@ -1,5 +1,6 @@
-import Image, { StaticImageData } from "next/image";
 import React from "react";
+
+import Image, { StaticImageData } from "next/image";
 
 interface ScoreCardProps {
   title: string;

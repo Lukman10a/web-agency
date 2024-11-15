@@ -1,10 +1,13 @@
+import React from "react";
+
+import Image from "next/image";
 import { useRouter } from "next/router";
+
+import ContactSection from "@/components/lets-talk";
+import Testimonials from "@/components/what-client";
+
 import blog_img from "../../../public/assets/blog_img.png";
 import Raiffeisen from "../../../public/assets/raiffeisen.png";
-import React from "react";
-import Image from "next/image";
-import Testimonials from "@/components/what-client";
-import ContactSection from "@/components/lets-talk";
 
 export default function Details() {
   const categories = ["ALL", "ENTERPRISES", "KICKSTART"];

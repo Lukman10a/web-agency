@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+
 import Image from "next/image";
+
 import GenericWorkItem from "./our-solutions-carousel";
 
 const EksAWSection: React.FC = () => {
@@ -78,9 +80,11 @@ const EksAWSection: React.FC = () => {
   const currentWorkItem = workItems[currentSlide];
 
   return (
-    <section className="overflow-hidden"> {/* Prevent horizontal scroll */}
+    <section className="overflow-hidden">
+      {" "}
+      {/* Prevent horizontal scroll */}
       <div
-         className={`transition-all duration-500 ease-in-out transform ${
+        className={`transition-all duration-500 ease-in-out transform ${
           isTransitioning
             ? direction === "next"
               ? "translate-x-20 opacity-0"
@@ -121,7 +125,9 @@ const EksAWSection: React.FC = () => {
             disabled={currentSlide === workItems.length - 1}
             aria-label="Next Slide"
             className={`${
-              currentSlide === workItems.length - 1 ? "opacity-50 cursor-not-allowed" : ""
+              currentSlide === workItems.length - 1
+                ? "opacity-50 cursor-not-allowed"
+                : ""
             }`}
           >
             <Image

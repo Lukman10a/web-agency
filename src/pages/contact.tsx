@@ -1,7 +1,10 @@
 import React from "react";
-import ContactOffice from "@/components/contact-office";
-import useContactForm from "@/hooks/use-contact";
+
 import Image from "next/image";
+
+import useContactForm from "@/hooks/use-contact";
+
+import ContactOffice from "@/components/shared/contact-office";
 
 export default function Contact() {
   const { formData, handleChange, handleSubmit } = useContactForm();

@@ -1,8 +1,5 @@
 // pages/posts/[slug].tsx
-import { Calendar } from "lucide-react";
 import React from "react";
-import { LuTwitter } from "react-icons/lu";
-import { PiInstagramLogo, PiWhatsappLogo } from "react-icons/pi";
 
 import { GetStaticPaths, GetStaticProps } from "next";
 import Image from "next/image";
@@ -11,6 +8,9 @@ import Link from "next/link";
 import { collectHeadings, Heading, HeadingNode } from "@/lib/utils";
 import { createReader } from "@keystatic/core/reader";
 import Markdoc from "@markdoc/markdoc";
+import { Calendar } from "lucide-react";
+import { LuTwitter } from "react-icons/lu";
+import { PiInstagramLogo, PiWhatsappLogo } from "react-icons/pi";
 
 import TableOfContents from "@/components/table-of-content";
 import { Badge } from "@/components/ui/badge";
