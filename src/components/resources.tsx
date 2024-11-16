@@ -1,11 +1,8 @@
 import React from "react";
 
-import Link from "next/link";
-
 import image from "/public/assets/resource_image.png";
 
 import ResourceCard from "./resource-card";
-import { Button } from "./ui/button";
 
 const Resources = () => {
   const cardData = [
