@@ -2,7 +2,7 @@ import React from "react";
 
 const TeverseControlHero: React.FC = () => {
   return (
-    <div className="flex justify-center py-14">
+    <div className="flex justify-center pb-14">
       <div
         className="relative w-full max-w-7xl rounded-tl-3xl rounded-tr-3xl p-14 text-center sm:w-full sm:max-w-full sm:p-4"
         style={{
