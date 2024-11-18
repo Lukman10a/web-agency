@@ -20,7 +20,7 @@ import ContactSection from "@/components/lets-talk";
 import Testimonials from "@/components/what-client";
 
 import keystaticConfig from "../../../keystatic.config";
-import { config as markdocConfig } from "../../../markdoc.config";
+import markdocConfig from "../../../markdoc.config";
 import blog_img from "../../../public/assets/blog_img.png";
 
 // Create a Keystatic reader instance
@@ -92,7 +92,7 @@ const Details: React.FC<TCaseStudyProps> = ({
 
       {/* Blog Content Section */}
       <section className="mx-auto flex w-[90%] max-w-[1200px] items-start justify-between gap-16 md:gap-4">
-        <div className="sticky top-0 w-1/6 sm:hidden">
+        <div className="sticky top-0 w-1/6 sm:hidden mb-4">
           <p className="mb-2 font-semibold 2md:text-[12px]">Client</p>
           <p className="mb-4 text-[#808080] 2md:text-[12px]">
             {case_study.client}
@@ -131,7 +131,7 @@ export default Details;
 
 // Content Section Component
 const ContentSection: React.FC<TCaseStudyProps> = ({ case_study, content }) => (
-  <section className="relative mx-auto  w-5/6 flex-1  py-5">
+  <section className="relative mx-auto w-5/6 flex-1 py-5">
     <div className="flex gap-4">
       <div>
         <section className="mb-12">

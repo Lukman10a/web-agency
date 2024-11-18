@@ -24,7 +24,7 @@ import Newsletter from "@/components/shared/newsletter";
 import TableOfContents from "@/components/table-of-content";
 
 import keystaticConfig from "../../../keystatic.config";
-import { config as markdocConfig } from "../../../markdoc.config";
+import markdocConfig from "../../../markdoc.config";
 
 // Create a Keystatic reader instance
 const reader = createReader(process.cwd(), keystaticConfig);

@@ -1,6 +1,4 @@
-// markdoc.config.ts
 /** @type {import('@markdoc/markdoc').Config} */
-
 import { Config, Node, nodes, RenderableTreeNode } from "@markdoc/markdoc";
 
 function generateID(
@@ -18,7 +16,7 @@ function generateID(
     .toLowerCase();
 }
 
-export const config: Config = {
+const config: Config = {
   nodes: {
     heading: {
       ...nodes.heading,
@@ -60,6 +58,8 @@ export const config: Config = {
     },
   },
 };
+
+export default config;
 
 // export default {
 //     nodes: {

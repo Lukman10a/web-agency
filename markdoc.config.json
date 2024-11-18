@@ -1,0 +1,12 @@
+[
+  {
+    "id": "teverse",
+    "path": "public/content",
+    "schema": {
+      "path": "markdoc.config.ts",
+      "property": "default",
+      "type": "esm",
+      "watch": true
+    }
+  }
+]
