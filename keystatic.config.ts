@@ -1,5 +1,5 @@
 // keystatic.config.ts
-import { config, fields, collection } from "@keystatic/core";
+import { collection, config, fields } from "@keystatic/core";
 
 export default config({
   storage: {
@@ -105,6 +105,11 @@ export default config({
         client: fields.text({
           label: "Client",
           validation: { isRequired: true },
+        }),
+        client_logo: fields.image({
+          label: "Client Logo",
+          publicPath: "/content/case-studies/",
+          validation: { isRequired: false },
         }),
         date: fields.date({
           label: "Date",
