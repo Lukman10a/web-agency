@@ -73,6 +73,7 @@ const CloudFoundation = () => {
   return (
     <main>
       <NewHero
+        ImgSrc="/public/assets/contact"
         title="Mission Cloud Foundation"
         description="Manage costs, support your teams, and build to scale."
         buttonText="Get Started"

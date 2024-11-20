@@ -44,6 +44,7 @@ import { Button } from "../ui/button";
 type NewHeroProps = {
   reverse?: boolean;
   title: string;
+  ImgSrc: string;
   description: string;
   showButton?: boolean;
   buttonText?: string;
@@ -55,6 +56,7 @@ type NewHeroProps = {
 const NewHero: React.FC<NewHeroProps> = ({
   reverse = false,
   title,
+  ImgSrc,
   description,
   showButton = true,
   buttonText,
@@ -86,7 +88,7 @@ const NewHero: React.FC<NewHeroProps> = ({
               AWS PREMIER SERVICES & SOFTWARE PARTNER
             </p>
           )}
-          <h1 className="mb-[.5em] w-[90%] font-sora text-5xl font-medium xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full">
+          <h1 className="mb-[.5em] w-[80%] font-sora text-5xl font-medium xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full">
             {title}
           </h1>
           <p className="mb-[1.5em] w-[90%] text-[#808080] lg:text-[14px] md:mx-auto md:w-[80%] sm:w-[90%]">
@@ -99,9 +101,13 @@ const NewHero: React.FC<NewHeroProps> = ({
           )}
         </div>
 
-        <div className="image mx-auto w-[45%] max-w-[400px] self-end rounded-2xl border bg-white md:w-full md:text-center sm:rounded-lg">
+        <div className="image mx-auto w-[45%] max-w-[400px] self-end rounded-2xl bg-transparent md:w-full md:text-center sm:rounded-lg">
           <Image
+<<<<<<< HEAD
             src="/public/assets/contact" // Example for static URL or image source
+=======
+            src={ImgSrc}
+>>>>>>> main
             alt="Security Image"
             className="w-full"
             width={500}
