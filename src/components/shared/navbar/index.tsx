@@ -78,7 +78,7 @@ const navItems: NavItem[] = [
           },
           {
             title: "Cloud One",
-            href: "/services/cloud-managed/one",
+            href: "/services/cloud-management-services/cloud-one",
             label:
               "Our comprehensive service for AWS optimization, operations, and security",
           },

@@ -19,7 +19,7 @@ import { Separator } from "@/components/ui/separator";
 import TableOfContents from "@/components/table-of-content";
 
 import keystaticConfig from "../../../keystatic.config";
-import { config as markdocConfig } from "../../../markdoc.config";
+import markdocConfig from "../../../markdoc.config";
 
 const reader = createReader(process.cwd(), keystaticConfig);
 
