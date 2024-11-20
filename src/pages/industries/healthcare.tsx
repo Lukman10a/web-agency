@@ -77,7 +77,7 @@ const Healtcare = () => {
   return (
   <section>
     
-        <NewHero title="Healthcare on AWS" description="AI solutions and cloud-native technologies for every patient." showButton={false} icon={true} iconLink={icon} />
+        <NewHero title="Healthcare on AWS" description="AI solutions and cloud-native technologies for every patient." showButton={false} icon={true} iconLink={icon} ImgSrc="/"/>
     
    
       <CompaniesProfile cards={companyData} heading="Now more than ever patients need state of the art technology and systems" paragraph="You’ve got personnel shortages, compliance obligations, and regulatory pressures to contend with—but the industry isn’t standing still. We help you leverage cloud-native technologies and AI to ensure every patient gets optimal experiences and equitable outcomes while keeping their data private and secure." />

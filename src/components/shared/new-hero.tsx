@@ -103,11 +103,7 @@ const NewHero: React.FC<NewHeroProps> = ({
 
         <div className="image mx-auto w-[45%] max-w-[400px] self-end rounded-2xl bg-transparent md:w-full md:text-center sm:rounded-lg">
           <Image
-<<<<<<< HEAD
-            src="/public/assets/contact" // Example for static URL or image source
-=======
             src={ImgSrc}
->>>>>>> main
             alt="Security Image"
             className="w-full"
             width={500}
