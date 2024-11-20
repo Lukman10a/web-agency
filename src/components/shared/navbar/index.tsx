@@ -132,33 +132,33 @@ const navItems: NavItem[] = [
     items: [
       {
         title: "Healthcare",
-        href: "/industry/healthcare",
+        href: "/industries/healthcare",
         label:
           "Learn how we support healthcare organizations with cloud solutions",
       },
       {
         title: "Life Sciences",
-        href: "/industry/life-sciences",
+        href: "/industries/life-sciences",
         label: "Discover our cloud services tailored for life sciences",
       },
       {
         title: "Retail",
-        href: "/industry/retail",
+        href: "/industries/retail",
         label: "See how we help retail businesses thrive in the cloud",
       },
       {
         title: "Software",
-        href: "/industry/software",
+        href: "/industries/software",
         label: "Optimize software development with our cloud expertise",
       },
       {
         title: "Finance",
-        href: "/industry/finance",
+        href: "/industries/finance",
         label: "Explore cloud solutions designed for the finance sector",
       },
       {
         title: "Media",
-        href: "/industry/media",
+        href: "/industries/media",
         label: "Empower media companies with robust cloud capabilities",
       },
     ],
