@@ -110,6 +110,7 @@ const CloudOne = () => {
     return (
        <main>
             <NewHero
+                ImgSrc="/public/assets/contact"
                  title="Mission Cloud One"
                  description="Our comprehensive service for AWS optimization, operations, and security."
                  buttonText="Get Started"

@@ -38,7 +38,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
         <Image
           src={imgSrc}
           alt={altText}
-          className="max-h-[450px] w-full bg-slate-300"
+          className="max-h-[450px] w-full bg-slate-300 rounded-xl"
           width={500}
           height={500}
         />

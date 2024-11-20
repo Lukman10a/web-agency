@@ -38,10 +38,10 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
       <div className="flex w-1/2 flex-col self-center p-4 md:w-full sm:p-0">
         {tag && (
           <p className="mb-4 self-start rounded-full bg-transparent px-3 py-1 text-xs tracking-wide text-[#808080] ring-1 ring-[#808080]">
-            AWS PREMIER SERVICES & SOFTWARE PARTNER
+            Overview
           </p>
         )}
-        <h2 className="mb-6 w-[60%] font-sora text-4xl font-medium xl:w-[80%] lg:w-[100%] md:text-center sm:text-3xl">
+        <h2 className="mb-6  font-sora text-4xl font-medium xl:w-[80%] lg:w-[100%] md:text-center sm:text-3xl">
           {title}
         </h2>
         <p className="mb-4 text-xl text-[#808080] lg:text-lg md:text-justify">
