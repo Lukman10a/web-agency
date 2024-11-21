@@ -82,7 +82,7 @@ const Healtcare = () => {
    
       <CompaniesProfile cards={companyData} heading="Now more than ever patients need state of the art technology and systems" paragraph="You’ve got personnel shortages, compliance obligations, and regulatory pressures to contend with—but the industry isn’t standing still. We help you leverage cloud-native technologies and AI to ensure every patient gets optimal experiences and equitable outcomes while keeping their data private and secure." />
       
-      <StatsCard />
+      <StatsCard stats="100+" description="Healthcare & Life Sciences firms we’ve helped build on AWS" details="From neighborhood clinics to international nonprofits to some of the largest life sciences firms in the world—we’ve helped companies of all sizes and stages serve their patients."/>
 
       <div className="my-7 max-w-7xl overflow-hidden mx-auto">
         <SecondaryPartnersSlider />

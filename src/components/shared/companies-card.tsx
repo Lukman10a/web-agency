@@ -26,7 +26,7 @@ const CompaniesCard: React.FC<CompaniesCardProps> = ({
         <Image
           src={imageSrc}  
           alt="Card image"  
-          className="w-32"
+          className="w-36"
           width={500} 
           height={500}
         />
@@ -35,14 +35,14 @@ const CompaniesCard: React.FC<CompaniesCardProps> = ({
         {content}
       </p>
        
-        <p className='font-medium mb-6'>
+        <p className='font-medium'>
           {author}
         </p>
       
        {showButton && (
           <Button
             asChild
-            className="bottom-10 flex w-fit items-center justify-center rounded-full bg-orange-600 px-[2.5em] py-[1em] font-normal text-white hover:bg-darkblue-950 2md:text-[12px]"
+            className="mt-6 bottom-10 flex w-fit items-center justify-center rounded-full bg-orange-600 px-[2.5em] py-[1em] font-normal text-white hover:bg-darkblue-950 2md:text-[12px]"
           >
             <Link href="#">{buttonText}</Link>
           </Button>

@@ -22,7 +22,7 @@ const CompaniesWeServe: React.FC<CompaniesWeServeProps> = ({ detailsData }) => {
         Companies We Serve
       </h2>
 
-      <div className=" mb-16 flex w-full max-w-[1200px]  justify-center gap-8 2md:items-center md:mb-16 md:flex-col">
+      <div className=" mb-16 grid grid-cols-2 md:grid-cols-1 w-full max-w-[1200px]  justify-center gap-8 2md:items-center md:mb-16 md:flex-col">
         {detailsData.map((detail, index) => (
            <div className="w-full bg-orange-650 max-w-[600px] rounded-2xl p-6">
       <h4 className="mb-[.6em] font-sans text-2xl font-medium">{detail.title}</h4>
