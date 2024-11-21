@@ -1,18 +1,19 @@
-import Preverity from "@/components/preverity";
-import Resources from "@/components/resources";
-import CompaniesProfile from "@/components/shared/companies-profile";
-import CompaniesProfileTwo from "@/components/shared/companies-profiletwo";
-import CompaniesWeServe from "@/components/shared/companies-we-serve";
 import NewHero from "@/components/shared/new-hero";
-import OurCapabilities from "@/components/shared/our-capabilities";
-import SecondaryPartnersSlider from "@/components/shared/secondary-partners-slider";
-import ServicesCard from "@/components/shared/services-card";
-import StatsCard from "@/components/shared/stats-card";
 import React from "react";
+import icon from "/public/assets/newheroicon.png"
+import CompaniesProfile from "@/components/shared/companies-profile";
+import StatsCard from "@/components/shared/stats-card";
+import SecondaryPartnersSlider from "@/components/shared/secondary-partners-slider";
+import Preverity from "@/components/preverity";
+import CompaniesWeServe from "@/components/shared/companies-we-serve";
+import OurCapabilities from "@/components/shared/our-capabilities";
+import ServicesCard from "@/components/shared/services-card";
+import Resources from "@/components/resources";
+import CompaniesProfileTwo from "@/components/shared/companies-profiletwo";
 
 const companyData = {
   content: "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
-  imageSrc: "/svg/goodfood.svg",
+  imageSrc: "/svg/carehubs.svg",
   author: "Peter Philips | CTO, Recognize",
 }
 
@@ -24,20 +25,14 @@ const companyDataTwo = {
   showButton: true,
   }
 
+
+
+
 const detailsData = [
   {
     title: "Healthcare payers",
     description:"You handle the intricate balance of optimizing claim management, member retention, and health outcomes amidst a rapidly evolving industry. We help you build accessible member experiences that serve them and help you better understand their needs."
   },
-  {
-    title: "Healthcare providers",
-    description: "ou need to maintain patient confidentiality while streamlining operations in an increasingly digital landscape. We specialize in tailoring AWS infrastructure to meet the needs of providers, ensuring you have a secure, compliant, and scalable environment to deliver exceptional care.",
-  },
-  {
-    title: "Healthcare payers",
-    description:"You handle the intricate balance of optimizing claim management, member retention, and health outcomes amidst a rapidly evolving industry. We help you build accessible member experiences that serve them and help you better understand their needs."
-  },
-  
   {
     title: "Healthcare providers",
     description: "ou need to maintain patient confidentiality while streamlining operations in an increasingly digital landscape. We specialize in tailoring AWS infrastructure to meet the needs of providers, ensuring you have a secure, compliant, and scalable environment to deliver exceptional care.",
@@ -78,15 +73,16 @@ const ourCapabilitiesData= [
 ]
 
 
-const Software = () => {
+const Healtcare = () => {
   return (
-    <section>
-        <NewHero title="Software on AWS" description="Cloud and AI solutions for the next-generation of software" showButton={false} ImgSrc="/"/>
-
-      <CompaniesProfile cards={companyData} heading="Software is eating the world—and AI may be eating software" paragraph="Demand for content is constantly growing but the complexity of high-fidelity workflows and global delivery isn’t going away. We empower you with cloud-native and AI solutions to streamline production, create more engaging experiences, and seamlessly deliver to all platforms." />
+  <section>
+    
+        <NewHero title="Healthcare on AWS" description="AI solutions and cloud-native technologies for every patient." showButton={false} icon={true} iconLink={icon} ImgSrc="/"/>
+    
+   
+      <CompaniesProfile cards={companyData} heading="Now more than ever patients need state of the art technology and systems" paragraph="You’ve got personnel shortages, compliance obligations, and regulatory pressures to contend with—but the industry isn’t standing still. We help you leverage cloud-native technologies and AI to ensure every patient gets optimal experiences and equitable outcomes while keeping their data private and secure." />
       
-      <StatsCard stats="250+" description="Healthcare & Life Sciences firms we’ve helped build on AWS" details="From neighborhood clinics to international nonprofits to some of the largest life sciences firms in the world—we’ve helped companies of all sizes and stages serve their patients."/>
-      <StatsCard stats="1000+" description="Healthcare & Life Sciences firms we’ve helped build on AWS" details="From neighborhood clinics to international nonprofits to some of the largest life sciences firms in the world—we’ve helped companies of all sizes and stages serve their patients."/>
+      <StatsCard stats="100+" description="Healthcare & Life Sciences firms we’ve helped build on AWS" details="From neighborhood clinics to international nonprofits to some of the largest life sciences firms in the world—we’ve helped companies of all sizes and stages serve their patients."/>
 
       <div className="my-7 max-w-7xl overflow-hidden mx-auto">
         <SecondaryPartnersSlider />
@@ -98,10 +94,10 @@ const Software = () => {
       
       <OurCapabilities detailsData={ourCapabilitiesData} />
 
-       <ServicesCard
+      <ServicesCard
         imgSrc="/public/assets/contact"
         altText="Image"
-        title="Our media vision"
+        title="Our healthcare vision"
         description="A more just, efficient, and effective kind of healthcare is possible when payers and providers are given best-in-class cloud solutions. Collaborate with us to build the future of healthcare together."
         showTag={true}
         tagText="AWS PREMIER CONSULTING PARTNER"
@@ -125,8 +121,9 @@ const Software = () => {
       />
 
       <Resources />
-    </section>
-  );
+
+  </section>
+  )
 };
 
-export default Software;
+export default Healtcare;
