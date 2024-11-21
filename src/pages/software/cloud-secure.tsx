@@ -1,35 +1,35 @@
-import NewHero from "@/components/shared/new-hero";
-import WhatIsTeverse from "@/components/What-is-teverse";
-import AwsBuild from "@/components/aws-build";
 import React from "react";
-import FAQ from "@/components/shared/FAQ";
-import Resources from "@/components/resources";
-import ServicesCard from "@/components/shared/services-card";
 
-import clock from "/public/svg/awsBuild.svg";
-import padlock from "/public/assets/padlock.png";
-import cloudstrikes from "/public/assets/cloudstrikes.png";
-import circles from "/public/assets/circles.png";
 import Image from "next/image";
-import Preverity from "@/components/preverity";
 
+import circles from "/public/assets/circles.png";
+import cloudstrikes from "/public/assets/cloudstrikes.png";
+import padlock from "/public/assets/padlock.png";
+import clock from "/public/svg/awsBuild.svg";
+
+import AwsBuild from "@/components/aws-build";
+import Preverity from "@/components/preverity";
+import Resources from "@/components/resources";
+import FAQ from "@/components/shared/FAQ";
+import NewHero from "@/components/shared/new-hero";
+import ServicesCard from "@/components/shared/services-card";
+import WhatIsTeverse from "@/components/What-is-teverse";
 
 const CloudScore = () => {
-
-  const tools = [
-    {
-      title: "CrowdStrike",
-      description:
-        "CrowdStrike gives you a single unified view of your security in the Threat Graph, which combines sensor telemetry across all your monitored resources. We configure and tune its alerting, help you understand why an alert was generated, and can even help you remediate resources.",
-    },
-    {
-      title: "Mission Control",
-      subtitle: "The Cloud Services Platform That’s Purpose Built for AWS",
-      description:
-        "Mission Cloud Secure includes Mission Control, our cloud services platform for visibility, guidance, and support for your cloud. Mission Control visualizes your infrastructural health using the Well-Architected Framework, opens and tracks tickets with your CloudOps support team, gives resource visibility across your whole environment, and supports your ad-hoc engineering needs with Engineer Assist.",
-      image: "/assets/mission-control-placeholder.png", // Replace with your actual image path
-    },
-  ];
+  // const tools = [
+  //   {
+  //     title: "CrowdStrike",
+  //     description:
+  //       "CrowdStrike gives you a single unified view of your security in the Threat Graph, which combines sensor telemetry across all your monitored resources. We configure and tune its alerting, help you understand why an alert was generated, and can even help you remediate resources.",
+  //   },
+  //   {
+  //     title: "Mission Control",
+  //     subtitle: "The Cloud Services Platform That’s Purpose Built for AWS",
+  //     description:
+  //       "Mission Cloud Secure includes Mission Control, our cloud services platform for visibility, guidance, and support for your cloud. Mission Control visualizes your infrastructural health using the Well-Architected Framework, opens and tracks tickets with your CloudOps support team, gives resource visibility across your whole environment, and supports your ad-hoc engineering needs with Engineer Assist.",
+  //     image: "/assets/mission-control-placeholder.png", // Replace with your actual image path
+  //   },
+  // ];
 
   const cardData = [
     {
@@ -57,7 +57,7 @@ const CloudScore = () => {
       icon: cloudstrikes,
     },
   ];
-  
+
   const cardDataTwo = [
     {
       title: "24/7 Managed Detection & Response",
@@ -84,10 +84,10 @@ const CloudScore = () => {
       icon: clock,
     },
   ];
-  
+
   // Return statement
   return (
-    <div >
+    <div>
       {/* Hero Section */}
       <NewHero
         ImgSrc="/assets/cloud-secure.png"
@@ -104,7 +104,6 @@ const CloudScore = () => {
         mainDescription="Mission Cloud Secure is a SaaS application that delivers 24/7 security monitoring and incident response through a powerful combination of CrowdStrike's world-class security platform and Mission's AWS expertise. Protect your cloud resources, endpoints, and credentials while maintaining compliance and operational excellence."
         additionalDescription=""
       />
-
 
       <AwsBuild
         cards={cardData}
@@ -123,24 +122,48 @@ const CloudScore = () => {
       <Resources />
 
       <section className="py-8 px-4 bg-white max-w-6xl mx-auto font-sora">
-        <h2 className="text-4xl font-semibold mb-6 text-gray-800 text-center">Industry Leading Tools</h2>
+        <h2 className="text-4xl font-semibold mb-6 text-gray-800 text-center">
+          Industry Leading Tools
+        </h2>
         <div className="flex flex-col gap-14 items-center">
           <div className="flex sm:flex-col justify-between">
             <div className="w-1/2 sm:w-full flex flex-col justify-center">
               <h2 className="text-2xl font-semibold mb-2">CrowdStrike</h2>
-              <p>CrowdStrike gives you a single unified view of your security in the Threat Graph, which combines sensor telemetry across all your monitored resources. We configure and tune its alerting, help you understand why an alert was generated, and can even help you remediate resources.</p>
+              <p>
+                CrowdStrike gives you a single unified view of your security in
+                the Threat Graph, which combines sensor telemetry across all
+                your monitored resources. We configure and tune its alerting,
+                help you understand why an alert was generated, and can even
+                help you remediate resources.
+              </p>
             </div>
             <div className="sm:mx-auto sm:mt-4">
-              <Image src="/assets/checkers.png"  width={300} height={300} alt="checkers" />
+              <Image
+                src="/assets/checkers.png"
+                width={300}
+                height={300}
+                alt="checkers"
+              />
             </div>
           </div>
           <div className="flex sm:flex-col justify-between">
             <div className="w-1/2 sm:w-full flex flex-col justify-center">
               <h2 className="text-2xl font-semibold mb-2">Mission Control</h2>
-              <p>The Cloud Services Platform That&apos;s <span className="block sm:inline"> Purpose Built for AWS</span></p>
+              <p>
+                The Cloud Services Platform That&apos;s{" "}
+                <span className="block sm:inline"> Purpose Built for AWS</span>
+              </p>
             </div>
             <div className="w-1/2 sm:w-full flex flex-col justify-center">
-              <p>Mission Cloud Secure includes Mission Control, our cloud services platform for visibility, guidance, and support for your cloud. Mission Control visualizes your infrastructural health using the Well-Architected Framework, opens and tracks tickets with your CloudOps support team, gives resource visibility across your whole environment, and supports your ad-hoc engineering needs with Engineer Assist.</p>
+              <p>
+                Mission Cloud Secure includes Mission Control, our cloud
+                services platform for visibility, guidance, and support for your
+                cloud. Mission Control visualizes your infrastructural health
+                using the Well-Architected Framework, opens and tracks tickets
+                with your CloudOps support team, gives resource visibility
+                across your whole environment, and supports your ad-hoc
+                engineering needs with Engineer Assist.
+              </p>
             </div>
           </div>
         </div>
@@ -149,16 +172,15 @@ const CloudScore = () => {
       <Preverity />
 
       <ServicesCard
-          imgSrc="/assets/checkers.png"
-          altText="Custom Alt Text"
-          title="Strengthen Your Security Posture"
-          description="Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment."
-          showTag={true}
-          tagText="GET IN TOUCH"
-          index={1}
-          showButton={true}
-          buttonText="Schedule a call"
-      
+        imgSrc="/assets/checkers.png"
+        altText="Custom Alt Text"
+        title="Strengthen Your Security Posture"
+        description="Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment."
+        showTag={true}
+        tagText="GET IN TOUCH"
+        index={1}
+        showButton={true}
+        buttonText="Schedule a call"
       />
     </div>
   );
