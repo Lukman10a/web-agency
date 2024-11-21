@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import { createReader } from "@keystatic/core/reader";
 import Markdoc from "@markdoc/markdoc";
+import DOMPurify from "isomorphic-dompurify";
 import { Calendar, Tag } from "lucide-react";
 
 import { collectHeadings, Heading, HeadingNode } from "@/lib/utils";
@@ -39,7 +40,7 @@ interface TCaseStudy {
 
 interface TCaseStudyProps {
   case_study: TCaseStudy;
-  content: React.ReactNode;
+  content: string | React.ReactNode;
   headings: Heading[];
 }
 
@@ -50,6 +51,8 @@ const Details: React.FC<TCaseStudyProps> = ({
 }) => {
   const title = case_study?.title;
   const tags = case_study?.tags;
+
+  const sanitizedContent = DOMPurify.sanitize(content as string);
 
   return (
     <main className="">
@@ -84,7 +87,7 @@ const Details: React.FC<TCaseStudyProps> = ({
         <Image
           src={case_study.banner || blog_img}
           alt="Case Study cover image"
-          className="rounded-lg shadow-lg aspect-video w-full"
+          className="rounded-lg shadow-lg aspect-video w-full  object-cover"
           width={200}
           height={200}
         />
@@ -117,7 +120,7 @@ const Details: React.FC<TCaseStudyProps> = ({
 
         <ContentSection
           case_study={case_study}
-          content={content}
+          content={sanitizedContent}
           headings={headings}
         />
       </section>
