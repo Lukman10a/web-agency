@@ -10,6 +10,7 @@ import expert from "../../public/svg/expert.svg";
 import security from "../../public/svg/security.svg";
 import ArrowIcon from "./icons/arrow";
 import MoreClients from "./shared/more-clients";
+import AnimatedBorderTrail from "./ui/animated/border-trail-simple";
 import { Button } from "./ui/button";
 
 const benefits = [
@@ -91,31 +92,32 @@ export default function WhyChooseUs() {
         aria-labelledby="benefits-heading"
       >
         {benefits.map((benefit, index) => (
-          <motion.div
-            key={index}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={cardVariants}
-            custom={index}
-            whileHover="hover"
-          >
-            <article className="group relative cursor-pointer mx-auto flex max-w-[400px] flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
-              <motion.div variants={iconVariants}>
-                <Image
-                  src={benefit.img}
-                  alt={benefit.title}
-                  className="rounded-full border p-2 transition-transform duration-500 ease-in-out hover:rotate-6"
-                />
-              </motion.div>
-              <h3 className="text-2xl font-semibold sm:text-xl">
-                {benefit.title}
-              </h3>
-              <p className="text-[#808080] group-hover:text-black">
-                {benefit.description}
-              </p>
-            </article>
-          </motion.div>
+          <AnimatedBorderTrail key={index}>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={cardVariants}
+              custom={index}
+              whileHover="hover"
+            >
+              <article className="group relative cursor-pointer mx-auto flex max-w-[400px] flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
+                <motion.div variants={iconVariants}>
+                  <Image
+                    src={benefit.img}
+                    alt={benefit.title}
+                    className="rounded-full border p-2 transition-transform duration-500 ease-in-out hover:rotate-6"
+                  />
+                </motion.div>
+                <h3 className="text-2xl font-semibold sm:text-xl">
+                  {benefit.title}
+                </h3>
+                <p className="text-[#808080] group-hover:text-black">
+                  {benefit.description}
+                </p>
+              </article>
+            </motion.div>
+          </AnimatedBorderTrail>
         ))}
       </section>
 
