@@ -9,6 +9,7 @@ const TeverseControlHero: React.FC = () => {
           background:
             "linear-gradient(to top right, rgba(50, 150, 245, 0.5), rgba(255, 120, 57, 0.5))",
         }}
+
       >
         <div className="relative h-screen space-y-4 pt-7 sm:h-80">
           <p className="mb-4 inline-block rounded-full bg-transparent px-3 py-1 text-xs tracking-wide text-[#808080] ring-1 ring-[#808080]">
