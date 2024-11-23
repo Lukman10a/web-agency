@@ -7,6 +7,7 @@ import image from "../../public/assets/cardimage1.png";
 import ArrowIcon from "./icons/arrow";
 import { Button } from "./ui/button";
 
+
 const stats = [
   { count: "1000+", label: "Nodes" },
   { count: "100+", label: "Clusters" },
@@ -16,7 +17,13 @@ const stats = [
 const Booking: React.FC = () => (
   <section className="mx-4">
     {/* Let's Talk Card */}
+    
+
     <div className="container mx-auto my-10 max-w-7xl rounded-lg border p-6">
+           
+    
+
+     
       <div className="mx-auto flex items-center gap-6 rounded-2xl bg-[#fcfcfc] p-6 md:flex-col">
         <Image
           src={image}
@@ -26,7 +33,7 @@ const Booking: React.FC = () => (
           className="w-1/2 sm:w-full"
         />
         <div className="w-1/2 sm:w-full">
-          <h3 className="mb-4 font-sora text-5xl font-bold md:text-3xl">
+          <h3 className="mb-4 font-sora text-5xl font-bold md:text-3xl ">
             Let’s talk!
           </h3>
           <p className="mb-6">
@@ -45,7 +52,8 @@ const Booking: React.FC = () => (
             </Link>
           </Button>
         </div>
-      </div>
+        </div>
+       
     </div>
 
     {/* Stats */}
@@ -65,7 +73,9 @@ const Booking: React.FC = () => (
           <p className="text-gray-500">{stat.label}</p>
         </div>
       ))}
-    </div>
+       
+      </div>
+      
   </section>
 );
 

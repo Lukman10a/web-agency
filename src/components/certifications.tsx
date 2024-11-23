@@ -10,6 +10,7 @@ import security from "../../public/assets/security.png";
 import star from "../../public/assets/starfour.png";
 import sysops from "../../public/assets/sysops.png";
 
+
 // const badges = [
 //   { src: sysops, alt: "AWS SysOps Administrator Badge" },
 //   { src: security, alt: "AWS Security Badge" },
