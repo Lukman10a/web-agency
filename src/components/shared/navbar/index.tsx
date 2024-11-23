@@ -30,36 +30,36 @@ export interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    title: "Software",
-    // href: "/software",
+    title: "Solutions",
+    label: "Explore our cloud solutions and services for your business needs",
     items: [
       {
         title: "Teverse Control",
-        href: "/software/teverse-control",
+        href: "/solutions/teverse-control",
         label:
           "Cloud services platform providing visibility, guidance & support for your cloud",
       },
       {
         title: "Teverse Gateway",
-        href: "/software/teverse-gateway",
+        href: "/solutions/teverse-gateway",
         label:
           "AWS guidance for efficient cloud growth and foundational best practices",
       },
       {
         title: "Teverse Engagements",
-        href: "/software/cloud-engagements",
+        href: "/solutions/cloud-engagements",
         label:
           "Get transparent reporting and live updates on your team’s status",
       },
       {
         title: "Teverse Cloud Score",
-        href: "/software/cloud-score",
+        href: "/solutions/cloud-score",
         label:
           "Proprietary scoring of your cloud architecture against AWS best practices",
       },
       {
         title: "Teverse Cloud Secure",
-        href: "/software/cloud-secure",
+        href: "/solutions/cloud-secure",
         label: "Fully managed security, detection, and response",
       },
     ],
@@ -121,11 +121,11 @@ const navItems: NavItem[] = [
       },
     ],
   },
-  {
-    title: "Solution",
-    href: "/solution",
-    label: "Explore our cloud solutions and services for your business needs",
-  },
+  // {
+  //   title: "Solution",
+  //   href: "/solution",
+  //   label: "Explore our cloud solutions and services for your business needs",
+  // },
   {
     title: "Industries",
     label: "Explore the industries we serve with tailored cloud solutions",
@@ -287,8 +287,9 @@ const Navbar = () => {
     <nav
       className={cn(
         "bg-white px-6 font-mono text-black shadow-md lg:px-8 sm:px-6",
-        pathname !== "/" &&
-          "bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] shadow-none",
+        "bg-nav-gradient shadow-none",
+        // pathname !== "/" &&
+        //   "bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] shadow-none",
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between">

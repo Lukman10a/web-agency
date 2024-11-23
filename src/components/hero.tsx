@@ -1,47 +1,50 @@
-import React, { Fragment } from "react";
+import React from "react";
 
+import Image from "next/image";
 import Link from "next/link";
 
 import ArrowIcon from "./icons/arrow";
 import { PartnersSlider } from "./shared/partners-slider";
-import WaveReveal from "./ui/animated/wave-reveal";
+import AnimatedBorderTrail from "./ui/animated/border-trail-simple";
+import { TextLoop } from "./ui/animated/text-loop";
 import { Button } from "./ui/button";
-import FlickeringGrid from "./ui/flickering-grid";
 
 const Hero = () => {
   return (
-    <Fragment>
-      <header className="relative isolate mx-auto w-11/12 max-w-7xl overflow-hidden rounded-xl bg-darkblue-950 bg-cover px-10 py-28 md:w-full md:rounded-none md:px-4">
-        <FlickeringGrid
-          className="absolute inset-0 z-0 size-full"
-          squareSize={4}
-          gridGap={6}
-          color="#6B7280"
-          maxOpacity={0.5}
-          flickerChance={0.15}
-          width={1400}
-          height={800}
-        />
-        <>
-          <div className="relative z-[1] text-center">
-            <h1 className="font-sora text-6xl font-extrabold tracking-tight text-white md:text-3xl">
-              <WaveReveal
-                mode="word"
-                className="overflow-hidden text-foreground"
-                text="SECURE YOUR CLOUD,"
-              />
-              <WaveReveal
-                mode="word"
-                className="overflow-hidden"
-                text="PROTECT YOUR BUSINESS"
-              />
+    <header className="min-h-[60vh]">
+      <div className="bg-main-gradient">
+        <div className="relative flex gap-8 isolate mx-auto w-11/12 max-w-7xl overflow-hidden rounded-xl  bg-cover px-10 py-14 md:w-full md:px-4 lg:flex-col">
+          <div className="relative z-[1] flex-1">
+            <h1 className="font-sora text-6xl font-extrabold lg:text-4xl tracking-tight md:text-3xl sm:text-2xl">
+              <span>Transforming Tomorrow with:</span> <br className="" />
+              <TextLoop preset="slide-up" interval={2.5}>
+                <span>Cloud Consulting</span>
+                <span>IDAM Expertise</span>
+                <span>Gen AI Innovations</span>
+              </TextLoop>
             </h1>
-            <p className="mt-3 font-mono text-base text-gray-300 lg:mx-0 md:mt-5 md:text-xl sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg">
+            <p className="mt-3 font-mono text-base  lg:mx-0 md:mt-5 md:text-xl sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg">
               We provide expert consulting services to help businesses achieve
               secure, efficient, and scalable cloud environments. From cloud
               migration to security audits, we&lsquo;ve got you covered
             </p>
-            <div className="mt-8 flex items-center justify-center gap-4 font-mono md:flex-wrap sm:mt-5">
+            <div className="mt-8 flex items-center gap-4 font-mono md:flex-wrap sm:mt-5">
+              <AnimatedBorderTrail
+                className="rounded-full bg-zinc-600 hover:bg-zinc-500 md:w-full"
+                contentClassName="rounded-full bg-[#F5F6F7]"
+                trailColor="white"
+              >
+                <Button
+                  asChild
+                  variant={"outline"}
+                  className="rounded-full px-8 py-3 md:text-base font-medium md:w-full text-lg text-center"
+                >
+                  <Link href="#" className="flex items-center justify-center">
+                    GET FREE CONSULTATION. <ArrowIcon />
+                  </Link>
+                </Button>
+              </AnimatedBorderTrail>
+
               <Button
                 asChild
                 className="flex w-fit items-center justify-center rounded-full border border-black bg-orange-600 px-8 py-3 text-base font-medium text-white hover:bg-orange-700 md:w-full md:px-10 md:py-4 md:text-lg"
@@ -50,23 +53,23 @@ const Hero = () => {
                   OUR SERVICES <ArrowIcon />
                 </Link>
               </Button>
-              <Button
-                asChild
-                variant={"outline"}
-                className="w-fit rounded-full px-8 py-3 text-base font-medium text-white md:w-full md:px-10 md:py-4 md:text-lg"
-              >
-                <Link href="#" className="flex items-center justify-center">
-                  GET A FREE CONSULTATION. <ArrowIcon />
-                </Link>
-              </Button>
             </div>
           </div>
-        </>
-      </header>
-      <div className="my-7 max-w-7xl overflow-hidden">
+          <div className="flex-[2]">
+            <Image
+              src={"/svg/hero-illustration.svg"}
+              alt="hero-illustration"
+              height={500}
+              width={500}
+              className="h-full w-full"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="mx-auto overflow-hidden bg-white">
         <PartnersSlider />
       </div>
-    </Fragment>
+    </header>
   );
 };
 

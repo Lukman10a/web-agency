@@ -36,6 +36,15 @@ const config: typeof Config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "main-gradient":
+          "linear-gradient(to top right, rgba(50, 150, 245, 0.5), rgba(255, 120, 57, 0.5))",
+        "nav-gradient":
+          "linear-gradient(to right,rgba(8,19,72,0.1), rgba(255, 149, 87, 0.2))",
+        // to-[rgba(255,149,87,0.1)
+        "secondary-gradient":
+          "linear-gradient(to right, rgba(80, 206, 245, 0.2), rgba(255, 149, 87, 0.2))",
+      },
       fontFamily: {
         sans: ["var(--font-noto-sans)"],
         sora: ["var(--font-sora)"],
@@ -182,6 +191,11 @@ const config: typeof Config = {
             transform: "translateY(0)",
           },
         },
+        "bg-position": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "100%": { backgroundPosition: "100% 50%" },
+        },
+
         "content-blur": {
           "0%": {
             filter: "blur(0.3rem)",

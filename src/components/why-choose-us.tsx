@@ -10,7 +10,6 @@ import expert from "../../public/svg/expert.svg";
 import security from "../../public/svg/security.svg";
 import ArrowIcon from "./icons/arrow";
 import MoreClients from "./shared/more-clients";
-import { BorderTrail } from "./ui/animated/border-trail";
 import { Button } from "./ui/button";
 
 const benefits = [
@@ -102,7 +101,6 @@ export default function WhyChooseUs() {
             whileHover="hover"
           >
             <article className="group relative cursor-pointer mx-auto flex max-w-[400px] flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
-              <BorderTrail size={150} className="" />
               <motion.div variants={iconVariants}>
                 <Image
                   src={benefit.img}

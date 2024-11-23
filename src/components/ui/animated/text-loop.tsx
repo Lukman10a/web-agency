@@ -19,6 +19,7 @@ type TextLoopProps = {
 type PresetName =
   | "fade"
   | "slide"
+  | "slide-up"
   | "bounce"
   | "scale"
   | "rotate"
@@ -37,6 +38,11 @@ const presets: Record<PresetName, TextLoopProps["variants"]> = {
     initial: { x: 20, opacity: 0 },
     animate: { x: 0, opacity: 1 },
     exit: { x: -20, opacity: 0 },
+  },
+  "slide-up": {
+    initial: { y: 20, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+    exit: { y: -20, opacity: 0 },
   },
   bounce: {
     initial: { y: 20, opacity: 0 },
