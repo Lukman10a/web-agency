@@ -9,6 +9,7 @@ import Link from "next/link";
 import postImage from "/public/assets/post-image.png";
 import { createReader } from "@keystatic/core/reader";
 import Markdoc from "@markdoc/markdoc";
+import DOMPurify from "isomorphic-dompurify";
 import { Calendar } from "lucide-react";
 import { LuTwitter } from "react-icons/lu";
 import { PiInstagramLogo, PiWhatsappLogo } from "react-icons/pi";
@@ -86,11 +87,16 @@ const PostDetails: React.FC<PostDetailsProps> = ({
   content,
   headings,
 }) => {
+  const sanitizedContent = DOMPurify.sanitize(content as string);
   return (
     <section>
       <div className="w-full">
         <Header post={post} />
-        <ContentSection post={post} content={content} headings={headings} />
+        <ContentSection
+          post={post}
+          content={sanitizedContent}
+          headings={headings}
+        />
         <TagsSection tags={post.tags} />
         <SimilarPosts similarPosts={similarPosts} />
         <Newsletter />

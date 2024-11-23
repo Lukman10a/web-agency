@@ -1,6 +1,7 @@
 import React from "react";
 
 import AwsBuildCard from "./shared/aws-build-card";
+import { AnimatedGroup } from "./ui/animated/animated-groups";
 
 type Card = {
   title: string;
@@ -27,7 +28,39 @@ const AwsBuild: React.FC<AwsBuildProps> = ({ cards, tag, title, subtitle }) => {
         </h3>
         <p className="text-[#808080] lg:text-[14px] md:mx-auto">{subtitle}</p>
       </div>
-      <div className="grid w-full grid-cols-2 gap-6 2md:gap-4 md:grid-cols-1">
+      <AnimatedGroup
+        className="grid w-full grid-cols-2 gap-6 2md:gap-4 md:grid-cols-1"
+        viewport={{
+          once: false, // Animation repeats each time
+          amount: 0.5, // Trigger when 50% visible
+          margin: "10px", // Start animation 100px before entering viewport
+        }}
+        // variants={{
+        //   container: {
+        //     hidden: { opacity: 0 },
+        //     visible: {
+        //       opacity: 1,
+        //       transition: {
+        //         staggerChildren: 0.3,
+        //       },
+        //     },
+        //   },
+        //   item: {
+        //     hidden: { opacity: 0, y: 40, filter: "blur(4px)" },
+        //     visible: {
+        //       opacity: 1,
+        //       y: 0,
+        //       filter: "blur(0px)",
+        //       transition: {
+        //         duration: 1.2,
+        //         type: "spring",
+        //         bounce: 0.3,
+        //       },
+        //     },
+        //   },
+        // }}
+        preset="scale"
+      >
         {cards.map((card, index) => (
           <AwsBuildCard
             key={index}
@@ -37,7 +70,7 @@ const AwsBuild: React.FC<AwsBuildProps> = ({ cards, tag, title, subtitle }) => {
             altText="awsBuild card image"
           />
         ))}
-      </div>
+      </AnimatedGroup>
     </section>
   );
 };
