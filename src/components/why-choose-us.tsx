@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Image from "next/image";
+
+import { motion } from "framer-motion";
 
 import improvedsecurity from "../../public/assets/improvedsecurity.png";
 import efficiency from "../../public/svg/efficiency.svg";
@@ -31,15 +33,70 @@ const benefits = [
   },
 ];
 
+// Animation Variants for cards
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 }, // Initial state
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.5,
+    },
+  }),
+  up: { opacity: 1, y: 50 },
+  down: { opacity: 1, y: -50 },
+  hover: {
+    scale: 1.05, // Slightly zoom the card on hover
+    transition: { type: "spring", stiffness: 300 },
+  },
+};
+
+const iconVariants = {
+  hover: {
+    rotate: [0, 16, -16, 0], // Subtle rotation effect
+    transition: { duration: 0.6, ease: "easeInOut" },
+  },
+};
+
 export default function WhyChooseUs() {
+  const [scrollDirection, setScrollDirection] = useState<"up" | "down">("down");
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        setScrollDirection("down");
+      } else if (currentScrollY < lastScrollY) {
+        setScrollDirection("up");
+      }
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className="py-10">
       {/* Section: Why Choose Us */}
-
-      <h1 className="mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold leading-tight lg:text-[2rem] md:text-[1.6rem]">
-        Why <span className="text-orange-650">Choose</span> Us? <br /> Key
-        Benefits for Your Business
-      </h1>
+      <motion.div
+        className="mb-10"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0, transition: { duration: 1.4 } },
+        }}
+      >
+        <h1 className="mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold leading-tight lg:text-[2rem] md:text-[1.6rem]">
+          Why <span className="text-orange-650">Choose</span> Us? <br /> Key
+          Benefits for Your Business
+        </h1>
+      </motion.div>
 
       {/* Benefits Section */}
       <section
@@ -47,20 +104,32 @@ export default function WhyChooseUs() {
         aria-labelledby="benefits-heading"
       >
         {benefits.map((benefit, index) => (
-          <article
+          <motion.div
             key={index}
-            className="rounde mx-auto flex max-w-[400px] flex-col items-center space-y-4 rounded-2xl border p-8 text-center"
+            initial="hidden"
+            animate={scrollDirection}
+            whileInView="visible"
+            viewport={{ once: false }}
+            variants={cardVariants}
+            custom={index}
+            whileHover="hover"
           >
-            <Image
-              src={benefit.img}
-              alt={benefit.title}
-              className="rounded-full border p-2"
-            />
-            <h3 className="text-2xl font-semibold sm:text-xl">
-              {benefit.title}
-            </h3>
-            <p className="text-[#808080]">{benefit.description}</p>
-          </article>
+            <article className="group relative cursor-pointer mx-auto flex max-w-[400px] flex-col items-center space-y-4 rounded-2xl border p-8 text-center shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
+              <motion.div variants={iconVariants}>
+                <Image
+                  src={benefit.img}
+                  alt={benefit.title}
+                  className="rounded-full border p-2 transition-transform duration-500 ease-in-out hover:rotate-6"
+                />
+              </motion.div>
+              <h3 className="text-2xl font-semibold sm:text-xl">
+                {benefit.title}
+              </h3>
+              <p className="text-[#808080] group-hover:text-black">
+                {benefit.description}
+              </p>
+            </article>
+          </motion.div>
         ))}
       </section>
 
@@ -90,7 +159,7 @@ export default function WhyChooseUs() {
             custom architecture with advanced threat detection and strict access
             controls, reducing incidents and boosting compliance.
           </p>
-          <Button className="flex w-fit items-center gap-4 rounded-3xl border border-[#081348] bg-orange-650 font-sans text-white xl:text-[12px] md:w-full sm:mb-4">
+          <Button className="flex w-fit items-center gap-4 rounded-3xl border border-[#081348] bg-orange-650 font-sans text-white transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-white hover:text-orange-650 xl:text-[12px] md:w-full sm:mb-4">
             <span>Discover Solutions</span>
             <ArrowIcon />
           </Button>
