@@ -6,7 +6,7 @@ import Link from "next/link";
 import image from "../../public/assets/cardimage1.png";
 import ArrowIcon from "./icons/arrow";
 import { Button } from "./ui/button";
-
+import { BorderTrail } from "./ui/animated/border-trail";
 
 const stats = [
   { count: "1000+", label: "Nodes" },
@@ -19,12 +19,20 @@ const Booking: React.FC = () => (
     {/* Let's Talk Card */}
     
 
-    <div className="container mx-auto my-10 max-w-7xl rounded-lg border p-6">
+    <div className="relative container mx-auto my-10 max-w-7xl rounded-lg border p-6">
            
     
+       
 
+ <BorderTrail
+          style={{
+            boxShadow:
+              "0px 0px 60px 30px rgb(255 255 255 / 50%), 0 0 100px 60px rgb(0 0 0 / 50%), 0 0 140px 90px rgb(0 0 0 / 50%)",
+          }}
+      />
      
-      <div className="mx-auto flex items-center gap-6 rounded-2xl bg-[#fcfcfc] p-6 md:flex-col">
+      <div className=" mx-auto flex items-center gap-6 rounded-2xl bg-[#fcfcfc] p-6 md:flex-col">
+       
         <Image
           src={image}
           alt="Card image"

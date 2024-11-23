@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
 import Image from "next/image";
 
@@ -9,6 +10,8 @@ import devops from "../../public/assets/devops.png";
 import security from "../../public/assets/security.png";
 import star from "../../public/assets/starfour.png";
 import sysops from "../../public/assets/sysops.png";
+
+import { AnimatedGroup } from "./ui/animated/animated-groups";
 
 
 // const badges = [
@@ -125,6 +128,15 @@ const SecurityCertifications: React.FC = () => {
         <div className="mx-auto flex max-w-[1200px] items-center justify-center gap-12 px-5 lg:space-y-0 2md:flex-col md:gap-8">
           {/* First Row of Badges */}
           <div className="flex gap-5">
+          
+             <AnimatedGroup
+        className="flex gap-5"
+        viewport={{
+          once: false, // Animation repeats each time
+          amount: 0.5, // Trigger when 50% visible
+          margin: "10px", // Start animation 100px before entering viewport
+        }} preset="scale"
+      >
             <Image
               width={500}
               height={500}
@@ -146,11 +158,22 @@ const SecurityCertifications: React.FC = () => {
               src={archi}
               alt="AWS Solutions Architect Badge"
               className="w-32 md:h-24 md:w-24"
-            />
+              />
+               </AnimatedGroup>
           </div>
 
           {/* Second Row of Badges */}
           <div className="flex gap-5">
+              <AnimatedGroup
+        className="flex gap-5"
+        viewport={{
+          once: false, // Animation repeats each time
+          amount: 0.5, // Trigger when 50% visible
+          margin: "10px", // Start animation 100px before entering viewport
+        }} preset="scale"
+            >
+              
+     
             <Image
               width={500}
               height={500}
@@ -171,8 +194,10 @@ const SecurityCertifications: React.FC = () => {
               src={data}
               alt="AWS Data Analytics Badge"
               className="w-32 md:h-24 md:w-24"
-            />
-          </div>
+              />
+               </AnimatedGroup>
+            </div>
+           
         </div>
       </div>
     </section>
