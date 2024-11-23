@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import Image from "next/image";
 
@@ -10,6 +10,7 @@ import expert from "../../public/svg/expert.svg";
 import security from "../../public/svg/security.svg";
 import ArrowIcon from "./icons/arrow";
 import MoreClients from "./shared/more-clients";
+import { BorderTrail } from "./ui/animated/border-trail";
 import { Button } from "./ui/button";
 
 const benefits = [
@@ -33,25 +34,34 @@ const benefits = [
   },
 ];
 
-// Animation Variants for cards
-const cardVariants = {
-  hidden: { opacity: 0, y: 50 }, // Initial state
-  visible: (i: number) => ({
+// Animation Variants for section header
+const headerVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
     opacity: 1,
     y: 0,
+    transition: { duration: 1.4 },
+  },
+};
+
+// Animation Variants for cards
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: (i: number) => ({
+    opacity: 1,
+    scale: 1,
     transition: {
-      delay: i * 0.2,
+      delay: i * 0.2, // Stagger the appearance of each card
       duration: 0.5,
     },
   }),
-  up: { opacity: 1, y: 50 },
-  down: { opacity: 1, y: -50 },
   hover: {
     scale: 1.05, // Slightly zoom the card on hover
     transition: { type: "spring", stiffness: 300 },
   },
 };
 
+// Animation for the icon
 const iconVariants = {
   hover: {
     rotate: [0, 16, -16, 0], // Subtle rotation effect
@@ -60,25 +70,6 @@ const iconVariants = {
 };
 
 export default function WhyChooseUs() {
-  const [scrollDirection, setScrollDirection] = useState<"up" | "down">("down");
-
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
-
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY) {
-        setScrollDirection("down");
-      } else if (currentScrollY < lastScrollY) {
-        setScrollDirection("up");
-      }
-      lastScrollY = currentScrollY;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <section className="py-10">
       {/* Section: Why Choose Us */}
@@ -87,12 +78,9 @@ export default function WhyChooseUs() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={{
-          hidden: { opacity: 0, y: 50 },
-          visible: { opacity: 1, y: 0, transition: { duration: 1.4 } },
-        }}
+        variants={headerVariants}
       >
-        <h1 className="mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold leading-tight lg:text-[2rem] md:text-[1.6rem]">
+        <h1 className="mx-auto mb-[1em] animate-fade-in text-center font-sora text-[2.5rem] font-semibold leading-tight lg:text-[2rem] md:text-[1.6rem]">
           Why <span className="text-orange-650">Choose</span> Us? <br /> Key
           Benefits for Your Business
         </h1>
@@ -100,21 +88,21 @@ export default function WhyChooseUs() {
 
       {/* Benefits Section */}
       <section
-        className="mx-auto mb-24 flex w-[90%] max-w-[1200px] gap-12 p-4 xl:gap-6 lg:flex-col sm:mb-12"
+        className="mx-auto mb-24 flex w-[90%] max-w-[1200px] gap-12 p-4 animate-fade-up xl:gap-6 lg:flex-col sm:mb-12"
         aria-labelledby="benefits-heading"
       >
         {benefits.map((benefit, index) => (
           <motion.div
             key={index}
             initial="hidden"
-            animate={scrollDirection}
             whileInView="visible"
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             variants={cardVariants}
             custom={index}
             whileHover="hover"
           >
-            <article className="group relative cursor-pointer mx-auto flex max-w-[400px] flex-col items-center space-y-4 rounded-2xl border p-8 text-center shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
+            <article className="group relative cursor-pointer mx-auto flex max-w-[400px] flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
+              <BorderTrail size={150} className="" />
               <motion.div variants={iconVariants}>
                 <Image
                   src={benefit.img}
@@ -135,7 +123,7 @@ export default function WhyChooseUs() {
 
       {/* Case Study Section */}
       <section
-        className="m-10 mx-auto flex w-11/12 max-w-7xl items-center gap-10 rounded-2xl bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] px-28 py-8 xl:px-16 lg:gap-6 lg:px-8 lg:py-4 md:flex-col md:py-8 sm:p-6"
+        className="m-10 mx-auto flex w-11/12 max-w-7xl items-center gap-10 rounded-2xl bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] px-28 py-8 animate-fade-up xl:px-16 lg:gap-6 lg:px-8 lg:py-4 md:flex-col md:py-8 sm:p-6"
         aria-labelledby="case-study-heading"
       >
         <div className="w-1/2 flex-1 md:w-full">
