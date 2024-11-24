@@ -11,6 +11,7 @@ import security from "../../public/svg/security.svg";
 import ArrowIcon from "./icons/arrow";
 import MoreClients from "./shared/more-clients";
 import AnimatedBorderTrail from "./ui/animated/border-trail-simple";
+import { InView } from "./ui/animated/in-view";
 import { Button } from "./ui/button";
 
 const benefits = [
@@ -92,65 +93,111 @@ export default function WhyChooseUs() {
         aria-labelledby="benefits-heading"
       >
         {benefits.map((benefit, index) => (
-          <AnimatedBorderTrail key={index}>
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={cardVariants}
-              custom={index}
-              whileHover="hover"
-            >
-              <article className="group relative mx-auto flex max-w-[400px] transform cursor-pointer flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
-                <motion.div variants={iconVariants}>
-                  <Image
-                    src={benefit.img}
-                    alt={benefit.title}
-                    className="rounded-full border p-2 transition-transform duration-500 ease-in-out hover:rotate-6"
-                  />
-                </motion.div>
-                <h3 className="text-2xl font-semibold sm:text-xl">
-                  {benefit.title}
-                </h3>
-                <p className="text-[#808080] group-hover:text-black">
-                  {benefit.description}
-                </p>
-              </article>
-            </motion.div>
-          </AnimatedBorderTrail>
+          <InView
+            variants={{
+              hidden: { opacity: 0, x: -100, filter: "blur(4px)" },
+              visible: { opacity: 1, x: 0, filter: "blur(0px)" },
+            }}
+            viewOptions={{ margin: "0px 0px -200px 0px" }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            key={index}
+          >
+            <AnimatedBorderTrail>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={cardVariants}
+                custom={index}
+                whileHover="hover"
+              >
+                <article className="group relative mx-auto flex max-w-[400px] transform cursor-pointer flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
+                  <motion.div variants={iconVariants}>
+                    <Image
+                      src={benefit.img}
+                      alt={benefit.title}
+                      className="rounded-full border p-2 transition-transform duration-500 ease-in-out hover:rotate-6"
+                    />
+                  </motion.div>
+                  <h3 className="text-2xl font-semibold sm:text-xl">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-[#808080] group-hover:text-black">
+                    {benefit.description}
+                  </p>
+                </article>
+              </motion.div>
+            </AnimatedBorderTrail>
+          </InView>
         ))}
       </section>
 
       {/* Case Study Section */}
       <section
-        className="animate-fade-up m-10 mx-auto flex w-11/12 max-w-7xl items-center gap-10 rounded-2xl bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] p-8 lg:gap-6 lg:p-6 md:flex-col md:p-4"
+        className="m-10 mx-auto flex w-11/12 max-w-7xl items-center gap-10 rounded-2xl bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] p-8 lg:gap-6 lg:p-6 md:flex-col md:p-4"
         aria-labelledby="case-study-heading"
       >
         <div className="w-1/2 flex-1 md:w-full">
-          <Image
-            src={improvedsecurity}
-            alt="Security Image"
-            className="w-full"
-          />
+          <InView
+            variants={{
+              hidden: { opacity: 0, x: -100, filter: "blur(4px)" },
+              visible: { opacity: 1, x: 0, filter: "blur(0px)" },
+            }}
+            viewOptions={{ margin: "0px 0px -200px 0px" }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            <Image
+              src={improvedsecurity}
+              alt="Security Image"
+              className="w-full"
+            />
+          </InView>
         </div>
 
         <div className="flex w-1/2 flex-1 flex-col md:w-full md:text-center">
-          <h3
-            id="case-study-heading"
-            className="mb-[.7em] w-[95%] font-sora text-3xl font-semibold xl:text-2xl lg:text-[20px] lg:leading-tight md:w-full"
+          <InView
+            variants={{
+              hidden: { opacity: 0, x: 90, filter: "blur(4px)" },
+              visible: { opacity: 1, x: 0, filter: "blur(0px)" },
+            }}
+            viewOptions={{ margin: "0px 0px -200px 0px" }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            Improved Security Posture for a Financial Firm with a Custom
-            Security Architecture
-          </h3>
-          <p className="mb-[1.5em] w-full">
-            We improved a financial firm&apos;s security by implementing a
-            custom architecture with advanced threat detection and strict access
-            controls, reducing incidents and boosting compliance.
-          </p>
-          <Button className="flex w-fit items-center gap-4 rounded-3xl border border-[#081348] bg-orange-650 font-sans text-white transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-white hover:text-orange-650 xl:text-[12px] md:w-full sm:mb-4">
-            <span>Discover Solutions</span>
-            <ArrowIcon />
-          </Button>
+            <h3
+              id="case-study-heading"
+              className="mb-[.7em] w-[95%] font-sora text-3xl font-semibold xl:text-2xl lg:text-[20px] lg:leading-tight md:w-full"
+            >
+              Improved Security Posture for a Financial Firm with a Custom
+              Security Architecture
+            </h3>
+          </InView>
+          <InView
+            variants={{
+              hidden: { opacity: 0, x: 70, filter: "blur(4px)" },
+              visible: { opacity: 1, x: 0, filter: "blur(0px)" },
+            }}
+            viewOptions={{ margin: "0px 0px -200px 0px" }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            <p className="mb-[1.5em] w-full">
+              We improved a financial firm&apos;s security by implementing a
+              custom architecture with advanced threat detection and strict
+              access controls, reducing incidents and boosting compliance.
+            </p>
+          </InView>
+          <InView
+            variants={{
+              hidden: { opacity: 0, x: 50, filter: "blur(4px)" },
+              visible: { opacity: 1, x: 0, filter: "blur(0px)" },
+            }}
+            viewOptions={{ margin: "0px 0px -200px 0px" }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            <Button className="group flex w-fit items-center gap-4 rounded-3xl border border-[#081348] bg-orange-650 font-sans text-white transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-white hover:text-orange-650 xl:text-[12px] md:w-full sm:mb-4">
+              <span>Discover Solutions</span>
+              <ArrowIcon />
+            </Button>
+          </InView>
         </div>
       </section>
       <MoreClients />

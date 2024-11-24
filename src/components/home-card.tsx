@@ -45,7 +45,7 @@ const HomeCard: React.FC<HomeCardProps> = ({
           <span className="flex items-center justify-center rounded-3xl border border-darkblue-900 bg-orange-600 p-[.3em] text-[.85em] font-extralight text-darkblue-900 sm:text-[1rem]">
             {titleIcon}
           </span>
-          <span className="min-w-min sm:text-[1rem]">CONSULTING</span>
+          {/* <span className="min-w-min sm:text-[1rem]">CONSULTING</span> */}
         </h3>
 
         <p className="mb-[1.5em] w-[90%] font-sans text-lg leading-normal text-gray-500 2md:w-[100%] md:text-base">
