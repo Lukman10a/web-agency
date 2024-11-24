@@ -1,4 +1,5 @@
 import React from "react";
+import { AnimatedGroup } from "../ui/animated/animated-groups";
 
 interface Detail {
   title: string;
@@ -16,8 +17,18 @@ const CompaniesWeServe: React.FC<CompaniesWeServeProps> = ({ detailsData }) => {
         Companies We Serve
       </h2>
 
-      <div className=" mb-16 grid grid-cols-2 md:grid-cols-1 w-full max-w-[1200px]  justify-center gap-8 2md:items-center md:mb-16 md:flex-col">
-        {detailsData.map((detail, index) => (
+     
+         <AnimatedGroup
+        className=" mb-16 grid grid-cols-2 md:grid-cols-1 w-full max-w-[1200px]  justify-center gap-8 2md:items-center md:mb-16 md:flex-col"
+        viewport={{
+          once: false, // Animation repeats each time
+          amount: 0.5, // Trigger when 50% visible
+          margin: "10px", // Start animation 100px before entering viewport
+        }}
+       
+        preset="scale"
+        >
+          {detailsData.map((detail, index) => (
           <div
             key={index}
             className="w-full bg-orange-650 max-w-[600px] rounded-2xl p-6"
@@ -28,8 +39,10 @@ const CompaniesWeServe: React.FC<CompaniesWeServeProps> = ({ detailsData }) => {
 
             <p className="font-sans">{detail.description}</p>
           </div>
-        ))}
-      </div>
+        ))} 
+      </AnimatedGroup>
+       
+      
     </div>
   );
 };

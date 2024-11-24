@@ -3,6 +3,7 @@ import React from "react";
 import image from "/public/assets/resource_image.png";
 
 import ResourceCard from "./resource-card";
+import { AnimatedGroup } from "./ui/animated/animated-groups";
 
 const Resources = () => {
   const cardData = [
@@ -29,6 +30,9 @@ const Resources = () => {
     },
   ];
   return (
+    
+      
+     
     <section className="mx-auto mb-24 w-[90%] max-w-[1200px] 2md:w-[85%] sm:mb-16">
       <span className="tag inline-block rounded-3xl border border-[#808080] bg-white px-6 py-2 text-xs text-[#808080] 2md:text-[10px] md:mb-2">
         RESOURCES
@@ -44,18 +48,32 @@ const Resources = () => {
       </p>
 
       <div className="flex w-full gap-2 2md:flex-col">
-        {cardData.map((card, index) => (
-          <ResourceCard
-            key={index}
-            title={card.title}
-            date={card.date}
-            category={card.category}
-            buttonLink={card.buttonLink}
-            image={card.image}
-          />
-        ))}
-      </div>
-    </section>
+  {cardData.map((card, index) => (
+    <AnimatedGroup
+      key={index} // Place the key here
+    className="flex w-full gap-2 2md:flex-col"
+      viewport={{
+        once: false, // Animation repeats each time
+        amount: 0.5, // Trigger when 50% visible
+        margin: "10px", // Start animation 10px before entering viewport
+      }}
+      preset="fade"
+      
+    >
+      <ResourceCard
+        key={index}
+        title={card.title}
+        date={card.date}
+        category={card.category}
+        buttonLink={card.buttonLink}
+        image={card.image}
+      />
+    </AnimatedGroup>
+  ))}
+</div>
+
+      </section>
+       
   );
 };
 
