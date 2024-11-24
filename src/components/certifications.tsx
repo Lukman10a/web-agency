@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+
 
 import Image from "next/image";
 
@@ -14,14 +14,7 @@ import sysops from "../../public/assets/sysops.png";
 import { AnimatedGroup } from "./ui/animated/animated-groups";
 
 
-// const badges = [
-//   { src: sysops, alt: "AWS SysOps Administrator Badge" },
-//   { src: security, alt: "AWS Security Badge" },
-//   { src: archi, alt: "AWS Solutions Architect Badge" },
-//   { src: cloud, alt: "AWS Cloud Practitioner Badge" },
-//   { src: devops, alt: "AWS DevOps Engineer Badge" },
-//   { src: data, alt: "AWS Data Analytics Badge" },
-// ];
+
 
 const SecurityCertifications: React.FC = () => {
   return (

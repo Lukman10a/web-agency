@@ -12,7 +12,7 @@ import OurCapabilities from "@/components/shared/our-capabilities";
 import SecondaryPartnersSlider from "@/components/shared/secondary-partners-slider";
 import ServicesCard from "@/components/shared/services-card";
 import StatsCard from "@/components/shared/stats-card";
-import { AnimatedGroup } from "@/components/ui/animated/animated-groups";
+
 
 const companyData = {
   content:
