@@ -35,16 +35,6 @@ const benefits = [
   },
 ];
 
-// Animation Variants for section header
-const headerVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 1.4 },
-  },
-};
-
 // Animation Variants for cards
 const cardVariants = {
   hidden: { opacity: 0, scale: 0.95 },
@@ -74,18 +64,11 @@ export default function WhyChooseUs() {
   return (
     <section className="py-10">
       {/* Section: Why Choose Us */}
-      <motion.div
-        className="mb-10"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={headerVariants}
-      >
-        <h1 className="animate-fade-in mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold leading-tight lg:text-[2rem] md:text-[1.6rem]">
-          Why <span className="text-orange-650">Choose</span> Us? <br /> Key
-          Benefits for Your Business
-        </h1>
-      </motion.div>
+
+      <h1 className="animate-fade-in mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold leading-tight lg:text-[2rem] md:text-[1.6rem]">
+        Why <span className="text-orange-650">Choose</span> Us? <br /> Key
+        Benefits for Your Business
+      </h1>
 
       {/* Benefits Section */}
       <section
@@ -93,42 +76,32 @@ export default function WhyChooseUs() {
         aria-labelledby="benefits-heading"
       >
         {benefits.map((benefit, index) => (
-          <InView
-            variants={{
-              hidden: { opacity: 0, x: -100, filter: "blur(4px)" },
-              visible: { opacity: 1, x: 0, filter: "blur(0px)" },
-            }}
-            viewOptions={{ margin: "0px 0px -200px 0px" }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            key={index}
-          >
-            <AnimatedBorderTrail>
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={cardVariants}
-                custom={index}
-                whileHover="hover"
-              >
-                <article className="group relative mx-auto flex max-w-[400px] transform cursor-pointer flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
-                  <motion.div variants={iconVariants}>
-                    <Image
-                      src={benefit.img}
-                      alt={benefit.title}
-                      className="rounded-full border p-2 transition-transform duration-500 ease-in-out hover:rotate-6"
-                    />
-                  </motion.div>
-                  <h3 className="text-2xl font-semibold sm:text-xl">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-[#808080] group-hover:text-black">
-                    {benefit.description}
-                  </p>
-                </article>
-              </motion.div>
-            </AnimatedBorderTrail>
-          </InView>
+          <AnimatedBorderTrail key={index}>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={cardVariants}
+              custom={index}
+              whileHover="hover"
+            >
+              <article className="group relative mx-auto flex max-w-[400px] transform cursor-pointer flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
+                <motion.div variants={iconVariants}>
+                  <Image
+                    src={benefit.img}
+                    alt={benefit.title}
+                    className="rounded-full border p-2 transition-transform duration-500 ease-in-out hover:rotate-6"
+                  />
+                </motion.div>
+                <h3 className="text-2xl font-semibold sm:text-xl">
+                  {benefit.title}
+                </h3>
+                <p className="text-[#808080] group-hover:text-black">
+                  {benefit.description}
+                </p>
+              </article>
+            </motion.div>
+          </AnimatedBorderTrail>
         ))}
       </section>
 

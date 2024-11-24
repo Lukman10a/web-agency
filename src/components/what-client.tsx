@@ -86,7 +86,7 @@ const iconVariants = {
 
 const Testimonials: React.FC = () => {
   return (
-    <section className="mx-auto max-w-7xl rounded-lg bg-main-gradient px-10 py-16 xl:mx-8 lg:px-8 sm:px-6">
+    <section className="mx-auto max-w-7xl rounded-lg bg-nav-gradient px-10 py-16 xl:mx-8 lg:px-8 sm:px-6">
       <div>
         {/* Section Header */}
         <div className="text-center">
@@ -100,7 +100,7 @@ const Testimonials: React.FC = () => {
             <h2 className="text-3xl font-extrabold text-black sm:text-4xl">
               WHAT CLIENTS ARE SAYING
             </h2>
-            <p className="mt-4 text-lg text-gray-200">
+            <p className="mt-4 text-lg text-gray-600">
               Now you have our side of the story, but what do our clients think?
             </p>
           </motion.div>
