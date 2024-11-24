@@ -11,6 +11,7 @@ import HomeCard from "./home-card";
 import { BorderTrail } from "./ui/animated/border-trail";
 import { InView } from "./ui/animated/in-view";
 
+
 const BusinessOffer = () => {
   const cardData = [
     {
@@ -51,13 +52,24 @@ const BusinessOffer = () => {
               "0px 0px 60px 30px rgb(255 255 255 / 50%), 0 0 100px 60px rgb(0 0 0 / 50%), 0 0 140px 90px rgb(0 0 0 / 50%)",
           }}
         />
-        <p className="mx-auto text-[1.8rem] 2md:text-[1.5rem] md:text-[1.2rem]">
+         <InView
+                
+                variants={{
+                  hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
+                  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+                }}
+                viewOptions={{ margin: "0px 0px -200px 0px" }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
+          <p className="mx-auto text-[1.8rem] 2md:text-[1.5rem] md:text-[1.2rem]">
           At Teverse, we specialize in transforming businesses through cutting
           edge cloud solutions and security services. Whether you need cloud
           migration, optimization, or robust security architecture, our team is
           here to provide customized strategies to elevate your IT
           infrastructure.
         </p>
+              </InView>
+        
       </div>
       <div className="rounded-2xl bg-orange-100 p-2 pt-16">
         <h3 className="mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold uppercase leading-tight lg:text-[2rem] md:text-[1.6rem]">

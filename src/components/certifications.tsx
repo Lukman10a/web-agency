@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import Image from "next/image";
 
 import archi from "../../public/assets/archi.png";
@@ -10,14 +11,10 @@ import security from "../../public/assets/security.png";
 import star from "../../public/assets/starfour.png";
 import sysops from "../../public/assets/sysops.png";
 
-// const badges = [
-//   { src: sysops, alt: "AWS SysOps Administrator Badge" },
-//   { src: security, alt: "AWS Security Badge" },
-//   { src: archi, alt: "AWS Solutions Architect Badge" },
-//   { src: cloud, alt: "AWS Cloud Practitioner Badge" },
-//   { src: devops, alt: "AWS DevOps Engineer Badge" },
-//   { src: data, alt: "AWS Data Analytics Badge" },
-// ];
+import { AnimatedGroup } from "./ui/animated/animated-groups";
+
+
+
 
 const SecurityCertifications: React.FC = () => {
   return (
@@ -124,6 +121,15 @@ const SecurityCertifications: React.FC = () => {
         <div className="mx-auto flex max-w-[1200px] items-center justify-center gap-12 px-5 lg:space-y-0 2md:flex-col md:gap-8">
           {/* First Row of Badges */}
           <div className="flex gap-5">
+          
+             <AnimatedGroup
+        className="flex gap-5"
+        viewport={{
+          once: false, // Animation repeats each time
+          amount: 0.5, // Trigger when 50% visible
+          margin: "10px", // Start animation 100px before entering viewport
+        }} preset="scale"
+      >
             <Image
               width={500}
               height={500}
@@ -145,11 +151,22 @@ const SecurityCertifications: React.FC = () => {
               src={archi}
               alt="AWS Solutions Architect Badge"
               className="w-32 md:h-24 md:w-24"
-            />
+              />
+               </AnimatedGroup>
           </div>
 
           {/* Second Row of Badges */}
           <div className="flex gap-5">
+              <AnimatedGroup
+        className="flex gap-5"
+        viewport={{
+          once: false, // Animation repeats each time
+          amount: 0.5, // Trigger when 50% visible
+          margin: "10px", // Start animation 100px before entering viewport
+        }} preset="scale"
+            >
+              
+     
             <Image
               width={500}
               height={500}
@@ -170,8 +187,10 @@ const SecurityCertifications: React.FC = () => {
               src={data}
               alt="AWS Data Analytics Badge"
               className="w-32 md:h-24 md:w-24"
-            />
-          </div>
+              />
+               </AnimatedGroup>
+            </div>
+           
         </div>
       </div>
     </section>
