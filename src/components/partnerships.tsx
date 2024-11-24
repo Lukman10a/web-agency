@@ -19,7 +19,7 @@ const PartnershipSection: React.FC = () => {
       </div>
 
       {/* Icon Section */}
-      <div className="flex flex-col  items-center space-y-6">
+      <div className="flex flex-col sm:flex-row sm:items-center items-center sm:space-y-1 sm:gap-6 space-y-6 sm:justify-center sm:w-full sm:mx-auto">
         <div className="flex sm:flex-wrap sm:justify-center justify-between gap-4">
           <div className="w-20 h-20 flex  items-center justify-center transition-transform transform hover:-translate-y-2">
             <Image src="/assets/aws.png" alt="AWS" width={200} height={200} />
