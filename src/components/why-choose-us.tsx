@@ -107,7 +107,7 @@ export default function WhyChooseUs() {
 
       {/* Case Study Section */}
       <section
-        className="m-10 mx-auto flex w-11/12 max-w-7xl items-center gap-10 rounded-2xl bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] p-8 lg:gap-6 lg:p-6 md:flex-col md:p-4"
+        className="m-10 mx-auto flex w-11/12 max-w-7xl items-center gap-10 overflow-hidden rounded-2xl bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] p-8 lg:gap-6 lg:p-6 md:flex-col md:p-4"
         aria-labelledby="case-study-heading"
       >
         <div className="w-1/2 flex-1 md:w-full">
