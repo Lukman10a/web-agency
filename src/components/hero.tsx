@@ -12,7 +12,7 @@ import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
-    <header className="min-h-[60vh] overflow-hidden will-change-transform">
+    <header className="mt-16 min-h-[60vh] overflow-hidden will-change-transform">
       <div className="bg-main-gradient">
         <InView
           variants={{

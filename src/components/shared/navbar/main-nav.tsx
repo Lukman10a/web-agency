@@ -7,6 +7,12 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronRight, Menu } from "lucide-react";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {
@@ -256,14 +262,14 @@ export function MainNav() {
   const [activeItem, setActiveItem] = React.useState<string | null>(null);
 
   return (
-    <div className="relative">
-      <header className="fixed top-0 z-50 w-full border-b bg-background">
+    <div className="relative bg-nav-gradient">
+      <header className="fixed top-0 z-50 w-full border-b bg-background bg-nav-gradient px-7">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center space-x-2">
               <span className="text-xl font-bold">Mission</span>
             </Link>
-            <nav className="hidden gap-6 lg:flex">
+            <nav className="flex gap-6 md:hidden">
               {navItems.map((item) => (
                 <Button
                   key={item.title}
@@ -283,57 +289,66 @@ export function MainNav() {
             </nav>
           </div>
           <div className="flex items-center gap-4">
-            <Button className="hidden lg:inline-flex">Get Started</Button>
+            <Button className="inline-flex md:hidden">Get Started</Button>
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="outline" size="icon" className="lg:hidden">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="hidden items-center md:block"
+                >
                   <Menu className="h-4 w-4" />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetContent
+                side="right"
+                className="max-w-[400px] bg-white sm:w-full"
+              >
                 <SheetHeader>
                   <SheetTitle>Menu</SheetTitle>
                   <SheetDescription>
                     Navigate through our services and solutions
                   </SheetDescription>
                 </SheetHeader>
-                <nav className="mt-6 flex flex-col gap-4">
-                  {navItems.map((item) => (
-                    <div key={item.title} className="flex flex-col gap-2">
-                      <Link
-                        href={item.href || "#"}
-                        className="text-lg font-semibold hover:text-primary"
-                      >
-                        {item.title}
-                      </Link>
-                      {item.items.map((section) => (
-                        <div
-                          key={section.category}
-                          className="ml-4 flex flex-col gap-2"
-                        >
-                          <span className="text-sm font-medium text-muted-foreground">
-                            {section.category}
-                          </span>
-                          {section.subitems.map((subitem) => (
-                            <Link
-                              key={subitem.title}
-                              href={subitem.href}
-                              className="text-sm hover:text-primary"
-                            >
-                              {subitem.title}
-                            </Link>
+                <ScrollArea className="mt-6 h-[calc(100vh-8rem)]">
+                  <Accordion type="single" collapsible>
+                    {navItems.map((item, index) => (
+                      <AccordionItem value={`item-${index}`} key={item.title}>
+                        <AccordionTrigger>{item.title}</AccordionTrigger>
+                        <AccordionContent>
+                          {item.items.map((section) => (
+                            <div key={section.category} className="mb-4">
+                              <h3 className="mb-2 text-sm font-semibold">
+                                {section.category}
+                              </h3>
+                              <p className="mb-2 text-sm text-muted-foreground">
+                                {section.description}
+                              </p>
+                              <div className="space-y-2">
+                                {section.subitems.map((subitem) => (
+                                  <Link
+                                    key={subitem.title}
+                                    href={subitem.href}
+                                    className="block text-sm hover:text-primary"
+                                  >
+                                    {subitem.title}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
                           ))}
-                        </div>
-                      ))}
-                    </div>
-                  ))}
-                </nav>
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </ScrollArea>
               </SheetContent>
             </Sheet>
           </div>
         </div>
       </header>
+
       <AnimatePresence>
         {activeItem && (
           <motion.div
@@ -341,9 +356,9 @@ export function MainNav() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-x-0 top-16 z-40 hidden bg-background/80 backdrop-blur-sm lg:block"
+            className="fixed inset-x-0 top-16 z-40 bg-white"
           >
-            <ScrollArea className="container h-[calc(100vh-4rem)] py-6">
+            <ScrollArea className="container h-[calc(100vh-4rem)] p-6">
               {navItems.map(
                 (item) =>
                   activeItem === item.title && (
@@ -353,7 +368,7 @@ export function MainNav() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 20 }}
                       transition={{ duration: 0.3, delay: 0.1 }}
-                      className="grid gap-6 lg:grid-cols-3 md:grid-cols-2"
+                      className="grid grid-cols-3 gap-6 md:grid-cols-2"
                     >
                       {item.items.map((section) => (
                         <div key={section.category} className="space-y-4">
@@ -378,13 +393,13 @@ export function MainNav() {
                               <Link
                                 key={subitem.title}
                                 href={subitem.href}
-                                className="group space-y-2 rounded-lg p-4 transition-colors hover:bg-muted"
+                                className="group space-y-2 rounded-lg p-4 hover:bg-muted"
                               >
                                 <div className="flex items-center justify-between">
-                                  <h4 className="text-sm font-medium transition-colors group-hover:text-primary">
+                                  <h4 className="text-sm font-medium group-hover:text-primary">
                                     {subitem.title}
                                   </h4>
-                                  <ChevronRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:translate-x-1" />
+                                  <ChevronRight className="h-4 w-4 group-hover:translate-x-1" />
                                 </div>
                                 <p className="text-sm text-muted-foreground">
                                   {subitem.description}
@@ -401,11 +416,11 @@ export function MainNav() {
           </motion.div>
         )}
       </AnimatePresence>
+
       {activeItem && (
         <div
-          className="fixed inset-0 top-16 z-30 hidden bg-background/50 lg:block"
+          className="fixed inset-0 bg-background/50"
           onClick={() => setActiveItem(null)}
-          aria-hidden="true"
         />
       )}
     </div>
