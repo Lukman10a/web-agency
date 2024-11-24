@@ -13,6 +13,7 @@ import SecondaryPartnersSlider from "@/components/shared/secondary-partners-slid
 import ServicesCard from "@/components/shared/services-card";
 import StatsCard from "@/components/shared/stats-card";
 
+
 const companyData = {
   content:
     "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
@@ -110,8 +111,10 @@ const Healtcare = () => {
       </div>
 
       <Preverity />
-
-      <CompaniesWeServe detailsData={detailsData} />
+ 
+      
+         <CompaniesWeServe detailsData={detailsData} />
+    
 
       <OurCapabilities detailsData={ourCapabilitiesData} />
 

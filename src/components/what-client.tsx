@@ -86,7 +86,7 @@ const iconVariants = {
 
 const Testimonials: React.FC = () => {
   return (
-    <section className="mx-auto max-w-7xl rounded-lg bg-gradient-to-r from-indigo-400 via-purple-600 to-pink-400 px-10 py-16 xl:mx-8 lg:px-8 sm:px-6">
+    <section className="mx-auto max-w-7xl rounded-lg bg-nav-gradient px-10 py-16 xl:mx-8 lg:px-8 sm:px-6">
       <div>
         {/* Section Header */}
         <div className="text-center">
@@ -100,14 +100,14 @@ const Testimonials: React.FC = () => {
             <h2 className="text-3xl font-extrabold text-black sm:text-4xl">
               WHAT CLIENTS ARE SAYING
             </h2>
-            <p className="mt-4 text-lg text-gray-200">
+            <p className="mt-4 text-lg text-gray-600">
               Now you have our side of the story, but what do our clients think?
             </p>
           </motion.div>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="cursor-pointer relative mt-10 grid grid-cols-3 gap-8 md:grid-cols-2 sm:grid-cols-1 hover:text-white">
+        <div className="relative mt-10 grid cursor-pointer grid-cols-3 gap-8 hover:text-white md:grid-cols-2 sm:grid-cols-1">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -119,7 +119,7 @@ const Testimonials: React.FC = () => {
               whileHover="hover"
             >
               <article className="group relative rounded-lg bg-white p-6 shadow-md transition-transform duration-300 hover:bg-black">
-                <p className="group-hover:text-white mb-4 text-gray-700 transition-colors duration-300">
+                <p className="mb-4 text-gray-700 transition-colors duration-300 group-hover:text-white">
                   {testimonial.quote}
                 </p>
                 <div className="mt-4 flex items-center">

@@ -17,6 +17,9 @@ import { StickyScrollRevealDemo } from "@/components/shared/solutions-list-scrol
 import image from "../../public/assets/cardimage1.png";
 import solutionHero from "../../public/assets/cloud-provider.gif";
 
+
+
+
 export default function Solution() {
   return (
     <Fragment>
@@ -54,6 +57,7 @@ export default function Solution() {
         />
       </header>
       <StickyScrollRevealDemo />
+       
       <Booking />
       {/* Certification Section */}
       <SecurityCertifications />

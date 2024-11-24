@@ -35,30 +35,7 @@ const AwsBuild: React.FC<AwsBuildProps> = ({ cards, tag, title, subtitle }) => {
           amount: 0.5, // Trigger when 50% visible
           margin: "10px", // Start animation 100px before entering viewport
         }}
-        // variants={{
-        //   container: {
-        //     hidden: { opacity: 0 },
-        //     visible: {
-        //       opacity: 1,
-        //       transition: {
-        //         staggerChildren: 0.3,
-        //       },
-        //     },
-        //   },
-        //   item: {
-        //     hidden: { opacity: 0, y: 40, filter: "blur(4px)" },
-        //     visible: {
-        //       opacity: 1,
-        //       y: 0,
-        //       filter: "blur(0px)",
-        //       transition: {
-        //         duration: 1.2,
-        //         type: "spring",
-        //         bounce: 0.3,
-        //       },
-        //     },
-        //   },
-        // }}
+       
         preset="scale"
       >
         {cards.map((card, index) => (
