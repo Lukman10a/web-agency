@@ -8,9 +8,9 @@ const Features: React.FC = () => {
       {/* Features Section */}
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-semi-bold text-gray-800 mb-6 text-center">Features</h2>
-        <div className="flex justify-between">
-            <Image src="/assets/checkers.png" width={300} height={300} alt="" />
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-1/2">
+        <div className="flex justify-between sm:flex-col sm:flex-wrap">
+            <Image src="/assets/checkers.png" className="sm:w-full sm:mx-auto" width={500} height={300} alt="" />
+            <div className="grid grid-cols-1 gap-6 w-1/2 sm:w-full sm:mt-4">
             {/* Feature Box 1 */}
             <div className="border rounded-lg p-4 bg-white shadow-md">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
