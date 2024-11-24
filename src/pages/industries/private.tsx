@@ -7,7 +7,6 @@ import NewHero from "@/components/shared/new-hero";
 import OurCapabilities from "@/components/shared/our-capabilities";
 import SecondaryPartnersSlider from "@/components/shared/secondary-partners-slider";
 import ServicesCard from "@/components/shared/services-card";
-
 import React from "react";
 
 
@@ -91,12 +90,12 @@ const ourCapabilitiesData = [
 ];
 
 
-const Media = () => {
+const Retail = () => {
   return (
     <section>
   <NewHero
-        title="Media & Communication on AWS"
-        description="Cloud and AI solutions for the next-generation of media workflows"
+        title="Private Equity"
+        description="Mission has extensive experience creating value for private equity firms and their portfolio companies by providing tailored services and technical expertise to help maximize cost savings, optimize infrastructure, and enable innovation. "
         showButton={false}
         ImgSrc="/"
       />
@@ -108,7 +107,7 @@ const Media = () => {
       />
 
       <p className="text-2xl mx-auto w-[90%] max-w-[1200px] text-[#808080] md:text-lg md:-mt-12 ">
-        From global media conglomerates to innovative digital agencies, telecom multi-nationals to gaming studio startups, we've enabled every part of the media ecosystem to redefine content delivery and audience engagement.
+        From e-commerce giants and global airlines to family-owned and operated boutiques—we've helped retail businesses of all sizes serve their customers.
       </p>
 
 <div className="my-7 max-w-7xl overflow-hidden mx-auto">
@@ -154,4 +153,4 @@ const Media = () => {
   );
 };
 
-export default Media;
+export default Retail;
