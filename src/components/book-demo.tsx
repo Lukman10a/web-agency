@@ -6,6 +6,7 @@ const BookDemoSection: React.FC = () => {
   return (
     <section className="flex sm:flex-col items-center py-12 max-w-7xl">
       {/* Image Placeholder */}
+      
       <div className="w-1/2 sm:w-full sm:px-4 flex items-center mb-0 justify-end md:justify-center px-2">
         <Image
           src="/assets/checkers.png"
@@ -14,6 +15,7 @@ const BookDemoSection: React.FC = () => {
           alt="checkers image"
         />
       </div>
+      
 
       {/* Text Content */}
       <div className=" w-5/12 sm:w-full text-left pl-12 sm:px-4">

@@ -13,9 +13,9 @@ const Hero = () => {
   return (
     <header className="min-h-[60vh]">
       <div className="bg-main-gradient">
-        <div className="relative flex gap-8 isolate mx-auto w-11/12 max-w-7xl overflow-hidden rounded-xl  bg-cover px-10 py-14 md:w-full md:px-4 lg:flex-col">
+        <div className="relative isolate mx-auto flex w-11/12 max-w-7xl gap-8 overflow-hidden rounded-xl bg-cover px-10 py-14 lg:flex-col md:w-full md:px-4">
           <div className="relative z-[1] flex-1">
-            <h1 className="font-sora text-6xl font-extrabold lg:text-4xl tracking-tight md:text-3xl sm:text-2xl">
+            <h1 className="font-sora text-6xl font-extrabold tracking-tight lg:text-4xl md:text-3xl sm:text-2xl">
               <span>Transforming Tomorrow with:</span> <br className="" />
               <TextLoop preset="slide-up" interval={2.5}>
                 <span>Cloud Consulting</span>
@@ -23,7 +23,7 @@ const Hero = () => {
                 <span>Gen AI Innovations</span>
               </TextLoop>
             </h1>
-            <p className="mt-3 font-mono text-base  lg:mx-0 md:mt-5 md:text-xl sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg">
+            <p className="mt-3 font-mono text-base lg:mx-0 md:mt-5 md:text-xl sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg">
               We provide expert consulting services to help businesses achieve
               secure, efficient, and scalable cloud environments. From cloud
               migration to security audits, we&lsquo;ve got you covered
@@ -37,7 +37,7 @@ const Hero = () => {
                 <Button
                   asChild
                   variant={"outline"}
-                  className="rounded-full px-8 py-3 md:text-base font-medium md:w-full text-lg text-center"
+                  className="rounded-full px-8 py-3 text-center text-lg font-medium md:w-full md:text-base"
                 >
                   <Link href="#" className="flex items-center justify-center">
                     GET FREE CONSULTATION. <ArrowIcon />

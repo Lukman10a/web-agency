@@ -80,7 +80,7 @@ export default function WhyChooseUs() {
         viewport={{ once: true }}
         variants={headerVariants}
       >
-        <h1 className="mx-auto mb-[1em] animate-fade-in text-center font-sora text-[2.5rem] font-semibold leading-tight lg:text-[2rem] md:text-[1.6rem]">
+        <h1 className="animate-fade-in mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold leading-tight lg:text-[2rem] md:text-[1.6rem]">
           Why <span className="text-orange-650">Choose</span> Us? <br /> Key
           Benefits for Your Business
         </h1>
@@ -88,7 +88,7 @@ export default function WhyChooseUs() {
 
       {/* Benefits Section */}
       <section
-        className="mx-auto mb-24 flex w-[90%] max-w-[1200px] gap-12 p-4 animate-fade-up xl:gap-6 lg:flex-col sm:mb-12"
+        className="animate-fade-up mx-auto mb-24 flex w-[90%] max-w-[1200px] gap-12 p-4 xl:gap-6 lg:flex-col sm:mb-12"
         aria-labelledby="benefits-heading"
       >
         {benefits.map((benefit, index) => (
@@ -101,7 +101,7 @@ export default function WhyChooseUs() {
               custom={index}
               whileHover="hover"
             >
-              <article className="group relative cursor-pointer mx-auto flex max-w-[400px] flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
+              <article className="group relative mx-auto flex max-w-[400px] transform cursor-pointer flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
                 <motion.div variants={iconVariants}>
                   <Image
                     src={benefit.img}
@@ -123,7 +123,7 @@ export default function WhyChooseUs() {
 
       {/* Case Study Section */}
       <section
-        className="m-10 mx-auto flex w-11/12 max-w-7xl items-center gap-10 rounded-2xl bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] px-28 py-8 animate-fade-up xl:px-16 lg:gap-6 lg:px-8 lg:py-4 md:flex-col md:py-8 sm:p-6"
+        className="animate-fade-up m-10 mx-auto flex w-11/12 max-w-7xl items-center gap-10 rounded-2xl bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] p-8 lg:gap-6 lg:p-6 md:flex-col md:p-4"
         aria-labelledby="case-study-heading"
       >
         <div className="w-1/2 flex-1 md:w-full">
