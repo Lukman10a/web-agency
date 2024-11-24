@@ -2,12 +2,15 @@ import React from "react";
 
 import Image from "next/image";
 
+import { motion } from "framer-motion";
+
 import improvedsecurity from "../../public/assets/improvedsecurity.png";
 import efficiency from "../../public/svg/efficiency.svg";
 import expert from "../../public/svg/expert.svg";
 import security from "../../public/svg/security.svg";
 import ArrowIcon from "./icons/arrow";
 import MoreClients from "./shared/more-clients";
+import AnimatedBorderTrail from "./ui/animated/border-trail-simple";
 import { Button } from "./ui/button";
 
 const benefits = [
@@ -31,42 +34,96 @@ const benefits = [
   },
 ];
 
+// Animation Variants for section header
+const headerVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1.4 },
+  },
+};
+
+// Animation Variants for cards
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: (i: number) => ({
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: i * 0.2, // Stagger the appearance of each card
+      duration: 0.5,
+    },
+  }),
+  hover: {
+    scale: 1.05, // Slightly zoom the card on hover
+    transition: { type: "spring", stiffness: 300 },
+  },
+};
+
+// Animation for the icon
+const iconVariants = {
+  hover: {
+    rotate: [0, 16, -16, 0], // Subtle rotation effect
+    transition: { duration: 0.6, ease: "easeInOut" },
+  },
+};
+
 export default function WhyChooseUs() {
   return (
     <section className="py-10">
       {/* Section: Why Choose Us */}
-
-      <h1 className="mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold leading-tight lg:text-[2rem] md:text-[1.6rem]">
-        Why <span className="text-orange-650">Choose</span> Us? <br /> Key
-        Benefits for Your Business
-      </h1>
+      <motion.div
+        className="mb-10"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={headerVariants}
+      >
+        <h1 className="animate-fade-in mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold leading-tight lg:text-[2rem] md:text-[1.6rem]">
+          Why <span className="text-orange-650">Choose</span> Us? <br /> Key
+          Benefits for Your Business
+        </h1>
+      </motion.div>
 
       {/* Benefits Section */}
       <section
-        className="mx-auto mb-24 flex w-[90%] max-w-[1200px] gap-12 p-4 xl:gap-6 lg:flex-col sm:mb-12"
+        className="animate-fade-up mx-auto mb-24 flex w-[90%] max-w-[1200px] gap-12 p-4 xl:gap-6 lg:flex-col sm:mb-12"
         aria-labelledby="benefits-heading"
       >
         {benefits.map((benefit, index) => (
-          <article
-            key={index}
-            className="rounde mx-auto flex max-w-[400px] flex-col items-center space-y-4 rounded-2xl border p-8 text-center"
-          >
-            <Image
-              src={benefit.img}
-              alt={benefit.title}
-              className="rounded-full border p-2"
-            />
-            <h3 className="text-2xl font-semibold sm:text-xl">
-              {benefit.title}
-            </h3>
-            <p className="text-[#808080]">{benefit.description}</p>
-          </article>
+          <AnimatedBorderTrail key={index}>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={cardVariants}
+              custom={index}
+              whileHover="hover"
+            >
+              <article className="group relative mx-auto flex max-w-[400px] transform cursor-pointer flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
+                <motion.div variants={iconVariants}>
+                  <Image
+                    src={benefit.img}
+                    alt={benefit.title}
+                    className="rounded-full border p-2 transition-transform duration-500 ease-in-out hover:rotate-6"
+                  />
+                </motion.div>
+                <h3 className="text-2xl font-semibold sm:text-xl">
+                  {benefit.title}
+                </h3>
+                <p className="text-[#808080] group-hover:text-black">
+                  {benefit.description}
+                </p>
+              </article>
+            </motion.div>
+          </AnimatedBorderTrail>
         ))}
       </section>
 
       {/* Case Study Section */}
       <section
-        className="m-10 mx-auto flex w-11/12 max-w-7xl items-center gap-10 rounded-2xl bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] px-28 py-8 xl:px-16 lg:gap-6 lg:px-8 lg:py-4 md:flex-col md:py-8 sm:p-6"
+        className="animate-fade-up m-10 mx-auto flex w-11/12 max-w-7xl items-center gap-10 rounded-2xl bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] p-8 lg:gap-6 lg:p-6 md:flex-col md:p-4"
         aria-labelledby="case-study-heading"
       >
         <div className="w-1/2 flex-1 md:w-full">
@@ -90,7 +147,7 @@ export default function WhyChooseUs() {
             custom architecture with advanced threat detection and strict access
             controls, reducing incidents and boosting compliance.
           </p>
-          <Button className="flex w-fit items-center gap-4 rounded-3xl border border-[#081348] bg-orange-650 font-sans text-white xl:text-[12px] md:w-full sm:mb-4">
+          <Button className="flex w-fit items-center gap-4 rounded-3xl border border-[#081348] bg-orange-650 font-sans text-white transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-white hover:text-orange-650 xl:text-[12px] md:w-full sm:mb-4">
             <span>Discover Solutions</span>
             <ArrowIcon />
           </Button>

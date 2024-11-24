@@ -9,6 +9,7 @@ import { LuUploadCloud } from "react-icons/lu";
 
 import HomeCard from "./home-card";
 import { BorderTrail } from "./ui/animated/border-trail";
+import { InView } from "./ui/animated/in-view";
 
 const BusinessOffer = () => {
   const cardData = [
@@ -59,24 +60,33 @@ const BusinessOffer = () => {
         </p>
       </div>
       <div className="rounded-2xl bg-orange-100 p-2 pt-16">
-        <h1 className="mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold uppercase leading-tight lg:text-[2rem] md:text-[1.6rem]">
+        <h3 className="mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold uppercase leading-tight lg:text-[2rem] md:text-[1.6rem]">
           <span className="text-orange-650">Services</span> designed to <br />{" "}
           Grow your business
-        </h1>
+        </h3>
 
         <div className="items-center justify-center py-2">
           <div className="justify-center">
             {cardData.map((card, index) => (
-              <HomeCard
+              <InView
                 key={index}
-                title={card.title}
-                description={card.description}
-                buttonText={card.buttonText}
-                buttonLink={card.buttonLink}
-                imageSrc={card.imageSrc}
-                titleIcon={card.titleIcon}
-                index={index}
-              />
+                variants={{
+                  hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
+                  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+                }}
+                viewOptions={{ margin: "0px 0px -200px 0px" }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+                <HomeCard
+                  title={card.title}
+                  description={card.description}
+                  buttonText={card.buttonText}
+                  buttonLink={card.buttonLink}
+                  imageSrc={card.imageSrc}
+                  titleIcon={card.titleIcon}
+                  index={index}
+                />
+              </InView>
             ))}
           </div>
         </div>
