@@ -13,7 +13,7 @@ const PartnershipSection: React.FC = () => {
         <p className="text-gray-600 mb-4">
           Working closely with partners to bring best value to our customers.
         </p>
-        <button className="px-4 py-2 bg-orange-600 text-white rounded-full font-medium hover:bg-orange-650 transition-colors">
+        <button className="px-4 py-2 bg-orange-600 text-white rounded-full font-medium hover:bg-black transition-colors">
           All Partners
         </button>
       </div>

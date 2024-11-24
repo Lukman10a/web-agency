@@ -2,6 +2,8 @@ import React from "react";
 
 import Image from "next/image";
 
+import { motion } from "framer-motion";
+
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 interface Testimonial {
@@ -57,61 +59,107 @@ const testimonials: Testimonial[] = [
   // Additional testimonials can be added here...
 ];
 
+const headerVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1.4 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: (i: number) => ({
+    opacity: 1,
+    scale: 1,
+    transition: { delay: i * 0.2, duration: 0.5 },
+  }),
+  hover: {
+    scale: 1.05,
+    transition: { type: "spring", stiffness: 200 },
+  },
+};
+
+const iconVariants = {
+  hover: {
+    rotate: [0, 16, -16, 0],
+    transition: { duration: 0.6, ease: "easeInOut" },
+  },
+};
+
 const Testimonials: React.FC = () => {
   return (
-    <section className="mx-auto max-w-7xl rounded-lg bg-gradient-to-r from-gradient-100 to-gradient-200 px-10 py-16 xl:mx-8 lg:px-8 sm:px-6">
-      <div className="">
+    <section className="mx-auto max-w-7xl rounded-lg bg-gradient-to-r from-indigo-400 via-purple-600 to-pink-400 px-10 py-16 xl:mx-8 lg:px-8 sm:px-6">
+      <div>
         {/* Section Header */}
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            WHAT CLIENTS ARE SAYING
-          </h2>
-          <p className="mt-4 text-lg text-gray-600">
-            Now you have our side of the story, but what do our clients think?
-          </p>
+          <motion.div
+            className="mb-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={headerVariants}
+          >
+            <h2 className="text-3xl font-extrabold text-black sm:text-4xl">
+              WHAT CLIENTS ARE SAYING
+            </h2>
+            <p className="mt-4 text-lg text-gray-200">
+              Now you have our side of the story, but what do our clients think?
+            </p>
+          </motion.div>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="relative mt-10 grid grid-cols-3 gap-8 md:grid-cols-2 sm:grid-cols-1">
+        <div className="cursor-pointer relative mt-10 grid grid-cols-3 gap-8 md:grid-cols-2 sm:grid-cols-1 hover:text-white">
           {testimonials.map((testimonial, index) => (
-            <article
+            <motion.div
               key={index}
-              className="relative rounded-lg bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-lg"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={cardVariants}
+              custom={index}
+              whileHover="hover"
             >
-              <p className="mb-4 text-gray-700">{testimonial.quote}</p>
-              <div className="mt-4 flex items-center">
-                <Avatar>
-                  <AvatarImage
-                    src={testimonial.image}
-                    alt={`${testimonial.name}'s avatar`}
-                  />
-                  <AvatarFallback>
-                    {testimonial.name[0]}
-                    {testimonial.name.split(" ")[1][0]}
-                  </AvatarFallback>
-                </Avatar>
+              <article className="group relative rounded-lg bg-white p-6 shadow-md transition-transform duration-300 hover:bg-black">
+                <p className="group-hover:text-white mb-4 text-gray-700 transition-colors duration-300">
+                  {testimonial.quote}
+                </p>
+                <div className="mt-4 flex items-center">
+                  <Avatar>
+                    <motion.div variants={iconVariants}>
+                      <AvatarImage
+                        src={testimonial.image}
+                        alt={`${testimonial.name}'s avatar`}
+                      />
+                    </motion.div>
+                    <AvatarFallback>
+                      {testimonial.name[0]}
+                      {testimonial.name.split(" ")[1][0]}
+                    </AvatarFallback>
+                  </Avatar>
 
-                <div className="ml-4">
-                  <p className="text-base font-medium text-gray-900">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-sm text-gray-500">{testimonial.title}</p>
+                  <div className="ml-4">
+                    <p className="text-base font-medium text-gray-900 group-hover:text-indigo-400">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-sm text-gray-500 group-hover:text-pink-400">
+                      {testimonial.title}
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              {/* Star image behind the last testimonial item */}
-              {index === testimonials.length - 1 && (
-                <div className="absolute -bottom-8 right-1 xl:-bottom-24 xl:right-24 lg:-bottom-20 lg:right-20 md:-bottom-16 md:right-8 sm:-bottom-8 sm:right-1">
-                  <Image
-                    src="/assets/Star.png"
-                    alt="Star"
-                    width={100}
-                    height={100}
-                    className="xl:h-[180px] xl:w-[180px] lg:h-[150px] lg:w-[150px] md:h-[120px] md:w-[120px] sm:h-[100px] sm:w-[100px]"
-                  />
-                </div>
-              )}
-            </article>
+                {/* Star image behind the last testimonial item */}
+                {index === testimonials.length - 1 && (
+                  <div className="absolute -bottom-8 right-1 xl:-bottom-24 xl:right-24 lg:-bottom-20 lg:right-20 md:-bottom-16 md:right-8 sm:-bottom-8 sm:right-1">
+                    <Image
+                      src="/assets/Star.png"
+                      alt="Star"
+                      width={100}
+                      height={100}
+                      className="xl:h-[180px] xl:w-[180px] lg:h-[150px] lg:w-[150px] md:h-[120px] md:w-[120px] sm:h-[100px] sm:w-[100px]"
+                    />
+                  </div>
+                )}
+              </article>
+            </motion.div>
           ))}
         </div>
       </div>
