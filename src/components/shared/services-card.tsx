@@ -31,7 +31,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
 }) => {
   return (
     <div
-      className={`mx-auto mb-24 flex w-[85%] max-w-[1200px] gap-12 lg:gap-8 md:gap-4 sm:mb-16 sm:max-w-[400px] sm:flex-col ${
+      className={`mx-auto mb-24 flex w-[85%] max-w-[1200px] gap-12 lg:gap-8 md:gap-2 sm:mb-16 sm:w-[90%] sm:flex-col ${
         index % 2 === 0 ? "flex-row-reverse" : "flex-row"
       }`}
     >
@@ -43,7 +43,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
                   visible: { opacity: 1, y: 0, filter: "blur(0px)" },
                 }}
                 viewOptions={{ margin: "0px 0px -200px 0px" }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
       >
           <Image
           src={imgSrc}
@@ -61,9 +61,9 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
                 variants={{
                   hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
                   visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-                }}
+          }}
                 viewOptions={{ margin: "0px 0px -200px 0px" }}
-                transition={{ duration: 0.5, ease: "easeInOut", }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           
      
