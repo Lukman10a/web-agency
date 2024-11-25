@@ -101,7 +101,7 @@ const SecurityCertifications: React.FC = () => {
           />
         </span>
         {/*end design stars */}
-        <div className="mb-8 overflow-auto text-center">
+        <div className="mb-8 overflow-hidden text-center">
           <InView
             variants={{
               hidden: { opacity: 0, x: -100, filter: "blur(4px)" },
