@@ -1,6 +1,10 @@
 import React from "react";
-import { motion } from "framer-motion"; // Import framer-motion
+
+// Import framer-motion
 import Image, { StaticImageData } from "next/image";
+
+import { motion } from "framer-motion";
+
 import { Button } from "../ui/button";
 
 type NewHeroProps = {
@@ -43,7 +47,7 @@ const NewHero: React.FC<NewHeroProps> = ({
   return (
     <section className="mx-auto mb-24 bg-secondary-gradient px-16 py-20 xl:rounded-t-none lg:p-12 lg:py-16 md:mb-16 md:px-0 sm:mb-12">
       <motion.div
-        className={`mx-auto flex w-[95%] max-w-[1200px] gap-12 2md:gap-8 md:w-[85%] md:flex-col md:gap-6 ${
+        className={`mx-auto flex w-[95%] max-w-[1200px] gap-12 overflow-hidden 2md:gap-8 md:w-[85%] md:flex-col md:gap-6 ${
           reverse ? "flex-row-reverse" : "flex-row"
         }`}
         variants={containerVariants}
@@ -57,7 +61,7 @@ const NewHero: React.FC<NewHeroProps> = ({
               <Image
                 src={iconLink}
                 alt="Security Icon"
-                className="w-[15%] mb-6 md:mx-auto sm:w-[20%]"
+                className="mb-6 w-[15%] md:mx-auto sm:w-[20%]"
                 width={500}
                 height={500}
               />
@@ -100,7 +104,7 @@ const NewHero: React.FC<NewHeroProps> = ({
           <Image
             src={ImgSrc}
             alt="Hero Image"
-            className="w-full bg-white rounded-2xl"
+            className="w-full rounded-2xl bg-white"
             width={500}
             height={500}
           />
