@@ -62,12 +62,12 @@ const InterpretDataSection: React.FC = () => {
   return (
     <section
       
-      className="flex flex-col space-y-5 mt-[10rem] sm:mt-2 px-4"
+      className="flex flex-col space-y-10 mt-[10rem] sm:mt-2 px-4"
     >
       <div className="space-y-4 max-w-6xl mx-20">
       
       <motion.div
-        className="text-xs text-gray-500 tracking-wide px-3 inline py-1 rounded-full mb-4"
+        className="text-sm text-black font-bold tracking-wide px-3 inline py-1 rounded-full mb-4"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
@@ -76,7 +76,7 @@ const InterpretDataSection: React.FC = () => {
       </motion.div>
 
       <motion.h2
-        className="text-2xl sm:text-xl md:text-3xl font-medium text-gray-800 text-left mb-4"
+        className="text-3xl sm:text-xl md:text-3xl font-medium text-black text-left mb-4 py-6"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -85,7 +85,7 @@ const InterpretDataSection: React.FC = () => {
       </motion.h2>
 
       <motion.p
-        className="text-left text-gray-600 max-w-4xl mb-10"
+        className="text-left text-black text-2xl max-w-6xl mb-10"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
