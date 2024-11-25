@@ -3,9 +3,12 @@
 import * as React from "react";
 
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronRight, Menu } from "lucide-react";
+
+import { useScrollLock } from "@/hooks/use-scroll-lock";
 
 import {
   Accordion,
@@ -23,6 +26,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+
+import ArrowIcon from "../../icons/arrow";
 
 interface NavItem {
   title: string;
@@ -260,16 +265,47 @@ const navItems: NavItem[] = [
 
 export function MainNav() {
   const [activeItem, setActiveItem] = React.useState<string | null>(null);
+  const { lock, unlock } = useScrollLock({
+    autoLock: false,
+    lockTarget: "#scrollable",
+  });
+  const router = useRouter();
+
+  // Lock and unlock scrolling based on activeItem
+  React.useEffect(() => {
+    if (activeItem) {
+      lock();
+    } else {
+      unlock();
+    }
+    return () => {
+      unlock(); // Ensure scrolling is unlocked on cleanup
+    };
+  }, [activeItem, lock, unlock]);
+
+  React.useEffect(() => {
+    const handleRouteChange = () => {
+      setActiveItem(null);
+    };
+
+    router.events.on("routeChangeStart", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
-    <div className="relative bg-nav-gradient">
-      <header className="fixed top-0 z-50 w-full border-b bg-background bg-nav-gradient px-7">
+    <div className="relative bg-nav-gradient font-mono">
+      <nav
+        className="fixed top-0 z-50 w-full border-b bg-background bg-nav-gradient px-7"
+        id="scrollable"
+      >
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2 font-sora">
               <span className="text-xl font-bold text-[#FF9557]">TEVERSE</span>
             </Link>
-            <nav className="flex gap-6 md:hidden">
+            <div className="flex gap-6 md:hidden">
               {navItems.map((item) => (
                 <Button
                   key={item.title}
@@ -286,10 +322,14 @@ export function MainNav() {
                   {item.title}
                 </Button>
               ))}
-            </nav>
+            </div>
           </div>
           <div className="flex items-center gap-4">
-            <Button className="inline-flex md:hidden">Get Started</Button>
+            <Link href="/contact">
+              <Button className="flex w-fit items-center justify-center rounded-full border border-black bg-orange-600 px-8 py-3 text-base font-medium text-white hover:bg-orange-700 md:px-10 md:py-4 md:text-lg">
+                Contact <ArrowIcon />
+              </Button>{" "}
+            </Link>
             <Sheet>
               <SheetTrigger asChild>
                 <Button
@@ -347,7 +387,7 @@ export function MainNav() {
             </Sheet>
           </div>
         </div>
-      </header>
+      </nav>
 
       <AnimatePresence>
         {activeItem && (
