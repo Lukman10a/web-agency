@@ -31,10 +31,11 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
 }) => {
   return (
     <div
-      className={`mx-auto mb-24 flex w-[85%] max-w-[1200px] gap-12 lg:gap-8 md:gap-4 sm:mb-16 sm:max-w-[400px] sm:flex-col ${
+      className={`mx-auto mb-24 flex w-[85%] max-w-[1200px] gap-12 lg:gap-8 md:gap-2 sm:mb-16 sm:w-[90%] sm:flex-col ${
         index % 2 === 0 ? "flex-row-reverse" : "flex-row"
       }`}
     >
+<<<<<<< HEAD
       <div className="w-[45%] overflow-hidden sm:w-full">
         <InView
           variants={{
@@ -44,6 +45,18 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
           viewOptions={{ margin: "0px 0px -200px 0px" }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
+=======
+      <div className="w-[45%] sm:w-full">
+       <InView
+                
+                variants={{
+                  hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
+                  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+                }}
+                viewOptions={{ margin: "0px 0px -200px 0px" }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+      >
+>>>>>>> 321f48e6c860fd30bc19f4492c91ea9df6238882
           <Image
             src={imgSrc}
             alt={altText}
@@ -54,6 +67,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
         </InView>
       </div>
       <div className="w-[55%] self-center sm:w-full">
+<<<<<<< HEAD
         <InView
           variants={{
             hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
@@ -61,6 +75,16 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
           }}
           viewOptions={{ margin: "0px 0px -200px 0px" }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
+=======
+         <InView
+                
+                variants={{
+                  hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
+                  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+          }}
+                viewOptions={{ margin: "0px 0px -200px 0px" }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+>>>>>>> 321f48e6c860fd30bc19f4492c91ea9df6238882
         >
           {showTag && (
             <span className="tag mb-4 rounded-3xl border border-[#808080] bg-white px-6 py-2 text-xs text-[#808080] 2md:text-[10px] md:mb-2">
