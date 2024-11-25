@@ -28,12 +28,12 @@ const faqData: FAQItem[] = [
 const SoftwareFAQ: React.FC = () => {
   return (
     <section
-      className="mx-4 rounded-xl py-16"
-      style={{
-        background: "linear-gradient(61.83deg, #FBFBFB 32.56%, #FFFFFF 100%)",
-      }}
+      className="mx-4 rounded-xl py-16 bg-transparent"
+      // style={{
+      //   background: "linear-gradient(61.83deg, #FBFBFB 32.56%, #FFFFFF 100%)",
+      // }}
     >
-      <div className="mx-auto max-w-7xl px-4 py-4 lg:px-8 sm:px-6">
+      <div className="mx-auto max-w-6xl px-4 py-4 lg:px-8 sm:px- space-y-6">
         <h2 className="text-center text-3xl font-extrabold text-gray-900 md:text-xl sm:text-lg">
           FREQUENTLY ASKED QUESTIONS
         </h2>
