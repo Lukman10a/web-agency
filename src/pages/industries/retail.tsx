@@ -1,3 +1,5 @@
+import React from "react";
+
 import Preverity from "@/components/preverity";
 import Resources from "@/components/resources";
 import CompaniesProfile from "@/components/shared/companies-profile";
@@ -7,9 +9,6 @@ import NewHero from "@/components/shared/new-hero";
 import OurCapabilities from "@/components/shared/our-capabilities";
 import SecondaryPartnersSlider from "@/components/shared/secondary-partners-slider";
 import ServicesCard from "@/components/shared/services-card";
-import React from "react";
-
-
 
 const companyData = {
   content:
@@ -38,12 +37,12 @@ const detailsData = [
     description:
       "ou need to maintain patient confidentiality while streamlining operations in an increasingly digital landscape. We specialize in tailoring AWS infrastructure to meet the needs of providers, ensuring you have a secure, compliant, and scalable environment to deliver exceptional care.",
   },
-   {
+  {
     title: "Healthcare providers",
     description:
       "ou need to maintain patient confidentiality while streamlining operations in an increasingly digital landscape. We specialize in tailoring AWS infrastructure to meet the needs of providers, ensuring you have a secure, compliant, and scalable environment to deliver exceptional care.",
   },
-    {
+  {
     title: "Healthcare providers",
     description:
       "ou need to maintain patient confidentiality while streamlining operations in an increasingly digital landscape. We specialize in tailoring AWS infrastructure to meet the needs of providers, ensuring you have a secure, compliant, and scalable environment to deliver exceptional care.",
@@ -89,40 +88,39 @@ const ourCapabilitiesData = [
   },
 ];
 
-
 const Retail = () => {
   return (
     <section>
-  <NewHero
+      <NewHero
         title="Retail on AWS"
         description="Cloud-native and AI solutions that scale with consumer demand"
         showButton={false}
         ImgSrc="/"
       />
 
-       <CompaniesProfile
+      <CompaniesProfile
         cards={companyData}
         heading="Content is king and consumer expectations have never been higher"
         paragraph="Demand for content is constantly growing but the complexity of high-fidelity workflows and global delivery isn’t going away. We empower you with cloud-native and AI solutions to streamline production, create more engaging experiences, and seamlessly deliver to all platforms."
       />
 
-      <p className="text-2xl mx-auto w-[90%] max-w-[1200px] text-[#808080] md:text-lg md:-mt-12 ">
-        From e-commerce giants and global airlines to family-owned and operated boutiques—we've helped retail businesses of all sizes serve their customers.
+      <p className="mx-auto w-[90%] max-w-[1200px] text-2xl text-[#808080] md:-mt-12 md:text-lg">
+        From e-commerce giants and global airlines to family-owned and operated
+        boutiques we&apos;ve helped retail businesses of all sizes serve their
+        customers.
       </p>
 
-<div className="my-7 max-w-7xl overflow-hidden mx-auto">
+      <div className="mx-auto my-7 max-w-7xl overflow-hidden">
         <SecondaryPartnersSlider />
       </div>
 
       <Preverity />
- 
-      
-         <CompaniesWeServe detailsData={detailsData} />
-    
+
+      <CompaniesWeServe detailsData={detailsData} />
 
       <OurCapabilities detailsData={ourCapabilitiesData} />
 
-       <ServicesCard
+      <ServicesCard
         imgSrc="/public/assets/contact"
         altText="Image"
         title="Our media vision"
@@ -134,7 +132,7 @@ const Retail = () => {
         buttonText="Build with us"
       />
 
-       <CompaniesProfileTwo cards={companyDataTwo} />
+      <CompaniesProfileTwo cards={companyDataTwo} />
 
       <ServicesCard
         imgSrc="/public/assets/contact"
