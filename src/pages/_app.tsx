@@ -4,7 +4,7 @@ import Head from "next/head";
 import { notoSans, notoSansMono, sora } from "@/lib/utils";
 
 import Footer from "@/components/shared/footer";
-import Navbar from "@/components/shared/navbar";
+// import Navbar from "@/components/shared/navbar";
 import { MainNav } from "@/components/shared/navbar/main-nav";
 
 // import TopBanner from "@/components/shared/top-banner";
