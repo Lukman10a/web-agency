@@ -221,7 +221,7 @@ const navItems: NavItem[] = [
           },
           {
             title: "Blog",
-            description: "Read insights, tips, and industry news on our blog",
+            description: "Read insights, tips, and industry news on our blog.",
             href: "/blog",
           },
         ],
