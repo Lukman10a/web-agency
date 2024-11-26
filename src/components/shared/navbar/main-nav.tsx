@@ -311,9 +311,7 @@ export function MainNav() {
                   key={item.title}
                   variant="ghost"
                   className={`text-sm font-medium transition-colors hover:text-primary ${
-                    activeItem === item.title
-                      ? "text-primary"
-                      : "text-muted-foreground"
+                    activeItem === item.title ? "text-primary" : "text-white"
                   }`}
                   onClick={() =>
                     setActiveItem(activeItem === item.title ? null : item.title)
@@ -325,7 +323,7 @@ export function MainNav() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/contact">
+            <Link href="/contact" className="md:hidden">
               <Button className="flex w-fit items-center justify-center rounded-full border border-black bg-orange-600 px-8 py-3 text-base font-medium text-white hover:bg-orange-700 md:px-10 md:py-4 md:text-lg">
                 Contact <ArrowIcon />
               </Button>{" "}
@@ -335,7 +333,7 @@ export function MainNav() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="hidden items-center md:block"
+                  className="hidden items-center justify-center border-none text-white md:block"
                 >
                   <Menu className="h-4 w-4" />
                   <span className="sr-only">Toggle menu</span>
@@ -343,11 +341,20 @@ export function MainNav() {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="max-w-[400px] bg-white sm:w-full"
+                className="bg-main- max-w-[400px] bg-white sm:w-full"
               >
                 <SheetHeader>
-                  <SheetTitle>Menu</SheetTitle>
-                  <SheetDescription>
+                  <SheetTitle>
+                    <Link
+                      href="/"
+                      className="flex items-center space-x-2 font-sora"
+                    >
+                      <span className="text-xl font-bold text-[#FF9557]">
+                        TEVERSE
+                      </span>
+                    </Link>
+                  </SheetTitle>
+                  <SheetDescription className="text-left">
                     Navigate through our services and solutions
                   </SheetDescription>
                 </SheetHeader>
@@ -396,7 +403,11 @@ export function MainNav() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-x-0 top-16 z-40 bg-white"
+            className="fixed inset-x-0 top-16 z-40 bg-opacity-100"
+            style={{
+              background:
+                "linear-gradient(to bottom, #FDF3EB 10%, #FB7900 100%)",
+            }}
           >
             <ScrollArea className="container h-[calc(100vh-4rem)] p-6">
               {navItems.map(
