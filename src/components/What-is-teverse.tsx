@@ -1,4 +1,5 @@
 import React from "react";
+
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -8,16 +9,15 @@ type WhatIsTeverseProps = {
   additionalDescription: string;
   bgColor?: string;
   tag?: boolean;
-  tagText?: string; 
+  tagText?: string;
 };
 
 const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
   title,
   mainDescription,
   additionalDescription,
-  bgColor = "#E4E4E4",
   tag = false,
-  tagText
+  tagText,
 }) => {
   // Intersection Observer Hook
   const { ref, inView } = useInView({
@@ -55,9 +55,7 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
       className="mx-auto mb-32 flex w-[90%] max-w-[1150px] gap-12 lg:gap-2 md:mb-16 md:flex-col md:gap-8"
     >
       {/* Left Side (Boxes) */}
-      <div className="mx-auto bg-[#cccbcb] rounded-[3rem] flex h-[800px] 2md:h-auto w-[50%] gap-6 lg:gap-4 md:h-[100vw] md:w-full sm:w-[100%]">
-      
-      </div>
+      <div className="mx-auto flex h-[800px] w-[50%] gap-6 rounded-[3rem] bg-[#cccbcb] lg:gap-4 2md:h-auto md:h-[100vw] md:w-full sm:w-[100%]"></div>
 
       {/* Right Side (Text) */}
       <motion.div
@@ -65,11 +63,11 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
         variants={fadeUpVariants}
       >
         {tag && (
-          <p className="mb-4 self-start rounded-full bg-transparent font-bold md:text-sm tracking-wide ">
-          {tagText}
+          <p className="mb-4 self-start rounded-full bg-transparent font-bold tracking-wide md:text-sm">
+            {tagText}
           </p>
         )}
-        <h2 className="mb-6 font-sans text-3xl xl:w-[80%] lg:w-[100%]  ">
+        <h2 className="mb-6 font-sans text-3xl xl:w-[80%] lg:w-[100%]">
           {title}
         </h2>
         <p className="mb-4 text-2xl lg:text-lg md:text-justify">

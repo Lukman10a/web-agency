@@ -121,14 +121,14 @@ const CloudScore = () => {
       <FAQ />
       <Resources />
 
-      <section className="py-8 px-4 bg-white max-w-6xl mx-auto font-sora">
-        <h2 className="text-4xl font-semibold mb-6 text-gray-800 text-center">
+      <section className="mx-auto max-w-6xl bg-white px-4 py-8 font-sora">
+        <h2 className="mb-6 text-center text-4xl font-semibold text-gray-800">
           Industry Leading Tools
         </h2>
-        <div className="flex flex-col gap-14 items-center">
-          <div className="flex sm:flex-col justify-between">
-            <div className="w-1/2 sm:w-full flex flex-col justify-center">
-              <h2 className="text-2xl font-semibold mb-2">CrowdStrike</h2>
+        <div className="flex flex-col items-center gap-14">
+          <div className="flex justify-between sm:flex-col">
+            <div className="flex w-1/2 flex-col justify-center sm:w-full">
+              <h2 className="mb-2 text-2xl font-semibold">CrowdStrike</h2>
               <p>
                 CrowdStrike gives you a single unified view of your security in
                 the Threat Graph, which combines sensor telemetry across all
@@ -146,15 +146,15 @@ const CloudScore = () => {
               />
             </div>
           </div>
-          <div className="flex sm:flex-col justify-between">
-            <div className="w-1/2 sm:w-full flex flex-col justify-center">
-              <h2 className="text-2xl font-semibold mb-2">Mission Control</h2>
+          <div className="flex justify-between sm:flex-col">
+            <div className="flex w-1/2 flex-col justify-center sm:w-full">
+              <h2 className="mb-2 text-2xl font-semibold">Mission Control</h2>
               <p>
                 The Cloud Services Platform That&apos;s{" "}
                 <span className="block sm:inline"> Purpose Built for AWS</span>
               </p>
             </div>
-            <div className="w-1/2 sm:w-full flex flex-col justify-center">
+            <div className="flex w-1/2 flex-col justify-center sm:w-full">
               <p>
                 Mission Cloud Secure includes Mission Control, our cloud
                 services platform for visibility, guidance, and support for your
