@@ -31,7 +31,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
 
   return (
     <section className={`${bgColor} w-full pt-4`}>
-      <div className="mx-auto w-full lg:px-8 sm:px-4">
+      <div className="mx-auto w-full px-8 sm:px-0">
         <div className="space-y-6"> {/* Adjust spacing between items */}
           {faqData.map((faq, index) => (
             <div
