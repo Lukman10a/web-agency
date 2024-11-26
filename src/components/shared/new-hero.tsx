@@ -45,9 +45,9 @@ const NewHero: React.FC<NewHeroProps> = ({
   };
 
   return (
-    <section className="mx-auto mb-24 bg-secondary-gradient px-16 py-20 xl:rounded-t-none lg:p-12 lg:py-16 md:mb-16 md:px-0 sm:mb-12">
+    <section className="mx-auto mb-24  px-16 py-20 xl:rounded-t-none lg:p-12 lg:py-16 md:mb-16 md:px-0 sm:mb-12">
       <motion.div
-        className={`mx-auto flex w-[95%] max-w-[1200px] gap-12 overflow-hidden 2md:gap-8 md:w-[85%] md:flex-col md:gap-6 ${
+        className={`mx-auto flex w-[90%] max-w-[1150px] gap-12 overflow-hidden 2md:gap-8 md:w-[85%] md:flex-col md:gap-6 ${
           reverse ? "flex-row-reverse" : "flex-row"
         }`}
         variants={containerVariants}
@@ -55,7 +55,7 @@ const NewHero: React.FC<NewHeroProps> = ({
         animate="visible"
       >
         {/* Left Section (Text + Icon) */}
-        <div className="flex w-[55%] flex-col justify-center md:mx-auto md:w-full md:text-center">
+        <div className="flex w-[50%] mb-6 flex-col justify-center md:mx-auto md:w-full md:text-center">
           {icon && iconLink && (
             <motion.div variants={itemVariants}>
               <Image
@@ -76,20 +76,20 @@ const NewHero: React.FC<NewHeroProps> = ({
             </motion.p>
           )}
           <motion.h1
-            className="mb-[.5em] w-[80%] font-sora text-5xl font-medium xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full"
+            className="mb-[.5em] font-sans text-5xl  xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full"
             variants={itemVariants}
           >
             {title}
           </motion.h1>
           <motion.p
-            className="mb-[1.5em] w-[90%] text-[#808080] lg:text-[14px] md:mx-auto md:w-[80%] sm:w-[90%]"
+            className="mb-[1.5em] w-[90%] text-2xl md:text-xl md:mx-auto md:w-[80%] sm:w-[90%]"
             variants={itemVariants}
           >
             {description}
           </motion.p>
           {showButton && (
             <motion.div variants={itemVariants}>
-              <Button className="flex w-fit items-center gap-4 rounded-3xl bg-orange-650 px-8 font-sans text-white xl:text-[12px] md:mx-auto md:w-[90%] sm:mb-4 sm:w-full">
+              <Button className="flex w-fit items-center gap-4 rounded-[4rem] bg-black px-8 py-7 text-lg font-sans text-white hover:text-black hover:bg-white  md:mx-auto md:w-[90%] sm:mb-4 sm:w-full">
                 <span>{buttonText}</span>
               </Button>
             </motion.div>
@@ -98,13 +98,13 @@ const NewHero: React.FC<NewHeroProps> = ({
 
         {/* Right Section (Image) */}
         <motion.div
-          className="image mx-auto w-[45%] max-w-[400px] self-end rounded-2xl bg-transparent md:w-full md:text-center sm:rounded-lg"
+          className="image mx-auto w-[50%] max-w-[400px] self-end rounded-2xl bg-transparent md:w-full md:text-center sm:rounded-lg"
           variants={itemVariants}
         >
           <Image
             src={ImgSrc}
             alt="Hero Image"
-            className="w-full rounded-2xl bg-white"
+            className="w-full rounded-2xl"
             width={500}
             height={500}
           />
