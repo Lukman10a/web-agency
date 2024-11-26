@@ -11,35 +11,22 @@ const TeverseControlHero: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-<<<<<<< HEAD
-        <motion.div className="relative space-y-7 mt-24"
-=======
         <motion.div
           className="relative space-y-4"
->>>>>>> main
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-<<<<<<< HEAD
-         
-          <motion.h1 className="mb-4 text-3xl font-medium inline p-1 text-[#262626] sm:text-xl bg-orange-650 rounded-2xl"
-=======
           <motion.h1
             className="mb-4 text-5xl font-medium text-[#262626] sm:text-xl"
->>>>>>> main
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
           >
             Teverse Control
           </motion.h1>
-<<<<<<< HEAD
-          <motion.p className="text-left mb-6 max-w-7xl text-2xl text-[#000000] sm:mx-0 sm:w-full sm:max-w-full sm:text-justify sm:text-xs"
-=======
           <motion.p
             className="mb-6 max-w-2xl text-left text-base text-[#808080] sm:mx-0 sm:w-full sm:max-w-full sm:text-justify sm:text-xs"
->>>>>>> main
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
@@ -49,14 +36,6 @@ const TeverseControlHero: React.FC = () => {
             AWS cloud environment while guiding you toward improvements with
             real-time access to our teams of AWS experts.
           </motion.p>
-<<<<<<< HEAD
-          <motion.button className="mt-5 rounded-full text-lg bg-black px-7 py-3 font-semibold text-white transition duration-300 hover:bg-orange-600"
-             whileHover={{ scale: 1.1 }}
-             whileTap={{ scale: 0.95 }}
-             initial={{ opacity: 0 }}
-             animate={{ opacity: 1 }}
-             transition={{ delay: 1.2, duration: 0.8 }}
-=======
           <motion.button
             className="mt-5 rounded-full bg-[#FF9557] px-7 py-3 text-sm font-medium text-white transition duration-300 hover:bg-orange-600"
             whileHover={{ scale: 1.1 }}
@@ -64,7 +43,6 @@ const TeverseControlHero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.8 }}
->>>>>>> main
           >
             Request a Demo
           </motion.button>
