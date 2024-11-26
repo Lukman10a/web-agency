@@ -1,20 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Stars from "/public/svg/stars.svg";
 
-// Define prop types
 interface ReusableComponentProps {
-    image: string; 
-    title: string; 
-    description: string; 
-    buttonText?: string; 
-    showButton?: boolean;
-    reverse?: boolean; 
-    starsAnimation?: boolean;
-  }
+  image: string;
+  title: string;
+  description: string;
+  buttonText?: string;
+  showButton?: boolean;
+  reverse?: boolean;
+  starsAnimation?: boolean;
+  additionalImage?: string; // Optional for additional animated image
+  additionalImagePosition?: { bottom: number; left: number }; // Position for additional image
+}
 
-  const ReusableComponent: React.FC<ReusableComponentProps> = ({
+const ReusableComponent: React.FC<ReusableComponentProps> = ({
   image,
   title,
   description,
@@ -22,39 +22,35 @@ interface ReusableComponentProps {
   showButton = true,
   reverse = false,
   starsAnimation = false,
+  additionalImage,
+  additionalImagePosition,
 }) => {
   return (
     <div
-      className={`flex justify-between items-center gap-14 sm:flex-col max-w-6xl mx-auto ${
+      className={`flex flex-row justify-between items-center gap-14 sm:flex-col max-w-6xl mx-auto ${
         reverse ? "flex-row-reverse" : ""
-      }  p-6 space-y-6 md:space-y-0`}
+      } p-6 space-y-6 md:space-y-0`}
     >
       {/* Image Section */}
       <motion.div
-        className="relative flex-shrink-0"
+        className="relative flex-shrink-0 py-10"
         initial={{ opacity: 0, x: reverse ? 100 : -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <Image src={image} width={600} height={850} alt="Section Image" className="rounded-lg" />
+        {/* Main Section Image */}
+        <Image src={image} width={600} height={850} alt="Section Image" className="rounded-3xl" />
 
-        {/* Animated Star */}
-        {starsAnimation && (
+        {/* Animated Additional Image */}
+        {starsAnimation && additionalImage && (
           <motion.div
-            className="absolute top-[-1px] left-[-100px]"
-            // animate={{ rotate: 360 }}
-            transition={{
-            //   repeat: Infinity,
-              duration: .1,
-              ease: "linear",
+            className="absolute"
+            style={{
+              bottom: additionalImagePosition?.bottom || 0,
+              left: additionalImagePosition?.left || 0,
             }}
           >
-            <Image
-              src={Stars}
-              alt="Star Animation"
-              width={100}
-              height={100}
-            />
+            <Image src={additionalImage} alt="Animated Image" width={100} height={100} />
           </motion.div>
         )}
       </motion.div>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import Image from "next/image";
 
 interface FAQItem {
@@ -32,16 +31,21 @@ const FAQSection: React.FC<FAQSectionProps> = ({
 
   return (
     <section className={`${bgColor} w-full pt-4`}>
-      <div className="mx-auto w-full px-4 lg:px-8 sm:px-4">
-        <div className="space-y-4">
+      <div className="mx-auto w-full lg:px-8 sm:px-4">
+        <div className="space-y-6"> {/* Adjust spacing between items */}
           {faqData.map((faq, index) => (
-            <div key={index} className="border-b pb-4">
+            <div
+              key={index}
+              className={`px-6 py-4 rounded-lg transition-all duration-200 ${
+                index !== faqData.length - 1 ? "border-b-2 border-black" : ""
+              } hover:bg-orange-500`}
+            >
               <div
                 className="flex cursor-pointer items-center justify-between"
                 onClick={() => toggleFAQ(index)}
               >
                 <h3
-                  className={`text-lg font-medium sm:text-base ${questionColor}`}
+                  className={`text-lg font-bold sm:text-base ${questionColor}`}
                 >
                   {faq.question}
                 </h3>
