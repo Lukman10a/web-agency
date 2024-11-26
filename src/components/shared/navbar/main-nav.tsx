@@ -34,8 +34,9 @@ interface NavItem {
   href?: string;
   items: {
     category: string;
+    href?: string;
     description: string;
-    subitems: {
+    subitems?: {
       title: string;
       description: string;
       href: string;
@@ -50,39 +51,38 @@ const navItems: NavItem[] = [
     items: [
       {
         category: "Cloud Solutions",
+        href: "/solution",
         description:
           "Explore our cloud solutions and services for your business needs",
-        subitems: [
-          {
-            title: "Teverse Control",
-            description:
-              "Cloud services platform providing visibility, guidance & support for your cloud",
-            href: "/solutions/teverse-control",
-          },
-          {
-            title: "Teverse Gateway",
-            description:
-              "AWS guidance for efficient cloud growth and foundational best practices",
-            href: "/solutions/teverse-gateway",
-          },
-          {
-            title: "Teverse Engagements",
-            description:
-              "Get transparent reporting and live updates on your team's status",
-            href: "/solutions/cloud-engagements",
-          },
-          {
-            title: "Teverse Cloud Score",
-            description:
-              "Proprietary scoring of your cloud architecture against AWS best practices",
-            href: "/solutions/cloud-score",
-          },
-          {
-            title: "Teverse Cloud Secure",
-            description: "Fully managed security, detection, and response",
-            href: "/solutions/cloud-secure",
-          },
-        ],
+      },
+      {
+        category: "Teverse Control",
+        description:
+          "Cloud services platform providing visibility, guidance & support for your cloud",
+        href: "/solutions/teverse-control",
+      },
+      {
+        category: "Teverse Gateway",
+        description:
+          "AWS guidance for efficient cloud growth and foundational best practices",
+        href: "/solutions/teverse-gateway",
+      },
+      {
+        category: "Teverse Engagements",
+        description:
+          "Get transparent reporting and live updates on your team's status",
+        href: "/solutions/cloud-engagements",
+      },
+      {
+        category: "Teverse Cloud Score",
+        description:
+          "Proprietary scoring of your cloud architecture against AWS best practices",
+        href: "/solutions/cloud-score",
+      },
+      {
+        category: "Teverse Cloud Secure",
+        description: "Fully managed security, detection, and response",
+        href: "/solutions/cloud-secure",
       },
     ],
   },
@@ -164,44 +164,38 @@ const navItems: NavItem[] = [
         category: "Industry Solutions",
         description:
           "Explore the industries we serve with tailored cloud solutions",
-        subitems: [
-          {
-            title: "Healthcare",
-            description:
-              "Learn how we support healthcare organizations with cloud solutions",
-            href: "/industries/healthcare",
-          },
-          {
-            title: "Life Sciences",
-            description:
-              "Discover our cloud services tailored for life sciences",
-            href: "/industries/life-sciences",
-          },
-          {
-            title: "Retail",
-            description:
-              "See how we help retail businesses thrive in the cloud",
-            href: "/industries/retail",
-          },
-          {
-            title: "Software",
-            description:
-              "Optimize software development with our cloud expertise",
-            href: "/industries/software",
-          },
-          {
-            title: "Finance",
-            description:
-              "Explore cloud solutions designed for the finance sector",
-            href: "/industries/finance",
-          },
-          {
-            title: "Media",
-            description:
-              "Empower media companies with robust cloud capabilities",
-            href: "/industries/media",
-          },
-        ],
+        href: "#",
+      },
+      {
+        category: "Healthcare",
+        description:
+          "Learn how we support healthcare organizations with cloud solutions",
+        href: "/industries/healthcare",
+      },
+      {
+        category: "Life Sciences",
+        description: "Discover our cloud services tailored for life sciences",
+        href: "/industries/life-sciences",
+      },
+      {
+        category: "Retail",
+        description: "See how we help retail businesses thrive in the cloud",
+        href: "/industries/retail",
+      },
+      {
+        category: "Software",
+        description: "Optimize software development with our cloud expertise",
+        href: "/industries/software",
+      },
+      {
+        category: "Finance",
+        description: "Explore cloud solutions designed for the finance sector",
+        href: "/industries/finance",
+      },
+      {
+        category: "Media",
+        description: "Empower media companies with robust cloud capabilities",
+        href: "/industries/media",
       },
     ],
   },
@@ -295,11 +289,8 @@ export function MainNav() {
   }, [router.events]);
 
   return (
-    <div className="relative bg-nav-gradient font-mono">
-      <nav
-        className="fixed top-0 z-50 w-full border-b bg-background bg-nav-gradient px-7"
-        id="scrollable"
-      >
+    <div className="relative bg-nav-gradient font-mono" id="scrollable">
+      <nav className="fixed top-0 z-50 w-full border-b bg-background bg-nav-gradient px-7">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center space-x-2 font-sora">
@@ -377,7 +368,7 @@ export function MainNav() {
                                 {section.description}
                               </p>
                               <div className="space-y-2">
-                                {section.subitems.map((subitem) => (
+                                {section?.subitems?.map((subitem) => (
                                   <Link
                                     key={subitem.title}
                                     href={subitem.href}
@@ -433,7 +424,7 @@ export function MainNav() {
                             </h3>
                             {item.href && (
                               <Link
-                                href={item.href}
+                                href={section.href || item.href}
                                 className="text-sm font-medium text-primary hover:underline"
                               >
                                 View All
@@ -444,7 +435,7 @@ export function MainNav() {
                             {section.description}
                           </p>
                           <div className="grid gap-4">
-                            {section.subitems.map((subitem) => (
+                            {section?.subitems?.map((subitem) => (
                               <Link
                                 key={subitem.title}
                                 href={subitem.href}
