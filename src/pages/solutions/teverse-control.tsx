@@ -4,7 +4,7 @@ import BookDemoSection from "@/components/book-demo";
 import ReusableComponent from "@/components/control-features";
 import InterpretDataSection from "@/components/data-section";
 import SoftwareFAQ from "@/components/software-faq";
-import TeverseControlHero from "@/components/teverse-control";
+import TeverseControlHero from "@/components/teverse-control-hero";
 
 interface ReusableComponentProps {
   image: string;
