@@ -342,6 +342,10 @@ export function MainNav() {
               <SheetContent
                 side="right"
                 className="bg-main- max-w-[400px] bg-white sm:w-full"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, #FDF3EB 10%, #FB7900 100%)",
+                }}
               >
                 <SheetHeader>
                   <SheetTitle>
