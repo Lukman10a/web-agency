@@ -16,28 +16,16 @@ const cardData = [
       "We build a history of your conversations with us and can see the Recommendation you’re acting on, the Scorecard which prompted a ticket, or the specific Resource you’re concerned about.",
   },
   {
-    icon: "/assets/message.png",
+    icon: "/assets/targetpoint.png",
     title: "Track Your Impact",
     description:
       "As you become more well architected, see the actual dollars we’ve helped you save and the impact of your architectural decisions over time.",
   },
   {
-    icon: "/assets/message.png",
+    icon: "/assets/cloudstrikes.png",
     title: "Built for AWS",
     description:
       "Every part of Mission Control was designed for AWS and will continue to evolve to support AWS services and programs.",
-  },
-  {
-    icon: "/assets/message.png",
-    title: "Real-Time Monitoring",
-    description:
-      "In addition to the visualizations we generate, our Cloud Analysts meet with you regularly to talk through areas where you may be overspending or working with an inefficient architecture",
-  },
-  {
-    icon: "/assets/message.png",
-    title: "Custom Strategies",
-    description:
-      "In addition to the visualizations we generate, our Cloud Analysts meet with you regularly to talk through areas where you may be overspending or working with an inefficient architecture",
   },
 ];
 
@@ -74,11 +62,12 @@ const InterpretDataSection: React.FC = () => {
   return (
     <section
       
-      className="flex flex-col items-center space-y-5 py-14 mt-[10rem] sm:mt-2 px-4"
+      className="flex flex-col space-y-5 mt-[10rem] sm:mt-2 px-4"
     >
+      <div className="space-y-4 max-w-6xl mx-20">
       
       <motion.div
-        className="text-xs text-gray-500 tracking-wide px-3 inline py-1 border border-gray-300 rounded-full mb-4"
+        className="text-xs text-gray-500 tracking-wide px-3 inline py-1 rounded-full mb-4"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
@@ -87,16 +76,16 @@ const InterpretDataSection: React.FC = () => {
       </motion.div>
 
       <motion.h2
-        className="text-4xl sm:text-xl max-w-lg md:text-3xl font-medium text-gray-800 text-center mb-4"
+        className="text-2xl sm:text-xl md:text-3xl font-medium text-gray-800 text-left mb-4"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        The Expertise to Interpret Data - Not Just Visualize It
+        The Expertise to <span className="border border-neutral-800 p-1 rounded-xl">Interpret Data</span> - Not Just Visualize It
       </motion.h2>
 
       <motion.p
-        className="text-center text-gray-600 max-w-4xl mb-10"
+        className="text-left text-gray-600 max-w-4xl mb-10"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
@@ -106,11 +95,12 @@ const InterpretDataSection: React.FC = () => {
         teams as they build their knowledge of your business, industry,
         objectives, and the unique concerns and needs of your architecture.
       </motion.p>
+      </div>
 
       {/* Staggered Card Animation */}
       <motion.div
         ref={ref}
-        className="grid py-5 sm:grid-cols-1 md:grid-cols-2 grid-cols-3 gap-6 max-w-6xl"
+        className="grid py-5 sm:grid-cols-1 sm:flex-wrap grid-cols-2 gap-6 max-w-6xl mx-auto"
         variants={containerVariants}
         initial="hidden"
         animate={controls}
@@ -119,7 +109,10 @@ const InterpretDataSection: React.FC = () => {
         {cardData.map((card, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-start p-6 bg-[#FF9557] rounded-lg text-left shadow-lg"
+            className="flex flex-col items-start p-14 rounded-2xl text-left shadow-lg"
+            style={{
+              background: "linear-gradient(to bottom, #FDF3EB 10%, #FB7900 100%)"
+            }}
             variants={cardVariants}
             whileHover={{
               scale: 1.05, // Slight hover scale effect
@@ -128,12 +121,12 @@ const InterpretDataSection: React.FC = () => {
             transition={{ duration: 0.3 }}
           >
             <div className="mb-4 text-3xl">
-              <Image src={card.icon} width={40} height={40} alt="card image" />
+              <Image src={card.icon} width={50} height={50} alt="card image" />
             </div>
-            <h3 className="text-3xl sm:text-lg font-medium text-gray-800 mb-2">
+            <h3 className="text-2xl sm:text-lg font-semibold text-black mb-2">
               {card.title}
             </h3>
-            <p className="text-gray-700 text-sm">{card.description}</p>
+            <p className="text-black text-xl">{card.description}</p>
           </motion.div>
         ))}
       </motion.div>

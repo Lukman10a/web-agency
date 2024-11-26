@@ -38,9 +38,11 @@ const config: typeof Config = {
     extend: {
       backgroundImage: {
         "main-gradient":
+          "linear-gradient(to right, rgba(80, 206, 245, 0.2), rgba(255, 149, 87, 0.2))",
+        "main-old":
           "linear-gradient(to top right, rgba(50, 150, 245, 0.5), rgba(255, 120, 57, 0.5))",
         "nav-gradient":
-          "linear-gradient(to right,rgba(8,19,72,0.1), rgba(255, 149, 87, 0.2))",
+          "linear-gradient(to right,rgba(8,19,72,.8), rgba(255, 149, 87, .8))",
         // to-[rgba(255,149,87,0.1)
         "secondary-gradient":
           "linear-gradient(to right, rgba(80, 206, 245, 0.2), rgba(255, 149, 87, 0.2))",
