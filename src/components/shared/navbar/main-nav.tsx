@@ -34,8 +34,9 @@ interface NavItem {
   href?: string;
   items: {
     category: string;
+    href?: string;
     description: string;
-    subitems: {
+    subitems?: {
       title: string;
       description: string;
       href: string;
@@ -50,39 +51,38 @@ const navItems: NavItem[] = [
     items: [
       {
         category: "Cloud Solutions",
+        href: "/solution",
         description:
           "Explore our cloud solutions and services for your business needs",
-        subitems: [
-          {
-            title: "Teverse Control",
-            description:
-              "Cloud services platform providing visibility, guidance & support for your cloud",
-            href: "/solutions/teverse-control",
-          },
-          {
-            title: "Teverse Gateway",
-            description:
-              "AWS guidance for efficient cloud growth and foundational best practices",
-            href: "/solutions/teverse-gateway",
-          },
-          {
-            title: "Teverse Engagements",
-            description:
-              "Get transparent reporting and live updates on your team's status",
-            href: "/solutions/cloud-engagements",
-          },
-          {
-            title: "Teverse Cloud Score",
-            description:
-              "Proprietary scoring of your cloud architecture against AWS best practices",
-            href: "/solutions/cloud-score",
-          },
-          {
-            title: "Teverse Cloud Secure",
-            description: "Fully managed security, detection, and response",
-            href: "/solutions/cloud-secure",
-          },
-        ],
+      },
+      {
+        category: "Teverse Control",
+        description:
+          "Cloud services platform providing visibility, guidance & support for your cloud",
+        href: "/solutions/teverse-control",
+      },
+      {
+        category: "Teverse Gateway",
+        description:
+          "AWS guidance for efficient cloud growth and foundational best practices",
+        href: "/solutions/teverse-gateway",
+      },
+      {
+        category: "Teverse Engagements",
+        description:
+          "Get transparent reporting and live updates on your team's status",
+        href: "/solutions/cloud-engagements",
+      },
+      {
+        category: "Teverse Cloud Score",
+        description:
+          "Proprietary scoring of your cloud architecture against AWS best practices",
+        href: "/solutions/cloud-score",
+      },
+      {
+        category: "Teverse Cloud Secure",
+        description: "Fully managed security, detection, and response",
+        href: "/solutions/cloud-secure",
       },
     ],
   },
@@ -115,7 +115,7 @@ const navItems: NavItem[] = [
           {
             title: "AWS Services",
             description: "Explore our full range of AWS services",
-            href: "/aws",
+            href: "/services/aws",
           },
         ],
       },
@@ -164,44 +164,38 @@ const navItems: NavItem[] = [
         category: "Industry Solutions",
         description:
           "Explore the industries we serve with tailored cloud solutions",
-        subitems: [
-          {
-            title: "Healthcare",
-            description:
-              "Learn how we support healthcare organizations with cloud solutions",
-            href: "/industries/healthcare",
-          },
-          {
-            title: "Life Sciences",
-            description:
-              "Discover our cloud services tailored for life sciences",
-            href: "/industries/life-sciences",
-          },
-          {
-            title: "Retail",
-            description:
-              "See how we help retail businesses thrive in the cloud",
-            href: "/industries/retail",
-          },
-          {
-            title: "Software",
-            description:
-              "Optimize software development with our cloud expertise",
-            href: "/industries/software",
-          },
-          {
-            title: "Finance",
-            description:
-              "Explore cloud solutions designed for the finance sector",
-            href: "/industries/finance",
-          },
-          {
-            title: "Media",
-            description:
-              "Empower media companies with robust cloud capabilities",
-            href: "/industries/media",
-          },
-        ],
+        href: "#",
+      },
+      {
+        category: "Healthcare",
+        description:
+          "Learn how we support healthcare organizations with cloud solutions",
+        href: "/industries/healthcare",
+      },
+      {
+        category: "Life Sciences",
+        description: "Discover our cloud services tailored for life sciences",
+        href: "/industries/life-sciences",
+      },
+      {
+        category: "Retail",
+        description: "See how we help retail businesses thrive in the cloud",
+        href: "/industries/retail",
+      },
+      {
+        category: "Software",
+        description: "Optimize software development with our cloud expertise",
+        href: "/industries/software",
+      },
+      {
+        category: "Finance",
+        description: "Explore cloud solutions designed for the finance sector",
+        href: "/industries/finance",
+      },
+      {
+        category: "Media",
+        description: "Empower media companies with robust cloud capabilities",
+        href: "/industries/media",
       },
     ],
   },
@@ -295,11 +289,8 @@ export function MainNav() {
   }, [router.events]);
 
   return (
-    <div className="relative bg-nav-gradient font-mono">
-      <nav
-        className="fixed top-0 z-50 w-full border-b bg-background bg-nav-gradient px-7"
-        id="scrollable"
-      >
+    <div className="relative bg-nav-gradient font-mono" id="scrollable">
+      <nav className="fixed top-0 z-50 w-full border-b bg-background bg-nav-gradient px-7">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center space-x-2 font-sora">
@@ -311,9 +302,7 @@ export function MainNav() {
                   key={item.title}
                   variant="ghost"
                   className={`text-sm font-medium transition-colors hover:text-primary ${
-                    activeItem === item.title
-                      ? "text-primary"
-                      : "text-muted-foreground"
+                    activeItem === item.title ? "text-primary" : "text-white"
                   }`}
                   onClick={() =>
                     setActiveItem(activeItem === item.title ? null : item.title)
@@ -325,7 +314,7 @@ export function MainNav() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/contact">
+            <Link href="/contact" className="md:hidden">
               <Button className="flex w-fit items-center justify-center rounded-full border border-black bg-orange-600 px-8 py-3 text-base font-medium text-white hover:bg-orange-700 md:px-10 md:py-4 md:text-lg">
                 Contact <ArrowIcon />
               </Button>{" "}
@@ -334,20 +323,32 @@ export function MainNav() {
               <SheetTrigger asChild>
                 <Button
                   variant="outline"
-                  size="icon"
-                  className="hidden items-center md:block"
+                  className="hidden border-black md:block"
                 >
-                  <Menu className="h-4 w-4" />
+                  <Menu className="h-8 w-8" />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="max-w-[400px] bg-white sm:w-full"
+                className="bg-main- max-w-[400px] bg-white sm:w-full"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, #FDF3EB 10%, #FB7900 100%)",
+                }}
               >
                 <SheetHeader>
-                  <SheetTitle>Menu</SheetTitle>
-                  <SheetDescription>
+                  <SheetTitle>
+                    <Link
+                      href="/"
+                      className="flex items-center space-x-2 font-sora"
+                    >
+                      <span className="text-xl font-bold text-[#FF9557]">
+                        TEVERSE
+                      </span>
+                    </Link>
+                  </SheetTitle>
+                  <SheetDescription className="text-left">
                     Navigate through our services and solutions
                   </SheetDescription>
                 </SheetHeader>
@@ -366,7 +367,7 @@ export function MainNav() {
                                 {section.description}
                               </p>
                               <div className="space-y-2">
-                                {section.subitems.map((subitem) => (
+                                {section?.subitems?.map((subitem) => (
                                   <Link
                                     key={subitem.title}
                                     href={subitem.href}
@@ -396,7 +397,11 @@ export function MainNav() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-x-0 top-16 z-40 bg-white"
+            className="fixed inset-x-0 top-16 z-40 bg-opacity-100"
+            style={{
+              background:
+                "linear-gradient(to bottom, #FDF3EB 10%, #FB7900 100%)",
+            }}
           >
             <ScrollArea className="container h-[calc(100vh-4rem)] p-6">
               {navItems.map(
@@ -418,7 +423,7 @@ export function MainNav() {
                             </h3>
                             {item.href && (
                               <Link
-                                href={item.href}
+                                href={section.href || item.href}
                                 className="text-sm font-medium text-primary hover:underline"
                               >
                                 View All
@@ -429,7 +434,7 @@ export function MainNav() {
                             {section.description}
                           </p>
                           <div className="grid gap-4">
-                            {section.subitems.map((subitem) => (
+                            {section?.subitems?.map((subitem) => (
                               <Link
                                 key={subitem.title}
                                 href={subitem.href}
