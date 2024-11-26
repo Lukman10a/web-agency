@@ -352,15 +352,15 @@ export function MainNav() {
                     Navigate through our services and solutions
                   </SheetDescription>
                 </SheetHeader>
-                <ScrollArea className="mt-6 h-[calc(100vh-8rem)]">
+                <ScrollArea className="no-scrollbar mt-6 h-[calc(100vh-8rem)]">
                   <Accordion type="single" collapsible>
                     {navItems.map((item, index) => (
                       <AccordionItem value={`item-${index}`} key={item.title}>
                         <AccordionTrigger>{item.title}</AccordionTrigger>
-                        <AccordionContent>
+                        <AccordionContent className="no-scrollbar">
                           {item.items.map((section) => (
                             <div key={section.category} className="mb-4">
-                              <Link href={section.href || "#"}>
+                              <Link href={section?.href || "#"}>
                                 <h3 className="mb-2 text-sm font-semibold">
                                   {section.category}
                                 </h3>
