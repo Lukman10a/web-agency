@@ -60,10 +60,10 @@ const InterpretDataSection: React.FC = () => {
   };
 
   return (
-    <section className="mt-[10rem] flex flex-col space-y-5 px-4 sm:mt-2">
-      <div className="mx-20 max-w-6xl space-y-4">
+    <section className="mx-auto mt-[10rem] flex max-w-7xl flex-col space-y-5 px-10 sm:mt-10">
+      <div className="space-y-4">
         <motion.div
-          className="mb-4 inline rounded-full px-3 py-1 text-xs tracking-wide text-gray-500"
+          className="mb-4 inline rounded-full py-1 text-xs tracking-wide text-gray-500"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -101,7 +101,7 @@ const InterpretDataSection: React.FC = () => {
       {/* Staggered Card Animation */}
       <motion.div
         ref={ref}
-        className="mx-auto grid max-w-6xl grid-cols-2 gap-6 py-5 sm:grid-cols-1 sm:flex-wrap"
+        className="mx-auto grid grid-cols-2 gap-6 py-5 sm:grid-cols-1 sm:flex-wrap"
         variants={containerVariants}
         initial="hidden"
         animate={controls}

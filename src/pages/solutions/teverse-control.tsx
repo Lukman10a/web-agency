@@ -54,23 +54,26 @@ const TeverseControl = () => {
     <main className="bg-main-gradient">
       <TeverseControlHero />
       <InterpretDataSection />
-      <section className="mx-20 space-y-6 py-10 text-left text-2xl font-medium">
-        <h2 className="mb-8 inline rounded-lg border border-black p-1 text-left font-semibold">
-          Features{" "}
-        </h2>
-        <p className=""> Visualize, Collaborate, Learn, Act </p>
-        <p className="">
-          {" "}
-          For every insight, alert, or data point we visualize, you’ll have
-          access to an expert to help you understand what it means, why it
-          matters, and how to act on it.{" "}
-        </p>
-      </section>
-      <div>
-        {sections.map((section, index) => (
-          <ReusableComponent key={index} {...section} />
-        ))}
+      <div className="mx-10">
+        <section className="space-y-6 py-10 text-left text-2xl font-medium">
+          <h2 className="mb-8 inline rounded-lg border border-black p-1 text-left font-semibold">
+            Features{" "}
+          </h2>
+          <p className=""> Visualize, Collaborate, Learn, Act </p>
+          <p className="">
+            {" "}
+            For every insight, alert, or data point we visualize, you’ll have
+            access to an expert to help you understand what it means, why it
+            matters, and how to act on it.{" "}
+          </p>
+        </section>
+        <div>
+          {sections.map((section, index) => (
+            <ReusableComponent key={index} {...section} />
+          ))}
+        </div>
       </div>
+
       <SoftwareFAQ />
       <BookDemoSection />
     </main>

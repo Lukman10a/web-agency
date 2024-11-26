@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       {/* <Navbar /> */}
       <MainNav />
-      <main className="flex-grow">
+      <main className="mt-16 flex-grow">
         <Component {...pageProps} />
       </main>
       <Footer />

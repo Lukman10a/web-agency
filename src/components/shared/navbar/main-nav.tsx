@@ -115,7 +115,7 @@ const navItems: NavItem[] = [
           {
             title: "AWS Services",
             description: "Explore our full range of AWS services",
-            href: "/aws",
+            href: "/services/aws",
           },
         ],
       },
@@ -323,10 +323,9 @@ export function MainNav() {
               <SheetTrigger asChild>
                 <Button
                   variant="outline"
-                  size="icon"
-                  className="hidden items-center justify-center border-none text-white md:block"
+                  className="hidden border-black md:block"
                 >
-                  <Menu className="h-4 w-4" />
+                  <Menu className="h-8 w-8" />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
