@@ -423,8 +423,8 @@ export function MainNav() {
                     >
                       {item.items.map((section) => (
                         <div key={section.category} className="space-y-4">
-                          <div className="flex items-center justify-between">
-                            <h3 className="ease text-lg font-semibold transition-all hover:underline">
+                          <div className="group flex items-center justify-between">
+                            <h3 className="border-b-2 border-transparent text-lg font-semibold transition-all duration-300 ease-in hover:border-gray-700">
                               {section.href ? (
                                 <Link href={section.href} className="">
                                   {section.category}
@@ -433,10 +433,14 @@ export function MainNav() {
                                 <span>{section.category}</span>
                               )}
                             </h3>
+                            {/* <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-gray-700 transition-all duration-300 group-hover:w-full"></span> */}
                           </div>
                           <p className="text-sm text-muted-foreground">
                             {section.description}
                           </p>
+                          {section.subitems && (
+                            <hr className="border-gray-900 bg-gray-900" />
+                          )}
                           <div className="grid gap-4">
                             {section?.subitems?.map((subitem) => (
                               <Link
