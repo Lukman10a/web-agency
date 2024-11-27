@@ -53,8 +53,8 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
             />
           </InView>
         </div>
-        <div className="w-[50%] bg-gradient-to-t from-cyan-300 to-white md:w-full">
-          <div className="mx-auto w-[70%] py-32 md:w-[90%] md:py-16">
+        <div className="w-[50%] bg-gradient-to-t from-[#54aec9] to-[#e6f0f1] md:w-full">
+          <div className="mx-auto w-[70%] py-28 md:w-[90%] md:py-16">
             <InView
               variants={{
                 hidden: { opacity: 0, y: 100, filter: "blur(4px)" },

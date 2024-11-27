@@ -1,26 +1,34 @@
-import Image from 'next/image';
-import React from 'react';
+import React from "react";
+
+import Image from "next/image";
 
 // Define props type
 interface FeatureCardProps {
   imageSrc: string;
   title: string;
-    description: string;
-    fullImage?: boolean;
+  description: string;
+  fullImage?: boolean;
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ imageSrc, title, description, fullImage = false }) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({
+  imageSrc,
+  title,
+  description,
+  fullImage = false,
+}) => {
   return (
-    <div className="w-[90%] max-w-[500px] space-y-4 sm:mx-auto mb-6">
+    <div className="mb-6 w-full space-y-4 sm:mx-auto">
       <Image
         src={imageSrc}
         alt="image"
-        className={`${fullImage ? "w-full" : "w-12"} max-h-[400px]`}
+        className={`${fullImage ? "w-full" : "w-10"} max-h-[400px]`}
         width={500}
         height={500}
       />
-      <p className="text-2xl font-bold font-sora">{title}</p>
-      <p className="font-sans font-medium text-lg leading-relaxed">{description}</p>
+      <p className="font-sora text-2xl font-bold">{title}</p>
+      <p className="font-sans text-lg font-medium leading-relaxed">
+        {description}
+      </p>
     </div>
   );
 };
