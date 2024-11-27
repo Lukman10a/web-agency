@@ -88,10 +88,10 @@ const navItems: NavItem[] = [
   },
   {
     title: "Services",
-    href: "/services",
     items: [
       {
         category: "Cloud Managed Services",
+        href: "/services",
         description: "Optimize your cloud infrastructure",
         subitems: [
           {
@@ -108,19 +108,33 @@ const navItems: NavItem[] = [
           },
         ],
       },
+      // {
+      //   category: "AWS",
+      //   description: "Discover our AWS services and support offerings",
+      //   subitems: [
+      //     {
+      //       title: "AWS Services",
+      //       description: "Explore our full range of AWS services",
+      //       href: "/services/aws",
+      //     },
+      //   ],
+      // },
       {
-        category: "AWS",
-        description: "Discover our AWS services and support offerings",
+        category: "AI Management Services",
+        href: "/services/ai-management",
+        description: "Leverage AI solutions",
         subitems: [
           {
-            title: "AWS Services",
-            description: "Explore our full range of AWS services",
-            href: "/services/aws",
+            title: "AI Foundation",
+            description:
+              "Cost management and foundational best practices for AI solutions on AWS",
+            href: "/services/ai-management/ai-foundation",
           },
         ],
       },
       {
         category: "Professional Services",
+        href: "/services/professional-services",
         description: "Expert consultation and implementation",
         subitems: [
           {
@@ -140,17 +154,11 @@ const navItems: NavItem[] = [
               "Leverage data analytics and machine learning to elevate your business",
             href: "/services/professional-services/data-analytics-ml",
           },
-        ],
-      },
-      {
-        category: "AI Management Services",
-        description: "Leverage AI solutions",
-        subitems: [
           {
-            title: "AI Foundation",
+            title: "Generative AI",
             description:
-              "Cost management and foundational best practices for AI solutions on AWS",
-            href: "/services/ai-management/ai-foundation",
+              "Leverage AWS AI tools: Amazon Bedrock, SageMaker, and Foundation Models",
+            href: "/services/professional-services/generative-ai",
           },
         ],
       },
@@ -289,11 +297,11 @@ export function MainNav() {
   }, [router.events]);
 
   return (
-    <div className="relative bg-nav-gradient font-mono" id="scrollable">
-      <nav className="fixed top-0 z-50 w-full border-b bg-background bg-nav-gradient px-7">
+    <nav className="relative bg-nav-gradient font-mono" id="scrollable">
+      <nav className="fixed top-0 z-50 w-full border-b bg-nav-gradient px-7">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
-            <Link href="/" className="flex items-center space-x-2 font-sora">
+            <Link href="/" className="flex items-center space-x-2">
               <span className="text-xl font-bold text-[#FF9557]">TEVERSE</span>
             </Link>
             <div className="flex gap-6 md:hidden">
@@ -302,7 +310,7 @@ export function MainNav() {
                   key={item.title}
                   variant="ghost"
                   className={`text-sm font-medium transition-colors hover:text-primary ${
-                    activeItem === item.title ? "text-primary" : "text-white"
+                    activeItem === item.title ? "text-primary" : "text-black"
                   }`}
                   onClick={() =>
                     setActiveItem(activeItem === item.title ? null : item.title)
@@ -331,11 +339,11 @@ export function MainNav() {
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="bg-main- max-w-[400px] bg-white sm:w-full"
-                style={{
-                  background:
-                    "linear-gradient(to bottom, #FDF3EB 10%, #FB7900 100%)",
-                }}
+                className="bg-nav-items max-w-[400px] sm:w-full"
+                // style={{
+                //   background:
+                //     "radial-gradient(75.6% 80.76% at 66.91% 110.17%, #f37920 0, #f1f0ee 100%)",
+                // }}
               >
                 <SheetHeader>
                   <SheetTitle>
@@ -399,13 +407,9 @@ export function MainNav() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-x-0 top-16 z-40 bg-opacity-100"
-            style={{
-              background:
-                "linear-gradient(to bottom, #FDF3EB 10%, #FB7900 100%)",
-            }}
+            className="bg-nav-items fixed inset-x-0 top-16 z-40 bg-opacity-100"
           >
-            <ScrollArea className="container h-[calc(100vh-4rem)] p-6">
+            <ScrollArea className="container h-[calc(100vh-4rem)] gap-5 p-6">
               {navItems.map(
                 (item) =>
                   activeItem === item.title && (
@@ -415,22 +419,20 @@ export function MainNav() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 20 }}
                       transition={{ duration: 0.3, delay: 0.1 }}
-                      className="grid grid-cols-3 gap-6 md:grid-cols-2"
+                      className="grid grid-cols-3 gap-10 md:grid-cols-2"
                     >
                       {item.items.map((section) => (
                         <div key={section.category} className="space-y-4">
                           <div className="flex items-center justify-between">
-                            <h3 className="text-lg font-semibold">
-                              {section.category}
+                            <h3 className="ease text-lg font-semibold transition-all hover:underline">
+                              {section.href ? (
+                                <Link href={section.href} className="">
+                                  {section.category}
+                                </Link>
+                              ) : (
+                                <span>{section.category}</span>
+                              )}
                             </h3>
-                            {item.href && (
-                              <Link
-                                href={section.href || item.href}
-                                className="text-sm font-medium text-primary hover:underline"
-                              >
-                                View All
-                              </Link>
-                            )}
                           </div>
                           <p className="text-sm text-muted-foreground">
                             {section.description}
@@ -446,7 +448,7 @@ export function MainNav() {
                                   <h4 className="text-sm font-medium group-hover:text-primary">
                                     {subitem.title}
                                   </h4>
-                                  <ChevronRight className="h-4 w-4 group-hover:translate-x-1" />
+                                  <ChevronRight className="ease h-4 w-4 transition-all group-hover:translate-x-1" />
                                 </div>
                                 <p className="text-sm text-muted-foreground">
                                   {subitem.description}
@@ -470,6 +472,6 @@ export function MainNav() {
           onClick={() => setActiveItem(null)}
         />
       )}
-    </div>
+    </nav>
   );
 }

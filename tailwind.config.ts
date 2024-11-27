@@ -41,9 +41,12 @@ const config: typeof Config = {
           "linear-gradient(to right, rgba(80, 206, 245, 0.2), rgba(255, 149, 87, 0.2))",
         "main-old":
           "linear-gradient(to top right, rgba(50, 150, 245, 0.5), rgba(255, 120, 57, 0.5))",
-        "nav-gradient":
+        "nav-gradient-old":
           "linear-gradient(to right,rgba(8,19,72,.8), rgba(255, 149, 87, .8))",
-        // to-[rgba(255,149,87,0.1)
+        "nav-gradient":
+          "radial-gradient(75.6% 80.76% at 66.91% 110.17%,#f1f0ee 0,#f1f0ee 100%)",
+        "nav-items":
+          "radial-gradient(75.6% 80.76% at 66.91% 110.17%, #f37920 0, #f1f0ee 100%)",
         "secondary-gradient":
           "linear-gradient(to right, rgba(80, 206, 245, 0.2), rgba(255, 149, 87, 0.2))",
       },
