@@ -153,7 +153,7 @@ const CloudScore = () => {
       <AwsBuild
         cards={cardDataTwo}
         tag="FEATURES"
-        title="Enterprise-Grade Securityfor AWS Environments"
+        title="Enterprise-Grade Security"
         subtitle="Protect your business with comprehensive security coverage backed by industry leaders in cloud and security."
       />
       {/* <FAQ /> */}
