@@ -45,9 +45,9 @@ const NewHero: React.FC<NewHeroProps> = ({
   };
 
   return (
-    <section className="mx-auto mb-24  px-16 py-20 xl:rounded-t-none lg:p-12 lg:py-16 md:mb-16 md:px-0 sm:mb-12">
+    <section className="mx-auto mb-24 py-20 xl:rounded-t-none lg:py-12 md:mb-16 sm:mb-12">
       <motion.div
-        className={`mx-auto flex w-[90%] max-w-[1150px] gap-12 overflow-hidden 2md:gap-8 md:w-[85%] md:flex-col md:gap-6 ${
+        className={`mx-auto flex w-[90%] max-w-[1200px] gap-10 overflow-hidden 2md:gap-4 md:flex-col ${
           reverse ? "flex-row-reverse" : "flex-row"
         }`}
         variants={containerVariants}
@@ -55,7 +55,7 @@ const NewHero: React.FC<NewHeroProps> = ({
         animate="visible"
       >
         {/* Left Section (Text + Icon) */}
-        <div className="flex w-[50%] mb-6 flex-col justify-center md:mx-auto md:w-full md:text-center">
+        <div className="mb-6 flex w-[50%] flex-col justify-center md:mx-auto md:w-full md:text-center">
           {icon && iconLink && (
             <motion.div variants={itemVariants}>
               <Image
@@ -69,27 +69,27 @@ const NewHero: React.FC<NewHeroProps> = ({
           )}
           {tag && (
             <motion.p
-              className="mb-4 self-start rounded-full bg-transparent px-3 py-1 text-xs tracking-wide text-[#808080] ring-1 ring-[#808080]"
+              className="mb-4 self-start rounded-full bg-transparent px-3 py-1 text-xs tracking-wide text-[#808080] ring-1 ring-[#808080] md:mx-auto"
               variants={itemVariants}
             >
               AWS PREMIER SERVICES & SOFTWARE PARTNER
             </motion.p>
           )}
           <motion.h1
-            className="mb-[.5em] font-sans text-5xl  xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full"
+            className="mb-[.5em] font-sans text-5xl xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full"
             variants={itemVariants}
           >
             {title}
           </motion.h1>
           <motion.p
-            className="mb-[1.5em] w-[90%] text-2xl md:text-xl md:mx-auto md:w-[80%] sm:w-[90%]"
+            className="mb-[1.5em] w-[90%] text-2xl md:mx-auto md:w-[80%] md:text-xl sm:w-[90%]"
             variants={itemVariants}
           >
             {description}
           </motion.p>
           {showButton && (
             <motion.div variants={itemVariants}>
-              <Button className="flex w-fit items-center gap-4 rounded-[4rem] bg-black px-8 py-7 text-lg font-sans text-white hover:text-black hover:bg-white  md:mx-auto md:w-[90%] sm:mb-4 sm:w-full">
+              <Button className="flex w-fit items-center gap-4 rounded-[4rem] bg-black px-8 py-7 font-sans text-lg text-white hover:bg-white hover:text-black md:mx-auto md:w-[90%] sm:mb-4 sm:w-full">
                 <span>{buttonText}</span>
               </Button>
             </motion.div>
@@ -104,7 +104,7 @@ const NewHero: React.FC<NewHeroProps> = ({
           <Image
             src={ImgSrc}
             alt="Hero Image"
-            className="w-full rounded-2xl"
+            className="max-h-[400px] w-full rounded-2xl"
             width={500}
             height={500}
           />
