@@ -86,7 +86,7 @@ const iconVariants = {
 
 const Testimonials: React.FC = () => {
   return (
-    <section className="mx-auto max-w-7xl rounded-lg bg-nav-gradient px-10 py-16 xl:mx-8 lg:px-8 sm:px-6">
+    <section className="mx-auto max-w-7xl rounded-lg bg-main-gradient px-10 py-16 xl:mx-8 lg:px-8 sm:px-6">
       <div>
         {/* Section Header */}
         <div className="text-center">
