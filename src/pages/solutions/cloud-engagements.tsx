@@ -152,6 +152,7 @@ export default function CloudEngagements() {
         <div className="mx-auto grid w-full grid-cols-3 gap-12 lg:gap-8 2md:grid-cols-2 sm:grid-cols-1">
           {features.map((feature, index) => (
             <FeatureCard
+              key={index}
               title={feature.title}
               description={feature.description}
               imageSrc={feature.icon}
@@ -180,8 +181,11 @@ export default function CloudEngagements() {
         </p>
 
         <div className="grid grid-cols-3 gap-4 lg:grid-cols-2">
-          {devOpsCard.map((card) => (
-            <div className="rounded-3xl bg-gradient-to-t from-[#52a5cc] to-white p-6 py-16">
+          {devOpsCard.map((card, index) => (
+            <div
+              key={index}
+              className="rounded-3xl bg-gradient-to-t from-[#52a5cc] to-white p-6 py-16"
+            >
               <p className="mb-4 text-4xl">{card.title}</p>
               <p className="text-lg">{card.description}</p>
             </div>
