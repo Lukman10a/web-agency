@@ -67,13 +67,13 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
             {tagText}
           </p>
         )}
-        <h2 className="mb-6 font-sans text-3xl xl:w-[80%] lg:w-[100%]">
+        <h2 className="mb-6 font-sans text-3xl sm:text-lg xl:w-[80%] lg:w-[100%]">
           {title}
         </h2>
-        <p className="mb-4 text-xl lg:text-lg md:text-justify">
+        <p className="mb-4 text-xl sm:text-sm lg:text-lg md:text-justify">
           {mainDescription}
         </p>
-        <p className="mb-4 text-2xl lg:text-lg md:text-justify">
+        <p className="mb-4 text-2xl sm:text-lg md:text-justify">
           {additionalDescription}
         </p>
       </motion.div>

@@ -128,13 +128,13 @@ const CloudScore = () => {
       />
 
       <section className="border-2 border-black rounded-2xl max-w-6xl mx-auto space-y-4 p-14 mb-10">
-        <div className="flex justify-between">
-          <p className="text-3xl font-semibold">Ebook</p>
-          <button className="bg-black text-white py-2 px-4 rounded-3xl text-2xl">Download</button>
+        <div className="flex justify-between sm:flex-col sm:justify-start">
+          <p className="text-3xl font-semibold sm:text-center sm:mb-2">Ebook</p>
+          <button className="bg-black text-white py-2 px-4 rounded-3xl text-2xl sm:text-lg">Download</button>
         </div>
-        <h2 className="text-4xl"><HighlightedText once={false} className="text-orange-650"
+        <h2 className="text-4xl sm:text-lg"><HighlightedText once={false} className="text-orange-650"
             highlightClassName=""> Safeguarding the Future </HighlightedText> with Generative AI Security</h2>
-        <p className="text-2xl">Explore our strategic blueprint for securing generative AI's potential. Navigate risks, integrate, and craft policies for a secure future.</p>
+        <p className="text-2xl sm:text-lg">Explore our strategic blueprint for securing generative AI's potential. Navigate risks, integrate, and craft policies for a secure future.</p>
       </section>
 
       <AwsBuild
