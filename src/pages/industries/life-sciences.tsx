@@ -13,7 +13,6 @@ import SecondaryPartnersSlider from "@/components/shared/secondary-partners-slid
 import ServicesCard from "@/components/shared/services-card";
 import StatsCard from "@/components/shared/stats-card";
 
-
 const companyData = {
   content:
     "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
@@ -106,15 +105,13 @@ const LifeSciences = () => {
         details="From startups breaking new ground in biotech to established pharmaceutical giants and leading medical device manufacturers—we've guided a diverse range of firms to harness the cloud for cutting-edge solutions."
       />
 
-      <div className="my-7 max-w-7xl overflow-hidden mx-auto">
+      <div className="mx-auto my-7 max-w-7xl overflow-hidden">
         <SecondaryPartnersSlider />
       </div>
 
       <Preverity />
- 
-      
-         <CompaniesWeServe detailsData={detailsData} />
-    
+
+      <CompaniesWeServe detailsData={detailsData} />
 
       <OurCapabilities detailsData={ourCapabilitiesData} />
 

@@ -37,14 +37,14 @@ const HighlightedText: React.FC<HighlightTextProps> = ({
       ref={ref}
       // initial={{ color: "transparent" }}
       // animate={isInView ? { color: "currentColor" } : {}}
-      className={`isolate inline-block relative ${className}`}
+      className={`relative isolate inline-block ${className}`}
       transition={{ duration: 0.5, delay }}
       {...motionProps}
     >
       {children}
       <motion.span
         className={cn(
-          `absolute left-0 bottom-0 w-full origin-left `,
+          `absolute bottom-0 left-0 w-full origin-left`,
           highlightClassName,
         )}
         style={{

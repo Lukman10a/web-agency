@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 import circles from "/public/assets/circles.png";
@@ -14,6 +14,9 @@ import FAQ from "@/components/shared/FAQ";
 import NewHero from "@/components/shared/new-hero";
 import ServicesCard from "@/components/shared/services-card";
 import WhatIsTeverse from "@/components/What-is-teverse";
+import MissionSection from "@/components/mission";
+import capabilities from "/public/svg/capabilitiescircle.svg"
+import { HighlightedText } from "@/components/ui/animated/highlight-text";
 
 const CloudScore = () => {
   // const tools = [
@@ -85,13 +88,23 @@ const CloudScore = () => {
     },
   ];
 
+  const sectionData = {
+    title: "/assets/mission.webp",
+    subTitle: "/assets/securecrowdstrike.webp",
+    description:
+      "Mission Cloud’s team of CloudOps Engineers works directly with the CrowdStrike SOC to give you 24/7 managed detection and response. We alert you to incidents and help the SOC to respond with the runbooks we’ve co-developed.",
+    additionalInfo:
+      "CrowdStrike’s analysts also operate a continuous threat detection engine and partner with other security experts from the public and private sector to proactively protect your environment and manage threats.",
+    imageSrc: capabilities,
+  };
+
   // Return statement
   return (
-    <div>
+    <div className="bg-main-gradient">
       {/* Hero Section */}
       <NewHero
         ImgSrc="/assets/cloud-secure.png"
-        tag
+        
         title="Mission Cloud Secure"
         description="Fully managed security, detection, and response"
         buttonText="Get Started"
@@ -105,6 +118,8 @@ const CloudScore = () => {
         additionalDescription=""
       />
 
+      <MissionSection {...sectionData} />
+
       <AwsBuild
         cards={cardData}
         tag="BENEFITS"
@@ -112,16 +127,39 @@ const CloudScore = () => {
         subtitle="In today's landscape of sophisticated cyber threats, comprehensive security requires constant vigilance, specialized expertise, and the right tooling. Mission Cloud Secure provides the following: "
       />
 
+      <section className="border-2 border-black rounded-2xl max-w-6xl mx-auto space-y-4 p-14 mb-10">
+        <div className="flex justify-between sm:flex-col sm:justify-start">
+          <p className="text-3xl font-semibold sm:text-center sm:mb-2">Ebook</p>
+          <button className="bg-black text-white py-2 px-4 rounded-3xl text-2xl sm:text-lg">Download</button>
+        </div>
+        <motion.h2
+           initial={{ opacity: 0, y: 30 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ delay: 0.5, duration: 0.8 }}
+           className="mb-4 text-4xl font-medium text-[#262626] sm:text-2xl"
+        >
+        <HighlightedText
+              highlightColor="#f4934b"
+              highlightHeight="100%"
+              className="p-2"
+              highlightClassName="z-[-1] rounded-lg"
+              delay={1.5}
+        > Safeguarding the Future 
+        </HighlightedText> with Generative AI Security
+        </motion.h2>
+        <p className="text-2xl sm:text-lg">Explore our strategic blueprint for securing generative AI's potential. Navigate risks, integrate, and craft policies for a secure future.</p>
+      </section>
+
       <AwsBuild
         cards={cardDataTwo}
         tag="FEATURES"
-        title="Enterprise-Grade Securityfor AWS Environments"
+        title="Enterprise-Grade Security"
         subtitle="Protect your business with comprehensive security coverage backed by industry leaders in cloud and security."
       />
-      <FAQ />
+      {/* <FAQ /> */}
       <Resources />
 
-      <section className="mx-auto max-w-6xl bg-white px-4 py-8 font-sora">
+      <section className="mx-auto max-w-6xl px-4 py-8 font-sora">
         <h2 className="mb-6 text-center text-4xl font-semibold text-gray-800">
           Industry Leading Tools
         </h2>

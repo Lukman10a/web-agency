@@ -4,7 +4,7 @@ import BookDemoSection from "@/components/book-demo";
 import ReusableComponent from "@/components/control-features";
 import InterpretDataSection from "@/components/data-section";
 import SoftwareFAQ from "@/components/software-faq";
-import TeverseControlHero from "@/components/teverse-control";
+import TeverseControlHero from "@/components/teverse-control-hero";
 
 interface ReusableComponentProps {
   image: string;
@@ -41,7 +41,7 @@ const sections: ReusableComponentProps[] = [
     image: "/assets/recommendation.webp",
     additionalImage:
       "https://www.missioncloud.com/hubfs/2024_illustrations/Illustrations_Tablet.svg", // Different animated image
-    additionalImagePosition: { bottom: -20, left: 500, top: 30, right: 0 }, // Custom position
+    additionalImagePosition: { bottom: -20, left: 400, top: 30, right: 0 }, // Custom position
     title: "Recommendations",
     description:
       "Identify opportunities to improve your environment with recommendations that are tailored to your specific business goals.",
@@ -67,7 +67,7 @@ const sections: ReusableComponentProps[] = [
     image: "https://www.missioncloud.com/hubfs/Support%20(1).svg",
     additionalImage:
       "https://www.missioncloud.com/hubfs/2024_illustrations/Illustrations_Chat.svg",
-    additionalImagePosition: { bottom: -20, left: 500, top: 30, right: 0 },
+    additionalImagePosition: { bottom: -20, left: 400, top: 30, right: 0 },
     title: "Supports ticketing and chats",
     description:
       "Access real-time support for technical troubleshooting with our CloudOps team.",
@@ -79,7 +79,7 @@ const sections: ReusableComponentProps[] = [
 ];
 
 const FeaturesSection = () => (
-  <section className="mx-20 space-y-6 py-10 text-left text-2xl font-medium">
+  <section className="mx-20 sm:mx-5 space-y-6 py-10 text-left text-2xl sm:text-lg font-medium">
     <h2 className="mb-8 inline rounded-lg border border-black p-1 text-left font-semibold">
       Features
     </h2>
@@ -109,26 +109,6 @@ const TeverseControl = () => {
       <InterpretDataSection />
       <FeaturesSection />
       <FeatureList sections={sections} />
-      <div className="mx-10">
-        <section className="space-y-6 py-10 text-left text-2xl font-medium">
-          <h2 className="mb-8 inline rounded-lg border border-black p-1 text-left font-semibold">
-            Features{" "}
-          </h2>
-          <p className=""> Visualize, Collaborate, Learn, Act </p>
-          <p className="">
-            {" "}
-            For every insight, alert, or data point we visualize, you’ll have
-            access to an expert to help you understand what it means, why it
-            matters, and how to act on it.{" "}
-          </p>
-        </section>
-        <div>
-          {sections.map((section, index) => (
-            <ReusableComponent key={index} {...section} />
-          ))}
-        </div>
-      </div>
-
       <SoftwareFAQ />
       <BookDemoSection />
     </main>

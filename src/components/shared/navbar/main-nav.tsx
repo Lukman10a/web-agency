@@ -341,7 +341,7 @@ export function MainNav() {
                   <SheetTitle>
                     <Link
                       href="/"
-                      className="flex items-center space-x-2 font-sora"
+                      className="flex items-center space-x-2 font-mono"
                     >
                       <span className="text-xl font-bold text-[#FF9557]">
                         TEVERSE
@@ -352,18 +352,20 @@ export function MainNav() {
                     Navigate through our services and solutions
                   </SheetDescription>
                 </SheetHeader>
-                <ScrollArea className="mt-6 h-[calc(100vh-8rem)]">
+                <ScrollArea className="no-scrollbar mt-6 h-[calc(100vh-8rem)]">
                   <Accordion type="single" collapsible>
                     {navItems.map((item, index) => (
                       <AccordionItem value={`item-${index}`} key={item.title}>
                         <AccordionTrigger>{item.title}</AccordionTrigger>
-                        <AccordionContent>
+                        <AccordionContent className="no-scrollbar">
                           {item.items.map((section) => (
                             <div key={section.category} className="mb-4">
-                              <h3 className="mb-2 text-sm font-semibold">
-                                {section.category}
-                              </h3>
-                              <p className="mb-2 text-sm text-muted-foreground">
+                              <Link href={section?.href || "#"}>
+                                <h3 className="mb-2 text-sm font-semibold">
+                                  {section.category}
+                                </h3>
+                              </Link>
+                              <p className="mb-2 text-sm text-black opacity-50">
                                 {section.description}
                               </p>
                               <div className="space-y-2">

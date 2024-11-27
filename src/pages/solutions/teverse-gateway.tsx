@@ -1,16 +1,12 @@
 import React from "react";
 
-import Image from "next/image";
-import Link from "next/link";
-
 import icon from "/public/svg/odk.svg";
-
-import { Button } from "@/components/ui/button";
 
 import Benefits from "@/components/benefits";
 import CardSection from "@/components/card-section";
 import FeatureCard from "@/components/shared/feature-card";
 import NewHero from "@/components/shared/new-hero";
+import PartnersCard from "@/components/shared/partners-card";
 import ServicesCard from "@/components/shared/services-card";
 
 import WhatIsTeverse from "../../components/What-is-teverse";
@@ -107,38 +103,18 @@ const TeverseGateway = () => {
       <CardSection />
       <Benefits headTitle={benefitData.headTitle} items={benefitData.items} />
 
-      <div className="mx-auto mb-24 w-[90%] max-w-[1150px] rounded-[3rem] border-2 border-black py-16">
-        <div className="mx-auto w-[85%]">
-          <Image
-            src={icon}
-            alt="image"
-            className="mb-4 inline-block w-[30%] lg:w-[40%] md:block md:w-[60%]"
-            width={500}
-            height={500}
-          />
-
-          <Button
-            asChild
-            className="mb-4 w-fit bg-none px-4 font-sora text-xl font-medium text-black underline md:px-0"
-          >
-            <Link href="#">Read Full Story</Link>
-          </Button>
-
-          <p className="mb-6 text-3xl leading-relaxed 2md:text-2xl sm:text-xl">
-            “The collaboration with Mission has resulted in tremendous benefits
+      <PartnersCard
+        iconSrc={icon}
+        buttonText="Read Full Story"
+        buttonLink="#"
+        quote="“The collaboration with Mission has resulted in tremendous benefits
             to our bottom line. Mission also goes the whole nine yards to
             provide end-to-end support and best practice recommendations. With
             Mission supporting our engineers, our service is more reliable than
-            it&apos;s ever been. I wholeheartedly recommend Mission.”
-          </p>
-
-          <p className="mb-4 text-xl font-semibold">John Kang</p>
-
-          <p className="font-sora text-base font-semibold">
-            CHIEF OPERATING OFFICER AT ODK MEDIA
-          </p>
-        </div>
-      </div>
+            it's ever been. I wholeheartedly recommend Mission.”"
+        authorName="John Kang"
+        authorRole=" CHIEF OPERATING OFFICER AT ODK MEDIA"
+      />
 
       <div className="mx-auto mb-24 w-full max-w-[1200px]">
         <p className="mb-12 text-3xl font-medium sm:ml-6">Features</p>
