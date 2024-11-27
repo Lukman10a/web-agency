@@ -14,7 +14,7 @@ export default function Home() {
       <BusinessOffer />
       <WhyChooseUs />
       <SecurityCertifications />
-      <Testimonials />
+      <Testimonials className="bg-main-gradient" />
       <FAQSection />
       <PartnershipSection />
     </main>

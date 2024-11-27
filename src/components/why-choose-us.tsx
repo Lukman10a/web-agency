@@ -72,7 +72,7 @@ export default function WhyChooseUs() {
 
       {/* Benefits Section */}
       <section
-        className="animate-fade-up mx-auto mb-24 flex w-[90%] max-w-[1200px] gap-12 p-4 xl:gap-6 lg:flex-col sm:mb-12"
+        className="animate-fade-up mx-auto mb-24 flex w-[90%] max-w-7xl gap-12 p-4 xl:gap-6 lg:flex-wrap sm:mb-12"
         aria-labelledby="benefits-heading"
       >
         {benefits.map((benefit, index) => (
@@ -86,7 +86,7 @@ export default function WhyChooseUs() {
               custom={index}
               whileHover="hover"
             >
-              <article className="group relative flex max-w-[400px] transform cursor-pointer flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white lg:mx-auto lg:justify-center">
+              <article className="group relative flex transform cursor-pointer flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white lg:mx-auto lg:justify-center">
                 <motion.div variants={iconVariants}>
                   <Image
                     src={benefit.img}

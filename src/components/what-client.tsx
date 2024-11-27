@@ -2,62 +2,19 @@ import React from "react";
 
 import Image from "next/image";
 
+import { Testimonial, testimonialsList } from "@/data/testimonial";
 import { motion } from "framer-motion";
+
+import { cn } from "@/lib/utils";
 
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
-interface Testimonial {
-  quote: string;
-  name: string;
-  title: string;
-  image: string;
+interface TestimonialsProps {
+  testimonials?: Testimonial[];
+  className?: string;
+  headerClassName?: string;
+  cardClassName?: string;
 }
-
-const testimonials: Testimonial[] = [
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc.",
-    image: "/assets/cardimage1.png",
-  },
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc.",
-    image: "/assets/cardimage1.png",
-  },
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc.",
-    image: "/assets/cardimage1.png",
-  },
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc",
-    image: "/assets/cardimage1.png",
-  },
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc.",
-    image: "/assets/cardimage1.png",
-  },
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc.",
-    image: "/assets/cardimage1.png",
-  },
-  // Additional testimonials can be added here...
-];
 
 const headerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -84,9 +41,19 @@ const iconVariants = {
   },
 };
 
-const Testimonials: React.FC = () => {
+const Testimonials: React.FC<TestimonialsProps> = ({
+  testimonials = testimonialsList,
+  className = "",
+  headerClassName = "",
+  cardClassName = "",
+}) => {
   return (
-    <section className="mx-auto max-w-7xl rounded-lg px-10 py-16 xl:mx-8 lg:px-8 sm:px-6">
+    <section
+      className={cn(
+        `mx-auto max-w-7xl rounded-lg px-10 py-16 xl:mx-8 lg:px-8 sm:px-6`,
+        className,
+      )}
+    >
       <div className="text-center">
         <motion.div
           className="mb-10"
@@ -95,7 +62,12 @@ const Testimonials: React.FC = () => {
           viewport={{ once: true }}
           variants={headerVariants}
         >
-          <h2 className="text-3xl font-extrabold text-black sm:text-4xl">
+          <h2
+            className={cn(
+              "text-3xl font-extrabold text-black sm:text-4xl",
+              headerClassName,
+            )}
+          >
             WHAT CLIENTS ARE SAYING
           </h2>
           <p className="mt-4 text-lg text-gray-600">
@@ -115,6 +87,7 @@ const Testimonials: React.FC = () => {
             variants={cardVariants}
             custom={index}
             whileHover="hover"
+            className={cardClassName}
           >
             <article className="group relative rounded-lg bg-white p-6 shadow-md transition-transform duration-300 hover:bg-black">
               <p className="mb-4 text-gray-700 transition-colors duration-300 group-hover:text-white">

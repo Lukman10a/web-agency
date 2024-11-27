@@ -195,13 +195,7 @@ export default function AWS() {
       <AWSection />
       <AwsLara />
       <LARA />
-
-      <div className="bg-white p-4">
-        <div className="rounded-xl bg-gradient-to-r from-gradient-100 to-gradient-200">
-          <Testimonials />
-        </div>
-      </div>
-
+      <Testimonials className="max-w-7xl rounded-xl bg-gradient-to-r from-gradient-100 to-gradient-200" />
       <ContactSection />
     </div>
   );

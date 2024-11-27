@@ -2,61 +2,62 @@ import React from "react";
 
 import Image from "next/image";
 
-import ArrowIcon from "@/components/icons/arrow";
 import { Button } from "@/components/ui/button";
+
+import ArrowIcon from "@/components/icons/arrow";
 
 import black_mark from "../../../public/svg/black_mark.svg";
 
+interface Lara {
+  title: string;
+  quote: string;
+  image: string;
+}
+
+const lara: Lara[] = [
+  {
+    image: black_mark,
+    title: "AWS Organization and access management",
+    quote:
+      "Centrally govern your all environments, manage access rights, permissions and policies.",
+  },
+  {
+    image: black_mark,
+    title: "VPC and related services",
+    quote:
+      "Network foundation, app and edge networking, hybrid connectivity and security.",
+  },
+  {
+    image: black_mark,
+    title: "AWS Organization and access management",
+    quote:
+      "Centrally govern your all environments, manage access rights, permissions and policies.",
+  },
+  {
+    image: black_mark,
+    title: "VPC and related services",
+    quote:
+      "Network foundation, app and edge networking, hybrid connectivity and security.",
+  },
+  {
+    image: black_mark,
+    title: "Kubernetes",
+    quote:
+      "Operate kubernetes on your own infrastructure, experience ultimate scaling and cost savings.",
+  },
+  {
+    image: black_mark,
+    title: "Observability",
+    quote:
+      "Grafana, Loki, Thanos, Tempo, Opensearch, Elastic. You name it, we have it.",
+  },
+];
+
 export default function LARA() {
-  interface Lara {
-    title: string;
-    quote: string;
-    image: string;
-  }
-
-  const lara: Lara[] = [
-    {
-      image: black_mark,
-      title: "AWS Organization and access management",
-      quote:
-        "Centrally govern your all environments, manage access rights, permissions and policies.",
-    },
-    {
-      image: black_mark,
-      title: "VPC and related services",
-      quote:
-        "Network foundation, app and edge networking, hybrid connectivity and security.",
-    },
-    {
-      image: black_mark,
-      title: "AWS Organization and access management",
-      quote:
-        "Centrally govern your all environments, manage access rights, permissions and policies.",
-    },
-    {
-      image: black_mark,
-      title: "VPC and related services",
-      quote:
-        "Network foundation, app and edge networking, hybrid connectivity and security.",
-    },
-    {
-      image: black_mark,
-      title: "Kubernetes",
-      quote:
-        "Operate kubernetes on your own infrastructure, experience ultimate scaling and cost savings.",
-    },
-    {
-      image: black_mark,
-      title: "Observability",
-      quote:
-        "Grafana, Loki, Thanos, Tempo, Opensearch, Elastic. You name it, we have it.",
-    },
-  ];
-
   return (
-    <section className="bg-white p-4">
-      <section className="rounded-xl bg-gradient-to-r from-gradient-100 to-gradient-200 py-16">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8 sm:px-6">
+    <section className="mx-auto mb-4 max-w-7xl bg-white xl:mx-8 lg:px-8">
+      <section className="rounded-xl bg-main-gradient py-16">
+        <div className="mx-auto px-4 lg:px-8 sm:px-6">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
               LARA building blocks{" "}
