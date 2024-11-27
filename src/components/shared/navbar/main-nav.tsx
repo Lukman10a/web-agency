@@ -273,7 +273,7 @@ export function MainNav() {
       unlock();
     }
     return () => {
-      unlock(); // Ensure scrolling is unlocked on cleanup
+      unlock();
     };
   }, [activeItem, lock, unlock]);
 
