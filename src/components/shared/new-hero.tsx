@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 
 import { Button } from "../ui/button";
 
+import { HighlightedText } from "../ui/animated/highlight-text";
+
 type NewHeroProps = {
   reverse?: boolean;
   title: string;
@@ -78,8 +80,19 @@ const NewHero: React.FC<NewHeroProps> = ({
           <motion.h1
             className="mb-[.5em] font-sans text-5xl xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full"
             variants={itemVariants}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
           >
             {title}
+            <HighlightedText
+              highlightColor="#47a1fa"
+              highlightHeight="100%"
+              className="p-2"
+              highlightClassName="z-[-1] rounded-lg"
+              delay={1.5}
+          >Secure</HighlightedText>
+            
           </motion.h1>
           <motion.p
             className="mb-[1.5em] w-[90%] text-2xl md:mx-auto md:w-[80%] md:text-xl sm:w-[90%]"

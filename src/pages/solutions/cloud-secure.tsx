@@ -105,7 +105,7 @@ const CloudScore = () => {
       <NewHero
         ImgSrc="/assets/cloud-secure.png"
         
-        title="Mission Cloud Secure"
+        title="Mission Cloud"
         description="Fully managed security, detection, and response"
         buttonText="Get Started"
       />
