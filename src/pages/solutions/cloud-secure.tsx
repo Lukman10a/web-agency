@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 import circles from "/public/assets/circles.png";
@@ -132,8 +132,21 @@ const CloudScore = () => {
           <p className="text-3xl font-semibold sm:text-center sm:mb-2">Ebook</p>
           <button className="bg-black text-white py-2 px-4 rounded-3xl text-2xl sm:text-lg">Download</button>
         </div>
-        <h2 className="text-4xl sm:text-lg"><HighlightedText once={false} className="text-orange-650"
-            highlightClassName=""> Safeguarding the Future </HighlightedText> with Generative AI Security</h2>
+        <motion.h2
+           initial={{ opacity: 0, y: 30 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ delay: 0.5, duration: 0.8 }}
+           className="mb-4 text-4xl font-medium text-[#262626] sm:text-2xl"
+        >
+        <HighlightedText
+              highlightColor="#f4934b"
+              highlightHeight="100%"
+              className="p-2"
+              highlightClassName="z-[-1] rounded-lg"
+              delay={1.5}
+        > Safeguarding the Future 
+        </HighlightedText> with Generative AI Security
+        </motion.h2>
         <p className="text-2xl sm:text-lg">Explore our strategic blueprint for securing generative AI's potential. Navigate risks, integrate, and craft policies for a secure future.</p>
       </section>
 
