@@ -37,7 +37,7 @@ const TeverseGateway = () => {
       imageSrc: "/assets/feature1.webp",
       title: "Mission Cloud Score",
       description:
-        "Improve your environment by measuring your alignment to best practices across cost, operations, security, reliability, and performance.",
+        "Improve your environment by measuring your alignment to best practices across cost, operations, security, reliability, and performance",
       fullImage: true,
     },
     {
