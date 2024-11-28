@@ -117,7 +117,7 @@ const Software = () => {
         details="From neighborhood clinics to international nonprofits to some of the largest life sciences firms in the world—we’ve helped companies of all sizes and stages serve their patients."
       />
 
-      <div className="my-7 max-w-7xl overflow-hidden mx-auto">
+      <div className="mx-auto my-7 max-w-7xl overflow-hidden">
         <SecondaryPartnersSlider />
       </div>
 

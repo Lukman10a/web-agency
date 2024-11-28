@@ -3,9 +3,12 @@
 import * as React from "react";
 
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronRight, Menu } from "lucide-react";
+
+import { useScrollLock } from "@/hooks/use-scroll-lock";
 
 import {
   Accordion,
@@ -24,13 +27,16 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+import ArrowIcon from "../../icons/arrow";
+
 interface NavItem {
   title: string;
   href?: string;
   items: {
     category: string;
+    href?: string;
     description: string;
-    subitems: {
+    subitems?: {
       title: string;
       description: string;
       href: string;
@@ -45,48 +51,47 @@ const navItems: NavItem[] = [
     items: [
       {
         category: "Cloud Solutions",
+        href: "/solution",
         description:
           "Explore our cloud solutions and services for your business needs",
-        subitems: [
-          {
-            title: "Teverse Control",
-            description:
-              "Cloud services platform providing visibility, guidance & support for your cloud",
-            href: "/solutions/teverse-control",
-          },
-          {
-            title: "Teverse Gateway",
-            description:
-              "AWS guidance for efficient cloud growth and foundational best practices",
-            href: "/solutions/teverse-gateway",
-          },
-          {
-            title: "Teverse Engagements",
-            description:
-              "Get transparent reporting and live updates on your team's status",
-            href: "/solutions/cloud-engagements",
-          },
-          {
-            title: "Teverse Cloud Score",
-            description:
-              "Proprietary scoring of your cloud architecture against AWS best practices",
-            href: "/solutions/cloud-score",
-          },
-          {
-            title: "Teverse Cloud Secure",
-            description: "Fully managed security, detection, and response",
-            href: "/solutions/cloud-secure",
-          },
-        ],
+      },
+      {
+        category: "Teverse Control",
+        description:
+          "Cloud services platform providing visibility, guidance & support for your cloud",
+        href: "/solutions/teverse-control",
+      },
+      {
+        category: "Teverse Gateway",
+        description:
+          "AWS guidance for efficient cloud growth and foundational best practices",
+        href: "/solutions/teverse-gateway",
+      },
+      {
+        category: "Teverse Engagements",
+        description:
+          "Get transparent reporting and live updates on your team's status",
+        href: "/solutions/cloud-engagements",
+      },
+      {
+        category: "Teverse Cloud Score",
+        description:
+          "Proprietary scoring of your cloud architecture against AWS best practices",
+        href: "/solutions/cloud-score",
+      },
+      {
+        category: "Teverse Cloud Secure",
+        description: "Fully managed security, detection, and response",
+        href: "/solutions/cloud-secure",
       },
     ],
   },
   {
     title: "Services",
-    href: "/services",
     items: [
       {
         category: "Cloud Managed Services",
+        href: "/services",
         description: "Optimize your cloud infrastructure",
         subitems: [
           {
@@ -103,19 +108,33 @@ const navItems: NavItem[] = [
           },
         ],
       },
+      // {
+      //   category: "AWS",
+      //   description: "Discover our AWS services and support offerings",
+      //   subitems: [
+      //     {
+      //       title: "AWS Services",
+      //       description: "Explore our full range of AWS services",
+      //       href: "/services/aws",
+      //     },
+      //   ],
+      // },
       {
-        category: "AWS",
-        description: "Discover our AWS services and support offerings",
+        category: "AI Management Services",
+        href: "/services/ai-management",
+        description: "Leverage AI solutions",
         subitems: [
           {
-            title: "AWS Services",
-            description: "Explore our full range of AWS services",
-            href: "/aws",
+            title: "AI Foundation",
+            description:
+              "Cost management and foundational best practices for AI solutions on AWS",
+            href: "/services/ai-management/ai-foundation",
           },
         ],
       },
       {
         category: "Professional Services",
+        href: "/services/professional-services",
         description: "Expert consultation and implementation",
         subitems: [
           {
@@ -135,17 +154,11 @@ const navItems: NavItem[] = [
               "Leverage data analytics and machine learning to elevate your business",
             href: "/services/professional-services/data-analytics-ml",
           },
-        ],
-      },
-      {
-        category: "AI Management Services",
-        description: "Leverage AI solutions",
-        subitems: [
           {
-            title: "AI Foundation",
+            title: "Generative AI",
             description:
-              "Cost management and foundational best practices for AI solutions on AWS",
-            href: "/services/ai-management/ai-foundation",
+              "Leverage AWS AI tools: Amazon Bedrock, SageMaker, and Foundation Models",
+            href: "/services/professional-services/generative-ai",
           },
         ],
       },
@@ -159,44 +172,38 @@ const navItems: NavItem[] = [
         category: "Industry Solutions",
         description:
           "Explore the industries we serve with tailored cloud solutions",
-        subitems: [
-          {
-            title: "Healthcare",
-            description:
-              "Learn how we support healthcare organizations with cloud solutions",
-            href: "/industries/healthcare",
-          },
-          {
-            title: "Life Sciences",
-            description:
-              "Discover our cloud services tailored for life sciences",
-            href: "/industries/life-sciences",
-          },
-          {
-            title: "Retail",
-            description:
-              "See how we help retail businesses thrive in the cloud",
-            href: "/industries/retail",
-          },
-          {
-            title: "Software",
-            description:
-              "Optimize software development with our cloud expertise",
-            href: "/industries/software",
-          },
-          {
-            title: "Finance",
-            description:
-              "Explore cloud solutions designed for the finance sector",
-            href: "/industries/finance",
-          },
-          {
-            title: "Media",
-            description:
-              "Empower media companies with robust cloud capabilities",
-            href: "/industries/media",
-          },
-        ],
+        href: "#",
+      },
+      {
+        category: "Healthcare",
+        description:
+          "Learn how we support healthcare organizations with cloud solutions",
+        href: "/industries/healthcare",
+      },
+      {
+        category: "Life Sciences",
+        description: "Discover our cloud services tailored for life sciences",
+        href: "/industries/life-sciences",
+      },
+      {
+        category: "Retail",
+        description: "See how we help retail businesses thrive in the cloud",
+        href: "/industries/retail",
+      },
+      {
+        category: "Software",
+        description: "Optimize software development with our cloud expertise",
+        href: "/industries/software",
+      },
+      {
+        category: "Finance",
+        description: "Explore cloud solutions designed for the finance sector",
+        href: "/industries/finance",
+      },
+      {
+        category: "Media",
+        description: "Empower media companies with robust cloud capabilities",
+        href: "/industries/media",
       },
     ],
   },
@@ -216,7 +223,7 @@ const navItems: NavItem[] = [
           },
           {
             title: "Blog",
-            description: "Read insights, tips, and industry news on our blog",
+            description: "Read insights, tips, and industry news on our blog.",
             href: "/blog",
           },
         ],
@@ -260,24 +267,50 @@ const navItems: NavItem[] = [
 
 export function MainNav() {
   const [activeItem, setActiveItem] = React.useState<string | null>(null);
+  const { lock, unlock } = useScrollLock({
+    autoLock: false,
+    lockTarget: "#scrollable",
+  });
+  const router = useRouter();
+
+  // Lock and unlock scrolling based on activeItem
+  React.useEffect(() => {
+    if (activeItem) {
+      lock();
+    } else {
+      unlock();
+    }
+    return () => {
+      unlock();
+    };
+  }, [activeItem, lock, unlock]);
+
+  React.useEffect(() => {
+    const handleRouteChange = () => {
+      setActiveItem(null);
+    };
+
+    router.events.on("routeChangeStart", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
-    <div className="relative bg-nav-gradient">
-      <header className="fixed top-0 z-50 w-full border-b bg-background bg-nav-gradient px-7">
+    <nav className="relative bg-nav-gradient font-mono" id="scrollable">
+      <nav className="fixed top-0 z-50 w-full border-b bg-nav-gradient px-7">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center space-x-2">
-              <span className="text-xl font-bold">Mission</span>
+              <span className="text-xl font-bold text-[#FF9557]">TEVERSE</span>
             </Link>
-            <nav className="flex gap-6 md:hidden">
+            <div className="flex gap-6 md:hidden">
               {navItems.map((item) => (
                 <Button
                   key={item.title}
                   variant="ghost"
                   className={`text-sm font-medium transition-colors hover:text-primary ${
-                    activeItem === item.title
-                      ? "text-primary"
-                      : "text-muted-foreground"
+                    activeItem === item.title ? "text-primary" : "text-black"
                   }`}
                   onClick={() =>
                     setActiveItem(activeItem === item.title ? null : item.title)
@@ -286,47 +319,65 @@ export function MainNav() {
                   {item.title}
                 </Button>
               ))}
-            </nav>
+            </div>
           </div>
           <div className="flex items-center gap-4">
-            <Button className="inline-flex md:hidden">Get Started</Button>
+            <Link href="/contact" className="md:hidden">
+              <Button className="flex w-fit items-center justify-center rounded-full border border-black bg-orange-600 px-8 py-3 text-base font-medium text-white hover:bg-orange-700 md:px-10 md:py-4 md:text-lg">
+                Contact <ArrowIcon />
+              </Button>{" "}
+            </Link>
             <Sheet>
               <SheetTrigger asChild>
                 <Button
                   variant="outline"
-                  size="icon"
-                  className="hidden items-center md:block"
+                  className="hidden border-black md:block"
                 >
-                  <Menu className="h-4 w-4" />
+                  <Menu className="h-8 w-8" />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="max-w-[400px] bg-white sm:w-full"
+                className="max-w-[400px] bg-nav-items sm:w-full"
+                // style={{
+                //   background:
+                //     "radial-gradient(75.6% 80.76% at 66.91% 110.17%, #f37920 0, #f1f0ee 100%)",
+                // }}
               >
                 <SheetHeader>
-                  <SheetTitle>Menu</SheetTitle>
-                  <SheetDescription>
+                  <SheetTitle>
+                    <Link
+                      href="/"
+                      className="flex items-center space-x-2 font-mono"
+                    >
+                      <span className="text-xl font-bold text-[#FF9557]">
+                        TEVERSE
+                      </span>
+                    </Link>
+                  </SheetTitle>
+                  <SheetDescription className="text-left">
                     Navigate through our services and solutions
                   </SheetDescription>
                 </SheetHeader>
-                <ScrollArea className="mt-6 h-[calc(100vh-8rem)]">
+                <ScrollArea className="no-scrollbar mt-6 h-[calc(100vh-8rem)]">
                   <Accordion type="single" collapsible>
                     {navItems.map((item, index) => (
                       <AccordionItem value={`item-${index}`} key={item.title}>
                         <AccordionTrigger>{item.title}</AccordionTrigger>
-                        <AccordionContent>
+                        <AccordionContent className="no-scrollbar">
                           {item.items.map((section) => (
                             <div key={section.category} className="mb-4">
-                              <h3 className="mb-2 text-sm font-semibold">
-                                {section.category}
-                              </h3>
-                              <p className="mb-2 text-sm text-muted-foreground">
+                              <Link href={section?.href || "#"}>
+                                <h3 className="mb-2 text-sm font-semibold">
+                                  {section.category}
+                                </h3>
+                              </Link>
+                              <p className="mb-2 text-sm text-black opacity-50">
                                 {section.description}
                               </p>
                               <div className="space-y-2">
-                                {section.subitems.map((subitem) => (
+                                {section?.subitems?.map((subitem) => (
                                   <Link
                                     key={subitem.title}
                                     href={subitem.href}
@@ -347,7 +398,7 @@ export function MainNav() {
             </Sheet>
           </div>
         </div>
-      </header>
+      </nav>
 
       <AnimatePresence>
         {activeItem && (
@@ -356,9 +407,9 @@ export function MainNav() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-x-0 top-16 z-40 bg-white"
+            className="fixed inset-x-0 top-16 z-40 bg-opacity-100 bg-nav-items"
           >
-            <ScrollArea className="container h-[calc(100vh-4rem)] p-6">
+            <ScrollArea className="container h-[calc(100vh-4rem)] gap-5 p-6">
               {navItems.map(
                 (item) =>
                   activeItem === item.title && (
@@ -368,28 +419,30 @@ export function MainNav() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 20 }}
                       transition={{ duration: 0.3, delay: 0.1 }}
-                      className="grid grid-cols-3 gap-6 md:grid-cols-2"
+                      className="grid grid-cols-3 gap-10 md:grid-cols-2"
                     >
                       {item.items.map((section) => (
                         <div key={section.category} className="space-y-4">
-                          <div className="flex items-center justify-between">
-                            <h3 className="text-lg font-semibold">
-                              {section.category}
+                          <div className="group flex items-center justify-between">
+                            <h3 className="border-b-2 border-transparent text-lg font-semibold transition-all duration-300 ease-in hover:border-gray-700">
+                              {section.href ? (
+                                <Link href={section.href} className="">
+                                  {section.category}
+                                </Link>
+                              ) : (
+                                <span>{section.category}</span>
+                              )}
                             </h3>
-                            {item.href && (
-                              <Link
-                                href={item.href}
-                                className="text-sm font-medium text-primary hover:underline"
-                              >
-                                View All
-                              </Link>
-                            )}
+                            {/* <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-gray-700 transition-all duration-300 group-hover:w-full"></span> */}
                           </div>
                           <p className="text-sm text-muted-foreground">
                             {section.description}
                           </p>
+                          {section.subitems && (
+                            <hr className="border-gray-900 bg-gray-900" />
+                          )}
                           <div className="grid gap-4">
-                            {section.subitems.map((subitem) => (
+                            {section?.subitems?.map((subitem) => (
                               <Link
                                 key={subitem.title}
                                 href={subitem.href}
@@ -399,7 +452,7 @@ export function MainNav() {
                                   <h4 className="text-sm font-medium group-hover:text-primary">
                                     {subitem.title}
                                   </h4>
-                                  <ChevronRight className="h-4 w-4 group-hover:translate-x-1" />
+                                  <ChevronRight className="ease h-4 w-4 transition-all group-hover:translate-x-1" />
                                 </div>
                                 <p className="text-sm text-muted-foreground">
                                   {subitem.description}
@@ -423,6 +476,6 @@ export function MainNav() {
           onClick={() => setActiveItem(null)}
         />
       )}
-    </div>
+    </nav>
   );
 }

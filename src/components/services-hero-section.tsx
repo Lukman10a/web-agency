@@ -1,5 +1,7 @@
 import React from "react";
 
+import Link from "next/link";
+
 const AwsServicesHero: React.FC = () => {
   return (
     <div className="flex justify-center bg-gradient-to-r from-[#EAF8FF] to-[#FFF3E5] px-4 py-14 sm:flex-col">
@@ -27,10 +29,12 @@ const AwsServicesHero: React.FC = () => {
           {/* Buttons */}
           <div className="mx-auto flex justify-start gap-4 sm:flex-wrap">
             <button className="rounded-full bg-orange-650 px-4 py-2 text-sm font-medium text-white transition hover:bg-orange-600">
-              Managed Services
+              <Link href="#">Managed Services</Link>
             </button>
             <button className="rounded-full bg-orange-650 px-4 py-2 text-sm font-medium text-white transition hover:bg-orange-600">
-              Professional Services
+              <Link href="/services/professional-services">
+                Professional Services
+              </Link>
             </button>
           </div>
         </div>

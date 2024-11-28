@@ -2,6 +2,16 @@ import React from "react";
 
 import Image from "next/image";
 
+import awsHero from "/public/assets/awsHero.png";
+import Cardimage1 from "/public/assets/cardimage1.png";
+import contact from "/public/assets/contact.png";
+import aws from "/public/svg/aws.svg";
+import data from "/public/svg/data.svg";
+import devops from "/public/svg/devops.svg";
+import mark from "/public/svg/mark.svg";
+import securityaws from "/public/svg/securityaws.svg";
+import solution from "/public/svg/solution.svg";
+import sysops from "/public/svg/sysops.svg";
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
@@ -13,17 +23,6 @@ import ContactSection from "@/components/lets-talk";
 import CategoryButtons from "@/components/shared/category-buttons";
 import LARA from "@/components/shared/lara";
 import Testimonials from "@/components/what-client";
-
-import awsHero from "../../../public/assets/awsHero.png";
-import Cardimage1 from "../../../public/assets/cardimage1.png";
-import contact from "../../../public/assets/contact.png";
-import aws from "../../../public/svg/aws.svg";
-import data from "../../../public/svg/data.svg";
-import devops from "../../../public/svg/devops.svg";
-import mark from "../../../public/svg/mark.svg";
-import securityaws from "../../../public/svg/securityaws.svg";
-import solution from "../../../public/svg/solution.svg";
-import sysops from "../../../public/svg/sysops.svg";
 
 export default function AWS() {
   const cardData = [

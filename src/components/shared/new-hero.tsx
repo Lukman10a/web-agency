@@ -1,6 +1,10 @@
 import React from "react";
-import { motion } from "framer-motion"; // Import framer-motion
+
+// Import framer-motion
 import Image, { StaticImageData } from "next/image";
+
+import { motion } from "framer-motion";
+
 import { Button } from "../ui/button";
 
 type NewHeroProps = {
@@ -57,7 +61,7 @@ const NewHero: React.FC<NewHeroProps> = ({
               <Image
                 src={iconLink}
                 alt="Security Icon"
-                className="w-[15%] mb-6 md:mx-auto sm:w-[20%]"
+                className="mb-6 w-[15%] md:mx-auto sm:w-[20%]"
                 width={500}
                 height={500}
               />
@@ -78,7 +82,7 @@ const NewHero: React.FC<NewHeroProps> = ({
             {title}
           </motion.h1>
           <motion.p
-            className="mb-[1.5em] w-[90%] text-[#808080] lg:text-[14px] md:mx-auto md:w-[80%] sm:w-[90%]"
+            className="mb-[1.5em] w-[90%] text-lg text-[#808080] lg:text-base md:mx-auto md:w-[80%] sm:w-[90%]"
             variants={itemVariants}
           >
             {description}
@@ -100,7 +104,7 @@ const NewHero: React.FC<NewHeroProps> = ({
           <Image
             src={ImgSrc}
             alt="Hero Image"
-            className="w-full bg-white rounded-2xl"
+            className="w-full rounded-2xl bg-white"
             width={500}
             height={500}
           />
