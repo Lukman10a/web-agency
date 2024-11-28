@@ -65,13 +65,11 @@ const featuresData = {
 };
 
 const CloudScore = () => {
-  // Return statement
   return (
     <div>
       {/* Hero Section */}
       <NewHero
-        ImgSrc="/assets/checkers.png"
-        tag
+        ImgSrc="/svg/cloud-score.svg"
         title="Mission Cloud Score"
         description="Benchmark your environment against AWS best practices."
         buttonText="Get Started"

@@ -6,9 +6,9 @@ import { HighlightedText } from "./ui/animated/highlight-text";
 
 const TeverseControlHero: React.FC = () => {
   return (
-    <div className="flex justify-center pb-14">
+    <div className="flex justify-center bg-secondary-gradient pb-14">
       <motion.div
-        className="relative w-full max-w-7xl bg-secondary-gradient p-14 text-center sm:w-full sm:max-w-full sm:p-4"
+        className="relative w-full max-w-7xl p-14 text-center sm:w-full sm:max-w-full sm:p-4"
         // style={{
         //   background:
         //     "linear-gradient(to top right, rgba(50, 150, 245, 0.5), rgba(255, 120, 57, 0.5))",

@@ -48,8 +48,7 @@ export default function CloudEngagements() {
     <div>
       <NewHero
         ImgSrc="/svg/engagement.svg"
-        tag
-        title="Mission Cloud Engagements DevOps"
+        title="Teverse Cloud Engagements DevOps"
         description="Get transparent reporting and live updates on your team’s status"
         buttonText="Get Started"
       />
