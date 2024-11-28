@@ -104,7 +104,7 @@ const NewHero: React.FC<NewHeroProps> = ({
           <Image
             src={ImgSrc}
             alt="Hero Image"
-            className="w-full rounded-2xl bg-white"
+            className="w-full rounded-2xl"
             width={500}
             height={500}
           />

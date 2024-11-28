@@ -1,11 +1,11 @@
 import React from "react";
 
-import CardSection from "@/components/card-section";
-import NewHero from "@/components/shared/new-hero";
-import WhatIsTeverse from "@/components/What-is-teverse";
-import DevOpsMethodology from "@/components/devops";
-import ServicesCard from "@/components/shared/services-card";
 import Benefits from "@/components/benefits";
+import CardSection from "@/components/card-section";
+import DevOpsMethodology from "@/components/devops";
+import NewHero from "@/components/shared/new-hero";
+import ServicesCard from "@/components/shared/services-card";
+import WhatIsTeverse from "@/components/What-is-teverse";
 
 const disciplines = [
   "Infrastructure as Code",
@@ -23,21 +23,31 @@ const disciplines = [
 const benefitData = {
   headTitle: "of Terverse Cloud Engagements - DevOps",
   items: [
-    { title: "Surface risks to your initiatives before they become roadblocks or delay important work." },
-    { title: "Check the status of your DevOps team in real-time and get accurate, clear reporting." },
+    {
+      title:
+        "Surface risks to your initiatives before they become roadblocks or delay important work.",
+    },
+    {
+      title:
+        "Check the status of your DevOps team in real-time and get accurate, clear reporting.",
+    },
     { title: "Transparency and accountability on all our work together." },
-    { title: "One place to find everything you need to know about your DevOps engagement." },
-    { title: "Ensure your priorities are being met and quickly pivot when needed." },
+    {
+      title:
+        "One place to find everything you need to know about your DevOps engagement.",
+    },
+    {
+      title:
+        "Ensure your priorities are being met and quickly pivot when needed.",
+    },
   ],
 };
-
-
 
 export default function CloudEngagements() {
   return (
     <div>
       <NewHero
-        ImgSrc="/assets/checkers.png"
+        ImgSrc="/svg/engagement.svg"
         tag
         title="Mission Cloud Engagements DevOps"
         description="Get transparent reporting and live updates on your team’s status"
@@ -68,7 +78,7 @@ export default function CloudEngagements() {
       </section>
       <Benefits headTitle={benefitData.headTitle} items={benefitData.items} />
       <DevOpsMethodology />
-      
+
       <ServicesCard
         imgSrc="/assets/checkers.png"
         altText="Custom Alt Text"
