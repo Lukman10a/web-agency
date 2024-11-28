@@ -10,7 +10,6 @@ import clock from "/public/svg/awsBuild.svg";
 import AwsBuild from "@/components/aws-build";
 import Preverity from "@/components/preverity";
 import Resources from "@/components/resources";
-import FAQ from "@/components/shared/FAQ";
 import NewHero from "@/components/shared/new-hero";
 import ServicesCard from "@/components/shared/services-card";
 import WhatIsTeverse from "@/components/What-is-teverse";
@@ -147,7 +146,7 @@ const CloudScore = () => {
         > Safeguarding the Future 
         </HighlightedText> with Generative AI Security
         </motion.h2>
-        <p className="text-2xl sm:text-lg">Explore our strategic blueprint for securing generative AI's potential. Navigate risks, integrate, and craft policies for a secure future.</p>
+        <p className="text-2xl sm:text-lg">Explore our strategic blueprint for securing generative AI&apos;s potential. Navigate risks, integrate, and craft policies for a secure future.</p>
       </section>
 
       <AwsBuild

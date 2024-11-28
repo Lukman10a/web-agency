@@ -1,17 +1,17 @@
 import React from "react";
-
+import WhatIsTeverse from "@/components/What-is-teverse";
 import Image from "next/image";
 
 import awsHero from "/public/assets/awsHero.png";
 import Cardimage1 from "/public/assets/cardimage1.png";
 import contact from "/public/assets/contact.png";
-import aws from "/public/svg/aws.svg";
-import data from "/public/svg/data.svg";
-import devops from "/public/svg/devops.svg";
+// import aws from "/public/svg/aws.svg";
+// import data from "/public/svg/data.svg";
+// import devops from "/public/svg/devops.svg";
 import mark from "/public/svg/mark.svg";
-import securityaws from "/public/svg/securityaws.svg";
-import solution from "/public/svg/solution.svg";
-import sysops from "/public/svg/sysops.svg";
+// import securityaws from "/public/svg/securityaws.svg";
+// import solution from "/public/svg/solution.svg";
+// import sysops from "/public/svg/sysops.svg";
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
@@ -23,6 +23,8 @@ import ContactSection from "@/components/lets-talk";
 import CategoryButtons from "@/components/shared/category-buttons";
 import LARA from "@/components/shared/lara";
 import Testimonials from "@/components/what-client";
+import { HighlightedText } from "@/components/ui/animated/highlight-text";
+import DynamicSection from "@/components/profesional-services";
 
 export default function AWS() {
   const cardData = [
@@ -61,14 +63,66 @@ export default function AWS() {
     "Co-funding with AWS Migrations Acceleration Program (MAP)",
   ];
 
+  const ProfessionalServices = [
+    {
+      title: "AWS Migrations",
+      description:
+        "We’ve helped hundreds of customers migrate from on-premises, public clouds, and PaaS providers like Heroku or Backspace.",
+      icon: "/icons/aws-migration.svg", // Replace with your icon path
+    },
+    {
+      title: "AWS Modernization",
+      description:
+        "Modernizing your AWS environment and applications to maximize operational and cost advantages AWS offers.",
+      icon: "/icons/aws-modernization.svg", // Replace with your icon path
+    },
+    {
+      title: "Cloud Security",
+      description:
+        "Implement comprehensive security frameworks to protect your workloads and applications.",
+      icon: "/icons/cloud-security.svg", // Replace with your icon path
+    },
+    {
+      title: "Cloud Security",
+      description:
+        "Implement comprehensive security frameworks to protect your workloads and applications.",
+      icon: "/icons/cloud-security.svg", // Replace with your icon path
+    },
+    {
+      title: "Cloud Security",
+      description:
+        "Implement comprehensive security frameworks to protect your workloads and applications.",
+      icon: "/icons/cloud-security.svg", // Replace with your icon path
+    },
+    {
+      title: "Cloud Security",
+      description:
+        "Implement comprehensive security frameworks to protect your workloads and applications.",
+      icon: "/icons/cloud-security.svg", // Replace with your icon path
+    },
+  ];
+
   return (
     <div>
       {/* Hero Section */}
       <header className="flex items-center gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12 lg:gap-6 md:flex-col">
         <article className="space-y-10">
-          <h1 className="animate-fade-in-up font-sora text-6xl font-extrabold lg:text-5xl">
-            AWS Professional Services on Demand
-          </h1>
+          <motion.h1 className="animate-fade-in-up font-sora text-4xl font-medium lg:text-5xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+          >
+            <HighlightedText
+               highlightColor="#47a1fa"
+               highlightHeight="100%"
+               className="p-2"
+               highlightClassName="z-[-1] rounded-lg"
+               delay={1.5}
+            >
+              AWS
+            </HighlightedText>
+             Professional Services on Demand
+          </motion.h1>
           <p className="animate-fade-in-up font-sans text-xl font-medium delay-200">
             Our AWS-certified engineers are ready to help you succeed with your
             next cloud project.
@@ -85,8 +139,23 @@ export default function AWS() {
         />
       </header>
 
+      <WhatIsTeverse
+        tag
+        title="Comprehensive Protection for Your AWS Environment"
+        mainDescription="Mission Cloud Secure is a SaaS application that delivers 24/7 security monitoring and incident response through a powerful combination of CrowdStrike's world-class security platform and Mission's AWS expertise. Protect your cloud resources, endpoints, and credentials while maintaining compliance and operational excellence."
+        additionalDescription=""
+      />
+
+      <DynamicSection
+        title="Get Engineering And Support For Every Initiative"
+        subtitle="Enlist trusted expertise to guide you through the design and implementation of robust, scalable cloud-native solutions. Capitalize on all that AWS offers — enhanced speed, performance, reliability, and cost efficiency — with our engineers and architects."
+        buttonVisible={true}
+        buttonText="Learn More"
+        cards={ProfessionalServices}
+      />
+
       {/* AWS Certifications Section */}
-      <section className="space-y-6 p-12">
+      {/* <section className="space-y-6 p-12">
         <h3 className="text-center font-sora text-5xl font-semibold text-[#262626] md:text-4xl sm:text-3xl">
           We&apos;re AWS certified
         </h3>
@@ -108,7 +177,7 @@ export default function AWS() {
             ),
           )}
         </div>
-      </section>
+      </section> */}
 
       {/* Why is this Important Section */}
       <section className="bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] p-8 sm:p-4">
