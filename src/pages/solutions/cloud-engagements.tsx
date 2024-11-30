@@ -77,7 +77,6 @@ export default function CloudEngagements() {
       </section>
       <Benefits headTitle={benefitData.headTitle} items={benefitData.items} />
       <DevOpsMethodology />
-
       <ServicesCard
         imgSrc="/assets/checkers.png"
         altText="Custom Alt Text"

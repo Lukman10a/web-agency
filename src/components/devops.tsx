@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const DevOpsMethodology: React.FC = () => {
   return (
-    <section className="mx-auto max-w-7xl bg-white px-4 py-10">
-      <h2 className="mb-4 w-[32%] bg-slate-200 font-sora text-3xl font-medium text-gray-900 lg:w-[60%] md:mx-auto md:w-full md:text-center">
+    <section className="mx-auto max-w-7xl bg-white px-10 py-10">
+      <h2 className="mb-4 font-sora text-3xl font-medium text-gray-900 lg:w-[60%] md:mx-auto md:w-full md:text-center">
         Teverse Cloud Engage, our DevOps methodology
       </h2>
       <p className="mb-6 text-lg text-gray-600">
@@ -13,7 +13,7 @@ const DevOpsMethodology: React.FC = () => {
         Delegate modifications and troubleshooting to our team of DevOps experts
         just by opening a request.
       </p>
-      <div className="mt-4 flex h-full items-start justify-between md:flex-col md:gap-8">
+      <div className="mt-10 flex h-full items-start justify-between md:flex-col md:gap-8">
         {/* Left Section */}
         <div className="">
           <p className="inline rounded-full border px-4 py-1 text-xs">
@@ -21,8 +21,7 @@ const DevOpsMethodology: React.FC = () => {
           </p>
           <div className="mt-4">
             <h3 className="mb-4 text-3xl font-semibold text-gray-800">
-              Every DevOps team{" "}
-              <span className="block sm:inline">consists of</span>
+              Every DevOps team <span className="sm:inline">consists of</span>
             </h3>
             <ul className="list-inside list-decimal space-y-2 text-xl text-gray-700">
               <li>Cloud Solutions Architect (CSA)</li>
