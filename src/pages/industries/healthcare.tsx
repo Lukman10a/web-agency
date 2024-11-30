@@ -83,7 +83,7 @@ const ourCapabilitiesData = [
 
 const Healtcare = () => {
   return (
-    <section>
+    <section className="overflow-hidden">
       <NewHero
         title="Healthcare on AWS"
         description="AI solutions and cloud-native technologies for every patient."

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import Image from "next/image";
 
 interface FAQItem {
@@ -44,6 +43,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({
                 <div
                   className="flex cursor-pointer items-center justify-between"
                   onClick={() => toggleFAQ(index)}
+
                 >
                   <h3
                     className={`text-lg font-medium sm:text-base ${questionColor}`}

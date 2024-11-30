@@ -21,7 +21,7 @@ const FeaturedPost: React.FC<FeaturedPostProps> = ({
   link,
 }) => {
   return (
-    <div className="mx-auto my-10 flex w-[90%] max-w-[1100px] gap-12 rounded-3xl bg-gradient-to-r from-[#0813481A] to-[#FF95571A] p-[2em] lg:gap-8 2md:p-[1em] md:gap-4 sm:flex-col sm:rounded-2xl">
+    <div className="shadow-lgg mx-auto my-10 flex w-[90%] max-w-[1100px] gap-12 rounded-3xl bg-gradient-to-r from-[#0813481A] to-[#FF95571A] p-[2em] lg:gap-8 2md:p-[1em] md:gap-4 sm:flex-col sm:rounded-2xl">
       <div className="w-1/2 sm:w-full">
         <Image
           src={imageSrc}

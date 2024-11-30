@@ -1,79 +1,143 @@
 import React from "react";
-
+import WhatIsTeverse from "@/components/What-is-teverse";
 import Image from "next/image";
-
+import PartnersCard from "@/components/shared/partners-card";
+import ServicesCard from "@/components/shared/services-card";
 import awsHero from "/public/assets/awsHero.png";
-import Cardimage1 from "/public/assets/cardimage1.png";
-import contact from "/public/assets/contact.png";
-import aws from "/public/svg/aws.svg";
-import data from "/public/svg/data.svg";
-import devops from "/public/svg/devops.svg";
-import mark from "/public/svg/mark.svg";
-import securityaws from "/public/svg/securityaws.svg";
-import solution from "/public/svg/solution.svg";
-import sysops from "/public/svg/sysops.svg";
+// import Cardimage1 from "/public/assets/cardimage1.png";
+// import contact from "/public/assets/contact.png";
+// import aws from "/public/svg/aws.svg";
+// import data from "/public/svg/data.svg";
+// import devops from "/public/svg/devops.svg";
+// import mark from "/public/svg/mark.svg";
+// import securityaws from "/public/svg/securityaws.svg";
+// import solution from "/public/svg/solution.svg";
+// import sysops from "/public/svg/sysops.svg";
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 
-import AwsLara from "@/components/aws-lara";
-import AWSection from "@/components/aws-section";
+// import AwsLara from "@/components/aws-lara";
+// import AWSection from "@/components/aws-section";
 import ArrowIcon from "@/components/icons/arrow";
-import ContactSection from "@/components/lets-talk";
-import CategoryButtons from "@/components/shared/category-buttons";
-import LARA from "@/components/shared/lara";
-import Testimonials from "@/components/what-client";
+// import ContactSection from "@/components/lets-talk";
+// import CategoryButtons from "@/components/shared/category-buttons";
+// import LARA from "@/components/shared/lara";
+// import Testimonials from "@/components/what-client";
+import { HighlightedText } from "@/components/ui/animated/highlight-text";
+import DynamicSection from "@/components/profesional-services";
+import Resources from "@/components/resources";
+
 
 export default function AWS() {
-  const cardData = [
+  // const cardData = [
+  //   {
+  //     title: "AWS enable us to",
+  //     description: [
+  //       "Involve their technical experts, architects or product teams",
+  //       "Get free credits for our customers",
+  //       "Launch co-funding programs such as Activate, MAP, POA etc.",
+  //       "Resell AWS services",
+  //     ],
+  //     imageSrc: Cardimage1,
+  //   },
+  //   {
+  //     title: "AWS continuously certifies our",
+  //     description: [
+  //       "Engineers and AWS Well Architected Design",
+  //       "Competencies, Service Deliveries and Specializations",
+  //       "Case Studies and References.",
+  //     ],
+  //     imageSrc: Cardimage1,
+  //   },
+  // ];
+
+  // const categories = ["ALL", "ENTERPRISES", "KICKSTART"];
+
+  // const consultingServices = [
+  //   "Performing detailed assessment and roadmap planning",
+  //   "Rapid deployment of your future infra - using LARA",
+  //   "Obtain IaC with full codebase - cost and performance optimized",
+  //   "Helping you get cloud-ready (replatform or refactor)",
+  //   "Ensuring smooth application onboarding process",
+  // ];
+  // const consultingServices2 = [
+  //   "Expert consulting in order to support the operation",
+  //   "Co-funding with AWS Migrations Acceleration Program (MAP)",
+  // ];
+
+  const ProfessionalServices = [
     {
-      title: "AWS enable us to",
-      description: [
-        "Involve their technical experts, architects or product teams",
-        "Get free credits for our customers",
-        "Launch co-funding programs such as Activate, MAP, POA etc.",
-        "Resell AWS services",
-      ],
-      imageSrc: Cardimage1,
+      icon: "/assets/softwareCloud2.png",
+      title: "AWS Migrations",
+      description:
+        "Assess your infrastructure, Mobilize to establish your workloads, Migrate & Modernize all remaining workloads, tune for production",
+      link: "/services/aws-migrations",
     },
     {
-      title: "AWS continuously certifies our",
-      description: [
-        "Engineers and AWS Well Architected Design",
-        "Competencies, Service Deliveries and Specializations",
-        "Case Studies and References.",
-      ],
-      imageSrc: Cardimage1,
+      icon: "/assets/serviceGrid2.png",
+      title: "AWS Modernization",
+      description:
+        "Improve deployments and operations with containerization, serverless computing, microservices",
+      link: "/services/aws-modernization",
     },
-  ];
-
-  const categories = ["ALL", "ENTERPRISES", "KICKSTART"];
-
-  const consultingServices = [
-    "Performing detailed assessment and roadmap planning",
-    "Rapid deployment of your future infra - using LARA",
-    "Obtain IaC with full codebase - cost and performance optimized",
-    "Helping you get cloud-ready (replatform or refactor)",
-    "Ensuring smooth application onboarding process",
-  ];
-  const consultingServices2 = [
-    "Expert consulting in order to support the operation",
-    "Co-funding with AWS Migrations Acceleration Program (MAP)",
+    {
+      icon: "/assets/softwareCloud3.png",
+      title: "Data, Analytics & AI/ML",
+      description:
+        "Data engineering and analytics, visualization, data science, generative AI and ML algorithms, AI/ML operations",
+      link: "/services/data-analytics",
+    },
+    {
+      icon: "/assets/serviceGrid4.png",
+      title: "DevOps",
+      description:
+        "Streamline and secure your development pipeline with Infrastructure as Code, CI/CD",
+      link: "/services/devops",
+    },
+    {
+      icon: "/assets/softwareCloud4.png",
+      title: "Cloud-Native Application Development",
+      description:
+        "Build greenfield applications with cloud-native services and modernize legacy codebases",
+      link: "/services/cloud-native",
+    },
+    {
+      icon: "/assets/softwareCloud.png",
+      title: "AWS Security & Compliance",
+      description:
+        "Benchmark security and compliance objectives, pen test your environment, and establish disaster recovery processes",
+      link: "/services/security-compliance",
+    },
   ];
 
   return (
     <div>
       {/* Hero Section */}
-      <header className="flex items-center gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12 lg:gap-6 md:flex-col">
+      <header className="flex items-center mb-14 gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12 lg:gap-6 md:flex-col">
         <article className="space-y-10">
-          <h1 className="animate-fade-in-up font-sora text-6xl font-extrabold lg:text-5xl">
-            Amazon Web Services
-          </h1>
+          <motion.h1 className="animate-fade-in-up font-sora text-4xl font-medium lg:text-5xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+          >
+            <HighlightedText
+               highlightColor="#47a1fa"
+               highlightHeight="100%"
+               className="p-2"
+               highlightClassName="z-[-1] rounded-lg"
+               delay={1.5}
+            >
+              AWS
+            </HighlightedText>
+             Professional Services on Demand
+          </motion.h1>
           <p className="animate-fade-in-up font-sans text-xl font-medium delay-200">
-            Labyrinth Labs is an Advanced Service Partner
+            Our AWS-certified engineers are ready to help you succeed with your
+            next cloud project.
           </p>
           <Button className="flex w-fit transform items-center gap-4 rounded-2xl border border-[#081348] bg-orange-650 text-white transition duration-500 hover:scale-105 hover:bg-orange-600">
-            <span>EXPLORE</span>
+            <span>Get Started</span>
             <ArrowIcon />
           </Button>
         </article>
@@ -84,8 +148,33 @@ export default function AWS() {
         />
       </header>
 
+      <WhatIsTeverse
+        tag
+        title="Comprehensive Protection for Your AWS Environment"
+        mainDescription="Mission Cloud Secure is a SaaS application that delivers 24/7 security monitoring and incident response through a powerful combination of CrowdStrike's world-class security platform and Mission's AWS expertise. Protect your cloud resources, endpoints, and credentials while maintaining compliance and operational excellence."
+        additionalDescription=""
+      />
+
+      <DynamicSection
+        title="Get Engineering And Support For Every Initiative"
+        subtitle="Enlist trusted expertise to guide you through the design and implementation of robust, scalable cloud-native solutions. Capitalize on all that AWS offers — enhanced speed, performance, reliability, and cost efficiency — with our engineers and architects."
+        description=""
+        buttonVisible={true}
+        buttonText="Learn More"
+        cards={ProfessionalServices}
+      />
+
+      <PartnersCard
+        iconSrc="/assets/trove.webp"
+        buttonText="Read Full Story"
+        buttonLink="#"
+        quote="“For any organization like ours looking to modernize with containers on AWS, I would say run — don’t walk — to engage with Mission. Mission came in as a trusted partner, let us lean on them to do the heavy lifting, and helped us build the container architecture that had long been on our wish list. I highly recommend Mission both for the deep expertise and delightful customer experience it provides.”"
+        authorName="Colleen Blakelock"
+        authorRole=" former Director of Engineering, Infrastructure and Security at Trove"
+      />
+
       {/* AWS Certifications Section */}
-      <section className="space-y-6 p-12">
+      {/* <section className="space-y-6 p-12">
         <h3 className="text-center font-sora text-5xl font-semibold text-[#262626] md:text-4xl sm:text-3xl">
           We&apos;re AWS certified
         </h3>
@@ -107,10 +196,10 @@ export default function AWS() {
             ),
           )}
         </div>
-      </section>
+      </section> */}
 
       {/* Why is this Important Section */}
-      <section className="bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] p-8 sm:p-4">
+      {/* <section className="bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] p-8 sm:p-4">
         <h1 className="py-12 text-center font-sora text-5xl font-bold text-[#262626] md:text-4xl sm:text-3xl">
           Why is this important?
         </h1>
@@ -143,7 +232,7 @@ export default function AWS() {
             </div>
           </div>
         ))}
-      </section>
+      </section> */}
 
       {/* Categories Section */}
       <section>
@@ -190,18 +279,28 @@ export default function AWS() {
             </div>
           </div>
         </div>
-      </section>
-      <AWSection />
+      </section> */}
+      {/* <AWSection />
       <AwsLara />
-      <LARA />
+      <LARA /> */}
 
-      <div className="bg-white p-4">
+      {/* <div className="bg-white p-4">
         <div className="rounded-xl bg-gradient-to-r from-gradient-100 to-gradient-200">
           <Testimonials />
         </div>
-      </div>
+      </div> */}
+      <Resources />
 
-      <ContactSection />
+      <ServicesCard
+        altText="Custom Alt Text"
+        title="Schedule a Free Consultation With a Mission Cloud Solutions Architect"
+        description="As you determine which consulting services are right for your organization, we’re here to support you."
+        showTag={true}
+        index={1}
+        showButton={true}
+        buttonText="Schedule a call"
+        imgSrc={""}
+      />
     </div>
   );
 }

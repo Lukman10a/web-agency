@@ -78,6 +78,7 @@ export default function WhyChooseUs() {
         {benefits.map((benefit, index) => (
           <AnimatedBorderTrail key={index}>
             <motion.div
+              className="block lg:mx-auto"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}

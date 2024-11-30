@@ -18,26 +18,21 @@ const Benefits: React.FC<BenefitsProps> = ({ headTitle, items }) => {
           <span className="text-orange-600">Benefits</span> {headTitle}
         </h2>
 
-        <div className="grid w-full grid-cols-12 gap-4 sm:grid-cols-1">
-          {items.map((item, index) => {
-            let colSpanClass = "";
-            if (index === 0) colSpanClass = "col-span-4";
-            else if (index === 1) colSpanClass = "col-span-4";
-            else if (index === 2) colSpanClass = "col-span-4";
-            else if (index === 3) colSpanClass = "col-span-5";
-            else if (index === 4) colSpanClass = "col-span-6";
-
-            return (
-              <div
-                key={index}
-                className={`rounded-2xl border border-black bg-white p-8 font-sans shadow-sm lg:p-4 sm:col-span-12 ${colSpanClass}`}
-              >
-                <p className="text-xl leading-tight text-gray-800 md:text-lg">
-                  {item.title}
-                </p>
-              </div>
-            );
-          })}
+        <div className="w-full">
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className="mb-4 flex items-start space-x-2 rounded-2xl font-sans md:mb-4"
+            >
+              <ul className="ml-4 list-disc">
+                <li>
+                  <p className="text-2xl leading-tight text-gray-800 md:text-lg">
+                    {item.title}
+                  </p>
+                </li>
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>

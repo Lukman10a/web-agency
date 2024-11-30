@@ -1,6 +1,8 @@
 import React from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+
 import Image from "next/image";
+
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const cardData = [
   {
@@ -16,28 +18,16 @@ const cardData = [
       "We build a history of your conversations with us and can see the Recommendation you’re acting on, the Scorecard which prompted a ticket, or the specific Resource you’re concerned about.",
   },
   {
-    icon: "/assets/message.png",
+    icon: "/assets/targetpoint.png",
     title: "Track Your Impact",
     description:
       "As you become more well architected, see the actual dollars we’ve helped you save and the impact of your architectural decisions over time.",
   },
   {
-    icon: "/assets/message.png",
+    icon: "/assets/cloudstrikes.png",
     title: "Built for AWS",
     description:
       "Every part of Mission Control was designed for AWS and will continue to evolve to support AWS services and programs.",
-  },
-  {
-    icon: "/assets/message.png",
-    title: "Real-Time Monitoring",
-    description:
-      "In addition to the visualizations we generate, our Cloud Analysts meet with you regularly to talk through areas where you may be overspending or working with an inefficient architecture",
-  },
-  {
-    icon: "/assets/message.png",
-    title: "Custom Strategies",
-    description:
-      "In addition to the visualizations we generate, our Cloud Analysts meet with you regularly to talk through areas where you may be overspending or working with an inefficient architecture",
   },
 ];
 
@@ -46,7 +36,6 @@ const InterpretDataSection: React.FC = () => {
   const isInView = useInView(ref, { once: false });
   const controls = useAnimation();
 
-  
   React.useEffect(() => {
     if (isInView) {
       controls.start("visible");
@@ -55,62 +44,64 @@ const InterpretDataSection: React.FC = () => {
     }
   }, [isInView, controls]);
 
-  
   const containerVariants = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.2, 
+        staggerChildren: 0.2,
       },
     },
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 20 }, 
-    visible: { opacity: 1, y: 0 }, 
-    exit: { opacity: 0, y: -20 }, 
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 },
   };
 
   return (
-    <section
-      
-      className="flex flex-col items-center space-y-5 py-14 mt-[10rem] sm:mt-2 px-4"
-    >
-      
-      <motion.div
-        className="text-xs text-gray-500 tracking-wide px-3 inline py-1 border border-gray-300 rounded-full mb-4"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        WHY TEVERSE CONTROL
-      </motion.div>
+    <section className="mx-auto mt-[10rem] flex max-w-7xl flex-col space-y-5 px-10 sm:px-4 sm:mt-10">
+      <div className="space-y-4">
+        <motion.div
+          className="mb-4 inline rounded-full py-1 text-xs tracking-wide text-gray-500"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          WHY TEVERSE CONTROL
+        </motion.div>
 
-      <motion.h2
-        className="text-4xl sm:text-xl max-w-lg md:text-3xl font-medium text-gray-800 text-center mb-4"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        The Expertise to Interpret Data - Not Just Visualize It
-      </motion.h2>
+        <motion.h2
+          className="mb-4 text-left text-2xl font-medium text-gray-800 sm:text-sm sm:leading-7"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          The Expertise to{" "}
+          <span className="rounded-xl border border-neutral-800 p-1">
+            Interpret Data
+          </span>{" "}
+          - Not Just Visualize It
+        </motion.h2>
 
-      <motion.p
-        className="text-center text-gray-600 max-w-4xl mb-10"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
-        Mission Control helps you monitor and analyze your environment, similar
-        to a cloud management platform. But Mission Control also leverages our
-        teams as they build their knowledge of your business, industry,
-        objectives, and the unique concerns and needs of your architecture.
-      </motion.p>
+        <motion.p
+          className="mb-10 max-w-4xl text-left text-gray-600"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          Mission Control helps you monitor and analyze your environment,
+          similar to a cloud management platform. But Mission Control also
+          leverages our teams as they build their knowledge of your business,
+          industry, objectives, and the unique concerns and needs of your
+          architecture.
+        </motion.p>
+      </div>
 
       {/* Staggered Card Animation */}
       <motion.div
         ref={ref}
-        className="grid py-5 sm:grid-cols-1 md:grid-cols-2 grid-cols-3 gap-6 max-w-6xl"
+        className="mx-auto grid grid-cols-2 gap-6 py-5 sm:grid-cols-1 sm:flex-wrap"
         variants={containerVariants}
         initial="hidden"
         animate={controls}
@@ -119,7 +110,11 @@ const InterpretDataSection: React.FC = () => {
         {cardData.map((card, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-start p-6 bg-[#FF9557] rounded-lg text-left shadow-lg"
+            className="flex flex-col sm:p-4 rounded-2xl p-14 text-left shadow-lg"
+            style={{
+              background:
+                "linear-gradient(to bottom, #FDF3EB 10%, #FB7900 100%)",
+            }}
             variants={cardVariants}
             whileHover={{
               scale: 1.05, // Slight hover scale effect
@@ -128,12 +123,12 @@ const InterpretDataSection: React.FC = () => {
             transition={{ duration: 0.3 }}
           >
             <div className="mb-4 text-3xl">
-              <Image src={card.icon} width={40} height={40} alt="card image" />
+              <Image src={card.icon} width={50} height={50} alt="card image" />
             </div>
-            <h3 className="text-3xl sm:text-lg font-medium text-gray-800 mb-2">
+            <h3 className="mb-2 text-2xl font-semibold text-black sm:text-lg">
               {card.title}
             </h3>
-            <p className="text-gray-700 text-sm">{card.description}</p>
+            <p className="text-xl sm:text-sm text-black">{card.description}</p>
           </motion.div>
         ))}
       </motion.div>

@@ -7,7 +7,6 @@ import { InView } from "../ui/animated/in-view";
 import { Button } from "../ui/button";
 
 interface ServicesCardProps {
-  imgSrc: string;
   altText: string;
   title: string;
   description: string;
@@ -15,19 +14,20 @@ interface ServicesCardProps {
   tagText?: string;
   showButton?: boolean;
   buttonText?: string;
+  imgSrc: string;
   index: number;
 }
 
 const ServicesCard: React.FC<ServicesCardProps> = ({
-  imgSrc,
   altText,
   title,
   description,
   showTag = true,
-  tagText = "Overview",
+  tagText = "GET IN TOUCH",
   showButton = false,
   buttonText = "Learn More",
   index,
+  imgSrc
 }) => {
   return (
     <div
