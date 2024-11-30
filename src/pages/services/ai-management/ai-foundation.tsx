@@ -1,7 +1,7 @@
 import React from "react";
 
-const AiFoundation = () => {
-  return <div>AiFoundation</div>;
+const AIFundation = () => {
+  return <div>ai-foundation</div>;
 };
 
-export default AiFoundation;
+export default AIFundation;
