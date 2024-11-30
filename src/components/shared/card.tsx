@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({
   linkHref,
 }) => {
   return (
-    <div className="w-full rounded-[3rem] px-10 py-20 border-2 border-black md:px-4">
+    <div className="w-full max-w-[600px] rounded-2xl bg-orange-650 p-6">
       <h4 className="mb-3 font-sans text-3xl font-medium">{title}</h4>
       <p className="mb-5 font-sans text-xl">{subtitle}</p>
       <p className="mb-5 font-sans text-xl leading-relaxed">{description}</p>

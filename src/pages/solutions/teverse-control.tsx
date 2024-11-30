@@ -10,7 +10,6 @@ interface ReusableComponentProps {
   image: string;
   title: string;
   description: string;
-  altDescription: string;
   buttonText?: string;
   showButton?: boolean;
   reverse?: boolean;
@@ -31,7 +30,6 @@ const sections: ReusableComponentProps[] = [
       "https://www.missioncloud.com/hubfs/2024_illustrations/Illustrations_Stars.svg", // Pass the animated image
     additionalImagePosition: { bottom: -20, left: -50, top: 0, right: 0 }, // Position for the animated image
     title: "Mission Cloud Score",
-    altDescription: "",
     description:
       "Improve your environment by measuring your alignment to best practices.",
     buttonText: "Learn More",
@@ -45,7 +43,6 @@ const sections: ReusableComponentProps[] = [
       "https://www.missioncloud.com/hubfs/2024_illustrations/Illustrations_Tablet.svg", // Different animated image
     additionalImagePosition: { bottom: -20, left: 400, top: 30, right: 0 }, // Custom position
     title: "Recommendations",
-    altDescription: "",
     description:
       "Identify opportunities to improve your environment with recommendations that are tailored to your specific business goals.",
     buttonText: "Discover Now",
@@ -59,7 +56,6 @@ const sections: ReusableComponentProps[] = [
       "https://www.missioncloud.com/hubfs/2024_illustrations/Illustrations_Portfolio.svg", // Another custom animated image
     additionalImagePosition: { bottom: -20, left: -50, top: 0, right: 0 },
     title: "Resources",
-    altDescription: "",
     description:
       "Monitor your most critical AWS resources in a single view. Evaluate resource-specific recommendations and monitor any resource-specific alerts.",
     buttonText: "Discover Now",
@@ -73,7 +69,6 @@ const sections: ReusableComponentProps[] = [
       "https://www.missioncloud.com/hubfs/2024_illustrations/Illustrations_Chat.svg",
     additionalImagePosition: { bottom: -20, left: 400, top: 30, right: 0 },
     title: "Supports ticketing and chats",
-    altDescription: "",
     description:
       "Access real-time support for technical troubleshooting with our CloudOps team.",
     buttonText: "Discover Now",
@@ -82,20 +77,6 @@ const sections: ReusableComponentProps[] = [
     starsAnimation: true,
   },
 ];
-
-const FeaturesSection = () => (
-  <section className="mx-20 sm:mx-5 space-y-6 py-10 text-left text-2xl sm:text-lg font-medium">
-    <h2 className="mb-8 inline rounded-lg border border-black p-1 text-left font-semibold">
-      Features
-    </h2>
-    <p>Visualize, Collaborate, Learn, Act</p>
-    <p>
-      For every insight, alert, or data point we visualize, you&apos;ll have
-      access to an expert to help you understand what it means, why it matters,
-      and how to act on it.
-    </p>
-  </section>
-);
 
 const FeatureList: React.FC<{ sections: ReusableComponentProps[] }> = ({
   sections,
@@ -112,8 +93,20 @@ const TeverseControl = () => {
     <main className="bg-main-gradient">
       <TeverseControlHero />
       <InterpretDataSection />
-      <FeaturesSection />
-      <FeatureList sections={sections} />
+      <section className="space-y-6 bg-main-gradient px-20 py-10 text-left text-2xl font-medium sm:mx-5 sm:text-lg">
+        <div className="space-y-4">
+          <h2 className="mb-8 inline rounded-lg border border-black p-1 text-left font-semibold">
+            Features
+          </h2>
+          <p>Visualize, Collaborate, Learn, Act</p>
+          <p>
+            For every insight, alert, or data point we visualize, you&apos;ll
+            have access to an expert to help you understand what it means, why
+            it matters, and how to act on it.
+          </p>
+        </div>
+        <FeatureList sections={sections} />
+      </section>
       <SoftwareFAQ />
       <BookDemoSection />
     </main>

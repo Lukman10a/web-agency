@@ -47,9 +47,9 @@ const NewHero: React.FC<NewHeroProps> = ({
   };
 
   return (
-    <section className="mx-auto mb-24 py-20 xl:rounded-t-none lg:py-12 md:mb-16 sm:mb-12">
+    <section className="mx-auto mb-24 bg-main-gradient px-16 py-20 xl:rounded-t-none lg:p-12 lg:py-16 md:mb-16 md:px-0 sm:mb-12">
       <motion.div
-        className={`mx-auto flex w-[90%] max-w-[1200px] gap-10 overflow-hidden 2md:gap-4 md:flex-col ${
+        className={`mx-auto flex w-[95%] max-w-7xl gap-12 2md:gap-8 md:w-[85%] md:flex-col md:gap-6 ${
           reverse ? "flex-row-reverse" : "flex-row"
         }`}
         variants={containerVariants}
@@ -96,7 +96,7 @@ const NewHero: React.FC<NewHeroProps> = ({
             {title}
           </motion.h1>
           <motion.p
-            className="mb-[1.5em] w-[90%] text-2xl md:mx-auto md:w-[80%] md:text-xl sm:w-[90%]"
+            className="mb-[1.5em] w-[90%] text-lg text-[#808080] lg:text-base md:mx-auto md:w-[80%] sm:w-[90%]"
             variants={itemVariants}
           >
             {description}
@@ -118,7 +118,7 @@ const NewHero: React.FC<NewHeroProps> = ({
           <Image
             src={ImgSrc}
             alt="Hero Image"
-            className="max-h-[400px] w-full rounded-2xl"
+            className="w-full rounded-2xl"
             width={500}
             height={500}
           />

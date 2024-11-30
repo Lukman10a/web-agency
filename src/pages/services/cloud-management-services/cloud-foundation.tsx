@@ -73,14 +73,14 @@ const CloudFoundation = () => {
   return (
     <main>
       <NewHero
-        ImgSrc="/public/assets/contact"
+        ImgSrc="/public/assets/contact.png"
         title="Mission Cloud Foundation"
         description="Manage costs, support your teams, and build to scale."
         buttonText="Get Started"
       />
 
       <ServicesCard
-        imgSrc="/public/assets/contact"
+        imgSrc="/public/assets/contact.png"
         altText="Custom Alt Text"
         title="Align Your Environment to AWS Best Practices"
         description="Mission Cloud Foundation is our cloud managed service for foundational best practices. Optimize, modernize, and fearlessly take on new initiatives with 24/7 support."

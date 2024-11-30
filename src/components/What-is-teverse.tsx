@@ -50,9 +50,9 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
     <motion.section
       ref={ref} 
       initial="hidden"
-      animate={controls} 
-      variants={fadeUpVariants}
-      className="mx-auto mb-32 flex w-[90%] max-w-[1150px] items-center gap-12 lg:gap-2 md:mb-16 md:flex-col md:gap-8"
+      animate={controls} // Bind animation controls
+      variants={fadeUpVariants} // Use animation variants
+      className="mx-auto mb-32 flex w-[90%] max-w-[1200px] gap-10 lg:gap-2 md:mb-16 md:flex-col-reverse md:gap-4"
     >
       {/* Left Side (Boxes) */}
       <div className="mx-auto flex h-[800px] w-[50%] gap-6 rounded-[3rem] bg-[#cccbcb] lg:gap-4 2md:h-auto md:h-[100vw] md:w-full sm:w-[100%] order-2"></div>
@@ -63,8 +63,8 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
         variants={fadeUpVariants}
       >
         {tag && (
-          <p className="mb-4 self-start rounded-full bg-transparent font-medium py-7 tracking-wide sm:text-sm">
-            {tagText}
+          <p className="mb-4 self-start rounded-full bg-transparent px-3 py-1 text-xs tracking-wide text-[#808080] ring-1 ring-[#808080] md:mx-auto">
+            Overview
           </p>
         )}
         <h2 className="mb-6 font-sans text-3xl sm:text-lg xl:w-[80%] lg:w-[100%]">

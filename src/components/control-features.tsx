@@ -1,11 +1,12 @@
 import React from "react";
-import { motion } from "framer-motion";
+
 import Image from "next/image";
+
+import { motion } from "framer-motion";
 
 interface ReusableComponentProps {
   image: string;
   title: string;
-  altDescription: string;
   description: string;
   buttonText?: string;
   showButton?: boolean;
@@ -20,7 +21,6 @@ const ReusableComponent: React.FC<ReusableComponentProps> = ({
   title,
   description,
   buttonText,
-  altDescription,
   showButton = true,
   reverse = false,
   starsAnimation = false,
@@ -29,9 +29,11 @@ const ReusableComponent: React.FC<ReusableComponentProps> = ({
 }) => {
   return (
     <div
-      className={`flex flex-row justify-between items-center gap-14 sm:flex-col md:flex-col md:flex-wrap sm:flex-wrap max-w-6xl mx-auto ${
-        reverse ? "flex-row-reverse flex sm:flex-col md:flex-col md:flex-wrap sm:flex-wrap" : ""
-      } p-6 space-y-6 md:space-y-0`}
+      className={`mx-auto flex max-w-6xl flex-row items-center justify-between gap-14 md:flex-col md:flex-wrap sm:flex-col sm:flex-wrap ${
+        reverse
+          ? "flex flex-row-reverse md:flex-col md:flex-wrap sm:flex-col sm:flex-wrap"
+          : ""
+      } space-y-6 p-6 md:space-y-0`}
     >
       {/* Image Section */}
       <motion.div
@@ -41,7 +43,13 @@ const ReusableComponent: React.FC<ReusableComponentProps> = ({
         transition={{ duration: 0.8 }}
       >
         {/* Main Section Image */}
-        <Image src={image} width={500} height={850} alt="Section Image" className="rounded-3xl sm:w-[20rem]" />
+        <Image
+          src={image}
+          width={500}
+          height={850}
+          alt="Section Image"
+          className="rounded-3xl sm:w-[20rem]"
+        />
 
         {/* Animated Additional Image */}
         {starsAnimation && additionalImage && (
@@ -52,7 +60,13 @@ const ReusableComponent: React.FC<ReusableComponentProps> = ({
               left: additionalImagePosition?.left || 0,
             }}
           >
-            <Image src={additionalImage} alt="Animated Image" width={90} height={100} className="sm:w-[5rem]" />
+            <Image
+              src={additionalImage}
+              alt="Animated Image"
+              width={90}
+              height={100}
+              className="sm:w-[5rem]"
+            />
           </motion.div>
         )}
       </motion.div>
@@ -64,14 +78,13 @@ const ReusableComponent: React.FC<ReusableComponentProps> = ({
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-2xl md:text-xl font-bold text-left">{title}</h2>
-        <p className="text-gray-700 text-3xl text-left py-7">{altDescription}</p>
-        <p className="text-gray-700 text-left">{description}</p>
+        <h2 className="text-left text-2xl font-bold md:text-xl">{title}</h2>
+        <p className="text-left text-gray-700">{description}</p>
         {showButton && (
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="px-4 py-2 text-white bg-black rounded-lg"
+            className="rounded-lg bg-black px-4 py-2 text-white"
           >
             {buttonText}
           </motion.button>

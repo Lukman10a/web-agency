@@ -17,13 +17,10 @@ import { StickyScrollRevealDemo } from "@/components/shared/solutions-list-scrol
 import image from "../../public/assets/cardimage1.png";
 import solutionHero from "../../public/assets/cloud-provider.gif";
 
-
-
-
 export default function Solution() {
   return (
     <Fragment>
-      <header className="flex items-center gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12 md:flex-col">
+      <header className="flex items-center gap-10 bg-main-gradient p-12 md:flex-col">
         <div className="flex-[3] space-y-10 md:flex-1">
           <h1 className="animate-fade-in-up font-sora text-6xl font-extrabold">
             <span className="block">Migrate, Optimize,</span>
@@ -57,7 +54,7 @@ export default function Solution() {
         />
       </header>
       <StickyScrollRevealDemo />
-       
+
       <Booking />
       {/* Certification Section */}
       <SecurityCertifications />
