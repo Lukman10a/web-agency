@@ -56,7 +56,7 @@ const cardDataTwo = [
     icon: circles,
   },
   {
-    title: "AWS Security Expertise ",
+    title: "AWS Security Expertise ",
     description:
       "Leverage Mission's award-winning AWS security experience. We help configure and tune alerts, develop incident response runbooks, and implement AWS security best practices.",
     icon: cloudstrikes,
@@ -77,7 +77,7 @@ const CloudScore = () => {
       <NewHero
         ImgSrc="/assets/cloud-secure.png"
         tag
-        title="Mission Cloud Secure"
+        title="Mission Cloud Secure"
         description="Fully managed security, detection, and response"
         buttonText="Get Started"
       />
@@ -85,7 +85,7 @@ const CloudScore = () => {
       {/* What Is Teverse Section */}
       <WhatIsTeverse
         tag
-        title="Comprehensive Protection for Your AWS Environment"
+        title="Comprehensive Protection for Your AWS Environment"
         mainDescription="Mission Cloud Secure is a SaaS application that delivers 24/7 security monitoring and incident response through a powerful combination of CrowdStrike's world-class security platform and Mission's AWS expertise. Protect your cloud resources, endpoints, and credentials while maintaining compliance and operational excellence."
         additionalDescription=""
       />
@@ -94,7 +94,7 @@ const CloudScore = () => {
         cards={cardData}
         tag="BENEFITS"
         title="Security without Compromise"
-        subtitle="In today's landscape of sophisticated cyber threats, comprehensive security requires constant vigilance, specialized expertise, and the right tooling. Mission Cloud Secure provides the following: "
+        subtitle="In today's landscape of sophisticated cyber threats, comprehensive security requires constant vigilance, specialized expertise, and the right tooling. Mission Cloud Secure provides the following: "
       />
 
       <AwsBuild

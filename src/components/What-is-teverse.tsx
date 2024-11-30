@@ -1,4 +1,5 @@
 import React from "react";
+
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -50,7 +51,7 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
       initial="hidden"
       animate={controls} // Bind animation controls
       variants={fadeUpVariants} // Use animation variants
-      className="mx-auto mb-32 flex w-[90%] max-w-[1200px] gap-10 lg:gap-2 md:mb-16 md:w-[85%] md:flex-col-reverse md:gap-4"
+      className="mx-auto mb-32 flex w-[90%] max-w-[1200px] gap-10 lg:gap-2 md:mb-16 md:flex-col-reverse md:gap-4"
     >
       {/* Left Side (Boxes) */}
       <div className="mx-auto flex h-[600px] w-1/2 gap-6 lg:gap-4 md:h-[100vw] md:w-[85%] sm:w-[100%]">
@@ -81,7 +82,7 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
         variants={fadeUpVariants}
       >
         {tag && (
-          <p className="mb-4 self-start rounded-full bg-transparent px-3 py-1 text-xs tracking-wide text-[#808080] ring-1 ring-[#808080]">
+          <p className="mb-4 self-start rounded-full bg-transparent px-3 py-1 text-xs tracking-wide text-[#808080] ring-1 ring-[#808080] md:mx-auto">
             Overview
           </p>
         )}

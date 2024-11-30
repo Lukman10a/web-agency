@@ -1,27 +1,30 @@
-import Image from "next/image";
 import React from "react";
+
+import Image from "next/image";
 
 const DevOpsMethodology: React.FC = () => {
   return (
-    <section className="max-w-6xl mx-auto py-10 px-4 bg-white">
-      <h2 className="text-3xl font-semibold text-gray-900 mb-4">
-            Teverse Cloud Engage, <br />
-            <span className="text-gray-800">our DevOps methodology</span>
-        </h2>
-          <p className="text-gray-600 mb-6 text-lg">
-            Get pay-as-you-go DevOps support for ad-hoc tasks and engagements.
-            Delegate modifications and troubleshooting to our team of DevOps
-            experts just by opening a request.
-          </p>
-      <div className="flex justify-between items-start h-full mt-4">
+    <section className="mx-auto max-w-7xl bg-white px-4 py-10">
+      <h2 className="mb-4 w-[32%] bg-slate-200 font-sora text-3xl font-medium text-gray-900 lg:w-[60%] md:mx-auto md:w-full md:text-center">
+        Teverse Cloud Engage, our DevOps methodology
+      </h2>
+      <p className="mb-6 text-lg text-gray-600">
+        Get pay-as-you-go DevOps support for ad-hoc tasks and engagements.
+        Delegate modifications and troubleshooting to our team of DevOps experts
+        just by opening a request.
+      </p>
+      <div className="mt-4 flex h-full items-start justify-between md:flex-col md:gap-8">
         {/* Left Section */}
         <div className="">
-          <p className="border rounded-full px-4 py-1 inline text-xs">YOUR TEAM</p>
+          <p className="inline rounded-full border px-4 py-1 text-xs">
+            YOUR TEAM
+          </p>
           <div className="mt-4">
-            <h3 className="text-3xl font-semibold text-gray-800 mb-4">
-              Every DevOps team <span className="block sm:inline">consists of</span>
+            <h3 className="mb-4 text-3xl font-semibold text-gray-800">
+              Every DevOps team{" "}
+              <span className="block sm:inline">consists of</span>
             </h3>
-            <ul className="list-decimal list-inside text-xl text-gray-700 space-y-2">
+            <ul className="list-inside list-decimal space-y-2 text-xl text-gray-700">
               <li>Cloud Solutions Architect (CSA)</li>
               <li>2-4 DevOps Engineers (DOE)</li>
               <li>1 Project Manager (PM)</li>
@@ -30,30 +33,27 @@ const DevOpsMethodology: React.FC = () => {
         </div>
 
         {/* Right Section */}
-        <div className="bg-[#FFF9F7] rounded-lg p-6 hover:shadow-md h-full w-1/3">
-          <div className="flex items-center mb-4">
+        <div className="h-full w-1/3 rounded-lg bg-[#FFF9F7] p-6 hover:shadow-md md:w-full">
+          <div className="mb-4 flex items-center">
             <Image
-              src="/assets/recognize.png" 
+              src="/assets/recognize.png"
               alt="Recognize Logo"
               className="mr-2"
               width={200}
               height={100}
             />
           </div>
-          <blockquote className="text-gray-700 mb-4">
-            &quot;I feel like work done by Mission has been stellar, and I don&apos;t use
-            that word lightly. Amazing project management, amazing
-            documentation, amazing note-taking, amazing implementation—it&apos;s all
-            been really, really good. And, as an engineer, I have a high bar for
-            these things.&quot;
+          <blockquote className="mb-4 text-gray-700">
+            &quot;I feel like work done by Mission has been stellar, and I
+            don&apos;t use that word lightly. Amazing project management,
+            amazing documentation, amazing note-taking, amazing
+            implementation—it&apos;s all been really, really good. And, as an
+            engineer, I have a high bar for these things.&quot;
           </blockquote>
-          <p className="text-sm text-gray-800 font-semibold">
+          <p className="text-sm font-semibold text-gray-800">
             Peter Philips | CTO, Recognize
           </p>
-          <a
-            href="#"
-            className="inline-block text-orange-500 font-medium mt-4"
-          >
+          <a href="#" className="mt-4 inline-block font-medium text-orange-500">
             Read more
           </a>
         </div>
