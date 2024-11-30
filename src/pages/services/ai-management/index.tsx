@@ -54,7 +54,7 @@ const AIManagement = () => {
       />
 
       <section>
-        <div className="mx-auto flex w-[90%] max-w-[1200px] justify-between gap-16 lg:gap-8 md:flex-col-reverse md:gap-4">
+        <div className="mx-auto mb-24 flex w-[90%] max-w-[1200px] justify-between gap-16 lg:gap-8 md:flex-col-reverse md:gap-4">
           <div className="w-5/6 md:w-full">
             <p className="mb-4 font-sans text-xl text-[#808080] lg:text-lg sm:text-base">
               Effective AI management is about ensuring you can maintain and
@@ -80,14 +80,16 @@ const AIManagement = () => {
         </div>
       </section>
 
-      <section className="bg-white py-12">
-        <div className="mx-auto max-w-6xl px-4 lg:px-8 sm:px-6">
+      <section className="mx-auto mb-24 w-[90%] max-w-[1200px] bg-white">
+        <div className="mx-auto">
           <div className="mb-8 text-left">
-            <h2 className="inline-block rounded-full border border-neutral-400 px-4 py-1 text-xs uppercase tracking-wide text-neutral-500">
-              Features - Tooling
-            </h2>
+            <span className="tag mb-2 inline-block rounded-3xl border border-[#808080] bg-white px-6 py-2 text-xs text-[#808080] 2md:text-[10px] md:mb-2">
+              FEATURES - TOOLING
+            </span>
 
-            <h1 className="mt-2 text-3xl font-bold">Industry-Leading Tools</h1>
+            <h1 className="mt-2 font-sora text-3xl font-medium md:text-2xl">
+              Industry-Leading Tools
+            </h1>
             <p className="mt-4 text-gray-600">
               All Mission Cloud One customers get access to industry-leading
               tools such as Vega Cloud and New Relic. We manage all of these{" "}
