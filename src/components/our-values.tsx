@@ -2,47 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
 
+import { ourValuesData } from "@/data/shared";
 import { motion, MotionValue, useScroll } from "framer-motion";
 
 import { Badge } from "./ui/badge";
-
-interface ValueData {
-  title: string;
-  description: string;
-  image: string;
-  backgroundColor: string;
-}
-
-const valuesData: ValueData[] = [
-  {
-    title: "No nonsense culture",
-    description:
-      "The ever-changing world of cloud computing demands continuous learning. Our engineers strive for the best solutions, new techniques, and skills.",
-    image: "/assets/cardimage1.png",
-    backgroundColor: "#FFC7DC",
-  },
-  {
-    title: "Determination",
-    description:
-      "Our engineers are dedicated to adapting and improving their skills to deliver optimal solutions.",
-    image: "/assets/cardimage2.png",
-    backgroundColor: "#FFDECB",
-  },
-  {
-    title: "Innovation First",
-    description:
-      "We believe in constantly innovating to stay ahead. Our team is always looking for ways to push boundaries.",
-    image: "/assets/cardimage3.png",
-    backgroundColor: "#B0F6FF",
-  },
-  {
-    title: "Adaptability",
-    description:
-      "We understand that the cloud landscape is constantly evolving, and so must we.",
-    image: "/assets/cardimage3.png",
-    backgroundColor: "#DADCE4",
-  },
-];
 
 const calculateTransform = (
   scrollYProgress: MotionValue<number>,
@@ -64,11 +27,11 @@ const OurValuesSection: React.FC = () => {
 
   const [transforms, setTransforms] = useState<
     { scale: number; opacity: number }[]
-  >(valuesData.map(() => ({ scale: 1, opacity: 1 })));
+  >(ourValuesData.map(() => ({ scale: 1, opacity: 1 })));
 
   useEffect(() => {
-    const total = valuesData.length;
-    const newTransforms = valuesData.map((_, index) =>
+    const total = ourValuesData.length;
+    const newTransforms = ourValuesData.map((_, index) =>
       calculateTransform(scrollYProgress, index, total),
     );
     setTransforms(newTransforms);
@@ -96,7 +59,7 @@ const OurValuesSection: React.FC = () => {
 
       {/* Cards Section */}
       <div className="space-y-8 sm:p-4">
-        {valuesData.map((value, index) => {
+        {ourValuesData.map((value, index) => {
           const { scale, opacity } = transforms[index];
 
           return (
@@ -107,13 +70,13 @@ const OurValuesSection: React.FC = () => {
                 opacity: opacity,
                 backgroundColor: value.backgroundColor,
               }}
-              className="sticky top-24 mx-auto flex sm:w-full w-3/4 transform gap-4 space-y-4 rounded-2xl p-4 transition-opacity duration-500 lg:p-6 md:flex-row md:space-x-4 md:space-y-0 sm:flex-col"
+              className="sticky top-24 mx-auto flex w-3/4 transform gap-4 space-y-4 rounded-2xl p-4 transition-opacity duration-500 lg:p-6 md:flex-row md:space-x-4 md:space-y-0 sm:w-full sm:flex-col"
             >
-              <div className="flex sm:w-full w-1/2 flex-col justify-center px-10 sm:px-4 text-left">
-                <h3 className="mb-2 sm:text-lg text-3xl font-bold">
+              <div className="flex w-1/2 flex-col justify-center px-10 text-left sm:w-full sm:px-4">
+                <h3 className="mb-2 text-3xl font-bold sm:text-lg">
                   {value.title}
                 </h3>
-                <p className="text-lg sm:text-sm text-gray-600">
+                <p className="text-lg text-gray-600 sm:text-sm">
                   {value.description}
                 </p>
               </div>
