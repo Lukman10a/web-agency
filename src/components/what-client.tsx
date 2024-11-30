@@ -2,62 +2,10 @@ import React from "react";
 
 import Image from "next/image";
 
+import { testimonials } from "@/data/shared";
 import { motion } from "framer-motion";
 
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-
-interface Testimonial {
-  quote: string;
-  name: string;
-  title: string;
-  image: string;
-}
-
-const testimonials: Testimonial[] = [
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc.",
-    image: "/assets/cardimage1.png",
-  },
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc.",
-    image: "/assets/cardimage1.png",
-  },
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc.",
-    image: "/assets/cardimage1.png",
-  },
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc",
-    image: "/assets/cardimage1.png",
-  },
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc.",
-    image: "/assets/cardimage1.png",
-  },
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc.",
-    image: "/assets/cardimage1.png",
-  },
-  // Additional testimonials can be added here...
-];
 
 const headerVariants = {
   hidden: { opacity: 0, y: 50 },

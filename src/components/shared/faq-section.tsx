@@ -33,45 +33,51 @@ const FAQSection: React.FC<FAQSectionProps> = ({
   return (
     <section className={`${bgColor} w-full pt-4`}>
       <div className="mx-auto w-full px-4 lg:px-8 sm:px-4">
-        <div className="space-y-4">
-          {faqData.map((faq, index) => (
-            <div key={index} className="border-b pb-4">
-              <div
-                className="flex cursor-pointer items-center justify-between"
-                onClick={() => toggleFAQ(index)}
-              >
-                <h3
-                  className={`text-lg font-medium sm:text-base ${questionColor}`}
+        {faqData.length === 0 ? (
+          <p className="pb-4 text-center font-bold">
+            No FAQs found matching your search criteria.
+          </p>
+        ) : (
+          <div className="space-y-4">
+            {faqData.map((faq, index) => (
+              <div key={index} className="border-b pb-4">
+                <div
+                  className="flex cursor-pointer items-center justify-between"
+                  onClick={() => toggleFAQ(index)}
                 >
-                  {faq.question}
-                </h3>
+                  <h3
+                    className={`text-lg font-medium sm:text-base ${questionColor}`}
+                  >
+                    {faq.question}
+                  </h3>
 
-                <button
-                  className={`ml-4 flex h-8 w-8 items-center justify-center rounded-full transition-colors sm:w-14 ${
-                    activeIndex === index
-                      ? "bg-darkblue-900 text-white"
-                      : "bg-gray-200 text-blue-600"
-                  }`}
-                >
-                  {activeIndex === index ? (
-                    <Image
-                      src={iconExpanded}
-                      width={12}
-                      height={12}
-                      alt="arrow-up"
-                    />
-                  ) : (
-                    <span className="text-lg">{iconCollapsed}</span>
-                  )}
-                </button>
+                  <button
+                    className={`ml-4 flex h-8 w-8 items-center justify-center rounded-full transition-colors sm:w-14 ${
+                      activeIndex === index
+                        ? "bg-darkblue-900 text-white"
+                        : "bg-gray-200 text-blue-600"
+                    }`}
+                  >
+                    {activeIndex === index ? (
+                      <Image
+                        src={iconExpanded}
+                        width={12}
+                        height={12}
+                        alt="arrow-up"
+                      />
+                    ) : (
+                      <span className="text-lg">{iconCollapsed}</span>
+                    )}
+                  </button>
+                </div>
+
+                {activeIndex === index && (
+                  <p className={`mt-4 ${answerColor}`}>{faq.answer}</p>
+                )}
               </div>
-
-              {activeIndex === index && (
-                <p className={`mt-4 ${answerColor}`}>{faq.answer}</p>
-              )}
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

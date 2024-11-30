@@ -60,7 +60,10 @@ const Hero = () => {
                   variant={"outline"}
                   className="rounded-full px-8 py-3 text-center text-lg font-medium md:w-full md:text-base"
                 >
-                  <Link href="#" className="flex items-center justify-center">
+                  <Link
+                    href="/contact"
+                    className="flex items-center justify-center"
+                  >
                     GET FREE CONSULTATION. <ArrowIcon />
                   </Link>
                 </Button>
@@ -70,7 +73,7 @@ const Hero = () => {
                 asChild
                 className="flex w-fit items-center justify-center rounded-full border border-black bg-orange-600 px-8 py-3 text-base font-medium text-white hover:bg-orange-700 md:w-full md:px-10 md:py-4 md:text-lg"
               >
-                <Link href="#">
+                <Link href="/solutions">
                   OUR SERVICES <ArrowIcon />
                 </Link>
               </Button>
@@ -84,13 +87,14 @@ const Hero = () => {
             viewOptions={{ margin: "0px 0px -200px 0px" }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            <div className="flex-[2]">
+            <div className="flex-1 overflow-hidden rounded-xl">
               <Image
-                src={"/svg/hero-illustration.svg"}
+                // src={"/svg/hero-illustration.svg"}
+                src={"/assets/teverse-hero-optimize.gif"}
                 alt="hero-illustration"
                 height={500}
                 width={500}
-                className="h-full w-full"
+                className="h-full object-contain lg:h-auto lg:w-full"
               />
             </div>
           </InView>
