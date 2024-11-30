@@ -5,6 +5,7 @@ import Image from "next/image";
 interface ReusableComponentProps {
   image: string;
   title: string;
+  altDescription: string;
   description: string;
   buttonText?: string;
   showButton?: boolean;
@@ -19,6 +20,7 @@ const ReusableComponent: React.FC<ReusableComponentProps> = ({
   title,
   description,
   buttonText,
+  altDescription,
   showButton = true,
   reverse = false,
   starsAnimation = false,
@@ -63,6 +65,7 @@ const ReusableComponent: React.FC<ReusableComponentProps> = ({
         transition={{ duration: 0.8 }}
       >
         <h2 className="text-2xl md:text-xl font-bold text-left">{title}</h2>
+        <p className="text-gray-700 text-3xl text-left py-7">{altDescription}</p>
         <p className="text-gray-700 text-left">{description}</p>
         {showButton && (
           <motion.button

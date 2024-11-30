@@ -74,7 +74,7 @@ const NewHero: React.FC<NewHeroProps> = ({
               className="mb-4 self-start rounded-full bg-transparent px-3 py-1 text-xs tracking-wide text-[#808080] ring-1 ring-[#808080] md:mx-auto"
               variants={itemVariants}
             >
-              AWS PREMIER SERVICES & SOFTWARE PARTNER
+              
             </motion.p>
           )}
           <motion.h1
@@ -84,15 +84,16 @@ const NewHero: React.FC<NewHeroProps> = ({
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            {title}
+            
+            
             <HighlightedText
               highlightColor="#47a1fa"
               highlightHeight="100%"
               className="p-2"
               highlightClassName="z-[-1] rounded-lg"
               delay={1.5}
-          >Secure</HighlightedText>
-            
+          >AWS</HighlightedText>
+            {title}
           </motion.h1>
           <motion.p
             className="mb-[1.5em] w-[90%] text-2xl md:mx-auto md:w-[80%] md:text-xl sm:w-[90%]"

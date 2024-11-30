@@ -10,6 +10,7 @@ interface ReusableComponentProps {
   image: string;
   title: string;
   description: string;
+  altDescription: string;
   buttonText?: string;
   showButton?: boolean;
   reverse?: boolean;
@@ -30,6 +31,7 @@ const sections: ReusableComponentProps[] = [
       "https://www.missioncloud.com/hubfs/2024_illustrations/Illustrations_Stars.svg", // Pass the animated image
     additionalImagePosition: { bottom: -20, left: -50, top: 0, right: 0 }, // Position for the animated image
     title: "Mission Cloud Score",
+    altDescription: "",
     description:
       "Improve your environment by measuring your alignment to best practices.",
     buttonText: "Learn More",
@@ -43,6 +45,7 @@ const sections: ReusableComponentProps[] = [
       "https://www.missioncloud.com/hubfs/2024_illustrations/Illustrations_Tablet.svg", // Different animated image
     additionalImagePosition: { bottom: -20, left: 400, top: 30, right: 0 }, // Custom position
     title: "Recommendations",
+    altDescription: "",
     description:
       "Identify opportunities to improve your environment with recommendations that are tailored to your specific business goals.",
     buttonText: "Discover Now",
@@ -56,6 +59,7 @@ const sections: ReusableComponentProps[] = [
       "https://www.missioncloud.com/hubfs/2024_illustrations/Illustrations_Portfolio.svg", // Another custom animated image
     additionalImagePosition: { bottom: -20, left: -50, top: 0, right: 0 },
     title: "Resources",
+    altDescription: "",
     description:
       "Monitor your most critical AWS resources in a single view. Evaluate resource-specific recommendations and monitor any resource-specific alerts.",
     buttonText: "Discover Now",
@@ -69,6 +73,7 @@ const sections: ReusableComponentProps[] = [
       "https://www.missioncloud.com/hubfs/2024_illustrations/Illustrations_Chat.svg",
     additionalImagePosition: { bottom: -20, left: 400, top: 30, right: 0 },
     title: "Supports ticketing and chats",
+    altDescription: "",
     description:
       "Access real-time support for technical troubleshooting with our CloudOps team.",
     buttonText: "Discover Now",

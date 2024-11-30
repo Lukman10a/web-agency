@@ -23,7 +23,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
   title,
   description,
   showTag = true,
-  tagText = "Overview",
+  tagText = "GET IN TOUCH",
   showButton = false,
   buttonText = "Learn More",
   index,
@@ -64,7 +64,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               {showTag && (
-                <span className="tag mb-4 rounded-3xl border border-[#808080] bg-white px-6 py-2 text-xs text-[#808080] 2md:text-[10px] md:mb-2">
+                <span className="tag mb-4 rounded-3xl font-bold py-2 text-lg text-black 2md:text-[10px] md:mb-2">
                   {tagText}
                 </span>
               )}
