@@ -171,14 +171,16 @@ const CloudOne = () => {
         subtitle="Optimize costs, modernize and align with best practices, and fearlessly take on new initiatives with the support you need to address issues when they arise. Receive round-the-clock proactive support and proactive guidance."
       />
 
-      <section className="bg-white py-12">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8 sm:px-6">
+      <section className="mx-auto mb-24 w-[90%] max-w-[1200px] bg-white">
+        <div className="mx-auto">
           <div className="mb-8 text-left">
-            <h2 className="inline-block rounded-full border border-neutral-400 px-4 py-1 text-xs uppercase tracking-wide text-neutral-500">
-              Features - Tooling
-            </h2>
+            <span className="tag mb-2 inline-block rounded-3xl border border-[#808080] bg-white px-6 py-2 text-xs text-[#808080] 2md:text-[10px] md:mb-2">
+              FEATURES - TOOLING
+            </span>
 
-            <h1 className="mt-2 text-3xl font-bold">Industry-Leading Tools</h1>
+            <h1 className="mt-2 font-sora text-3xl font-medium md:text-2xl">
+              Industry-Leading Tools
+            </h1>
             <p className="mt-4 text-gray-600">
               All Mission Cloud One customers get access to industry-leading
               tools such as Vega Cloud and New Relic. We manage all of these{" "}
