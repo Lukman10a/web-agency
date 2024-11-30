@@ -1,6 +1,6 @@
 import React from "react";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 import { InView } from "../ui/animated/in-view";
@@ -14,7 +14,7 @@ interface ServicesCardProps {
   tagText?: string;
   showButton?: boolean;
   buttonText?: string;
-  imgSrc: string;
+  imgSrc: string | StaticImageData;
   index: number;
 }
 
@@ -27,7 +27,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
   showButton = false,
   buttonText = "Learn More",
   index,
-  imgSrc
+  imgSrc,
 }) => {
   return (
     <div

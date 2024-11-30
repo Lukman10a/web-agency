@@ -92,6 +92,7 @@ const Hero = () => {
                 // src={"/svg/hero-illustration.svg"}
                 src={"/assets/teverse-hero-optimize.gif"}
                 alt="hero-illustration"
+                unoptimized
                 height={500}
                 width={500}
                 className="h-full object-contain lg:h-auto lg:w-full"
