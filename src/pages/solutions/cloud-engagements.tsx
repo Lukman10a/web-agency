@@ -94,7 +94,7 @@ export default function CloudEngagements() {
         authorName="John Kang"
         authorRole=" CHIEF OPERATING OFFICER AT ODK MEDIA"
       />
-
+      {/* 
       <div className="mx-auto mb-24 w-[90%] max-w-[1200px]">
         <p className="mb-12 text-3xl font-medium sm:ml-6">Features</p>
 
@@ -107,6 +107,7 @@ export default function CloudEngagements() {
             height={500}
           />
         </div>
+        
         <div className="mx-auto grid w-full grid-cols-3 gap-12 lg:gap-8 2md:grid-cols-2 sm:grid-cols-1">
           {features.map((feature, index) => (
             <FeatureCard
@@ -117,7 +118,7 @@ export default function CloudEngagements() {
             />
           ))}
         </div>
-      </div>
+      </div> */}
 
       <DevOpsMethodology />
       <ServicesCard

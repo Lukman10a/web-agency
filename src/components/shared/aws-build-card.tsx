@@ -4,7 +4,7 @@ import Image from "next/image";
 
 interface AwsBuildCardProps {
   imgSrc: string;
-  title: string;
+  title?: string;
   description: string;
   altText: string;
 }
@@ -24,12 +24,10 @@ const AwsBuildCard: React.FC<AwsBuildCardProps> = ({
         width={500}
         height={500}
       />
-      <h4 className="mb-[.3em] font-sans text-2xl font-semibold 2md:text-xl sm:text-xl">
+      <h4 className="mb-[.3em] font-sora text-2xl font-semibold 2md:text-xl sm:text-xl">
         {title}
       </h4>
-      <p className="mb-[1.5em] text-justify text-[#808080] lg:text-[14px] md:mx-auto">
-        {description}
-      </p>
+      <p className="mb-2 text-[#808080] md:mx-auto">{description}</p>
     </div>
   );
 };

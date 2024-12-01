@@ -16,6 +16,7 @@ type NewHeroProps = {
   showButton?: boolean;
   buttonText?: string;
   tag?: boolean;
+  tagText?: string;
   icon?: boolean;
   iconLink?: string | StaticImageData;
 };
@@ -30,6 +31,7 @@ const NewHero: React.FC<NewHeroProps> = ({
   tag = false,
   icon = false,
   iconLink,
+  tagText,
 }) => {
   // Animation Variants
   const containerVariants = {
