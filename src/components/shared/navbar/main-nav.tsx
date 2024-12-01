@@ -204,6 +204,11 @@ const navItems: NavItem[] = [
         description: "Empower media companies with robust cloud capabilities",
         href: "/industries/media",
       },
+      {
+        category: "Private Equity ",
+        description: "",
+        href: "/industries/private",
+      },
     ],
   },
   {
