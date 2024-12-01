@@ -16,6 +16,7 @@ interface ServicesCardProps {
   buttonText?: string;
   imgSrc: string | StaticImageData;
   index: number;
+  href: string;
 }
 
 const ServicesCard: React.FC<ServicesCardProps> = ({
@@ -28,6 +29,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
   buttonText = "Learn More",
   index,
   imgSrc,
+  href = "#",
 }) => {
   return (
     <div
@@ -79,7 +81,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
               asChild
               className="bottom-10 flex w-fit items-center justify-center rounded-full bg-orange-600 px-[2.5em] py-[1em] font-normal text-white hover:bg-darkblue-950 2md:text-[12px]"
             >
-              <Link href="#">{buttonText}</Link>
+              <Link href={href}>{buttonText}</Link>
             </Button>
           )}
         </InView>

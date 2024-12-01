@@ -3,7 +3,7 @@ import React from "react";
 import Preverity from "@/components/preverity";
 import Resources from "@/components/resources";
 import CompaniesProfile from "@/components/shared/companies-profile";
-import CompaniesProfileTwo from "@/components/shared/companies-profiletwo";
+import CompaniesProfileTwo from "@/components/shared/companies-profile-two";
 import CompaniesWeServe from "@/components/shared/companies-we-serve";
 import NewHero from "@/components/shared/new-hero";
 import OurCapabilities from "@/components/shared/our-capabilities";
@@ -168,7 +168,7 @@ const retailData = {
   ],
   servicesCards: [
     {
-      imgSrc: "/public/assets/contact",
+      imgSrc: "/public/assets/contact.png",
       altText: "Image",
       title: "Our media vision",
       description:
@@ -178,9 +178,10 @@ const retailData = {
       index: 1,
       showButton: true,
       buttonText: "Build with us",
+      href: "/contact",
     },
     {
-      imgSrc: "/public/assets/contact",
+      imgSrc: "/assets/contact.png",
       altText: "Image",
       title: "Strengthen Your Security Posture",
       description:
@@ -190,6 +191,7 @@ const retailData = {
       index: 2,
       showButton: true,
       buttonText: "Schedule a call",
+      href: "/contact",
     },
   ],
   resources: {
@@ -241,6 +243,7 @@ const Retail = () => {
           index={card.index}
           showButton={card.showButton}
           buttonText={card.buttonText}
+          href={card.href}
         />
       ))}
 

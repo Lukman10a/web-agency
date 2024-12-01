@@ -3,7 +3,7 @@ import React from "react";
 import Preverity from "@/components/preverity";
 import Resources from "@/components/resources";
 import CompaniesProfile from "@/components/shared/companies-profile";
-import CompaniesProfileTwo from "@/components/shared/companies-profiletwo";
+import CompaniesProfileTwo from "@/components/shared/companies-profile-two";
 import CompaniesWeServe from "@/components/shared/companies-we-serve";
 import NewHero from "@/components/shared/new-hero";
 import OurCapabilities from "@/components/shared/our-capabilities";

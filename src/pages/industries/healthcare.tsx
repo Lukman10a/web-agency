@@ -5,7 +5,7 @@ import icon from "/public/assets/newheroicon.png";
 import Preverity from "@/components/preverity";
 import Resources from "@/components/resources";
 import CompaniesProfile from "@/components/shared/companies-profile";
-import CompaniesProfileTwo from "@/components/shared/companies-profiletwo";
+import CompaniesProfileTwo from "@/components/shared/companies-profile-two";
 import CompaniesWeServe from "@/components/shared/companies-we-serve";
 import NewHero from "@/components/shared/new-hero";
 import OurCapabilities from "@/components/shared/our-capabilities";
@@ -116,7 +116,7 @@ const Healtcare = () => {
       <OurCapabilities detailsData={ourCapabilitiesData} />
 
       <ServicesCard
-        imgSrc="/public/assets/contact"
+        imgSrc="/assets/checkers.png"
         altText="Image"
         title="Our healthcare vision"
         description="A more just, efficient, and effective kind of healthcare is possible when payers and providers are given best-in-class cloud solutions. Collaborate with us to build the future of healthcare together."
@@ -125,12 +125,13 @@ const Healtcare = () => {
         index={1}
         showButton={true}
         buttonText="Build with us"
+        href="/contact"
       />
 
       <CompaniesProfileTwo cards={companyDataTwo} />
 
       <ServicesCard
-        imgSrc="/public/assets/contact"
+        imgSrc="/assets/contact.png"
         altText="Image"
         title="Strengthen Your Security Posture"
         description="Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment."
@@ -139,6 +140,7 @@ const Healtcare = () => {
         index={2}
         showButton={true}
         buttonText="Schedule a call"
+        href="/contact"
       />
 
       <Resources />

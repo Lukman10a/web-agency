@@ -74,7 +74,9 @@ const NewHero: React.FC<NewHeroProps> = ({
             <motion.p
               className="mb-4 self-start rounded-full bg-transparent px-3 py-1 text-xs tracking-wide text-[#808080] ring-1 ring-[#808080] md:mx-auto"
               variants={itemVariants}
-            ></motion.p>
+            >
+              {tagText}
+            </motion.p>
           )}
           <motion.h1
             className="mb-[.5em] font-sans text-5xl xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full"
@@ -91,7 +93,7 @@ const NewHero: React.FC<NewHeroProps> = ({
               delay={1.5}
             >
               AWS
-            </HighlightedText>
+            </HighlightedText>{" "}
             {title}
           </motion.h1>
           <motion.p

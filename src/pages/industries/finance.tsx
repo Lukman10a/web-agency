@@ -10,7 +10,7 @@ import {
 import Preverity from "@/components/preverity";
 import Resources from "@/components/resources";
 import CompaniesProfile from "@/components/shared/companies-profile";
-import CompaniesProfileTwo from "@/components/shared/companies-profiletwo";
+import CompaniesProfileTwo from "@/components/shared/companies-profile-two";
 import CompaniesWeServe from "@/components/shared/companies-we-serve";
 import NewHero from "@/components/shared/new-hero";
 import OurCapabilities from "@/components/shared/our-capabilities";
@@ -60,12 +60,13 @@ const Finance = () => {
         index={1}
         showButton={true}
         buttonText="Build with us"
+        href="#"
       />
 
       <CompaniesProfileTwo cards={companyDataTwo} />
 
       <ServicesCard
-        imgSrc="/public/assets/contact"
+        imgSrc="/assets/contact.png"
         altText="Image"
         title="Strengthen Your Security Posture"
         description="Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment."
@@ -74,6 +75,7 @@ const Finance = () => {
         index={2}
         showButton={true}
         buttonText="Schedule a call"
+        href="/contact"
       />
 
       <Resources />
