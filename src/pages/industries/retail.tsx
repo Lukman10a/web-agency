@@ -211,8 +211,8 @@ const Retail = () => {
 
       <CompaniesProfile
         cards={retailData.companyProfiles.companyOne}
-        heading="Content is king and consumer expectations have never been higher"
-        paragraph="Demand for content is constantly growing but the complexity of high-fidelity workflows and global delivery isn’t going away. We empower you with cloud-native and AI solutions to streamline production, create more engaging experiences, and seamlessly deliver to all platforms."
+        heading="A best-in-class brand requires best-in-class digital experiences."
+        paragraph="Shopping is now digital-first and led by consumers who want sustainable, responsible products and omnichannel experiences. We equip you to meet these challenges head-on, streamlining supply chains and inventory management, personalizing customer experiences with AI, and giving you granular, actionable analytics."
       />
 
       <p className="mx-auto w-[90%] max-w-[1200px] text-2xl text-[#808080] md:-mt-12 md:text-lg">
