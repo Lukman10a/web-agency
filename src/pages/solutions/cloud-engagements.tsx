@@ -11,8 +11,10 @@ import DevOpsMethodology from "@/components/devops";
 import FeatureCard from "@/components/shared/feature-card";
 import NewHero from "@/components/shared/new-hero";
 import PartnersCard from "@/components/shared/partners-card";
+import PartnersCard from "@/components/shared/partners-card";
 import ServicesCard from "@/components/shared/services-card";
 import WhatIsTeverse from "@/components/What-is-teverse";
+
 
 const disciplines = [
   "Infrastructure as Code",
@@ -149,6 +151,7 @@ export default function CloudEngagements() {
             height={500}
           />
         </div>
+        
         <div className="mx-auto grid w-full grid-cols-3 gap-12 lg:gap-8 2md:grid-cols-2 sm:grid-cols-1">
           {features.map((feature, index) => (
             <FeatureCard

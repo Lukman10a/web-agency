@@ -1,11 +1,10 @@
 import React from "react";
-import WhatIsTeverse from "@/components/What-is-teverse";
+
 import Image from "next/image";
-import PartnersCard from "@/components/shared/partners-card";
-import ServicesCard from "@/components/shared/services-card";
+
 import awsHero from "/public/assets/awsHero.png";
 // import Cardimage1 from "/public/assets/cardimage1.png";
-// import contact from "/public/assets/contact.png";
+import contact from "/public/assets/contact.png";
 // import aws from "/public/svg/aws.svg";
 // import data from "/public/svg/data.svg";
 // import devops from "/public/svg/devops.svg";
@@ -15,19 +14,21 @@ import awsHero from "/public/assets/awsHero.png";
 // import sysops from "/public/svg/sysops.svg";
 import { motion } from "framer-motion";
 
-import { Button } from "@/components/ui/button";
-
-// import AwsLara from "@/components/aws-lara";
-// import AWSection from "@/components/aws-section";
-import ArrowIcon from "@/components/icons/arrow";
 // import ContactSection from "@/components/lets-talk";
 // import CategoryButtons from "@/components/shared/category-buttons";
 // import LARA from "@/components/shared/lara";
 // import Testimonials from "@/components/what-client";
 import { HighlightedText } from "@/components/ui/animated/highlight-text";
+import { Button } from "@/components/ui/button";
+
+// import AwsLara from "@/components/aws-lara";
+// import AWSection from "@/components/aws-section";
+import ArrowIcon from "@/components/icons/arrow";
 import DynamicSection from "@/components/profesional-services";
 import Resources from "@/components/resources";
-
+import PartnersCard from "@/components/shared/partners-card";
+import ServicesCard from "@/components/shared/services-card";
+import WhatIsTeverse from "@/components/What-is-teverse";
 
 export default function AWS() {
   // const cardData = [
@@ -114,23 +115,24 @@ export default function AWS() {
   return (
     <div>
       {/* Hero Section */}
-      <header className="flex items-center mb-14 gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12 lg:gap-6 md:flex-col">
+      <header className="mb-14 flex items-center gap-10 bg-gradient-to-r from-[rgba(8,19,72,0.1)] to-[rgba(255,149,87,0.1)] p-12 lg:gap-6 md:flex-col">
         <article className="space-y-10">
-          <motion.h1 className="animate-fade-in-up font-sora text-4xl font-medium lg:text-5xl"
+          <motion.h1
+            className="animate-fade-in-up font-sora text-4xl font-medium lg:text-5xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             <HighlightedText
-               highlightColor="#47a1fa"
-               highlightHeight="100%"
-               className="p-2"
-               highlightClassName="z-[-1] rounded-lg"
-               delay={1.5}
+              highlightColor="#47a1fa"
+              highlightHeight="100%"
+              className="p-2"
+              highlightClassName="z-[-1] rounded-lg"
+              delay={1.5}
             >
               AWS
             </HighlightedText>
-             Professional Services on Demand
+            Professional Services on Demand
           </motion.h1>
           <p className="animate-fade-in-up font-sans text-xl font-medium delay-200">
             Our AWS-certified engineers are ready to help you succeed with your
@@ -235,8 +237,8 @@ export default function AWS() {
       </section> */}
 
       {/* Categories Section */}
-      <section>
-        <CategoryButtons categories={categories} selectedCategory={null} />
+      {/* <section>
+        <CategoryButtons categories={categories} />
         <div className="space-y-4 px-8 pb-4 text-center">
           <h3 className="font-sora text-4xl font-medium sm:text-3xl">
             Cloud success. With AWS
@@ -299,7 +301,7 @@ export default function AWS() {
         index={1}
         showButton={true}
         buttonText="Schedule a call"
-        imgSrc={""}
+        imgSrc={contact}
       />
     </div>
   );

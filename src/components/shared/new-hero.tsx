@@ -5,9 +5,8 @@ import Image, { StaticImageData } from "next/image";
 
 import { motion } from "framer-motion";
 
-import { Button } from "../ui/button";
-
 import { HighlightedText } from "../ui/animated/highlight-text";
+import { Button } from "../ui/button";
 
 type NewHeroProps = {
   reverse?: boolean;
@@ -17,6 +16,7 @@ type NewHeroProps = {
   showButton?: boolean;
   buttonText?: string;
   tag?: boolean;
+  tagText?: string;
   icon?: boolean;
   iconLink?: string | StaticImageData;
 };
@@ -31,6 +31,7 @@ const NewHero: React.FC<NewHeroProps> = ({
   tag = false,
   icon = false,
   iconLink,
+  tagText,
 }) => {
   // Animation Variants
   const containerVariants = {
@@ -73,9 +74,7 @@ const NewHero: React.FC<NewHeroProps> = ({
             <motion.p
               className="mb-4 self-start rounded-full bg-transparent px-3 py-1 text-xs tracking-wide text-[#808080] ring-1 ring-[#808080] md:mx-auto"
               variants={itemVariants}
-            >
-              
-            </motion.p>
+            ></motion.p>
           )}
           <motion.h1
             className="mb-[.5em] font-sans text-5xl xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full"
@@ -84,15 +83,15 @@ const NewHero: React.FC<NewHeroProps> = ({
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            
-            
             <HighlightedText
-              highlightColor="#47a1fa"
+              highlightColor="#f4982e"
               highlightHeight="100%"
               className="p-2"
               highlightClassName="z-[-1] rounded-lg"
               delay={1.5}
-          >AWS</HighlightedText>
+            >
+              AWS
+            </HighlightedText>
             {title}
           </motion.h1>
           <motion.p

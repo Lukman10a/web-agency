@@ -24,7 +24,7 @@ const Benefits: React.FC<BenefitsProps> = ({ headTitle, items }) => {
               key={index}
               className="mb-4 flex items-start space-x-2 rounded-2xl font-sans md:mb-4"
             >
-              <ul className="ml-4 list-disc">
+              <ul>
                 <li>
                   <p className="text-2xl leading-tight text-gray-800 md:text-lg">
                     {item.title}

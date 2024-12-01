@@ -73,21 +73,21 @@ const serviceData: ServiceItem[] = [
 
 const ServiceSection: React.FC = () => {
   return (
-    <div className="p-6 sm:p-3 lg:p-14">
-      <div className="max-w-6xl sm:w-full mx-auto bg-white rounded-lg shadow-md p-8 md:p-2 lg:p-14 space-y-4">
-        <div className="flex gap-6 sm:flex-col  ring-1 ring-neutral-500 rounded-lg p-4">
+    <section className="p-6 lg:p-14 sm:p-3">
+      <div className="mx-auto max-w-7xl space-y-4 rounded-lg bg-white p-8 lg:p-14 md:p-2 sm:w-full">
+        <div className="flex gap-6 rounded-lg p-4 ring-1 ring-neutral-500 sm:flex-col">
           <div>
-            <p className="text-xs text-gray-500 tracking-wide px-3 py-1 border border-gray-300 rounded-full inline-block mb-4">
+            <p className="mb-4 inline-block rounded-full border border-gray-300 px-3 py-1 text-xs tracking-wide text-gray-500">
               Managed Services
             </p>
-            <h2 className="text-2xl sm:text-lg md:text-xl font-semibold text-gray-800 mb-6">
+            <h2 className="mb-6 text-2xl font-semibold text-gray-800 md:text-xl sm:text-lg">
               Comprehensive Expertise{" "}
               <span className="block sm:inline">
                 {" "}
                 and Flexible Service Models
               </span>
             </h2>
-            <p className="text-gray-600 mb-8 text-sm">
+            <p className="mb-8 text-sm text-gray-600">
               Did you know 50% of organizations say they&apos;re losing time on
               strategic initiatives
               <span className="block sm:inline">
@@ -97,8 +97,8 @@ const ServiceSection: React.FC = () => {
               which option fits your business:
             </p>
           </div>
-          <div className="flex sm:flex-wrap gap-6 items-center justify-end sm:justify-center sm:w-full w-2/4">
-            <div className="bg-[#FF9557] rounded-lg p-4 space-y-4">
+          <div className="flex w-2/4 items-center justify-end gap-6 sm:w-full sm:flex-wrap sm:justify-center">
+            <div className="space-y-4 rounded-lg bg-[#FF9557] p-4">
               <Image
                 src="/assets/service-cloud.png"
                 width={40}
@@ -110,7 +110,7 @@ const ServiceSection: React.FC = () => {
                 A solution for cost optimization and foundational best practices
               </p>
             </div>
-            <div className="bg-[#FF9557] rounded-lg p-4 space-y-4">
+            <div className="space-y-4 rounded-lg bg-[#FF9557] p-4">
               <Image
                 src="/assets/service-cloud.png"
                 width={40}
@@ -127,21 +127,21 @@ const ServiceSection: React.FC = () => {
           {serviceData.map((service, index) => (
             <div
               key={index}
-              className="p-6 sm:p-3 sm:text-sm bg-white ring-1 ring-neutral-500 rounded-lg shadow-sm flex sm:flex-wrap gap-32 sm:gap-6"
+              className="flex gap-32 rounded-lg bg-white p-6 shadow-sm ring-1 ring-neutral-500 sm:flex-wrap sm:gap-6 sm:p-3 sm:text-sm"
             >
               <div className="w-2/3 sm:w-full">
-                <h3 className="text-lg md:text-xl font-medium sm:text-sm text-gray-800 mb-3">
+                <h3 className="mb-3 text-lg font-medium text-gray-800 md:text-xl sm:text-sm">
                   {service.title}
                 </h3>
-                <ul className="text-gray-600 mb-4">
+                <ul className="mb-4 text-gray-600">
                   {service.description.map((item, idx) => (
-                    <li key={idx} className="list-disc list-inside">
+                    <li key={idx} className="list-inside list-disc">
                       {item}
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="flex sm:flex-wrap sm:w-full w-2/3 items-center gap-32 sm:gap-6 justify-start">
+              <div className="flex w-2/3 items-center justify-start gap-32 sm:w-full sm:flex-wrap sm:gap-6">
                 {service.checkmarkImages.map((imageSrc, imgIndex) => (
                   <Image
                     key={imgIndex}
@@ -156,7 +156,7 @@ const ServiceSection: React.FC = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
