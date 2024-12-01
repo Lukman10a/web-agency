@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const AwsServicesHero: React.FC = () => {
   return (
-    <div className="flex justify-center bg-gradient-to-r from-[#EAF8FF] to-[#FFF3E5] px-4 py-14 sm:flex-col">
+    <div className="flex justify-center bg-main-gradient px-4 py-14 sm:flex-col">
       <div className="flex w-full max-w-5xl items-center justify-between space-y-8 sm:flex-col sm:flex-wrap sm:items-start">
         {/* Left Content */}
         <div className="order-1 max-w-md space-y-6 text-left sm:text-left">
