@@ -1,29 +1,8 @@
 import React from "react";
 
+import { faqData } from "@/data/shared";
+
 import FAQSection from "./faq-section";
-
-interface FAQItem {
-  question: string;
-  answer: string;
-}
-
-const faqData: FAQItem[] = [
-  {
-    question: "What is cloud consulting, and how can it benefit my business?",
-    answer:
-      "Cloud consulting helps businesses migrate, optimize, and manage their cloud infrastructure, leading to reduced costs, improved scalability, and enhanced operational efficiency.",
-  },
-  {
-    question: "What is cloud consulting, and how can it benefit my business?",
-    answer:
-      "Cloud consulting helps businesses migrate, optimize, and manage their cloud infrastructure, leading to reduced costs, improved scalability, and enhanced operational efficiency.",
-  },
-  {
-    question: "What is cloud consulting, and how can it benefit my business?",
-    answer:
-      "Cloud consulting helps businesses migrate, optimize, and manage their cloud infrastructure, leading to reduced costs, improved scalability, and enhanced operational efficiency.",
-  },
-];
 
 const FAQ: React.FC = () => {
   return (
@@ -32,7 +11,7 @@ const FAQ: React.FC = () => {
         <h2 className="mb-4 text-center font-sora text-4xl font-medium text-gray-900 sm:text-2xl">
           Frequently asked question
         </h2>
-        <FAQSection faqData={faqData} />
+        <FAQSection faqData={faqData.slice(0, 4)} />
       </div>
     </section>
   );

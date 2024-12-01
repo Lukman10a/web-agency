@@ -235,8 +235,8 @@ export default function AWS() {
       </section> */}
 
       {/* Categories Section */}
-      {/* <section>
-        <CategoryButtons categories={categories} />
+      <section>
+        <CategoryButtons categories={categories} selectedCategory={null} />
         <div className="space-y-4 px-8 pb-4 text-center">
           <h3 className="font-sora text-4xl font-medium sm:text-3xl">
             Cloud success. With AWS

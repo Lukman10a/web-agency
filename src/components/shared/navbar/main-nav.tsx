@@ -47,11 +47,10 @@ interface NavItem {
 const navItems: NavItem[] = [
   {
     title: "Solutions",
-    href: "/solutions",
     items: [
       {
         category: "Cloud Solutions",
-        href: "/solution",
+        href: "/solutions",
         description:
           "Explore our cloud solutions and services for your business needs",
       },
@@ -211,22 +210,19 @@ const navItems: NavItem[] = [
     title: "Resources",
     href: "/resources",
     items: [
+      // {
+      //   category: "Knowledge Base",
+      //   description: "Access our case studies, blog, and more resources",
+      // },
       {
-        category: "Knowledge Base",
-        description: "Access our case studies, blog, and more resources",
-        subitems: [
-          {
-            title: "Case Studies",
-            description:
-              "Explore real-world examples of our solutions in action",
-            href: "/case-studies",
-          },
-          {
-            title: "Blog",
-            description: "Read insights, tips, and industry news on our blog.",
-            href: "/blog",
-          },
-        ],
+        category: "Case Studies",
+        description: "Explore real-world examples of our solutions in action",
+        href: "/case-studies",
+      },
+      {
+        category: "Blog",
+        description: "Read insights, tips, and industry news on our blog.",
+        href: "/blog",
       },
     ],
   },
@@ -234,32 +230,34 @@ const navItems: NavItem[] = [
     title: "Company",
     href: "/company",
     items: [
+      // {
+      //   category: "About Mission",
+      //   description: "Learn more about our mission, team, and opportunities",
+      // },
       {
-        category: "About Mission",
-        description: "Learn more about our mission, team, and opportunities",
-        subitems: [
-          {
-            title: "About Us",
-            description: "Discover our company's mission, vision, and values",
-            href: "/company/about-us",
-          },
-          {
-            title: "Careers",
-            description: "Explore career opportunities with our team",
-            href: "/company/careers",
-          },
-          {
-            title: "Press & News",
-            description:
-              "Stay up-to-date with our latest news and media coverage",
-            href: "/company/press",
-          },
-          {
-            title: "FAQ",
-            description: "Get answers to frequently asked questions",
-            href: "/company/faq",
-          },
-        ],
+        category: "About Us",
+        description: "Discover our company's mission, vision, and values",
+        href: "/company/about-us",
+      },
+      {
+        category: "Careers",
+        description: "Explore career opportunities with our team",
+        href: "/company/careers",
+      },
+      {
+        category: "Press & News",
+        description: "Stay up-to-date with our latest news and media coverage",
+        href: "/company/press",
+      },
+      {
+        category: "FAQ",
+        description: "Get answers to frequently asked questions",
+        href: "/company/faq",
+      },
+      {
+        category: "Contact",
+        description: "Need more info, send us a message",
+        href: "/contact",
       },
     ],
   },
