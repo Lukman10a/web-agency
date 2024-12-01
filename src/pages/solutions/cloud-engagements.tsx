@@ -11,7 +11,6 @@ import DevOpsMethodology from "@/components/devops";
 import FeatureCard from "@/components/shared/feature-card";
 import NewHero from "@/components/shared/new-hero";
 import PartnersCard from "@/components/shared/partners-card";
-import PartnersCard from "@/components/shared/partners-card";
 import ServicesCard from "@/components/shared/services-card";
 import WhatIsTeverse from "@/components/What-is-teverse";
 
