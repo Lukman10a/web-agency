@@ -14,8 +14,8 @@ interface CompaniesProfileTwoProps {
 
 const CompaniesProfileTwo: React.FC<CompaniesProfileTwoProps> = ({ cards }) => {
   return (
-    <div className="mb-24 max-w-[1300px] w-[90%] rounded-2xl py-16 sm:py-12 mx-auto bg-orange-100">
-      <div className="flex gap-4 w-[90%] mx-auto md:flex-col">
+    <div className="mx-auto mb-24 w-[90%] max-w-[1300px] rounded-2xl bg-orange-100 py-16 sm:py-12">
+      <div className="mx-auto flex w-[90%] gap-4 md:flex-col">
         <div className="w-[50%] 2md:w-[50%] md:w-full">
           <CompaniesCard
             imageSrc={cards.imageSrc}
