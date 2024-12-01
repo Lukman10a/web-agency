@@ -296,7 +296,7 @@ export function MainNav() {
 
   return (
     <nav className="relative bg-nav-gradient font-mono" id="scrollable">
-      <nav className="fixed top-0 z-50 w-full border-b bg-nav-gradient px-7">
+      <nav className="fixed top-0 z-50 w-full border-b bg-nav-gradient px-7 backdrop-blur-sm">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center space-x-2">
