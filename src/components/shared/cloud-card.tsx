@@ -27,11 +27,11 @@ const BenefitsSection: React.FC<BenefitProps> = ({ tag = true, title, descriptio
       <p className=" text-xl md:text-lg sm:text-sm text-gray-600 mb-8">{description}</p>
 
       {/* Benefits */}
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 gap-10">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 grid-cols-2 gap-10">
         {benefits.map((benefit, index) => (
           <div
             key={index}
-            className="p-6 bg-orange-650 rounded-lg shadow hover:shadow-lg transition duration-300"
+            className="p-14 bg-orange-650 rounded-3xl shadow hover:shadow-lg transition duration-300"
           >
             <div className="flex flex-col mb-4">
               {/* Icon */}
@@ -40,10 +40,10 @@ const BenefitsSection: React.FC<BenefitProps> = ({ tag = true, title, descriptio
                     <Image src={benefit.icon} width={40} height={40} alt="card image" />
                 </div>
               {/* Heading */}
-              <h3 className="text-xl sm:text-lg font-bold">{benefit.heading}</h3>
+              <h3 className="text-2xl sm:text-lg font-bold">{benefit.heading}</h3>
             </div>
             {/* Text */}
-            <p className="text-gray-700">{benefit.text}</p>
+            <p className="text-gray-700 text-lg">{benefit.text}</p>
           </div>
         ))}
       </div>

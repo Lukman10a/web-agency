@@ -1,13 +1,12 @@
 import React from "react";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 import { InView } from "../ui/animated/in-view";
 import { Button } from "../ui/button";
 
 interface ServicesCardProps {
-  imgSrc: string;
   altText: string;
   title: string;
   description: string;
@@ -15,19 +14,20 @@ interface ServicesCardProps {
   tagText?: string;
   showButton?: boolean;
   buttonText?: string;
+  imgSrc: string | StaticImageData;
   index: number;
 }
 
 const ServicesCard: React.FC<ServicesCardProps> = ({
-  imgSrc,
   altText,
   title,
   description,
   showTag = true,
-  tagText = "Overview",
+  tagText = "GET IN TOUCH",
   showButton = false,
   buttonText = "Learn More",
   index,
+  imgSrc,
 }) => {
   return (
     <div

@@ -5,6 +5,7 @@ import Image, { StaticImageData } from "next/image";
 
 import { motion } from "framer-motion";
 
+import { HighlightedText } from "../ui/animated/highlight-text";
 import { Button } from "../ui/button";
 
 type NewHeroProps = {
@@ -47,9 +48,9 @@ const NewHero: React.FC<NewHeroProps> = ({
   };
 
   return (
-    <section className="mx-auto mb-24 bg-secondary-gradient px-16 py-20 xl:rounded-t-none lg:p-12 lg:py-16 md:mb-16 md:px-0 sm:mb-12">
+    <section className="mx-auto mb-24 bg-main-gradient px-16 py-20 xl:rounded-t-none lg:p-12 lg:py-16 md:mb-16 md:px-0 sm:mb-12">
       <motion.div
-        className={`mx-auto flex w-[95%] max-w-[1200px] gap-12 2md:gap-8 md:w-[85%] md:flex-col md:gap-6 ${
+        className={`mx-auto flex w-[95%] max-w-7xl gap-12 2md:gap-8 md:w-[85%] md:flex-col md:gap-6 ${
           reverse ? "flex-row-reverse" : "flex-row"
         }`}
         variants={containerVariants}
@@ -57,7 +58,7 @@ const NewHero: React.FC<NewHeroProps> = ({
         animate="visible"
       >
         {/* Left Section (Text + Icon) */}
-        <div className="flex w-[55%] flex-col justify-center md:mx-auto md:w-full md:text-center">
+        <div className="mb-6 flex w-[50%] flex-col justify-center md:mx-auto md:w-full md:text-center">
           {icon && iconLink && (
             <motion.div variants={itemVariants}>
               <Image
@@ -73,14 +74,24 @@ const NewHero: React.FC<NewHeroProps> = ({
             <motion.p
               className="mb-4 self-start rounded-full bg-transparent px-3 py-1 text-xs tracking-wide text-[#808080] ring-1 ring-[#808080] md:mx-auto"
               variants={itemVariants}
-            >
-              {tagText}
-            </motion.p>
+            ></motion.p>
           )}
           <motion.h1
-            className="mb-[.5em] w-[80%] font-sora text-5xl font-medium xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full"
+            className="mb-[.5em] font-sans text-5xl xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full"
             variants={itemVariants}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
           >
+            <HighlightedText
+              highlightColor="#f4982e"
+              highlightHeight="100%"
+              className="p-2"
+              highlightClassName="z-[-1] rounded-lg"
+              delay={1.5}
+            >
+              AWS
+            </HighlightedText>
             {title}
           </motion.h1>
           <motion.p
@@ -91,7 +102,7 @@ const NewHero: React.FC<NewHeroProps> = ({
           </motion.p>
           {showButton && (
             <motion.div variants={itemVariants}>
-              <Button className="flex w-fit items-center gap-4 rounded-3xl bg-orange-650 px-8 font-sans text-white xl:text-[12px] md:mx-auto md:w-[90%] sm:mb-4 sm:w-full">
+              <Button className="flex w-fit items-center gap-4 rounded-[4rem] bg-black px-8 py-7 font-sans text-lg text-white hover:bg-white hover:text-black md:mx-auto md:w-[90%] sm:mb-4 sm:w-full">
                 <span>{buttonText}</span>
               </Button>
             </motion.div>
@@ -100,7 +111,7 @@ const NewHero: React.FC<NewHeroProps> = ({
 
         {/* Right Section (Image) */}
         <motion.div
-          className="image mx-auto w-[45%] max-w-[400px] self-end rounded-2xl bg-transparent md:w-full md:text-center sm:rounded-lg"
+          className="image mx-auto w-[50%] max-w-[400px] self-end rounded-2xl bg-transparent md:w-full md:text-center sm:rounded-lg"
           variants={itemVariants}
         >
           <Image

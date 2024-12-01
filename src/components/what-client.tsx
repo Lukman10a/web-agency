@@ -2,62 +2,10 @@ import React from "react";
 
 import Image from "next/image";
 
+import { testimonials } from "@/data/shared";
 import { motion } from "framer-motion";
 
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-
-interface Testimonial {
-  quote: string;
-  name: string;
-  title: string;
-  image: string;
-}
-
-const testimonials: Testimonial[] = [
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc.",
-    image: "/assets/cardimage1.png",
-  },
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc.",
-    image: "/assets/cardimage1.png",
-  },
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc.",
-    image: "/assets/cardimage1.png",
-  },
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc",
-    image: "/assets/cardimage1.png",
-  },
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc.",
-    image: "/assets/cardimage1.png",
-  },
-  {
-    quote:
-      "Teverse transformed our cloud infrastructure and helped us secure our sensitive data. Their expertise was unmatched.",
-    name: "Petr Nemeth",
-    title: "CEO at Datadoo, Inc.",
-    image: "/assets/cardimage1.png",
-  },
-  // Additional testimonials can be added here...
-];
 
 const headerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -86,7 +34,7 @@ const iconVariants = {
 
 const Testimonials: React.FC = () => {
   return (
-    <section className="mx-auto max-w-7xl rounded-lg bg-nav-gradient px-10 py-16 xl:mx-8 lg:px-8 sm:px-6">
+    <section className="mx-auto max-w-7xl rounded-lg bg-main-gradient px-10 py-16 xl:mx-8 lg:px-8 sm:px-6">
       <div>
         {/* Section Header */}
         <div className="text-center">

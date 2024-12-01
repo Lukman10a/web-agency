@@ -2,31 +2,31 @@ import React from "react";
 
 import TeverseCard from "./teverse-card";
 
-const WhyTeverse: React.FC = () => {
-  const cardData = [
-    {
-      title: "Capitalize on every cost and performance opportunity",
-      description:
-        "Manage your cloud spend and identify architectural, operational, and financial opportunities to drive efficiency.",
-      buttonText: "See How",
-      buttonLin: "#",
-    },
-    {
-      title: "Free yourself of operations and compliance headaches",
-      description:
-        "Eliminate the distractions and difficulties of operations, maintenance, monitoring, and security.",
-      buttonText: "Learn How",
-      buttonLink: "#",
-    },
-    {
-      title: "Accelerate your growth",
-      description:
-        "Bring your high-impact initiatives to life with technical leadership and a proven process from our team of experts.",
-      buttonText: "Get Started",
-      buttonLin: "#",
-    },
-  ];
+const cardData = [
+  {
+    title: "Capitalize on every cost and performance opportunity",
+    description:
+      "Manage your cloud spend and identify architectural, operational, and financial opportunities to drive efficiency.",
+    buttonText: "See How",
+    buttonLin: "#",
+  },
+  {
+    title: "Free yourself of operations and compliance headaches",
+    description:
+      "Eliminate the distractions and difficulties of operations, maintenance, monitoring, and security.",
+    buttonText: "Learn How",
+    buttonLink: "#",
+  },
+  {
+    title: "Accelerate your growth",
+    description:
+      "Bring your high-impact initiatives to life with technical leadership and a proven process from our team of experts.",
+    buttonText: "Get Started",
+    buttonLin: "#",
+  },
+];
 
+const WhyTeverse: React.FC = () => {
   return (
     <section className="mx-auto my-16 w-[90%] max-w-[1400px] rounded-[36px] bg-[#FFF4EE80] lg:rounded-3xl">
       <div className="mx-auto w-[90%] py-24 lg:py-12">

@@ -21,7 +21,7 @@ const CompaniesProfile: React.FC<CompaniesProfileProps> = ({
   return (
     <div className="mx-auto mb-24 w-[90%] max-w-[1300px] rounded-2xl bg-orange-100 py-16 sm:py-12">
       <div className="mx-auto flex w-[90%] gap-16 xl:gap-8 md:flex-col">
-        <div className="w-[60%] self-center 2md:w-[50%] md:w-full">
+        <div className="w-[60%] self-center overflow-hidden 2md:w-[50%] md:w-full">
           <InView
             variants={{
               hidden: { opacity: 0, x: -100, filter: "blur(4px)" },

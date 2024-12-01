@@ -18,6 +18,7 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
   image,
   date,
   category,
+  buttonLink,
 }) => {
   return (
     <div className="w-full">
@@ -31,12 +32,12 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
         />
         <div className="w-full border border-black bg-white py-8 lg:py-6">
           <div className="mx-auto w-[85%]">
-            <p className="mb-4 text-2xl lg:text-[22px]">{title}</p>
-            <p className="mb-4 text-xl lg:text-[18px]">Published on {date}</p>
+            <p className="mb-4 line-clamp-3 text-2xl lg:text-[22px]">{title}</p>
+            <p className="mb-4 text-lg">Published on {date}</p>
             <div className="mb-4 flex flex-wrap gap-2">
               {category.map((cat, idx) => (
                 <span
-                  className="rounded-3xl border border-black px-6 py-1 text-xs"
+                  className="rounded-3xl border border-black px-6 py-1 text-xs capitalize"
                   key={idx.toString()}
                 >
                   {cat}
@@ -47,7 +48,7 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
               asChild
               className="w-full items-center justify-center rounded-none border border-black bg-white px-[3.5em] py-[1em] font-sans text-base font-normal text-black hover:bg-black hover:text-white sm:text-[14px]"
             >
-              <Link href="#">Learn More</Link>
+              <Link href={buttonLink || "#"}>Learn More</Link>
             </Button>
           </div>
         </div>

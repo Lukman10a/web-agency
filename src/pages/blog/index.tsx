@@ -53,7 +53,7 @@ const Index: React.FC<{ posts: Post[]; categories: Category[] }> = ({
   }, [activeCategory, filteredPosts]);
 
   return (
-    <section className="mx-auto border">
+    <section className="mx-auto border bg-main-gradient">
       {featuredPost && (
         <FeaturedPost
           imageSrc={featuredPost.image}

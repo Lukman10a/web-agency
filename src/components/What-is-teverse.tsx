@@ -9,14 +9,15 @@ type WhatIsTeverseProps = {
   additionalDescription: string;
   bgColor?: string;
   tag?: boolean;
+  tagText?: string;
 };
 
 const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
   title,
   mainDescription,
   additionalDescription,
-  bgColor = "#E4E4E4",
-  tag = false,
+  tag = true,
+  tagText = "OVERVIEW",
 }) => {
   // Intersection Observer Hook
   const { ref, inView } = useInView({
@@ -47,38 +48,18 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
 
   return (
     <motion.section
-      ref={ref} // Attach ref to the section
+      ref={ref} 
       initial="hidden"
       animate={controls} // Bind animation controls
       variants={fadeUpVariants} // Use animation variants
       className="mx-auto mb-32 flex w-[90%] max-w-[1200px] gap-10 lg:gap-2 md:mb-16 md:flex-col-reverse md:gap-4"
     >
       {/* Left Side (Boxes) */}
-      <div className="mx-auto flex h-[600px] w-1/2 gap-6 lg:gap-4 md:h-[100vw] md:w-[85%] sm:w-[100%]">
-        <div className="h-[85%] w-1/2 self-end">
-          <motion.div
-            className="h-full w-full rounded-xl"
-            style={{ backgroundColor: bgColor }}
-            variants={fadeUpVariants}
-          ></motion.div>
-        </div>
-        <div className="flex h-[85%] w-1/2 flex-col gap-6 rounded-xl lg:gap-4">
-          <motion.div
-            className="h-[50%] w-full rounded-xl"
-            style={{ backgroundColor: bgColor }}
-            variants={fadeUpVariants}
-          ></motion.div>
-          <motion.div
-            className="h-[50%] w-full rounded-xl"
-            style={{ backgroundColor: bgColor }}
-            variants={fadeUpVariants}
-          ></motion.div>
-        </div>
-      </div>
+      <div className="mx-auto flex h-[800px] w-[50%] gap-6 rounded-[3rem] bg-[#cccbcb] lg:gap-4 2md:h-auto md:h-[100vw] md:w-full sm:w-[100%] order-2"></div>
 
       {/* Right Side (Text) */}
       <motion.div
-        className="flex w-1/2 flex-col self-center p-4 md:w-full sm:p-0"
+        className="flex w-[50%] flex-col self-center p-4 md:w-full sm:p-0 order-1"
         variants={fadeUpVariants}
       >
         {tag && (
@@ -86,14 +67,17 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
             Overview
           </p>
         )}
-        <h2 className="mb-6 font-sora text-4xl font-medium xl:w-[80%] lg:w-[100%] md:text-center sm:text-3xl">
+        <h2 className="mb-6 font-sans text-3xl sm:text-lg xl:w-[80%] lg:w-[100%]">
           {title}
         </h2>
-        <p className="mb-4 text-xl text-[#808080] lg:text-lg md:text-justify">
+        <p className="mb-4 text-xl sm:text-sm lg:text-lg md:text-justify">
           {mainDescription}
         </p>
-        <p className="mb-4 text-xl text-[#808080] lg:text-lg md:text-justify">
+        <p className="mb-4 text-2xl sm:text-lg md:text-justify">
           {additionalDescription}
+        </p>
+        <p className="mb-4 text-2xl sm:text-lg md:text-justify">
+            You can count on our experience – we act as your trusted guide through the cloud migration process to accurately forecast your Total Cost of Ownership, design an optimal AWS architecture, and ensure you experience minimal interruptions or downtime. 
         </p>
       </motion.div>
     </motion.section>
