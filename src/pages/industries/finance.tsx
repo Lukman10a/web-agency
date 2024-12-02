@@ -1,11 +1,7 @@
+// React component for Finance
 import React from "react";
 
-import {
-  companyData,
-  companyDataTwo,
-  detailsData,
-  ourCapabilitiesData,
-} from "@/data/shared";
+import { financeData } from "@/data/industries";
 
 import Preverity from "@/components/preverity";
 import Resources from "@/components/resources";
@@ -21,16 +17,16 @@ const Finance = () => {
   return (
     <section>
       <NewHero
-        title="Financial Services on AWS"
-        description="Cloud and AI solutions for the next-generation of media workflows "
-        showButton={false}
-        ImgSrc="/"
+        title={financeData.heroSection.title}
+        description={financeData.heroSection.description}
+        showButton={financeData.heroSection.showButton}
+        ImgSrc={financeData.heroSection.imgSrc}
       />
 
       <CompaniesProfile
-        cards={companyData}
-        heading="Competition in finance isn’t slowing down and customer expectations have never been higher"
-        paragraph="Demand for content is constantly growing but the complexity of high-fidelity workflows and global delivery isn’t going away. We empower you with cloud-native and AI solutions to streamline production, create more engaging experiences, and seamlessly deliver to all platforms."
+        cards={financeData.companyProfiles.companyOne}
+        heading={financeData.companyProfiles.heading}
+        paragraph={financeData.companyProfiles.paragraph}
       />
 
       <p className="mx-auto w-[90%] max-w-[1200px] text-2xl text-[#808080] md:-mt-12 md:text-lg">
@@ -46,35 +42,15 @@ const Finance = () => {
 
       <Preverity />
 
-      <CompaniesWeServe detailsData={detailsData} />
+      <CompaniesWeServe detailsData={financeData.companyDetails} />
 
-      <OurCapabilities detailsData={ourCapabilitiesData} />
+      <OurCapabilities detailsData={financeData.capabilities} />
 
-      <ServicesCard
-        imgSrc="/public/assets/contact"
-        altText="Image"
-        title="Our finance vision"
-        description="A more just, efficient, and effective kind of healthcare is possible when payers and providers are given best-in-class cloud solutions. Collaborate with us to build the future of healthcare together."
-        showTag={true}
-        tagText="AWS PREMIER CONSULTING PARTNER"
-        index={1}
-        showButton={true}
-        buttonText="Build with us"
-      />
+      {financeData.servicesCards.map((card, index) => (
+        <ServicesCard key={index} {...card} />
+      ))}
 
-      <CompaniesProfileTwo cards={companyDataTwo} />
-
-      <ServicesCard
-        imgSrc="/public/assets/contact"
-        altText="Image"
-        title="Strengthen Your Security Posture"
-        description="Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment."
-        showTag={true}
-        tagText="GET IN TOUCH"
-        index={2}
-        showButton={true}
-        buttonText="Schedule a call"
-      />
+      <CompaniesProfileTwo cards={financeData.companyProfiles.companyTwo} />
 
       <Resources />
     </section>
