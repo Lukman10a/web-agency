@@ -31,7 +31,7 @@ const NewHero: React.FC<NewHeroProps> = ({
   tag = false,
   icon = false,
   iconLink,
-  tagText,
+  // tagText,
 }) => {
   // Animation Variants
   const containerVariants = {

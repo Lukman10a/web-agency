@@ -1,12 +1,10 @@
 import React from "react";
 
-import Image from "next/image";
+import icon from "/public/assets/icon.png";
 
 import Benefits from "@/components/benefits";
 import CardSection from "@/components/card-section";
 import DevOpsMethodology from "@/components/devops";
-import FeatureCard from "@/components/shared/feature-card";
-import features from "@/components/shared/features";
 import NewHero from "@/components/shared/new-hero";
 import PartnersCard from "@/components/shared/partners-card";
 import ServicesCard from "@/components/shared/services-card";

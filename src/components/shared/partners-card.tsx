@@ -1,12 +1,12 @@
 import React from "react";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 import { Button } from "../ui/button";
 
 interface PartnersCardProps {
-  iconSrc: string;
+  iconSrc: string | StaticImageData;
   buttonText: string;
   buttonLink: string;
   quote: string;
