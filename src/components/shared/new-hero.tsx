@@ -29,6 +29,7 @@ const NewHero: React.FC<NewHeroProps> = ({
   showButton = true,
   buttonText,
   tag = false,
+  tagText,
   icon = false,
   iconLink,
   // tagText,
