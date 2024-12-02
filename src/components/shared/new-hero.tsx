@@ -76,6 +76,7 @@ const NewHero: React.FC<NewHeroProps> = ({
               variants={itemVariants}
             ></motion.p>
           )}
+          {tagText}
           <motion.h1
             className="mb-[.5em] font-sans text-5xl xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full"
             variants={itemVariants}

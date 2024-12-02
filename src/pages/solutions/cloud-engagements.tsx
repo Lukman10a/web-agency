@@ -95,7 +95,7 @@ export default function CloudEngagements() {
     <div className="bg-gradient-to-br from-[#a7d2f1] via-[#eaf4ff] to-[#d8e8f3]">
       <NewHero
         ImgSrc="/svg/engagement.svg"
-        tag
+        // tag
         title="Teverse Cloud Engagements DevOps"
         description="Get transparent reporting and live updates on your team’s status"
         buttonText="Get Started"

@@ -124,6 +124,7 @@ const AWSIM = () => {
       {/* What Is Teverse Section */}
       <WhatIsTeverse
         tag
+        tagText = "OVERVIEW"
         title="Migrate With Confidence"
         mainDescription="For the second year running, AWS has recognized us for our outstanding work in its Migrations Acceleration Program—for our accuracy in budgeting and our speed in moving customer workloads."
         additionalDescription="When you partner with Mission for your AWS cloud migration, you’ll receive the hands-on care of experienced professionals who’ve helped hundreds of customers migrate to AWS. We’ve moved customers from on-premises data centers, non-AWS cloud platforms, and PaaS providers like Heroku and Rackspace. We offer a wide range of cloud migration services and can perform full infrastructure refactors or specialty cloud migrations, like Microsoft workloads and database migrations."

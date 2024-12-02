@@ -5,111 +5,145 @@ import React from "react";
 import FAQ from "@/components/shared/FAQ";
 import Resources from "@/components/resources";
 import ServicesCard from "@/components/shared/services-card";
-import DynamicSection from "@/components/profesional-services";
+import PartnersCard from "@/components/shared/partners-card";
+import Image from "next/image";
+
 
 const GenerativeAI = () => {
   // Data for BenefitsSection
   const benefitsData = {
     tag: true,
-    title: "Measure Your Architecture and Know Exactly Where You Stand",
+    title: "Accelerate Your Use Case",
     description:
-      "Mission Cloud Score shows you exactly what you want to know about your AWS environmental health and helps you keep tabs on it. See at a glance your adherence to best practices and learn what you need to do if you’re out of alignment with any.",
+      "Generative AI is still in its infancy, but many use cases in business have already emerged.",
     benefits: [
       {
-        icon: "/assets/heart-rate.png",
-        heading: "Your Health at a Glance",
-        text: "When launching a new initiative, you can check to see how your score is impacted. Learn when you’ve created a security concern or repaired an operational gap in real-time.",
+        icon: "/svg/customer-service.svg",
+        heading: "Customer Service",
+        text: "Resolve customer requests and answer common questions with AI-powered knowledge bases and chatbots, call transcription, and conversation summaries for helping to resolve cases.",
       },
       {
-        icon: "/assets/efficiency.png",
-        heading: "Pinpoint Problems",
-        text: "We list and quantify every issue detracting from your score, so you can see every open concern and get a clear sense for its level of urgency.",
+        icon: "/svg/doc-checkmark.svg",
+        heading: "Document and Image Analysis",
+        text: " Extract key takeaways or synthesize documents and images without requiring the presence of a human expert. Transform legal, financial, and medical paperwork into actionable data.",
       },
       {
-        icon: "/assets/champion.png",
-        heading: "Graph Your Growth",
-        text: "As your score changes, we’ll chart the difference, showing when your architecture is moving in the right direction or when an initiative needs support or re-working.",
+        icon: "/svg/customer-service.svg",
+        heading: "Media Translation",
+        text: "Create automated dubbing and translation pipelines for your content generation. Cater to an international audience with fast and accurate video, audio, and text translation.",
+      },
+      {
+        icon: "/svg/directory.svg",
+        heading: "Coding Assistance",
+        text: " Turn to generative AI tools such as Amazon CodeWhisperer for coding, particularly for initial prototype work, integrating an unfamiliar library, or helping with debugging.",
+      },
+      {
+        icon: "/svg/flower.svg",
+        heading: "Personalized Content Creation",
+        text: "Generate original content from your data, such as product documentation or personalized marketing campaigns, with messaging tuned to fit your brand, channel, and audience.",
+      },
+      {
+        icon: "/svg/image-gen.svg",
+        heading: "Image Generation",
+        text: "Leverage the creativity of large language models and tools like Stable Diffusion to generate novel images and graphics for your marketing.",
       },
     ],
   };
 
-  const ProfessionalServices = [
-    {
-      icon: "/assets/softwareCloud2.png",
-      title: "AWS Migrations",
-      description:
-        "Assess your infrastructure, Mobilize to establish your workloads, Migrate & Modernize all remaining workloads, tune for production",
-      link: "/services/aws-migrations",
-    },
-    {
-      icon: "/assets/serviceGrid2.png",
-      title: "AWS Modernization",
-      description:
-        "Improve deployments and operations with containerization, serverless computing, microservices",
-      link: "/services/aws-modernization",
-    },
-    {
-      icon: "/assets/softwareCloud3.png",
-      title: "Data, Analytics & AI/ML",
-      description:
-        "Data engineering and analytics, visualization, data science, generative AI and ML algorithms, AI/ML operations",
-      link: "/services/data-analytics",
-    },
-    {
-      icon: "/assets/serviceGrid4.png",
-      title: "DevOps",
-      description:
-        "Streamline and secure your development pipeline with Infrastructure as Code, CI/CD",
-      link: "/services/devops",
-    },
-]
-
+  const servicesLeft = [
+    "Amazon Bedrock",
+    "Amazon SageMaker",
+    "Amazon CodeWhisperer",
+    "AWS Comprehend",
+    "Foundation Models, including Cohere, Anthropic Claude, LLaMa, FLAN-T5, AI21, Falcon, Amazon Titan",
+  ];
+  
+  const servicesRight = [
+    "Amazon Textract",
+    "Amazon Transcribe",
+    "Amazon Translate",
+    "Amazon Lex",
+    "Amazon Polly",
+    "Amazon Kendra",
+  ];
+  
   // Return statement
   return (
     <div>
       {/* Hero Section */}
       <NewHero
-        ImgSrc="/assets/checkers.png"
-        tag
-        title="Mission Cloud Score"
-        description="Benchmark your environment against AWS best practices."
+        ImgSrc="/assets/gen-ai.png"
+        // tag
+        title="Generative AI"
+        description="Securely Build With Generative AI on AWS"
         buttonText="Get Started"
       />
 
       {/* What Is Teverse Section */}
       <WhatIsTeverse
         tag
-        title="DevOps Score Your Cloud Against AWS Best Practices Excellence, Visualized"
-        mainDescription="With Mission Cloud Score you can see how your architecture performs against the well-architected pillars that define best practices for AWS. Learn how your cost efficiency, operations, security, reliability, and performance rank and see any issues clearly enumerated."
-        additionalDescription="Over time you can track and measure your score as your infrastructure changes, so that you can build with confidence, assured that you’ve architected with all of the measures AWS considers necessary for a state-of-the-art back-end."
+        tagText = "OVERVIEW"
+        title="Transform Your Business with Generative AI"
+        mainDescription="Explore the vast potential of generative AI to generate original content and concepts for your business, revolutionize your applications, create novel customer experiences, improve productivity and transform your business operations. Amazon has launched Bedrock and Foundation Models accessible through SageMaker Jumpstart allowing you to use your internal data to train your models while keeping your data private."
+        additionalDescription="Mission can support you with in-depth experience and technical expertise whether you’re just getting started or need to scale your pre-existing model’s infrastructure."
       />
 
       {/* Benefits Section */}
       <BenefitsSection {...benefitsData} />
 
-      <DynamicSection
-        title="Get Engineering And Support For Every Initiative"
-        subtitle="Enlist trusted expertise to guide you through the design and implementation of robust, scalable cloud-native solutions. Capitalize on all that AWS offers — enhanced speed, performance, reliability, and cost efficiency — with our engineers and architects."
-        description=""
-        buttonVisible={true}
-        buttonText="Learn More"
-        cards={ProfessionalServices}
-      />
+      <section className="max-w-6xl mx-auto text-left space-y-7 mb-14 sm:mb-7">
+        <h1 className="text-4xl font-bold">Get Help Building and Scaling</h1>
+        <p className="text-3xl">Whether you&apos;re scaling your model for production or starting from scratch, we meet you where you are on your journey and help you get your solution launched.</p>
+        <h3 className="text-3xl font-bold">Our Process</h3>
+        <Image className="mx-auto max-w-6xl"  src="/assets/usecase.webp" width={800} height={900} alt="use case image" />
+      </section>
 
-      <FAQ />
-      <Resources />
+      <section className=" py-16 mb-14 sm:mb-7">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <h2 className="text-center text-3xl font-semibold text-gray-800 mb-8 md:text-2xl">
+          Services We Commonly Use in Production
+        </h2>
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-1">
+          <ul className="space-y-4">
+            {servicesLeft.map((service, index) => (
+              <li key={index} className="text-lg text-gray-700">
+                • {service}
+              </li>
+            ))}
+          </ul>
+          <ul className="space-y-4">
+            {servicesRight.map((service, index) => (
+              <li key={index} className="text-lg text-gray-700">
+                • {service}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+    <PartnersCard
+        iconSrc = "/assets/magellantv.webp"
+        buttonText="Read Full Story"
+        buttonLink="#"
+        quote="“We were immediately impressed with Mission’s expertise both on AWS and with generative AI. Working with Mission has not only provided much needed AWS expertise to ensure our business is secure, reliably online, and optimized, but also to build out a bleeding-edge Machine Learning pipeline on top of AWS cognitive services. Partnering with Mission will enable us to achieve a long-held goal for MagellanTV, which is to massively expand the reach of our documentary platform and strengthen our position as a truly global company.”"
+        authorName="Thomas Lucas"
+        authorRole="Co-Founder and Director at MagellanTV"
+
+      />
+      <FAQ /> 
       <ServicesCard
           imgSrc="/assets/checkers.png"
           altText="Custom Alt Text"
-          title="We have the tools to understand your cloud and the guidance to make the most of it."
-          description="Schedule your demo with a Mission Cloud Advisor and find out what Mission Control can do for you."
+          title="Succeed With Generative AI on AWS"
+          description="Work with a genAI partner who understands machine learning on AWS, your goals and the agile processes required to bring value to your business faster."
           showTag={true}
           tagText="GET IN TOUCH"
           index={1}
           showButton={true}
-          buttonText="Book your Demo"
+          buttonText="Get Started"
       
       />
+      <Resources />
     </div>
   );
 };

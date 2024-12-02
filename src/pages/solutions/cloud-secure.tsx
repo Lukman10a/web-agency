@@ -14,7 +14,7 @@ import NewHero from "@/components/shared/new-hero";
 import ServicesCard from "@/components/shared/services-card";
 import WhatIsTeverse from "@/components/What-is-teverse";
 import { HighlightedText } from "@/components/ui/animated/highlight-text";
-import MissionSection from "@/components/mission";
+// import MissionSection from "@/components/mission";
 
 const cardData = [
   {
@@ -86,6 +86,7 @@ const CloudScore = () => {
       {/* What Is Teverse Section */}
       <WhatIsTeverse
         tag
+        tagText = "OVERVIEW"
         title="Comprehensive Protection for Your AWS Environment"
         mainDescription="Mission Cloud Secure is a SaaS application that delivers 24/7 security monitoring and incident response through a powerful combination of CrowdStrike's world-class security platform and Mission's AWS expertise. Protect your cloud resources, endpoints, and credentials while maintaining compliance and operational excellence."
         additionalDescription=""
