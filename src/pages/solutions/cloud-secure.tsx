@@ -1,11 +1,14 @@
 import React from "react";
-import { motion } from "framer-motion";
+
 import Image from "next/image";
 
 import circles from "/public/assets/circles.png";
 import cloudstrikes from "/public/assets/cloudstrikes.png";
 import padlock from "/public/assets/padlock.png";
 import clock from "/public/svg/awsBuild.svg";
+import { motion } from "framer-motion";
+
+import { HighlightedText } from "@/components/ui/animated/highlight-text";
 
 import AwsBuild from "@/components/aws-build";
 import Preverity from "@/components/preverity";
@@ -13,8 +16,11 @@ import Resources from "@/components/resources";
 import NewHero from "@/components/shared/new-hero";
 import ServicesCard from "@/components/shared/services-card";
 import WhatIsTeverse from "@/components/What-is-teverse";
+<<<<<<< HEAD
 import { HighlightedText } from "@/components/ui/animated/highlight-text";
 // import MissionSection from "@/components/mission";
+=======
+>>>>>>> OldVersion
 
 const cardData = [
   {
@@ -101,27 +107,36 @@ const CloudScore = () => {
         subtitle="In today's landscape of sophisticated cyber threats, comprehensive security requires constant vigilance, specialized expertise, and the right tooling. Mission Cloud Secure provides the following: "
       />
 
-      <section className="border-2 border-black rounded-2xl max-w-6xl mx-auto space-y-4 p-14 mb-10">
+      <section className="mx-auto mb-10 max-w-6xl space-y-4 rounded-2xl border-2 border-black p-14">
         <div className="flex justify-between sm:flex-col sm:justify-start">
-          <p className="text-3xl font-semibold sm:text-center sm:mb-2">Ebook</p>
-          <button className="bg-black text-white py-2 px-4 rounded-3xl text-2xl sm:text-lg">Download</button>
+          <p className="text-3xl font-semibold sm:mb-2 sm:text-center">Ebook</p>
+          <button className="rounded-3xl bg-black px-4 py-2 text-2xl text-white sm:text-lg">
+            Download
+          </button>
         </div>
         <motion.h2
-           initial={{ opacity: 0, y: 30 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ delay: 0.5, duration: 0.8 }}
-           className="mb-4 text-4xl font-medium text-[#262626] sm:text-2xl"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="mb-4 text-4xl font-medium text-[#262626] sm:text-2xl"
         >
-        <HighlightedText
-              highlightColor="#f4934b"
-              highlightHeight="100%"
-              className="p-2"
-              highlightClassName="z-[-1] rounded-lg"
-              delay={1.5}
-        > Safeguarding the Future 
-        </HighlightedText> with Generative AI Security
+          <HighlightedText
+            highlightColor="#f4934b"
+            highlightHeight="100%"
+            className="p-2"
+            highlightClassName="z-[-1] rounded-lg"
+            delay={1.5}
+          >
+            {" "}
+            Safeguarding the Future
+          </HighlightedText>{" "}
+          with Generative AI Security
         </motion.h2>
-        <p className="text-2xl sm:text-lg">Explore our strategic blueprint for securing generative AI&apos;s potential. Navigate risks, integrate, and craft policies for a secure future.</p>
+        <p className="text-2xl sm:text-lg">
+          Explore our strategic blueprint for securing generative AI&apos;s
+          potential. Navigate risks, integrate, and craft policies for a secure
+          future.
+        </p>
       </section>
 
       <AwsBuild

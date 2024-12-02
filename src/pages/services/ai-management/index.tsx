@@ -51,6 +51,7 @@ const AIManagement = () => {
         showTag={true}
         tagText="Overview"
         index={1}
+        href="3"
       />
 
       <section>
@@ -126,6 +127,7 @@ const AIManagement = () => {
         index={1}
         showButton={true}
         buttonText="Learn More"
+        href="/solutions/teverse-control"
       />
 
       <Preverity />
@@ -135,7 +137,7 @@ const AIManagement = () => {
       <Resources />
 
       <ServicesCard
-        imgSrc="/public/assets/contact"
+        imgSrc="/assets/contact.png"
         altText="Custom Alt Text"
         title="Strengthen Your Security Posture"
         description="Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment."
@@ -144,6 +146,7 @@ const AIManagement = () => {
         index={1}
         showButton={true}
         buttonText="Schedule a call"
+        href="/contact"
       />
     </main>
   );

@@ -121,6 +121,7 @@ const CloudOne = () => {
         showTag={true}
         tagText="Overview"
         index={1}
+        href="/"
       />
 
       <section className="bg-white px-4 py-12">
@@ -217,6 +218,7 @@ const CloudOne = () => {
         index={1}
         showButton={true}
         buttonText="Learn More"
+        href="/"
       />
 
       <Preverity />
@@ -235,6 +237,7 @@ const CloudOne = () => {
         index={1}
         showButton={true}
         buttonText="Schedule a call"
+        href="/"
       />
     </main>
   );

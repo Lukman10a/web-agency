@@ -1,6 +1,6 @@
 import React from "react";
 
-import Image from "next/image";
+import icon from "/public/assets/icon.png";
 
 import image from "/public/assets/engagement.png";
 import icon from "/public/svg/forcura.svg";
@@ -8,7 +8,10 @@ import icon from "/public/svg/forcura.svg";
 import Benefits from "@/components/benefits";
 import CardSection from "@/components/card-section";
 import DevOpsMethodology from "@/components/devops";
+<<<<<<< HEAD
 import FeatureCard from "@/components/shared/feature-card";
+=======
+>>>>>>> OldVersion
 import NewHero from "@/components/shared/new-hero";
 import PartnersCard from "@/components/shared/partners-card";
 import ServicesCard from "@/components/shared/services-card";
@@ -150,7 +153,7 @@ export default function CloudEngagements() {
             height={500}
           />
         </div>
-        
+
         <div className="mx-auto grid w-full grid-cols-3 gap-12 lg:gap-8 2md:grid-cols-2 sm:grid-cols-1">
           {features.map((feature, index) => (
             <FeatureCard

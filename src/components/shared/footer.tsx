@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           {/* Logo and Newsletter Section */}
           <div className="py-5">
             <Image
-              src="/assets/logo.png"
+              src="/assets/logo-new.png"
               width={150}
               height={150}
               alt="brand logo"
@@ -71,21 +71,17 @@ const Footer: React.FC = () => {
 
             {/* Our Services Section */}
             <div>
-              <h4 className="font-sora text-lg font-semibold">Our Services</h4>
+              <h4 className="font-sora text-lg font-semibold">Discover</h4>
               <ul className="mt-2 space-y-2 text-neutral-400">
                 <li>
-                  <Link href="/solution/?section=migration#cloud-journey">
-                    Migration
-                  </Link>
+                  <Link href="/solutions/teverse-control">Platform</Link>
                 </li>
                 <li>
-                  <Link href="/solution/?section=optimization#cloud-journey">
-                    Optimization
-                  </Link>
+                  <Link href="/services">Cloud Management Services</Link>
                 </li>
                 <li>
-                  <Link href="/solution/?section=kickstart#cloud-journey">
-                    Kickstart
+                  <Link href="/services/professional-services">
+                    Professional Services
                   </Link>
                 </li>
               </ul>
