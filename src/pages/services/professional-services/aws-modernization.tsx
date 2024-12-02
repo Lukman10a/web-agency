@@ -59,6 +59,7 @@ const AwsModernization = () => {
       {/* What Is Teverse Section */}
       <WhatIsTeverse
         tag
+        tagText = "OVERVIEW"
         title="Streamline Deployments, Improve Resiliency, and Harden Security"
         mainDescription="Modernizing your applications and infrastructure allows you to realize all the benefits of AWS: scalability, availability, reliability, 
             deployability, observability, and cost efficiency. But modernizing 

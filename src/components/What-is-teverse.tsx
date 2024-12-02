@@ -17,7 +17,11 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
   mainDescription,
   additionalDescription,
   tag = true,
+<<<<<<< HEAD
+  tagText,
+=======
   // tagText = "OVERVIEW",
+>>>>>>> OldVersion
 }) => {
   // Intersection Observer Hook
   const { ref, inView } = useInView({
@@ -64,7 +68,7 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
       >
         {tag && (
           <p className="mb-4 self-start rounded-full bg-transparent px-3 py-1 text-xs tracking-wide text-[#808080] ring-1 ring-[#808080] md:mx-auto">
-            Overview
+            {tagText}
           </p>
         )}
         <h2 className="mb-6 font-sans text-3xl xl:w-[80%] lg:w-[100%] sm:text-lg">

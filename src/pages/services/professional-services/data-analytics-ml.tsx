@@ -117,6 +117,7 @@ const Analytics = () => {
       {/* What Is Teverse Section */}
       <WhatIsTeverse
         tag
+        tagText = "OVERVIEW"
         title="Leverage Data Analytics and Machine Learning to Elevate Your Business"
         mainDescription="Whether you’re assessing data lake options, improving existing data architecture and pipelines, or implementing custom AI and ML algorithms, we have in-house data, analytics and machine learning consulting expertise for every step of your data-driven journey."
         additionalDescription=""

@@ -2,13 +2,21 @@ import React from "react";
 
 import icon from "/public/assets/icon.png";
 
+import image from "/public/assets/engagement.png";
+import icon from "/public/svg/forcura.svg";
+
 import Benefits from "@/components/benefits";
 import CardSection from "@/components/card-section";
 import DevOpsMethodology from "@/components/devops";
+<<<<<<< HEAD
+import FeatureCard from "@/components/shared/feature-card";
+=======
+>>>>>>> OldVersion
 import NewHero from "@/components/shared/new-hero";
 import PartnersCard from "@/components/shared/partners-card";
 import ServicesCard from "@/components/shared/services-card";
 import WhatIsTeverse from "@/components/What-is-teverse";
+
 
 const disciplines = [
   "Infrastructure as Code",
@@ -46,11 +54,51 @@ const benefitData = {
   ],
 };
 
+const devOpsCard = [
+  {
+    title: "Weekly Leadership Check-In",
+    description:
+      "Your PM reviews progress on your goals through documented tasks and defined acceptance criteria; we quickly address any blockers; we course correct, even mid-sprint if necessary.",
+  },
+  {
+    title: "Bi-weekly Sprint Ceremony",
+    description:
+      "Your CSA and PM collaborate with you to prioritize work, optimize development velocity, demo completed work, and debrief previous sprints; your feedback becomes the input for new iterations.",
+  },
+  {
+    title: "Quarterly Technical Roadmapping",
+    description:
+      "Your CSA and PM check in to align on your evolving business roadmap and identify a backlog for future sprints; together, we set objectives to ensure your team is positioned for your priorities.",
+  },
+];
+
+const features = [
+  {
+    title: "Project Milestone Tracking",
+    description:
+      "Review the milestones that mark key stages in an initiative’s life cycle. Get a detailed view of progress and notes on implementation, outcomes, or other criteria you’ve specified.",
+    icon: "/svg/location.svg",
+  },
+  {
+    title: "Action Items",
+    description:
+      "Action Items let us flag issues that may require your input, feedback, or cooperation. Here you can track their progress and get notified upon their completion.",
+    icon: "/svg/target.svg",
+  },
+  {
+    title: "Risk Log",
+    description:
+      "Obstacles and unexpected challenges are part of every project—the real world is unpredictable. The risk log lets you manage those risks before they become roadblocks.",
+    icon: "/svg/risk.svg",
+  },
+];
+
 export default function CloudEngagements() {
   return (
     <div className="bg-gradient-to-br from-[#a7d2f1] via-[#eaf4ff] to-[#d8e8f3]">
       <NewHero
         ImgSrc="/svg/engagement.svg"
+        // tag
         title="Teverse Cloud Engagements DevOps"
         description="Get transparent reporting and live updates on your team’s status"
         buttonText="Get Started"
@@ -119,6 +167,36 @@ export default function CloudEngagements() {
       </div>
 
       <DevOpsMethodology />
+
+      <div className="mx-auto mb-24 w-[90%] max-w-[1200px]">
+        <div className="mb-24">
+          <h2 className="mb-8 font-sans text-4xl font-medium sm:text-4xl">
+            Transparent DevOps Management
+          </h2>
+          <p className="text-2xl leading-relaxed sm:text-xl">
+            Using Teverse Cloud Engagements - DevOps, your PM monitors the
+            progress of your initiatives, alerts you to blockers, risks, or
+            issues, and guides your team ceremonies, giving you full visibility
+            into the backlog, sprint planning, and critical documentation.
+          </p>
+        </div>
+
+        <p className="mb-8 text-4xl leading-relaxed sm:text-xl">
+          Our Agile Cadence
+        </p>
+
+        <div className="grid grid-cols-3 gap-4 lg:grid-cols-2">
+          {devOpsCard.map((card,index) => (
+            <div
+              key={index}
+              className="rounded-3xl bg-gradient-to-t from-[#52a5cc] to-white p-6 py-16">
+                <p className="mb-4 text-4xl">{card.title}</p>
+                <p className="text-lg">{card.description}</p>
+              </div>
+          ))}
+        </div>
+      </div>
+
       <ServicesCard
         imgSrc="/assets/checkers.png"
         altText="Custom Alt Text"
