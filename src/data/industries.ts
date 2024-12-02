@@ -92,6 +92,7 @@ export const retailData = {
       index: 1,
       showButton: true,
       buttonText: "Build with us",
+      href: "/",
     },
     {
       imgSrc: "/public/assets/contact",
@@ -104,6 +105,7 @@ export const retailData = {
       index: 2,
       showButton: true,
       buttonText: "Schedule a call",
+      href: "/",
     },
   ],
   resources: {
@@ -201,6 +203,7 @@ export const financeData = {
       index: 1,
       showButton: true,
       buttonText: "Build with us",
+      href: "/",
     },
     {
       imgSrc: "/public/assets/contact",
@@ -213,6 +216,7 @@ export const financeData = {
       index: 2,
       showButton: true,
       buttonText: "Schedule a call",
+      href: "/contact",
     },
   ],
   resources: {
@@ -310,6 +314,7 @@ export const healthcareData = {
       index: 1,
       showButton: true,
       buttonText: "Build with us",
+      href: "/",
     },
     {
       imgSrc: "/public/assets/contact",
@@ -322,6 +327,7 @@ export const healthcareData = {
       index: 2,
       showButton: true,
       buttonText: "Schedule a call",
+      href: "/",
     },
   ],
 };
@@ -416,6 +422,7 @@ export const lifeSciencesData = {
       index: 1,
       showButton: true,
       buttonText: "Build with us",
+      href: " /",
     },
     {
       imgSrc: "/public/assets/contact",
@@ -428,6 +435,7 @@ export const lifeSciencesData = {
       index: 2,
       showButton: true,
       buttonText: "Get Started",
+      href: "/",
     },
   ],
   companiesProfileTwo: {
@@ -540,6 +548,7 @@ export const mediaData = {
     index: 1,
     showButton: true,
     buttonText: "Build with us",
+    href: "/",
   },
   servicesCardTwo: {
     imgSrc: "/public/assets/contact",
@@ -552,6 +561,7 @@ export const mediaData = {
     index: 2,
     showButton: true,
     buttonText: "Schedule a call",
+    href: "/",
   },
 };
 
@@ -623,6 +633,7 @@ export const privateData = {
     index: 2,
     showButton: true,
     buttonText: "Schedule a call",
+    href: "/",
   },
 };
 
@@ -707,6 +718,7 @@ export const softwareData = {
       index: 1,
       showButton: true,
       buttonText: "Build with us",
+      href: "/",
     },
     {
       imgSrc: "/public/assets/contact",
@@ -719,6 +731,7 @@ export const softwareData = {
       index: 2,
       showButton: true,
       buttonText: "Schedule a call",
+      href: "/",
     },
   ],
 };

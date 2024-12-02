@@ -5,7 +5,7 @@ import { retailData } from "@/data/industries";
 import Preverity from "@/components/preverity";
 import Resources from "@/components/resources";
 import CompaniesProfile from "@/components/shared/companies-profile";
-import CompaniesProfileTwo from "@/components/shared/companies-profiletwo";
+import CompaniesProfileTwo from "@/components/shared/companies-profile-two";
 import CompaniesWeServe from "@/components/shared/companies-we-serve";
 import NewHero from "@/components/shared/new-hero";
 import OurCapabilities from "@/components/shared/our-capabilities";
@@ -134,6 +134,7 @@ const Retail = () => {
           index={card.index}
           showButton={card.showButton}
           buttonText={card.buttonText}
+          href={card.href}
         />
       ))}
 

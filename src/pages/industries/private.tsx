@@ -69,6 +69,7 @@ const Retail = () => {
         index={privateData.servicesCard.index}
         showButton={privateData.servicesCard.showButton}
         buttonText={privateData.servicesCard.buttonText}
+        href={privateData.servicesCard.href}
       />
 
       <Resources />

@@ -1,15 +1,11 @@
 import React from "react";
 
+import { CompanyData } from "@/data/shared";
+
 import CompaniesCard from "./companies-card";
 
 interface CompaniesProfileTwoProps {
-  cards: {
-    imageSrc: string;
-    content: string;
-    author: string;
-    buttonText?: string;
-    showButton: boolean;
-  };
+  cards: CompanyData;
 }
 
 const CompaniesProfileTwo: React.FC<CompaniesProfileTwoProps> = ({ cards }) => {
