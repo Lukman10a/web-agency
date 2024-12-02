@@ -2,11 +2,15 @@
 
 import * as React from "react";
 
+import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useRouter } from "next/router";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronRight, Menu } from "lucide-react";
+
+import { cn } from "@/lib/utils";
 
 import { useScrollLock } from "@/hooks/use-scroll-lock";
 
@@ -269,6 +273,10 @@ const navItems: NavItem[] = [
 ];
 
 export function MainNav() {
+  const pathname = usePathname();
+  // const [isMobileOpen, setIsMobileOpen] = React.useState(false);
+
+  const isActive = (href: string) => pathname?.startsWith(href);
   const [activeItem, setActiveItem] = React.useState<string | null>(null);
   const { lock, unlock } = useScrollLock({
     autoLock: false,
@@ -304,17 +312,31 @@ export function MainNav() {
       <nav className="fixed top-0 z-50 w-full border-b bg-nav-gradient px-7 backdrop-blur-sm">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="text-xl font-bold text-[#FF9557]">TEVERSE</span>
+            <Link
+              href="/"
+              className="flexitems-center space-x-2 overflow-hidden"
+            >
+              <Image
+                src={"/assets/logo-new.png"}
+                width={150}
+                height={150}
+                alt="brand logo"
+                // className="size-40 object-contain"
+              />
             </Link>
             <div className="flex gap-6 md:hidden">
               {navItems.map((item) => (
                 <Button
                   key={item.title}
                   variant="ghost"
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
-                    activeItem === item.title ? "text-primary" : "text-black"
-                  }`}
+                  className={cn(
+                    `text-sm font-medium transition-colors hover:text-primary ${
+                      activeItem === item.title
+                        ? "text-orange-650"
+                        : "text-black"
+                    }`,
+                    isActive(item?.href as string) && "text-orange-650",
+                  )}
                   onClick={() =>
                     setActiveItem(activeItem === item.title ? null : item.title)
                   }
@@ -343,10 +365,6 @@ export function MainNav() {
               <SheetContent
                 side="right"
                 className="max-w-[400px] bg-nav-items sm:w-full"
-                // style={{
-                //   background:
-                //     "radial-gradient(75.6% 80.76% at 66.91% 110.17%, #f37920 0, #f1f0ee 100%)",
-                // }}
               >
                 <SheetHeader>
                   <SheetTitle>
@@ -354,9 +372,13 @@ export function MainNav() {
                       href="/"
                       className="flex items-center space-x-2 font-mono"
                     >
-                      <span className="text-xl font-bold text-[#FF9557]">
-                        TEVERSE
-                      </span>
+                      <Image
+                        src={"/assets/logo-new.png"}
+                        width={150}
+                        height={150}
+                        alt="brand logo"
+                        // className="size-40 object-contain"
+                      />
                     </Link>
                   </SheetTitle>
                   <SheetDescription className="text-left">
