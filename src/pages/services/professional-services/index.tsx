@@ -152,7 +152,7 @@ export default function AWS() {
 
       <WhatIsTeverse
         tag
-        tagText = "OVERVIEW"
+        tagText="OVERVIEW"
         title="Comprehensive Protection for Your AWS Environment"
         mainDescription="Mission Cloud Secure is a SaaS application that delivers 24/7 security monitoring and incident response through a powerful combination of CrowdStrike's world-class security platform and Mission's AWS expertise. Protect your cloud resources, endpoints, and credentials while maintaining compliance and operational excellence."
         additionalDescription=""
@@ -303,6 +303,7 @@ export default function AWS() {
         showButton={true}
         buttonText="Schedule a call"
         imgSrc={contact}
+        href={""}
       />
     </div>
   );

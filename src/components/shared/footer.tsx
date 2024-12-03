@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           {/* Logo and Newsletter Section */}
           <div className="py-5">
             <Image
-              src="/assets/logo-new.png"
+              src="/assets/logo-main-sm.png"
               width={150}
               height={150}
               alt="brand logo"

@@ -57,35 +57,88 @@ const navItems: NavItem[] = [
         href: "/solutions",
         description:
           "Explore our cloud solutions and services for your business needs",
+        subitems: [
+          {
+            title: "Teverse Control",
+            description:
+              "Cloud services platform providing visibility, guidance & support for your cloud",
+            href: "/solutions/teverse-control",
+          },
+          {
+            title: "Teverse Gateway",
+            description:
+              "AWS guidance for efficient cloud growth and foundational best practices",
+            href: "/solutions/teverse-gateway",
+          },
+          {
+            title: "Teverse Engagements",
+            description:
+              "Get transparent reporting and live updates on your team's status",
+            href: "/solutions/cloud-engagements",
+          },
+          {
+            title: "Teverse Cloud Score",
+            description:
+              "Proprietary scoring of your cloud architecture against AWS best practices",
+            href: "/solutions/cloud-score",
+          },
+          {
+            title: "Teverse Cloud Secure",
+            description: "Fully managed security, detection, and response",
+            href: "/solutions/cloud-secure",
+          },
+        ],
       },
       {
-        category: "Teverse Control",
+        category: "IDAM Solutions",
+        href: "/solutions",
         description:
-          "Cloud services platform providing visibility, guidance & support for your cloud",
-        href: "/solutions/teverse-control",
+          "Explore our cloud solutions and services for your business needs",
+        subitems: [
+          {
+            title: "Teverse Engagements",
+            description:
+              "Get transparent reporting and live updates on your team's status",
+            href: "/solutions/cloud-engagements",
+          },
+          {
+            title: "Teverse Cloud Score",
+            description:
+              "Proprietary scoring of your cloud architecture against AWS best practices",
+            href: "/solutions/cloud-score",
+          },
+          {
+            title: "Teverse Cloud Secure",
+            description: "Fully managed security, detection, and response",
+            href: "/solutions/cloud-secure",
+          },
+        ],
       },
       {
-        category: "Teverse Gateway",
+        category: "Generative AI",
+        href: "/solutions",
         description:
-          "AWS guidance for efficient cloud growth and foundational best practices",
-        href: "/solutions/teverse-gateway",
-      },
-      {
-        category: "Teverse Engagements",
-        description:
-          "Get transparent reporting and live updates on your team's status",
-        href: "/solutions/cloud-engagements",
-      },
-      {
-        category: "Teverse Cloud Score",
-        description:
-          "Proprietary scoring of your cloud architecture against AWS best practices",
-        href: "/solutions/cloud-score",
-      },
-      {
-        category: "Teverse Cloud Secure",
-        description: "Fully managed security, detection, and response",
-        href: "/solutions/cloud-secure",
+          "Explore our cloud solutions and services for your business needs",
+        subitems: [
+          {
+            title: "Teverse Control",
+            description:
+              "Cloud services platform providing visibility, guidance & support for your cloud",
+            href: "/solutions/teverse-control",
+          },
+          {
+            title: "Teverse Gateway",
+            description:
+              "AWS guidance for efficient cloud growth and foundational best practices",
+            href: "/solutions/teverse-gateway",
+          },
+          {
+            title: "Teverse Engagements",
+            description:
+              "Get transparent reporting and live updates on your team's status",
+            href: "/solutions/cloud-engagements",
+          },
+        ],
       },
     ],
   },
@@ -219,10 +272,6 @@ const navItems: NavItem[] = [
     title: "Resources",
     href: "/resources",
     items: [
-      // {
-      //   category: "Knowledge Base",
-      //   description: "Access our case studies, blog, and more resources",
-      // },
       {
         category: "Case Studies",
         description: "Explore real-world examples of our solutions in action",
@@ -239,10 +288,6 @@ const navItems: NavItem[] = [
     title: "Company",
     href: "/company",
     items: [
-      // {
-      //   category: "About Mission",
-      //   description: "Learn more about our mission, team, and opportunities",
-      // },
       {
         category: "About Us",
         description: "Discover our company's mission, vision, and values",
@@ -274,7 +319,7 @@ const navItems: NavItem[] = [
 
 export function MainNav() {
   const pathname = usePathname();
-  // const [isMobileOpen, setIsMobileOpen] = React.useState(false);
+  const [isSheetOpen, setIsSheetOpen] = React.useState(false);
 
   const isActive = (href: string) => pathname?.startsWith(href);
   const [activeItem, setActiveItem] = React.useState<string | null>(null);
@@ -299,6 +344,7 @@ export function MainNav() {
   React.useEffect(() => {
     const handleRouteChange = () => {
       setActiveItem(null);
+      setIsSheetOpen(false);
     };
 
     router.events.on("routeChangeStart", handleRouteChange);
@@ -308,8 +354,9 @@ export function MainNav() {
   }, [router.events]);
 
   return (
-    <nav className="relative bg-nav-gradient font-mono" id="scrollable">
-      <nav className="fixed top-0 z-50 w-full border-b bg-nav-gradient px-7 backdrop-blur-sm">
+    // bg-home-gradient
+    <nav className="relative font-mono" id="scrollable">
+      <nav className="fixed top-0 z-50 w-full border-b bg-main-gradient px-7 backdrop-blur-lg">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
             <Link
@@ -317,7 +364,7 @@ export function MainNav() {
               className="flexitems-center space-x-2 overflow-hidden"
             >
               <Image
-                src={"/assets/logo-new.png"}
+                src={"/assets/logo-main-sm.png"}
                 width={150}
                 height={150}
                 alt="brand logo"
@@ -352,7 +399,7 @@ export function MainNav() {
                 Contact <ArrowIcon />
               </Button>{" "}
             </Link>
-            <Sheet>
+            <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetTrigger asChild>
                 <Button
                   variant="outline"
@@ -373,7 +420,7 @@ export function MainNav() {
                       className="flex items-center space-x-2 font-mono"
                     >
                       <Image
-                        src={"/assets/logo-new.png"}
+                        src={"/assets/logo-main-sm.png"}
                         width={150}
                         height={150}
                         alt="brand logo"
@@ -398,7 +445,7 @@ export function MainNav() {
                                   {section.category}
                                 </h3>
                               </Link>
-                              <p className="mb-2 text-sm text-black opacity-50">
+                              <p className="mb-2 text-xs text-black opacity-50">
                                 {section.description}
                               </p>
                               <div className="space-y-2">
@@ -479,7 +526,7 @@ export function MainNav() {
                                   </h4>
                                   <ChevronRight className="ease h-4 w-4 transition-all group-hover:translate-x-1" />
                                 </div>
-                                <p className="text-sm text-muted-foreground">
+                                <p className="text-xs text-muted-foreground">
                                   {subitem.description}
                                 </p>
                               </Link>
