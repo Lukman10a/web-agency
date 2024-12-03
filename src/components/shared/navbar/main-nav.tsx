@@ -53,11 +53,23 @@ const navItems: NavItem[] = [
     title: "Solutions",
     items: [
       {
-        category: "IDAM Solutions",
+        category: "Cloud Solutions",
         href: "/solutions",
         description:
           "Explore our cloud solutions and services for your business needs",
         subitems: [
+          {
+            title: "Teverse Control",
+            description:
+              "Cloud services platform providing visibility, guidance & support for your cloud",
+            href: "/solutions/teverse-control",
+          },
+          {
+            title: "Teverse Gateway",
+            description:
+              "AWS guidance for efficient cloud growth and foundational best practices",
+            href: "/solutions/teverse-gateway",
+          },
           {
             title: "Teverse Engagements",
             description:
@@ -78,23 +90,11 @@ const navItems: NavItem[] = [
         ],
       },
       {
-        category: "Cloud Solutions",
+        category: "IDAM Solutions",
         href: "/solutions",
         description:
           "Explore our cloud solutions and services for your business needs",
         subitems: [
-          {
-            title: "Teverse Control",
-            description:
-              "Cloud services platform providing visibility, guidance & support for your cloud",
-            href: "/solutions/teverse-control",
-          },
-          {
-            title: "Teverse Gateway",
-            description:
-              "AWS guidance for efficient cloud growth and foundational best practices",
-            href: "/solutions/teverse-gateway",
-          },
           {
             title: "Teverse Engagements",
             description:
@@ -272,10 +272,6 @@ const navItems: NavItem[] = [
     title: "Resources",
     href: "/resources",
     items: [
-      // {
-      //   category: "Knowledge Base",
-      //   description: "Access our case studies, blog, and more resources",
-      // },
       {
         category: "Case Studies",
         description: "Explore real-world examples of our solutions in action",
@@ -292,10 +288,6 @@ const navItems: NavItem[] = [
     title: "Company",
     href: "/company",
     items: [
-      // {
-      //   category: "About Mission",
-      //   description: "Learn more about our mission, team, and opportunities",
-      // },
       {
         category: "About Us",
         description: "Discover our company's mission, vision, and values",
@@ -327,7 +319,7 @@ const navItems: NavItem[] = [
 
 export function MainNav() {
   const pathname = usePathname();
-  // const [isMobileOpen, setIsMobileOpen] = React.useState(false);
+  const [isSheetOpen, setIsSheetOpen] = React.useState(false);
 
   const isActive = (href: string) => pathname?.startsWith(href);
   const [activeItem, setActiveItem] = React.useState<string | null>(null);
@@ -352,6 +344,7 @@ export function MainNav() {
   React.useEffect(() => {
     const handleRouteChange = () => {
       setActiveItem(null);
+      setIsSheetOpen(false);
     };
 
     router.events.on("routeChangeStart", handleRouteChange);
@@ -361,8 +354,9 @@ export function MainNav() {
   }, [router.events]);
 
   return (
-    <nav className="relative bg-nav-gradient font-mono" id="scrollable">
-      <nav className="fixed top-0 z-50 w-full border-b bg-nav-gradient px-7 backdrop-blur-sm">
+    // bg-home-gradient
+    <nav className="relative font-mono" id="scrollable">
+      <nav className="fixed top-0 z-50 w-full border-b bg-main-gradient px-7 backdrop-blur-lg">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
             <Link
@@ -405,7 +399,7 @@ export function MainNav() {
                 Contact <ArrowIcon />
               </Button>{" "}
             </Link>
-            <Sheet>
+            <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetTrigger asChild>
                 <Button
                   variant="outline"
