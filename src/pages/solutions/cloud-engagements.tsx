@@ -1,22 +1,19 @@
 import React from "react";
 
-import icon from "/public/assets/icon.png";
+import Image from "next/image";
 
+// import icon from "/public/assets/icon.png";
 import image from "/public/assets/engagement.png";
 import icon from "/public/svg/forcura.svg";
 
 import Benefits from "@/components/benefits";
 import CardSection from "@/components/card-section";
 import DevOpsMethodology from "@/components/devops";
-<<<<<<< HEAD
 import FeatureCard from "@/components/shared/feature-card";
-=======
->>>>>>> OldVersion
 import NewHero from "@/components/shared/new-hero";
 import PartnersCard from "@/components/shared/partners-card";
 import ServicesCard from "@/components/shared/services-card";
 import WhatIsTeverse from "@/components/What-is-teverse";
-
 
 const disciplines = [
   "Infrastructure as Code",
@@ -186,13 +183,14 @@ export default function CloudEngagements() {
         </p>
 
         <div className="grid grid-cols-3 gap-4 lg:grid-cols-2">
-          {devOpsCard.map((card,index) => (
+          {devOpsCard.map((card, index) => (
             <div
               key={index}
-              className="rounded-3xl bg-gradient-to-t from-[#52a5cc] to-white p-6 py-16">
-                <p className="mb-4 text-4xl">{card.title}</p>
-                <p className="text-lg">{card.description}</p>
-              </div>
+              className="rounded-3xl bg-gradient-to-t from-[#52a5cc] to-white p-6 py-16"
+            >
+              <p className="mb-4 text-4xl">{card.title}</p>
+              <p className="text-lg">{card.description}</p>
+            </div>
           ))}
         </div>
       </div>
@@ -206,6 +204,7 @@ export default function CloudEngagements() {
         index={1}
         showButton={true}
         buttonText="Get Started"
+        href={""}
       />
     </div>
   );
