@@ -141,6 +141,7 @@ const GenerativeAI = () => {
           index={1}
           showButton={true}
           buttonText="Get Started"
+          href="#"
       
       />
       <Resources />
