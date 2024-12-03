@@ -53,39 +53,92 @@ const navItems: NavItem[] = [
     title: "Solutions",
     items: [
       {
+        category: "IDAM Solutions",
+        href: "/solutions",
+        description:
+          "Explore our cloud solutions and services for your business needs",
+        subitems: [
+          {
+            title: "Teverse Engagements",
+            description:
+              "Get transparent reporting and live updates on your team's status",
+            href: "/solutions/cloud-engagements",
+          },
+          {
+            title: "Teverse Cloud Score",
+            description:
+              "Proprietary scoring of your cloud architecture against AWS best practices",
+            href: "/solutions/cloud-score",
+          },
+          {
+            title: "Teverse Cloud Secure",
+            description: "Fully managed security, detection, and response",
+            href: "/solutions/cloud-secure",
+          },
+        ],
+      },
+      {
         category: "Cloud Solutions",
         href: "/solutions",
         description:
           "Explore our cloud solutions and services for your business needs",
+        subitems: [
+          {
+            title: "Teverse Control",
+            description:
+              "Cloud services platform providing visibility, guidance & support for your cloud",
+            href: "/solutions/teverse-control",
+          },
+          {
+            title: "Teverse Gateway",
+            description:
+              "AWS guidance for efficient cloud growth and foundational best practices",
+            href: "/solutions/teverse-gateway",
+          },
+          {
+            title: "Teverse Engagements",
+            description:
+              "Get transparent reporting and live updates on your team's status",
+            href: "/solutions/cloud-engagements",
+          },
+          {
+            title: "Teverse Cloud Score",
+            description:
+              "Proprietary scoring of your cloud architecture against AWS best practices",
+            href: "/solutions/cloud-score",
+          },
+          {
+            title: "Teverse Cloud Secure",
+            description: "Fully managed security, detection, and response",
+            href: "/solutions/cloud-secure",
+          },
+        ],
       },
       {
-        category: "Teverse Control",
+        category: "Generative AI",
+        href: "/solutions",
         description:
-          "Cloud services platform providing visibility, guidance & support for your cloud",
-        href: "/solutions/teverse-control",
-      },
-      {
-        category: "Teverse Gateway",
-        description:
-          "AWS guidance for efficient cloud growth and foundational best practices",
-        href: "/solutions/teverse-gateway",
-      },
-      {
-        category: "Teverse Engagements",
-        description:
-          "Get transparent reporting and live updates on your team's status",
-        href: "/solutions/cloud-engagements",
-      },
-      {
-        category: "Teverse Cloud Score",
-        description:
-          "Proprietary scoring of your cloud architecture against AWS best practices",
-        href: "/solutions/cloud-score",
-      },
-      {
-        category: "Teverse Cloud Secure",
-        description: "Fully managed security, detection, and response",
-        href: "/solutions/cloud-secure",
+          "Explore our cloud solutions and services for your business needs",
+        subitems: [
+          {
+            title: "Teverse Control",
+            description:
+              "Cloud services platform providing visibility, guidance & support for your cloud",
+            href: "/solutions/teverse-control",
+          },
+          {
+            title: "Teverse Gateway",
+            description:
+              "AWS guidance for efficient cloud growth and foundational best practices",
+            href: "/solutions/teverse-gateway",
+          },
+          {
+            title: "Teverse Engagements",
+            description:
+              "Get transparent reporting and live updates on your team's status",
+            href: "/solutions/cloud-engagements",
+          },
+        ],
       },
     ],
   },
@@ -317,7 +370,7 @@ export function MainNav() {
               className="flexitems-center space-x-2 overflow-hidden"
             >
               <Image
-                src={"/assets/logo-new.png"}
+                src={"/assets/logo-main-sm.png"}
                 width={150}
                 height={150}
                 alt="brand logo"
@@ -373,7 +426,7 @@ export function MainNav() {
                       className="flex items-center space-x-2 font-mono"
                     >
                       <Image
-                        src={"/assets/logo-new.png"}
+                        src={"/assets/logo-main-sm.png"}
                         width={150}
                         height={150}
                         alt="brand logo"
@@ -398,7 +451,7 @@ export function MainNav() {
                                   {section.category}
                                 </h3>
                               </Link>
-                              <p className="mb-2 text-sm text-black opacity-50">
+                              <p className="mb-2 text-xs text-black opacity-50">
                                 {section.description}
                               </p>
                               <div className="space-y-2">
@@ -479,7 +532,7 @@ export function MainNav() {
                                   </h4>
                                   <ChevronRight className="ease h-4 w-4 transition-all group-hover:translate-x-1" />
                                 </div>
-                                <p className="text-sm text-muted-foreground">
+                                <p className="text-xs text-muted-foreground">
                                   {subitem.description}
                                 </p>
                               </Link>
