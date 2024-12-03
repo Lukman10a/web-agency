@@ -39,6 +39,8 @@ const config: typeof Config = {
       backgroundImage: {
         "main-gradient":
           "linear-gradient(to right, rgba(8,19,72,0.1), rgba(255,149,87,0.1))",
+        "home-gradient":
+          "linear-gradient(-89.631deg, #173D7A 0%, #99B5D0 44%, #FFFFFF 100%);",
         "main-gradient-blue":
           "linear-gradient(to right, rgba(80, 206, 245, 0.2), rgba(255, 149, 87, 0.2))",
         "main-old":

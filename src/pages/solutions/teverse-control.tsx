@@ -90,7 +90,7 @@ const FeatureList: React.FC<{ sections: ReusableComponentProps[] }> = ({
 
 const TeverseControl = () => {
   return (
-    <main className="bg-main-gradient">
+    <main>
       <TeverseControlHero />
       <InterpretDataSection />
       <section className="space-y-6 bg-main-gradient px-20 py-10 text-left text-2xl font-medium sm:mx-5 sm:text-lg">

@@ -13,7 +13,7 @@ import { Button } from "./ui/button";
 const Hero = () => {
   return (
     <header className="min-h-[60vh] overflow-hidden will-change-transform">
-      <div className="bg-main-gradient px-4 py-14">
+      <div className="bg-home-gradient px-4 py-14">
         <div className="relative isolate mx-auto flex w-11/12 max-w-7xl gap-8 overflow-hidden rounded-xl bg-cover lg:flex-col md:w-full md:px-4">
           <div className="relative z-[1] flex-1">
             <InView

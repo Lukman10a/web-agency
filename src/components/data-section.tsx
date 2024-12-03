@@ -60,7 +60,7 @@ const InterpretDataSection: React.FC = () => {
   };
 
   return (
-    <section className="mx-auto mt-[10rem] flex max-w-7xl flex-col space-y-5 px-10 sm:px-4 sm:mt-10">
+    <section className="mx-auto mt-[10rem] flex max-w-7xl flex-col space-y-5 px-10 sm:mt-10 sm:px-4">
       <div className="space-y-4">
         <motion.div
           className="mb-4 inline rounded-full py-1 text-xs tracking-wide text-gray-500"
@@ -110,11 +110,7 @@ const InterpretDataSection: React.FC = () => {
         {cardData.map((card, index) => (
           <motion.div
             key={index}
-            className="flex flex-col sm:p-4 rounded-2xl p-14 text-left shadow-lg"
-            style={{
-              background:
-                "linear-gradient(to bottom, #FDF3EB 10%, #FB7900 100%)",
-            }}
+            className="flex flex-col rounded-2xl bg-main-gradient p-14 text-left shadow-lg sm:p-4"
             variants={cardVariants}
             whileHover={{
               scale: 1.05, // Slight hover scale effect
@@ -128,7 +124,7 @@ const InterpretDataSection: React.FC = () => {
             <h3 className="mb-2 text-2xl font-semibold text-black sm:text-lg">
               {card.title}
             </h3>
-            <p className="text-xl sm:text-sm text-black">{card.description}</p>
+            <p className="text-xl text-black sm:text-sm">{card.description}</p>
           </motion.div>
         ))}
       </motion.div>

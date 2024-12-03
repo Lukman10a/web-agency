@@ -87,6 +87,7 @@ const CloudFoundation = () => {
         showTag={true}
         tagText="Overview"
         index={1}
+        href={""}
       />
 
       <AwsBuild
@@ -115,6 +116,7 @@ const CloudFoundation = () => {
         index={1}
         showButton={true}
         buttonText="Learn More"
+        href={""}
       />
       <ServicesCard
         imgSrc="/public/assets/contact"
@@ -124,6 +126,7 @@ const CloudFoundation = () => {
         index={2}
         showButton={true}
         buttonText="Schedule Assessment"
+        href={""}
       />
 
       <Preverity />
@@ -142,6 +145,7 @@ const CloudFoundation = () => {
         index={1}
         showButton={true}
         buttonText="Schedule a call"
+        href={""}
       />
     </main>
   );

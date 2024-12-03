@@ -4,8 +4,9 @@ import Image from "next/image";
 
 // import icon from "/public/assets/icon.png";
 import image from "/public/assets/engagement.png";
-import icon from "/public/svg/forcura.svg";
+import icon from "/public/assets/icon.png";
 
+// import icon from "/public/svg/forcura.svg";
 import Benefits from "@/components/benefits";
 import CardSection from "@/components/card-section";
 import DevOpsMethodology from "@/components/devops";
