@@ -1,16 +1,16 @@
-import BenefitsSection from "@/components/shared/cloud-card";
-import NewHero from "@/components/shared/new-hero";
-import WhatIsTeverse from "@/components/What-is-teverse";
 import React from "react";
-import FAQ from "@/components/shared/FAQ";
-import Resources from "@/components/resources";
-import ServicesCard from "@/components/shared/services-card";
+
 import ReusableComponent from "@/components/control-features";
-import PartnersCard from "@/components/shared/partners-card";
 import DynamicProgramList from "@/components/migration-tools";
+import Resources from "@/components/resources";
+import BenefitsSection from "@/components/shared/cloud-card";
+import FAQ from "@/components/shared/FAQ";
+import NewHero from "@/components/shared/new-hero";
+import PartnersCard from "@/components/shared/partners-card";
+import ServicesCard from "@/components/shared/services-card";
+import WhatIsTeverse from "@/components/What-is-teverse";
 
 const AWSIM = () => {
-
   interface ReusableComponentProps {
     image: string;
     title: string;
@@ -20,7 +20,7 @@ const AWSIM = () => {
     showButton?: boolean;
     reverse?: boolean;
     starsAnimation?: boolean;
-    additionalImage?: string; 
+    additionalImage?: string;
     additionalImagePosition?: {
       bottom: number;
       left: number;
@@ -28,14 +28,13 @@ const AWSIM = () => {
       right: number;
     };
   }
-  
 
   const sections: ReusableComponentProps[] = [
     {
       image: "/assets/score.webp",
       additionalImage:
-        "https://www.missioncloud.com/hubfs/2024_illustrations/Illustrations_Stars.svg", 
-      additionalImagePosition: { bottom: -20, left: -50, top: 0, right: 0 }, 
+        "https://www.missioncloud.com/hubfs/2024_illustrations/Illustrations_Stars.svg",
+      additionalImagePosition: { bottom: -20, left: -50, top: 0, right: 0 },
       title: "Phase 1",
       altDescription: "Assess",
       description:
@@ -79,8 +78,7 @@ const AWSIM = () => {
   const benefitsData = {
     tag: true,
     title: "Benefits of Migrating with Mission",
-    description:
-      "",
+    description: "",
     benefits: [
       {
         icon: "/assets/heart-rate.png",
@@ -124,7 +122,7 @@ const AWSIM = () => {
       {/* What Is Teverse Section */}
       <WhatIsTeverse
         tag
-        tagText = "OVERVIEW"
+        tagText="OVERVIEW"
         title="Migrate With Confidence"
         mainDescription="For the second year running, AWS has recognized us for our outstanding work in its Migrations Acceleration Program—for our accuracy in budgeting and our speed in moving customer workloads."
         additionalDescription="When you partner with Mission for your AWS cloud migration, you’ll receive the hands-on care of experienced professionals who’ve helped hundreds of customers migrate to AWS. We’ve moved customers from on-premises data centers, non-AWS cloud platforms, and PaaS providers like Heroku and Rackspace. We offer a wide range of cloud migration services and can perform full infrastructure refactors or specialty cloud migrations, like Microsoft workloads and database migrations."
@@ -132,17 +130,33 @@ const AWSIM = () => {
 
       {/* Benefits Section */}
       <BenefitsSection {...benefitsData} />
-      <section className="max-w-6xl mx-auto space-y-6 py-7">
-        <h6 className="font-bold text-lg">Steps</h6>
-        <h3 className=" text-3xl">Leverage Our <span className="border border-black rounded-lg p-1">3-Phase </span> Migration Process</h3>
-        <p className="font-normal text-2xl">Ensure a successful cloud migration by fully understanding your current environment and how to best migrate and modernize your infrastructure. Your objectives, requirements, and challenges are our focus as we build an AWS environment that aligns with your business.</p>
+      <section className="mx-auto max-w-6xl space-y-6 py-7">
+        <h6 className="text-lg font-bold">Steps</h6>
+        <h3 className="text-3xl">
+          Leverage Our{" "}
+          <span className="rounded-lg border border-black p-1">3-Phase </span>{" "}
+          Migration Process
+        </h3>
+        <p className="text-2xl font-normal">
+          Ensure a successful cloud migration by fully understanding your
+          current environment and how to best migrate and modernize your
+          infrastructure. Your objectives, requirements, and challenges are our
+          focus as we build an AWS environment that aligns with your business.
+        </p>
       </section>
 
       <FeatureList sections={sections} />
 
-      <section className="space-y-7 max-w-6xl mx-auto py-10">
+      <section className="mx-auto max-w-6xl space-y-7 py-10">
         <h2 className="text-3xl">Migrate With Proven AWS Tools</h2>
-        <p className="text-2xl">When you partner with Mission for your AWS migration and utilize our cloud migration services, you’ll receive the hands-on care of experienced professionals. We move customers from on-premises data centers, non-AWS cloud platforms, and PaaS providers like Heroku and Rackspace. We can perform full infrastructure refactors or specialty cloud migrations, like Microsoft workloads and database migrations.</p>
+        <p className="text-2xl">
+          When you partner with Mission for your AWS migration and utilize our
+          cloud migration services, you’ll receive the hands-on care of
+          experienced professionals. We move customers from on-premises data
+          centers, non-AWS cloud platforms, and PaaS providers like Heroku and
+          Rackspace. We can perform full infrastructure refactors or specialty
+          cloud migrations, like Microsoft workloads and database migrations.
+        </p>
       </section>
 
       <DynamicProgramList />
@@ -157,16 +171,16 @@ const AWSIM = () => {
       <FAQ />
       <Resources />
       <ServicesCard
-          imgSrc="/assets/checkers.png"
-          altText="Custom Alt Text"
-          title="Start Your AWS Cloud Migration Journey Today"
-          description="Schedule a call with a Mission Cloud Advisor to learn about our cloud migration services and to help you prepare for and migrate to the cloud with confidence."
-          showTag={true}
-          tagText="GET IN TOUCH"
-          index={1}
-          showButton={true}
-          buttonText="Get Started"
-      
+        imgSrc="/assets/checkers.png"
+        altText="Custom Alt Text"
+        title="Start Your AWS Cloud Migration Journey Today"
+        description="Schedule a call with a Mission Cloud Advisor to learn about our cloud migration services and to help you prepare for and migrate to the cloud with confidence."
+        showTag={true}
+        tagText="GET IN TOUCH"
+        index={1}
+        showButton={true}
+        buttonText="Get Started"
+        href={"/contact"}
       />
     </div>
   );

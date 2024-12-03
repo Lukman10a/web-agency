@@ -17,11 +17,7 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
   mainDescription,
   additionalDescription,
   tag = true,
-<<<<<<< HEAD
   tagText,
-=======
-  // tagText = "OVERVIEW",
->>>>>>> OldVersion
 }) => {
   // Intersection Observer Hook
   const { ref, inView } = useInView({

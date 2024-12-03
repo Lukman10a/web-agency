@@ -105,7 +105,7 @@ const NewHero: React.FC<NewHeroProps> = ({
           </motion.p>
           {showButton && (
             <motion.div variants={itemVariants}>
-              <Button className="flex w-fit items-center gap-4 rounded-[4rem] bg-black px-8 py-7 font-sans text-lg text-white hover:bg-white hover:text-black md:mx-auto md:w-[90%] sm:mb-4 sm:w-full">
+              <Button className="flex w-fit items-center gap-4 rounded-[4rem] bg-orange-650 px-8 py-7 font-sans text-lg text-white hover:bg-white hover:text-black md:mx-auto md:w-[90%] sm:mb-4 sm:w-full">
                 <span>{buttonText}</span>
               </Button>
             </motion.div>
