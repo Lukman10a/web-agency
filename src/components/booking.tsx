@@ -5,8 +5,8 @@ import Link from "next/link";
 
 import image from "../../public/assets/cardimage1.png";
 import ArrowIcon from "./icons/arrow";
-import { Button } from "./ui/button";
 import { BorderTrail } from "./ui/animated/border-trail";
+import { Button } from "./ui/button";
 
 const stats = [
   { count: "1000+", label: "Nodes" },
@@ -17,22 +17,16 @@ const stats = [
 const Booking: React.FC = () => (
   <section className="mx-4">
     {/* Let's Talk Card */}
-    
 
-    <div className="relative container mx-auto my-10 max-w-7xl rounded-lg border p-6">
-           
-    
-       
-
- <BorderTrail
-          style={{
-            boxShadow:
-              "0px 0px 60px 30px rgb(255 255 255 / 50%), 0 0 100px 60px rgb(0 0 0 / 50%), 0 0 140px 90px rgb(0 0 0 / 50%)",
-          }}
+    <div className="container relative mx-auto my-10 max-w-7xl overflow-hidden rounded-lg border p-6">
+      <BorderTrail
+        style={{
+          boxShadow:
+            "0px 0px 60px 30px rgb(255 255 255 / 50%), 0 0 100px 60px rgb(0 0 0 / 50%), 0 0 140px 90px rgb(0 0 0 / 50%)",
+        }}
       />
-     
-      <div className=" mx-auto flex items-center gap-6 rounded-2xl bg-[#fcfcfc] p-6 md:flex-col">
-       
+
+      <div className="mx-auto flex items-center gap-6 rounded-2xl bg-[#fcfcfc] p-6 md:flex-col">
         <Image
           src={image}
           alt="Card image"
@@ -41,7 +35,7 @@ const Booking: React.FC = () => (
           className="w-1/2 sm:w-full"
         />
         <div className="w-1/2 sm:w-full">
-          <h3 className="mb-4 font-sora text-5xl font-bold md:text-3xl ">
+          <h3 className="mb-4 font-sora text-5xl font-bold md:text-3xl">
             Let’s talk!
           </h3>
           <p className="mb-6">
@@ -60,16 +54,15 @@ const Booking: React.FC = () => (
             </Link>
           </Button>
         </div>
-        </div>
-       
+      </div>
     </div>
 
     {/* Stats */}
-    <div className="container mx-auto mb-16 flex max-w-7xl justify-evenly  md:flex-wrap sm:gap-7 md:items-center">
+    <div className="container mx-auto mb-16 flex max-w-7xl justify-evenly md:flex-wrap md:items-center sm:gap-7">
       {stats.map((stat, index) => (
         <div
           key={index}
-          className="flex flex-col items-center text-center ring-1 ring-neutral-400 px-20 space-y-3 py-10 rounded-xl transition-transform transform hover:-translate-y-2 sm:-translate-y-0"
+          className="flex transform flex-col items-center space-y-3 rounded-xl px-20 py-10 text-center ring-1 ring-neutral-400 transition-transform hover:-translate-y-2 sm:-translate-y-0"
         >
           <Image
             src="/assets/starts.png"
@@ -81,9 +74,7 @@ const Booking: React.FC = () => (
           <p className="text-gray-500">{stat.label}</p>
         </div>
       ))}
-       
-      </div>
-      
+    </div>
   </section>
 );
 

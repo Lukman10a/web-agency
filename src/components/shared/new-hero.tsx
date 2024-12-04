@@ -11,6 +11,7 @@ import { Button } from "../ui/button";
 type NewHeroProps = {
   reverse?: boolean;
   title: string;
+  showHighlighted?: boolean;
   ImgSrc: string;
   description: string;
   showButton?: boolean;
@@ -32,7 +33,7 @@ const NewHero: React.FC<NewHeroProps> = ({
   tagText,
   icon = false,
   iconLink,
-  // tagText,
+  showHighlighted = true,
 }) => {
   // Animation Variants
   const containerVariants = {
@@ -49,7 +50,7 @@ const NewHero: React.FC<NewHeroProps> = ({
   };
 
   return (
-    <section className="mx-auto mb-24 bg-main-gradient px-16 py-20 xl:rounded-t-none lg:p-12 lg:py-16 md:mb-16 md:px-0 sm:mb-12">
+    <section className="mx-auto mb-20 bg-main-gradient px-16 py-20 xl:rounded-t-none lg:p-12 lg:py-16 md:mb-16 md:px-0 sm:mb-12">
       <motion.div
         className={`mx-auto flex w-[95%] max-w-7xl gap-12 2md:gap-8 md:w-[85%] md:flex-col md:gap-6 ${
           reverse ? "flex-row-reverse" : "flex-row"
@@ -86,15 +87,17 @@ const NewHero: React.FC<NewHeroProps> = ({
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            <HighlightedText
-              highlightColor="#f4982e"
-              highlightHeight="100%"
-              className="p-2"
-              highlightClassName="z-[-1] rounded-lg"
-              delay={1.5}
-            >
-              AWS
-            </HighlightedText>{" "}
+            {showHighlighted && (
+              <HighlightedText
+                highlightColor="#f4982e"
+                highlightHeight="100%"
+                className="p-2"
+                highlightClassName="z-[-1] rounded-lg"
+                delay={1.5}
+              >
+                AWS
+              </HighlightedText>
+            )}{" "}
             {title}
           </motion.h1>
           <motion.p
