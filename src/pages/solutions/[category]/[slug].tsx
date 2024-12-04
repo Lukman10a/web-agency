@@ -1,11 +1,12 @@
-// pages/solutions/[category]/[slug].tsx
 import { GetStaticPaths, GetStaticProps } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { solutionsData } from "@/data/solutions";
+import { motion } from "framer-motion";
 import {
-  ArrowRight,
+  CheckCircle2,
   Clock,
   Coffee,
   Lock,
@@ -81,15 +82,42 @@ export default function SolutionPage({
         </section>
 
         <section>
-          <h3 className="mb-4 text-xl font-semibold">Benefits</h3>
-          <ul className="grid grid-cols-2 gap-4 md:grid-cols-1">
+          <h3 className="mb-4 text-xl font-semibold">Key Benefits</h3>
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-1">
+            <div className="rounded-2xl bg-gradient-to-br from-orange-500 to-orange-700 p-8 text-white">
+              <ul className="space-y-4">
+                {solution.benefits.map((benefit, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 * index }}
+                    className="flex items-center gap-3"
+                  >
+                    <CheckCircle2 className="h-5 w-5 flex-shrink-0" />
+                    <span>{benefit}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl bg-gray-50 p-8">
+              <Image
+                src="https://images.unsplash.com/photo-1633265486064-086b219458ec?w=800&auto=format&fit=crop&q=60"
+                alt="Security Illustration"
+                className="h-full w-full rounded-lg object-cover"
+                width={800}
+                height={800}
+              />
+            </div>
+          </div>
+          {/* <ul className="grid grid-cols-2 gap-4 md:grid-cols-1">
             {solution.benefits.map((benefit, index) => (
               <li key={index} className="flex items-start">
                 <ArrowRight className="mr-2 mt-1 h-5 w-5 flex-shrink-0 text-orange-500" />
                 <span>{benefit}</span>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </section>
       </div>
       {solution.capabilities && (
