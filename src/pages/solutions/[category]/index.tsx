@@ -1,11 +1,17 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 import { solutionsData } from "@/data/solutions";
 import { Coffee, Settings, Shield, Target } from "lucide-react";
 import { ParsedUrlQuery } from "querystring";
 
+import { HighlightedText } from "@/components/ui/animated/highlight-text";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+
+import ArrowIcon from "@/components/icons/arrow";
+import ContactSection from "@/components/lets-talk";
 
 // Type for page params
 interface Params extends ParsedUrlQuery {
@@ -22,18 +28,50 @@ interface CategoryPageProps {
       description: string;
     }>;
   };
+  params: { category: string };
 }
 
-const CategoryPage: NextPage<CategoryPageProps> = ({ category }) => {
+const CategoryPage: NextPage<CategoryPageProps> = ({ category, params }) => {
   return (
-    <div className="min-h-screen">
-      <div className="container mx-auto px-4 py-12">
-        <div className="mx-auto max-w-4xl">
+    <div>
+      <header className="flex items-center gap-10 bg-main-gradient p-12 md:flex-col">
+        <div className="flex-[3] space-y-10 md:flex-1">
+          <h1 className="animate-fade-in-up font-sora text-6xl font-extrabold">
+            {category.category}
+          </h1>
+          <p className="animate-fade-in-up text-xl delay-200">
+            We make sure you receive a tailor-made & cost-efficient cloud
+            environment that is secure, scalable, easy to operate, and
+            built-to-last
+          </p>
+
+          <Button
+            asChild
+            className="flex w-fit transform items-center gap-4 rounded-2xl border border-[#081348] bg-orange-650 text-white transition duration-500 hover:scale-105 hover:bg-orange-600"
+          >
+            <Link href="#">
+              <span>EXPLORE</span>
+              <ArrowIcon />
+            </Link>
+          </Button>
+        </div>
+        <div className="flex-[2] overflow-hidden rounded-xl">
+          <Image
+            src={"/svg/hero-illustration.svg"}
+            // src={"/assets/teverse-hero-optimize.gif"}
+            alt="hero-illustration"
+            unoptimized
+            height={500}
+            width={500}
+            className="h-full object-contain lg:h-auto lg:w-full"
+          />
+        </div>
+      </header>
+      <section className="container mx-auto px-4 py-12">
+        <div className="mx-auto max-w-6xl">
           <span className="mb-6 inline-block rounded-full border border-gray-200 px-4 py-1 text-sm font-medium">
             BENEFITS
           </span>
-
-          <h1 className="mb-6 text-4xl font-bold">{category.category}</h1>
 
           <p className="mb-4 text-lg text-gray-600">
             Managing an AWS environment can take valuable time away from
@@ -44,9 +82,17 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category }) => {
           </p>
 
           <p className="mb-12 text-gray-600">
-            With {category.category}, we handle everything you need to keep your
-            environment reliably running, so that you stay cost efficient,
-            scalable, agile, and secure.
+            With{" "}
+            <HighlightedText
+              color="#f58d61"
+              highlightHeight="50%"
+              highlightClassName="z-[-1] rounded-lg"
+            >
+              {category.category}
+            </HighlightedText>{" "}
+            , we handle everything you need to keep your environment reliably
+            running, so that you stay cost efficient, scalable, agile, and
+            secure.
           </p>
           <div className="grid grid-cols-2 gap-6 md:grid-cols-1">
             {category.solutions.map((solution, index) => (
@@ -64,7 +110,7 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category }) => {
                   </h3>
                   <p className="text-black/80">{solution.description}</p>
                   <Link
-                    href={`/solutions/${category.category.toLowerCase()}/${solution.slug}`}
+                    href={`/solutions/${params.category}/${solution.slug}`}
                     className="mt-4 inline-block font-semibold text-black hover:opacity-80"
                   >
                     Learn more
@@ -74,7 +120,8 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category }) => {
             ))}
           </div>
         </div>
-      </div>
+      </section>
+      <ContactSection />
     </div>
   );
 };
@@ -125,6 +172,7 @@ export const getStaticProps: GetStaticProps<
   return {
     props: {
       category: sanitizedCategory,
+      params,
     },
   };
 };

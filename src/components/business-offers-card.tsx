@@ -15,7 +15,7 @@ type HomeCardProps = {
   titleIcon?: ReactNode;
   index: number;
 };
-const HomeCard: React.FC<HomeCardProps> = ({
+const BusinessOffersCard: React.FC<HomeCardProps> = ({
   title,
   description,
   buttonText,
@@ -66,4 +66,4 @@ const HomeCard: React.FC<HomeCardProps> = ({
   );
 };
 
-export default HomeCard;
+export default BusinessOffersCard;
