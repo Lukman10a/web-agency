@@ -55,7 +55,7 @@ const benefitsData = {
 };
 const TeverseGateway = () => {
   return (
-    <section className="bg-secondary-gradient">
+    <section>
       <NewHero
         ImgSrc="/svg/gatewayillust.svg"
         title={"Terverse Cloud Gateway"}
