@@ -16,11 +16,8 @@ import Resources from "@/components/resources";
 import NewHero from "@/components/shared/new-hero";
 import ServicesCard from "@/components/shared/services-card";
 import WhatIsTeverse from "@/components/What-is-teverse";
-<<<<<<< HEAD
-=======
 
 // import MissionSection from "@/components/mission";
->>>>>>> aa431490f374588636947436d483c5532daf1b88
 
 const cardData = [
   {
