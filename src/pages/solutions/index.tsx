@@ -15,7 +15,6 @@ import CloudPlatformSection from "@/components/page-two";
 import { StickyScrollRevealDemo } from "@/components/shared/solutions-list-scroll";
 
 import image from "../../../public/assets/cardimage1.png";
-import solutionHero from "../../../public/assets/cloud-provider.gif";
 
 export default function Solution() {
   return (
@@ -42,7 +41,18 @@ export default function Solution() {
             </Link>
           </Button>
         </div>
-        <div className="flex-[2] overflow-hidden rounded-lg md:hidden">
+        <div className="flex-[2] overflow-hidden rounded-xl">
+          <Image
+            // src={"/svg/hero-illustration.svg"}
+            src={"/assets/teverse-hero-optimize.gif"}
+            alt="hero-illustration"
+            unoptimized
+            height={500}
+            width={500}
+            className="h-full object-contain lg:h-auto lg:w-full"
+          />
+        </div>
+        {/* <div className="flex-[2] overflow-hidden rounded-lg md:hidden">
           <video autoPlay loop muted className="h-full w-full">
             <source src="/assets/cloud-provider.mp4" type="video/mp4" />
           </video>
@@ -51,7 +61,7 @@ export default function Solution() {
           src={solutionHero}
           alt="solution-hero"
           className="hidden flex-1 animate-fade-in-up rounded-lg delay-500 md:block"
-        />
+        /> */}
       </header>
       <StickyScrollRevealDemo />
 

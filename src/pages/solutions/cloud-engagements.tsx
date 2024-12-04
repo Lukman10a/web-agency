@@ -2,6 +2,7 @@ import React from "react";
 
 import Image from "next/image";
 
+// import icon from "/public/assets/icon.png";
 import image from "/public/assets/engagement.png";
 import icon from "/public/assets/icon.png";
 
@@ -92,7 +93,7 @@ const features = [
 
 export default function CloudEngagements() {
   return (
-    <div className="bg-gradient-to-br from-[#a7d2f1] via-[#eaf4ff] to-[#d8e8f3]">
+    <div className="">
       <NewHero
         ImgSrc="/svg/engagement.svg"
         // tag

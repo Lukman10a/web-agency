@@ -7,41 +7,41 @@ import { BsCloudPlus } from "react-icons/bs";
 import { GrShieldSecurity } from "react-icons/gr";
 import { LuUploadCloud } from "react-icons/lu";
 
-import HomeCard from "./home-card";
+import BusinessOffersCard from "./business-offers-card";
 import { BorderTrail } from "./ui/animated/border-trail";
 import { InView } from "./ui/animated/in-view";
 
-const BusinessOffer = () => {
-  const cardData = [
-    {
-      title: "CLOUD CONSULTING",
-      description:
-        "Unlock the full potential of the cloud with our tailored strategies that streamline your operations and optimize costs. From cloud strategy and migration to multi-cloud solutions, we help you build a robust, scalable cloud environment that supports your business goals.",
-      buttonText: "Explore Cloud Solutions",
-      buttonLink: "/cloud",
-      imageSrc: Cardimage1,
-      titleIcon: <LuUploadCloud />,
-    },
-    {
-      title: "IDAM CONSULTING?",
-      description:
-        "Safeguard your business with comprehensive security solutions tailored to your needs. We thoroughly assess and identify potential vulnerabilities in your systems, design robust and scalable security architectures, and implement solutions that protect your assets. ",
-      buttonText: "Strengthen Security",
-      buttonLink: "/security",
-      imageSrc: Cardimage2,
-      titleIcon: <GrShieldSecurity />,
-    },
-    {
-      title: "MANAGED SERVICES",
-      description:
-        "Our 24/7 managed security services provide continuous protection against cyber threats, ensuring your business stays secure at all times. With real-time monitoring and proactive threat detection, we safeguard your operations so you can focus on growing your business while we take care of all your security needs",
-      buttonText: "See Security Plans",
-      buttonLink: "/managed",
-      imageSrc: Cardimage3,
-      titleIcon: <BsCloudPlus />,
-    },
-  ];
+const cardData = [
+  {
+    title: "CLOUD CONSULTING",
+    description:
+      "Unlock the full potential of the cloud with expert guidance on strategy, migration, and management. Our solutions enable you to build a scalable, secure, and cost-effective cloud infrastructure tailored to your business goals.",
+    buttonText: "Explore Cloud Solutions",
+    buttonLink: "/solutions/cloud-consulting",
+    imageSrc: Cardimage1,
+    titleIcon: <LuUploadCloud />,
+  },
+  {
+    title: "IDAM CONSULTING",
+    description:
+      "Empower your business with Identity and Access Management (IDAM) solutions that ensure the right individuals access the right resources at the right times. We design and implement scalable, secure IDAM architectures to protect your organization and streamline access control.",
+    buttonText: "Optimize Access Control",
+    buttonLink: "/solutions/idam-consulting",
+    imageSrc: Cardimage2,
+    titleIcon: <GrShieldSecurity />,
+  },
+  {
+    title: "GENERATIVE AI",
+    description:
+      "Leverage the power of Generative AI to transform your business operations. From automating workflows to enhancing customer experiences, our AI-driven solutions help you unlock new possibilities, optimize productivity, and stay ahead of the competition.",
+    buttonText: "Explore AI Solutions",
+    buttonLink: "/solutions/generative-ai",
+    imageSrc: Cardimage3,
+    titleIcon: <BsCloudPlus />,
+  },
+];
 
+const BusinessOffer = () => {
   return (
     <section className="mx-auto mb-16 w-11/12 max-w-7xl overflow-hidden">
       <div className="relative mb-[3em] w-full rounded-2xl bg-gradient-to-r from-[#e3e7f7] to-[#fae8de] p-[5em] text-center sm:p-[2em]">
@@ -78,7 +78,7 @@ const BusinessOffer = () => {
                 viewOptions={{ margin: "0px 0px -200px 0px" }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
-                <HomeCard
+                <BusinessOffersCard
                   title={card.title}
                   description={card.description}
                   buttonText={card.buttonText}

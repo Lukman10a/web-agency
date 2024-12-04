@@ -1,6 +1,5 @@
 import React from "react";
 
-import Image from "next/image";
 import Link from "next/link";
 
 import ArrowIcon from "./icons/arrow";
@@ -87,7 +86,12 @@ const Hero = () => {
             viewOptions={{ margin: "0px 0px -200px 0px" }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            <div className="flex-1 overflow-hidden rounded-xl">
+            <div className="flex-1 overflow-hidden rounded-lg">
+              <video autoPlay loop muted className="h-full w-full">
+                <source src="/assets/hero-solution.mp4" type="video/mp4" />
+              </video>
+            </div>
+            {/* <div className="flex-1 overflow-hidden rounded-xl">
               <Image
                 // src={"/svg/hero-illustration.svg"}
                 src={"/assets/teverse-hero-optimize.gif"}
@@ -97,7 +101,7 @@ const Hero = () => {
                 width={500}
                 className="h-full object-contain lg:h-auto lg:w-full"
               />
-            </div>
+            </div> */}
           </InView>
         </div>
       </div>

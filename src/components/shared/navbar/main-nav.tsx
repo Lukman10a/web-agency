@@ -51,6 +51,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   {
     title: "Solutions",
+    href: "/solutions",
     items: [
       {
         category: "Cloud Solutions",
@@ -91,52 +92,50 @@ const navItems: NavItem[] = [
       },
       {
         category: "IDAM Solutions",
-        href: "/solutions",
-        description:
-          "Explore our cloud solutions and services for your business needs",
+        href: "/solutions/idam",
+        description: "Comprehensive Identity & Access Management Solutions",
         subitems: [
           {
-            title: "Teverse Engagements",
-            description:
-              "Get transparent reporting and live updates on your team's status",
-            href: "/solutions/cloud-engagements",
+            title: "Identity Governance and Administration (IGA)",
+            description: "Manage user identities and access privileges",
+            href: "/solutions/idam/iga",
           },
           {
-            title: "Teverse Cloud Score",
-            description:
-              "Proprietary scoring of your cloud architecture against AWS best practices",
-            href: "/solutions/cloud-score",
+            title: "Single Sign-On (SSO)",
+            description: "Simplify user authentication across multiple apps",
+            href: "/solutions/idam/sso",
           },
           {
-            title: "Teverse Cloud Secure",
-            description: "Fully managed security, detection, and response",
-            href: "/solutions/cloud-secure",
+            title: "Multi-Factor Authentication (MFA)",
+            description: "Enhance security with multi-factor authentication",
+            href: "/solutions/idam/mfa",
+          },
+          {
+            title: "Privileged Access Management (PAM)",
+            description: "Secure privileged accounts and credentials",
+            href: "/solutions/idam/pam",
           },
         ],
       },
       {
         category: "Generative AI",
-        href: "/solutions",
-        description:
-          "Explore our cloud solutions and services for your business needs",
+        href: "/solutions/generative-ai",
+        description: "Explore AI-driven innovations for your business",
         subitems: [
           {
-            title: "Teverse Control",
-            description:
-              "Cloud services platform providing visibility, guidance & support for your cloud",
-            href: "/solutions/teverse-control",
+            title: "Document Reader",
+            description: "AI-powered document analysis and extraction",
+            href: "/solutions/generative-ai/document-reader",
           },
           {
-            title: "Teverse Gateway",
-            description:
-              "AWS guidance for efficient cloud growth and foundational best practices",
-            href: "/solutions/teverse-gateway",
+            title: "Safety Alerts",
+            description: "AI-based safety monitoring and alert system",
+            href: "/solutions/generative-ai/safety-alerts",
           },
           {
-            title: "Teverse Engagements",
-            description:
-              "Get transparent reporting and live updates on your team's status",
-            href: "/solutions/cloud-engagements",
+            title: "Foundation Models",
+            description: "Leverage large-scale AI models for advanced tasks",
+            href: "/solutions/generative-ai/foundation-models",
           },
         ],
       },
@@ -144,6 +143,7 @@ const navItems: NavItem[] = [
   },
   {
     title: "Services",
+    href: "/services",
     items: [
       {
         category: "Cloud Managed Services",
@@ -157,24 +157,30 @@ const navItems: NavItem[] = [
             href: "/services/cloud-management-services/cloud-foundation",
           },
           {
-            title: "Cloud One",
+            title: "Cloud GoTo",
             description:
               "Our comprehensive service for AWS optimization, operations, and security",
-            href: "/services/cloud-management-services/cloud-one",
+            href: "/services/cloud-management-services/cloud-goto",
           },
         ],
       },
-      // {
-      //   category: "AWS",
-      //   description: "Discover our AWS services and support offerings",
-      //   subitems: [
-      //     {
-      //       title: "AWS Services",
-      //       description: "Explore our full range of AWS services",
-      //       href: "/services/aws",
-      //     },
-      //   ],
-      // },
+      {
+        category: "Security",
+        href: "/services/security",
+        description: "Protect your business with advanced security services",
+        subitems: [
+          {
+            title: "IDAM Security",
+            description: "Custom security solutions for identity management",
+            href: "/services/security/idam",
+          },
+          {
+            title: "Cyber Security",
+            description: "Comprehensive cybersecurity solutions",
+            href: "/services/security/cyber",
+          },
+        ],
+      },
       {
         category: "AI Management Services",
         href: "/services/ai-management",

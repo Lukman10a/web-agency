@@ -1,6 +1,7 @@
 import React from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import { motion } from "framer-motion";
 
@@ -65,10 +66,10 @@ export default function WhyChooseUs() {
     <section className="py-10">
       {/* Section: Why Choose Us */}
 
-      <h1 className="animate-fade-in mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold leading-tight lg:text-[2rem] md:text-[1.6rem]">
+      <h3 className="animate-fade-in mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold leading-tight lg:text-[2rem] md:text-[1.6rem]">
         Why <span className="text-orange-650">Choose</span> Us? <br /> Key
         Benefits for Your Business
-      </h1>
+      </h3>
 
       {/* Benefits Section */}
       <section
@@ -167,9 +168,15 @@ export default function WhyChooseUs() {
             viewOptions={{ margin: "0px 0px -200px 0px" }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            <Button className="group flex w-fit items-center gap-4 rounded-3xl border border-[#081348] bg-orange-650 font-sans text-white transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-white hover:text-orange-650 xl:text-[12px] md:w-full sm:mb-4">
-              <span>Discover Solutions</span>
-              <ArrowIcon />
+            <Button
+              asChild
+              className="group flex w-fit items-center gap-4 rounded-3xl border border-[#081348] bg-orange-650 font-sans text-white transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-white hover:text-orange-650 xl:text-[12px] md:w-full sm:mb-4"
+            >
+              <Link className="h-full" href={"/case-studies"}>
+                <span>Discover Solutions </span>
+
+                <ArrowIcon />
+              </Link>
             </Button>
           </InView>
         </div>
