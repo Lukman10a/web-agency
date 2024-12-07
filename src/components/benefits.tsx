@@ -18,22 +18,18 @@ const Benefits: React.FC<BenefitsProps> = ({ headTitle, items }) => {
           <span className="text-orange-600">Benefits</span> {headTitle}
         </h2>
 
-        <div className="w-full">
+        <ul className="grid w-full grid-cols-responsive300 gap-4">
           {items.map((item, index) => (
-            <div
+            <li
               key={index}
-              className="mb-4 flex items-start space-x-2 rounded-2xl font-sans md:mb-4"
+              className="mb-4 flex h-full items-start rounded-2xl border border-black p-4 font-sans md:mb-4"
             >
-              <ul>
-                <li>
-                  <p className="text-2xl leading-tight text-gray-800 md:text-lg">
-                    {item.title}
-                  </p>
-                </li>
-              </ul>
-            </div>
+              <p className="text-xl leading-tight text-gray-800 md:text-lg">
+                {item.title}
+              </p>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

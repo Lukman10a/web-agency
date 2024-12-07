@@ -362,7 +362,7 @@ export function MainNav() {
   return (
     // bg-home-gradient
     <nav className="relative font-mono" id="scrollable">
-      <nav className="fixed top-0 z-50 w-full border-b bg-main-gradient px-7 backdrop-blur-lg">
+      <nav className="supports-[backdrop-filter]:bg-main-gradient/60 fixed top-0 z-50 w-full border-b bg-main-gradient px-7 backdrop-blur-lg">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
             <Link

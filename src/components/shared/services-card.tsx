@@ -43,7 +43,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
             hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
             visible: { opacity: 1, y: 0, filter: "blur(0px)" },
           }}
-          viewOptions={{ margin: "0px 0px -200px 0px" }}
+          viewOptions={{ margin: "0px 0px -200px 0px", once: true }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <Image
@@ -61,7 +61,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
             hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
             visible: { opacity: 1, y: 0, filter: "blur(0px)" },
           }}
-          viewOptions={{ margin: "0px 0px -200px 0px" }}
+          viewOptions={{ margin: "0px 0px -200px 0px", once: true }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           {showTag && (

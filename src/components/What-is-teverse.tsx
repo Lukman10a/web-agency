@@ -1,5 +1,7 @@
 import React from "react";
 
+import Image, { StaticImageData } from "next/image";
+
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -10,6 +12,7 @@ type WhatIsTeverseProps = {
   bgColor?: string;
   tag?: boolean;
   tagText?: string;
+  imageSrc?: string | StaticImageData;
 };
 
 const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
@@ -18,6 +21,7 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
   additionalDescription,
   tag = true,
   tagText,
+  imageSrc,
 }) => {
   // Intersection Observer Hook
   const { ref, inView } = useInView({
@@ -55,7 +59,15 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
       className="mx-auto mb-32 flex w-[90%] max-w-[1200px] gap-10 lg:gap-2 md:mb-16 md:flex-col-reverse md:gap-4"
     >
       {/* Left Side (Boxes) */}
-      <div className="order-2 mx-auto flex h-[800px] w-[50%] gap-6 rounded-[3rem] bg-[#cccbcb] lg:gap-4 2md:h-auto md:h-[100vw] md:w-full sm:w-[100%]"></div>
+      <div className="order-2 mx-auto flex w-[50%] gap-6 rounded-[3rem] bg-[#cccbcb] lg:gap-4 2md:h-auto md:h-[100vw] md:w-full sm:w-[100%]">
+        <Image
+          src={imageSrc || "/assets/checkers.png"}
+          alt={""}
+          width={300}
+          height={300}
+          className="w-full"
+        />
+      </div>
 
       {/* Right Side (Text) */}
       <motion.div
@@ -70,17 +82,11 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
         <h2 className="mb-6 font-sans text-3xl xl:w-[80%] lg:w-[100%] sm:text-lg">
           {title}
         </h2>
-        <p className="mb-4 text-xl lg:text-lg md:text-justify sm:text-sm">
+        <p className="mb-4 text-lg text-gray-500 md:text-justify">
           {mainDescription}
         </p>
-        <p className="mb-4 text-2xl md:text-justify sm:text-lg">
+        <p className="mb-4 text-lg text-gray-500 md:text-justify">
           {additionalDescription}
-        </p>
-        <p className="mb-4 text-2xl md:text-justify sm:text-lg">
-          You can count on our experience – we act as your trusted guide through
-          the cloud migration process to accurately forecast your Total Cost of
-          Ownership, design an optimal AWS architecture, and ensure you
-          experience minimal interruptions or downtime.
         </p>
       </motion.div>
     </motion.section>
