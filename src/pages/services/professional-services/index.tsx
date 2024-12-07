@@ -124,7 +124,7 @@ export default function AWS() {
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             <HighlightedText
-              highlightColor="#47a1fa"
+              highlightColor="#f4982e"
               highlightHeight="100%"
               className="p-2"
               highlightClassName="z-[-1] rounded-lg"

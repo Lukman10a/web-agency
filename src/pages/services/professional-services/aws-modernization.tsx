@@ -52,7 +52,7 @@ const AwsModernization = () => {
       {/* Hero Section */}
       <NewHero
         ImgSrc="/assets/checkers.png"
-        title=" Modernization"
+        title="AWS Modernization"
         description="Your infrastructure in a modern cloud environment"
         buttonText="Get Started"
       />

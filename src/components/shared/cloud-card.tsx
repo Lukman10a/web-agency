@@ -18,10 +18,10 @@ const BenefitsSection: React.FC<BenefitProps> = ({ tag = true, title, descriptio
   return (
     <section className="max-w-6xl font-sora mx-auto px-6 py-14 md:px-12 lg:px-20 xl:py-12 bg-white text-gray-800">
       {/* Tag */}
-      {tag && <div className="text-sm border inline px-4 mx-auto rounded-full text-gray-500 mb-4">Benefits</div>}
+      {tag && <div className="text-sm border sm:px-0 inline px-4 mx-auto rounded-full text-gray-500 mb-4">Benefits</div>}
 
       {/* Title */}
-      <h2 className="w-2/3 text-4xl md:text-2xl sm:text-xl font-semi mb-4">{title}</h2>
+      <h2 className="w-2/3 text-4xl sm:w-full md:text-2xl sm:text-xl font-semi mb-4">{title}</h2>
 
       {/* Description */}
       <p className=" text-xl md:text-lg sm:text-sm text-gray-600 mb-8">{description}</p>
