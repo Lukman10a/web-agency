@@ -73,7 +73,7 @@ const CloudFoundation = () => {
   return (
     <main>
       <NewHero
-        ImgSrc="/public/assets/contact.png"
+        ImgSrc="/assets/cloud-foundation.png"
         title="Mission Cloud Foundation"
         description="Manage costs, support your teams, and build to scale."
         buttonText="Get Started"
@@ -107,7 +107,7 @@ const CloudFoundation = () => {
       <VegaCard />
 
       <ServicesCard
-        imgSrc="/public/assets/contact"
+        imgSrc="/assets/cloud-foundation.png"
         altText="Custom Alt Text"
         title="Our Cloud Services Platform Is Tailor-built for AWS"
         description="Get visibility into your cloud environment with Mission Control, paired with our CloudOps and Cloud Analyst teams to help you act on its insights. We contextualize our suggestions to your specific goals, situations and needs while tracking the historical performance and costs of your environment."

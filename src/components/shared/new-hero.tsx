@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 
 // Import framer-motion
 import Image, { StaticImageData } from "next/image";
@@ -49,6 +49,10 @@ const NewHero: React.FC<NewHeroProps> = ({
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
+  // Split the title into the first word and the remaining text
+  const [firstWord, ...restWords] = title.split(" ");
+  const restOfTitle = restWords.join(" ");
+
   return (
     <section className="mx-auto mb-20 bg-main-gradient px-16 py-20 xl:rounded-t-none lg:p-12 lg:py-16 md:mb-16 md:px-0 sm:mb-12">
       <motion.div
@@ -81,24 +85,26 @@ const NewHero: React.FC<NewHeroProps> = ({
             </motion.p>
           )}
           <motion.h1
-            className="mb-[.5em] font-sans text-5xl xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full"
+            className="mb-[.5em] font-sans text-5xl sm:text-left xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full"
             variants={itemVariants}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             {showHighlighted && (
-              <HighlightedText
-                highlightColor="#f4982e"
-                highlightHeight="100%"
-                className="p-2"
-                highlightClassName="z-[-1] rounded-lg"
-                delay={1.5}
-              >
-                AWS
-              </HighlightedText>
-            )}{" "}
-            {title}
+              <>
+                <HighlightedText
+                  highlightColor="#f4982e"
+                  highlightHeight="100%"
+                  className="p-2"
+                  highlightClassName="z-[-1] rounded-lg"
+                  delay={1.5}
+                >
+                  {firstWord}
+                </HighlightedText>
+                {` ${restOfTitle}`}
+              </>
+            )}
           </motion.h1>
           <motion.p
             className="mb-[1.5em] w-[90%] text-lg text-[#808080] lg:text-base md:mx-auto md:w-[80%] sm:w-[90%]"

@@ -28,14 +28,14 @@ const programs: ProgramData[] = [
 
 const DynamicProgramList: React.FC = () => {
   return (
-    <div className="p-6 md:p-10 max-w-6xl mx-auto py-10">
-      <div className="grid gap-6 md:grid-cols-2">
+    <div className="p-6 md:p-10 max-w-6xl mx-auto py-10 sm:w-full">
+      <div className="grid gap-6 grid-cols-2 sm:grid-cols-1">
         {programs.map((program, index) => (
           <div
             key={index}
             className="flex flex-col items-start bg-gradient-to-b space-y-6 from-blue-100 to-blue-300 p-7 rounded-lg shadow-md"
           >
-            <div className="flex flex-col items-start">
+            <div className="flex flex-col items-start sm:w-30 sm:h-30">
               <Image
                 src={program.icon}
                 alt={program.title}
@@ -43,11 +43,11 @@ const DynamicProgramList: React.FC = () => {
                 height={60}
                 
               />
-              <h3 className="text-3xl font-bold text-black">
+              <h3 className="text-3xl sm:text-xl font-bold text-black">
                 {program.title}
               </h3>
             </div>
-            <p className="mt-4 text-2xl text-gray-700">{program.description}</p>
+            <p className="mt-4 text-2xl sm:text-lg text-gray-700">{program.description}</p>
             <button className="mt-6 px-5 py-3 bg-black text-white text-lg font-medium rounded-full hover:bg-gray-800">
               {program.buttonText}
             </button>

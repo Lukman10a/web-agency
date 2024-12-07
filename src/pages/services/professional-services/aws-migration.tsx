@@ -114,9 +114,10 @@ const AWSIM = () => {
       {/* Hero Section */}
       <NewHero
         ImgSrc="/assets/checkers.png"
-        title="Cloud Migration Services"
+        title="AWS Cloud Migration Services"
         description="Recognized by AWS for getting customers migrated on time and on budget"
         buttonText="Get Started"
+        
       />
 
       {/* What Is Teverse Section */}
@@ -130,14 +131,14 @@ const AWSIM = () => {
 
       {/* Benefits Section */}
       <BenefitsSection {...benefitsData} />
-      <section className="mx-auto max-w-6xl space-y-6 py-7">
+      <section className="mx-auto max-w-6xl sm:w-full sm:px-5 space-y-6 py-7">
         <h6 className="text-lg font-bold">Steps</h6>
-        <h3 className="text-3xl">
+        <h3 className="text-3xl sm:text-xl">
           Leverage Our{" "}
           <span className="rounded-lg border border-black p-1">3-Phase </span>{" "}
           Migration Process
         </h3>
-        <p className="text-2xl font-normal">
+        <p className="text-2xl sm:text-lg font-normal sm:text-justify">
           Ensure a successful cloud migration by fully understanding your
           current environment and how to best migrate and modernize your
           infrastructure. Your objectives, requirements, and challenges are our
@@ -147,9 +148,9 @@ const AWSIM = () => {
 
       <FeatureList sections={sections} />
 
-      <section className="mx-auto max-w-6xl space-y-7 py-10">
-        <h2 className="text-3xl">Migrate With Proven AWS Tools</h2>
-        <p className="text-2xl">
+      <section className="mx-auto max-w-6xl sm:w-full sm:px-5 space-y-7 py-10">
+        <h2 className="text-3xl sm:text-xl">Migrate With Proven AWS Tools</h2>
+        <p className="text-2xl sm:text-lg sm:text-justify">
           When you partner with Mission for your AWS migration and utilize our
           cloud migration services, you’ll receive the hands-on care of
           experienced professionals. We move customers from on-premises data
