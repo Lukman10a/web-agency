@@ -4,7 +4,7 @@ export const retailData = {
     description:
       "Cloud-native and AI solutions that scale with consumer demand",
     showButton: false,
-    imgSrc: "/",
+    imgSrc: "/svg/retail.svg",
   },
   companyProfiles: {
     companyOne: {
@@ -119,7 +119,7 @@ export const financeData = {
     description:
       "Cloud and AI solutions for the next-generation of media workflows",
     showButton: false,
-    imgSrc: "/",
+    imgSrc: "/svg/financial.svg",
   },
   companyProfiles: {
     companyOne: {
@@ -232,7 +232,7 @@ export const healthcareData = {
     showButton: false,
     icon: true,
     iconLink: "/svg/newheroicon.svg",
-    ImgSrc: "/",
+    ImgSrc: "/svg/healthcare.svg",
   },
   companiesProfile: {
     cards: {
@@ -456,7 +456,7 @@ export const mediaData = {
     description:
       "Cloud and AI solutions for the next-generation of media workflows",
     showButton: false,
-    ImgSrc: "/",
+    ImgSrc: "/svg/media.svg",
   },
   companyData: {
     content:
@@ -642,7 +642,7 @@ export const softwareData = {
     title: "Software on AWS",
     description: "Cloud and AI solutions for the next-generation of software",
     showButton: false,
-    ImgSrc: "/",
+    ImgSrc: "/svg/software.svg",
   },
 
   companiesProfile: {

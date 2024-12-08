@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 
 // Import framer-motion
 import Image, { StaticImageData } from "next/image";
@@ -85,7 +85,7 @@ const NewHero: React.FC<NewHeroProps> = ({
             </motion.p>
           )}
           <motion.h1
-            className="mb-[.5em] font-sans text-5xl sm:text-left xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full"
+            className="mb-[.5em] font-sans text-5xl xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full sm:text-left"
             variants={itemVariants}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
