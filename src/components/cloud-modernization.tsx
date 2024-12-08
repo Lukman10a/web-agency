@@ -1,10 +1,13 @@
-import Image from "next/image";
 import React from "react";
-import containerization from "/public/svg/containerization.svg"
-import wifi from "/public/svg/wifi.svg"
-import microservices from "/public/svg/microservices.svg"
-import { HighlightedText } from "./ui/animated/highlight-text";
+
+import Image from "next/image";
+
+import containerization from "/public/svg/containerization.svg";
+import microservices from "/public/svg/microservices.svg";
+import wifi from "/public/svg/wifi.svg";
 import { motion } from "framer-motion";
+
+import { HighlightedText } from "./ui/animated/highlight-text";
 
 interface ServiceData {
   icon: string; // URL or SVG path for the icon
@@ -39,26 +42,30 @@ const services: ServiceData[] = [
 
 const CloudModernization: React.FC = () => {
   return (
-    <section className="max-w-6xl mx-auto py-14 md:p-12">
-      <div className=" text-left">
-        <h4 className="text-sm uppercase font-bold text-gray-700 mb-2">
+    <section className="mx-auto max-w-6xl py-14 md:p-12">
+      <div className="text-left">
+        <h4 className="mb-2 text-sm font-bold uppercase text-gray-700">
           AWS Cloud Modernization Services
         </h4>
         <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-        className="text-3xl md:text-4xl font-bold text-black mb-4">
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="mb-4 text-3xl font-bold text-black md:text-4xl"
+        >
           Experience the Advantages of Operating in a{" "}
-          <HighlightedText 
-          highlightColor="#47a1fa"
-          highlightHeight="100%"
-          highlightClassName="z-[-1] rounded-lg"
-          delay={1.5}
-          className="px-2 rounded">Modernized</HighlightedText>{" "}
+          <HighlightedText
+            highlightColor="#faa0476a"
+            highlightHeight="40%"
+            highlightClassName="z-[-1]"
+            delay={1.5}
+            className="rounded"
+          >
+            Modernized
+          </HighlightedText>{" "}
           Cloud Environment
         </motion.h2>
-        <p className="text-gray-700 text-2xl md:text-base">
+        <p className="text-2xl text-gray-700 md:text-base">
           Modernizing your applications and infrastructure improves scalability
           and increases your fault-tolerance while streamlining operations and
           costs. Modernized workloads can rapidly accommodate changes in demand,
@@ -67,23 +74,25 @@ const CloudModernization: React.FC = () => {
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 sm:flex-wrap grid-cols-3 gap-6 mt-8">
+      <div className="mt-8 grid grid-cols-3 gap-6 md:grid-cols-2 sm:grid-cols-1 sm:flex-wrap">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white shadow-md rounded-lg px-4 py-14 space-y-4 text-left"
+            className="space-y-4 rounded-lg bg-white px-4 py-14 text-left shadow-md"
           >
             <Image
               width={60}
               height={60}
               src={service.icon}
               alt={service.title}
-            //   className="h-12 w-12 mx-auto mb-4"
+              //   className="h-12 w-12 mx-auto mb-4"
             />
-            <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
-            <p className="text-xl text-gray-600 mt-2">{service.description}</p>
+            <h3 className="text-2xl font-bold text-gray-900">
+              {service.title}
+            </h3>
+            <p className="mt-2 text-gray-600">{service.description}</p>
             {service.showButton && (
-              <button className="mt-4 px-4 py-2 bg-black text-white text-lg font-medium rounded-full">
+              <button className="mt-4 rounded-full bg-black px-4 py-2 text-lg font-medium text-white">
                 Learn More
               </button>
             )}

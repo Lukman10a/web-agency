@@ -44,7 +44,6 @@ export default function SolutionPage({
       <NewHero
         ImgSrc="/svg/engagement.svg"
         title={solution.title}
-        showHighlighted={false}
         description={solution.description}
         buttonText="Get Started"
         buttonLink="/contact"
