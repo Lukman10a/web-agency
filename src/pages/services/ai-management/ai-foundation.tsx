@@ -247,7 +247,7 @@ const AIFundation = () => {
               key={data.id}
               className="2md:text rounded-lg border border-[#808080] p-8 text-xl 2md:p-4 md:text-lg"
             >
-              <p className="mb-4 block font-sora text-2xl font-semibold uppercase text-orange-600">
+              <p className="mb-4 block font-sora text-2xl font-medium uppercase text-orange-600">
                 {data.title}
               </p>
 

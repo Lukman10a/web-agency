@@ -5,16 +5,16 @@ import Link from "next/link";
 const AwsServicesHero: React.FC = () => {
   return (
     <div className="flex justify-center bg-main-gradient px-4 py-14 sm:flex-col">
-      <div className="flex w-full max-w-5xl items-center justify-between space-y-8 sm:flex-col sm:flex-wrap sm:items-start">
+      <div className="flex w-full max-w-6xl items-center justify-between space-y-8 sm:flex-col sm:flex-wrap sm:items-start">
         {/* Left Content */}
-        <div className="order-1 max-w-md space-y-6 text-left sm:text-left">
+        <div className="order-1 max-w-md space-y-6 text-left">
           {/* Top Badge */}
           <p className="inline-block rounded-full border border-gray-300 bg-white px-3 py-1 text-xs tracking-wide text-gray-500">
             AWS PREMIER SERVICES & SOFTWARE PARTNER
           </p>
 
           {/* Title */}
-          <h1 className="text-5xl font-medium leading-tight text-gray-800 sm:text-2xl">
+          <h1 className="font-sora text-5xl font-medium leading-tight text-gray-800 sm:text-2xl">
             The Expertise You Need for Your AWS Cloud Initiatives
           </h1>
 
@@ -40,7 +40,7 @@ const AwsServicesHero: React.FC = () => {
         </div>
 
         {/* Right Placeholder for Image or Other Content */}
-        <div className="order-2 h-full min-h-36 w-1/3 rounded-xl bg-white shadow-md sm:h-24 sm:w-full"></div>
+        <div className="order-2 w-1/3 rounded-xl bg-white shadow-md sm:h-24 sm:w-full"></div>
       </div>
     </div>
   );
