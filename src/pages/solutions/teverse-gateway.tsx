@@ -66,6 +66,7 @@ const TeverseGateway = () => {
       />
       <WhatIsTeverse
         title={"What is Teverse Cloud Gateway?"}
+        imageSrc = "/assets/teverse-gateway2.png"
         mainDescription={
           "Teverse Cloud Gateway is our software platform for helping customers grow efficiently while staying aligned to foundational best practices."
         }
