@@ -43,11 +43,11 @@ const DevOpsMethodology: React.FC = () => {
             />
           </div>
           <blockquote className="mb-4 text-gray-700">
-            &quot;I feel like work done by Mission has been stellar, and I
+            &quot;I feel like work done by Teverse has been stellar, and I
             don&apos;t use that word lightly. Amazing project management,
-            amazing documentation, amazing note-taking, amazing
-            implementation—it&apos;s all been really, really good. And, as an
-            engineer, I have a high bar for these things.&quot;
+            amazing documentation, amazing note-taking, amazing implementation
+            it&apos;s all been really, really good. And, as an engineer, I have
+            a high bar for these things.&quot;
           </blockquote>
           <p className="text-sm font-semibold text-gray-800">
             Peter Philips | CTO, Recognize

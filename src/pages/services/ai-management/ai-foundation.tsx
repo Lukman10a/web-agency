@@ -25,7 +25,7 @@ const fivePillars = [
   {
     id: 4,
     title:
-      "Round-the-clock Enterprise support, led by Mission and backed by AWS",
+      "Round-the-clock Enterprise support, led by Teverse and backed by AWS",
   },
   {
     id: 5,
@@ -156,7 +156,7 @@ const AIFundation = () => {
     <div>
       <NewHero
         ImgSrc="/svg/cloudstrike.svg"
-        title="Mission AI Foundation"
+        title="Teverse AI Foundation"
         description="Empower Your AI Journey with Expert Guidance"
         showButton={false}
         buttonText="Get Started"
@@ -220,17 +220,17 @@ const AIFundation = () => {
 
       <div className="mx-auto mb-24 w-[90%] max-w-[1200px] md:mb-12">
         <h2 className="mb-6 w-[35%] font-sora text-4xl font-medium xl:w-[45%] lg:w-[55%] md:w-[100%] md:text-center md:text-3xl">
-          Mission
+          Teverse
           <span className="text-orange-600"> re:Invest</span> For Cost
           Management
         </h2>
         <p className="mb-4 font-sans text-xl lg:text-lg">
-          <span className="font-bold">Mission re:Invest</span> is our strategic
+          <span className="font-bold">Teverse re:Invest</span> is our strategic
           spending methodology for helping you to better manage and understand
           your costs and uncover savings to reinvest in your business.
         </p>
         <p className="mb-10 font-sans text-xl lg:text-lg">
-          With <span className="font-bold">Mission Control</span>, our cloud
+          With <span className="font-bold">Teverse Control</span>, our cloud
           services platform, in combination with the powers of{" "}
           <span className="font-bold">Amazon QuickSight</span>, and{" "}
           <span className="font-bold">Amazon Q</span>, you can visualize your
@@ -259,7 +259,7 @@ const AIFundation = () => {
 
       <div className="mx-auto mb-24 w-[90%] max-w-[1200px] md:mb-12">
         <h2 className="mb-6 w-[45%] font-sora text-4xl font-medium lg:w-[55%] md:w-[100%] md:text-center md:text-3xl">
-          <span className="text-orange-600"> Benefits</span> of Mission AI
+          <span className="text-orange-600"> Benefits</span> of Teverse AI
           Foundation
         </h2>
 
@@ -283,8 +283,8 @@ const AIFundation = () => {
           Engineer Assist - AI
         </h2>
         <p className="mb-8 font-sora text-xl font-medium lg:text-lg">
-          Engineer Assist allows you to make requests of your team of Mission AI
-          Engineers right from within Mission Control. With an engagement model
+          Engineer Assist allows you to make requests of your team of Teverse AI
+          Engineers right from within Teverse Control. With an engagement model
           designed for modifications, maintenance, and consulting, Engineer
           Assist lets you pay-as-you-go for engineering support of your AI
           solutions.
@@ -318,11 +318,11 @@ const AIFundation = () => {
             Get Support For Your AI Solutions Today
           </h2>
           <p className="mb-8 font-sora text-xl font-medium lg:text-lg">
-            Interested in how Mission AI Foundation can support your teams and
+            Interested in how Teverse AI Foundation can support your teams and
             solutions? Reach out to us to learn more.
           </p>
           <p className="font-sora text-xl font-medium lg:text-lg">
-            Mission is a leading born-in-the-cloud managed services and
+            Teverse is a leading born-in-the-cloud managed services and
             consulting provider, offering end-to-end cloud services, innovative
             AI solutions, and software for AWS customers. As an AWS Premier Tier
             Partner, we help you manage your technology investments, improve

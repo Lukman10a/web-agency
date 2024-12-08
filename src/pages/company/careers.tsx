@@ -31,7 +31,7 @@ export default function CareersPage() {
         <div className="relative mx-auto max-w-7xl px-6 pt-32">
           <div className="max-w-2xl text-white">
             <h1 className="font-sora text-4xl font-bold tracking-tight xl:text-6xl sm:text-5xl">
-              Build Your Career at Mission
+              Build Your Career at Teverse
             </h1>
             <p className="mt-6 text-xl text-gray-200">
               We&apos;re looking for innovators who are passionate about AWS and
@@ -88,7 +88,7 @@ export default function CareersPage() {
 
         {/* Benefits Section */}
         <section className="mt-24">
-          <h2 className="text-3xl font-bold">Why Join Mission?</h2>
+          <h2 className="text-3xl font-bold">Why Join Teverse?</h2>
           <div className="mt-8 grid grid-cols-3 gap-8 md:grid-cols-2 sm:grid-cols-1">
             {whyJoinBenefits.map((benefit, i) => (
               <div key={i} className="rounded-lg border p-6">

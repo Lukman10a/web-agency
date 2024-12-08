@@ -13,7 +13,7 @@ const benefitsData = {
   tag: true,
   title: "Measure Your Architecture and Know Exactly Where You Stand",
   description:
-    "Mission Cloud Score shows you exactly what you want to know about your AWS environmental health and helps you keep tabs on it. See at a glance your adherence to best practices and learn what you need to do if you’re out of alignment with any.",
+    "Teverse Cloud Score shows you exactly what you want to know about your AWS environmental health and helps you keep tabs on it. See at a glance your adherence to best practices and learn what you need to do if you’re out of alignment with any.",
   benefits: [
     {
       icon: "/assets/heart-rate.png",
@@ -41,13 +41,13 @@ const featuresData = {
       icon: "/assets/targetpoint.png",
       heading: "Rely On Trusted Tooling and Precise Answers",
       description:
-        "The Mission Cloud Score is generated using a proprietary algorithm we've honed through working with hundreds of customers. It combines data from your environment and AWS's own tooling to generate a score to measure the viability of your environment across each of the well-architected pillars.",
+        "The Teverse Cloud Score is generated using a proprietary algorithm we've honed through working with hundreds of customers. It combines data from your environment and AWS's own tooling to generate a score to measure the viability of your environment across each of the well-architected pillars.",
     },
     {
       icon: "/assets/targetpoint.png",
       heading: "Authoritative Insights",
       description:
-        "We rely on some of the most accurate and widely trusted tools for measuring your environmental health on AWS. Your Mission Cloud Score is calculated using AWS Trusted Advisor, AWS Security Hub, and AWS Compute Optimizer checks.",
+        "We rely on some of the most accurate and widely trusted tools for measuring your environmental health on AWS. Your Teverse Cloud Score is calculated using AWS Trusted Advisor, AWS Security Hub, and AWS Compute Optimizer checks.",
     },
     {
       icon: "/assets/cloudstrikes.png",
@@ -70,7 +70,7 @@ const CloudScore = () => {
       {/* Hero Section */}
       <NewHero
         ImgSrc="/svg/cloud-score.svg"
-        title="Mission Cloud Score"
+        title="Teverse Cloud Score"
         description="Benchmark your environment against AWS best practices."
         buttonText="Get Started"
       />
@@ -79,8 +79,8 @@ const CloudScore = () => {
       <WhatIsTeverse
         tag
         tagText="OVERVIEW"
-        title="DevOps Score Your Cloud Against AWS Best Practices Excellence, Visualized"
-        mainDescription="With Mission Cloud Score you can see how your architecture performs against the well-architected pillars that define best practices for AWS. Learn how your cost efficiency, operations, security, reliability, and performance rank and see any issues clearly enumerated."
+        title="DevOps Score Your Cloud Against AWS Best Practices Excellence, Visualized"
+        mainDescription="With Teverse Cloud Score you can see how your architecture performs against the well-architected pillars that define best practices for AWS. Learn how your cost efficiency, operations, security, reliability, and performance rank and see any issues clearly enumerated."
         additionalDescription="Over time you can track and measure your score as your infrastructure changes, so that you can build with confidence, assured that you’ve architected with all of the measures AWS considers necessary for a state-of-the-art back-end."
       />
 
@@ -99,7 +99,7 @@ const CloudScore = () => {
         imgSrc="/assets/checkers.png"
         altText="Custom Alt Text"
         title="We have the tools to understand your cloud and the guidance to make the most of it."
-        description="Schedule your demo with a Mission Cloud Advisor and find out what Mission Control can do for you."
+        description="Schedule your demo with a Teverse Cloud Advisor and find out what Teverse Control can do for you."
         showTag={true}
         tagText="GET IN TOUCH"
         index={1}

@@ -52,7 +52,7 @@ const AWSIM = () => {
       title: "Phase 2",
       altDescription: "Mobilize",
       description:
-        "Mission and AWS will address the gaps in your organization’s readiness that were uncovered during the assessment. We’ll prepare your environment with a Landing Zone from which we can launch your workloads while ensuring networking, security, and account structure accords with your business objectives. As pilot workloads go live, we’ll help you reach operational readiness by developing any cloud skills required in their administration.",
+        "Teverse and AWS will address the gaps in your organization’s readiness that were uncovered during the assessment. We’ll prepare your environment with a Landing Zone from which we can launch your workloads while ensuring networking, security, and account structure accords with your business objectives. As pilot workloads go live, we’ll help you reach operational readiness by developing any cloud skills required in their administration.",
       buttonText: "Discover Now",
       showButton: false,
       reverse: false,
@@ -77,7 +77,7 @@ const AWSIM = () => {
   // Data for BenefitsSection
   const benefitsData = {
     tag: true,
-    title: "Benefits of Migrating with Mission",
+    title: "Benefits of Migrating with Teverse",
     description: "",
     benefits: [
       {
@@ -93,7 +93,7 @@ const AWSIM = () => {
       {
         icon: "/assets/champion.png",
         heading: "Migrate Efficiently",
-        text: "We are used to tight deadlines and complex implementations. We'll create an accurate timeline and let you monitor your progress through Mission Control.",
+        text: "We are used to tight deadlines and complex implementations. We'll create an accurate timeline and let you monitor your progress through Teverse Control.",
       },
     ],
   };
@@ -117,7 +117,6 @@ const AWSIM = () => {
         title="AWS Cloud Migration Services"
         description="Recognized by AWS for getting customers migrated on time and on budget"
         buttonText="Get Started"
-        
       />
 
       {/* What Is Teverse Section */}
@@ -126,19 +125,19 @@ const AWSIM = () => {
         tagText="OVERVIEW"
         title="Migrate With Confidence"
         mainDescription="For the second year running, AWS has recognized us for our outstanding work in its Migrations Acceleration Program—for our accuracy in budgeting and our speed in moving customer workloads."
-        additionalDescription="When you partner with Mission for your AWS cloud migration, you’ll receive the hands-on care of experienced professionals who’ve helped hundreds of customers migrate to AWS. We’ve moved customers from on-premises data centers, non-AWS cloud platforms, and PaaS providers like Heroku and Rackspace. We offer a wide range of cloud migration services and can perform full infrastructure refactors or specialty cloud migrations, like Microsoft workloads and database migrations."
+        additionalDescription="When you partner with Teverse for your AWS cloud migration, you’ll receive the hands-on care of experienced professionals who’ve helped hundreds of customers migrate to AWS. We’ve moved customers from on-premises data centers, non-AWS cloud platforms, and PaaS providers like Heroku and Rackspace. We offer a wide range of cloud migration services and can perform full infrastructure refactors or specialty cloud migrations, like Microsoft workloads and database migrations."
       />
 
       {/* Benefits Section */}
       <BenefitsSection {...benefitsData} />
-      <section className="mx-auto max-w-6xl sm:w-full sm:px-5 space-y-6 py-7">
+      <section className="mx-auto max-w-6xl space-y-6 py-7 sm:w-full sm:px-5">
         <h6 className="text-lg font-bold">Steps</h6>
         <h3 className="text-3xl sm:text-xl">
           Leverage Our{" "}
           <span className="rounded-lg border border-black p-1">3-Phase </span>{" "}
           Migration Process
         </h3>
-        <p className="text-2xl sm:text-lg font-normal sm:text-justify">
+        <p className="text-2xl font-normal sm:text-justify sm:text-lg">
           Ensure a successful cloud migration by fully understanding your
           current environment and how to best migrate and modernize your
           infrastructure. Your objectives, requirements, and challenges are our
@@ -148,10 +147,10 @@ const AWSIM = () => {
 
       <FeatureList sections={sections} />
 
-      <section className="mx-auto max-w-6xl sm:w-full sm:px-5 space-y-7 py-10">
+      <section className="mx-auto max-w-6xl space-y-7 py-10 sm:w-full sm:px-5">
         <h2 className="text-3xl sm:text-xl">Migrate With Proven AWS Tools</h2>
-        <p className="text-2xl sm:text-lg sm:text-justify">
-          When you partner with Mission for your AWS migration and utilize our
+        <p className="text-2xl sm:text-justify sm:text-lg">
+          When you partner with Teverse for your AWS migration and utilize our
           cloud migration services, you’ll receive the hands-on care of
           experienced professionals. We move customers from on-premises data
           centers, non-AWS cloud platforms, and PaaS providers like Heroku and
@@ -165,7 +164,7 @@ const AWSIM = () => {
         iconSrc="/assets/smittys-logo.webp"
         buttonText="Read Full Story"
         buttonLink="#"
-        quote="“Mission's close working relationship and continuous engagement model ensured that our migration to AWS was a clear success, and that their ongoing cloud management continues to be advantageous and cost-efficient.”"
+        quote="“Teverse's close working relationship and continuous engagement model ensured that our migration to AWS was a clear success, and that their ongoing cloud management continues to be advantageous and cost-efficient.”"
         authorName="Clay Kibbons"
         authorRole="IT Department Manager at Smitty’s Supply, Inc."
       />
@@ -175,7 +174,7 @@ const AWSIM = () => {
         imgSrc="/assets/checkers.png"
         altText="Custom Alt Text"
         title="Start Your AWS Cloud Migration Journey Today"
-        description="Schedule a call with a Mission Cloud Advisor to learn about our cloud migration services and to help you prepare for and migrate to the cloud with confidence."
+        description="Schedule a call with a Teverse Cloud Advisor to learn about our cloud migration services and to help you prepare for and migrate to the cloud with confidence."
         showTag={true}
         tagText="GET IN TOUCH"
         index={1}

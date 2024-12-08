@@ -30,7 +30,7 @@ const GetInTouchSection: React.FC = () => {
 
         {/* Subtitle */}
         <p className="mb-6 text-gray-600 sm:text-sm">
-          Connect with our security experts to learn how Mission Cloud Secure
+          Connect with our security experts to learn how Teverse Cloud Secure
           can harden your AWS environment.
         </p>
 

@@ -72,7 +72,7 @@ const Hero = () => {
                 asChild
                 className="flex w-fit items-center justify-center rounded-full border border-black bg-orange-600 px-8 py-3 text-base font-medium text-white hover:bg-orange-700 md:w-full md:px-10 md:py-4 md:text-lg"
               >
-                <Link href="/solutions">
+                <Link href="/services">
                   OUR SERVICES <ArrowIcon />
                 </Link>
               </Button>

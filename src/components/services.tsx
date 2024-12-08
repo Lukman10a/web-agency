@@ -10,7 +10,7 @@ interface ServiceItem {
 
 const serviceData: ServiceItem[] = [
   {
-    title: "Mission Control",
+    title: "Teverse Control",
     description: [
       "Our cloud services platform",
       "Proprietary cost & health checking",
@@ -105,7 +105,7 @@ const ServiceSection: React.FC = () => {
                 height={40}
                 alt=""
               />
-              <p>Mission Cloud Foundation</p>
+              <p>Teverse Cloud Foundation</p>
               <p>
                 A solution for cost optimization and foundational best practices
               </p>

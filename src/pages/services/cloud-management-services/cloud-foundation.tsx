@@ -64,7 +64,7 @@ const cardDataTwo = [
   {
     title: "Industry-Leading Tools",
     description:
-      "Get a rich understanding of your environment top to bottom. Identify your opportunities to optimize and better align to best practices by leveraging our tooling, including Vega Cloud and Mission Control.",
+      "Get a rich understanding of your environment top to bottom. Identify your opportunities to optimize and better align to best practices by leveraging our tooling, including Vega Cloud and Teverse Control.",
     icon: industry,
   },
 ];
@@ -74,7 +74,7 @@ const CloudFoundation = () => {
     <main>
       <NewHero
         ImgSrc="/assets/cloud-foundation.png"
-        title="Mission Cloud Foundation"
+        title="Teverse Cloud Foundation"
         description="Manage costs, support your teams, and build to scale."
         buttonText="Get Started"
       />
@@ -83,7 +83,7 @@ const CloudFoundation = () => {
         imgSrc="/public/assets/contact.png"
         altText="Custom Alt Text"
         title="Align Your Environment to AWS Best Practices"
-        description="Mission Cloud Foundation is our cloud managed service for foundational best practices. Optimize, modernize, and fearlessly take on new initiatives with 24/7 support."
+        description="Teverse Cloud Foundation is our cloud managed service for foundational best practices. Optimize, modernize, and fearlessly take on new initiatives with 24/7 support."
         showTag={true}
         tagText="Overview"
         index={1}
@@ -110,9 +110,9 @@ const CloudFoundation = () => {
         imgSrc="/assets/cloud-foundation.png"
         altText="Custom Alt Text"
         title="Our Cloud Services Platform Is Tailor-built for AWS"
-        description="Get visibility into your cloud environment with Mission Control, paired with our CloudOps and Cloud Analyst teams to help you act on its insights. We contextualize our suggestions to your specific goals, situations and needs while tracking the historical performance and costs of your environment."
+        description="Get visibility into your cloud environment with Teverse Control, paired with our CloudOps and Cloud Analyst teams to help you act on its insights. We contextualize our suggestions to your specific goals, situations and needs while tracking the historical performance and costs of your environment."
         showTag={true}
-        tagText="MISSION CLOUD"
+        tagText="TEVERSE CLOUD"
         index={1}
         showButton={true}
         buttonText="Learn More"
@@ -122,7 +122,7 @@ const CloudFoundation = () => {
         imgSrc="/public/assets/contact"
         altText="Custom Alt Text"
         title="Book a Free AWS Cost Assessment"
-        description="Ready to optimize your AWS environment for spend and performance? Schedule a free AWS cost assessment with a Mission Cloud Analyst today."
+        description="Ready to optimize your AWS environment for spend and performance? Schedule a free AWS cost assessment with a Terverse Cloud Analyst today."
         index={2}
         showButton={true}
         buttonText="Schedule Assessment"
@@ -139,7 +139,7 @@ const CloudFoundation = () => {
         imgSrc="/public/assets/contact"
         altText="Custom Alt Text"
         title="Strengthen Your Security Posture"
-        description="Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment."
+        description="Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment."
         showTag={true}
         tagText="GET IN TOUCH"
         index={1}

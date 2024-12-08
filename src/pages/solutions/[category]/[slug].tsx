@@ -131,7 +131,7 @@ export default function SolutionPage({
         tagText="GET IN TOUCH"
         title={"Strengthen Your Security Posture"}
         description={
-          "Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment."
+          "Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment."
         }
         imgSrc={""}
         index={0}

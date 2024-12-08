@@ -35,7 +35,7 @@ export default function Solution() {
             asChild
             className="flex w-fit transform items-center gap-4 rounded-2xl border border-[#081348] bg-orange-650 text-white transition duration-500 hover:scale-105 hover:bg-orange-600"
           >
-            <Link href="#">
+            <Link href="/contact">
               <span>EXPLORE</span>
               <ArrowIcon />
             </Link>
