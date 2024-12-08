@@ -60,7 +60,7 @@ const InterpretDataSection: React.FC = () => {
   };
 
   return (
-    <section className="mx-auto mt-[15rem] flex max-w-7xl flex-col space-y-5 px-10 sm:mt-10 sm:px-4">
+    <section className="mx-auto  flex max-w-7xl flex-col space-y-5 px-10 mt-10 sm:px-4">
       <div className="space-y-4">
         <motion.div
           className="mb-4 inline rounded-full py-1 text-xs tracking-wide text-gray-500"
