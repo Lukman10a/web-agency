@@ -76,7 +76,7 @@ const CloudScore = () => {
     <div>
       {/* Hero Section */}
       <NewHero
-        ImgSrc="/assets/cloud-secure.png"
+        imgSrc="/assets/cloud-secure.png"
         title="Teverse Cloud Secure"
         description="Fully managed security, detection, and response"
         buttonText="Get Started"

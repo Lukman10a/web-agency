@@ -1,13 +1,6 @@
 import { collection, fields, singleton } from "@keystatic/core";
 
-interface HeroSection {
-  title: string;
-  description: string;
-  showButton: boolean;
-  imgSrc: string;
-  icon?: string;
-  iconLink?: string;
-}
+import { NewHeroProps } from "@/components/shared/new-hero";
 
 interface Testimonial {
   content: string;
@@ -48,7 +41,7 @@ interface Statistics {
 }
 
 export interface IndustryData {
-  heroSection: HeroSection;
+  heroSection: NewHeroProps;
   companyProfiles: {
     companyOne: Testimonial;
     companyTwo: Testimonial;
@@ -62,7 +55,7 @@ export interface IndustryData {
   statsCard?: Statistics;
 }
 
-export const retailData = {
+export const retailData: IndustryData = {
   heroSection: {
     title: "Retail on AWS",
     description:
@@ -295,7 +288,7 @@ export const healthcareData = {
       "AI solutions and cloud-native technologies for every patient.",
     showButton: false,
     icon: "/svg/newheroicon.svg",
-    ImgSrc: "/svg/healthcare.svg",
+    imgSrc: "/svg/healthcare.svg",
   },
   companiesProfile: {
     cards: {
@@ -401,7 +394,7 @@ export const lifeSciencesData = {
     description: "AI solutions and cloud-native technologies.",
     showButton: false,
     icon: "/svg/newheroicon.svg",
-    ImgSrc: "/",
+    imgSrc: "/",
   },
 
   companiesProfile: {
@@ -518,7 +511,7 @@ export const mediaData = {
     description:
       "Cloud and AI solutions for the next-generation of media workflows",
     showButton: false,
-    ImgSrc: "/svg/media.svg",
+    imgSrc: "/svg/media.svg",
   },
   companyData: {
     content:
@@ -704,7 +697,7 @@ export const softwareData = {
     title: "Software on AWS",
     description: "Cloud and AI solutions for the next-generation of software",
     showButton: false,
-    ImgSrc: "/svg/software.svg",
+    imgSrc: "/svg/software.svg",
   },
 
   companiesProfile: {

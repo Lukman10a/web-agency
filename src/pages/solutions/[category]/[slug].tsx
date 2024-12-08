@@ -42,7 +42,7 @@ export default function SolutionPage({
   return (
     <div className="">
       <NewHero
-        ImgSrc="/svg/engagement.svg"
+        imgSrc="/svg/engagement.svg"
         title={solution.title}
         description={solution.description}
         buttonText="Get Started"

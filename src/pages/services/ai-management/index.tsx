@@ -37,7 +37,7 @@ const AIManagement = () => {
   return (
     <main>
       <NewHero
-        ImgSrc="/assets/AI-management.png"
+        imgSrc="/assets/AI-management.png"
         title="AI Management Services"
         description="Keep your AI solutions up-to-date and operating efficiently"
         buttonText="Get Started"

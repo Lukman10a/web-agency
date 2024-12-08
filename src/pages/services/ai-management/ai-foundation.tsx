@@ -155,7 +155,7 @@ const AIFundation = () => {
   return (
     <div>
       <NewHero
-        ImgSrc="/svg/cloudstrike.svg"
+        imgSrc="/svg/cloudstrike.svg"
         title="Teverse AI Foundation"
         description="Empower Your AI Journey with Expert Guidance"
         showButton={false}

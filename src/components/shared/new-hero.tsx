@@ -7,10 +7,10 @@ import { motion } from "framer-motion";
 import { HighlightedText } from "../ui/animated/highlight-text";
 import { Button } from "../ui/button";
 
-type NewHeroProps = {
+export type NewHeroProps = {
   reverse?: boolean;
   title: string;
-  ImgSrc: string;
+  imgSrc: string;
   description: string;
   showButton?: boolean;
   buttonText?: string;
@@ -22,7 +22,7 @@ type NewHeroProps = {
 const NewHero: React.FC<NewHeroProps> = ({
   reverse = false,
   title,
-  ImgSrc,
+  imgSrc,
   description,
   showButton = true,
   buttonText,
@@ -130,7 +130,7 @@ const NewHero: React.FC<NewHeroProps> = ({
           variants={itemVariants}
         >
           <Image
-            src={ImgSrc}
+            src={imgSrc}
             alt="Hero Image"
             className="w-full rounded-2xl"
             width={500}

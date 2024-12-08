@@ -73,7 +73,7 @@ const GenerativeAI = () => {
     <div>
       {/* Hero Section */}
       <NewHero
-        ImgSrc="/assets/AI-management.png"
+        imgSrc="/assets/AI-management.png"
         title="AWS Generative AI"
         description="Securely Build With Generative AI on AWS"
         buttonText="Get Started"

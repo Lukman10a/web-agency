@@ -97,7 +97,7 @@ const Retail = () => {
         title={retailData.heroSection.title}
         description={retailData.heroSection.description}
         showButton={retailData.heroSection.showButton}
-        ImgSrc={retailData.heroSection.imgSrc}
+        imgSrc={retailData.heroSection.imgSrc}
       />
 
       <CompaniesProfile

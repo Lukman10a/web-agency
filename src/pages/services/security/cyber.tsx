@@ -71,8 +71,7 @@ export default function CyberSecurityPage() {
   return (
     <div>
       <NewHero
-        showHighlighted={false}
-        ImgSrc="/assets/cloud-secure.png"
+        imgSrc="/assets/cloud-secure.png"
         title="Cyber Security Solutions"
         description="Protect your digital assets with our comprehensive cybersecurity services"
         buttonText="Get Started"

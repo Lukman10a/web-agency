@@ -57,7 +57,7 @@ const TeverseGateway = () => {
   return (
     <section>
       <NewHero
-        ImgSrc="/svg/gatewayillust.svg"
+        imgSrc="/svg/gatewayillust.svg"
         title={"Terverse Cloud Gateway"}
         description={
           "AWS guidance for efficient growth and foundational best practices"

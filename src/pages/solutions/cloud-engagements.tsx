@@ -95,7 +95,7 @@ export default function CloudEngagements() {
   return (
     <div className="">
       <NewHero
-        ImgSrc="/svg/engagement.svg"
+        imgSrc="/svg/engagement.svg"
         // tag
         title="Teverse Cloud Engagements DevOps"
         description="Get transparent reporting and live updates on your team’s status"

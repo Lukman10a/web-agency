@@ -113,7 +113,7 @@ const AWSIM = () => {
     <div>
       {/* Hero Section */}
       <NewHero
-        ImgSrc="/assets/checkers.png"
+        imgSrc="/assets/checkers.png"
         title="AWS Cloud Migration Services"
         description="Recognized by AWS for getting customers migrated on time and on budget"
         buttonText="Get Started"
