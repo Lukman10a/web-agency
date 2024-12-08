@@ -117,6 +117,7 @@ const AWSIM = () => {
         title="AWS Cloud Migration Services"
         description="Recognized by AWS for getting customers migrated on time and on budget"
         buttonText="Get Started"
+        buttonLink="/contact"
       />
 
       {/* What Is Teverse Section */}

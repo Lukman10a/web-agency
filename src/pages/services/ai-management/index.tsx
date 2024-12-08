@@ -41,6 +41,7 @@ const AIManagement = () => {
         title="AI Management Services"
         description="Keep your AI solutions up-to-date and operating efficiently"
         buttonText="Get Started"
+        buttonLink="/contact"
       />
 
       <ServicesCard

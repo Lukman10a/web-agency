@@ -34,6 +34,7 @@ export default function SecurityPage() {
         title="Security Services"
         description="Protect your business with advanced security services tailored to your needs"
         buttonText="Get Started"
+        buttonLink="/contact"
       />
 
       <Container className="pb-16">

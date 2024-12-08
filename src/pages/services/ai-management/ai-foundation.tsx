@@ -162,6 +162,7 @@ const AIFundation = () => {
         buttonText="Get Started"
         tag
         tagText="FOR EFFICIENT GROWTH AND AI BEST PRACTICES"
+        buttonLink="/contact"
       />
 
       <div className="mx-auto mb-24 w-[90%] max-w-[1200px] md:mb-12">

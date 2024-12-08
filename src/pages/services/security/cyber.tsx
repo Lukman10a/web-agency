@@ -76,6 +76,7 @@ export default function CyberSecurityPage() {
         title="Cyber Security Solutions"
         description="Protect your digital assets with our comprehensive cybersecurity services"
         buttonText="Get Started"
+        buttonLink="/contact"
       />
 
       <Container className="mb-10">

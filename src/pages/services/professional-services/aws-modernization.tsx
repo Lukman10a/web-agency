@@ -55,6 +55,7 @@ const AwsModernization = () => {
         title="AWS Modernization"
         description="Your infrastructure in a modern cloud environment"
         buttonText="Get Started"
+        buttonLink="/contact"
       />
 
       {/* What Is Teverse Section */}

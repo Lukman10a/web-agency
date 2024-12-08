@@ -111,6 +111,7 @@ const CloudOne = () => {
         title="Teverse Cloud One"
         description="Our comprehensive service for AWS optimization, operations, and security."
         buttonText="Get Started"
+        buttonLink="/contact"
       />
 
       <ServicesCard

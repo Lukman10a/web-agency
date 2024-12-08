@@ -47,6 +47,7 @@ export default function SolutionPage({
         showHighlighted={false}
         description={solution.description}
         buttonText="Get Started"
+        buttonLink="/contact"
       />
 
       <div className="container mx-auto max-w-7xl px-10">

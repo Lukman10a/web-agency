@@ -68,6 +68,7 @@ export default function IdamSecurityPage() {
           title="IDAM Security Solutions"
           description="Enterprise-grade identity and access management solutions for your business"
           buttonText="Get Started"
+          buttonLink="/contact"
         />
       </motion.div>
 

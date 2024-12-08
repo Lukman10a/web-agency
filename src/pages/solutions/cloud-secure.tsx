@@ -83,6 +83,7 @@ const CloudScore = () => {
         title="Teverse Cloud Secure"
         description="Fully managed security, detection, and response"
         buttonText="Get Started"
+        buttonLink="/contact"
       />
 
       {/* What Is Teverse Section */}

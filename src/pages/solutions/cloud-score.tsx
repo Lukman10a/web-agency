@@ -73,6 +73,7 @@ const CloudScore = () => {
         title="Teverse Cloud Score"
         description="Benchmark your environment against AWS best practices."
         buttonText="Get Started"
+        buttonLink="/contact"
       />
 
       {/* What Is Teverse Section */}

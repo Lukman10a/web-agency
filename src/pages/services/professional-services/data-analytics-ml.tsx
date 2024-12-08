@@ -96,6 +96,7 @@ const Analytics = () => {
         title="Data, Analytics and Machine Learning"
         description="A comprehensive practice for every step in your data-driven journey"
         buttonText="Get Started"
+        buttonLink="/contact"
       />
 
       <section className="mb-14 flex items-center justify-center bg-transparent px-4 sm:mb-7">

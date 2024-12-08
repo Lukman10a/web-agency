@@ -16,6 +16,7 @@ type NewHeroProps = {
   description: string;
   showButton?: boolean;
   buttonText?: string;
+  buttonLink?: string;
   tag?: boolean;
   tagText?: string;
   icon?: boolean;
@@ -29,6 +30,7 @@ const NewHero: React.FC<NewHeroProps> = ({
   description,
   showButton = true,
   buttonText,
+  buttonLink,
   tag = false,
   tagText,
   icon = false,
@@ -112,11 +114,27 @@ const NewHero: React.FC<NewHeroProps> = ({
           >
             {description}
           </motion.p>
-          {showButton && (
+          {/* {showButton && (
             <motion.div variants={itemVariants}>
               <Button className="flex w-fit items-center gap-4 rounded-[4rem] bg-orange-650 px-8 py-7 font-sans text-lg text-white hover:bg-white hover:text-black md:mx-auto md:w-[90%] sm:mb-4 sm:w-full">
                 <span>{buttonText}</span>
               </Button>
+            </motion.div>
+          )} */}
+          {showButton && (
+            <motion.div variants={itemVariants}>
+              {buttonLink ? (
+                <a
+                  href={buttonLink}
+                  className="flex w-fit items-center gap-4 rounded-[4rem] bg-orange-650 px-8 py-7 font-sans text-lg text-white hover:bg-white hover:text-black md:mx-auto md:w-[90%] sm:mb-4 sm:w-full"
+                >
+                  <span>{buttonText}</span>
+                </a>
+              ) : (
+                <Button className="flex w-fit items-center gap-4 rounded-[4rem] bg-orange-650 px-8 py-7 font-sans text-lg text-white hover:bg-white hover:text-black md:mx-auto md:w-[90%] sm:mb-4 sm:w-full">
+                  <span>{buttonText}</span>
+                </Button>
+              )}
             </motion.div>
           )}
         </div>
