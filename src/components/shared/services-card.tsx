@@ -29,7 +29,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
   buttonText = "Learn More",
   index,
   imgSrc,
-  href,
+  href = "/contact",
 }) => {
   return (
     <div
