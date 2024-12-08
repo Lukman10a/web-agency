@@ -160,7 +160,6 @@ const AIFundation = () => {
         description="Empower Your AI Journey with Expert Guidance"
         showButton={false}
         buttonText="Get Started"
-        tag
         tagText="FOR EFFICIENT GROWTH AND AI BEST PRACTICES"
         buttonLink="/contact"
       />

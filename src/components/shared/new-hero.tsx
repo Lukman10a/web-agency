@@ -16,7 +16,7 @@ type NewHeroProps = {
   buttonText?: string;
   buttonLink?: string;
   tagText?: string;
-  icon?: StaticImageData;
+  icon?: StaticImageData | string;
 };
 
 const NewHero: React.FC<NewHeroProps> = ({

@@ -14,7 +14,7 @@ import StatsCard from "@/components/shared/stats-card";
 
 const Healthcare = () => {
   const {
-    hero,
+    heroSection,
     companiesProfile,
     statsCard,
     detailsData,
@@ -24,7 +24,7 @@ const Healthcare = () => {
 
   return (
     <section className="overflow-hidden">
-      <NewHero {...hero} />
+      <NewHero {...heroSection} />
 
       <CompaniesProfile
         cards={companiesProfile.cards}

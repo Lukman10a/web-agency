@@ -29,7 +29,6 @@ export default function SecurityPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <NewHero
-        showHighlighted={false}
         ImgSrc="/assets/cloud-secure.png"
         title="Security Services"
         description="Protect your business with advanced security services tailored to your needs"
