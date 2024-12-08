@@ -78,6 +78,7 @@ const CloudScore = () => {
       {/* What Is Teverse Section */}
       <WhatIsTeverse
         tag
+        imageSrc="/assets/server.png"
         tagText="OVERVIEW"
         title="DevOps Score Your Cloud Against AWS Best Practices Excellence, Visualized"
         mainDescription="With Mission Cloud Score you can see how your architecture performs against the well-architected pillars that define best practices for AWS. Learn how your cost efficiency, operations, security, reliability, and performance rank and see any issues clearly enumerated."

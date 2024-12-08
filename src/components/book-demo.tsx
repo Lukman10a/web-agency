@@ -11,7 +11,7 @@ const BookDemoSection: React.FC = () => {
 
       <div className="mb-0 flex w-1/2 items-center justify-end rounded-bl-3xl rounded-tl-3xl px-2 md:justify-center sm:w-full sm:rounded-bl-none sm:rounded-tl-none sm:px-4">
         <Image
-          src="/assets/checkers.png"
+          src="/assets/teverse-control2.png"
           height={600}
           width={500}
           alt="checkers image"
