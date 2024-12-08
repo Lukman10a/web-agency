@@ -1,6 +1,7 @@
 import React from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import useContactForm from "@/hooks/use-contact";
 
@@ -23,9 +24,11 @@ const ContactSection: React.FC = () => {
               minutes.
             </p>
           </div>
-          <button className="rounded-full bg-orange-650 px-6 py-3 font-semibold text-white ring-1 ring-darkblue-850 transition duration-300 hover:bg-orange-600 sm:w-full">
-            Schedule Your Call →
-          </button>
+          <Link href="/contact">
+            <button className="rounded-full bg-orange-650 px-6 py-3 font-semibold text-white ring-1 ring-darkblue-850 transition duration-300 hover:bg-orange-600 sm:w-full">
+              Schedule Your Call →
+            </button>
+          </Link>
         </div>
       </div>
 

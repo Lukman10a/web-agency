@@ -34,7 +34,7 @@ const benefitsData = {
   tag: true,
   title: "Measure Your Architecture and Know Exactly Where You Stand",
   description:
-    "Mission Cloud Score shows you exactly what you want to know about your AWS environmental health and helps you keep tabs on it. See at a glance your adherence to best practices and learn what you need to do if you’re out of alignment with any.",
+    "Teverse Cloud Score shows you exactly what you want to know about your AWS environmental health and helps you keep tabs on it. See at a glance your adherence to best practices and learn what you need to do if you’re out of alignment with any.",
   benefits: [
     {
       icon: "/assets/heart-rate.png",
@@ -68,10 +68,10 @@ const TeverseGateway = () => {
         title={"What is Teverse Cloud Gateway?"}
         imageSrc = "/assets/teverse-gateway2.png"
         mainDescription={
-          "Mission Cloud Gateway is our software platform for helping customers grow efficiently while staying aligned to foundational best practices."
+          "Teverse Cloud Gateway is our software platform for helping customers grow efficiently while staying aligned to foundational best practices."
         }
         additionalDescription={
-          "Manage costs, improve governance, and adopt technologies that transform your business through a combination of AWS expertise, consultative guidance, and tooling. We support typical FinOps, InfraOps, and RI Ops needs according to Mission re:Invest, our strategic spending methodology for growth on AWS."
+          "Manage costs, improve governance, and adopt technologies that transform your business through a combination of AWS expertise, consultative guidance, and tooling. We support typical FinOps, InfraOps, and RI Ops needs according to Teverse re:Invest, our strategic spending methodology for growth on AWS."
         }
         tag={true}
         tagText="OVERVIEW"
@@ -86,7 +86,7 @@ const TeverseGateway = () => {
         imgSrc="/assets/checkers.png"
         altText="Custom Alt Text"
         title="Strengthen Your Security Posture"
-        description="Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment."
+        description="Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment."
         showTag={true}
         tagText="GET IN TOUCH"
         index={1}

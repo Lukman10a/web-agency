@@ -4,12 +4,12 @@ export const retailData = {
     description:
       "Cloud-native and AI solutions that scale with consumer demand",
     showButton: false,
-    imgSrc: "/",
+    imgSrc: "/svg/retail.svg",
   },
   companyProfiles: {
     companyOne: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/goodfood.svg",
       author: "Peter Philips | CTO, Recognize",
     },
@@ -19,7 +19,7 @@ export const retailData = {
       "Demand for content is constantly growing but the complexity of high-fidelity workflows and global delivery isn’t going away. We empower you with cloud-native and AI solutions to streamline production, create more engaging experiences, and seamlessly deliver to all platforms.",
     companyTwo: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/carehubs.svg",
       author: "Peter Philips | CTO, Recognize",
       buttonText: "Read More",
@@ -99,7 +99,7 @@ export const retailData = {
       altText: "Image",
       title: "Strengthen Your Security Posture",
       description:
-        "Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment.",
+        "Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment.",
       showTag: true,
       tagText: "GET IN TOUCH",
       index: 2,
@@ -119,12 +119,12 @@ export const financeData = {
     description:
       "Cloud and AI solutions for the next-generation of media workflows",
     showButton: false,
-    imgSrc: "/",
+    imgSrc: "/svg/financial.svg",
   },
   companyProfiles: {
     companyOne: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/goodfood.svg",
       author: "Peter Philips | CTO, Recognize",
     },
@@ -134,7 +134,7 @@ export const financeData = {
       "Demand for content is constantly growing but the complexity of high-fidelity workflows and global delivery isn’t going away. We empower you with cloud-native and AI solutions to streamline production, create more engaging experiences, and seamlessly deliver to all platforms.",
     companyTwo: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/carehubs.svg",
       author: "Peter Philips | CTO, Recognize",
       buttonText: "Read More",
@@ -210,7 +210,7 @@ export const financeData = {
       altText: "Image",
       title: "Strengthen Your Security Posture",
       description:
-        "Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment.",
+        "Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment.",
       showTag: true,
       tagText: "GET IN TOUCH",
       index: 2,
@@ -232,12 +232,12 @@ export const healthcareData = {
     showButton: false,
     icon: true,
     iconLink: "/svg/newheroicon.svg",
-    ImgSrc: "/",
+    ImgSrc: "/svg/healthcare.svg",
   },
   companiesProfile: {
     cards: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/carehubs.svg",
       author: "Peter Philips | CTO, Recognize",
     },
@@ -321,7 +321,7 @@ export const healthcareData = {
       altText: "Image",
       title: "Strengthen Your Security Posture",
       description:
-        "Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment.",
+        "Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment.",
       showTag: true,
       tagText: "GET IN TOUCH",
       index: 2,
@@ -345,7 +345,7 @@ export const lifeSciencesData = {
   companiesProfile: {
     cards: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/carehubs.svg",
       author: "Peter Philips | CTO, Recognize",
     },
@@ -427,7 +427,7 @@ export const lifeSciencesData = {
     {
       imgSrc: "/public/assets/contact",
       altText: "Image",
-      title: "Schedule a Free Consultation With a Mission Cloud Advisor",
+      title: "Schedule a Free Consultation With a Teverse Cloud Advisor",
       description:
         "Schedule a Free Call with a Cloud Advisor to learn more about how we help life sciences companies with the power of AWS.",
       showTag: true,
@@ -441,7 +441,7 @@ export const lifeSciencesData = {
   companiesProfileTwo: {
     cards: {
       content:
-        "We would have had to hire three people to get what we’re getting from Mission, and even then wouldn’t have reached the level of experience that Mission brings. I look at Mission as an extension of our team. It’s a true partnership. Mission’s experience and expertise is extremely valuable to us.",
+        "We would have had to hire three people to get what we’re getting from Teverse, and even then wouldn’t have reached the level of experience that Teverse brings. I look at Teverse as an extension of our team. It’s a true partnership. Teverse’s experience and expertise is extremely valuable to us.",
       imageSrc: "/svg/carehubs.svg",
       author: "Peter Philips | CTO, Recognize",
       buttonText: "Read More",
@@ -456,11 +456,11 @@ export const mediaData = {
     description:
       "Cloud and AI solutions for the next-generation of media workflows",
     showButton: false,
-    ImgSrc: "/",
+    ImgSrc: "/svg/media.svg",
   },
   companyData: {
     content:
-      "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+      "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
     imageSrc: "/svg/goodfood.svg",
     author: "Peter Philips | CTO, Recognize",
   },
@@ -469,7 +469,7 @@ export const mediaData = {
     "Demand for content is constantly growing but the complexity of high-fidelity workflows and global delivery isn’t going away. We empower you with cloud-native and AI solutions to streamline production, create more engaging experiences, and seamlessly deliver to all platforms.",
   companyDataTwo: {
     content:
-      "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+      "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
     imageSrc: "/svg/carehubs.svg",
     author: "Peter Philips | CTO, Recognize",
     buttonText: "Read More",
@@ -555,7 +555,7 @@ export const mediaData = {
     altText: "Image",
     title: "Strengthen Your Security Posture",
     description:
-      "Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment.",
+      "Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment.",
     showTag: true,
     tagText: "GET IN TOUCH",
     index: 2,
@@ -569,7 +569,7 @@ export const privateData = {
   hero: {
     title: "Private Equity",
     description:
-      "Mission has extensive experience creating value for private equity firms and their portfolio companies by providing tailored services and technical expertise to help maximize cost savings, optimize infrastructure, and enable innovation.",
+      "Teverse has extensive experience creating value for private equity firms and their portfolio companies by providing tailored services and technical expertise to help maximize cost savings, optimize infrastructure, and enable innovation.",
     showButton: true,
     buttonText: "Get Started",
     imgSrc: "/",
@@ -577,14 +577,14 @@ export const privateData = {
   companyProfile: {
     cards: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/goodfood.svg",
       author: "Peter Philips | CTO, Recognize",
     },
     heading:
       "Maximize the Value of Your Portfolio Companies with Tailored Private Equity Solutions",
     paragraph:
-      "Every business aims to create value, and maximize the ROI for their investors. It requires a significant amount of experience to navigate the unique obstacles and opportunities for portfolio companies. As a private equity-owned company, Mission has a comprehensive understanding of the needs of PE firms and their companies. Work with a partner with a proven history of enabling PE firms to optimize, modernize and streamline the infrastructure of their portfolio companies. You can rely on our demonstrated expertise in AWS and transformative technology, including generative AI and machine learning, to help you drive growth, increase profitability and capitalize on every opportunity.",
+      "Every business aims to create value, and maximize the ROI for their investors. It requires a significant amount of experience to navigate the unique obstacles and opportunities for portfolio companies. As a private equity-owned company, Teverse has a comprehensive understanding of the needs of PE firms and their companies. Work with a partner with a proven history of enabling PE firms to optimize, modernize and streamline the infrastructure of their portfolio companies. You can rely on our demonstrated expertise in AWS and transformative technology, including generative AI and machine learning, to help you drive growth, increase profitability and capitalize on every opportunity.",
   },
   benefits: {
     tag: "BENEFITS",
@@ -626,9 +626,9 @@ export const privateData = {
     imgSrc: "/public/assets/contact",
     altText: "Image",
     title:
-      "Learn How Mission Can Help You Maximize the Value of Your Portfolio Companies",
+      "Learn How Teverse Can Help You Maximize the Value of Your Portfolio Companies",
     description:
-      "Ready to unlock the full potential of your portfolio companies and drive sustainable growth? Schedule a free consultation with a Mission Cloud Solutions Architect today. We’re here to support you every step of the way as you determine the right private equity services for your organization.",
+      "Ready to unlock the full potential of your portfolio companies and drive sustainable growth? Schedule a free consultation with a Teverse Cloud Solutions Architect today. We’re here to support you every step of the way as you determine the right private equity services for your organization.",
     showTag: false,
     index: 2,
     showButton: true,
@@ -642,13 +642,13 @@ export const softwareData = {
     title: "Software on AWS",
     description: "Cloud and AI solutions for the next-generation of software",
     showButton: false,
-    ImgSrc: "/",
+    ImgSrc: "/svg/software.svg",
   },
 
   companiesProfile: {
     cards: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/goodfood.svg",
       author: "Peter Philips | CTO, Recognize",
     },
@@ -699,7 +699,7 @@ export const softwareData = {
   companiesProfileTwo: {
     cards: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/carehubs.svg",
       author: "Peter Philips | CTO, Recognize",
       buttonText: "Read More",
@@ -725,7 +725,7 @@ export const softwareData = {
       altText: "Image",
       title: "Strengthen Your Security Posture",
       description:
-        "Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment.",
+        "Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment.",
       showTag: true,
       tagText: "GET IN TOUCH",
       index: 2,

@@ -27,7 +27,7 @@ const cardData = [
     icon: "/assets/cloudstrikes.png",
     title: "Built for AWS",
     description:
-      "Every part of Mission Control was designed for AWS and will continue to evolve to support AWS services and programs.",
+      "Every part of Teverse Control was designed for AWS and will continue to evolve to support AWS services and programs.",
   },
 ];
 
@@ -60,7 +60,7 @@ const InterpretDataSection: React.FC = () => {
   };
 
   return (
-    <section className="mx-auto mt-[10rem] flex max-w-7xl flex-col space-y-5 px-10 sm:mt-10 sm:px-4">
+    <section className="mx-auto mt-[15rem] flex max-w-7xl flex-col space-y-5 px-10 sm:mt-10 sm:px-4">
       <div className="space-y-4">
         <motion.div
           className="mb-4 inline rounded-full py-1 text-xs tracking-wide text-gray-500"
@@ -90,8 +90,8 @@ const InterpretDataSection: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Mission Control helps you monitor and analyze your environment,
-          similar to a cloud management platform. But Mission Control also
+          Teverse Control helps you monitor and analyze your environment,
+          similar to a cloud management platform. But Teverse Control also
           leverages our teams as they build their knowledge of your business,
           industry, objectives, and the unique concerns and needs of your
           architecture.
@@ -110,7 +110,7 @@ const InterpretDataSection: React.FC = () => {
         {cardData.map((card, index) => (
           <motion.div
             key={index}
-            className="flex flex-col rounded-2xl bg-main-gradient p-14 text-left shadow-lg sm:p-4"
+            className="flex cursor-pointer flex-col rounded-2xl bg-main-gradient p-14 text-left shadow-lg sm:p-4"
             variants={cardVariants}
             whileHover={{
               scale: 1.05, // Slight hover scale effect

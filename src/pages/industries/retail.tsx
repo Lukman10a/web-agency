@@ -14,14 +14,14 @@ import ServicesCard from "@/components/shared/services-card";
 
 // const companyData = {
 //   content:
-//     "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+//     "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
 //   imageSrc: "/svg/goodfood.svg",
 //   author: "Peter Philips | CTO, Recognize",
 // };
 
 // const companyDataTwo = {
 //   content:
-//     "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+//     "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
 //   imageSrc: "/svg/carehubs.svg",
 //   author: "Peter Philips | CTO, Recognize",
 //   buttonText: "Read More",

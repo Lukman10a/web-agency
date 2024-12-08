@@ -172,7 +172,7 @@ export default function WhyChooseUs() {
               asChild
               className="group flex w-fit items-center gap-4 rounded-3xl border border-[#081348] bg-orange-650 font-sans text-white transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-white hover:text-orange-650 xl:text-[12px] md:w-full sm:mb-4"
             >
-              <Link className="h-full" href={"/case-studies"}>
+              <Link className="h-full" href={"/solutions"}>
                 <span>Discover Solutions </span>
 
                 <ArrowIcon />

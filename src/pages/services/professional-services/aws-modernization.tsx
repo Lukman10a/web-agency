@@ -14,9 +14,9 @@ import WhatIsTeverse from "@/components/What-is-teverse";
 // Data for BenefitsSection
 const benefitsData = {
   tag: true,
-  title: "Benefits of AWS Modernization with Mission",
+  title: "Benefits of AWS Modernization with Teverse",
   description:
-    "Modernization allows you to realize more benefits from your applications and infrastructure. With Mission’s cloud modernization services, receive expert support in configuring and managing your cloud in a modern environment and enjoy a cloud environment centered around reliability, cost efficiency, performance, and elasticity. Below are more benefits of a modernized environment:",
+    "Modernization allows you to realize more benefits from your applications and infrastructure. With Teverse’s cloud modernization services, receive expert support in configuring and managing your cloud in a modern environment and enjoy a cloud environment centered around reliability, cost efficiency, performance, and elasticity. Below are more benefits of a modernized environment:",
   benefits: [
     {
       icon: "/assets/heart-rate.png",
@@ -79,7 +79,7 @@ const AwsModernization = () => {
         iconSrc={Writeable}
         buttonText="Read Full Story"
         buttonLink="#"
-        quote="“All of the tasks we’ve collaborated on with Mission demonstrate just how wide their expertise spans. They are an ideal partner for building and supporting our AWS environment to ensure applications continue to meet the needs of our customers. I can also step out of the hands-on DevOps role and focus on the bigger picture — I now spend less time in the weeds solving technical problems and more time enhancing our applications.”"
+        quote="“All of the tasks we’ve collaborated on with Teverse demonstrate just how wide their expertise spans. They are an ideal partner for building and supporting our AWS environment to ensure applications continue to meet the needs of our customers. I can also step out of the hands-on DevOps role and focus on the bigger picture — I now spend less time in the weeds solving technical problems and more time enhancing our applications.”"
         authorName="Shawn Hempel"
         authorRole="CTO at Writable"
       />
@@ -88,7 +88,7 @@ const AwsModernization = () => {
       <ServicesCard
         imgSrc="/assets/checkers.png"
         altText=""
-        title="Modernize Your Data Infrastructure With Mission"
+        title="Modernize Your Data Infrastructure With Teverse"
         description="Schedule a free consultation call to learn how modernization can accelerate your business. Our cloud advisor team can walk you through the modernization process and answer your questions."
         showTag={true}
         tagText="GET IN TOUCH"

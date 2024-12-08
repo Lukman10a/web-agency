@@ -77,7 +77,7 @@ const SolutionsSection: React.FC = () => {
             alt="crowd strike"
           />
           <p className="leading-2 mb-4 text-lg sm:text-sm">
-            With Mission Cloud One and CrowdStrike Falcon{" "}
+            With Teverse Cloud One and CrowdStrike Falcon{" "}
             <span className="block sm:inline">
               {" "}
               Complete, we handle the most common needs of

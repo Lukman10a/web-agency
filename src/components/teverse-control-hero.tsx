@@ -1,5 +1,7 @@
 import React from "react";
 
+import Link from "next/link";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { HighlightedText } from "./ui/animated/highlight-text";
@@ -41,21 +43,23 @@ const TeverseControlHero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
           >
-            Mission Control is your first-of-its-kind cloud services platform
+            Teverse Control is your first-of-its-kind cloud services platform
             which lets you benchmark, analyze, and track the performance of your
             AWS cloud environment while guiding you toward improvements with
             real-time access to our teams of AWS experts.
           </motion.p>
-          <motion.button
-            className="mt-5 rounded-full bg-[#FF9557] px-7 py-3 text-sm font-medium text-white transition duration-300 hover:bg-orange-600"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
-          >
-            Request a Demo
-          </motion.button>
+          <Link href={"/contact"}>
+            <motion.button
+              className="mt-5 rounded-full bg-[#FF9557] px-7 py-3 text-sm font-medium text-white transition duration-300 hover:bg-orange-600"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2, duration: 0.8 }}
+            >
+              Request a Demo
+            </motion.button>
+          </Link>
         </motion.div>
 
         {/* Overlay Checkered Image */}

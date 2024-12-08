@@ -153,8 +153,8 @@ export default function AWS() {
       <WhatIsTeverse
         tag
         tagText="OVERVIEW"
-        title="Comprehensive Protection for Your AWS Environment"
-        mainDescription="Mission Cloud Secure is a SaaS application that delivers 24/7 security monitoring and incident response through a powerful combination of CrowdStrike's world-class security platform and Mission's AWS expertise. Protect your cloud resources, endpoints, and credentials while maintaining compliance and operational excellence."
+        title="Comprehensive Protection for Your AWS Environment"
+        mainDescription="Teverse Cloud Secure is a SaaS application that delivers 24/7 security monitoring and incident response through a powerful combination of CrowdStrike's world-class security platform and Teverse's AWS expertise. Protect your cloud resources, endpoints, and credentials while maintaining compliance and operational excellence."
         additionalDescription=""
       />
 
@@ -171,7 +171,7 @@ export default function AWS() {
         iconSrc="/assets/trove.webp"
         buttonText="Read Full Story"
         buttonLink="#"
-        quote="“For any organization like ours looking to modernize with containers on AWS, I would say run — don’t walk — to engage with Mission. Mission came in as a trusted partner, let us lean on them to do the heavy lifting, and helped us build the container architecture that had long been on our wish list. I highly recommend Mission both for the deep expertise and delightful customer experience it provides.”"
+        quote="“For any organization like ours looking to modernize with containers on AWS, I would say run — don’t walk — to engage with Teverse. Teverse came in as a trusted partner, let us lean on them to do the heavy lifting, and helped us build the container architecture that had long been on our wish list. I highly recommend Teverse both for the deep expertise and delightful customer experience it provides.”"
         authorName="Colleen Blakelock"
         authorRole=" former Director of Engineering, Infrastructure and Security at Trove"
       />
@@ -296,7 +296,7 @@ export default function AWS() {
 
       <ServicesCard
         altText="Custom Alt Text"
-        title="Schedule a Free Consultation With a Mission Cloud Solutions Architect"
+        title="Schedule a Free Consultation With a Teverse Cloud Solutions Architect"
         description="As you determine which consulting services are right for your organization, we’re here to support you."
         showTag={true}
         index={1}
