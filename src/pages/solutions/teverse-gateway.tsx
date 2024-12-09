@@ -57,16 +57,17 @@ const TeverseGateway = () => {
   return (
     <section>
       <NewHero
-        ImgSrc="/svg/gatewayillust.svg"
+        imgSrc="/svg/gatewayillust.svg"
         title={"Terverse Cloud Gateway"}
         description={
           "AWS guidance for efficient growth and foundational best practices"
         }
         buttonText={"Get Started"}
+        buttonLink="/contact"
       />
       <WhatIsTeverse
         title={"What is Teverse Cloud Gateway?"}
-        imageSrc = "/assets/teverse-gateway2.png"
+        imageSrc="/assets/teverse-gateway2.png"
         mainDescription={
           "Teverse Cloud Gateway is our software platform for helping customers grow efficiently while staying aligned to foundational best practices."
         }

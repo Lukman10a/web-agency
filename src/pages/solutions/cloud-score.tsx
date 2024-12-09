@@ -69,10 +69,11 @@ const CloudScore = () => {
     <div>
       {/* Hero Section */}
       <NewHero
-        ImgSrc="/svg/cloud-score.svg"
+        imgSrc="/svg/cloud-score.svg"
         title="Teverse Cloud Score"
         description="Benchmark your environment against AWS best practices."
         buttonText="Get Started"
+        buttonLink="/contact"
       />
 
       {/* What Is Teverse Section */}

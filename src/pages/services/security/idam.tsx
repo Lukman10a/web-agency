@@ -63,11 +63,11 @@ export default function IdamSecurityPage() {
         transition={{ duration: 0.5 }}
       >
         <NewHero
-          showHighlighted={false}
-          ImgSrc="/assets/cloud-secure.png"
+          imgSrc="/assets/cloud-secure.png"
           title="IDAM Security Solutions"
           description="Enterprise-grade identity and access management solutions for your business"
           buttonText="Get Started"
+          buttonLink="/contact"
         />
       </motion.div>
 

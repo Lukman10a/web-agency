@@ -61,10 +61,12 @@ const CaseStudies: React.FC<{ caseStudies: TCaseStudy[] }> = ({
               environment that is secure, scalable, easy to operate, and
               built-to-last.
             </p>
-            <Button className="flex w-fit items-center gap-4 rounded-full border border-[#081348] bg-orange-650 px-[2em] py-[1.6em] text-white transition duration-500 hover:scale-105 hover:bg-orange-600 md:text-[12px] sm:w-full">
-              <span>EXPLORE</span>
-              <ArrowIcon />
-            </Button>
+            <Link href={"/contact"}>
+              <Button className="flex w-fit items-center gap-4 rounded-full border border-[#081348] bg-orange-650 px-[2em] py-[1.6em] text-white transition duration-500 hover:scale-105 hover:bg-orange-600 md:text-[12px] sm:w-full">
+                <span>EXPLORE</span>
+                <ArrowIcon />
+              </Button>
+            </Link>
           </article>
           <div className="xl:w-1/3 md:w-[80%]">
             <Image

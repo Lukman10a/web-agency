@@ -107,10 +107,11 @@ const CloudOne = () => {
   return (
     <main>
       <NewHero
-        ImgSrc="/assets/contact.png"
+        imgSrc="/assets/contact.png"
         title="Teverse Cloud One"
         description="Our comprehensive service for AWS optimization, operations, and security."
         buttonText="Get Started"
+        buttonLink="/contact"
       />
 
       <ServicesCard

@@ -30,7 +30,7 @@ const Media = () => {
         title={hero.title}
         description={hero.description}
         showButton={hero.showButton}
-        ImgSrc={hero.ImgSrc}
+        imgSrc={hero.imgSrc}
       />
 
       <CompaniesProfile

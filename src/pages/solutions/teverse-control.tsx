@@ -97,7 +97,7 @@ const TeverseControl = () => {
     <main>
       <TeverseControlHero />
       <InterpretDataSection />
-      <section className="space-y-6 bg-main-gradient px-20 py-10 text-left text-2xl font-medium sm:mx-5 sm:text-lg">
+      <section className="my-4 space-y-6 bg-[#FFF4EE] px-20 py-10 text-left text-2xl font-medium sm:mx-5 sm:text-lg">
         <div className="space-y-4">
           <h2 className="mb-8 inline rounded-lg border border-black p-1 text-left font-semibold">
             Features

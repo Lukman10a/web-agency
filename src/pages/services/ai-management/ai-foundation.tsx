@@ -155,13 +155,13 @@ const AIFundation = () => {
   return (
     <div>
       <NewHero
-        ImgSrc="/svg/cloudstrike.svg"
+        imgSrc="/svg/cloudstrike.svg"
         title="Teverse AI Foundation"
         description="Empower Your AI Journey with Expert Guidance"
         showButton={false}
         buttonText="Get Started"
-        tag
         tagText="FOR EFFICIENT GROWTH AND AI BEST PRACTICES"
+        buttonLink="/contact"
       />
 
       <div className="mx-auto mb-24 w-[90%] max-w-[1200px] md:mb-12">

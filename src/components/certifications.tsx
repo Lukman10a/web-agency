@@ -2,6 +2,8 @@ import React from "react";
 
 import Image from "next/image";
 
+import { cn } from "@/lib/utils";
+
 import archi from "../../public/assets/archi.png";
 import cloud from "../../public/assets/cloud.png";
 import data from "../../public/assets/data.png";
@@ -16,90 +18,7 @@ const SecurityCertifications: React.FC = () => {
   return (
     <section className="mb-16">
       <div className="relative mx-auto w-[90%] max-w-[1400px] rounded-2xl bg-orange-650 py-24 sm:w-full sm:rounded-none">
-        {/* Title */}
-        {/*start design stars */}
-        <span>
-          <Image
-            width={500}
-            height={500}
-            src={star}
-            alt="star"
-            className="absolute left-[15rem] top-12 h-9 w-9 xl:invisible"
-          />
-        </span>
-
-        <span>
-          <Image
-            width={500}
-            height={500}
-            src={star}
-            alt="star"
-            className="absolute left-[15rem] top-24 h-9 w-9 xl:invisible"
-          />
-        </span>
-        <span>
-          <Image
-            width={500}
-            height={500}
-            src={star}
-            alt="star"
-            className="absolute left-[15rem] top-36 h-9 w-9 xl:invisible"
-          />
-        </span>
-        <span>
-          <Image
-            width={500}
-            height={500}
-            src={star}
-            alt="star"
-            className="absolute left-[18rem] top-12 h-9 w-9 xl:invisible"
-          />
-        </span>
-        <span>
-          <Image
-            width={500}
-            height={500}
-            src={star}
-            alt="star"
-            className="absolute left-[18rem] top-24 h-9 w-9 xl:invisible"
-          />
-        </span>
-        <span>
-          <Image
-            width={500}
-            height={500}
-            src={star}
-            alt="star"
-            className="absolute left-[21rem] top-12 h-9 w-9 xl:invisible"
-          />
-        </span>
-        <span>
-          <Image
-            width={500}
-            height={500}
-            src={star}
-            alt="star"
-            className="absolute right-72 top-12 h-9 w-9 xl:invisible"
-          />
-        </span>
-        <span>
-          <Image
-            width={500}
-            height={500}
-            src={star}
-            alt="star"
-            className="absolute right-[15rem] top-20 h-9 w-9 xl:invisible"
-          />
-        </span>
-        <span>
-          <Image
-            width={500}
-            height={500}
-            src={star}
-            alt="star"
-            className="absolute right-[21rem] top-20 h-9 w-9 xl:invisible"
-          />
-        </span>
+        <StarBackground />
         {/*end design stars */}
         <div className="mb-8 overflow-hidden text-center">
           <InView
@@ -209,3 +128,39 @@ const SecurityCertifications: React.FC = () => {
 };
 
 export default SecurityCertifications;
+
+// type StarPosition = {
+//   left?: string;
+//   right?: string;
+//   top: string;
+// };
+
+const StarBackground: React.FC = () => {
+  const starPositions = [
+    { className: "left-[15rem] top-12" },
+    { className: "left-[15rem] top-24" },
+    { className: "left-[15rem] top-36" },
+    { className: "left-[18rem] top-12" },
+    { className: "left-[18rem] top-24" },
+    { className: "left-[21rem] top-12" },
+    { className: "right-72 top-12" },
+    { className: "right-[15rem] top-20" },
+    { className: "right-[21rem] top-20" },
+  ];
+
+  return (
+    <>
+      {starPositions.map((pos, index) => (
+        <span key={index} className={cn("absolute xl:invisible")}>
+          <Image
+            width={36}
+            height={36}
+            src={star}
+            alt="star"
+            className={cn("absolute h-9 w-9", pos.className)}
+          />
+        </span>
+      ))}
+    </>
+  );
+};
