@@ -47,7 +47,7 @@ const Booking: React.FC = () => (
             asChild
           >
             <Link
-              href="#"
+              href="/contact"
               className="flex items-center rounded-full bg-orange-600 px-4 py-3 text-white"
             >
               BOOK A FREE CALL <ArrowIcon />

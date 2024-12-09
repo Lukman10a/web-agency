@@ -42,11 +42,11 @@ export default function SolutionPage({
   return (
     <div className="">
       <NewHero
-        ImgSrc="/svg/engagement.svg"
+        imgSrc="/svg/engagement.svg"
         title={solution.title}
-        showHighlighted={false}
         description={solution.description}
         buttonText="Get Started"
+        buttonLink="/contact"
       />
 
       <div className="container mx-auto max-w-7xl px-10">
@@ -131,7 +131,7 @@ export default function SolutionPage({
         tagText="GET IN TOUCH"
         title={"Strengthen Your Security Posture"}
         description={
-          "Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment."
+          "Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment."
         }
         imgSrc={""}
         index={0}

@@ -17,7 +17,7 @@ const cardData = [
     description:
       "Unlock the full potential of the cloud with expert guidance on strategy, migration, and management. Our solutions enable you to build a scalable, secure, and cost-effective cloud infrastructure tailored to your business goals.",
     buttonText: "Explore Cloud Solutions",
-    buttonLink: "/solutions/cloud-consulting",
+    buttonLink: "/solutions/",
     imageSrc: Cardimage1,
     titleIcon: <LuUploadCloud />,
   },
@@ -26,7 +26,7 @@ const cardData = [
     description:
       "Empower your business with Identity and Access Management (IDAM) solutions that ensure the right individuals access the right resources at the right times. We design and implement scalable, secure IDAM architectures to protect your organization and streamline access control.",
     buttonText: "Optimize Access Control",
-    buttonLink: "/solutions/idam-consulting",
+    buttonLink: "/solutions/idam",
     imageSrc: Cardimage2,
     titleIcon: <GrShieldSecurity />,
   },

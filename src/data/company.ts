@@ -186,14 +186,14 @@ export const careersPageData = {
 export const pressReleases = [
   {
     id: 1,
-    title: "Mission and CrowdStrike Launch Mission Cloud Secure",
+    title: "Teverse and CrowdStrike Launch Teverse Cloud Secure",
     description: "Advanced Cloud Detection and Response for AWS Customers",
     date: new Date(2024, 0, 15), // January 15, 2024
     type: "Product Launch",
   },
   {
     id: 2,
-    title: "Mission Welcomes Glenn Grant as SVP",
+    title: "Teverse Welcomes Glenn Grant as SVP",
     description:
       "Strengthening Customer Success in AWS Cloud and AI Initiatives",
     date: new Date(2024, 1, 20), // February 20, 2024
@@ -201,7 +201,7 @@ export const pressReleases = [
   },
   {
     id: 3,
-    title: "Mission Expands Cloud Services to APAC Region",
+    title: "Teverse Expands Cloud Services to APAC Region",
     description:
       "Strategic Expansion Brings Innovative Cloud Solutions to Asia-Pacific Market",
     date: new Date(2023, 11, 5), // December 5, 2023
@@ -209,7 +209,7 @@ export const pressReleases = [
   },
   {
     id: 4,
-    title: "Mission Achieves AWS Advanced Tier Partner Status",
+    title: "Teverse Achieves AWS Advanced Tier Partner Status",
     description:
       "Recognized for Exceptional Cloud Expertise and Customer Success",
     date: new Date(2023, 6, 12), // July 12, 2023
@@ -217,7 +217,7 @@ export const pressReleases = [
   },
   {
     id: 5,
-    title: "Mission Launches AI-Powered Cloud Optimization Tool",
+    title: "Teverse Launches AI-Powered Cloud Optimization Tool",
     description:
       "Revolutionary Platform Helps Businesses Maximize Cloud Efficiency",
     date: new Date(2024, 2, 8), // March 8, 2024
@@ -225,7 +225,7 @@ export const pressReleases = [
   },
   {
     id: 6,
-    title: "Mission Reports Record Growth in Cloud Migrations",
+    title: "Teverse Reports Record Growth in Cloud Migrations",
     description:
       "Company Sees 40% Increase in Enterprise Cloud Transformation Projects",
     date: new Date(2023, 9, 25), // October 25, 2023

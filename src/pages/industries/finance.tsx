@@ -20,7 +20,8 @@ const Finance = () => {
         title={financeData.heroSection.title}
         description={financeData.heroSection.description}
         showButton={financeData.heroSection.showButton}
-        ImgSrc={financeData.heroSection.imgSrc}
+        imgSrc={financeData.heroSection.imgSrc}
+        buttonLink="/contact"
       />
 
       <CompaniesProfile

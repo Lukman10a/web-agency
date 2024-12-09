@@ -1,9 +1,21 @@
 // keystatic.config.ts
+import { industriesCollection } from "@/data/industries";
 import { collection, config, fields } from "@keystatic/core";
 
+export const isDevelopment = process.env.NODE_ENV === "development";
+export const REPO_OWNER = "lukman10a";
+export const REPO_NAME = "web-agency";
+
 export default config({
+  ui: {
+    brand: { name: "Teverse" },
+  },
   storage: {
-    kind: "local",
+    kind: isDevelopment ? "local" : "github",
+    repo: {
+      owner: REPO_OWNER,
+      name: REPO_NAME,
+    },
   },
   collections: {
     posts: collection({
@@ -143,56 +155,9 @@ export default config({
         }),
       },
     }),
-
-    caseStudiesV2: collection({
-      label: "Case Studies V2",
-      slugField: "title",
-      path: "content/case-studies/*",
-      format: { contentField: "content" },
-      schema: {
-        title: fields.slug({ name: { label: "Title" } }),
-        description: fields.text({ label: "Description" }),
-        client: fields.text({ label: "Client" }),
-        date: fields.date({ label: "Date" }),
-        tags: fields.array(fields.text({ label: "Tag" }), {
-          label: "Tags",
-          itemLabel: (props) => props.value,
-        }),
-        executiveSummary: fields.text({
-          label: "Executive Summary",
-          multiline: true,
-        }),
-        background: fields.text({ label: "Background", multiline: true }),
-        solution: fields.markdoc({
-          label: "Solution",
-        }),
-        results: fields.array(
-          fields.object({
-            title: fields.text({ label: "Result Title" }),
-            description: fields.text({ label: "Result Description" }),
-          }),
-          { label: "Results" },
-        ),
-        outcome: fields.text({ label: "Outcome", multiline: true }),
-        testimonial: fields.object({
-          quote: fields.text({ label: "Quote", multiline: true }),
-          author: fields.text({ label: "Author" }),
-        }),
-        toolsUsed: fields.array(
-          fields.object({
-            name: fields.text({ label: "Tool Name" }),
-            description: fields.text({ label: "Tool Description" }),
-          }),
-          { label: "Tools Used" },
-        ),
-        aboutClient: fields.text({
-          label: "About the Client",
-          multiline: true,
-        }),
-        content: fields.markdoc({
-          label: "Content",
-        }),
-      },
-    }),
+    industries: industriesCollection,
   },
+  // singletons: {
+  //   industries: industriesSingleton,
+  // },
 });

@@ -1,5 +1,7 @@
 import React from "react";
 
+import Image from "next/image";
+
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -61,11 +63,11 @@ export default function IdamSecurityPage() {
         transition={{ duration: 0.5 }}
       >
         <NewHero
-          showHighlighted={false}
-          ImgSrc="/assets/cloud-secure.png"
+          imgSrc="/assets/cloud-secure.png"
           title="IDAM Security Solutions"
           description="Enterprise-grade identity and access management solutions for your business"
           buttonText="Get Started"
+          buttonLink="/contact"
         />
       </motion.div>
 
@@ -116,7 +118,7 @@ export default function IdamSecurityPage() {
               </ul>
             </div>
             <div className="rounded-2xl bg-gray-50 p-8">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1633265486064-086b219458ec?w=800&auto=format&fit=crop&q=60"
                 alt="Security Illustration"
                 className="h-full w-full rounded-lg object-cover"

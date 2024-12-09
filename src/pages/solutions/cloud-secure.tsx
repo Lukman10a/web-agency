@@ -6,9 +6,6 @@ import circles from "/public/assets/circles.png";
 import cloudstrikes from "/public/assets/cloudstrikes.png";
 import padlock from "/public/assets/padlock.png";
 import clock from "/public/svg/awsBuild.svg";
-import { motion } from "framer-motion";
-
-import { HighlightedText } from "@/components/ui/animated/highlight-text";
 
 import AwsBuild from "@/components/aws-build";
 import Preverity from "@/components/preverity";
@@ -62,7 +59,7 @@ const cardDataTwo = [
   {
     title: "AWS Security Expertise ",
     description:
-      "Leverage Mission's award-winning AWS security experience. We help configure and tune alerts, develop incident response runbooks, and implement AWS security best practices.",
+      "Leverage Teverse's award-winning AWS security experience. We help configure and tune alerts, develop incident response runbooks, and implement AWS security best practices.",
     icon: cloudstrikes,
   },
   {
@@ -76,13 +73,14 @@ const cardDataTwo = [
 const CloudScore = () => {
   // Return statement
   return (
-    <div className="bg-main-gradient">
+    <div>
       {/* Hero Section */}
       <NewHero
-        ImgSrc="/assets/cloud-secure.png"
-        title="Mission Cloud Secure"
+        imgSrc="/assets/cloud-secure.png"
+        title="Teverse Cloud Secure"
         description="Fully managed security, detection, and response"
         buttonText="Get Started"
+        buttonLink="/contact"
       />
 
       {/* What Is Teverse Section */}
@@ -90,7 +88,7 @@ const CloudScore = () => {
         tag
         tagText="OVERVIEW"
         title="Comprehensive Protection for Your AWS Environment"
-        mainDescription="Mission Cloud Secure is a SaaS application that delivers 24/7 security monitoring and incident response through a powerful combination of CrowdStrike's world-class security platform and Mission's AWS expertise. Protect your cloud resources, endpoints, and credentials while maintaining compliance and operational excellence."
+        mainDescription="Teverse Cloud Secure is a SaaS application that delivers 24/7 security monitoring and incident response through a powerful combination of CrowdStrike's world-class security platform and Teverse's AWS expertise. Protect your cloud resources, endpoints, and credentials while maintaining compliance and operational excellence."
         additionalDescription=""
       />
 
@@ -100,40 +98,8 @@ const CloudScore = () => {
         cards={cardData}
         tag="BENEFITS"
         title="Security without Compromise"
-        subtitle="In today's landscape of sophisticated cyber threats, comprehensive security requires constant vigilance, specialized expertise, and the right tooling. Mission Cloud Secure provides the following: "
+        subtitle="In today's landscape of sophisticated cyber threats, comprehensive security requires constant vigilance, specialized expertise, and the right tooling. Teverse Cloud Secure provides the following: "
       />
-
-      <section className="mx-auto mb-10 max-w-6xl space-y-4 rounded-2xl border-2 border-black p-14">
-        <div className="flex justify-between sm:flex-col sm:justify-start">
-          <p className="text-3xl font-semibold sm:mb-2 sm:text-center">Ebook</p>
-          <button className="rounded-3xl bg-black px-4 py-2 text-2xl text-white sm:text-lg">
-            Download
-          </button>
-        </div>
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
-          className="mb-4 text-4xl font-medium text-[#262626] sm:text-2xl"
-        >
-          <HighlightedText
-            highlightColor="#f4934b"
-            highlightHeight="100%"
-            className="p-2"
-            highlightClassName="z-[-1] rounded-lg"
-            delay={1.5}
-          >
-            {" "}
-            Safeguarding the Future
-          </HighlightedText>{" "}
-          with Generative AI Security
-        </motion.h2>
-        <p className="text-2xl sm:text-lg">
-          Explore our strategic blueprint for securing generative AI&apos;s
-          potential. Navigate risks, integrate, and craft policies for a secure
-          future.
-        </p>
-      </section>
 
       <AwsBuild
         cards={cardDataTwo}
@@ -171,7 +137,7 @@ const CloudScore = () => {
           </div>
           <div className="flex justify-between sm:flex-col">
             <div className="flex w-1/2 flex-col justify-center sm:w-full">
-              <h2 className="mb-2 text-2xl font-semibold">Mission Control</h2>
+              <h2 className="mb-2 text-2xl font-semibold">Teverse Control</h2>
               <p>
                 The Cloud Services Platform That&apos;s{" "}
                 <span className="block sm:inline"> Purpose Built for AWS</span>
@@ -179,9 +145,9 @@ const CloudScore = () => {
             </div>
             <div className="flex w-1/2 flex-col justify-center sm:w-full">
               <p>
-                Mission Cloud Secure includes Mission Control, our cloud
+                Teverse Cloud Secure includes Teverse Control, our cloud
                 services platform for visibility, guidance, and support for your
-                cloud. Mission Control visualizes your infrastructural health
+                cloud. Teverse Control visualizes your infrastructural health
                 using the Well-Architected Framework, opens and tracks tickets
                 with your CloudOps support team, gives resource visibility
                 across your whole environment, and supports your ad-hoc
@@ -198,7 +164,7 @@ const CloudScore = () => {
         imgSrc="/assets/checkers.png"
         altText="Custom Alt Text"
         title="Strengthen Your Security Posture"
-        description="Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment."
+        description="Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment."
         showTag={true}
         tagText="GET IN TOUCH"
         index={1}

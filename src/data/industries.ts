@@ -1,4 +1,61 @@
-export const retailData = {
+import { collection, fields, singleton } from "@keystatic/core";
+
+import { NewHeroProps } from "@/components/shared/new-hero";
+
+interface Testimonial {
+  content: string;
+  imageSrc: string;
+  author: string;
+  buttonText?: string;
+  showButton?: boolean;
+}
+
+interface CompanyDetails {
+  title: string;
+  description: string;
+}
+
+interface Capability {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+interface ServiceCard {
+  imgSrc: string;
+  altText: string;
+  title: string;
+  description: string;
+  showTag: boolean;
+  tagText: string;
+  index: number;
+  showButton: boolean;
+  buttonText: string;
+  href: string;
+}
+
+interface Statistics {
+  stats: string;
+  description: string;
+  details: string;
+}
+
+export interface IndustryData {
+  heroSection: NewHeroProps;
+  companyProfiles: {
+    companyOne: Testimonial;
+    companyTwo: Testimonial;
+    heading: string;
+    paragraph: string;
+  };
+  companyDetails: CompanyDetails[];
+  capabilities: Capability[];
+  servicesCards: ServiceCard[];
+  resources: { show: boolean };
+  statsCard?: Statistics;
+}
+
+export const retailData: IndustryData = {
   heroSection: {
     title: "Retail on AWS",
     description:
@@ -9,7 +66,7 @@ export const retailData = {
   companyProfiles: {
     companyOne: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/goodfood.svg",
       author: "Peter Philips | CTO, Recognize",
     },
@@ -19,7 +76,7 @@ export const retailData = {
       "Demand for content is constantly growing but the complexity of high-fidelity workflows and global delivery isn’t going away. We empower you with cloud-native and AI solutions to streamline production, create more engaging experiences, and seamlessly deliver to all platforms.",
     companyTwo: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/carehubs.svg",
       author: "Peter Philips | CTO, Recognize",
       buttonText: "Read More",
@@ -99,7 +156,7 @@ export const retailData = {
       altText: "Image",
       title: "Strengthen Your Security Posture",
       description:
-        "Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment.",
+        "Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment.",
       showTag: true,
       tagText: "GET IN TOUCH",
       index: 2,
@@ -124,7 +181,7 @@ export const financeData = {
   companyProfiles: {
     companyOne: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/goodfood.svg",
       author: "Peter Philips | CTO, Recognize",
     },
@@ -134,7 +191,7 @@ export const financeData = {
       "Demand for content is constantly growing but the complexity of high-fidelity workflows and global delivery isn’t going away. We empower you with cloud-native and AI solutions to streamline production, create more engaging experiences, and seamlessly deliver to all platforms.",
     companyTwo: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/carehubs.svg",
       author: "Peter Philips | CTO, Recognize",
       buttonText: "Read More",
@@ -210,7 +267,7 @@ export const financeData = {
       altText: "Image",
       title: "Strengthen Your Security Posture",
       description:
-        "Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment.",
+        "Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment.",
       showTag: true,
       tagText: "GET IN TOUCH",
       index: 2,
@@ -225,19 +282,18 @@ export const financeData = {
 };
 
 export const healthcareData = {
-  hero: {
+  heroSection: {
     title: "Healthcare on AWS",
     description:
       "AI solutions and cloud-native technologies for every patient.",
     showButton: false,
-    icon: true,
-    iconLink: "/svg/newheroicon.svg",
-    ImgSrc: "/svg/healthcare.svg",
+    icon: "/svg/newheroicon.svg",
+    imgSrc: "/svg/healthcare.svg",
   },
   companiesProfile: {
     cards: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/carehubs.svg",
       author: "Peter Philips | CTO, Recognize",
     },
@@ -321,7 +377,7 @@ export const healthcareData = {
       altText: "Image",
       title: "Strengthen Your Security Posture",
       description:
-        "Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment.",
+        "Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment.",
       showTag: true,
       tagText: "GET IN TOUCH",
       index: 2,
@@ -337,15 +393,14 @@ export const lifeSciencesData = {
     title: "Life Sciences on AWS",
     description: "AI solutions and cloud-native technologies.",
     showButton: false,
-    icon: true,
-    iconLink: "/svg/newheroicon.svg",
-    ImgSrc: "/",
+    icon: "/svg/newheroicon.svg",
+    imgSrc: "/",
   },
 
   companiesProfile: {
     cards: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/carehubs.svg",
       author: "Peter Philips | CTO, Recognize",
     },
@@ -427,7 +482,7 @@ export const lifeSciencesData = {
     {
       imgSrc: "/public/assets/contact",
       altText: "Image",
-      title: "Schedule a Free Consultation With a Mission Cloud Advisor",
+      title: "Schedule a Free Consultation With a Teverse Cloud Advisor",
       description:
         "Schedule a Free Call with a Cloud Advisor to learn more about how we help life sciences companies with the power of AWS.",
       showTag: true,
@@ -441,7 +496,7 @@ export const lifeSciencesData = {
   companiesProfileTwo: {
     cards: {
       content:
-        "We would have had to hire three people to get what we’re getting from Mission, and even then wouldn’t have reached the level of experience that Mission brings. I look at Mission as an extension of our team. It’s a true partnership. Mission’s experience and expertise is extremely valuable to us.",
+        "We would have had to hire three people to get what we’re getting from Teverse, and even then wouldn’t have reached the level of experience that Teverse brings. I look at Teverse as an extension of our team. It’s a true partnership. Teverse’s experience and expertise is extremely valuable to us.",
       imageSrc: "/svg/carehubs.svg",
       author: "Peter Philips | CTO, Recognize",
       buttonText: "Read More",
@@ -456,11 +511,11 @@ export const mediaData = {
     description:
       "Cloud and AI solutions for the next-generation of media workflows",
     showButton: false,
-    ImgSrc: "/svg/media.svg",
+    imgSrc: "/svg/media.svg",
   },
   companyData: {
     content:
-      "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+      "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
     imageSrc: "/svg/goodfood.svg",
     author: "Peter Philips | CTO, Recognize",
   },
@@ -469,7 +524,7 @@ export const mediaData = {
     "Demand for content is constantly growing but the complexity of high-fidelity workflows and global delivery isn’t going away. We empower you with cloud-native and AI solutions to streamline production, create more engaging experiences, and seamlessly deliver to all platforms.",
   companyDataTwo: {
     content:
-      "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+      "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
     imageSrc: "/svg/carehubs.svg",
     author: "Peter Philips | CTO, Recognize",
     buttonText: "Read More",
@@ -555,7 +610,7 @@ export const mediaData = {
     altText: "Image",
     title: "Strengthen Your Security Posture",
     description:
-      "Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment.",
+      "Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment.",
     showTag: true,
     tagText: "GET IN TOUCH",
     index: 2,
@@ -569,7 +624,7 @@ export const privateData = {
   hero: {
     title: "Private Equity",
     description:
-      "Mission has extensive experience creating value for private equity firms and their portfolio companies by providing tailored services and technical expertise to help maximize cost savings, optimize infrastructure, and enable innovation.",
+      "Teverse has extensive experience creating value for private equity firms and their portfolio companies by providing tailored services and technical expertise to help maximize cost savings, optimize infrastructure, and enable innovation.",
     showButton: true,
     buttonText: "Get Started",
     imgSrc: "/",
@@ -577,14 +632,14 @@ export const privateData = {
   companyProfile: {
     cards: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/goodfood.svg",
       author: "Peter Philips | CTO, Recognize",
     },
     heading:
       "Maximize the Value of Your Portfolio Companies with Tailored Private Equity Solutions",
     paragraph:
-      "Every business aims to create value, and maximize the ROI for their investors. It requires a significant amount of experience to navigate the unique obstacles and opportunities for portfolio companies. As a private equity-owned company, Mission has a comprehensive understanding of the needs of PE firms and their companies. Work with a partner with a proven history of enabling PE firms to optimize, modernize and streamline the infrastructure of their portfolio companies. You can rely on our demonstrated expertise in AWS and transformative technology, including generative AI and machine learning, to help you drive growth, increase profitability and capitalize on every opportunity.",
+      "Every business aims to create value, and maximize the ROI for their investors. It requires a significant amount of experience to navigate the unique obstacles and opportunities for portfolio companies. As a private equity-owned company, Teverse has a comprehensive understanding of the needs of PE firms and their companies. Work with a partner with a proven history of enabling PE firms to optimize, modernize and streamline the infrastructure of their portfolio companies. You can rely on our demonstrated expertise in AWS and transformative technology, including generative AI and machine learning, to help you drive growth, increase profitability and capitalize on every opportunity.",
   },
   benefits: {
     tag: "BENEFITS",
@@ -626,9 +681,9 @@ export const privateData = {
     imgSrc: "/public/assets/contact",
     altText: "Image",
     title:
-      "Learn How Mission Can Help You Maximize the Value of Your Portfolio Companies",
+      "Learn How Teverse Can Help You Maximize the Value of Your Portfolio Companies",
     description:
-      "Ready to unlock the full potential of your portfolio companies and drive sustainable growth? Schedule a free consultation with a Mission Cloud Solutions Architect today. We’re here to support you every step of the way as you determine the right private equity services for your organization.",
+      "Ready to unlock the full potential of your portfolio companies and drive sustainable growth? Schedule a free consultation with a Teverse Cloud Solutions Architect today. We’re here to support you every step of the way as you determine the right private equity services for your organization.",
     showTag: false,
     index: 2,
     showButton: true,
@@ -642,13 +697,13 @@ export const softwareData = {
     title: "Software on AWS",
     description: "Cloud and AI solutions for the next-generation of software",
     showButton: false,
-    ImgSrc: "/svg/software.svg",
+    imgSrc: "/svg/software.svg",
   },
 
   companiesProfile: {
     cards: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/goodfood.svg",
       author: "Peter Philips | CTO, Recognize",
     },
@@ -699,7 +754,7 @@ export const softwareData = {
   companiesProfileTwo: {
     cards: {
       content:
-        "Mission's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Mission, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
       imageSrc: "/svg/carehubs.svg",
       author: "Peter Philips | CTO, Recognize",
       buttonText: "Read More",
@@ -725,7 +780,7 @@ export const softwareData = {
       altText: "Image",
       title: "Strengthen Your Security Posture",
       description:
-        "Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment.",
+        "Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment.",
       showTag: true,
       tagText: "GET IN TOUCH",
       index: 2,
@@ -735,3 +790,203 @@ export const softwareData = {
     },
   ],
 };
+
+export const heroSectionSchema = fields.object({
+  title: fields.text({ label: "Hero Title" }),
+  description: fields.text({ label: "Hero Description" }),
+  showButton: fields.checkbox({ label: "Show Button" }),
+  imgSrc: fields.text({ label: "Hero Image Source" }),
+});
+
+export const companyProfilesSchema = fields.object({
+  heading: fields.text({ label: "Company Profiles Heading" }),
+  paragraph: fields.text({ label: "Company Profiles Paragraph" }),
+  companyOne: fields.object({
+    content: fields.text({ label: "First Company Content", multiline: true }),
+    imageSrc: fields.text({ label: "First Company Image" }),
+    author: fields.text({ label: "First Company Author" }),
+  }),
+  companyTwo: fields.object({
+    content: fields.text({ label: "Second Company Content", multiline: true }),
+    imageSrc: fields.text({ label: "Second Company Image" }),
+    author: fields.text({ label: "Second Company Author" }),
+    buttonText: fields.text({ label: "Button Text" }),
+    showButton: fields.checkbox({ label: "Show Button" }),
+  }),
+});
+
+export const industryMetadataSchema = fields.object({
+  label: fields.text({ label: "Menu Label" }),
+  order: fields.integer({ label: "Menu Order" }),
+});
+
+export const servicesCardsSchema = fields.array(
+  fields.object({
+    imgSrc: fields.text({ label: "Image Source" }),
+    altText: fields.text({ label: "Image Alt Text" }),
+    title: fields.text({ label: "Card Title" }),
+    description: fields.text({ label: "Card Description", multiline: true }),
+    showTag: fields.checkbox({ label: "Show Tag" }),
+    tagText: fields.text({ label: "Tag Text" }),
+    index: fields.integer({ label: "Card Index" }),
+    showButton: fields.checkbox({ label: "Show Button" }),
+    buttonText: fields.text({ label: "Button Text" }),
+    href: fields.text({ label: "Button Link" }),
+  }),
+  {
+    label: "Services Cards",
+    itemLabel: (props) => props.fields.title.value,
+  },
+);
+
+export const resourcesSchema = fields.object({
+  show: fields.checkbox({ label: "Show Resources" }),
+});
+export const companyDetailsSchema = fields.array(
+  fields.object({
+    title: fields.text({ label: "Company Detail Title" }),
+    description: fields.text({
+      label: "Company Detail Description",
+      multiline: true,
+    }),
+  }),
+  {
+    label: "Company Details",
+    itemLabel: (props) => props.fields.title.value,
+  },
+);
+
+export const capabilitiesSchema = fields.array(
+  fields.object({
+    title: fields.text({ label: "Capability Title" }),
+    description: fields.text({ label: "Capability Description" }),
+    icon: fields.text({ label: "Capability Icon Path" }),
+  }),
+  {
+    label: "Capabilities",
+    itemLabel: (props) => props.fields.title.value,
+  },
+);
+
+export const industriesSingleton = singleton({
+  label: "Industries",
+  path: "public/content/industries",
+
+  format: { data: "json" },
+  // description: 'Configuration for different industry pages',
+  schema: {
+    retail: fields.object({
+      metadata: industryMetadataSchema,
+      heroSection: heroSectionSchema,
+      companyProfiles: companyProfilesSchema,
+      companyDetails: fields.array(
+        fields.object({
+          title: fields.text({ label: "Company Detail Title" }),
+          description: fields.text({
+            label: "Company Detail Description",
+            multiline: true,
+          }),
+        }),
+        {
+          label: "Company Details",
+          itemLabel: (props) => props.fields.title.value,
+        },
+      ),
+      capabilities: fields.array(
+        fields.object({
+          title: fields.text({ label: "Capability Title" }),
+          description: fields.text({ label: "Capability Description" }),
+          icon: fields.text({ label: "Capability Icon Path" }),
+        }),
+        {
+          label: "Capabilities",
+          itemLabel: (props) => props.fields.title.value,
+        },
+      ),
+      servicesCards: fields.array(
+        fields.object({
+          imgSrc: fields.text({ label: "Image Source" }),
+          altText: fields.text({ label: "Image Alt Text" }),
+          title: fields.text({ label: "Card Title" }),
+          description: fields.text({
+            label: "Card Description",
+            multiline: true,
+          }),
+          showTag: fields.checkbox({ label: "Show Tag" }),
+          tagText: fields.text({ label: "Tag Text" }),
+          index: fields.integer({ label: "Card Index" }),
+          showButton: fields.checkbox({ label: "Show Button" }),
+          buttonText: fields.text({ label: "Button Text" }),
+          href: fields.text({ label: "Button Link" }),
+        }),
+        {
+          label: "Services Cards",
+          itemLabel: (props) => props.fields.title.value,
+        },
+      ),
+      resources: fields.object({
+        show: fields.checkbox({ label: "Show Resources" }),
+      }),
+    }),
+    finance: fields.object({
+      heroSection: heroSectionSchema,
+      companyProfiles: companyProfilesSchema,
+      // ... rest of the finance object follows the same pattern as retail
+    }),
+    healthcare: fields.object({
+      // Similar structure to other industry pages
+      heroSection: heroSectionSchema,
+      companyProfiles: companyProfilesSchema,
+    }),
+    // Add other industries following the same pattern
+    lifeSiences: fields.object({
+      heroSection: heroSectionSchema,
+      companyProfiles: companyProfilesSchema,
+    }),
+    media: fields.object({
+      heroSection: heroSectionSchema,
+      companyProfiles: companyProfilesSchema,
+    }),
+    privateEquity: fields.object({
+      heroSection: heroSectionSchema,
+      companyProfiles: companyProfilesSchema,
+    }),
+    software: fields.object({
+      heroSection: heroSectionSchema,
+      companyProfiles: companyProfilesSchema,
+    }),
+  },
+});
+
+export const industriesCollection = collection({
+  label: "Industries",
+  path: "public/content/industries/*",
+  format: { data: "json" },
+  slugField: "title", // Use the 'type' field as the slug
+  schema: {
+    title: fields.slug({
+      name: { label: "Title", validation: { isRequired: true } },
+    }),
+    type: fields.select({
+      label: "Industry Type",
+      options: [
+        { label: "No industry selected", value: "none" },
+        { label: "Retail", value: "retail" },
+        { label: "Finance", value: "finance" },
+        { label: "Healthcare", value: "healthcare" },
+        { label: "Life Sciences", value: "lifeSciences" },
+        { label: "Media", value: "media" },
+        { label: "Private Equity", value: "privateEquity" },
+        { label: "Software", value: "software" },
+        // Add more as needed
+      ],
+      defaultValue: "none",
+    }),
+    heroSection: heroSectionSchema,
+    companyProfiles: companyProfilesSchema,
+    companyDetails: companyDetailsSchema,
+    capabilities: capabilitiesSchema,
+    servicesCards: servicesCardsSchema,
+    resources: resourcesSchema,
+  },
+});

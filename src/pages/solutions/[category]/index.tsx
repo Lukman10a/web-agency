@@ -76,7 +76,7 @@ const CategoryPage: NextPage<CategoryPageProps> = ({ category, params }) => {
           <p className="mb-4 text-lg text-gray-600">
             Managing an AWS environment can take valuable time away from
             engineers. Building an on-call rotation, dealing with incidents,
-            repairing and maintaining your infrastructure—these burdens create
+            repairing and maintaining your infrastructure-these burdens create
             friction, distracting teams from mission-critical initiatives and
             slowing down development.
           </p>

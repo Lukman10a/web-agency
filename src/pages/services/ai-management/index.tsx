@@ -37,17 +37,18 @@ const AIManagement = () => {
   return (
     <main>
       <NewHero
-        ImgSrc="/assets/AI-management.png"
+        imgSrc="/assets/AI-management.png"
         title="AI Management Services"
         description="Keep your AI solutions up-to-date and operating efficiently"
         buttonText="Get Started"
+        buttonLink="/contact"
       />
 
       <ServicesCard
         imgSrc="/public/assets/contact"
         altText="Custom Alt Text"
         title="What is AI Management?"
-        description="At Mission, we know that getting an AI solution launched is not a one-and-done effort but an ongoing journey—solutions must be able to evolve with the growth of datasets, business requirements, or user behavior or adoption."
+        description="At Teverse, we know that getting an AI solution launched is not a one-and-done effort but an ongoing journey—solutions must be able to evolve with the growth of datasets, business requirements, or user behavior or adoption."
         showTag={true}
         tagText="Overview"
         index={1}
@@ -92,7 +93,7 @@ const AIManagement = () => {
               Industry-Leading Tools
             </h1>
             <p className="mt-4 text-gray-600">
-              All Mission Cloud One customers get access to industry-leading
+              All Teverse Cloud One customers get access to industry-leading
               tools such as Vega Cloud and New Relic. We manage all of these{" "}
               <span className="block sm:inline">
                 {" "}
@@ -121,9 +122,9 @@ const AIManagement = () => {
         imgSrc="/public/assets/contact"
         altText="Image"
         title="The Cloud Services Platform That's Purpose Built for AWS"
-        description="Get visibility into your cloud environment with Mission Control, paired with our CloudOps and Cloud Analyst teams to help you act on its insights. We contextualize our suggestions to your specific goals, situations, and needs while tracking the historical performance and costs of your environment."
+        description="Get visibility into your cloud environment with Teverse Control, paired with our CloudOps and Cloud Analyst teams to help you act on its insights. We contextualize our suggestions to your specific goals, situations, and needs while tracking the historical performance and costs of your environment."
         showTag={true}
-        tagText="MISSION CONTROL"
+        tagText="TEVERSE CONTROL"
         index={1}
         showButton={true}
         buttonText="Learn More"
@@ -140,7 +141,7 @@ const AIManagement = () => {
         imgSrc="/assets/contact.png"
         altText="Custom Alt Text"
         title="Strengthen Your Security Posture"
-        description="Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment."
+        description="Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment."
         showTag={true}
         tagText="GET IN TOUCH"
         index={1}

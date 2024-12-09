@@ -47,7 +47,7 @@ const GridCardData = [
   {
     title: "Security You Can Rely On",
     description:
-      "Powered by CrowdStrike and AWS native security services, we keep your environment secure from external threats and internal incidents. Our 24/7 team is always available through our Mission’s Security Operations Center to ensure you always have peace of mind.",
+      "Powered by CrowdStrike and AWS native security services, we keep your environment secure from external threats and internal incidents. Our 24/7 team is always available through our Teverse's Security Operations Center to ensure you always have peace of mind.",
     icon: "/assets/padlock.png",
   },
 ];
@@ -107,17 +107,18 @@ const CloudOne = () => {
   return (
     <main>
       <NewHero
-        ImgSrc="/assets/contact.png"
-        title="Mission Cloud One"
+        imgSrc="/assets/contact.png"
+        title="Teverse Cloud One"
         description="Our comprehensive service for AWS optimization, operations, and security."
         buttonText="Get Started"
+        buttonLink="/contact"
       />
 
       <ServicesCard
         imgSrc="/public/assets/contact"
         altText="Custom Alt Text"
         title="One Managed Service for Your Entire Cloud Environment"
-        description="Mission Cloud One is our comprehensive cloud managed service to continuously monitor, maintain, optimize, and secure your environment. We remove the operational burdens of managing your AWS environment so you can focus on what matters most: your business."
+        description="Teverse Cloud One is our comprehensive cloud managed service to continuously monitor, maintain, optimize, and secure your environment. We remove the operational burdens of managing your AWS environment so you can focus on what matters most: your business."
         showTag={true}
         tagText="Overview"
         index={1}
@@ -131,17 +132,17 @@ const CloudOne = () => {
           </h2>
 
           <h1 className="mb-8 text-4xl font-medium text-neutral-900 sm:text-2xl">
-            Why Mission Cloud One?
+            Why Teverse Cloud One?
           </h1>
           <p className="mb-12 text-gray-700">
             Managing an AWS environment can take valuable time away from
             engineers. Building an on-call rotation, dealing with incidents,
-            repairing and maintaining your infrastructure—these burdens create
-            friction, distracting teams from mission-critical initiatives and
+            repairing and maintaining your infrastructure-these burdens create
+            friction, distracting teams from Teverse-critical initiatives and
             slowing down development.
           </p>
           <p className="mb-10 text-gray-700">
-            With Mission Cloud One, we handle everything you need to keep your
+            With Teverse Cloud One, we handle everything you need to keep your
             environment reliably running, so that you stay cost efficient,
             scalable, agile, and secure.
           </p>
@@ -183,7 +184,7 @@ const CloudOne = () => {
               Industry-Leading Tools
             </h1>
             <p className="mt-4 text-gray-600">
-              All Mission Cloud One customers get access to industry-leading
+              All Teverse Cloud One customers get access to industry-leading
               tools such as Vega Cloud and New Relic. We manage all of these{" "}
               <span className="block sm:inline">
                 {" "}
@@ -212,9 +213,9 @@ const CloudOne = () => {
         imgSrc="/public/assets/contact"
         altText="Image"
         title="The Cloud Services Platform That's Purpose Built for AWS"
-        description="Get visibility into your cloud environment with Mission Control, paired with our CloudOps and Cloud Analyst teams to help you act on its insights. We contextualize our suggestions to your specific goals, situations, and needs while tracking the historical performance and costs of your environment."
+        description="Get visibility into your cloud environment with Teverse Control, paired with our CloudOps and Cloud Analyst teams to help you act on its insights. We contextualize our suggestions to your specific goals, situations, and needs while tracking the historical performance and costs of your environment."
         showTag={true}
-        tagText="MISSION CONTROL"
+        tagText="TEVERSE CONTROL"
         index={1}
         showButton={true}
         buttonText="Learn More"
@@ -231,7 +232,7 @@ const CloudOne = () => {
         imgSrc="/public/assets/contact"
         altText="Custom Alt Text"
         title="Strengthen Your Security Posture"
-        description="Connect with our security experts to learn how Mission Cloud Secure can harden your AWS environment."
+        description="Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment."
         showTag={true}
         tagText="GET IN TOUCH"
         index={1}

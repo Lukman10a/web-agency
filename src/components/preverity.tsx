@@ -18,9 +18,9 @@ const Preverity = () => {
           width={500}
           height={500}
         />
-        <h4 className="mx-auto mb-[.5em] w-[90%] text-center font-sora text-2xl leading-relaxed 2md:text-xl sm:text-base sm:mb-[1em]">
-          We’re already saving tens of thousands a month with Mission, and my
-          goal now is to get that to six figures. The amount that Mission has
+        <h4 className="mx-auto mb-[.5em] w-[90%] text-center font-sora text-2xl leading-relaxed 2md:text-xl sm:mb-[1em] sm:text-base">
+          We’re already saving tens of thousands a month with Teverse, and my
+          goal now is to get that to six figures. The amount that Teverse has
           saved us is downright massive.
         </h4>
         <p className="mx-auto mb-2 w-[70%] text-center font-sora text-sm text-[#747474] sm:w-[90%]">

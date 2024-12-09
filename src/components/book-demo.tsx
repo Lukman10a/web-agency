@@ -1,6 +1,7 @@
 import React from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import { Badge } from "./ui/badge";
 
@@ -11,7 +12,7 @@ const BookDemoSection: React.FC = () => {
 
       <div className="mb-0 flex w-1/2 items-center justify-end rounded-bl-3xl rounded-tl-3xl px-2 md:justify-center sm:w-full sm:rounded-bl-none sm:rounded-tl-none sm:px-4">
         <Image
-          src="/assets/checkers.png"
+          src="/assets/teverse-control2.png"
           height={600}
           width={500}
           alt="checkers image"
@@ -31,14 +32,16 @@ const BookDemoSection: React.FC = () => {
 
         {/* Subtitle */}
         <p className="mb-6 text-xl text-black sm:text-sm">
-          Schedule your demo with a Mission Cloud Advisor and find out what
-          Mission Control can do for you.
+          Schedule your demo with a Teverse Cloud Advisor and find out what
+          Teverse Control can do for you.
         </p>
 
         {/* Button */}
-        <button className="rounded-full bg-black px-6 py-3 text-xl font-medium text-white transition duration-300 hover:bg-orange-600 sm:text-sm">
-          Book your demo
-        </button>
+        <Link href={"/contact"}>
+          <button className="mt-4 rounded-full bg-black px-6 py-3 text-xl font-medium text-white transition duration-300 hover:bg-orange-600 sm:text-sm">
+            Book your demo
+          </button>
+        </Link>
       </div>
     </section>
   );

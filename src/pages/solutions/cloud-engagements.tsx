@@ -95,15 +95,17 @@ export default function CloudEngagements() {
   return (
     <div className="">
       <NewHero
-        ImgSrc="/svg/engagement.svg"
+        imgSrc="/svg/engagement.svg"
         // tag
         title="Teverse Cloud Engagements DevOps"
         description="Get transparent reporting and live updates on your team’s status"
         buttonText="Get Started"
+        buttonLink="/contact"
       />
       <WhatIsTeverse
         tag
         tagText="OVERVIEW"
+        imageSrc="/assets/cloud-engagement2.png"
         title="DevOps Excellence, Visualized"
         mainDescription="Teverse Cloud Engagements - DevOps, powered by Teverse Control, enables both you and Teverse to easily track and manage the work accomplished by your Teverse Cloud DevOps team. Visualize the status of your initiatives in real time and use Teverse Control’s observability and reporting tools to generate and prioritize a backlog of work while understanding its impact on your alignment to best practices."
         additionalDescription="With Engagements, our aim is simple: make the experience of accomplishing your projects with Teverse that much richer, more transparent, and accountable, so you can get your DevOps initiatives built to spec and launched quickly."
@@ -124,6 +126,7 @@ export default function CloudEngagements() {
           ))}
         </div>
       </section>
+
       <Benefits headTitle={benefitData.headTitle} items={benefitData.items} />
 
       <PartnersCard
@@ -187,7 +190,7 @@ export default function CloudEngagements() {
           {devOpsCard.map((card, index) => (
             <div
               key={index}
-              className="rounded-3xl bg-gradient-to-t from-[#52a5cc] to-white p-6 py-16"
+              className="rounded-3xl bg-[#FF9557] p-6 py-16 hover:bg-[#FFDECB]"
             >
               <p className="mb-4 text-4xl">{card.title}</p>
               <p className="text-lg">{card.description}</p>

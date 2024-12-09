@@ -10,7 +10,7 @@ import WhatIsTeverse from "@/components/What-is-teverse";
 
 const benefitsData = {
   tag: true,
-  title: "Make the Most of Your Data With Mission",
+  title: "Make the Most of Your Data With Teverse",
   description: "",
   benefits: [
     {
@@ -92,10 +92,11 @@ const Analytics = () => {
     <div>
       {/* Hero Section */}
       <NewHero
-        ImgSrc="/assets/checkers.png"
+        imgSrc="/assets/checkers.png"
         title="Data, Analytics and Machine Learning"
         description="A comprehensive practice for every step in your data-driven journey"
         buttonText="Get Started"
+        buttonLink="/contact"
       />
 
       <section className="mb-14 flex items-center justify-center bg-transparent px-4 sm:mb-7">
@@ -126,7 +127,7 @@ const Analytics = () => {
       <DynamicSection
         title="Data, Analytics and Machine Learning Services"
         subtitle="Unlock Data-Driven Business Intelligence"
-        description="When you work with Mission you’re working with AWS-certified expertise. We’ve qualified for  the AWS Data and Analytics Competency and the AWS Machine Learning Competency, as well as AWS Glue, Redshift, QuickSight and OpenSearch Service Delivery Designations. "
+        description="When you work with Teverse you’re working with AWS-certified expertise. We’ve qualified for  the AWS Data and Analytics Competency and the AWS Machine Learning Competency, as well as AWS Glue, Redshift, QuickSight and OpenSearch Service Delivery Designations. "
         buttonVisible={true}
         buttonText="Learn More"
         cards={ProfessionalServices}
@@ -136,7 +137,7 @@ const Analytics = () => {
         imgSrc="/assets/checkers.png"
         altText="Custom Alt Text"
         title="We have the tools to understand your cloud and the guidance to make the most of it."
-        description="Our team of cloud experts is ready to help you with your next AWS initiative. Get advanced machine learning consulting from Mission."
+        description="Our team of cloud experts is ready to help you with your next AWS initiative. Get advanced machine learning consulting from Teverse."
         showTag={true}
         tagText="GET IN TOUCH"
         index={1}

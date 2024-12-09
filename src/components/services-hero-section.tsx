@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 import Link from "next/link";
 
 const AwsServicesHero: React.FC = () => {
@@ -40,7 +40,15 @@ const AwsServicesHero: React.FC = () => {
         </div>
 
         {/* Right Placeholder for Image or Other Content */}
-        <div className="order-2 w-1/3 rounded-xl bg-white shadow-md sm:h-24 sm:w-full"></div>
+        <div className="order-2 h-full  w-1/2 bg-transparent flex items-center flex-col justify-center sm:h-24 sm:w-full">
+          <Image
+            
+            src="/assets/cloud-foundation.png"
+            width={700}
+            height={700}
+            alt="cloud"
+          />
+        </div>
       </div>
     </div>
   );

@@ -73,7 +73,7 @@ const GenerativeAI = () => {
     <div>
       {/* Hero Section */}
       <NewHero
-        ImgSrc="/assets/AI-management.png"
+        imgSrc="/assets/AI-management.png"
         title="AWS Generative AI"
         description="Securely Build With Generative AI on AWS"
         buttonText="Get Started"
@@ -85,7 +85,7 @@ const GenerativeAI = () => {
         tagText="OVERVIEW"
         title="Transform Your Business with Generative AI"
         mainDescription="Explore the vast potential of generative AI to generate original content and concepts for your business, revolutionize your applications, create novel customer experiences, improve productivity and transform your business operations. Amazon has launched Bedrock and Foundation Models accessible through SageMaker Jumpstart allowing you to use your internal data to train your models while keeping your data private."
-        additionalDescription="Mission can support you with in-depth experience and technical expertise whether you’re just getting started or need to scale your pre-existing model’s infrastructure."
+        additionalDescription="Teverse can support you with in-depth experience and technical expertise whether you’re just getting started or need to scale your pre-existing model’s infrastructure."
       />
 
       {/* Benefits Section */}
@@ -135,7 +135,7 @@ const GenerativeAI = () => {
         iconSrc="/assets/magellantv.webp"
         buttonText="Read Full Story"
         buttonLink="#"
-        quote="“We were immediately impressed with Mission’s expertise both on AWS and with generative AI. Working with Mission has not only provided much needed AWS expertise to ensure our business is secure, reliably online, and optimized, but also to build out a bleeding-edge Machine Learning pipeline on top of AWS cognitive services. Partnering with Mission will enable us to achieve a long-held goal for MagellanTV, which is to massively expand the reach of our documentary platform and strengthen our position as a truly global company.”"
+        quote="“We were immediately impressed with Teverse’s expertise both on AWS and with generative AI. Working with Teverse has not only provided much needed AWS expertise to ensure our business is secure, reliably online, and optimized, but also to build out a bleeding-edge Machine Learning pipeline on top of AWS cognitive services. Partnering with Teverse will enable us to achieve a long-held goal for MagellanTV, which is to massively expand the reach of our documentary platform and strengthen our position as a truly global company.”"
         authorName="Thomas Lucas"
         authorRole="Co-Founder and Director at MagellanTV"
       />
