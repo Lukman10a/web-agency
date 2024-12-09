@@ -74,8 +74,6 @@ const TeverseGateway = () => {
         additionalDescription={
           "Manage costs, improve governance, and adopt technologies that transform your business through a combination of AWS expertise, consultative guidance, and tooling. We support typical FinOps, InfraOps, and RI Ops needs according to Teverse re:Invest, our strategic spending methodology for growth on AWS."
         }
-        tag={true}
-        tagText="OVERVIEW"
       />
       <CardSection />
       <Benefits headTitle={benefitData.headTitle} items={benefitData.items} />

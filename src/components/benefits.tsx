@@ -13,11 +13,7 @@ type BenefitsProps = {
 const Benefits: React.FC<BenefitsProps> = ({ headTitle, items }) => {
   return (
     <section>
-<<<<<<< HEAD
       <div className="mx-auto mb-32 w-[90%] max-w-7xl">
-=======
-      <div className="mx-auto mb-32 max-w-7xl px-10">
->>>>>>> OldVersion
         <h2 className="mb-6 w-[40%] font-sora text-4xl font-medium xl:w-[50%] lg:w-[100%] md:text-center sm:text-3xl">
           <span className="text-orange-600">Benefits</span> {headTitle}
         </h2>

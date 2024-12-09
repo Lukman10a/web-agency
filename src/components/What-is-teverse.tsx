@@ -19,7 +19,7 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
   title,
   mainDescription,
   additionalDescription,
-  tag = true,
+  tag,
   tagText,
   imageSrc,
 }) => {
@@ -59,33 +59,31 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
       className="mx-auto mb-32 flex w-[90%] max-w-[1200px] gap-10 lg:gap-2 md:mb-16 md:flex-col-reverse md:gap-4"
     >
       {/* Left Side (Boxes) */}
-      <div className="order-2 mx-auto flex w-[50%] gap-6 rounded-[3rem] bg-[#cccbcb] lg:gap-4 2md:h-auto md:h-[100vw] md:w-full sm:w-[100%]">
+      <div className="mx-auto flex w-[45%] gap-6 self-center lg:gap-4 md:w-full">
         <Image
           src={imageSrc || "/assets/checkers.png"}
           alt={""}
           width={300}
           height={300}
-          className="w-full"
+          className="mx-auto w-full max-w-[500px]"
         />
       </div>
 
       {/* Right Side (Text) */}
       <motion.div
-        className="order-1 flex w-[50%] flex-col self-center p-4 md:w-full sm:p-0"
+        className="order-1 flex w-[55%] flex-col self-center p-4 md:w-full sm:p-0"
         variants={fadeUpVariants}
       >
         {tag && (
-          <p className="mb-4 self-start rounded-full bg-transparent px-3 py-1 text-xs tracking-wide text-[#808080] ring-1 ring-[#808080] md:mx-auto">
+          <p className="mb-4 self-start rounded-full border border-[#808080] bg-transparent px-3 py-1 font-sora text-xs tracking-wide text-[#808080] md:mx-auto">
             {tagText}
           </p>
         )}
-        <h2 className="mb-6 font-sans text-3xl xl:w-[80%] lg:w-[100%] sm:text-lg">
-          {title}
-        </h2>
-        <p className="mb-4 text-lg text-gray-500 md:text-justify">
+        <h2 className="mb-[.7em] font-sora text-3xl lg:text-2xl">{title}</h2>
+        <p className="mb-[.7em] text-lg text-gray-500 lg:text-base md:text-justify">
           {mainDescription}
         </p>
-        <p className="mb-4 text-lg text-gray-500 md:text-justify">
+        <p className="mb-4 text-lg text-gray-500 lg:text-base md:text-justify">
           {additionalDescription}
         </p>
       </motion.div>

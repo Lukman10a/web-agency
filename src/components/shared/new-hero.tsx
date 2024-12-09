@@ -51,7 +51,7 @@ const NewHero: React.FC<NewHeroProps> = ({
 
   const renderButton = () => {
     const buttonClasses =
-      "flex w-fit items-center gap-4 rounded-[4rem] bg-orange-650 px-8 py-4 font-sans text-lg text-white hover:bg-white hover:text-black md:mx-auto md:w-[90%] sm:mb-4 sm:w-full transition-all";
+      "flex w-fit items-center gap-4 rounded-[4rem] bg-orange-650 px-8 py-2 font-sans text-lg text-white hover:bg-white hover:text-black md:mx-auto md:w-[90%] sm:mb-4 sm:w-full transition-all";
 
     return buttonLink ? (
       <a href={buttonLink} className={buttonClasses}>
@@ -98,7 +98,7 @@ const NewHero: React.FC<NewHeroProps> = ({
           )}
 
           <motion.h1
-            className="mb-[.5em] font-sans text-5xl xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full sm:text-left"
+            className="mb-[.5em] font-sora text-5xl xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full sm:text-left"
             variants={itemVariants}
           >
             <HighlightedText
