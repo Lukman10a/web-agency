@@ -5,6 +5,10 @@ import ReusableComponent from "@/components/control-features";
 import InterpretDataSection from "@/components/data-section";
 import SoftwareFAQ from "@/components/software-faq";
 import TeverseControlHero from "@/components/teverse-control-hero";
+import Chat from "/public/svg/chat.svg";
+import Portfolio from "/public/svg/portfolio.svg";
+import Star from "/public/svg/stars.svg";
+import Tablet from "/public/svg/tablet.svg";
 
 interface ReusableComponentProps {
   image: string;
@@ -27,7 +31,7 @@ const sections: ReusableComponentProps[] = [
   {
     image: "/assets/score.webp",
     additionalImage:
-      "https://www.missioncloud.com/hubfs/2024_illustrations/Illustrations_Stars.svg", // Pass the animated image
+      Star, // Pass the animated image
     additionalImagePosition: { bottom: -20, left: -50, top: 0, right: 0 }, // Position for the animated image
     title: "Mission Cloud Score",
     description:
@@ -40,7 +44,7 @@ const sections: ReusableComponentProps[] = [
   {
     image: "/assets/recommendation.webp",
     additionalImage:
-      "https://www.missioncloud.com/hubfs/2024_illustrations/Illustrations_Tablet.svg", // Different animated image
+     Tablet, // Different animated image
     additionalImagePosition: { bottom: -20, left: 400, top: 30, right: 0 }, // Custom position
     title: "Recommendations",
     description:
@@ -53,7 +57,7 @@ const sections: ReusableComponentProps[] = [
   {
     image: "/assets/resources.webp",
     additionalImage:
-      "https://www.missioncloud.com/hubfs/2024_illustrations/Illustrations_Portfolio.svg", // Another custom animated image
+      Portfolio, // Another custom animated image
     additionalImagePosition: { bottom: -20, left: -50, top: 0, right: 0 },
     title: "Resources",
     description:
@@ -66,7 +70,7 @@ const sections: ReusableComponentProps[] = [
   {
     image: "https://www.missioncloud.com/hubfs/Support%20(1).svg",
     additionalImage:
-      "https://www.missioncloud.com/hubfs/2024_illustrations/Illustrations_Chat.svg",
+      Chat,
     additionalImagePosition: { bottom: -20, left: 400, top: 30, right: 0 },
     title: "Supports ticketing and chats",
     description:
