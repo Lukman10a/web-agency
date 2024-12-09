@@ -92,7 +92,7 @@ const Analytics = () => {
     <div>
       {/* Hero Section */}
       <NewHero
-        imgSrc="/assets/checkers.png"
+        imgSrc="/assets/big-data-2.png"
         title="Data, Analytics and Machine Learning"
         description="A comprehensive practice for every step in your data-driven journey"
         buttonText="Get Started"
