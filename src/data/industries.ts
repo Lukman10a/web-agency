@@ -794,8 +794,16 @@ export const softwareData = {
 export const heroSectionSchema = fields.object({
   title: fields.text({ label: "Hero Title" }),
   description: fields.text({ label: "Hero Description" }),
-  showButton: fields.checkbox({ label: "Show Button" }),
-  imgSrc: fields.text({ label: "Hero Image Source" }),
+  showButton: fields.checkbox({ label: "Show Action Button" }),
+  imgSrc: fields.conditional(
+    // Define a checkbox to control whether to upload an image or provide a URL
+    fields.checkbox({ label: "Use image upload?", defaultValue: false }),
+    // Define the different scenarios (true: image upload, false: URL input)
+    {
+      true: fields.image({ label: "Hero Image Upload" }), // Image upload field
+      false: fields.text({ label: "Hero Image URL" }), // Image URL input field
+    },
+  ),
 });
 
 export const companyProfilesSchema = fields.object({
@@ -842,6 +850,7 @@ export const servicesCardsSchema = fields.array(
 export const resourcesSchema = fields.object({
   show: fields.checkbox({ label: "Show Resources" }),
 });
+
 export const companyDetailsSchema = fields.array(
   fields.object({
     title: fields.text({ label: "Company Detail Title" }),
@@ -860,7 +869,7 @@ export const capabilitiesSchema = fields.array(
   fields.object({
     title: fields.text({ label: "Capability Title" }),
     description: fields.text({ label: "Capability Description" }),
-    icon: fields.text({ label: "Capability Icon Path" }),
+    icon: fields.image({ label: "Capability Icon Path" }),
   }),
   {
     label: "Capabilities",
@@ -974,11 +983,10 @@ export const industriesCollection = collection({
         { label: "Retail", value: "retail" },
         { label: "Finance", value: "finance" },
         { label: "Healthcare", value: "healthcare" },
-        { label: "Life Sciences", value: "lifeSciences" },
+        { label: "Life Sciences", value: "life-sciences" },
         { label: "Media", value: "media" },
-        { label: "Private Equity", value: "privateEquity" },
+        { label: "Private Equity", value: "private" },
         { label: "Software", value: "software" },
-        // Add more as needed
       ],
       defaultValue: "none",
     }),
