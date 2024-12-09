@@ -51,7 +51,7 @@ const AwsModernization = () => {
     <div>
       {/* Hero Section */}
       <NewHero
-        imgSrc="/assets/checkers.png"
+        imgSrc="/assets/mission.png"
         title="AWS Modernization"
         description="Your infrastructure in a modern cloud environment"
         buttonText="Get Started"

@@ -92,26 +92,13 @@ const Analytics = () => {
     <div>
       {/* Hero Section */}
       <NewHero
-        imgSrc="/assets/checkers.png"
+        imgSrc="/assets/big-data-2.png"
         title="Data, Analytics and Machine Learning"
         description="A comprehensive practice for every step in your data-driven journey"
         buttonText="Get Started"
         buttonLink="/contact"
       />
 
-      <section className="mb-14 flex items-center justify-center bg-transparent px-4 sm:mb-7">
-        <div className="aspect-w-32 aspect-h-9 w-full max-w-6xl">
-          <iframe
-            className="h-[35rem] rounded-lg shadow-lg"
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/_a6us8kaq0g"
-            title="YouTube Video Player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-      </section>
       {/* What Is Teverse Section */}
       <WhatIsTeverse
         tag

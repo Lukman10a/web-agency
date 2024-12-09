@@ -8,7 +8,7 @@ const GetInTouchSection: React.FC = () => {
       {/* Image Placeholder */}
       <div className="mb-0 flex w-1/2 items-center justify-end px-2 md:justify-center sm:w-full sm:px-4">
         <Image
-          src="/assets/checkers.png"
+          src="/assets/teverse-control2.png"
           height={600}
           width={500}
           alt="checkers image"
