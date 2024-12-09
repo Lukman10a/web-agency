@@ -11,11 +11,12 @@ export default config({
     brand: { name: "Teverse" },
   },
   storage: {
-    kind: isDevelopment ? "local" : "github",
-    repo: {
-      owner: REPO_OWNER,
-      name: REPO_NAME,
-    },
+    kind: "local",
+    // kind: isDevelopment ? "local" : "github",
+    // repo: {
+    //   owner: REPO_OWNER,
+    //   name: REPO_NAME,
+    // },
   },
   collections: {
     posts: collection({
