@@ -8,7 +8,6 @@ import { GrShieldSecurity } from "react-icons/gr";
 import { LuUploadCloud } from "react-icons/lu";
 
 import BusinessOffersCard from "./business-offers-card";
-import { BorderTrail } from "./ui/animated/border-trail";
 import { InView } from "./ui/animated/in-view";
 
 const cardData = [
@@ -44,7 +43,7 @@ const cardData = [
 const BusinessOffer = () => {
   return (
     <section className="mx-auto mb-16 w-11/12 max-w-7xl overflow-hidden">
-      <div className="relative mb-[3em] w-full rounded-2xl bg-gradient-to-r from-[#e3e7f7] to-[#fae8de] p-[5em] text-center sm:p-[2em]">
+      {/* <div className="relative mb-[3em] w-full rounded-2xl bg-gradient-to-r from-[#e3e7f7] to-[#fae8de] p-[5em] text-center sm:p-[2em]">
         <BorderTrail
           style={{
             boxShadow:
@@ -59,7 +58,7 @@ const BusinessOffer = () => {
           here to provide customized strategies to elevate your IT
           infrastructure.
         </p>
-      </div>
+      </div> */}
       <div className="rounded-2xl bg-orange-100 p-2 pt-16">
         <h3 className="mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold uppercase leading-tight lg:text-[2rem] md:text-[1.6rem]">
           <span className="text-orange-650">Services</span> designed to <br />{" "}

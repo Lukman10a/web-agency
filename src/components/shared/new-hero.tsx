@@ -1,12 +1,11 @@
 import React from "react";
 
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
 
 import { motion } from "framer-motion";
 
 import { HighlightedText } from "../ui/animated/highlight-text";
-import { Button } from "../ui/button";
+import CTAButton from "./cta-button";
 
 export type NewHeroProps = {
   reverse?: boolean;
@@ -51,17 +50,18 @@ const NewHero: React.FC<NewHeroProps> = ({
   };
 
   const renderButton = () => {
-    const buttonClasses =
-      "flex w-fit items-center justify-center text-center gap-4 rounded-[4rem] bg-orange-650 px-8 py-2 font-sans text-lg text-white hover:bg-white hover:text-black sm:mb-4 sm:w-full transition-all";
-
     return buttonLink ? (
-      <Link href={buttonLink} className={buttonClasses}>
-        <span>{buttonText}</span>
-      </Link>
+      <CTAButton href={buttonLink} variant="orange" size="default">
+        {buttonText}
+      </CTAButton>
     ) : (
-      <Button className={buttonClasses}>
-        <span>{buttonText}</span>
-      </Button>
+      <CTAButton
+        href="#" // Fallback href if no link is provided
+        variant="orange"
+        size="default"
+      >
+        {buttonText}
+      </CTAButton>
     );
   };
 

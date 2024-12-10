@@ -1,5 +1,6 @@
 import React from "react";
 
+import Image from "next/image";
 import Link from "next/link";
 
 import ArrowIcon from "./icons/arrow";
@@ -12,7 +13,7 @@ import { Button } from "./ui/button";
 const Hero = () => {
   return (
     <header className="min-h-[60vh] overflow-hidden will-change-transform">
-      <div className="bg-home-gradient px-4 py-14">
+      <div className="bg-main-gradient px-4 py-14">
         <div className="relative isolate mx-auto flex w-11/12 max-w-7xl gap-8 overflow-hidden rounded-xl bg-cover lg:flex-col md:w-full md:px-4">
           <div className="relative z-[1] flex-1">
             <InView
@@ -86,22 +87,16 @@ const Hero = () => {
             viewOptions={{ margin: "0px 0px -200px 0px" }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            <div className="flex-1 overflow-hidden rounded-lg">
-              <video autoPlay loop muted className="h-full w-full">
-                <source src="/assets/hero-solution.mp4" type="video/mp4" />
-              </video>
-            </div>
-            {/* <div className="flex-1 overflow-hidden rounded-xl">
+            <div className="flex-1 overflow-hidden rounded-xl">
               <Image
-                // src={"/svg/hero-illustration.svg"}
-                src={"/assets/teverse-hero-optimize.gif"}
+                src={"/svg/hero-illustration-2.svg"}
                 alt="hero-illustration"
                 unoptimized
                 height={500}
                 width={500}
                 className="h-full object-contain lg:h-auto lg:w-full"
               />
-            </div> */}
+            </div>
           </InView>
         </div>
       </div>
