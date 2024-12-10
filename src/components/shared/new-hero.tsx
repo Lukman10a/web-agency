@@ -1,7 +1,7 @@
 import React from "react";
 
 import Image, { StaticImageData } from "next/image";
-
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 import { HighlightedText } from "../ui/animated/highlight-text";
@@ -51,12 +51,12 @@ const NewHero: React.FC<NewHeroProps> = ({
 
   const renderButton = () => {
     const buttonClasses =
-      "flex w-fit items-center gap-4 rounded-[4rem] bg-orange-650 px-8 py-4 font-sans text-lg text-white hover:bg-white hover:text-black md:mx-auto md:w-[90%] sm:mb-4 sm:w-full transition-all";
+      "flex w-fit items-center gap-4 rounded-[4rem] bg-orange-650 px-8 text-center py-4 font-sans text-lg text-white hover:bg-white hover:text-black md:mx-auto md:w-[90%] sm:mb-4 sm:w-full transition-all";
 
     return buttonLink ? (
-      <a href={buttonLink} className={buttonClasses}>
+      <Link href={buttonLink} className={buttonClasses}>
         <span>{buttonText}</span>
-      </a>
+      </Link>
     ) : (
       <Button className={buttonClasses}>
         <span>{buttonText}</span>
@@ -75,7 +75,7 @@ const NewHero: React.FC<NewHeroProps> = ({
         animate="visible"
       >
         {/* Left Section (Text + Icon) */}
-        <div className="mb-6 flex w-[50%] flex-col justify-center md:mx-auto md:w-full md:text-center">
+        <div className="mb-6 flex w-[50%] flex-col justify-center md:mx-auto sm:w-full sm:text-center">
           {icon && (
             <motion.div variants={itemVariants}>
               <Image
@@ -98,7 +98,7 @@ const NewHero: React.FC<NewHeroProps> = ({
           )}
 
           <motion.h1
-            className="mb-[.5em] font-sans text-5xl xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full sm:text-left"
+            className="mb-[.5em] font-sans text-5xl xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full sm:text-center"
             variants={itemVariants}
           >
             <HighlightedText
@@ -113,14 +113,14 @@ const NewHero: React.FC<NewHeroProps> = ({
           </motion.h1>
 
           <motion.p
-            className="mb-[1.5em] w-[90%] text-lg text-[#808080] lg:text-base md:mx-auto md:w-[80%] sm:w-[90%]"
+            className="mb-[1.5em] w-[90%] text-lg text-[#808080] lg:text-base sm:mx-auto md:w-[80%] sm:w-[90%]"
             variants={itemVariants}
           >
             {description}
           </motion.p>
 
           {showButton && (
-            <motion.div variants={itemVariants}>{renderButton()}</motion.div>
+            <motion.div className="sm:text-center sm:mx-auto sm:w-full sm:flex sm:justify-center" variants={itemVariants}>{renderButton()}</motion.div>
           )}
         </div>
 
