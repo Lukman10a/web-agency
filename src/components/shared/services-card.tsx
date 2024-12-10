@@ -49,7 +49,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
           <Image
             src={imgSrc}
             alt={altText}
-            className="max-h-[450px] w-full rounded-xl bg-slate-300"
+            className="max-h-[450px] w-full rounded-xl bg-slate-300 object-cover"
             width={500}
             height={500}
           />
