@@ -2,6 +2,7 @@ import React from "react";
 
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
+
 import { motion } from "framer-motion";
 
 import { HighlightedText } from "../ui/animated/highlight-text";
@@ -51,7 +52,7 @@ const NewHero: React.FC<NewHeroProps> = ({
 
   const renderButton = () => {
     const buttonClasses =
-      "flex sm:justify-center w-fit items-center gap-4 rounded-[4rem] bg-orange-650 px-8 text-center py-4 font-sans text-lg text-white hover:bg-white hover:text-black md:mx-auto md:w-[90%] sm:mb-4 sm:w-full transition-all";
+      "flex w-fit items-center justify-center text-center gap-4 rounded-[4rem] bg-orange-650 px-8 py-2 font-sans text-lg text-white hover:bg-white hover:text-black sm:mb-4 sm:w-full transition-all";
 
     return buttonLink ? (
       <Link href={buttonLink} className={buttonClasses}>
@@ -67,7 +68,7 @@ const NewHero: React.FC<NewHeroProps> = ({
   return (
     <section className="mx-auto mb-20 bg-main-gradient px-16 py-20 xl:rounded-t-none lg:p-12 lg:py-16 md:mb-16 md:px-0 sm:mb-12">
       <motion.div
-        className={`mx-auto flex w-[95%] max-w-7xl gap-12 2md:gap-8 md:w-[85%] md:flex-col md:gap-6 ${
+        className={`mx-auto flex w-[90%] max-w-7xl gap-12 2md:gap-8 md:w-[85%] md:gap-6 sm:flex-col ${
           reverse ? "flex-row-reverse" : "flex-row"
         }`}
         variants={containerVariants}
@@ -75,7 +76,7 @@ const NewHero: React.FC<NewHeroProps> = ({
         animate="visible"
       >
         {/* Left Section (Text + Icon) */}
-        <div className="mb-6 flex w-[50%] flex-col justify-center md:mx-auto sm:w-full sm:text-center">
+        <div className="mb-6 flex w-[50%] flex-col justify-center md:mx-auto md:w-[60%] sm:w-full sm:text-center">
           {icon && (
             <motion.div variants={itemVariants}>
               <Image
@@ -98,7 +99,7 @@ const NewHero: React.FC<NewHeroProps> = ({
           )}
 
           <motion.h1
-            className="mb-[.5em] font-sans text-5xl xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full sm:text-center"
+            className="mb-[.5em] font-sora text-5xl xl:text-4xl 2md:w-full md:mx-auto md:mb-[.4em] sm:w-full sm:text-center"
             variants={itemVariants}
           >
             <HighlightedText
@@ -113,20 +114,25 @@ const NewHero: React.FC<NewHeroProps> = ({
           </motion.h1>
 
           <motion.p
-            className="mb-[1.5em] w-[90%] text-lg text-[#808080] lg:text-base sm:mx-auto md:w-[80%] sm:w-[90%]"
+            className="mb-[1.5em] w-[70%] text-lg text-[#808080] xl:w-full lg:text-base md:mx-auto sm:mx-auto sm:w-[90%] sm:text-center"
             variants={itemVariants}
           >
             {description}
           </motion.p>
 
           {showButton && (
-            <motion.div className="sm:text-center sm:mx-auto sm:w-full sm:flex sm:justify-center" variants={itemVariants}>{renderButton()}</motion.div>
+            <motion.div
+              className="sm:mx-auto sm:flex sm:w-full sm:justify-center sm:text-center"
+              variants={itemVariants}
+            >
+              {renderButton()}
+            </motion.div>
           )}
         </div>
 
         {/* Right Section (Image) */}
         <motion.div
-          className="image mx-auto w-[50%] max-w-[400px] self-end rounded-2xl bg-transparent md:w-full md:text-center sm:rounded-lg"
+          className="image mx-auto w-[50%] max-w-[400px] self-end rounded-2xl bg-transparent md:w-[40%] md:self-center md:text-center sm:w-full sm:rounded-lg"
           variants={itemVariants}
         >
           <Image

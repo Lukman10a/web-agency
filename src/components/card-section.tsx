@@ -23,7 +23,7 @@ const detailsData = [
 
 const CardSection = () => {
   return (
-    <div className="mx-auto mb-32 flex w-[90%] max-w-[1150px] justify-center gap-6 2md:items-center md:mb-16 md:flex-col">
+    <div className="mx-auto mb-32 flex w-[90%] max-w-[1200px] justify-center gap-10 2md:items-center md:mb-16 md:flex-col">
       {detailsData.map((detail, index) => (
         <Card
           key={index}

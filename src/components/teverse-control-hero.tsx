@@ -1,22 +1,23 @@
 import React from "react";
 
+import Image from "next/image";
 import Link from "next/link";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+
 import { HighlightedText } from "./ui/animated/highlight-text";
 
 const TeverseControlHero: React.FC = () => {
   return (
     <div className="bg-main-gradient">
       <motion.div
-        className="flex justify-between sm:flex-col max-w-6xl py-14 mx-auto text-left sm:w-full sm:max-w-full sm:p-4"
+        className="mx-auto flex max-w-6xl justify-between py-14 text-left sm:w-full sm:max-w-full sm:flex-col sm:p-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
         <motion.div
-          className=" space-y-7 pt-7 sm:h-80"
+          className="space-y-7 pt-7 sm:h-80"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
@@ -38,7 +39,7 @@ const TeverseControlHero: React.FC = () => {
             </HighlightedText>
           </motion.h1>
           <motion.p
-            className=" mb-6 max-w-2xl text-xl text-left text-[#808080] sm:mx-0 sm:w-full sm:max-w-full sm:text-justify sm:text-xs"
+            className="mb-6 max-w-2xl text-left text-xl text-[#808080] sm:mx-0 sm:w-full sm:max-w-full sm:text-justify sm:text-xs"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
@@ -64,7 +65,13 @@ const TeverseControlHero: React.FC = () => {
 
         {/* Overlay Checkered Image */}
         <motion.div>
-          <Image className="sm:h-[10rem] sm:w-[17rem] sm:mx-auto" src="/assets/terverse-control.png" width={400} height={500} alt="terverse-control image" />
+          <Image
+            className="sm:mx-auto sm:h-[10rem] sm:w-[17rem]"
+            src="/assets/terverse-control.png"
+            width={400}
+            height={500}
+            alt="terverse-control image"
+          />
         </motion.div>
       </motion.div>
     </div>
