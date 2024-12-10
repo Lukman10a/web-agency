@@ -5,29 +5,29 @@ import Image from "next/image";
 const CallToAction: React.FC = () => {
   return (
     <div
-      className="relative w-full max-w-6xl bg-orange-650 text-black rounded-2xl p-8 flex flex-col items-center justify-between space-y-6 lg:space-y-0"
-      style={{
-        backgroundImage: "url('/assets/Star.png')",
-        backgroundPosition: "right top",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "150px",
-        backgroundPositionY: "-50px",
-      }}
+      className="relative flex w-full max-w-6xl flex-col items-center justify-between space-y-6 rounded-2xl bg-orange-650 p-8 text-black lg:space-y-0"
+      // style={{
+      //   backgroundImage: "url('/assets/Star.png')",
+      //   backgroundPosition: "right top",
+      //   backgroundRepeat: "no-repeat",
+      //   backgroundSize: "150px",
+      //   backgroundPositionY: "-50px",
+      // }}
     >
-      <div className="text-center ">
-        <div className="text-4xl sm:text-xl font-bold">
+      <div className="text-center">
+        <div className="text-4xl font-bold sm:text-xl">
           We’re here for you, <h2>call us!</h2>
         </div>
       </div>
-      <div className="flex sm:flex-col items-center sm:space-x-2 space-x-4 sm:space-y-4">
+      <div className="flex items-center space-x-4 sm:flex-col sm:space-x-2 sm:space-y-4">
         <Image
           src="https://via.placeholder.com/50"
           alt="Ivan Sakin"
-          className="w-12 h-12 rounded-full"
+          className="h-12 w-12 rounded-full"
           width={48}
           height={48}
         />
-        <div className="flex justify-between sm:flex-col sm:text-sm sm:w-full sm:space-y-3">
+        <div className="flex justify-between sm:w-full sm:flex-col sm:space-y-3 sm:text-sm">
           <p className="font-semibold sm:text-sm">
             Ivan Sakin - Strategic Sales Maestro
           </p>

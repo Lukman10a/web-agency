@@ -122,6 +122,8 @@ export default function IdamSecurityPage() {
                 src="https://images.unsplash.com/photo-1633265486064-086b219458ec?w=800&auto=format&fit=crop&q=60"
                 alt="Security Illustration"
                 className="h-full w-full rounded-lg object-cover"
+                width={100}
+                height={100}
               />
             </div>
           </div>

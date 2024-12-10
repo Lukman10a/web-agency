@@ -9,6 +9,9 @@ import ContactOffice from "@/components/shared/contact-office";
 export default function Contact() {
   const { formData, handleChange, handleSubmit } = useContactForm();
 
+  const handleTextChange = () => {
+    console.log("handleTextChange");
+  };
   return (
     <>
       <section className="space-y-14 bg-white py-16">
@@ -36,11 +39,12 @@ export default function Contact() {
           {/* Image */}
           <div className="flex w-full flex-col justify-center px-10">
             <Image
-              src="/assets/contactImage.png"
+              // src="/assets/contactImage.png"
+              src="/svg/hero-illustration-2.svg"
               alt="Cloud Service"
-              className="mx-auto flex justify-center rounded-lg shadow-lg"
-              width={1200}
-              height={200}
+              className="mx-auto flex justify-center rounded-lg bg-main-gradient shadow-lg"
+              width={1000}
+              height={80}
             />
           </div>
 
@@ -62,17 +66,24 @@ export default function Contact() {
                   <label htmlFor="message" className="sr-only">
                     Message
                   </label>
-                  <input
+                  {/* <input
                     type="text"
                     id="message"
                     value={formData.message}
                     onChange={handleChange}
                     className="block w-full border-b-2 border-b-gray-300 p-3 shadow-sm outline-none"
                     placeholder="Message"
-                  />
+                  /> */}
+                  <textarea
+                    id="message"
+                    value={formData.message}
+                    onChange={handleTextChange}
+                    className="block w-full border-b-2 border-b-gray-300 p-3 shadow-sm outline-none"
+                    placeholder="Message"
+                  ></textarea>
                 </div>
 
-                <div>
+                <div className="relative">
                   <label htmlFor="email" className="sr-only">
                     Email address
                   </label>
@@ -81,9 +92,12 @@ export default function Contact() {
                     id="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="block w-full border-b-2 border-b-gray-300 p-3 shadow-sm outline-none"
+                    className="block w-full border-b-2 border-b-gray-300 p-3 pr-10 shadow-sm outline-none"
                     placeholder="Email address"
                   />
+                  <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                    @
+                  </span>
                 </div>
 
                 <div className="flex items-start">
@@ -99,7 +113,8 @@ export default function Contact() {
                     htmlFor="terms"
                     className="ml-2 block text-sm text-gray-600"
                   >
-                    I agree with storage and handling of my data by this website
+                    Yes, I’d like to receive marketing communications from
+                    Mission about its products and services.
                   </label>
                 </div>
 
