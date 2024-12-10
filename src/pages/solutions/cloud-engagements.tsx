@@ -78,6 +78,7 @@ export default function CloudEngagements() {
         additionalDescription="With Engagements, our aim is simple: make the experience of accomplishing your projects with Mission that much richer, more transparent, and accountable, so you can get your DevOps initiatives built to spec and launched quickly."
         tag={true}
         tagText="Overview"
+        imageSrc="/assets/cloud_devops.png"
       />
       <CardSection />
 
@@ -135,7 +136,7 @@ export default function CloudEngagements() {
       </div>
 
       <ServicesCard
-        imgSrc="/assets/checkers.png"
+        imgSrc="/assets/teverse-control2.png"
         altText="Custom Alt Text"
         title="Get Started with Teverse Cloud Engagements"
         description="Looking to get flexible DevOps support for your next major initiative on AWS? Reach out today to learn more about how Teverse Cloud Engagements - DevOps can help you manage your projects and achieve your objectives."
