@@ -51,7 +51,7 @@ const NewHero: React.FC<NewHeroProps> = ({
 
   const renderButton = () => {
     const buttonClasses =
-      "flex w-fit items-center gap-4 rounded-[4rem] bg-orange-650 px-8 text-center py-4 font-sans text-lg text-white hover:bg-white hover:text-black md:mx-auto md:w-[90%] sm:mb-4 sm:w-full transition-all";
+      "flex sm:justify-center w-fit items-center gap-4 rounded-[4rem] bg-orange-650 px-8 text-center py-4 font-sans text-lg text-white hover:bg-white hover:text-black md:mx-auto md:w-[90%] sm:mb-4 sm:w-full transition-all";
 
     return buttonLink ? (
       <Link href={buttonLink} className={buttonClasses}>
