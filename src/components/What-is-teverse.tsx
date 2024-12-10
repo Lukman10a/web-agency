@@ -75,11 +75,13 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
         variants={fadeUpVariants}
       >
         {tag && (
-          <p className="mb-4 self-start rounded-full border border-[#808080] bg-transparent px-3 py-1 font-sora text-xs tracking-wide text-[#808080] md:mx-auto">
+          <p className="mb-4 self-start rounded-full border border-[#808080] bg-transparent px-6 py-2 font-sora text-xs tracking-wide text-[#808080] md:mx-auto">
             {tagText}
           </p>
         )}
-        <h2 className="mb-[.7em] font-sora text-3xl lg:text-2xl">{title}</h2>
+        <h2 className="mb-[.7em] w-[80%] font-sora text-4xl lg:w-full lg:text-3xl md:text-center">
+          {title}
+        </h2>
         <p className="mb-[.7em] text-lg text-gray-500 lg:text-base md:text-justify">
           {mainDescription}
         </p>
