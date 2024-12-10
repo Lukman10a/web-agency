@@ -73,10 +73,11 @@ export default function CloudEngagements() {
         buttonText="Get Started"
       />
       <WhatIsTeverse
-        tag
         title="DevOps Excellence, Visualized"
         mainDescription="Mission Cloud Engagements - DevOps, powered by Mission Control, enables both you and Mission to easily track and manage the work accomplished by your Mission Cloud DevOps team. Visualize the status of your initiatives in real time and use Mission Control’s observability and reporting tools to generate and prioritize a backlog of work while understanding its impact on your alignment to best practices."
         additionalDescription="With Engagements, our aim is simple: make the experience of accomplishing your projects with Mission that much richer, more transparent, and accountable, so you can get your DevOps initiatives built to spec and launched quickly."
+        tag={true}
+        tagText="Overview"
       />
       <CardSection />
 
@@ -98,12 +99,6 @@ export default function CloudEngagements() {
       </section>
 
       <Benefits headTitle={benefitData.headTitle} items={benefitData.items} />
-
-      <div className="mx-auto w-[90%] max-w-7xl bg-orange-100 py-12">
-        <p className="mx-auto mb-12 text-center font-sora text-4xl font-semibold">
-          features
-        </p>
-      </div>
 
       <Features />
 
