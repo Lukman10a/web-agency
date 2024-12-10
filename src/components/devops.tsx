@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const DevOpsMethodology: React.FC = () => {
   return (
-    <section className="mx-auto max-w-7xl bg-white px-10 py-10">
+    <section className="mx-auto w-[90%] max-w-7xl bg-white py-10">
       <h2 className="mb-4 font-sora text-3xl font-medium text-gray-900 lg:w-[60%] md:mx-auto md:w-full md:text-center">
         Teverse Cloud Engage, our DevOps methodology
       </h2>

@@ -627,7 +627,7 @@ export const privateData = {
       "Teverse has extensive experience creating value for private equity firms and their portfolio companies by providing tailored services and technical expertise to help maximize cost savings, optimize infrastructure, and enable innovation.",
     showButton: true,
     buttonText: "Get Started",
-    imgSrc: "/",
+    imgSrc: "/svg/private.svg",
   },
   companyProfile: {
     cards: {

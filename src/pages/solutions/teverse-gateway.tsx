@@ -74,8 +74,6 @@ const TeverseGateway = () => {
         additionalDescription={
           "Manage costs, improve governance, and adopt technologies that transform your business through a combination of AWS expertise, consultative guidance, and tooling. We support typical FinOps, InfraOps, and RI Ops needs according to Teverse re:Invest, our strategic spending methodology for growth on AWS."
         }
-        tag={true}
-        tagText="OVERVIEW"
       />
       <CardSection />
       <Benefits headTitle={benefitData.headTitle} items={benefitData.items} />
@@ -84,7 +82,7 @@ const TeverseGateway = () => {
       <BenefitsSection {...benefitsData} />
 
       <ServicesCard
-        imgSrc="/assets/checkers.png"
+        imgSrc="/assets/teverse-control2.png"
         altText="Custom Alt Text"
         title="Strengthen Your Security Posture"
         description="Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment."
