@@ -98,7 +98,7 @@ const CloudScore = () => {
       <FAQ />
       <Resources />
       <ServicesCard
-        imgSrc="/assets/checkers.png"
+        imgSrc="/assets/teverse-control2.png"
         altText="Custom Alt Text"
         title="We have the tools to understand your cloud and the guidance to make the most of it."
         description="Schedule your demo with a Teverse Cloud Advisor and find out what Teverse Control can do for you."

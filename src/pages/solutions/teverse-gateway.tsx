@@ -84,7 +84,7 @@ const TeverseGateway = () => {
       <BenefitsSection {...benefitsData} />
 
       <ServicesCard
-        imgSrc="/assets/checkers.png"
+        imgSrc="/assets/teverse-control2.png"
         altText="Custom Alt Text"
         title="Strengthen Your Security Posture"
         description="Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment."
