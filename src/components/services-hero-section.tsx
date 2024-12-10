@@ -40,7 +40,7 @@ const AwsServicesHero: React.FC = () => {
         </div>
 
         {/* Right Placeholder for Image or Other Content */}
-        <div className="order-2 h-full  w-1/2 bg-transparent flex items-center flex-col justify-center sm:h-24 sm:w-full">
+        <div className="order-2 h-full  w-1/2 bg-transparent flex items-center flex-col justify-center  sm:w-full">
           <Image
             
             src="/assets/cloud-foundation.png"
