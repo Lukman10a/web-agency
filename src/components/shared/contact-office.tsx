@@ -63,12 +63,12 @@ const cardVariants = {
 
 const ContactOffice: React.FC = () => {
   return (
-    <div className="flex flex-col items-center space-y-8 p-8">
+    <div className="space-y-8 p-8">
       {/* Office Cards */}
-      <div className="grid w-full max-w-6xl grid-cols-3 gap-6 md:grid-cols-2 sm:grid-cols-1">
+      <div className="grid w-full grid-cols-3 gap-6 md:grid-cols-2 sm:grid-cols-1">
         {Offices.map((office, index) => (
           <motion.div
-            className="block lg:mx-auto"
+            className=""
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
