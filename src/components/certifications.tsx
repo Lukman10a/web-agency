@@ -1,8 +1,8 @@
 import React from "react";
 
 import Image from "next/image";
-import Link from "next/link";
 
+// import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 import archi from "../../public/assets/archi.png";
@@ -12,10 +12,11 @@ import devops from "../../public/assets/devops.png";
 import security from "../../public/assets/security.png";
 import star from "../../public/assets/starfour.png";
 import sysops from "../../public/assets/sysops.png";
-import ArrowIcon from "./icons/arrow";
+// import ArrowIcon from "./icons/arrow";
 import { AnimatedGroup } from "./ui/animated/animated-groups";
 import { InView } from "./ui/animated/in-view";
-import { Button } from "./ui/button";
+
+// import { Button } from "./ui/button";
 
 const SecurityCertifications: React.FC = () => {
   return (
@@ -48,14 +49,14 @@ const SecurityCertifications: React.FC = () => {
               <br /> ISO, AWS, CISSP, and more.
             </p>
           </InView>
-          <Button
+          {/* <Button
             asChild
             className="flex w-fit items-center justify-center rounded-full border border-black bg-orange-600 px-8 py-3 text-base font-medium uppercase text-white hover:bg-orange-700 md:w-full md:px-10 md:py-4 md:text-lg"
           >
             <Link href="/services">
               FIND OUT MORE <ArrowIcon />
             </Link>
-          </Button>
+          </Button> */}
         </div>
 
         {/* Certifications Badges */}

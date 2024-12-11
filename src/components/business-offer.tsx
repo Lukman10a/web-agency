@@ -4,8 +4,10 @@ import Cardimage1 from "/public/assets/cardimage1.png";
 import Cardimage2 from "/public/assets/cardimage2.png";
 import Cardimage3 from "/public/assets/cardimage3.png";
 import { BsCloudPlus } from "react-icons/bs";
+import { FaCode } from "react-icons/fa";
 import { GrShieldSecurity } from "react-icons/gr";
 import { LuUploadCloud } from "react-icons/lu";
+import { MdOutlineSecurity } from "react-icons/md";
 
 import BusinessOffersCard from "./business-offers-card";
 import { InView } from "./ui/animated/in-view";
@@ -37,6 +39,24 @@ const cardData = [
     buttonLink: "/solutions/generative-ai",
     imageSrc: Cardimage3,
     titleIcon: <BsCloudPlus />,
+  },
+  {
+    title: "CYBER SECURITY",
+    description:
+      "Safeguard your digital assets with our cutting-edge cyber security solutions. We provide end-to-end services, including vulnerability assessments, penetration testing, and threat detection to ensure your business is protected against evolving cyber threats.",
+    buttonText: "Secure Your Business",
+    buttonLink: "/solutions/generative-ai",
+    imageSrc: Cardimage3,
+    titleIcon: <MdOutlineSecurity />,
+  },
+  {
+    title: "SOFTWARE ENGINEERING",
+    description:
+      "Transform your ideas into reality with our software engineering services. We design, develop, and maintain scalable, reliable, and efficient software solutions tailored to meet your unique business needs. From web applications to enterprise systems, we bring expertise and innovation to every project.",
+    buttonText: "Build Your Software Solution",
+    buttonLink: "/solutions/generative-ai",
+    imageSrc: Cardimage3,
+    titleIcon: <FaCode />,
   },
 ];
 

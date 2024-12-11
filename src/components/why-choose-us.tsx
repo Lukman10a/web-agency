@@ -1,10 +1,12 @@
 import React from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import { motion } from "framer-motion";
 
-import efficiency from "../../public/svg/efficiency.svg";
+import cloud from "../../public/assets/cloud-managed-services.svg";
+// import efficiency from "../../public/svg/efficiency.svg";
 import expert from "../../public/svg/expert.svg";
 import security from "../../public/svg/security.svg";
 import MoreClients from "./shared/more-clients";
@@ -12,22 +14,46 @@ import AnimatedBorderTrail from "./ui/animated/border-trail-simple";
 
 const benefits = [
   {
-    img: efficiency,
-    title: "Increased Efficiency and Cost Savings",
+    img: cloud,
+    title: "Cloud Management",
     description:
       "Optimize operations, cut costs, and focus on growth with our cloud and security solutions.",
+    link: "/services", // Add link
   },
   {
     img: security,
-    title: "Enhanced Security and Compliance",
+    title: "Cloud Migration",
     description:
       "Stay protected from threats and ensure compliance with GDPR, HIPAA, and more.",
+    link: "/services/professional-services/aws-migration", // Add link
   },
   {
     img: expert,
-    title: "Expert Guidance & 24/7 Support",
+    title: "AWS Map",
     description:
       "Access continuous monitoring, expert support to keep your systems secure & scalable.",
+    link: "/services/professional-services/aws-modernization", // Add link
+  },
+  {
+    img: expert,
+    title: "Gen AI",
+    description:
+      "Access continuous monitoring, expert support to keep your systems secure & scalable.",
+    link: "/services/gen-ai", // Add link
+  },
+  {
+    img: expert,
+    title: "IDAM Migration",
+    description:
+      "Access continuous monitoring, expert support to keep your systems secure & scalable.",
+    link: "/services/idam-migration", // Add link
+  },
+  {
+    img: expert,
+    title: "IGA",
+    description:
+      "Access continuous monitoring, expert support to keep your systems secure & scalable.",
+    link: "/solutions/idam/iga",
   },
 ];
 
@@ -68,7 +94,7 @@ export default function WhyChooseUs() {
 
       {/* Benefits Section */}
       <section
-        className="animate-fade-up mx-auto mb-24 flex w-[90%] max-w-7xl gap-12 p-4 xl:gap-6 lg:flex-col sm:mb-12"
+        className="animate-fade-up mx-auto mb-24 grid w-[90%] max-w-7xl grid-cols-3 gap-12 p-4 xl:gap-6 md:grid-cols-2 sm:mb-12 sm:grid-cols-1"
         aria-labelledby="benefits-heading"
       >
         {benefits.map((benefit, index) => (
@@ -82,21 +108,23 @@ export default function WhyChooseUs() {
               custom={index}
               whileHover="hover"
             >
-              <article className="group relative flex w-full transform cursor-pointer flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
-                <motion.div variants={iconVariants}>
-                  <Image
-                    src={benefit.img}
-                    alt={benefit.title}
-                    className="rounded-full border p-2 transition-transform duration-500 ease-in-out hover:rotate-6"
-                  />
-                </motion.div>
-                <h3 className="text-2xl font-semibold sm:text-xl">
-                  {benefit.title}
-                </h3>
-                <p className="text-[#808080] group-hover:text-black">
-                  {benefit.description}
-                </p>
-              </article>
+              <Link href={benefit.link} passHref>
+                <article className="group relative flex w-full transform cursor-pointer flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
+                  <motion.div variants={iconVariants}>
+                    <Image
+                      src={benefit.img}
+                      alt={benefit.title}
+                      className="rounded-full border p-2 transition-transform duration-500 ease-in-out hover:rotate-6"
+                    />
+                  </motion.div>
+                  <h3 className="text-2xl font-semibold sm:text-xl">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-[#808080] group-hover:text-black">
+                    {benefit.description}
+                  </p>
+                </article>
+              </Link>
             </motion.div>
           </AnimatedBorderTrail>
         ))}
