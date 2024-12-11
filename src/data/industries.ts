@@ -152,7 +152,7 @@ export const retailData: IndustryData = {
       href: "/",
     },
     {
-      imgSrc: "/public/assets/contact",
+      imgSrc: "/assets/security-posture.png",
       altText: "Image",
       title: "Strengthen Your Security Posture",
       description:
@@ -170,7 +170,7 @@ export const retailData: IndustryData = {
   },
 };
 
-export const financeData = {
+export const financeData: IndustryData = {
   heroSection: {
     title: "Financial Services on AWS",
     description:
@@ -263,7 +263,7 @@ export const financeData = {
       href: "/",
     },
     {
-      imgSrc: "/public/assets/contact",
+      imgSrc: "/public/assets/security-posture.png",
       altText: "Image",
       title: "Strengthen Your Security Posture",
       description:
@@ -358,6 +358,14 @@ export const healthcareData = {
       icon: "/svg/health.svg",
     },
   ],
+  companyDataTwo: {
+    content:
+      "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+    imageSrc: "/svg/carehubs.svg",
+    author: "Peter Philips | CTO, Recognize",
+    buttonText: "Read More",
+    showButton: true,
+  },
   servicesCards: [
     {
       imgSrc: "/public/assets/contact",
@@ -373,7 +381,7 @@ export const healthcareData = {
       href: "/",
     },
     {
-      imgSrc: "/public/assets/contact",
+      imgSrc: "/assets/security-posture.png",
       altText: "Image",
       title: "Strengthen Your Security Posture",
       description:
@@ -606,7 +614,7 @@ export const mediaData = {
     href: "/",
   },
   servicesCardTwo: {
-    imgSrc: "/public/assets/contact",
+    imgSrc: "/assets/security-posture.png",
     altText: "Image",
     title: "Strengthen Your Security Posture",
     description:
@@ -776,7 +784,7 @@ export const softwareData = {
       href: "/",
     },
     {
-      imgSrc: "/public/assets/contact",
+      imgSrc: "/assets/security-posture.png",
       altText: "Image",
       title: "Strengthen Your Security Posture",
       description:

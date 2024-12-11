@@ -107,7 +107,8 @@ const navItems: NavItem[] = [
           },
           {
             title: "Identity Federation",
-            description: "...",
+            description:
+              "Enable seamless integration of identity systems across organizations or domains.",
             href: "/solutions/idam/idf",
           },
           {
@@ -117,12 +118,14 @@ const navItems: NavItem[] = [
           },
           {
             title: "Customer Identity and Access Management (CIAM)",
-            description: "...",
+            description:
+              "Deliver secure, seamless, and personalized user experiences for your customers.",
             href: "/solutions/idam/ciam",
           },
           {
             title: "Managing machine identities and BoTs",
-            description: "......",
+            description:
+              "Ensure secure authentication and lifecycle management for machine and bot identities.",
             href: "/solutions/idam/mmib",
           },
         ],
@@ -193,41 +196,49 @@ const navItems: NavItem[] = [
       {
         category: "Identity and Access Management (IDAM) ",
         // href: "/services/professional-services",
-        description: "Expert consultation and implementation",
+        description:
+          "Expert consultation and implementation for robust Identity and Access Management solutions.",
         subitems: [
           {
             title: "IDAM Migration",
-            description: "........",
+            description:
+              "Seamless migration of existing identity and access systems with minimal downtime and maximum security.",
             href: "/services/professional-services/data-analytics-ml",
           },
           {
             title: "Implementation & Integration ",
-            description: "........",
+            description:
+              "End-to-end implementation and integration of IDAM solutions tailored to your business needs.",
             href: "/services/professional-services/data-analytics-ml",
           },
           {
             title: "Customisation ",
-            description: "........",
+            description:
+              "Personalized customization of IDAM platforms to align with unique organizational requirements.",
             href: "/services/professional-services/data-analytics-ml",
           },
           {
             title: "Evaluation & Recommendation",
-            description: "........",
+            description:
+              "Comprehensive assessment and actionable recommendations for optimizing IDAM systems.",
             href: "/services/professional-services/data-analytics-ml",
           },
           {
             title: "Technology Roadmap & Planning",
-            description: "........",
+            description:
+              "Strategic planning and roadmap development for future-proof IDAM implementations.",
             href: "/services/professional-services/data-analytics-ml",
           },
           {
             title: "Standard API Connectors ",
-            description: "........",
+            description:
+              "Pre-built API connectors for seamless integration with existing applications and systems.",
             href: "/services/professional-services/data-analytics-ml",
           },
           {
             title: "Managed Services ",
-            description: "........",
+            description:
+              "Ongoing management and support for maintaining a secure and efficient IDAM environment.",
             href: "/services/professional-services/data-analytics-ml",
           },
         ],
@@ -235,43 +246,50 @@ const navItems: NavItem[] = [
       {
         category: "Software Engineering",
         // href: "/services/professional-services",
-        description: "Expert consultation and implementation",
+        description:
+          "Comprehensive software engineering services for modern and scalable solutions.",
         subitems: [
           {
-            title: "Software Architecture and Design ",
-            description: ".........",
+            title: "Software Architecture and Design",
+            description:
+              "Crafting scalable and robust software architecture tailored to your business goals.",
             href: "/services/professional-services/data-analytics-ml",
           },
           {
-            title: "Application Management Services ",
-            description: ".........",
+            title: "Application Management Services",
+            description:
+              "End-to-end management of software applications, ensuring performance and reliability.",
             href: "/services/professional-services/data-analytics-ml",
           },
           {
-            title: "Software and App Development ",
-            description: ".........",
+            title: "Software and App Development",
+            description:
+              "Developing custom software and applications to meet your unique business requirements.",
             href: "/services/professional-services/data-analytics-ml",
           },
           {
             title: "Hire DevOps Engineers",
-            description: ".........",
+            description:
+              "Access highly skilled DevOps professionals to streamline and optimize your development pipeline.",
             href: "/services/professional-services/data-analytics-ml",
           },
           {
-            title: "System, data and API integration ",
-            description: ".........",
+            title: "System, Data, and API Integration",
+            description:
+              "Seamlessly integrate systems, data, and APIs for enhanced interoperability and efficiency.",
             href: "/services/professional-services/data-analytics-ml",
           },
           {
             title: "Strategic IT Consulting",
-            description: ".........",
+            description:
+              "Expert guidance on IT strategy and execution to align with business objectives.",
             href: "/services/professional-services/data-analytics-ml",
           },
         ],
       },
+
       {
         category: "Cyber Security",
-        // href: "",
         description: "....",
         subitems: [
           {

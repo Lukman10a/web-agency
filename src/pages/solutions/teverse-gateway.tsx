@@ -1,5 +1,7 @@
 import React from "react";
 
+import { AlertCircle, AlertTriangle, CheckCircle } from "lucide-react";
+
 import Features from "@/components/Benefit";
 import Benefits from "@/components/benefits";
 import CardSection from "@/components/card-section";
@@ -7,11 +9,10 @@ import BenefitsSection from "@/components/shared/cloud-card";
 import NewHero from "@/components/shared/new-hero";
 import ServicesCard from "@/components/shared/services-card";
 
-// import WhatIsTeverse from "@/components/what-is-teverse";
 import WhatIsTeverse from "../../components/What-is-teverse";
 
 const benefitData = {
-  headTitle: "of  Terverse Gateway",
+  headTitle: "of Terverse Gateway",
   items: [
     { title: "Take the guesswork out of billing, usage, and forecasting" },
     {
@@ -53,6 +54,28 @@ const benefitsData = {
     },
   ],
 };
+
+const featuresList = [
+  {
+    title: "Project Milestone Tracking",
+    description:
+      "Review the milestones that track key steps in initiatives' life cycle: Get a clear view of progress milestones on implementation, outcomes, or other criteria you've specified.",
+    icon: <AlertCircle />,
+  },
+  {
+    title: "Action Items",
+    description:
+      "Action items let us flag issues that may require your input, feedback, or cooperation. Here you can track their progress and get notified upon their completion.",
+    icon: <CheckCircle />,
+  },
+  {
+    title: "Risk Log",
+    description:
+      "Obstacles and unexpected challenges are part of every project, and risk is not only unavoidable. This log lets you know those risks before they become roadblocks.",
+    icon: <AlertTriangle />,
+  },
+];
+
 const TeverseGateway = () => {
   return (
     <section>
@@ -76,8 +99,10 @@ const TeverseGateway = () => {
         }
       />
       <CardSection />
+
       <Benefits headTitle={benefitData.headTitle} items={benefitData.items} />
-      <Features />
+
+      <Features features={featuresList} />
 
       <BenefitsSection {...benefitsData} />
 

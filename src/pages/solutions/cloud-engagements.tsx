@@ -1,5 +1,7 @@
 import React from "react";
 
+import { AlertCircle, AlertTriangle, CheckCircle } from "lucide-react";
+
 import Features from "@/components/Benefit";
 // import icon from "/public/svg/forcura.svg";
 import Benefits from "@/components/benefits";
@@ -63,6 +65,27 @@ const devOpsCard = [
   },
 ];
 
+const featuresList = [
+  {
+    title: "Project Milestone Tracking",
+    description:
+      "Review the milestones that track key steps in initiatives' life cycle: Get a clear view of progress milestones on implementation, outcomes, or other criteria you've specified.",
+    icon: <AlertCircle />,
+  },
+  {
+    title: "Action Items",
+    description:
+      "Action items let us flag issues that may require your input, feedback, or cooperation. Here you can track their progress and get notified upon their completion.",
+    icon: <CheckCircle />,
+  },
+  {
+    title: "Risk Log",
+    description:
+      "Obstacles and unexpected challenges are part of every project, and risk is not only unavoidable. This log lets you know those risks before they become roadblocks.",
+    icon: <AlertTriangle />,
+  },
+];
+
 export default function CloudEngagements() {
   return (
     <div>
@@ -101,7 +124,7 @@ export default function CloudEngagements() {
 
       <Benefits headTitle={benefitData.headTitle} items={benefitData.items} />
 
-      <Features />
+      <Features features={featuresList} />
 
       <DevOpsMethodology />
 

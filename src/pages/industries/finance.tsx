@@ -3,8 +3,8 @@ import React from "react";
 
 import { financeData } from "@/data/industries";
 
+import ContactSection from "@/components/lets-talk";
 import Preverity from "@/components/preverity";
-import Resources from "@/components/resources";
 import CompaniesProfile from "@/components/shared/companies-profile";
 import CompaniesProfileTwo from "@/components/shared/companies-profile-two";
 import CompaniesWeServe from "@/components/shared/companies-we-serve";
@@ -53,7 +53,7 @@ const Finance = () => {
 
       <CompaniesProfileTwo cards={financeData.companyProfiles.companyTwo} />
 
-      <Resources />
+      <ContactSection />
     </section>
   );
 };

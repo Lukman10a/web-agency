@@ -21,7 +21,7 @@ const CompaniesCard: React.FC<CompaniesCardProps> = ({
   buttonText,
 }) => {
   return (
-    <div className="p-4 rounded-2xl bg-white border w-full py-8 ">
+    <div className="w-full rounded-2xl border bg-white p-4 py-8">
       <div className="mb-4">
         <Image
           src={imageSrc}
@@ -38,7 +38,7 @@ const CompaniesCard: React.FC<CompaniesCardProps> = ({
       {showButton && (
         <Button
           asChild
-          className="mt-6 bottom-10 flex w-fit items-center justify-center rounded-full bg-orange-600 px-[2.5em] py-[1em] font-normal text-white hover:bg-darkblue-950 2md:text-[12px]"
+          className="bottom-10 mt-6 flex w-fit items-center justify-center rounded-full bg-orange-600 px-[2.5em] py-[1em] font-normal text-white hover:bg-darkblue-950 2md:text-[12px]"
         >
           <Link href="#">{buttonText}</Link>
         </Button>

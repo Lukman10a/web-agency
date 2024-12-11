@@ -1,48 +1,53 @@
-import Image from "next/image";
 import React from "react";
 
-const Features: React.FC = () => {
-  return (
-    <section className="py-10 px-4 bg-gray-50">
+import Image, { StaticImageData } from "next/image";
 
-      {/* Features Section */}
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-semi-bold text-gray-800 mb-6 text-center">Features</h2>
+export interface FeatureItem {
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+}
+
+export interface FeaturesProps {
+  title?: string;
+  imageUrl?: string | StaticImageData;
+  features: FeatureItem[];
+  backgroundColor?: string;
+  titleClassName?: string;
+  featureClassName?: string;
+}
+
+const Features: React.FC<FeaturesProps> = ({
+  title = "Features",
+  imageUrl = "/assets/checkers.png",
+  features,
+  backgroundColor = "bg-[#FFF4EE]",
+  titleClassName = "text-4xl font-semibold text-gray-800",
+  featureClassName = "rounded-lg border bg-white p-4",
+}) => {
+  return (
+    <section className={`${backgroundColor} px-4 py-10`}>
+      <div className="mx-auto max-w-6xl">
+        <h2 className={`mb-6 text-center ${titleClassName}`}>{title}</h2>
         <div className="flex justify-between sm:flex-col sm:flex-wrap">
-            <Image src="/assets/checkers.png" className="sm:w-full sm:mx-auto" width={500} height={300} alt="" />
-            <div className="grid grid-cols-1 gap-6 w-1/2 sm:w-full sm:mt-4">
-            {/* Feature Box 1 */}
-            <div className="border rounded-lg p-4 bg-white shadow-md">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Project Milestone Tracking
+          <Image
+            src={imageUrl}
+            className="sm:mx-auto sm:w-full"
+            width={500}
+            height={300}
+            alt="Features illustration"
+          />
+          <div className="grid w-1/2 grid-cols-1 gap-6 sm:mt-4 sm:w-full">
+            {features.map((feature, index) => (
+              <div key={index} className={featureClassName}>
+                {feature.icon && <div className="mb-2">{feature.icon}</div>}
+                <h3 className="mb-2 text-xl font-semibold text-gray-900">
+                  {feature.title}
                 </h3>
-                <p className="text-gray-600">
-                Review the milestones that track key steps in initiatives’ life
-                cycle: Get a clear view of progress milestones on implementation,
-                outcomes, or other criteria you’ve specified.
-                </p>
-            </div>
-            {/* Feature Box 2 */}
-            <div className="border rounded-lg p-4 bg-white shadow-md">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Action Items
-                </h3>
-                <p className="text-gray-600">
-                Action items let us flag issues that may require your input,
-                feedback, or cooperation. Here you can track their progress and
-                get notified upon their completion.
-                </p>
-            </div>
-            {/* Feature Box 3 */}
-            <div className="border rounded-lg p-4 bg-white shadow-md">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Risk Log</h3>
-                <p className="text-gray-600">
-                Obstacles and unexpected challenges are part of every project,
-                and risk is not only unavoidable. This log lets you know your
-                those risks before they become roadblocks.
-                </p>
-            </div>
-            </div>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

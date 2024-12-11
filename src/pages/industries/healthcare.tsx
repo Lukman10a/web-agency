@@ -5,6 +5,7 @@ import { healthcareData } from "@/data/industries";
 import Preverity from "@/components/preverity";
 import Resources from "@/components/resources";
 import CompaniesProfile from "@/components/shared/companies-profile";
+import CompaniesProfileTwo from "@/components/shared/companies-profile-two";
 import CompaniesWeServe from "@/components/shared/companies-we-serve";
 import NewHero from "@/components/shared/new-hero";
 import OurCapabilities from "@/components/shared/our-capabilities";
@@ -19,6 +20,7 @@ const Healthcare = () => {
     statsCard,
     detailsData,
     capabilitiesData,
+    companyDataTwo,
     servicesCards,
   } = healthcareData;
 
@@ -42,11 +44,13 @@ const Healthcare = () => {
 
       <CompaniesWeServe detailsData={detailsData} />
 
+      <ServicesCard key={0} {...servicesCards[0]} />
+
       <OurCapabilities detailsData={capabilitiesData} />
 
-      {servicesCards.map((card, index) => (
-        <ServicesCard key={index} {...card} />
-      ))}
+      <CompaniesProfileTwo cards={companyDataTwo} />
+
+      <ServicesCard key={1} {...servicesCards[1]} />
 
       <Resources />
     </section>

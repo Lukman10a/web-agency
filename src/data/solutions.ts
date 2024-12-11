@@ -112,6 +112,47 @@ export const solutionsData: SolutionsData = {
         ],
       },
       {
+        title: "Identity Federation",
+        slug: "idf",
+        description:
+          "Enable seamless integration of identity systems across organizations or domains",
+        content:
+          "Our Identity Federation solution allows organizations to establish trust between different identity systems. It enables users to access resources across domains or organizations using their existing credentials, improving user convenience and security.",
+        features: [
+          "Support for standard protocols (SAML, OAuth, OpenID Connect)",
+          "Cross-domain single sign-on",
+          "Interoperability with external identity providers",
+          "Secure exchange of identity attributes",
+          "Scalable and flexible integration options",
+        ],
+        benefits: [
+          "Simplified access management across organizations",
+          "Improved user experience with fewer login requirements",
+          "Enhanced security through trusted identity exchanges",
+          "Streamlined collaboration between partners",
+        ],
+        capabilities: [
+          {
+            title: "Protocol Support",
+            description:
+              "Seamlessly integrate with other systems using industry-standard protocols.",
+            icon: "/icons/protocol-support.svg",
+          },
+          {
+            title: "Cross-Domain SSO",
+            description:
+              "Provide users with a single authentication session across multiple domains.",
+            icon: "/icons/cross-domain-sso.svg",
+          },
+          {
+            title: "Attribute Exchange",
+            description:
+              "Enable secure sharing of user attributes between trusted parties.",
+            icon: "/icons/attribute-exchange.svg",
+          },
+        ],
+      },
+      {
         title: "Multi-Factor Authentication (MFA)",
         slug: "mfa",
         description: "Enhance security with multi-factor authentication",
@@ -187,6 +228,88 @@ export const solutionsData: SolutionsData = {
             description:
               "Implement granular access controls to sensitive resources.",
             icon: "/icons/access-control.svg",
+          },
+        ],
+      },
+      {
+        title: "Customer Identity and Access Management (CIAM)",
+        slug: "ciam",
+        description:
+          "Deliver secure, seamless, and personalized user experiences for your customers",
+        content:
+          "Our CIAM solution is designed to help businesses manage customer identities while delivering a seamless and personalized user experience. It focuses on security, compliance, and scalability to meet the needs of customer-facing applications.",
+        features: [
+          "Customizable login experiences",
+          "Consent and preference management",
+          "Integration with marketing and CRM platforms",
+          "Robust data privacy and compliance features",
+          "Multi-factor authentication and adaptive security",
+        ],
+        benefits: [
+          "Improved customer trust through enhanced security",
+          "Personalized experiences for increased user engagement",
+          "Compliance with data protection regulations",
+          "Streamlined identity management for large customer bases",
+        ],
+        capabilities: [
+          {
+            title: "Customizable Login",
+            description:
+              "Provide a tailored login experience for your customers.",
+            icon: "/icons/custom-login.svg",
+          },
+          {
+            title: "Privacy Compliance",
+            description:
+              "Ensure data privacy and meet regulatory requirements with built-in compliance features.",
+            icon: "/icons/privacy-compliance.svg",
+          },
+          {
+            title: "Integration Flexibility",
+            description:
+              "Easily integrate with existing marketing, analytics, and CRM tools.",
+            icon: "/icons/integration-flexibility.svg",
+          },
+        ],
+      },
+      {
+        title: "Managing Machine Identities and Bots",
+        slug: "mmib",
+        description:
+          "Ensure secure authentication and lifecycle management for machine and bot identities",
+        content:
+          "Our solution for managing machine identities and bots provides tools to authenticate, monitor, and secure non-human entities in your ecosystem. This ensures that all machine interactions are secure and compliant with organizational policies.",
+        features: [
+          "Automated certificate provisioning",
+          "Secure communication between machines and systems",
+          "Bot identity lifecycle management",
+          "Integration with existing PKI systems",
+          "Real-time monitoring and alerting",
+        ],
+        benefits: [
+          "Enhanced security for machine-to-machine communication",
+          "Simplified management of machine and bot identities",
+          "Reduced risk of unauthorized system access",
+          "Improved compliance with security standards",
+        ],
+        capabilities: [
+          {
+            title: "Certificate Management",
+            description:
+              "Automate certificate provisioning and renewal for machine identities.",
+            icon: "/icons/certificate-management.svg",
+          },
+          {
+            title: "Bot Lifecycle Management",
+            description:
+              "Monitor and manage bot identities throughout their lifecycle.",
+            icon: "/icons/bot-lifecycle.svg",
+          },
+          {
+            title: "Secure Interactions",
+            description:
+              "Ensure encrypted communication between machines and systems.",
+            icon: "/icons/secure-interactions.svg",
           },
         ],
       },

@@ -1,5 +1,6 @@
-import Image from "next/image";
 import React from "react";
+
+import Image from "next/image";
 
 // Define the types for the props
 type Feature = {
@@ -15,25 +16,25 @@ type FeaturesProps = {
 
 const FeaturesSection: React.FC<FeaturesProps> = ({ title, features }) => {
   return (
-    <div className="max-w-6xl font-sora mx-auto py-10 px-4 sm:px-6 lg:px-8 bg-white">
-      <h2 className="text-2xl font-bold mb-8 text-gray-800">{title}</h2>
-      <div className="grid sm:grid-cols-1 grid-cols-2 gap-6">
+    <div className="mx-auto max-w-6xl bg-white px-4 py-10 font-sora lg:px-8 sm:px-6">
+      <h2 className="mb-8 text-2xl font-bold text-gray-800">{title}</h2>
+      <div className="grid grid-cols-2 gap-6 sm:grid-cols-1">
         {features.map((feature, index) => (
-          <div
+          <article
             key={index}
-            className="flex flex-col p-6 bg-white border border-gray-200 rounded-lg shadow-md"
+            className="flex flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-sm"
           >
             {/* Icon */}
-            <div className="text-4xl text-blue-600 mb-4">
+            <div className="mb-4 text-4xl text-blue-600">
               <Image src={feature.icon} width={30} height={30} alt="image" />
             </div>
             {/* Heading */}
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+            <h3 className="mb-2 text-lg font-semibold text-gray-800">
               {feature.heading}
             </h3>
             {/* Description */}
             <p className="text-gray-600">{feature.description}</p>
-          </div>
+          </article>
         ))}
       </div>
     </div>

@@ -12,11 +12,11 @@ export default function Contact() {
   const handleTextChange = () => {
     console.log("handleTextChange");
   };
+
   return (
     <>
-      <section className="space-y-14 bg-white py-16">
+      <section className="m-10 max-w-7xl space-y-14 rounded-xl bg-white bg-main-gradient p-10">
         <div className="container mx-auto flex flex-col justify-center space-y-8 px-24 md:px-10">
-          {/* Left Side: Text */}
           <div className="container mx-auto flex flex-col justify-center space-y-8 sm:flex-col">
             <div>
               <h2 className="py-3 text-center text-5xl font-bold text-gray-900 sm:text-5xl">
@@ -39,10 +39,9 @@ export default function Contact() {
           {/* Image */}
           <div className="flex w-full flex-col justify-center px-10">
             <Image
-              // src="/assets/contactImage.png"
               src="/svg/hero-illustration-2.svg"
               alt="Cloud Service"
-              className="mx-auto flex justify-center rounded-lg bg-main-gradient shadow-lg"
+              className="mx-auto flex justify-center"
               width={1000}
               height={80}
             />
@@ -114,7 +113,7 @@ export default function Contact() {
                     className="ml-2 block text-sm text-gray-600"
                   >
                     Yes, I’d like to receive marketing communications from
-                    Mission about its products and services.
+                    Teverse about its products and services.
                   </label>
                 </div>
 

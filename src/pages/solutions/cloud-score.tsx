@@ -1,6 +1,5 @@
 import React from "react";
 
-import Resources from "@/components/resources";
 import BenefitsSection from "@/components/shared/cloud-card";
 import FAQ from "@/components/shared/FAQ";
 import FeaturesSection from "@/components/shared/features";
@@ -96,7 +95,7 @@ const CloudScore = () => {
       />
 
       <FAQ />
-      <Resources />
+
       <ServicesCard
         imgSrc="/assets/teverse-control2.png"
         altText="Custom Alt Text"

@@ -1,14 +1,15 @@
 import React from "react";
 
-import BookDemoSection from "@/components/book-demo";
-import ReusableComponent from "@/components/control-features";
-import InterpretDataSection from "@/components/data-section";
-import SoftwareFAQ from "@/components/software-faq";
-import TeverseControlHero from "@/components/teverse-control-hero";
 import Chat from "/public/svg/chat.svg";
 import Portfolio from "/public/svg/portfolio.svg";
 import Star from "/public/svg/stars.svg";
 import Tablet from "/public/svg/tablet.svg";
+
+import BookDemoSection from "@/components/book-demo";
+import ReusableComponent from "@/components/control-features";
+import InterpretDataSection from "@/components/data-section";
+import NewHero from "@/components/shared/new-hero";
+import SoftwareFAQ from "@/components/software-faq";
 
 interface ReusableComponentProps {
   image: string;
@@ -30,8 +31,7 @@ interface ReusableComponentProps {
 const sections: ReusableComponentProps[] = [
   {
     image: "/assets/score.webp",
-    additionalImage:
-      Star, // Pass the animated image
+    additionalImage: Star, // Pass the animated image
     additionalImagePosition: { bottom: -20, left: -50, top: 0, right: 0 }, // Position for the animated image
     title: "Mission Cloud Score",
     description:
@@ -43,8 +43,7 @@ const sections: ReusableComponentProps[] = [
   },
   {
     image: "/assets/recommendation.webp",
-    additionalImage:
-     Tablet, // Different animated image
+    additionalImage: Tablet, // Different animated image
     additionalImagePosition: { bottom: -20, left: 400, top: 30, right: 0 }, // Custom position
     title: "Recommendations",
     description:
@@ -56,8 +55,7 @@ const sections: ReusableComponentProps[] = [
   },
   {
     image: "/assets/resources.webp",
-    additionalImage:
-      Portfolio, // Another custom animated image
+    additionalImage: Portfolio, // Another custom animated image
     additionalImagePosition: { bottom: -20, left: -50, top: 0, right: 0 },
     title: "Resources",
     description:
@@ -69,8 +67,7 @@ const sections: ReusableComponentProps[] = [
   },
   {
     image: "https://www.missioncloud.com/hubfs/Support%20(1).svg",
-    additionalImage:
-      Chat,
+    additionalImage: Chat,
     additionalImagePosition: { bottom: -20, left: 400, top: 30, right: 0 },
     title: "Supports ticketing and chats",
     description:
@@ -94,8 +91,16 @@ const FeatureList: React.FC<{ sections: ReusableComponentProps[] }> = ({
 
 const TeverseControl = () => {
   return (
-    <main>
-      <TeverseControlHero />
+    <>
+      <NewHero
+        title={"Teverse Control"}
+        imgSrc={"/assets/terverse-control.png"}
+        description={
+          "Teverse Control is your first-of-its-kind cloud services platform which lets you benchmark, analyze, and track the performance of your AWS cloud environment while guiding you toward improvements with real-time access to our teams of AWS experts."
+        }
+        buttonText="Request a Demo"
+        buttonLink="/contact"
+      />
       <InterpretDataSection />
       <section className="my-4 space-y-6 bg-[#FFF4EE] px-20 py-10 text-left text-2xl font-medium sm:mx-5 sm:text-lg">
         <div className="space-y-4">
@@ -113,7 +118,7 @@ const TeverseControl = () => {
       </section>
       <SoftwareFAQ />
       <BookDemoSection />
-    </main>
+    </>
   );
 };
 
