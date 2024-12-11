@@ -59,311 +59,198 @@ export const retailData: IndustryData = {
   heroSection: {
     title: "Retail on AWS",
     description:
-      "Cloud-native and AI solutions that scale with consumer demand",
+      "Empower your retail business with AI-driven, scalable cloud solutions.",
     showButton: false,
     imgSrc: "/svg/retail.svg",
   },
   companyProfiles: {
     companyOne: {
       content:
-        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+        "Using AWS solutions, our inventory management process has been transformed. Teverse's AI-powered analytics have reduced stockouts and improved customer satisfaction by 30%. Their approach ensures our systems adapt to seasonal demand effortlessly.",
       imageSrc: "/svg/goodfood.svg",
-      author: "Peter Philips | CTO, Recognize",
+      author: "Laura Daniels | Head of Operations, GoodFood Co.",
     },
-
-    heading: "Content is king and consumer expectations have never been higher",
+    heading: "Redefining retail through innovation and customer focus",
     paragraph:
-      "Demand for content is constantly growing but the complexity of high-fidelity workflows and global delivery isn’t going away. We empower you with cloud-native and AI solutions to streamline production, create more engaging experiences, and seamlessly deliver to all platforms.",
+      "From streamlining supply chains to enhancing customer experiences, AWS cloud solutions help retailers achieve operational excellence and drive growth.",
     companyTwo: {
       content:
-        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
-      imageSrc: "/svg/carehubs.svg",
-      author: "Peter Philips | CTO, Recognize",
-      buttonText: "Read More",
+        "With Teverse's guidance, we seamlessly migrated our e-commerce platform to AWS. The enhanced scalability has allowed us to handle peak traffic effortlessly, ensuring a reliable shopping experience for our customers worldwide.",
+      imageSrc: "/svg/retailpartner.svg",
+      author: "Mark Johnson | CEO, RetailPartner",
+      buttonText: "Discover More",
       showButton: true,
     },
   },
   companyDetails: [
     {
-      title: "Healthcare payers",
+      title: "E-commerce retailers",
       description:
-        "You handle the intricate balance of optimizing claim management, member retention, and health outcomes amidst a rapidly evolving industry. We help you build accessible member experiences that serve them and help you better understand their needs.",
+        "Optimize inventory, personalize shopping experiences, and deliver unparalleled performance during high-traffic events with AWS solutions.",
     },
     {
-      title: "Healthcare providers",
+      title: "Brick-and-mortar stores",
       description:
-        "You need to maintain patient confidentiality while streamlining operations in an increasingly digital landscape. We specialize in tailoring AWS infrastructure to meet the needs of providers, ensuring you have a secure, compliant, and scalable environment to deliver exceptional care.",
-    },
-    {
-      title: "Healthcare providers",
-      description:
-        "You need to maintain patient confidentiality while streamlining operations in an increasingly digital landscape. We specialize in tailoring AWS infrastructure to meet the needs of providers, ensuring you have a secure, compliant, and scalable environment to deliver exceptional care.",
-    },
-    {
-      title: "Healthcare providers",
-      description:
-        "You need to maintain patient confidentiality while streamlining operations in an increasingly digital landscape. We specialize in tailoring AWS infrastructure to meet the needs of providers, ensuring you have a secure, compliant, and scalable environment to deliver exceptional care.",
+        "Enhance in-store operations with smart IoT integrations, real-time analytics, and secure payment processing.",
     },
   ],
   capabilities: [
     {
-      title: "HIPAA compliance",
+      title: "AI-driven demand forecasting",
       description:
-        "Our modernization roadmap ensures your operations and data practices are secure and resilient",
-      icon: "/svg/hipaa.svg",
+        "Accurately predict customer needs and optimize inventory levels.",
+      icon: "/svg/ai-forecast.svg",
     },
     {
-      title: "Health research",
+      title: "Seamless omnichannel experiences",
       description:
-        "Conduct large-scale research projects with seamless analytics for data science or business intelligence",
-      icon: "/svg/health.svg",
-    },
-    {
-      title: "HIPAA compliance",
-      description:
-        "Our modernization roadmap ensures your operations and data practices are secure and resilient",
-      icon: "/svg/hipaa.svg",
-    },
-    {
-      title: "Health research",
-      description:
-        "Conduct large-scale research projects with seamless analytics for data science or business intelligence",
-      icon: "/svg/health.svg",
-    },
-    {
-      title: "HIPAA compliance",
-      description:
-        "Our modernization roadmap ensures your operations and data practices are secure and resilient",
-      icon: "/svg/hipaa.svg",
+        "Unify customer touchpoints across online and offline channels.",
+      icon: "/svg/omnichannel.svg",
     },
   ],
   servicesCards: [
     {
-      imgSrc: "/public/assets/contact",
-      altText: "Image",
-      title: "Our media vision",
+      imgSrc: "/assets/retail-vision.png",
+      altText: "Retail Vision",
+      title: "Future of Retail",
       description:
-        "A more just, efficient, and effective kind of healthcare is possible when payers and providers are given best-in-class cloud solutions. Collaborate with us to build the future of healthcare together.",
+        "Leverage AI and cloud innovations to revolutionize how you connect with customers.",
       showTag: true,
       tagText: "AWS PREMIER CONSULTING PARTNER",
       index: 1,
       showButton: true,
-      buttonText: "Build with us",
-      href: "/",
-    },
-    {
-      imgSrc: "/assets/security-posture.png",
-      altText: "Image",
-      title: "Strengthen Your Security Posture",
-      description:
-        "Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment.",
-      showTag: true,
-      tagText: "GET IN TOUCH",
-      index: 2,
-      showButton: true,
-      buttonText: "Schedule a call",
-      href: "/",
+      buttonText: "Learn More",
+      href: "/retail",
     },
   ],
-  resources: {
-    show: true,
-  },
+  resources: { show: true },
 };
 
-export const financeData: IndustryData = {
+export const financeData = {
   heroSection: {
     title: "Financial Services on AWS",
     description:
-      "Cloud and AI solutions for the next-generation of media workflows",
+      "Cloud solutions to transform financial systems and innovate faster.",
     showButton: false,
     imgSrc: "/svg/financial.svg",
   },
   companyProfiles: {
     companyOne: {
       content:
-        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
-      imageSrc: "/svg/goodfood.svg",
-      author: "Peter Philips | CTO, Recognize",
+        "With Teverse's AWS integration expertise, we have enhanced the accuracy of our fraud detection systems by 40%. Their AI models provide invaluable insights for risk mitigation.",
+      imageSrc: "/svg/fintech.svg",
+      author: "Diana Reeves | CTO, FinTech Solutions",
     },
-    heading:
-      "Competition in finance isn’t slowing down and customer expectations have never been higher",
+    heading: "Staying ahead in a competitive financial landscape",
     paragraph:
-      "Demand for content is constantly growing but the complexity of high-fidelity workflows and global delivery isn’t going away. We empower you with cloud-native and AI solutions to streamline production, create more engaging experiences, and seamlessly deliver to all platforms.",
+      "As financial regulations evolve and customer expectations rise, our solutions enable you to stay compliant while fostering innovation.",
     companyTwo: {
       content:
-        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
-      imageSrc: "/svg/carehubs.svg",
-      author: "Peter Philips | CTO, Recognize",
-      buttonText: "Read More",
+        "Migrating to AWS allowed us to process financial transactions at unprecedented speeds, improving client satisfaction and trust. Teverse's tailored strategy ensured a seamless transition.",
+      imageSrc: "/svg/securepay.svg",
+      author: "Michael Clark | CEO, SecurePay",
+      buttonText: "Read the Case Study",
       showButton: true,
     },
   },
   companyDetails: [
     {
-      title: "Healthcare payers",
+      title: "Banking institutions",
       description:
-        "You handle the intricate balance of optimizing claim management, member retention, and health outcomes amidst a rapidly evolving industry. We help you build accessible member experiences that serve them and help you better understand their needs.",
+        "Accelerate digital transformation with secure, scalable cloud infrastructure tailored for compliance.",
     },
     {
-      title: "Healthcare providers",
+      title: "Investment firms",
       description:
-        "You need to maintain patient confidentiality while streamlining operations in an increasingly digital landscape. We specialize in tailoring AWS infrastructure to meet the needs of providers, ensuring you have a secure, compliant, and scalable environment to deliver exceptional care.",
+        "Harness big data to gain actionable insights and optimize investment strategies.",
     },
   ],
   capabilities: [
     {
-      title: "HIPAA compliance",
-      description:
-        "Our modernization roadmap ensures your operations and data practices are secure and resilient",
-      icon: "/svg/hipaa.svg",
+      title: "Real-time analytics",
+      description: "Make informed decisions with real-time financial insights.",
+      icon: "/svg/analytics.svg",
     },
     {
-      title: "Health research",
+      title: "Regulatory compliance",
       description:
-        "Conduct large-scale research projects with seamless analytics for data science or business intelligence",
-      icon: "/svg/health.svg",
-    },
-    {
-      title: "Health research",
-      description:
-        "Conduct large-scale research projects with seamless analytics for data science or business intelligence",
-      icon: "/svg/health.svg",
-    },
-    {
-      title: "HIPAA compliance",
-      description:
-        "Our modernization roadmap ensures your operations and data practices are secure and resilient",
-      icon: "/svg/hipaa.svg",
-    },
-    {
-      title: "HIPAA compliance",
-      description:
-        "Our modernization roadmap ensures your operations and data practices are secure and resilient",
-      icon: "/svg/hipaa.svg",
-    },
-    {
-      title: "Health research",
-      description:
-        "Conduct large-scale research projects with seamless analytics for data science or business intelligence",
-      icon: "/svg/health.svg",
+        "Stay compliant with industry standards like GDPR and PCI DSS.",
+      icon: "/svg/compliance.svg",
     },
   ],
   servicesCards: [
     {
-      imgSrc: "/public/assets/contact",
-      altText: "Image",
-      title: "Our finance vision",
+      imgSrc: "/assets/finance-vision.png",
+      altText: "Finance Vision",
+      title: "The Future of Finance",
       description:
-        "A more just, efficient, and effective kind of healthcare is possible when payers and providers are given best-in-class cloud solutions. Collaborate with us to build the future of healthcare together.",
+        "Enable innovation and efficiency in financial services with AWS cloud solutions.",
       showTag: true,
       tagText: "AWS PREMIER CONSULTING PARTNER",
       index: 1,
       showButton: true,
-      buttonText: "Build with us",
-      href: "/",
-    },
-    {
-      imgSrc: "/public/assets/security-posture.png",
-      altText: "Image",
-      title: "Strengthen Your Security Posture",
-      description:
-        "Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment.",
-      showTag: true,
-      tagText: "GET IN TOUCH",
-      index: 2,
-      showButton: true,
-      buttonText: "Schedule a call",
-      href: "/contact",
+      buttonText: "Discover More",
+      href: "/finance",
     },
   ],
-  resources: {
-    show: true,
-  },
+  resources: { show: true },
 };
 
 export const healthcareData = {
   heroSection: {
     title: "Healthcare on AWS",
-    description:
-      "AI solutions and cloud-native technologies for every patient.",
+    description: "Innovative cloud solutions for better patient outcomes.",
     showButton: false,
-    icon: "/svg/newheroicon.svg",
     imgSrc: "/svg/healthcare.svg",
   },
   companiesProfile: {
     cards: {
       content:
-        "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
-      imageSrc: "/svg/carehubs.svg",
-      author: "Peter Philips | CTO, Recognize",
+        "By leveraging AWS, Teverse helped us implement advanced patient analytics, enabling personalized care while ensuring data security.",
+      imageSrc: "/svg/meditech.svg",
+      author: "Dr. Alan Monroe | CIO, MediTech",
     },
-    heading:
-      "Now more than ever patients need state of the art technology and systems",
+    heading: "Empowering healthcare providers through technology",
     paragraph:
-      "You’ve got personnel shortages, compliance obligations, and regulatory pressures to contend with—but the industry isn’t standing still. We help you leverage cloud-native technologies and AI to ensure every patient gets optimal experiences and equitable outcomes while keeping their data private and secure.",
+      "From telemedicine to advanced research, AWS offers the tools you need to deliver exceptional care in an evolving landscape.",
   },
   statsCard: {
-    stats: "100+",
-    description: "Healthcare & Life Sciences firms we’ve helped build on AWS",
+    stats: "150+",
+    description: "Healthcare organizations empowered by AWS solutions.",
     details:
-      "From neighborhood clinics to international nonprofits to some of the largest life sciences firms in the world—we’ve helped companies of all sizes and stages serve their patients.",
+      "From local clinics to global health organizations, our cloud solutions support a wide range of healthcare needs.",
   },
   detailsData: [
     {
-      title: "Healthcare payers",
+      title: "Telemedicine providers",
       description:
-        "You handle the intricate balance of optimizing claim management, member retention, and health outcomes amidst a rapidly evolving industry. We help you build accessible member experiences that serve them and help you better understand their needs.",
+        "Deliver seamless virtual consultations with secure, scalable infrastructure.",
     },
     {
-      title: "Healthcare providers",
+      title: "Life sciences companies",
       description:
-        "You need to maintain patient confidentiality while streamlining operations in an increasingly digital landscape. We specialize in tailoring AWS infrastructure to meet the needs of providers, ensuring you have a secure, compliant, and scalable environment to deliver exceptional care.",
+        "Accelerate drug discovery with powerful computational and storage capabilities.",
     },
   ],
   capabilitiesData: [
     {
-      title: "HIPAA compliance",
+      title: "Data security and compliance",
       description:
-        "Our modernization roadmap ensures your operations and data practices are secure and resilient",
-      icon: "/svg/hipaa.svg",
+        "Ensure HIPAA and GDPR compliance while safeguarding patient data.",
+      icon: "/svg/security.svg",
     },
     {
-      title: "Health research",
-      description:
-        "Conduct large-scale research projects with seamless analytics for data science or business intelligence",
-      icon: "/svg/health.svg",
-    },
-    {
-      title: "Health research",
-      description:
-        "Conduct large-scale research projects with seamless analytics for data science or business intelligence",
-      icon: "/svg/health.svg",
-    },
-    {
-      title: "HIPAA compliance",
-      description:
-        "Our modernization roadmap ensures your operations and data practices are secure and resilient",
-      icon: "/svg/hipaa.svg",
-    },
-    {
-      title: "HIPAA compliance",
-      description:
-        "Our modernization roadmap ensures your operations and data practices are secure and resilient",
-      icon: "/svg/hipaa.svg",
-    },
-    {
-      title: "Health research",
-      description:
-        "Conduct large-scale research projects with seamless analytics for data science or business intelligence",
-      icon: "/svg/health.svg",
+      title: "AI-powered diagnostics",
+      description: "Leverage machine learning to enhance diagnostic accuracy.",
+      icon: "/svg/ai-diagnostics.svg",
     },
   ],
   companyDataTwo: {
     content:
-      "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
-    imageSrc: "/svg/carehubs.svg",
-    author: "Peter Philips | CTO, Recognize",
-    buttonText: "Read More",
+      "Teverse enabled us to deploy scalable telehealth solutions, making healthcare more accessible to underserved communities.",
+    imageSrc: "/svg/telehealth.svg",
+    author: "Sara Lee | CEO, TeleHealth Now",
+    buttonText: "Explore Our Work",
     showButton: true,
   },
   servicesCards: [
@@ -395,6 +282,121 @@ export const healthcareData = {
     },
   ],
 };
+
+// export const healthcareData = {
+//   heroSection: {
+//     title: "Healthcare on AWS",
+//     description:
+//       "AI solutions and cloud-native technologies for every patient.",
+//     showButton: false,
+//     icon: "/svg/newheroicon.svg",
+//     imgSrc: "/svg/healthcare.svg",
+//   },
+//   companiesProfile: {
+//     cards: {
+//       content:
+//         "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential for improved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+//       imageSrc: "/svg/carehubs.svg",
+//       author: "Peter Philips | CTO, Recognize",
+//     },
+//     heading:
+//       "Now more than ever patients need state of the art technology and systems",
+//     paragraph:
+//       "You’ve got personnel shortages, compliance obligations, and regulatory pressures to contend with—but the industry isn’t standing still. We help you leverage cloud-native technologies and AI to ensure every patient gets optimal experiences and equitable outcomes while keeping their data private and secure.",
+//   },
+//   statsCard: {
+//     stats: "100+",
+//     description: "Healthcare & Life Sciences firms we’ve helped build on AWS",
+//     details:
+//       "From neighborhood clinics to international nonprofits to some of the largest life sciences firms in the world—we’ve helped companies of all sizes and stages serve their patients.",
+//   },
+//   detailsData: [
+//     {
+//       title: "Healthcare payers",
+//       description:
+//         "You handle the intricate balance of optimizing claim management, member retention, and health outcomes amidst a rapidly evolving industry. We help you build accessible member experiences that serve them and help you better understand their needs.",
+//     },
+//     {
+//       title: "Healthcare providers",
+//       description:
+//         "You need to maintain patient confidentiality while streamlining operations in an increasingly digital landscape. We specialize in tailoring AWS infrastructure to meet the needs of providers, ensuring you have a secure, compliant, and scalable environment to deliver exceptional care.",
+//     },
+//   ],
+//   capabilitiesData: [
+//     {
+//       title: "HIPAA compliance",
+//       description:
+//         "Our modernization roadmap ensures your operations and data practices are secure and resilient",
+//       icon: "/svg/hipaa.svg",
+//     },
+//     {
+//       title: "Health research",
+//       description:
+//         "Conduct large-scale research projects with seamless analytics for data science or business intelligence",
+//       icon: "/svg/health.svg",
+//     },
+//     {
+//       title: "Health research",
+//       description:
+//         "Conduct large-scale research projects with seamless analytics for data science or business intelligence",
+//       icon: "/svg/health.svg",
+//     },
+//     {
+//       title: "HIPAA compliance",
+//       description:
+//         "Our modernization roadmap ensures your operations and data practices are secure and resilient",
+//       icon: "/svg/hipaa.svg",
+//     },
+//     {
+//       title: "HIPAA compliance",
+//       description:
+//         "Our modernization roadmap ensures your operations and data practices are secure and resilient",
+//       icon: "/svg/hipaa.svg",
+//     },
+//     {
+//       title: "Health research",
+//       description:
+//         "Conduct large-scale research projects with seamless analytics for data science or business intelligence",
+//       icon: "/svg/health.svg",
+//     },
+//   ],
+//   companyDataTwo: {
+//     content:
+//       "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
+//     imageSrc: "/svg/carehubs.svg",
+//     author: "Peter Philips | CTO, Recognize",
+//     buttonText: "Read More",
+//     showButton: true,
+//   },
+//   servicesCards: [
+//     {
+//       imgSrc: "/public/assets/contact",
+//       altText: "Image",
+//       title: "Our healthcare vision",
+//       description:
+//         "A more just, efficient, and effective kind of healthcare is possible when payers and providers are given best-in-class cloud solutions. Collaborate with us to build the future of healthcare together.",
+//       showTag: true,
+//       tagText: "AWS PREMIER CONSULTING PARTNER",
+//       index: 1,
+//       showButton: true,
+//       buttonText: "Build with us",
+//       href: "/",
+//     },
+//     {
+//       imgSrc: "/assets/security-posture.png",
+//       altText: "Image",
+//       title: "Strengthen Your Security Posture",
+//       description:
+//         "Connect with our security experts to learn how Teverse Cloud Secure can harden your AWS environment.",
+//       showTag: true,
+//       tagText: "GET IN TOUCH",
+//       index: 2,
+//       showButton: true,
+//       buttonText: "Schedule a call",
+//       href: "/",
+//     },
+//   ],
+// };
 
 export const lifeSciencesData = {
   hero: {
