@@ -191,58 +191,112 @@ const navItems: NavItem[] = [
         ],
       },
       {
+        category: "Identity and Access Management (IDAM) ",
+        // href: "/services/professional-services",
+        description: "Expert consultation and implementation",
+        subitems: [
+          {
+            title: "IDAM Migration",
+            description: "........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Implementation & Integration ",
+            description: "........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Customisation ",
+            description: "........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Evaluation & Recommendation",
+            description: "........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Technology Roadmap & Planning",
+            description: "........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Standard API Connectors ",
+            description: "........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Managed Services ",
+            description: "........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+        ],
+      },
+      {
+        category: "Software Engineering",
+        // href: "/services/professional-services",
+        description: "Expert consultation and implementation",
+        subitems: [
+          {
+            title: "Software Architecture and Design ",
+            description: ".........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Application Management Services ",
+            description: ".........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Software and App Development ",
+            description: ".........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Hire DevOps Engineers",
+            description: ".........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "System, data and API integration ",
+            description: ".........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Strategic IT Consulting",
+            description: ".........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+        ],
+      },
+      {
         category: "Cyber Security",
         // href: "",
         description: "....",
         subitems: [
           {
-            title: "Cybersecurity ",
+            title: "Cybersecurity",
             description: "Comprehensive cybersecurity solutions",
             href: "/services/security/cyber",
           },
         ],
       },
       {
-        category: "Security",
-        // href: "/services/security",
-        description: "Protect your business with advanced security services",
+        category: "Generative AI",
+        // href: "",
+        description:
+          "Leverage AWS AI tools: Amazon Bedrock, SageMaker, and Foundation Models",
         subitems: [
           {
-            title: "IDAM Security",
-            description: "Custom security solutions for identity management",
-            href: "/services/security/idam",
+            title: "AI Management Services",
+            description: "Leverage AI solutions",
+            href: "/services/ai-management",
           },
-        ],
-      },
-      {
-        category: "AI Management Services",
-        // href: "/services/ai-management",
-        description: "Leverage AI solutions",
-        subitems: [
           {
             title: "AI Foundation",
             description:
               "Cost management and foundational best practices for AI solutions on AWS",
             href: "/services/ai-management/ai-foundation",
-          },
-        ],
-      },
-      {
-        category: "Professional Services",
-        // href: "/services/professional-services",
-        description: "Expert consultation and implementation",
-        subitems: [
-          {
-            title: "Data, Analytics & Machine Learning",
-            description:
-              "Leverage data analytics and machine learning to elevate your business",
-            href: "/services/professional-services/data-analytics-ml",
-          },
-          {
-            title: "Generative AI",
-            description:
-              "Leverage AWS AI tools: Amazon Bedrock, SageMaker, and Foundation Models",
-            href: "/services/professional-services/generative-ai",
           },
         ],
       },
