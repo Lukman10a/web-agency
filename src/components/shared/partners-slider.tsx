@@ -12,7 +12,7 @@ import thrive from "/public/svg/thrive.svg";
 
 import Marquee from "../ui/animated/marquee";
 
-const partners = [
+export const partners = [
   lightbox,
   featherdev,
   globalbank,
