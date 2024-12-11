@@ -5,34 +5,55 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 
-import improvedsecurity from "../../public/assets/improvedsecurity.png";
-import efficiency from "../../public/svg/efficiency.svg";
+import cloud from "../../public/assets/cloud-managed-services.svg";
+// import efficiency from "../../public/svg/efficiency.svg";
 import expert from "../../public/svg/expert.svg";
 import security from "../../public/svg/security.svg";
-import ArrowIcon from "./icons/arrow";
 import MoreClients from "./shared/more-clients";
 import AnimatedBorderTrail from "./ui/animated/border-trail-simple";
-import { InView } from "./ui/animated/in-view";
-import { Button } from "./ui/button";
 
 const benefits = [
   {
-    img: efficiency,
-    title: "Increased Efficiency and Cost Savings",
+    img: cloud,
+    title: "Cloud Management",
     description:
       "Optimize operations, cut costs, and focus on growth with our cloud and security solutions.",
+    link: "/services", // Add link
   },
   {
     img: security,
-    title: "Enhanced Security and Compliance",
+    title: "Cloud Migration",
     description:
       "Stay protected from threats and ensure compliance with GDPR, HIPAA, and more.",
+    link: "/services/professional-services/aws-migration", // Add link
   },
   {
     img: expert,
-    title: "Expert Guidance & 24/7 Support",
+    title: "AWS Map",
     description:
       "Access continuous monitoring, expert support to keep your systems secure & scalable.",
+    link: "/services/professional-services/aws-modernization", // Add link
+  },
+  {
+    img: expert,
+    title: "Gen AI",
+    description:
+      "Access continuous monitoring, expert support to keep your systems secure & scalable.",
+    link: "/services/gen-ai", // Add link
+  },
+  {
+    img: expert,
+    title: "IDAM Migration",
+    description:
+      "Access continuous monitoring, expert support to keep your systems secure & scalable.",
+    link: "/services/idam-migration", // Add link
+  },
+  {
+    img: expert,
+    title: "IGA",
+    description:
+      "Access continuous monitoring, expert support to keep your systems secure & scalable.",
+    link: "/solutions/idam/iga",
   },
 ];
 
@@ -73,7 +94,7 @@ export default function WhyChooseUs() {
 
       {/* Benefits Section */}
       <section
-        className="animate-fade-up mx-auto mb-24 flex w-[90%] max-w-7xl gap-12 p-4 xl:gap-6 lg:flex-col sm:mb-12"
+        className="animate-fade-up mx-auto mb-24 grid w-[90%] max-w-7xl grid-cols-3 gap-12 p-4 xl:gap-6 md:grid-cols-2 sm:mb-12 sm:grid-cols-1"
         aria-labelledby="benefits-heading"
       >
         {benefits.map((benefit, index) => (
@@ -87,100 +108,28 @@ export default function WhyChooseUs() {
               custom={index}
               whileHover="hover"
             >
-              <article className="group relative flex w-full transform cursor-pointer flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
-                <motion.div variants={iconVariants}>
-                  <Image
-                    src={benefit.img}
-                    alt={benefit.title}
-                    className="rounded-full border p-2 transition-transform duration-500 ease-in-out hover:rotate-6"
-                  />
-                </motion.div>
-                <h3 className="text-2xl font-semibold sm:text-xl">
-                  {benefit.title}
-                </h3>
-                <p className="text-[#808080] group-hover:text-black">
-                  {benefit.description}
-                </p>
-              </article>
+              <Link href={benefit.link} passHref>
+                <article className="group relative flex w-full transform cursor-pointer flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
+                  <motion.div variants={iconVariants}>
+                    <Image
+                      src={benefit.img}
+                      alt={benefit.title}
+                      className="rounded-full border p-2 transition-transform duration-500 ease-in-out hover:rotate-6"
+                    />
+                  </motion.div>
+                  <h3 className="text-2xl font-semibold sm:text-xl">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-[#808080] group-hover:text-black">
+                    {benefit.description}
+                  </p>
+                </article>
+              </Link>
             </motion.div>
           </AnimatedBorderTrail>
         ))}
       </section>
 
-      {/* Case Study Section */}
-      <section
-        className="m-10 mx-auto flex w-11/12 max-w-7xl items-center gap-10 overflow-hidden rounded-2xl bg-gradient-to-l from-[rgba(255,149,87,0.1)] to-[rgba(8,19,72,0.1)] p-8 lg:gap-6 lg:p-6 md:flex-col md:p-4"
-        aria-labelledby="case-study-heading"
-      >
-        <div className="w-1/2 flex-1 md:w-full">
-          <InView
-            variants={{
-              hidden: { opacity: 0, x: -100, filter: "blur(4px)" },
-              visible: { opacity: 1, x: 0, filter: "blur(0px)" },
-            }}
-            viewOptions={{ margin: "0px 0px -200px 0px" }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
-            <Image
-              src={improvedsecurity}
-              alt="Security Image"
-              className="w-full"
-            />
-          </InView>
-        </div>
-
-        <div className="flex w-1/2 flex-1 flex-col md:w-full md:text-center">
-          <InView
-            variants={{
-              hidden: { opacity: 0, x: 90, filter: "blur(4px)" },
-              visible: { opacity: 1, x: 0, filter: "blur(0px)" },
-            }}
-            viewOptions={{ margin: "0px 0px -200px 0px" }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
-            <h3
-              id="case-study-heading"
-              className="mb-[.7em] w-[95%] font-sora text-3xl font-semibold xl:text-2xl lg:text-[20px] lg:leading-tight md:w-full"
-            >
-              Improved Security Posture for a Financial Firm with a Custom
-              Security Architecture
-            </h3>
-          </InView>
-          <InView
-            variants={{
-              hidden: { opacity: 0, x: 70, filter: "blur(4px)" },
-              visible: { opacity: 1, x: 0, filter: "blur(0px)" },
-            }}
-            viewOptions={{ margin: "0px 0px -200px 0px" }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
-            <p className="mb-[1.5em] w-full">
-              We improved a financial firm&apos;s security by implementing a
-              custom architecture with advanced threat detection and strict
-              access controls, reducing incidents and boosting compliance.
-            </p>
-          </InView>
-          <InView
-            variants={{
-              hidden: { opacity: 0, x: 50, filter: "blur(4px)" },
-              visible: { opacity: 1, x: 0, filter: "blur(0px)" },
-            }}
-            viewOptions={{ margin: "0px 0px -200px 0px" }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
-            <Button
-              asChild
-              className="group flex w-fit items-center gap-4 rounded-3xl border border-[#081348] bg-orange-650 font-sans text-white transition-transform duration-300 ease-in-out hover:scale-110 hover:bg-white hover:text-orange-650 xl:text-[12px] md:w-full sm:mb-4"
-            >
-              <Link className="h-full" href={"/solutions"}>
-                <span>Discover Solutions </span>
-
-                <ArrowIcon />
-              </Link>
-            </Button>
-          </InView>
-        </div>
-      </section>
       <MoreClients />
     </section>
   );

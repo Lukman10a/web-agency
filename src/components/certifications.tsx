@@ -2,6 +2,7 @@ import React from "react";
 
 import Image from "next/image";
 
+// import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 import archi from "../../public/assets/archi.png";
@@ -11,16 +12,17 @@ import devops from "../../public/assets/devops.png";
 import security from "../../public/assets/security.png";
 import star from "../../public/assets/starfour.png";
 import sysops from "../../public/assets/sysops.png";
+// import ArrowIcon from "./icons/arrow";
 import { AnimatedGroup } from "./ui/animated/animated-groups";
 import { InView } from "./ui/animated/in-view";
+
+// import { Button } from "./ui/button";
 
 const SecurityCertifications: React.FC = () => {
   return (
     <section className="mb-16">
-      <div className="relative mx-auto w-[90%] max-w-[1400px] rounded-2xl bg-orange-650 py-24 sm:w-full sm:rounded-none">
-        <StarBackground />
-        {/*end design stars */}
-        <div className="mb-8 overflow-hidden text-center">
+      <div className="relative mx-auto flex gap-10 bg-black px-10 py-24 text-white md:flex-wrap">
+        <div className="mb-8 space-y-4 overflow-hidden">
           <InView
             variants={{
               hidden: { opacity: 0, x: -100, filter: "blur(4px)" },
@@ -29,7 +31,7 @@ const SecurityCertifications: React.FC = () => {
             // viewOptions={{ margin: "0px 0px -200px 0px" }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            <h2 className="font-sora text-4xl font-bold text-gray-900 md:text-3xl">
+            <h2 className="font-sora text-4xl font-bold md:text-3xl">
               We are certified professionals
             </h2>
           </InView>
@@ -41,86 +43,77 @@ const SecurityCertifications: React.FC = () => {
             viewOptions={{ margin: "0px 0px -200px 0px" }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            <p className="mx-auto mt-4 w-[90%] font-sans text-lg md:text-sm">
+            <p className="mx-auto mt-4 font-sans text-lg md:text-sm">
               Your security is our priority. We hold top industry certifications
               including
               <br /> ISO, AWS, CISSP, and more.
             </p>
           </InView>
+          {/* <Button
+            asChild
+            className="flex w-fit items-center justify-center rounded-full border border-black bg-orange-600 px-8 py-3 text-base font-medium uppercase text-white hover:bg-orange-700 md:w-full md:px-10 md:py-4 md:text-lg"
+          >
+            <Link href="/services">
+              FIND OUT MORE <ArrowIcon />
+            </Link>
+          </Button> */}
         </div>
 
         {/* Certifications Badges */}
-        <div className="mx-auto flex max-w-[1200px] items-center justify-center gap-12 px-5 lg:space-y-0 2md:flex-col md:gap-8">
-          {/* First Row of Badges */}
-          <div className="flex gap-5">
-            <AnimatedGroup
-              className="flex gap-5"
-              viewport={{
-                once: false, // Animation repeats each time
-                amount: 0.5, // Trigger when 50% visible
-                margin: "10px", // Start animation 100px before entering viewport
-              }}
-              preset="scale"
-            >
-              <Image
-                width={500}
-                height={500}
-                src={sysops}
-                alt={"AWS SysOps Administrator Badge"}
-                className="w-32 md:h-24 md:w-24"
-              />
+        <div className="mx-auto flex items-center justify-center gap-12 px-5 lg:space-y-0 2md:flex-col md:gap-8">
+          <AnimatedGroup
+            className="grid grid-cols-3 gap-5"
+            viewport={{
+              once: false,
+              amount: 0.5,
+              margin: "10px",
+            }}
+            preset="scale"
+          >
+            <Image
+              width={500}
+              height={500}
+              src={sysops}
+              alt={"AWS SysOps Administrator Badge"}
+              className="w-32 md:h-24 md:w-24"
+            />
 
-              <Image
-                width={500}
-                height={500}
-                src={security}
-                alt="AWS Security Badge"
-                className="w-32 md:h-24 md:w-24"
-              />
-              <Image
-                width={500}
-                height={500}
-                src={archi}
-                alt="AWS Solutions Architect Badge"
-                className="w-32 md:h-24 md:w-24"
-              />
-            </AnimatedGroup>
-          </div>
-
-          {/* Second Row of Badges */}
-          <div className="flex gap-5">
-            <AnimatedGroup
-              className="flex gap-5"
-              viewport={{
-                once: false, // Animation repeats each time
-                amount: 0.5, // Trigger when 50% visible
-                margin: "10px", // Start animation 100px before entering viewport
-              }}
-              preset="scale"
-            >
-              <Image
-                width={500}
-                height={500}
-                src={cloud}
-                alt="AWS Cloud Practitioner Badge"
-                className="w-32 md:h-24 md:w-24"
-              />
-              <Image
-                width={500}
-                height={500}
-                src={devops}
-                alt="AWS DevOps Engineer Badge"
-                className="h-32 w-32 md:h-24 md:w-24"
-              />
-              <Image
-                width={500}
-                height={500}
-                src={data}
-                alt="AWS Data Analytics Badge"
-                className="w-32 md:h-24 md:w-24"
-              />
-            </AnimatedGroup>
-          </div>
+            <Image
+              width={500}
+              height={500}
+              src={security}
+              alt="AWS Security Badge"
+              className="w-32 md:h-24 md:w-24"
+            />
+            <Image
+              width={500}
+              height={500}
+              src={archi}
+              alt="AWS Solutions Architect Badge"
+              className="w-32 md:h-24 md:w-24"
+            />
+            <Image
+              width={500}
+              height={500}
+              src={cloud}
+              alt="AWS Cloud Practitioner Badge"
+              className="w-32 md:h-24 md:w-24"
+            />
+            <Image
+              width={500}
+              height={500}
+              src={devops}
+              alt="AWS DevOps Engineer Badge"
+              className="h-32 w-32 md:h-24 md:w-24"
+            />
+            <Image
+              width={500}
+              height={500}
+              src={data}
+              alt="AWS Data Analytics Badge"
+              className="w-32 md:h-24 md:w-24"
+            />
+          </AnimatedGroup>
         </div>
       </div>
     </section>
@@ -135,7 +128,7 @@ export default SecurityCertifications;
 //   top: string;
 // };
 
-const StarBackground: React.FC = () => {
+export const StarBackground: React.FC = () => {
   const starPositions = [
     { className: "left-[15rem] top-12" },
     { className: "left-[15rem] top-24" },

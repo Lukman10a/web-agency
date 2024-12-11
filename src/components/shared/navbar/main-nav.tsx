@@ -55,7 +55,7 @@ const navItems: NavItem[] = [
     items: [
       {
         category: "Cloud Solutions",
-        href: "/solutions",
+        // href: "/solutions",
         description:
           "Explore our cloud solutions and services for your business needs",
         subitems: [
@@ -92,7 +92,7 @@ const navItems: NavItem[] = [
       },
       {
         category: "IDAM Solutions",
-        href: "/solutions/idam",
+        // href: "/solutions/idam",
         description: "Comprehensive Identity & Access Management Solutions",
         subitems: [
           {
@@ -101,25 +101,35 @@ const navItems: NavItem[] = [
             href: "/solutions/idam/iga",
           },
           {
-            title: "Single Sign-On (SSO)",
+            title: "Single Sign-On (SSO) and MFA",
             description: "Simplify user authentication across multiple apps",
             href: "/solutions/idam/sso",
           },
           {
-            title: "Multi-Factor Authentication (MFA)",
-            description: "Enhance security with multi-factor authentication",
-            href: "/solutions/idam/mfa",
+            title: "Identity Federation",
+            description: "...",
+            href: "/solutions/idam/idf",
           },
           {
             title: "Privileged Access Management (PAM)",
             description: "Secure privileged accounts and credentials",
             href: "/solutions/idam/pam",
           },
+          {
+            title: "Customer Identity and Access Management (CIAM)",
+            description: "...",
+            href: "/solutions/idam/ciam",
+          },
+          {
+            title: "Managing machine identities and BoTs",
+            description: "......",
+            href: "/solutions/idam/mmib",
+          },
         ],
       },
       {
         category: "Generative AI",
-        href: "/solutions/generative-ai",
+        // href: "/solutions/generative-ai",
         description: "Explore AI-driven innovations for your business",
         subitems: [
           {
@@ -146,10 +156,15 @@ const navItems: NavItem[] = [
     href: "/services",
     items: [
       {
-        category: "Cloud Managed Services",
-        href: "/services",
+        category: "Cloud",
+        // href: "/services",
         description: "Optimize your cloud infrastructure",
         subitems: [
+          {
+            title: "Cloud Managed Services",
+            description: "...",
+            href: "/services",
+          },
           {
             title: "Cloud Foundation",
             description:
@@ -162,43 +177,6 @@ const navItems: NavItem[] = [
               "Our comprehensive service for AWS optimization, operations, and security",
             href: "/services/cloud-management-services/cloud-goto",
           },
-        ],
-      },
-      {
-        category: "Security",
-        href: "/services/security",
-        description: "Protect your business with advanced security services",
-        subitems: [
-          {
-            title: "IDAM Security",
-            description: "Custom security solutions for identity management",
-            href: "/services/security/idam",
-          },
-          {
-            title: "Cyber Security",
-            description: "Comprehensive cybersecurity solutions",
-            href: "/services/security/cyber",
-          },
-        ],
-      },
-      {
-        category: "AI Management Services",
-        href: "/services/ai-management",
-        description: "Leverage AI solutions",
-        subitems: [
-          {
-            title: "AI Foundation",
-            description:
-              "Cost management and foundational best practices for AI solutions on AWS",
-            href: "/services/ai-management/ai-foundation",
-          },
-        ],
-      },
-      {
-        category: "Professional Services",
-        href: "/services/professional-services",
-        description: "Expert consultation and implementation",
-        subitems: [
           {
             title: "AWS Migration",
             description:
@@ -210,17 +188,115 @@ const navItems: NavItem[] = [
             description: "Containerization, serverless, and microservices",
             href: "/services/professional-services/aws-modernization",
           },
+        ],
+      },
+      {
+        category: "Identity and Access Management (IDAM) ",
+        // href: "/services/professional-services",
+        description: "Expert consultation and implementation",
+        subitems: [
           {
-            title: "Data, Analytics & Machine Learning",
-            description:
-              "Leverage data analytics and machine learning to elevate your business",
+            title: "IDAM Migration",
+            description: "........",
             href: "/services/professional-services/data-analytics-ml",
           },
           {
-            title: "Generative AI",
+            title: "Implementation & Integration ",
+            description: "........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Customisation ",
+            description: "........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Evaluation & Recommendation",
+            description: "........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Technology Roadmap & Planning",
+            description: "........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Standard API Connectors ",
+            description: "........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Managed Services ",
+            description: "........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+        ],
+      },
+      {
+        category: "Software Engineering",
+        // href: "/services/professional-services",
+        description: "Expert consultation and implementation",
+        subitems: [
+          {
+            title: "Software Architecture and Design ",
+            description: ".........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Application Management Services ",
+            description: ".........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Software and App Development ",
+            description: ".........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Hire DevOps Engineers",
+            description: ".........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "System, data and API integration ",
+            description: ".........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+          {
+            title: "Strategic IT Consulting",
+            description: ".........",
+            href: "/services/professional-services/data-analytics-ml",
+          },
+        ],
+      },
+      {
+        category: "Cyber Security",
+        // href: "",
+        description: "....",
+        subitems: [
+          {
+            title: "Cybersecurity",
+            description: "Comprehensive cybersecurity solutions",
+            href: "/services/security/cyber",
+          },
+        ],
+      },
+      {
+        category: "Generative AI",
+        // href: "",
+        description:
+          "Leverage AWS AI tools: Amazon Bedrock, SageMaker, and Foundation Models",
+        subitems: [
+          {
+            title: "AI Management Services",
+            description: "Leverage AI solutions",
+            href: "/services/ai-management",
+          },
+          {
+            title: "AI Foundation",
             description:
-              "Leverage AWS AI tools: Amazon Bedrock, SageMaker, and Foundation Models",
-            href: "/services/professional-services/generative-ai",
+              "Cost management and foundational best practices for AI solutions on AWS",
+            href: "/services/ai-management/ai-foundation",
           },
         ],
       },
@@ -318,6 +394,11 @@ const navItems: NavItem[] = [
         category: "Contact",
         description: "Need more info, send us a message",
         href: "/contact",
+      },
+      {
+        category: "Our Partners",
+        description: "Work closely with our partners.",
+        href: "/company/partners",
       },
     ],
   },

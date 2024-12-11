@@ -4,11 +4,12 @@ import Cardimage1 from "/public/assets/cardimage1.png";
 import Cardimage2 from "/public/assets/cardimage2.png";
 import Cardimage3 from "/public/assets/cardimage3.png";
 import { BsCloudPlus } from "react-icons/bs";
+import { FaCode } from "react-icons/fa";
 import { GrShieldSecurity } from "react-icons/gr";
 import { LuUploadCloud } from "react-icons/lu";
+import { MdOutlineSecurity } from "react-icons/md";
 
 import BusinessOffersCard from "./business-offers-card";
-import { BorderTrail } from "./ui/animated/border-trail";
 import { InView } from "./ui/animated/in-view";
 
 const cardData = [
@@ -39,12 +40,30 @@ const cardData = [
     imageSrc: Cardimage3,
     titleIcon: <BsCloudPlus />,
   },
+  {
+    title: "CYBER SECURITY",
+    description:
+      "Safeguard your digital assets with our cutting-edge cyber security solutions. We provide end-to-end services, including vulnerability assessments, penetration testing, and threat detection to ensure your business is protected against evolving cyber threats.",
+    buttonText: "Secure Your Business",
+    buttonLink: "/solutions/generative-ai",
+    imageSrc: Cardimage3,
+    titleIcon: <MdOutlineSecurity />,
+  },
+  {
+    title: "SOFTWARE ENGINEERING",
+    description:
+      "Transform your ideas into reality with our software engineering services. We design, develop, and maintain scalable, reliable, and efficient software solutions tailored to meet your unique business needs. From web applications to enterprise systems, we bring expertise and innovation to every project.",
+    buttonText: "Build Your Software Solution",
+    buttonLink: "/solutions/generative-ai",
+    imageSrc: Cardimage3,
+    titleIcon: <FaCode />,
+  },
 ];
 
 const BusinessOffer = () => {
   return (
     <section className="mx-auto mb-16 w-11/12 max-w-7xl overflow-hidden">
-      <div className="relative mb-[3em] w-full rounded-2xl bg-gradient-to-r from-[#e3e7f7] to-[#fae8de] p-[5em] text-center sm:p-[2em]">
+      {/* <div className="relative mb-[3em] w-full rounded-2xl bg-gradient-to-r from-[#e3e7f7] to-[#fae8de] p-[5em] text-center sm:p-[2em]">
         <BorderTrail
           style={{
             boxShadow:
@@ -59,7 +78,7 @@ const BusinessOffer = () => {
           here to provide customized strategies to elevate your IT
           infrastructure.
         </p>
-      </div>
+      </div> */}
       <div className="rounded-2xl bg-orange-100 p-2 pt-16">
         <h3 className="mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold uppercase leading-tight lg:text-[2rem] md:text-[1.6rem]">
           <span className="text-orange-650">Services</span> designed to <br />{" "}

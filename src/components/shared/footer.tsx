@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer: React.FC = () => {
   return (
@@ -20,8 +21,11 @@ const Footer: React.FC = () => {
               alt="brand logo"
             />
             <p className="mt-4 text-sm text-neutral-400">
-              Subscribe to our newsletter and get a 20% <br /> discount coupon
-              for your next order.
+              {/* Subscribe to our newsletter and get a 20% <br /> discount coupon
+              for your next order. */}
+              Get the latest news on Amazon Web Services, the cloud,
+              <br /> emerging tech, and more with our weekly newsletter.
+              <br /> Every Thursday, direct to your inbox.
             </p>
             <Link
               href="mailto:hi@teversemultiuniverse"
@@ -56,6 +60,14 @@ const Footer: React.FC = () => {
               >
                 <FaLinkedin size={24} />
               </Link>
+              <Link
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-orange-650 p-2 text-black"
+              >
+                <FaXTwitter size={24} />
+              </Link>
             </div>
           </div>
 
@@ -69,30 +81,47 @@ const Footer: React.FC = () => {
               <p className="py-3 text-sm text-neutral-400">+421 221 020 694</p>
             </div>
 
-            {/* Our Services Section */}
+            {/* Company Section */}
             <div>
-              <h4 className="font-sora text-lg font-semibold">Discover</h4>
+              <h4 className="font-sora text-lg font-semibold">Company </h4>
               <ul className="mt-2 space-y-2 text-neutral-400">
                 <li>
-                  <Link href="/solutions/teverse-control">Platform</Link>
+                  <Link href="/company/about-us">About Us </Link>
                 </li>
                 <li>
-                  <Link href="/services">Cloud Management Services</Link>
+                  <Link href="/company/culture">Our Culture</Link>
                 </li>
                 <li>
-                  <Link href="/services/professional-services">
-                    Professional Services
-                  </Link>
+                  <Link href="/company/careers">Careers</Link>
+                </li>
+                <li>
+                  <Link href="/contact">Contact</Link>
                 </li>
               </ul>
             </div>
 
-            {/* Other Section */}
+            {/* Solution Section */}
             <div>
-              <h4 className="font-sora text-lg font-semibold">Other</h4>
+              <h4 className="font-sora text-lg font-semibold">Solutions </h4>
               <ul className="mt-2 space-y-2 text-neutral-400">
-                <li>Privacy Policies</li>
-                <li>Change Consents</li>
+                <li>
+                  <Link href={"/Solutions/cloud-"}>Cloud Management</Link>
+                </li>
+                <li>
+                  <Link href={""}>Cloud Migration</Link>
+                </li>
+                <li>
+                  <Link href={""}>AWS Map</Link>
+                </li>
+                <li>
+                  <Link href={""}>Gen AI</Link>
+                </li>
+                <li>
+                  <Link href={""}>IDAM Migration</Link>
+                </li>
+                <li>
+                  <Link href={""}>IGA</Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -100,7 +129,9 @@ const Footer: React.FC = () => {
 
         {/* Copyright Section */}
         <div className="mt-12 text-center text-sm text-gray-400">
-          Copyright © 2021 All rights reserved. @teversemultiuniverse
+          {/* Copyright © 2021 All rights reserved. @teversemultiuniverse */}
+          Copyright ©️ 2024 Teverse Pty Ltd. All Rights Reserved. All trademarks
+          are property of their legal owners.
         </div>
       </div>
     </footer>
