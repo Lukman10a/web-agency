@@ -82,7 +82,7 @@ export default function Partners() {
 
   return (
     <div>
-      <section className="overflow-hidden bg-main-gradient p-20">
+      <section className="overflow-hidden bg-main-gradient p-20 md:p-10 sm:p-4">
         <InView
           variants={{
             hidden: { opacity: 0, x: 100, filter: "blur(4px)" },
@@ -157,7 +157,7 @@ export default function Partners() {
         </div>
 
         <section>
-          <p className="pb-5 pl-20 text-2xl font-bold sm:text-center">
+          <p className="pb-5 pl-20 text-2xl font-bold sm:pl-0 sm:text-center">
             Advanced Partners
           </p>
           <section className="grid grid-cols-4 place-items-center gap-10 py-5 md:grid-cols-3 sm:grid-cols-2">
