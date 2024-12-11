@@ -55,7 +55,7 @@ const navItems: NavItem[] = [
     items: [
       {
         category: "Cloud Solutions",
-        href: "/solutions",
+        // href: "/solutions",
         description:
           "Explore our cloud solutions and services for your business needs",
         subitems: [
@@ -92,7 +92,7 @@ const navItems: NavItem[] = [
       },
       {
         category: "IDAM Solutions",
-        href: "/solutions/idam",
+        // href: "/solutions/idam",
         description: "Comprehensive Identity & Access Management Solutions",
         subitems: [
           {
@@ -101,25 +101,35 @@ const navItems: NavItem[] = [
             href: "/solutions/idam/iga",
           },
           {
-            title: "Single Sign-On (SSO)",
+            title: "Single Sign-On (SSO) and MFA",
             description: "Simplify user authentication across multiple apps",
             href: "/solutions/idam/sso",
           },
           {
-            title: "Multi-Factor Authentication (MFA)",
-            description: "Enhance security with multi-factor authentication",
-            href: "/solutions/idam/mfa",
+            title: "Identity Federation",
+            description: "...",
+            href: "/solutions/idam/idf",
           },
           {
             title: "Privileged Access Management (PAM)",
             description: "Secure privileged accounts and credentials",
             href: "/solutions/idam/pam",
           },
+          {
+            title: "Customer Identity and Access Management (CIAM)",
+            description: "...",
+            href: "/solutions/idam/ciam",
+          },
+          {
+            title: "Managing machine identities and BoTs",
+            description: "......",
+            href: "/solutions/idam/mmib",
+          },
         ],
       },
       {
         category: "Generative AI",
-        href: "/solutions/generative-ai",
+        // href: "/solutions/generative-ai",
         description: "Explore AI-driven innovations for your business",
         subitems: [
           {
@@ -146,10 +156,15 @@ const navItems: NavItem[] = [
     href: "/services",
     items: [
       {
-        category: "Cloud Managed Services",
-        href: "/services",
+        category: "Cloud",
+        // href: "/services",
         description: "Optimize your cloud infrastructure",
         subitems: [
+          {
+            title: "Cloud Managed Services",
+            description: "...",
+            href: "/services",
+          },
           {
             title: "Cloud Foundation",
             description:
@@ -162,11 +177,34 @@ const navItems: NavItem[] = [
               "Our comprehensive service for AWS optimization, operations, and security",
             href: "/services/cloud-management-services/cloud-goto",
           },
+          {
+            title: "AWS Migration",
+            description:
+              "Minimize downtime, forecast costs, and migrate efficiently",
+            href: "/services/professional-services/aws-migration",
+          },
+          {
+            title: "AWS Modernization",
+            description: "Containerization, serverless, and microservices",
+            href: "/services/professional-services/aws-modernization",
+          },
+        ],
+      },
+      {
+        category: "Cyber Security",
+        // href: "",
+        description: "....",
+        subitems: [
+          {
+            title: "Cybersecurity ",
+            description: "Comprehensive cybersecurity solutions",
+            href: "/services/security/cyber",
+          },
         ],
       },
       {
         category: "Security",
-        href: "/services/security",
+        // href: "/services/security",
         description: "Protect your business with advanced security services",
         subitems: [
           {
@@ -174,16 +212,11 @@ const navItems: NavItem[] = [
             description: "Custom security solutions for identity management",
             href: "/services/security/idam",
           },
-          {
-            title: "Cyber Security",
-            description: "Comprehensive cybersecurity solutions",
-            href: "/services/security/cyber",
-          },
         ],
       },
       {
         category: "AI Management Services",
-        href: "/services/ai-management",
+        // href: "/services/ai-management",
         description: "Leverage AI solutions",
         subitems: [
           {
@@ -196,20 +229,9 @@ const navItems: NavItem[] = [
       },
       {
         category: "Professional Services",
-        href: "/services/professional-services",
+        // href: "/services/professional-services",
         description: "Expert consultation and implementation",
         subitems: [
-          {
-            title: "AWS Migration",
-            description:
-              "Minimize downtime, forecast costs, and migrate efficiently",
-            href: "/services/professional-services/aws-migration",
-          },
-          {
-            title: "AWS Modernization",
-            description: "Containerization, serverless, and microservices",
-            href: "/services/professional-services/aws-modernization",
-          },
           {
             title: "Data, Analytics & Machine Learning",
             description:
