@@ -95,7 +95,7 @@ const ContactOffice: React.FC = () => {
               <h3 className="text-lg font-bold group-hover:text-white">
                 {office.name}
               </h3>
-              <div className="text-gray-600 group-hover:text-white">
+              <div className="text-gray-600">
                 <p>{office.country}</p>
               </div>
             </div>

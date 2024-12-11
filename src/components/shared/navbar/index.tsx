@@ -204,6 +204,11 @@ const navItems: NavItem[] = [
         href: "/company/faq",
         label: "Get answers to frequently asked questions",
       },
+      {
+        title: "Our Partners",
+        href: "/company/partners",
+        label: "Work closely with our partners.",
+      },
     ],
   },
 ];

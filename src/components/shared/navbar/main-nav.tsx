@@ -319,6 +319,11 @@ const navItems: NavItem[] = [
         description: "Need more info, send us a message",
         href: "/contact",
       },
+      {
+        category: "Our Partners",
+        description: "Work closely with our partners.",
+        href: "/company/partners",
+      },
     ],
   },
 ];

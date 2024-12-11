@@ -1,6 +1,7 @@
 import React from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const PartnershipSection: React.FC = () => {
   return (
@@ -13,15 +14,17 @@ const PartnershipSection: React.FC = () => {
         <p className="mb-4 text-gray-600">
           Working closely with partners to bring best value to our customers.
         </p>
-        <button className="rounded-full bg-orange-600 px-4 py-2 font-medium text-white transition-colors hover:bg-orange-650">
-          All Partners
-        </button>
+        <Link href="/company/partners">
+          <button className="rounded-full bg-orange-600 px-4 py-2 font-medium text-white transition-colors hover:bg-orange-650">
+            All Partners
+          </button>
+        </Link>
       </div>
 
       {/* Icon Section */}
-      <div className="flex flex-col sm:flex-row sm:items-center items-center sm:space-y-1 sm:gap-6 space-y-6 sm:justify-center sm:w-full sm:mx-auto">
-        <div className="flex sm:flex-wrap sm:justify-center justify-between gap-4">
-          <div className="w-20 h-20 flex  items-center justify-center transition-transform transform hover:-translate-y-2">
+      <div className="flex flex-col items-center space-y-6 sm:mx-auto sm:w-full sm:flex-row sm:items-center sm:justify-center sm:gap-6 sm:space-y-1">
+        <div className="flex justify-between gap-4 sm:flex-wrap sm:justify-center">
+          <div className="flex h-20 w-20 transform items-center justify-center transition-transform hover:-translate-y-2">
             <Image src="/assets/aws.png" alt="AWS" width={200} height={200} />
           </div>
           <div className="flex h-20 w-20 transform items-center justify-center transition-transform hover:-translate-y-2">
