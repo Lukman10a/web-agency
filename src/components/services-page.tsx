@@ -48,7 +48,7 @@ export default function ServicesPage({
   return (
     <>
       <NewHero
-        imgSrc={heroImage || "/assets/big-data-2.png"}
+        imgSrc={(heroImage as string) || "/assets/big-data-2.png"}
         title={category}
         description={description}
         buttonText="Get Started"

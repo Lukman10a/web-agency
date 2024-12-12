@@ -321,12 +321,6 @@ const navItems: NavItem[] = [
     title: "Industries",
     href: "/industries",
     items: [
-      // {
-      //   category: "Industry Solutions",
-      //   description:
-      //     "Explore the industries we serve with tailored cloud solutions",
-      //   href: "#",
-      // },
       {
         category: "Healthcare",
         description:

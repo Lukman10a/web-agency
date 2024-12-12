@@ -105,10 +105,14 @@ const Footer: React.FC = () => {
               <h4 className="font-sora text-lg font-semibold">Solutions </h4>
               <ul className="mt-2 space-y-2 text-neutral-400">
                 <li>
-                  <Link href={"/Solutions/cloud-"}>Cloud Management</Link>
+                  <Link href={"/services/professional-services/aws-migration"}>
+                    Cloud Management
+                  </Link>
                 </li>
                 <li>
-                  <Link href={""}>Cloud Migration</Link>
+                  <Link href={"/services/professional-services/aws-migration"}>
+                    Cloud Migration
+                  </Link>
                 </li>
                 <li>
                   <Link href={""}>AWS Map</Link>
@@ -117,10 +121,12 @@ const Footer: React.FC = () => {
                   <Link href={""}>Gen AI</Link>
                 </li>
                 <li>
-                  <Link href={""}>IDAM Migration</Link>
+                  <Link href={"/services/idam#idam-migration"}>
+                    IDAM Migration
+                  </Link>
                 </li>
                 <li>
-                  <Link href={""}>IGA</Link>
+                  <Link href={"/solutions/idam/iga"}>IGA</Link>
                 </li>
               </ul>
             </div>
