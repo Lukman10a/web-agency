@@ -1,5 +1,7 @@
 // import Image from "next/image";
 // import Link from "next/link";
+import { StaticImageData } from "next/image";
+
 import { motion } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
@@ -31,6 +33,7 @@ interface Service {
 }
 
 interface ServicePageProps {
+  heroImage?: string | StaticImageData;
   category: string;
   description: string;
   services: Service[];
@@ -40,11 +43,12 @@ export default function ServicesPage({
   category,
   description,
   services,
+  heroImage,
 }: ServicePageProps) {
   return (
     <>
       <NewHero
-        imgSrc="/assets/big-data-2.png"
+        imgSrc={heroImage || "/assets/big-data-2.png"}
         title={category}
         description={description}
         buttonText="Get Started"
@@ -98,7 +102,7 @@ export default function ServicesPage({
                       <p className="my-2 text-gray-700">{service.content}</p>
                       <div className="grid grid-cols-2 gap-6 md:grid-cols-1">
                         <div>
-                          <h3 className="mb-2 text-2xl font-semibold text-orange-500">
+                          <h3 className="mb-2 text-2xl font-semibold text-orange-600">
                             Features
                           </h3>
                           <ul className="list-disc space-y-1 pl-5 text-gray-700">
@@ -108,7 +112,7 @@ export default function ServicesPage({
                           </ul>
                         </div>
                         <div>
-                          <h3 className="mb-2 text-2xl font-semibold text-orange-500">
+                          <h3 className="mb-2 text-2xl font-semibold text-orange-600">
                             Benefits
                           </h3>
                           <ul className="list-disc space-y-1 pl-5 text-gray-700">
@@ -119,7 +123,7 @@ export default function ServicesPage({
                         </div>
                       </div>
                       <div>
-                        <h3 className="mb-4 text-2xl font-semibold text-orange-500">
+                        <h3 className="mb-4 text-2xl font-semibold text-orange-600">
                           Capabilities
                         </h3>
                         <div className="grid grid-cols-2 gap-4 lg:grid-cols-3 md:grid-cols-1">
