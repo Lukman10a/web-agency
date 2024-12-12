@@ -160,7 +160,6 @@ const navItems: NavItem[] = [
     items: [
       {
         category: "Cloud",
-        // href: "/services",
         description: "Optimize your cloud infrastructure",
         subitems: [
           {
@@ -203,49 +202,48 @@ const navItems: NavItem[] = [
             title: "IDAM Migration",
             description:
               "Seamless migration of existing identity and access systems with minimal downtime and maximum security.",
-            href: "/services/professional-services/data-analytics-ml",
+            href: "/services/idam#idam-migration",
           },
           {
             title: "Implementation & Integration ",
             description:
               "End-to-end implementation and integration of IDAM solutions tailored to your business needs.",
-            href: "/services/professional-services/data-analytics-ml",
+            href: "/services/idam#idam-implementation-integration",
           },
           {
-            title: "Customisation ",
+            title: "Customisation",
             description:
               "Personalized customization of IDAM platforms to align with unique organizational requirements.",
-            href: "/services/professional-services/data-analytics-ml",
+            href: "/services/idam#idam-customization",
           },
           {
             title: "Evaluation & Recommendation",
             description:
               "Comprehensive assessment and actionable recommendations for optimizing IDAM systems.",
-            href: "/services/professional-services/data-analytics-ml",
+            href: "/services/idam#idam-evaluation-recommendation",
           },
           {
             title: "Technology Roadmap & Planning",
             description:
               "Strategic planning and roadmap development for future-proof IDAM implementations.",
-            href: "/services/professional-services/data-analytics-ml",
+            href: "/services/idam#idam-technology-roadmap",
           },
           {
-            title: "Standard API Connectors ",
+            title: "Standard API Connectors",
             description:
               "Pre-built API connectors for seamless integration with existing applications and systems.",
-            href: "/services/professional-services/data-analytics-ml",
+            href: "/services/idam#idam-api-connectors",
           },
           {
-            title: "Managed Services ",
+            title: "Managed Services",
             description:
               "Ongoing management and support for maintaining a secure and efficient IDAM environment.",
-            href: "/services/professional-services/data-analytics-ml",
+            href: "/services/idam#idam-managed-services",
           },
         ],
       },
       {
         category: "Software Engineering",
-        // href: "/services/professional-services",
         description:
           "Comprehensive software engineering services for modern and scalable solutions.",
         subitems: [
@@ -253,41 +251,40 @@ const navItems: NavItem[] = [
             title: "Software Architecture and Design",
             description:
               "Crafting scalable and robust software architecture tailored to your business goals.",
-            href: "/services/professional-services/data-analytics-ml",
+            href: "/services/software-engineering#software_archi",
           },
           {
             title: "Application Management Services",
             description:
               "End-to-end management of software applications, ensuring performance and reliability.",
-            href: "/services/professional-services/data-analytics-ml",
+            href: "/services/software-engineering#application-management-services",
           },
           {
             title: "Software and App Development",
             description:
               "Developing custom software and applications to meet your unique business requirements.",
-            href: "/services/professional-services/data-analytics-ml",
+            href: "/services/software-engineering#software-app-development",
           },
           {
             title: "Hire DevOps Engineers",
             description:
               "Access highly skilled DevOps professionals to streamline and optimize your development pipeline.",
-            href: "/services/professional-services/data-analytics-ml",
+            href: "/services/software-engineering#devops",
           },
           {
             title: "System, Data, and API Integration",
             description:
               "Seamlessly integrate systems, data, and APIs for enhanced interoperability and efficiency.",
-            href: "/services/professional-services/data-analytics-ml",
+            href: "/services/software-engineering#system-data-api-integration",
           },
           {
             title: "Strategic IT Consulting",
             description:
               "Expert guidance on IT strategy and execution to align with business objectives.",
-            href: "/services/professional-services/data-analytics-ml",
+            href: "/services/software-engineering#strategic-it-consulting",
           },
         ],
       },
-
       {
         category: "Cyber Security",
         description: "....",
