@@ -1,10 +1,14 @@
 import Image from "next/image";
 
+import aws from "/public/svg/aws-logo.svg";
+import azure from "/public/svg/azure.svg";
 import boltshift from "/public/svg/boltshift.svg";
 import featherdev from "/public/svg/featherdev.svg";
+import gcp from "/public/svg/gcp.svg";
 import globalbank from "/public/svg/globalbank.svg";
 import lightbox from "/public/svg/lightbox.svg";
 import magellan from "/public/svg/magellan.svg";
+import okta from "/public/svg/okta.svg";
 import playbill from "/public/svg/playbill.svg";
 import radar from "/public/svg/radar.svg";
 import space from "/public/svg/space.svg";
@@ -13,11 +17,14 @@ import thrive from "/public/svg/thrive.svg";
 import Marquee from "../ui/animated/marquee";
 
 export const partners = [
+  gcp,
+  azure,
+  aws,
+  okta,
   lightbox,
   featherdev,
   globalbank,
   boltshift,
-  globalbank,
   radar,
   space,
   thrive,
@@ -33,7 +40,7 @@ export function PartnersSlider() {
           key={index}
           src={brand}
           alt={`Brand ${index}`}
-          className="w-36"
+          className="w-20"
         />
       ))}
     </Marquee>
