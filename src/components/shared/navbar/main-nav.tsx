@@ -457,14 +457,14 @@ export function MainNav() {
           <div className="flex items-center gap-6">
             <Link
               href="/"
-              className="flexitems-center space-x-2 overflow-hidden"
+              className="flex items-center space-x-2 overflow-hidden"
             >
               <Image
                 src={"/assets/logo-main-sm.png"}
-                width={150}
-                height={150}
+                width={100}
+                height={100}
                 alt="brand logo"
-                // className="size-40 object-contain"
+                className="size-40 object-contain"
               />
             </Link>
             <div className="flex gap-6 md:hidden">

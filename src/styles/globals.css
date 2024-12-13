@@ -14,11 +14,15 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 100px);
+}
+
 body {
   /* color: var(--foreground); */
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  scroll-behavior: smooth;
   background-color: #ffffff;
   /* animation-play-state: paused; */
 }
