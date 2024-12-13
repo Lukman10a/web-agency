@@ -3,7 +3,7 @@ import SecurityCertifications from "@/components/certifications";
 import Hero from "@/components/hero";
 import ContactSection from "@/components/lets-talk";
 import PartnershipSection from "@/components/partnerships";
-import FAQSection from "@/components/shared/FAQ";
+// import FAQSection from "@/components/shared/FAQ";
 import WhyChooseUs from "@/components/why-choose-us";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
       <BusinessOffer />
       <WhyChooseUs />
       <SecurityCertifications />
-      <FAQSection />
+      {/* <FAQSection /> */}
       <PartnershipSection />
       <ContactSection />
     </main>

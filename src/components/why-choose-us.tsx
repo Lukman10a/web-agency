@@ -6,7 +6,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 import cloud from "../../public/assets/cloud-managed-services.svg";
-// import efficiency from "../../public/svg/efficiency.svg";
+// import genai from "../../public/assets/gen-ai.svg";
+import efficiency from "../../public/svg/efficiency.svg";
 import expert from "../../public/svg/expert.svg";
 import security from "../../public/svg/security.svg";
 import MoreClients from "./shared/more-clients";
@@ -35,7 +36,7 @@ const benefits = [
     link: "/services/professional-services/aws-modernization",
   },
   {
-    img: expert,
+    img: efficiency,
     title: "Gen AI",
     description:
       "Access continuous monitoring, expert support to keep your systems secure & scalable.",
