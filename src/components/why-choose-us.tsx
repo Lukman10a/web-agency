@@ -32,21 +32,21 @@ const benefits = [
     title: "AWS Map",
     description:
       "Access continuous monitoring, expert support to keep your systems secure & scalable.",
-    link: "/services/professional-services/aws-modernization", // Add link
+    link: "/services/professional-services/aws-modernization",
   },
   {
     img: expert,
     title: "Gen AI",
     description:
       "Access continuous monitoring, expert support to keep your systems secure & scalable.",
-    link: "/services/gen-ai", // Add link
+    link: "/solutions/generative-ai",
   },
   {
     img: expert,
     title: "IDAM Migration",
     description:
       "Access continuous monitoring, expert support to keep your systems secure & scalable.",
-    link: "/services/idam-migration", // Add link
+    link: "/services/idam#idam-migration",
   },
   {
     img: expert,
