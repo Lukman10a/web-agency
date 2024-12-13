@@ -19,19 +19,19 @@ interface ReusableComponentProps {
   showButton?: boolean;
   reverse?: boolean;
   starsAnimation?: boolean;
-  additionalImage?: string; // Optional for additional image
+  additionalImage?: string;
   additionalImagePosition?: {
     bottom: number;
     left: number;
     top: number;
     right: number;
-  }; // Optional for position
+  };
 }
 
 const sections: ReusableComponentProps[] = [
   {
     image: "/assets/score.webp",
-    additionalImage: Star, // Pass the animated image
+    additionalImage: Star,
     additionalImagePosition: { bottom: -20, left: -50, top: 0, right: 0 }, // Position for the animated image
     title: "Mission Cloud Score",
     description:
@@ -43,7 +43,7 @@ const sections: ReusableComponentProps[] = [
   },
   {
     image: "/assets/recommendation.webp",
-    additionalImage: Tablet, // Different animated image
+    additionalImage: Tablet,
     additionalImagePosition: { bottom: -20, left: 400, top: 30, right: 0 }, // Custom position
     title: "Recommendations",
     description:
@@ -55,7 +55,7 @@ const sections: ReusableComponentProps[] = [
   },
   {
     image: "/assets/resources.webp",
-    additionalImage: Portfolio, // Another custom animated image
+    additionalImage: Portfolio,
     additionalImagePosition: { bottom: -20, left: -50, top: 0, right: 0 },
     title: "Resources",
     description:
@@ -102,7 +102,7 @@ const TeverseControl = () => {
         buttonLink="/contact"
       />
       <InterpretDataSection />
-      <section className="my-4 space-y-6 bg-[#FFF4EE] px-20 py-10 text-left text-2xl font-medium sm:mx-5 sm:text-lg">
+      <section className="my-4 space-y-6 bg-[#FFF4EE] px-20 py-10 text-left text-2xl font-medium md:p-8 sm:mx-5 sm:p-4 sm:text-lg">
         <div className="space-y-4">
           <h2 className="mb-8 inline rounded-lg border border-black p-1 text-left font-semibold">
             Features
