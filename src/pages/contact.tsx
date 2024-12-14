@@ -15,7 +15,7 @@ export default function Contact() {
 
   return (
     <>
-      <section className="m-10 max-w-7xl space-y-14 rounded-xl bg-white bg-main-gradient p-10 sm:p-4">
+      <section className="m-10 max-w-7xl space-y-14 rounded-xl bg-white bg-main-gradient p-10 sm:p-0">
         <div className="container mx-auto flex flex-col justify-center space-y-8 px-24 md:px-10">
           <div className="container mx-auto flex flex-col justify-center space-y-8 sm:flex-col">
             <div>
@@ -47,7 +47,7 @@ export default function Contact() {
             />
           </div>
 
-          <div className="container mx-auto mt-12 flex items-start justify-between space-y-8 px-4 md:flex-row md:space-y-0">
+          <div className="container mx-auto mt-12 flex items-start justify-between space-y-8 px-4 md:flex-row md:space-y-0 sm:px-0">
             <div className="flex items-center justify-between gap-12 px-14 sm:flex-col sm:px-10">
               <div className="w-1/2 sm:w-full">
                 <h3 className="text-4xl font-extrabold tracking-wide text-gray-900">
