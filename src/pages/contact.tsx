@@ -15,7 +15,7 @@ export default function Contact() {
 
   return (
     <>
-      <section className="m-10 max-w-7xl space-y-14 rounded-xl bg-white bg-main-gradient p-10 sm:p-0">
+      <section className="m-10 max-w-7xl space-y-14 rounded-xl bg-white bg-main-gradient p-10 sm:m-5 sm:p-4">
         <div className="container mx-auto flex flex-col justify-center space-y-8 px-24 md:px-10">
           <div className="container mx-auto flex flex-col justify-center space-y-8 sm:flex-col">
             <div>

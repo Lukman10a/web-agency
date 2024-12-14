@@ -63,7 +63,7 @@ const cardVariants = {
 
 const ContactOffice: React.FC = () => {
   return (
-    <div className="space-y-8 p-8">
+    <div className="space-y-8 p-8 sm:p-5">
       {/* Office Cards */}
       <div className="grid w-full grid-cols-3 gap-6 md:grid-cols-2 sm:grid-cols-1">
         {Offices.map((office, index) => (
