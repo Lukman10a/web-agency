@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import { GetStaticProps } from "next";
-import Link from "next/link";
 
 import { createReader } from "@keystatic/core/reader";
 
-import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 import FeaturedPost from "@/components/featured-card";
-import ArrowIcon from "@/components/icons/arrow";
 import PostCard from "@/components/post-card";
 import Newsletter from "@/components/shared/newsletter";
 
@@ -27,18 +31,19 @@ type Post = {
 
 type Category = {
   name: string;
+  slug: string;
 };
 
 const Index: React.FC<{ posts: Post[]; categories: Category[] }> = ({
   posts,
   categories,
 }) => {
-  const [activeCategory, setActiveCategory] = useState<string>("ALL");
+  const [activeCategory, setActiveCategory] = useState<string | null>("all");
 
   const featuredPost = posts.find((post) => post.featured);
 
   const filteredPosts =
-    activeCategory === "ALL"
+    activeCategory === "all"
       ? posts
       : posts.filter((post) =>
           Array.isArray(post.category)
@@ -46,11 +51,11 @@ const Index: React.FC<{ posts: Post[]; categories: Category[] }> = ({
             : post.category === activeCategory,
         );
 
-  useEffect(() => {
-    console.log("Filtered Posts:", filteredPosts);
+  // useEffect(() => {
+  //   console.log("Filtered Posts:", filteredPosts);
 
-    console.log("Active Category:", activeCategory);
-  }, [activeCategory, filteredPosts]);
+  //   console.log("Active Category:", activeCategory);
+  // }, [activeCategory, filteredPosts]);
 
   return (
     <section className="mx-auto border bg-main-gradient">
@@ -68,38 +73,63 @@ const Index: React.FC<{ posts: Post[]; categories: Category[] }> = ({
         <h2 className="mx-auto mb-6 text-center font-sora text-3xl font-semibold">
           Latest Insight
         </h2>
-        <div className="mx-auto mb-6 flex flex-wrap justify-center gap-2">
-          {["ALL", ...categories.map((category) => category.name)].map(
-            (category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`rounded-full border border-black px-4 py-2 text-sm uppercase ${
-                  activeCategory === category
-                    ? "bg-orange-650 text-white"
-                    : "text-gray-800"
-                }`}
-              >
-                {category}
-              </button>
-            ),
-          )}
+        <div className="m-5">
+          <Select
+            value={activeCategory || "all"}
+            onValueChange={(value) =>
+              setActiveCategory(value === "" ? null : value)
+            }
+          >
+            <SelectTrigger className="w-[180px] border-black">
+              <SelectValue placeholder="Select Category" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Posts</SelectItem>
+              {[...categories].map((category) => (
+                <SelectItem key={category.slug} value={category.slug}>
+                  {category.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
 
-        <section className="mx-5 grid grid-cols-3 gap-[2px] 2md:grid-cols-2 sm:grid-cols-1">
-          {filteredPosts.map((post) => (
-            <PostCard
-              key={post.id}
-              imageUrl={post.image}
-              date={post.date}
-              title={post.title}
-              category={post.category}
-              id={post.id}
-            />
+        <div className="mx-auto mb-6 flex flex-wrap justify-center gap-2">
+          {[{ name: "ALL", slug: "all" }, ...categories].map((category) => (
+            <button
+              key={category.slug}
+              onClick={() => setActiveCategory(category.slug)}
+              className={`rounded-full border border-black px-4 py-2 text-sm uppercase ${
+                activeCategory === category.slug
+                  ? "bg-orange-650 text-white"
+                  : "text-gray-800"
+              }`}
+            >
+              {category.name}
+            </button>
           ))}
-        </section>
+        </div>
 
-        <div className="mt-8 flex justify-center">
+        {filteredPosts.length !== 0 ? (
+          <section className="mx-5 grid grid-cols-3 gap-[2px] 2md:grid-cols-2 sm:grid-cols-1">
+            {filteredPosts.map((post) => (
+              <PostCard
+                key={post.id}
+                imageUrl={post.image}
+                date={post.date}
+                title={post.title}
+                category={post.category.split("-").join(" ")}
+                id={post.id}
+              />
+            ))}
+          </section>
+        ) : (
+          <div className="flex items-center justify-center">
+            <p className="text-center font-medium">{`No Posts Available for this category`}</p>
+          </div>
+        )}
+
+        {/* <div className="mt-8 flex justify-center">
           <Button
             asChild
             className="flex w-fit items-center justify-center rounded-full border border-black bg-orange-600 py-[1.6em] text-[.75rem] font-light uppercase text-white hover:bg-orange-700 2md:text-[.7rem]"
@@ -108,7 +138,7 @@ const Index: React.FC<{ posts: Post[]; categories: Category[] }> = ({
               READ MORE <ArrowIcon />
             </Link>
           </Button>
-        </div>
+        </div> */}
       </div>
       <Newsletter />
     </section>
@@ -130,11 +160,12 @@ export const getStaticProps: GetStaticProps = async () => {
     featured: post.entry.featured,
   }));
 
-  const categories = categoriesData.map((category) => ({
+  const categories = categoriesData.map((category, index) => ({
     name: category.entry.name,
+    slug: categoriesData[index].slug,
   }));
 
-  console.log({ categories });
+  // console.log({ categories, categoriesData, posts });
 
   return {
     props: { posts, categories },

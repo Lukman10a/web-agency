@@ -20,15 +20,17 @@ const PostCard: React.FC<PostCardProps> = ({
 }) => {
   return (
     <div className="mx-auto mb-2 max-w-[400px] p-2">
-      <div className="">
-        <Image
-          src={imageUrl}
-          alt="Post image"
-          className="mb-3 aspect-video w-full rounded-xl object-cover sm:rounded-lg"
-          width={500}
-          height={500}
-        />
-      </div>
+      <Link href={`/posts/${id}`} className="">
+        <div>
+          <Image
+            src={imageUrl}
+            alt="Post image"
+            className="mb-3 aspect-video w-full rounded-xl object-cover sm:rounded-lg"
+            width={500}
+            height={500}
+          />
+        </div>
+      </Link>
       <div className="w-[90%]">
         <p className="font-inter mb-2">
           <span className="uppercase">{category}</span> -{" "}
