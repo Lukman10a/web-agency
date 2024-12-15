@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 
-import CallToAction from "./callToAction";
+import CallToAction from "./call-to-action-contact";
 
 const Offices = [
   {
