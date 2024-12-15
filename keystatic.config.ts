@@ -1,5 +1,4 @@
 // keystatic.config.ts
-import { industriesCollection } from "@/data/industries";
 import { collection, config, fields } from "@keystatic/core";
 
 export const isDevelopment = process.env.NODE_ENV === "development";
@@ -24,6 +23,7 @@ export default config({
       slugField: "title",
       path: "public/content/posts/*",
       format: { contentField: "content" },
+      entryLayout: "content",
       schema: {
         title: fields.slug({ name: { label: "Title" } }),
         banner: fields.image({
@@ -35,7 +35,6 @@ export default config({
           validation: { isRequired: true },
           defaultValue: new Date().toISOString(),
         }),
-        content: fields.markdoc({ label: "Content" }),
         featured: fields.checkbox({
           label: "Featured",
           description: "Mark this post as featured.",
@@ -51,6 +50,7 @@ export default config({
           collection: "categories",
           validation: { isRequired: true },
         }),
+        content: fields.markdoc({ label: "Content" }),
         excerpt: fields.text({
           label: "Excerpt",
           multiline: true,
@@ -115,6 +115,11 @@ export default config({
           multiline: true,
           validation: { isRequired: true },
         }),
+        category: fields.relationship({
+          label: "Category",
+          collection: "categories",
+          validation: { isRequired: true },
+        }),
         client: fields.text({
           label: "Client",
           validation: { isRequired: true },
@@ -156,9 +161,5 @@ export default config({
         }),
       },
     }),
-    industries: industriesCollection,
   },
-  // singletons: {
-  //   industries: industriesSingleton,
-  // },
 });

@@ -29,6 +29,7 @@ const FeaturedPost: React.FC<FeaturedPostProps> = ({
           className="mr-4 w-full rounded-3xl sm:rounded-lg"
           width={500}
           height={500}
+          priority
         />
       </div>
       <div className="w-1/2 self-center sm:w-full">

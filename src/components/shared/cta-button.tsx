@@ -13,7 +13,7 @@ interface CTAButtonProps {
   children: React.ReactNode;
   className?: string;
   variant?: "default" | "orange" | "outline";
-  size?: "default" | "lg";
+  size?: "default" | "lg" | "sm";
   icon?: React.ReactNode;
 }
 
@@ -35,7 +35,8 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   };
 
   const sizeClasses = {
-    default: "px-8 py-3 text-base md:px-10 md:py-4 md:text-lg",
+    default: "px-8 md:py-3 text-base md:px-10 py-4 md:text-lg",
+    sm: "px-6 py-3 text-sm  md:text-base",
     lg: "px-10 py-4 text-lg md:px-12 md:py-5 md:text-xl",
   };
 

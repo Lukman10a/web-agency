@@ -1,4 +1,8 @@
-import { collection, fields, singleton } from "@keystatic/core";
+import carehubs from "/public/svg/carehubs.svg";
+import clarus from "/public/svg/clarus.svg";
+import fexa from "/public/svg/fexa.svg";
+import forcura from "/public/svg/forcura.svg";
+import preverity from "/public/svg/preverity.svg";
 
 import { NewHeroProps } from "@/components/shared/new-hero";
 
@@ -67,7 +71,7 @@ export const retailData: IndustryData = {
     companyOne: {
       content:
         "Using AWS solutions, our inventory management process has been transformed. Teverse's AI-powered analytics have reduced stockouts and improved customer satisfaction by 30%. Their approach ensures our systems adapt to seasonal demand effortlessly.",
-      imageSrc: "/svg/goodfood.svg",
+      imageSrc: forcura,
       author: "Laura Daniels | Head of Operations, GoodFood Co.",
     },
     heading: "Redefining retail through innovation and customer focus",
@@ -76,7 +80,7 @@ export const retailData: IndustryData = {
     companyTwo: {
       content:
         "With Teverse's guidance, we seamlessly migrated our e-commerce platform to AWS. The enhanced scalability has allowed us to handle peak traffic effortlessly, ensuring a reliable shopping experience for our customers worldwide.",
-      imageSrc: "/svg/retailpartner.svg",
+      imageSrc: forcura,
       author: "Mark Johnson | CEO, RetailPartner",
       buttonText: "Discover More",
       showButton: true,
@@ -99,7 +103,7 @@ export const retailData: IndustryData = {
       title: "AI-driven demand forecasting",
       description:
         "Accurately predict customer needs and optimize inventory levels.",
-      icon: "/svg/ai-forecast.svg",
+      icon: "/svg/hipaa.svg",
     },
     {
       title: "Seamless omnichannel experiences",
@@ -138,7 +142,7 @@ export const financeData = {
     companyOne: {
       content:
         "With Teverse's AWS integration expertise, we have enhanced the accuracy of our fraud detection systems by 40%. Their AI models provide invaluable insights for risk mitigation.",
-      imageSrc: "/svg/fintech.svg",
+      imageSrc: fexa,
       author: "Diana Reeves | CTO, FinTech Solutions",
     },
     heading: "Staying ahead in a competitive financial landscape",
@@ -147,7 +151,7 @@ export const financeData = {
     companyTwo: {
       content:
         "Migrating to AWS allowed us to process financial transactions at unprecedented speeds, improving client satisfaction and trust. Teverse's tailored strategy ensured a seamless transition.",
-      imageSrc: "/svg/securepay.svg",
+      imageSrc: fexa,
       author: "Michael Clark | CEO, SecurePay",
       buttonText: "Read the Case Study",
       showButton: true,
@@ -175,7 +179,7 @@ export const financeData = {
       title: "Regulatory compliance",
       description:
         "Stay compliant with industry standards like GDPR and PCI DSS.",
-      icon: "/svg/compliance.svg",
+      icon: "/svg/azure.svg",
     },
   ],
   servicesCards: [
@@ -207,7 +211,7 @@ export const healthcareData = {
     cards: {
       content:
         "By leveraging AWS, Teverse helped us implement advanced patient analytics, enabling personalized care while ensuring data security.",
-      imageSrc: "/svg/meditech.svg",
+      imageSrc: "/svg/carehubs.svg",
       author: "Dr. Alan Monroe | CIO, MediTech",
     },
     heading: "Empowering healthcare providers through technology",
@@ -248,7 +252,7 @@ export const healthcareData = {
   companyDataTwo: {
     content:
       "Teverse enabled us to deploy scalable telehealth solutions, making healthcare more accessible to underserved communities.",
-    imageSrc: "/svg/telehealth.svg",
+    imageSrc: "/svg/carehubs.svg",
     author: "Sara Lee | CEO, TeleHealth Now",
     buttonText: "Explore Our Work",
     showButton: true,
@@ -477,7 +481,7 @@ export const lifeSciencesData = {
   ],
   servicesCards: [
     {
-      imgSrc: "/public/assets/contact",
+      imgSrc: "/assets/teverse-gateway2.png",
       altText: "Image",
       title: "Our life sciences vision",
       description:
@@ -487,10 +491,10 @@ export const lifeSciencesData = {
       index: 1,
       showButton: true,
       buttonText: "Build with us",
-      href: " /",
+      href: " /contact",
     },
     {
-      imgSrc: "/public/assets/contact",
+      imgSrc: "/assets/contact.png",
       altText: "Image",
       title: "Schedule a Free Consultation With a Teverse Cloud Advisor",
       description:
@@ -500,7 +504,7 @@ export const lifeSciencesData = {
       index: 2,
       showButton: true,
       buttonText: "Get Started",
-      href: "/",
+      href: "/contact",
     },
   ],
   companiesProfileTwo: {
@@ -800,211 +804,3 @@ export const softwareData = {
     },
   ],
 };
-
-export const heroSectionSchema = fields.object({
-  title: fields.text({ label: "Hero Title" }),
-  description: fields.text({ label: "Hero Description" }),
-  showButton: fields.checkbox({ label: "Show Action Button" }),
-  imgSrc: fields.conditional(
-    // Define a checkbox to control whether to upload an image or provide a URL
-    fields.checkbox({ label: "Use image upload?", defaultValue: false }),
-    // Define the different scenarios (true: image upload, false: URL input)
-    {
-      true: fields.image({ label: "Hero Image Upload" }), // Image upload field
-      false: fields.text({ label: "Hero Image URL" }), // Image URL input field
-    },
-  ),
-});
-
-export const companyProfilesSchema = fields.object({
-  heading: fields.text({ label: "Company Profiles Heading" }),
-  paragraph: fields.text({ label: "Company Profiles Paragraph" }),
-  companyOne: fields.object({
-    content: fields.text({ label: "First Company Content", multiline: true }),
-    imageSrc: fields.text({ label: "First Company Image" }),
-    author: fields.text({ label: "First Company Author" }),
-  }),
-  companyTwo: fields.object({
-    content: fields.text({ label: "Second Company Content", multiline: true }),
-    imageSrc: fields.text({ label: "Second Company Image" }),
-    author: fields.text({ label: "Second Company Author" }),
-    buttonText: fields.text({ label: "Button Text" }),
-    showButton: fields.checkbox({ label: "Show Button" }),
-  }),
-});
-
-export const industryMetadataSchema = fields.object({
-  label: fields.text({ label: "Menu Label" }),
-  order: fields.integer({ label: "Menu Order" }),
-});
-
-export const servicesCardsSchema = fields.array(
-  fields.object({
-    imgSrc: fields.text({ label: "Image Source" }),
-    altText: fields.text({ label: "Image Alt Text" }),
-    title: fields.text({ label: "Card Title" }),
-    description: fields.text({ label: "Card Description", multiline: true }),
-    showTag: fields.checkbox({ label: "Show Tag" }),
-    tagText: fields.text({ label: "Tag Text" }),
-    index: fields.integer({ label: "Card Index" }),
-    showButton: fields.checkbox({ label: "Show Button" }),
-    buttonText: fields.text({ label: "Button Text" }),
-    href: fields.text({ label: "Button Link" }),
-  }),
-  {
-    label: "Services Cards",
-    itemLabel: (props) => props.fields.title.value,
-  },
-);
-
-export const resourcesSchema = fields.object({
-  show: fields.checkbox({ label: "Show Resources" }),
-});
-
-export const companyDetailsSchema = fields.array(
-  fields.object({
-    title: fields.text({ label: "Company Detail Title" }),
-    description: fields.text({
-      label: "Company Detail Description",
-      multiline: true,
-    }),
-  }),
-  {
-    label: "Company Details",
-    itemLabel: (props) => props.fields.title.value,
-  },
-);
-
-export const capabilitiesSchema = fields.array(
-  fields.object({
-    title: fields.text({ label: "Capability Title" }),
-    description: fields.text({ label: "Capability Description" }),
-    icon: fields.image({ label: "Capability Icon Path" }),
-  }),
-  {
-    label: "Capabilities",
-    itemLabel: (props) => props.fields.title.value,
-  },
-);
-
-export const industriesSingleton = singleton({
-  label: "Industries",
-  path: "public/content/industries",
-
-  format: { data: "json" },
-  // description: 'Configuration for different industry pages',
-  schema: {
-    retail: fields.object({
-      metadata: industryMetadataSchema,
-      heroSection: heroSectionSchema,
-      companyProfiles: companyProfilesSchema,
-      companyDetails: fields.array(
-        fields.object({
-          title: fields.text({ label: "Company Detail Title" }),
-          description: fields.text({
-            label: "Company Detail Description",
-            multiline: true,
-          }),
-        }),
-        {
-          label: "Company Details",
-          itemLabel: (props) => props.fields.title.value,
-        },
-      ),
-      capabilities: fields.array(
-        fields.object({
-          title: fields.text({ label: "Capability Title" }),
-          description: fields.text({ label: "Capability Description" }),
-          icon: fields.text({ label: "Capability Icon Path" }),
-        }),
-        {
-          label: "Capabilities",
-          itemLabel: (props) => props.fields.title.value,
-        },
-      ),
-      servicesCards: fields.array(
-        fields.object({
-          imgSrc: fields.text({ label: "Image Source" }),
-          altText: fields.text({ label: "Image Alt Text" }),
-          title: fields.text({ label: "Card Title" }),
-          description: fields.text({
-            label: "Card Description",
-            multiline: true,
-          }),
-          showTag: fields.checkbox({ label: "Show Tag" }),
-          tagText: fields.text({ label: "Tag Text" }),
-          index: fields.integer({ label: "Card Index" }),
-          showButton: fields.checkbox({ label: "Show Button" }),
-          buttonText: fields.text({ label: "Button Text" }),
-          href: fields.text({ label: "Button Link" }),
-        }),
-        {
-          label: "Services Cards",
-          itemLabel: (props) => props.fields.title.value,
-        },
-      ),
-      resources: fields.object({
-        show: fields.checkbox({ label: "Show Resources" }),
-      }),
-    }),
-    finance: fields.object({
-      heroSection: heroSectionSchema,
-      companyProfiles: companyProfilesSchema,
-      // ... rest of the finance object follows the same pattern as retail
-    }),
-    healthcare: fields.object({
-      // Similar structure to other industry pages
-      heroSection: heroSectionSchema,
-      companyProfiles: companyProfilesSchema,
-    }),
-    // Add other industries following the same pattern
-    lifeSiences: fields.object({
-      heroSection: heroSectionSchema,
-      companyProfiles: companyProfilesSchema,
-    }),
-    media: fields.object({
-      heroSection: heroSectionSchema,
-      companyProfiles: companyProfilesSchema,
-    }),
-    privateEquity: fields.object({
-      heroSection: heroSectionSchema,
-      companyProfiles: companyProfilesSchema,
-    }),
-    software: fields.object({
-      heroSection: heroSectionSchema,
-      companyProfiles: companyProfilesSchema,
-    }),
-  },
-});
-
-export const industriesCollection = collection({
-  label: "Industries",
-  path: "public/content/industries/*",
-  format: { data: "json" },
-  slugField: "title", // Use the 'type' field as the slug
-  schema: {
-    title: fields.slug({
-      name: { label: "Title", validation: { isRequired: true } },
-    }),
-    type: fields.select({
-      label: "Industry Type",
-      options: [
-        { label: "No industry selected", value: "none" },
-        { label: "Retail", value: "retail" },
-        { label: "Finance", value: "finance" },
-        { label: "Healthcare", value: "healthcare" },
-        { label: "Life Sciences", value: "life-sciences" },
-        { label: "Media", value: "media" },
-        { label: "Private Equity", value: "private" },
-        { label: "Software", value: "software" },
-      ],
-      defaultValue: "none",
-    }),
-    heroSection: heroSectionSchema,
-    companyProfiles: companyProfilesSchema,
-    companyDetails: companyDetailsSchema,
-    capabilities: capabilitiesSchema,
-    servicesCards: servicesCardsSchema,
-    resources: resourcesSchema,
-  },
-});

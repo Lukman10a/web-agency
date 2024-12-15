@@ -29,7 +29,7 @@ const ReusableComponent: React.FC<ReusableComponentProps> = ({
 }) => {
   return (
     <div
-      className={`mx-auto flex max-w-6xl flex-row items-center justify-between gap-14 md:flex-col md:flex-wrap sm:flex-col sm:flex-wrap ${
+      className={`mx-auto flex max-w-7xl flex-row items-center justify-between gap-14 md:flex-col md:flex-wrap sm:flex-col sm:flex-wrap ${
         reverse
           ? "flex flex-row-reverse md:flex-col md:flex-wrap sm:flex-col sm:flex-wrap"
           : ""

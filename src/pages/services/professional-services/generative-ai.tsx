@@ -141,7 +141,7 @@ const GenerativeAI = () => {
       />
       <FAQ />
       <ServicesCard
-        imgSrc="/assets/checkers.png"
+        imgSrc="/assets/teverse-control2.png"
         altText="Custom Alt Text"
         title="Succeed With Generative AI on AWS"
         description="Work with a genAI partner who understands machine learning on AWS, your goals and the agile processes required to bring value to your business faster."

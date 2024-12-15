@@ -1,5 +1,7 @@
 import React from "react";
 
+import Link from "next/link";
+
 import { motion } from "framer-motion";
 import {
   Activity,
@@ -145,12 +147,14 @@ export default function CyberSecurityPage() {
               cybersecurity solutions.
             </p>
             <div className="flex justify-center gap-4">
-              <Button size="lg" className="group bg-orange-650">
-                Get Started
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <Button asChild size="lg" className="group bg-orange-650">
+                <Link href="/contact">
+                  <span>Get Started</span>{" "}
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
-              <Button variant="outline" size="lg">
-                Talk to an Expert
+              <Button asChild variant="outline" size="lg">
+                <Link href="/contact">Talk to an Expert</Link>
               </Button>
             </div>
           </div>

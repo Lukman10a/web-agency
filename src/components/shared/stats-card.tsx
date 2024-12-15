@@ -22,7 +22,7 @@ const StatsCard: React.FC<StatsCardProps> = ({
               hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
               visible: { opacity: 1, y: 0, filter: "blur(0px)" },
             }}
-            viewOptions={{ margin: "0px 0px -200px 0px" }}
+            viewOptions={{ margin: "0px 0px -200px 0px", once: true }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             <h2 className="mb-[.5em] w-full font-sora text-4xl font-medium 2md:w-full md:mx-auto md:mb-[.3em] sm:w-full">

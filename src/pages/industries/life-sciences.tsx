@@ -2,6 +2,7 @@ import React from "react";
 
 import { lifeSciencesData } from "@/data/industries";
 
+import ContactSection from "@/components/lets-talk";
 import Preverity from "@/components/preverity";
 import Resources from "@/components/resources";
 import CompaniesProfile from "@/components/shared/companies-profile";
@@ -56,7 +57,7 @@ const LifeSciences = () => {
 
       <CompaniesProfileTwo cards={companiesProfileTwo.cards} />
 
-      <Resources />
+      <ContactSection />
     </section>
   );
 };

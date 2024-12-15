@@ -63,7 +63,7 @@ export default function PressPage() {
         </div>
       </header>
 
-      <section className="mx-auto mb-4 max-w-7xl">
+      <section className="mx-auto mb-4 max-w-7xl px-10">
         {/* Filters */}
         <div className="mb-8 flex items-center space-x-4">
           <Select

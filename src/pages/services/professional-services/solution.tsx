@@ -7,7 +7,7 @@ import AwsLara from "@/components/aws-lara";
 import { awsServices } from "@/components/aws-section";
 import EksAWSection from "@/components/eks-aws";
 import ContactSection from "@/components/lets-talk";
-import CallToAction from "@/components/shared/callToAction";
+import CallToAction from "@/components/shared/call-to-action-contact";
 import LARA from "@/components/shared/lara";
 
 // Benefit Component

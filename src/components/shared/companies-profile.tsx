@@ -27,7 +27,7 @@ const CompaniesProfile: React.FC<CompaniesProfileProps> = ({
               hidden: { opacity: 0, x: -100, filter: "blur(4px)" },
               visible: { opacity: 1, x: 0, filter: "blur(0px)" },
             }}
-            viewOptions={{ margin: "0px 0px -200px 0px" }}
+            viewOptions={{ margin: "0px 0px -200px 0px", once: true }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
             <h2 className="mb-[.5em] mt-4 w-full font-sora text-3xl font-medium 2md:w-full 2md:text-2xl md:mx-auto md:mb-[.3em] sm:w-full sm:text-xl">
