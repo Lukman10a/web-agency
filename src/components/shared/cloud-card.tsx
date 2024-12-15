@@ -2,6 +2,8 @@ import React from "react";
 
 import Image from "next/image";
 
+import { Badge } from "../ui/badge";
+
 // Define the type for props
 interface BenefitProps {
   tag?: boolean;
@@ -25,9 +27,9 @@ const BenefitsSection: React.FC<BenefitProps> = ({
     <section className="mx-auto max-w-6xl bg-white px-6 py-14 font-sora text-gray-800 xl:py-12 lg:px-20 md:px-12">
       {/* Tag */}
       {tag && (
-        <div className="mx-auto mb-4 inline rounded-full border px-4 text-sm text-gray-500 sm:px-0">
+        <Badge variant="outline" className="mb-4">
           Benefits
-        </div>
+        </Badge>
       )}
 
       {/* Title */}

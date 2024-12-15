@@ -4,6 +4,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 import { InView } from "../ui/animated/in-view";
+import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 
 interface ServicesCardProps {
@@ -47,7 +48,7 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <Image
-            src={imgSrc}
+            src={imgSrc || "/assets/database.png"}
             alt={altText}
             className="max-h-[450px] w-full overflow-hidden rounded-xl"
             width={500}
@@ -65,9 +66,12 @@ const ServicesCard: React.FC<ServicesCardProps> = ({
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           {showTag && (
-            <span className="tag mb-4 rounded-3xl border border-[#808080] bg-white px-6 py-2 text-xs text-[#808080] 2md:text-[10px] md:mb-2">
+            <Badge
+              variant={"outline"}
+              className="rounded-3xl border bg-white px-6 py-2 text-[#808080] 2md:text-[10px] md:mb-2"
+            >
               {tagText}
-            </span>
+            </Badge>
           )}
 
           <h2 className="mb-[.5em] mt-4 w-full font-sora text-3xl font-medium 2md:w-full 2md:text-2xl md:mx-auto md:mb-[.3em] sm:w-full sm:text-xl">

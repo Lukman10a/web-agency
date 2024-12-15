@@ -3,7 +3,6 @@ import React from "react";
 import Writeable from "/public/svg/writeable.svg";
 
 import CloudModernization from "@/components/cloud-modernization";
-import Resources from "@/components/resources";
 import BenefitsSection from "@/components/shared/cloud-card";
 import FAQ from "@/components/shared/FAQ";
 import NewHero from "@/components/shared/new-hero";
@@ -87,7 +86,7 @@ const AwsModernization = () => {
 
       <FAQ />
       <ServicesCard
-        imgSrc="/assets/checkers.png"
+        imgSrc=""
         altText=""
         title="Modernize Your Data Infrastructure With Teverse"
         description="Schedule a free consultation call to learn how modernization can accelerate your business. Our cloud advisor team can walk you through the modernization process and answer your questions."
@@ -98,7 +97,6 @@ const AwsModernization = () => {
         buttonText="Get Started"
         href={""}
       />
-      <Resources />
     </div>
   );
 };

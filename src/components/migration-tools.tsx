@@ -1,6 +1,8 @@
-import Image from "next/image";
 import React from "react";
-import cloud from "/public/svg/cloud-lightning.svg"
+
+import Image from "next/image";
+
+import cloud from "/public/svg/cloud-lightning.svg";
 
 interface ProgramData {
   icon: string; // URL or SVG path for the icon
@@ -28,27 +30,28 @@ const programs: ProgramData[] = [
 
 const DynamicProgramList: React.FC = () => {
   return (
-    <div className="p-6 md:p-10 max-w-6xl mx-auto py-10 sm:w-full">
-      <div className="grid gap-6 grid-cols-2 sm:grid-cols-1">
+    <div className="mx-auto max-w-6xl p-10 py-10 md:p-6 sm:w-full">
+      <div className="grid grid-cols-2 gap-6 sm:grid-cols-1">
         {programs.map((program, index) => (
           <div
             key={index}
-            className="flex flex-col items-start bg-gradient-to-b space-y-6 from-blue-100 to-blue-300 p-7 rounded-lg shadow-md"
+            className="flex flex-col items-start space-y-6 rounded-lg bg-gradient-to-b from-orange-100 to-orange-300 p-7 shadow-md"
           >
-            <div className="flex flex-col items-start sm:w-30 sm:h-30">
+            <div className="sm:w-30 sm:h-30 flex flex-col items-start">
               <Image
                 src={program.icon}
                 alt={program.title}
                 width={60}
                 height={60}
-                
               />
-              <h3 className="text-3xl sm:text-xl font-bold text-black">
+              <h3 className="text-3xl font-bold text-black sm:text-xl">
                 {program.title}
               </h3>
             </div>
-            <p className="mt-4 text-2xl sm:text-lg text-gray-700">{program.description}</p>
-            <button className="mt-6 px-5 py-3 bg-black text-white text-lg font-medium rounded-full hover:bg-gray-800">
+            <p className="mt-4 text-2xl text-gray-700 sm:text-lg">
+              {program.description}
+            </p>
+            <button className="mt-6 rounded-full bg-black px-5 py-3 text-lg font-medium text-white hover:bg-gray-800">
               {program.buttonText}
             </button>
           </div>

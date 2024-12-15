@@ -31,6 +31,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+import logo_img from "../../../../public/assets/logo-main-sm.png";
 import ArrowIcon from "../../icons/arrow";
 import { navItems } from "./data";
 
@@ -78,9 +79,10 @@ export function MainNav() {
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                src={"/assets/logo-main-sm.png"}
-                width={160}
-                height={160}
+                src={logo_img}
+                // width={160}
+                // height={160}
+                priority
                 alt="brand logo"
                 className="size-40 object-contain"
               />

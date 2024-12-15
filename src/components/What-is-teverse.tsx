@@ -5,6 +5,8 @@ import Image, { StaticImageData } from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+import { Badge } from "./ui/badge";
+
 type WhatIsTeverseProps = {
   title: string;
   mainDescription: string;
@@ -59,13 +61,13 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
       className="mx-auto mb-32 flex w-[90%] max-w-[1200px] gap-10 lg:gap-2 md:mb-16 md:flex-col-reverse md:gap-4"
     >
       {/* Left Side (Boxes) */}
-      <div className="mx-auto flex w-[45%] gap-6 self-center lg:gap-4 md:w-full">
+      <div className="mx-auto flex w-[45%] gap-6 overflow-hidden rounded-md lg:gap-4 md:w-full">
         <Image
           src={imageSrc || "/assets/checkers.png"}
           alt={""}
           width={300}
           height={300}
-          className="mx-auto w-full max-w-[500px]"
+          className="mx-auto w-full object-cover"
         />
       </div>
 
@@ -75,17 +77,20 @@ const WhatIsTeverse: React.FC<WhatIsTeverseProps> = ({
         variants={fadeUpVariants}
       >
         {tag && (
-          <p className="mb-4 self-start rounded-full border border-[#808080] bg-transparent px-6 py-2 font-sora text-xs tracking-wide text-[#808080] md:mx-auto">
+          <Badge
+            variant="outline"
+            className="mb-4 self-start rounded-full border-[#808080] px-6 py-2 font-sora text-xs tracking-wide text-[#808080] md:mx-auto"
+          >
             {tagText}
-          </p>
+          </Badge>
         )}
         <h2 className="mb-[.7em] w-[80%] font-sora text-4xl lg:w-full lg:text-3xl md:text-center">
           {title}
         </h2>
-        <p className="mb-[.7em] text-lg text-gray-500 lg:text-base md:text-justify">
+        <p className="text-md mb-[.7em] text-gray-500 lg:text-base md:text-justify">
           {mainDescription}
         </p>
-        <p className="mb-4 text-lg text-gray-500 lg:text-base md:text-justify">
+        <p className="text-md mb-4 text-gray-500 lg:text-base md:text-justify">
           {additionalDescription}
         </p>
       </motion.div>
