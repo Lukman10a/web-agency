@@ -122,7 +122,7 @@ export default function Culture() {
             These values shape the way we work, grow, and innovate together.
           </p>
 
-          <div className="mt-12 grid grid-cols-3 gap-8 md:grid-cols-3">
+          <div className="mt-12 grid grid-cols-3 gap-8 md:grid-cols-2 sm:grid-cols-1">
             {coreValues.map((value, index) => (
               <div
                 key={index}
@@ -150,7 +150,7 @@ export default function Culture() {
             We believe in working together to achieve the extraordinary.
           </p>
 
-          <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3 md:grid-cols-2">
+          <div className="mt-12 grid grid-cols-3 gap-8 md:grid-cols-2 sm:grid-cols-1">
             {teamImages.map((image, index) => (
               <div key={index} className="relative h-[200px]">
                 <Image
@@ -176,7 +176,7 @@ export default function Culture() {
             and development.
           </p>
 
-          <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-4 md:grid-cols-2">
+          <div className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-1">
             {careerGrowth.map((item, index) => (
               <div key={index}>
                 <h3 className="text-2xl font-bold">{item.title}</h3>
