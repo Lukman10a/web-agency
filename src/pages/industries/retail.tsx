@@ -2,8 +2,8 @@ import React from "react";
 
 import { retailData } from "@/data/industries";
 
+import ContactSection from "@/components/lets-talk";
 import Preverity from "@/components/preverity";
-import Resources from "@/components/resources";
 import CompaniesProfile from "@/components/shared/companies-profile";
 import CompaniesProfileTwo from "@/components/shared/companies-profile-two";
 import CompaniesWeServe from "@/components/shared/companies-we-serve";
@@ -11,84 +11,6 @@ import NewHero from "@/components/shared/new-hero";
 import OurCapabilities from "@/components/shared/our-capabilities";
 import SecondaryPartnersSlider from "@/components/shared/secondary-partners-slider";
 import ServicesCard from "@/components/shared/services-card";
-
-// const companyData = {
-//   content:
-//     "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
-//   imageSrc: "/svg/goodfood.svg",
-//   author: "Peter Philips | CTO, Recognize",
-// };
-
-// const companyDataTwo = {
-//   content:
-//     "Teverse's expertise in generative AI unveiled exciting possibilities for our data extraction process. Their innovative approach using Amazon Bedrock demonstrated remarkable potential forimproved accuracy and efficiency. Thanks to Teverse, we've gained valuable insights that will shape the future of our healthcare technology solutions.",
-//   imageSrc: "/svg/carehubs.svg",
-//   author: "Peter Philips | CTO, Recognize",
-//   buttonText: "Read More",
-//   showButton: true,
-// };
-
-// const detailsData = [
-//   {
-//     title: "Healthcare payers",
-//     description:
-//       "You handle the intricate balance of optimizing claim management, member retention, and health outcomes amidst a rapidly evolving industry. We help you build accessible member experiences that serve them and help you better understand their needs.",
-//   },
-//   {
-//     title: "Healthcare providers",
-//     description:
-//       "ou need to maintain patient confidentiality while streamlining operations in an increasingly digital landscape. We specialize in tailoring AWS infrastructure to meet the needs of providers, ensuring you have a secure, compliant, and scalable environment to deliver exceptional care.",
-//   },
-//   {
-//     title: "Healthcare providers",
-//     description:
-//       "ou need to maintain patient confidentiality while streamlining operations in an increasingly digital landscape. We specialize in tailoring AWS infrastructure to meet the needs of providers, ensuring you have a secure, compliant, and scalable environment to deliver exceptional care.",
-//   },
-//   {
-//     title: "Healthcare providers",
-//     description:
-//       "ou need to maintain patient confidentiality while streamlining operations in an increasingly digital landscape. We specialize in tailoring AWS infrastructure to meet the needs of providers, ensuring you have a secure, compliant, and scalable environment to deliver exceptional care.",
-//   },
-// ];
-
-// const ourCapabilitiesData = [
-//   {
-//     title: "HIPAA compliance",
-//     description:
-//       "Our modernization roadmap ensures your operations and data practices are secure and resilient",
-//     icon: "/svg/hipaa.svg",
-//   },
-//   {
-//     title: "HIPAA compliance",
-//     description:
-//       "Our modernization roadmap ensures your operations and data practices are secure and resilient",
-//     icon: "/svg/hipaa.svg",
-//   },
-//   {
-//     title: "Health research",
-//     description:
-//       "Conduct large-scale research projects with seamless analytics for data science or business intelligence",
-//     icon: "/svg/health.svg",
-//   },
-//   {
-//     title: "HIPAA compliance",
-//     description:
-//       "Our modernization roadmap ensures your operations and data practices are secure and resilient",
-//     icon: "/svg/hipaa.svg",
-//   },
-//   {
-//     title: "HIPAA compliance",
-//     description:
-//       "Our modernization roadmap ensures your operations and data practices are secure and resilient",
-//     icon: "/svg/hipaa.svg",
-//   },
-//   {
-//     title: "Health research",
-//     description:
-//       "Conduct large-scale research projects with seamless analytics for data science or business intelligence",
-//     icon: "/svg/health.svg",
-//   },
-// ];
 
 const Retail = () => {
   return (
@@ -140,7 +62,7 @@ const Retail = () => {
 
       <CompaniesProfileTwo cards={retailData.companyProfiles.companyTwo} />
 
-      {retailData.resources.show && <Resources />}
+      <ContactSection />
     </section>
   );
 };

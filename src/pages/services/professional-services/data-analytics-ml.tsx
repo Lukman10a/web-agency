@@ -121,7 +121,7 @@ const Analytics = () => {
       />
       <FAQ />
       <ServicesCard
-        imgSrc="/assets/checkers.png"
+        imgSrc="/assets/teverse-control2.png"
         altText="Custom Alt Text"
         title="We have the tools to understand your cloud and the guidance to make the most of it."
         description="Our team of cloud experts is ready to help you with your next AWS initiative. Get advanced machine learning consulting from Teverse."

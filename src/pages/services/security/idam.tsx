@@ -1,6 +1,7 @@
 import React from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import { motion } from "framer-motion";
 import {
@@ -142,12 +143,14 @@ export default function IdamSecurityPage() {
               valuable resources with enterprise-grade security measures.
             </p>
             <div className="flex justify-center gap-4">
-              <Button size="lg" className="group bg-orange-650">
-                Schedule a Demo
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <Button asChild size="lg" className="group bg-orange-650">
+                <Link href="/contact">
+                  Schedule a Demo{" "}
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
-              <Button variant="outline" size="lg">
-                Contact Sales
+              <Button asChild variant="outline" size="lg">
+                <Link href="/contact">Contact Sales</Link>
               </Button>
             </div>
           </div>

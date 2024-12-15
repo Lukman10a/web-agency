@@ -137,7 +137,8 @@ export const navItems: NavItem[] = [
         subitems: [
           {
             title: "Cloud Managed Services",
-            description: "...",
+            description:
+              "We offer a comprehensive range of services for every challenge companies face on AWS.",
             href: "/services",
           },
           {
@@ -260,11 +261,12 @@ export const navItems: NavItem[] = [
       },
       {
         category: "Cyber Security",
-        description: "....",
+        description: "Comprehensive cybersecurity solutions",
         subitems: [
           {
             title: "Cybersecurity",
-            description: "Comprehensive cybersecurity solutions",
+            description:
+              "Protect your digital assets with our comprehensive cybersecurity services",
             href: "/services/security/cyber",
           },
         ],

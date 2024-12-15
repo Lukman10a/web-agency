@@ -4,33 +4,31 @@ import Image from "next/image";
 
 const ProfessionalServices: React.FC = () => {
   return (
-    <section className="flex sm:flex-col items-center py-12 max-w-7xl">
+    <section className="mx-auto flex max-w-7xl items-center gap-10 px-10 py-12 md:flex-col">
       {/* Image Placeholder */}
-      <div className="w-1/2 sm:w-full sm:px-4 flex items-center mb-0 justify-end md:justify-center px-2">
+      <div className="mb-0 flex w-1/2 items-center md:w-full md:justify-center">
         <Image
           src="/assets/checkers.png"
           height={600}
           width={500}
           alt="checkers image"
+          className="w-full"
         />
       </div>
 
       {/* Text Content */}
-      <div className=" w-5/12 sm:w-full text-left pl-12 sm:px-4">
-        {/* Badge */}
-        <div className="text-xs text-gray-500 tracking-wide px-3 py-1 sm:mt-5 border border-gray-300 rounded-full inline-block mb-4">
+      <div className="w-5/12 text-left md:w-full">
+        <div className="mb-4 inline-block rounded-full border border-gray-300 px-3 py-1 text-xs tracking-wide text-gray-500 sm:mt-5">
           PROFESSIONAL SERVICES
         </div>
 
-        {/* Title */}
-        <h2 className="text-4xl sm:text-xl md:text-xl font-medium text-gray-800 mb-4">
+        <h2 className="mb-4 text-4xl font-medium text-gray-800 md:text-2xl">
           Find the Expertise You Need{" "}
-          <span className="block sm:inline"> for Your AWS Cloud </span>{" "}
+          <span className="block md:inline"> for Your AWS Cloud </span>{" "}
           Initiatives.
         </h2>
 
-        {/* Subtitle */}
-        <p className="text-gray-600 mb-6 sm:text-sm">
+        <p className="mb-6 text-gray-600 sm:text-sm">
           Our AWS-certified engineers can guide and lead your development on the
           cloud. We’ll help you identify the tools and AWS services you need
           while implementing robust, scalable cloud-native solutions.

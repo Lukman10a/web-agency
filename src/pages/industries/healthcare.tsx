@@ -2,6 +2,7 @@ import React from "react";
 
 import { healthcareData } from "@/data/industries";
 
+import ContactSection from "@/components/lets-talk";
 import Preverity from "@/components/preverity";
 import Resources from "@/components/resources";
 import CompaniesProfile from "@/components/shared/companies-profile";
@@ -52,7 +53,7 @@ const Healthcare = () => {
 
       <ServicesCard key={1} {...servicesCards[1]} />
 
-      <Resources />
+      <ContactSection />
     </section>
   );
 };

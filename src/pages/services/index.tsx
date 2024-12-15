@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 
 import ProfessionalServices from "@/components/professional-services";
-import Resources from "@/components/resources";
 import ServiceGrid from "@/components/service-grid";
 import ManagedServices from "@/components/services";
 import AwsServicesHero from "@/components/services-hero-section";
@@ -16,7 +15,7 @@ export default function Page() {
       <ProfessionalServices />
       <ServiceGrid />
       <SoftwareFAQ />
-      <Resources />
+
       <GetInTouchSection />
     </Fragment>
   );
