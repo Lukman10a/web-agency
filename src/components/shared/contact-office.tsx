@@ -51,12 +51,12 @@ const cardVariants = {
     opacity: 1,
     scale: 1,
     transition: {
-      delay: i * 0.2, // Stagger the appearance of each card
+      delay: i * 0.2,
       duration: 0.5,
     },
   }),
   hover: {
-    scale: 1.05, // Slightly zoom the card on hover
+    scale: 1.05,
     transition: { type: "spring", stiffness: 300 },
   },
 };
