@@ -4,7 +4,7 @@ import { healthcareData } from "@/data/industries";
 
 import ContactSection from "@/components/lets-talk";
 import Preverity from "@/components/preverity";
-import Resources from "@/components/resources";
+// import Resources from "@/components/resources";
 import CompaniesProfile from "@/components/shared/companies-profile";
 import CompaniesProfileTwo from "@/components/shared/companies-profile-two";
 import CompaniesWeServe from "@/components/shared/companies-we-serve";

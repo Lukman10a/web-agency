@@ -1,9 +1,9 @@
-import carehubs from "/public/svg/carehubs.svg";
-import clarus from "/public/svg/clarus.svg";
+// import carehubs from "/public/svg/carehubs.svg";
+// import clarus from "/public/svg/clarus.svg";
 import fexa from "/public/svg/fexa.svg";
 import forcura from "/public/svg/forcura.svg";
-import preverity from "/public/svg/preverity.svg";
 
+// import preverity from "/public/svg/preverity.svg";
 import { NewHeroProps } from "@/components/shared/new-hero";
 
 interface Testimonial {
