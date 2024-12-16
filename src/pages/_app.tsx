@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
       className={`${sora.variable} ${notoSans.variable} ${notoSansMono.variable} flex min-h-screen flex-col bg-white font-sans`}
     >
       <Head>
-        <link
+        {/* <link
           rel="apple-touch-icon"
           sizes="180x180"
           href="/apple-touch-icon.png"
@@ -33,7 +33,7 @@ export default function App({ Component, pageProps }: AppProps) {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="manifest" href="/site.webmanifest" /> */}
         <title>Teverse</title>
       </Head>
       {/* <Navbar /> */}

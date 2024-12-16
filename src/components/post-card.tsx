@@ -19,7 +19,7 @@ const PostCard: React.FC<PostCardProps> = ({
   id,
 }) => {
   return (
-    <div className="mx-auto mb-2 max-w-[400px] p-2">
+    <div className="mx-auto mb-2 max-w-[400px] rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] p-2">
       <Link href={`/posts/${id}`} className="">
         <div>
           <Image

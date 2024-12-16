@@ -58,7 +58,7 @@ const Index: React.FC<{ posts: Post[]; categories: Category[] }> = ({
   // }, [activeCategory, filteredPosts]);
 
   return (
-    <section className="mx-auto border bg-main-gradient">
+    <section className="mx-auto border">
       {featuredPost && (
         <FeaturedPost
           imageSrc={featuredPost.image}
@@ -111,7 +111,7 @@ const Index: React.FC<{ posts: Post[]; categories: Category[] }> = ({
         </div>
 
         {filteredPosts.length !== 0 ? (
-          <section className="mx-5 grid grid-cols-3 gap-[2px] 2md:grid-cols-2 sm:grid-cols-1">
+          <section className="mx-5 grid grid-cols-3 gap-3 2md:grid-cols-2 sm:grid-cols-1">
             {filteredPosts.map((post) => (
               <PostCard
                 key={post.id}
