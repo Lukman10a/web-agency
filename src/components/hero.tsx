@@ -43,9 +43,13 @@ const Hero = () => {
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <p className="mt-3 font-mono text-base lg:mx-0 md:mt-5 md:text-xl sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg">
-                We provide expert consulting services to help businesses achieve
+                {/* We provide expert consulting services to help businesses achieve
                 secure, efficient, and scalable cloud environments. From cloud
-                migration to security audits, we&lsquo;ve got you covered.
+                migration to security audits, we&lsquo;ve got you covered. */}
+                We make your cloud smarter, your access seamless, and your AI
+                transformative. From effortless migrations to robust security
+                audits, IDAM strategies, and cutting-edge AI solutions -we
+                handle it all, so you can thrive.
               </p>
             </InView>
 

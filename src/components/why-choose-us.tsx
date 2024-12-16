@@ -89,8 +89,7 @@ export default function WhyChooseUs() {
       {/* Section: Why Choose Us */}
 
       <h3 className="animate-fade-in mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold leading-tight lg:text-[2rem] md:text-[1.6rem]">
-        Why <span className="text-orange-650">Choose</span> Us? <br /> Key
-        Benefits for Your Business
+        Customers <span className="text-orange-650">trust</span> us with
       </h3>
 
       {/* Benefits Section */}

@@ -21,7 +21,7 @@ import { InView } from "./ui/animated/in-view";
 const SecurityCertifications: React.FC = () => {
   return (
     <section className="mb-16">
-      <div className="relative mx-auto flex gap-10 bg-black px-10 py-24 text-white md:flex-wrap">
+      <div className="relative mx-auto flex flex-col items-center gap-10 bg-darkblue-900 px-10 py-24 text-center text-white md:flex-wrap">
         <div className="mb-8 space-y-4 overflow-hidden">
           <InView
             variants={{
@@ -45,8 +45,7 @@ const SecurityCertifications: React.FC = () => {
           >
             <p className="mx-auto mt-4 font-sans text-lg md:text-sm">
               Your security is our priority. We hold top industry certifications
-              including
-              <br /> ISO, AWS, CISSP, and more.
+              including ISO, AWS, CISSP, and more.
             </p>
           </InView>
           {/* <Button
@@ -62,7 +61,7 @@ const SecurityCertifications: React.FC = () => {
         {/* Certifications Badges */}
         <div className="mx-auto flex items-center justify-center gap-12 px-5 lg:space-y-0 2md:flex-col md:gap-8">
           <AnimatedGroup
-            className="grid grid-cols-3 gap-5"
+            className="grid grid-cols-6 gap-5"
             viewport={{
               once: false,
               amount: 0.5,

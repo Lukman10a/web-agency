@@ -32,7 +32,7 @@ import {
 } from "@/components/ui/sheet";
 
 import logo_img from "../../../../public/assets/logo-main-sm.png";
-import ArrowIcon from "../../icons/arrow";
+// import ArrowIcon from "../../icons/arrow";
 import { navItems } from "./data";
 
 export function MainNav() {
@@ -110,11 +110,11 @@ export function MainNav() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/contact" className="md:hidden">
+            {/* <Link href="/contact" className="md:hidden">
               <Button className="flex w-fit items-center justify-center rounded-full border border-black bg-orange-600 px-8 py-3 text-base font-medium text-white hover:bg-orange-700 md:px-10 md:py-4 md:text-lg">
                 Contact <ArrowIcon />
               </Button>{" "}
-            </Link>
+            </Link> */}
             <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetTrigger asChild>
                 <Button

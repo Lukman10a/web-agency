@@ -191,6 +191,12 @@ export const navItems: NavItem[] = [
             href: "/services/idam#idam-customization",
           },
           {
+            title: "IDAM Strategy ",
+            description:
+              "Personalized IDAM strategy platforms to align with unique organizational requirements.",
+            href: "/services/idam#idam-strategy",
+          },
+          {
             title: "Evaluation & Recommendation",
             description:
               "Comprehensive assessment and actionable recommendations for optimizing IDAM systems.",

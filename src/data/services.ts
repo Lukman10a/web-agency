@@ -396,6 +396,46 @@ export const idamServices = {
       href: "/services/professional-services/data-analytics-ml",
     },
     {
+      title: "IDAM Strategy ",
+      slug: "idam-strategy",
+      content:
+        "Our customization services enable businesses to tailor IDAM platforms to their specific needs, enhancing user experiences and optimizing operational workflows.",
+      description:
+        "Personalized customization of IDAM platforms to align with unique organizational requirements.",
+      features: [
+        "Tailor IDAM platforms to specific business needs.",
+        "Develop custom authentication and authorization modules.",
+        "Optimize UI/UX for enhanced user satisfaction.",
+        "Enable advanced reporting and analytics features.",
+      ],
+      benefits: [
+        "Achieve a perfect fit for organizational workflows.",
+        "Boost user adoption with intuitive designs.",
+        "Improve decision-making with actionable insights.",
+      ],
+      capabilities: [
+        {
+          title: "Authentication Module Development",
+          icon: Lock,
+          description:
+            "Creating specialized authentication mechanisms tailored to unique security and access requirements.",
+        },
+        {
+          title: "Enhanced Reporting",
+          icon: BarChart,
+          description:
+            "Developing advanced analytics and reporting tools to provide deeper insights into identity management.",
+        },
+        {
+          title: "UI/UX Optimization",
+          icon: Layout,
+          description:
+            "Designing intuitive and user-friendly interfaces to improve overall user experience and system interaction.",
+        },
+      ],
+      href: "/services/professional-services/data-analytics-ml",
+    },
+    {
       title: "Evaluation & Recommendation",
       slug: "idam-evaluation-recommendation",
       content:
