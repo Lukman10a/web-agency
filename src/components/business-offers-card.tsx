@@ -26,7 +26,7 @@ const BusinessOffersCard: React.FC<HomeCardProps> = ({
 }) => {
   return (
     <div
-      className={`mx-auto mb-[1.5em] flex max-w-[95%] gap-10 rounded-2xl border border-[#fcfcf] bg-[#fcfcfc] p-[1.2em] 2md:gap-4 sm:flex-col ${
+      className={`mx-auto flex max-w-[95%] gap-10 rounded-2xl border border-[#fcfcf] bg-[#fcfcfc] p-6 px-10 2md:gap-4 sm:flex-col ${
         index % 2 === 0 ? "flex-row" : "flex-row-reverse"
       }`}
     >
@@ -34,7 +34,7 @@ const BusinessOffersCard: React.FC<HomeCardProps> = ({
         <Image
           src={imageSrc}
           alt="Card image"
-          className="mr-4 w-full"
+          className="mr-4 aspect-square max-h-[300px] object-contain"
           width={500}
           height={500}
         />
@@ -50,7 +50,7 @@ const BusinessOffersCard: React.FC<HomeCardProps> = ({
           </span>
         </h3>
 
-        <p className="mb-[1.5em] w-[90%] font-sans text-lg leading-normal text-gray-500 2md:w-[100%] md:text-base">
+        <p className="mb-[1.5em] font-sans text-lg leading-normal text-gray-500 2md:w-[100%] md:text-base">
           {description}
         </p>
         <Button

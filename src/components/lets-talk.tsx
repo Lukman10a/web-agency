@@ -33,24 +33,23 @@ const ContactSection: React.FC = () => {
       </div>
 
       {/* Right Side: Form */}
-      <div className="flex justify-between gap-5 px-24 md:flex-wrap sm:px-5">
+      <div className="flex justify-between gap-5 px-24 lg:flex-col sm:px-5">
         {/* Image */}
         <div className="w-full">
           <Image
-            // src="/assets/contact.png"
             src="/assets/cloud-vision.png"
             alt="Cloud Service"
-            className="aspect-square rounded-lg bg-main-gradient px-5 shadow-lg md:w-full"
+            className="w-full rounded-lg px-5"
             width={400}
             height={400}
           />
         </div>
 
-        <div className="container mx-auto flex flex-col items-start justify-between space-y-8 px-4 md:flex-row md:space-y-0">
+        <div className="container mx-auto flex flex-col items-start justify-between space-y-8 self-center px-4 md:flex-row md:space-y-0">
           <div className="">
             <h3 className="text-4xl font-extrabold tracking-wide text-gray-900">
-              Cloud <span className="text-orange-650 underline">experts</span>
-              <br className="md:hidden" /> on duty
+              Cloud <span className="text-orange-650 underline">experts </span>
+              on duty
             </h3>
             <p className="mt-4 text-gray-600">
               Want to skip the intro call and get straight to it? Tell us what’s

@@ -11,64 +11,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-darkblue-900 py-12 text-white">
       <div className="mx-auto max-w-7xl px-4 lg:px-8 sm:px-6">
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-1">
-          <div className="py-5">
-            <Image
-              src="/assets/logo-main-sm.png"
-              width={150}
-              height={150}
-              alt="brand logo"
-            />
-            <p className="mt-4 text-sm text-neutral-400">
-              {/* Subscribe to our newsletter and get a 20% <br /> discount coupon
-              for your next order. */}
-              Get the latest news on Amazon Web Services, the cloud,
-              <br /> emerging tech, and more with our weekly newsletter.
-              <br /> Every Thursday, direct to your inbox.
-            </p>
-            <Link
-              href="mailto:hi@teversemultiuniverse"
-              className="mt-2 block text-lg font-semibold text-white"
-            >
-              hi@teversemultiuniverse
-            </Link>
-
-            {/* Social Media Icons */}
-            <div className="mt-10 flex space-x-4">
-              <Link
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full bg-orange-650 p-2 text-black"
-              >
-                <FaInstagram size={24} />
-              </Link>
-              <Link
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full bg-orange-650 p-2 text-black"
-              >
-                <FaYoutube size={24} />
-              </Link>
-              <Link
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full bg-orange-650 p-2 text-black"
-              >
-                <FaLinkedin size={24} />
-              </Link>
-              <Link
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full bg-orange-650 p-2 text-black"
-              >
-                <FaXTwitter size={24} />
-              </Link>
-            </div>
-          </div>
+        <div className="grid grid-cols-2 justify-between gap-8 sm:grid-cols-1">
           <div className="grid grid-cols-3 gap-2 lg:grid-cols-2">
             {/* Contact Us Section */}
             <div>
@@ -127,6 +70,63 @@ const Footer: React.FC = () => {
                   <Link href={"/solutions/idam/iga"}>IGA</Link>
                 </li>
               </ul>
+            </div>
+          </div>
+          <div className="flex flex-col items-end lg:items-start">
+            <Image
+              src="/assets/logo-main-sm.png"
+              width={150}
+              height={150}
+              alt="brand logo"
+            />
+            <p className="mt-4 text-sm text-neutral-400">
+              {/* Subscribe to our newsletter and get a 20% <br /> discount coupon
+              for your next order. */}
+              Get the latest news on Amazon Web Services, the cloud,
+              <br /> emerging tech, and more with our weekly newsletter.
+              <br /> Every Thursday, direct to your inbox.
+            </p>
+            <Link
+              href="mailto:hi@teversemultiuniverse"
+              className="mt-2 block text-lg font-semibold text-white"
+            >
+              hi@teversemultiuniverse
+            </Link>
+
+            {/* Social Media Icons */}
+            <div className="mt-10 flex space-x-4">
+              <Link
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-orange-650 p-2 text-black"
+              >
+                <FaInstagram size={24} />
+              </Link>
+              <Link
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-orange-650 p-2 text-black"
+              >
+                <FaYoutube size={24} />
+              </Link>
+              <Link
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-orange-650 p-2 text-black"
+              >
+                <FaLinkedin size={24} />
+              </Link>
+              <Link
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full bg-orange-650 p-2 text-black"
+              >
+                <FaXTwitter size={24} />
+              </Link>
             </div>
           </div>
         </div>

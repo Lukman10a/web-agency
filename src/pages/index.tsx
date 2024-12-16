@@ -13,7 +13,6 @@ export default function Home() {
       <BusinessOffer />
       <WhyChooseUs />
       <SecurityCertifications />
-      {/* <FAQSection /> */}
       <PartnershipSection />
       <ContactSection />
     </main>

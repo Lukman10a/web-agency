@@ -28,7 +28,7 @@ const SecurityCertifications: React.FC = () => {
               hidden: { opacity: 0, x: -100, filter: "blur(4px)" },
               visible: { opacity: 1, x: 0, filter: "blur(0px)" },
             }}
-            // viewOptions={{ margin: "0px 0px -200px 0px" }}
+            viewOptions={{ once: true }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
             <h2 className="font-sora text-4xl font-bold md:text-3xl">
@@ -40,7 +40,7 @@ const SecurityCertifications: React.FC = () => {
               hidden: { opacity: 0, x: 100, filter: "blur(4px)" },
               visible: { opacity: 1, x: 0, filter: "blur(0px)" },
             }}
-            viewOptions={{ margin: "0px 0px -200px 0px" }}
+            viewOptions={{ margin: "0px 0px -200px 0px", once: true }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
             <p className="mx-auto mt-4 font-sans text-lg md:text-sm">
@@ -48,20 +48,12 @@ const SecurityCertifications: React.FC = () => {
               including ISO, AWS, CISSP, and more.
             </p>
           </InView>
-          {/* <Button
-            asChild
-            className="flex w-fit items-center justify-center rounded-full border border-black bg-orange-600 px-8 py-3 text-base font-medium uppercase text-white hover:bg-orange-700 md:w-full md:px-10 md:py-4 md:text-lg"
-          >
-            <Link href="/services">
-              FIND OUT MORE <ArrowIcon />
-            </Link>
-          </Button> */}
         </div>
 
         {/* Certifications Badges */}
         <div className="mx-auto flex items-center justify-center gap-12 px-5 lg:space-y-0 2md:flex-col md:gap-8">
           <AnimatedGroup
-            className="grid grid-cols-6 gap-5"
+            className="grid grid-cols-6 gap-5 md:grid-cols-3"
             viewport={{
               once: false,
               amount: 0.5,
@@ -74,7 +66,7 @@ const SecurityCertifications: React.FC = () => {
               height={500}
               src={sysops}
               alt={"AWS SysOps Administrator Badge"}
-              className="w-32 md:h-24 md:w-24"
+              className="w-32 md:size-24"
             />
 
             <Image

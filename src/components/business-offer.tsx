@@ -66,52 +66,35 @@ const cardData = [
 const BusinessOffer = () => {
   return (
     <section className="mx-auto mb-16 w-11/12 max-w-7xl overflow-hidden">
-      {/* <div className="relative mb-[3em] w-full rounded-2xl bg-gradient-to-r from-[#e3e7f7] to-[#fae8de] p-[5em] text-center sm:p-[2em]">
-        <BorderTrail
-          style={{
-            boxShadow:
-              "0px 0px 60px 30px rgb(255 255 255 / 50%), 0 0 100px 60px rgb(0 0 0 / 50%), 0 0 140px 90px rgb(0 0 0 / 50%)",
-          }}
-        />
-
-        <p className="mx-auto text-[1.8rem] 2md:text-[1.5rem] md:text-[1.2rem]">
-          At Teverse, we specialize in transforming businesses through cutting
-          edge cloud solutions and security services. Whether you need cloud
-          migration, optimization, or robust security architecture, our team is
-          here to provide customized strategies to elevate your IT
-          infrastructure.
-        </p>
-      </div> */}
       <div className="rounded-2xl bg-orange-100 p-2 pt-16">
-        <h3 className="mx-auto mb-[1em] text-center font-sora text-[2.5rem] font-semibold uppercase leading-tight lg:text-[2rem] md:text-[1.6rem]">
+        <h3 className="mx-auto mb-[1em] text-center font-sora text-4xl font-semibold uppercase leading-tight lg:text-3xl md:text-2xl">
           <span className="text-orange-650">Teverse: Services </span> that don’t
-          just <br /> support your business -they <br /> supercharge it! 🚀
+          just <br className="md:hidden" /> support your business -they{" "}
+          <br className="md:hidden" /> supercharge it! 🚀
         </h3>
 
-        <div className="py-2">
-          <div className="">
-            {cardData.map((card, index) => (
-              <InView
-                key={index}
-                variants={{
-                  hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
-                  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-                }}
-                viewOptions={{ margin: "0px 0px -200px 0px" }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-              >
-                <BusinessOffersCard
-                  title={card.title}
-                  description={card.description}
-                  buttonText={card.buttonText}
-                  buttonLink={card.buttonLink}
-                  imageSrc={card.imageSrc}
-                  titleIcon={card.titleIcon}
-                  index={index}
-                />
-              </InView>
-            ))}
-          </div>
+        <div className="grid grid-rows-4 gap-6 py-2">
+          {cardData.map((card, index) => (
+            <InView
+              key={index}
+              variants={{
+                hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
+                visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+              }}
+              viewOptions={{ margin: "0px 0px -200px 0px" }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              <BusinessOffersCard
+                title={card.title}
+                description={card.description}
+                buttonText={card.buttonText}
+                buttonLink={card.buttonLink}
+                imageSrc={card.imageSrc}
+                titleIcon={card.titleIcon}
+                index={index}
+              />
+            </InView>
+          ))}
         </div>
       </div>
     </section>

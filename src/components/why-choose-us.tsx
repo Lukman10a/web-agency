@@ -95,13 +95,13 @@ export default function WhyChooseUs() {
 
       {/* Benefits Section */}
       <section
-        className="animate-fade-up mx-auto mb-24 grid w-[90%] max-w-7xl grid-cols-3 gap-12 p-4 xl:gap-6 md:grid-cols-2 sm:mb-12 sm:grid-cols-1"
+        className="animate-fade-up mx-auto mb-24 grid w-[90%] max-w-7xl grid-cols-3 items-stretch gap-12 p-4 xl:gap-6 md:grid-cols-2 sm:mb-12 sm:grid-cols-1"
         aria-labelledby="benefits-heading"
       >
         {benefits.map((benefit, index) => (
           <AnimatedBorderTrail key={index}>
             <motion.div
-              className="block lg:mx-auto"
+              className="h-full lg:mx-auto"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -110,7 +110,7 @@ export default function WhyChooseUs() {
               whileHover="hover"
             >
               <Link href={benefit.link} passHref>
-                <article className="group relative flex w-full transform cursor-pointer flex-col items-center space-y-4 rounded-2xl p-8 text-center shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
+                <article className="group relative flex w-full transform cursor-pointer flex-col items-center space-y-4 rounded-2xl p-8 text-center transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
                   <motion.div variants={iconVariants}>
                     <Image
                       src={benefit.img}
@@ -123,7 +123,7 @@ export default function WhyChooseUs() {
                   <h3 className="text-2xl font-semibold sm:text-xl">
                     {benefit.title}
                   </h3>
-                  <p className="text-[#808080] group-hover:text-black">
+                  <p className="line-clamp-3 text-sm text-[#808080] group-hover:text-black">
                     {benefit.description}
                   </p>
                 </article>
