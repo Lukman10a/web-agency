@@ -38,7 +38,7 @@ const ContactSection: React.FC = () => {
         <div className="w-full">
           <Image
             // src="/assets/contact.png"
-            src="/svg/hero-illustration-2.svg"
+            src="/assets/cloud-vision.png"
             alt="Cloud Service"
             className="aspect-square rounded-lg bg-main-gradient px-5 shadow-lg md:w-full"
             width={400}

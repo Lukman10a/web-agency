@@ -12,7 +12,6 @@ const Footer: React.FC = () => {
     <footer className="bg-darkblue-900 py-12 text-white">
       <div className="mx-auto max-w-7xl px-4 lg:px-8 sm:px-6">
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-1">
-          {/* Logo and Newsletter Section */}
           <div className="py-5">
             <Image
               src="/assets/logo-main-sm.png"
@@ -70,7 +69,6 @@ const Footer: React.FC = () => {
               </Link>
             </div>
           </div>
-
           <div className="grid grid-cols-3 gap-2 lg:grid-cols-2">
             {/* Contact Us Section */}
             <div>

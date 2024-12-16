@@ -25,11 +25,13 @@ const Hero = () => {
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <h1 className="font-sora text-6xl font-extrabold tracking-tight lg:text-4xl md:text-3xl sm:text-2xl">
-                <span>Transforming Tomorrow with:</span> <br className="" />
+                <span>Driving Innovation with Teverse:</span>{" "}
+                <br className="" />
                 <TextLoop preset="slide-up" interval={2.5}>
-                  <span>Cloud Consulting</span>
-                  <span>IDAM Expertise</span>
-                  <span>Gen AI Innovations</span>
+                  <span>Cloud Services,</span>
+                  <span>Cybersecurity,</span>
+                  <span>IDAM Expertise,</span>
+                  <span>and AI Solutions</span>
                 </TextLoop>
               </h1>
             </InView>

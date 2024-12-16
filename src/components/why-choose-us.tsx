@@ -5,8 +5,9 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 
-import cloud from "../../public/assets/cloud-managed-services.svg";
-// import genai from "../../public/assets/gen-ai.svg";
+// import cloud from "../../public/assets/cloud-managed-services.svg";
+import management from "../../public/assets/management.jpg";
+import migration from "../../public/assets/migration.jpg";
 import efficiency from "../../public/svg/efficiency.svg";
 import expert from "../../public/svg/expert.svg";
 import security from "../../public/svg/security.svg";
@@ -15,45 +16,45 @@ import AnimatedBorderTrail from "./ui/animated/border-trail-simple";
 
 const benefits = [
   {
-    img: cloud,
+    img: management,
     title: "Cloud Management",
     description:
-      "Optimize operations, cut costs, and focus on growth with our cloud and security solutions.",
-    link: "/services", // Add link
+      "Teverse delivers seamless cloud management solutions to optimize performance, enhance scalability, and drive innovation for your business.",
+    link: "/services",
   },
   {
     img: security,
     title: "Cloud Migration",
     description:
-      "Stay protected from threats and ensure compliance with GDPR, HIPAA, and more.",
-    link: "/services/professional-services/aws-migration", // Add link
+      "Teverse simplifies cloud migration, ensuring a smooth, secure, and efficient transition to the cloud with minimal disruption.",
+    link: "/services/professional-services/aws-migration",
   },
   {
     img: expert,
     title: "AWS Map",
     description:
-      "Access continuous monitoring, expert support to keep your systems secure & scalable.",
+      "Teverse accelerates your cloud journey with AWS MAP, offering tailored migration support, cost optimization, and expert guidance for a seamless transition to AWS",
     link: "/services/professional-services/aws-modernization",
   },
   {
     img: efficiency,
     title: "Gen AI",
     description:
-      "Access continuous monitoring, expert support to keep your systems secure & scalable.",
+      "Teverse harnesses the power of Generative AI to drive innovation, automate processes, and deliver intelligent solutions tailored to your business needs.",
     link: "/solutions/generative-ai",
   },
   {
-    img: expert,
+    img: migration,
     title: "IDAM Migration",
     description:
-      "Access continuous monitoring, expert support to keep your systems secure & scalable.",
+      "Teverse ensures a seamless and secure IDAM migration, enhancing identity management while minimizing risks and downtime.",
     link: "/services/idam#idam-migration",
   },
   {
     img: expert,
     title: "IGA",
     description:
-      "Access continuous monitoring, expert support to keep your systems secure & scalable.",
+      "Teverse empowers organizations with Identity Governance and Administration (IGA) solutions, ensuring secure, compliant, and efficient access management",
     link: "/solutions/idam/iga",
   },
 ];
@@ -114,7 +115,9 @@ export default function WhyChooseUs() {
                     <Image
                       src={benefit.img}
                       alt={benefit.title}
-                      className="rounded-full border p-2 transition-transform duration-500 ease-in-out hover:rotate-6"
+                      width={50}
+                      height={50}
+                      className="size-16 rounded-full border p-2 transition-transform duration-500 ease-in-out hover:rotate-6"
                     />
                   </motion.div>
                   <h3 className="text-2xl font-semibold sm:text-xl">

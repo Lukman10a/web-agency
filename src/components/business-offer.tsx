@@ -17,7 +17,7 @@ import { InView } from "./ui/animated/in-view";
 
 const cardData = [
   {
-    title: "CLOUD CONSULTING",
+    title: "CLOUD SERVICES",
     description:
       "Unleash the power of the cloud with our expert strategies, seamless migrations, and smart management solutions. We craft scalable, secure, and cost-effective cloud infrastructures designed to fuel your business ambitions.",
     buttonText: "Explore Cloud Solutions",
