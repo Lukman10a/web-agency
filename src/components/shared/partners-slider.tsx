@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import zeco from "/public/assets/zeco.png";
 import aws from "/public/svg/aws-logo.svg";
 import aws_grey from "/public/svg/aws_grey.svg";
 import azure from "/public/svg/azure.svg";
@@ -17,6 +18,7 @@ import savyint_grey from "/public/svg/savyint_grey.svg";
 import Marquee from "../ui/animated/marquee";
 
 export const partners = [
+  zeco,
   googlecloud,
   savyint,
   sailpoint,
