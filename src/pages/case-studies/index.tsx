@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/components/icons/arrow";
 import ContactSection from "@/components/lets-talk";
 import CategoryButtons from "@/components/shared/category-buttons";
-import MoreClients from "@/components/shared/more-clients";
+import MoreClients from "@/components/shared/our-clients";
 import Testimonials from "@/components/what-client";
 
 import keystaticConfig from "../../../keystatic.config";

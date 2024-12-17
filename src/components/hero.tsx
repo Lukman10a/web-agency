@@ -3,6 +3,18 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import apache from "/public/svg/apache.svg";
+import apachespark from "/public/svg/apachespark.svg";
+import deepspeed from "/public/svg/deepspeed.svg";
+// import aws from "/public/svg/aws-logo.svg";
+// import azure from "/public/svg/azure.svg";
+// import gcp from "/public/svg/gcp.svg";
+import neptune from "/public/svg/neptune.svg";
+import pytorch from "/public/svg/pytorch.svg";
+// import sailpoint from "/public/svg/sailpoint.svg";
+// import savyint from "/public/svg/savyint.svg";
+import tableau from "/public/svg/tableau.svg";
+
 import ArrowIcon from "./icons/arrow";
 import { PartnersSlider } from "./shared/partners-slider";
 import AnimatedBorderTrail from "./ui/animated/border-trail-simple";
@@ -11,6 +23,20 @@ import { TextLoop } from "./ui/animated/text-loop";
 import { Button } from "./ui/button";
 
 const Hero = () => {
+  const partners = [
+    apache,
+    apachespark,
+    pytorch,
+    tableau,
+    neptune,
+    deepspeed,
+    // savyint,
+    // sailpoint,
+    // gcp,
+    // azure,
+    // aws,
+  ];
+
   return (
     <header className="min-h-[60vh] overflow-hidden will-change-transform">
       <div className="bg-main-gradient px-4 py-14">
@@ -107,7 +133,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="mx-auto overflow-hidden bg-white">
-        <PartnersSlider />
+        <PartnersSlider images={partners} />
       </div>
     </header>
   );

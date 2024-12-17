@@ -5,20 +5,22 @@ import Image from "next/image";
 // import Link from "next/link";
 import { cn } from "@/lib/utils";
 
+import archi from "../../public/assets/archi.png";
+import cloud from "../../public/assets/cloud.png";
+import data from "../../public/assets/data.png";
+import devops from "../../public/assets/devops.png";
 import netlq_ima from "../../public/assets/netlq_ima.png";
 import okta_admin from "../../public/assets/okta_admin.png";
 import okta_certificate from "../../public/assets/okta_certificate.png";
 import okta_consultant from "../../public/assets/okta_consultant.png";
-// import archi from "../../public/assets/archi.png";
-// import cloud from "../../public/assets/cloud.png";
+import okta_developer from "../../public/assets/okta_developer.png";
 import pingaccess from "../../public/assets/pingaccess.png";
 import sailpoint_certificate from "../../public/assets/sailpoint_certificate.png";
-// import data from "../../public/assets/data.png";
 import sailpoint_engineer from "../../public/assets/sailpoint_engineer.png";
 import saviynt_iga from "../../public/assets/saviynt_iga.webp";
-// import security from "../../public/assets/security.png";
+import security from "../../public/assets/security.png";
 import star from "../../public/assets/starfour.png";
-// import sysops from "../../public/assets/sysops.png";
+import sysops from "../../public/assets/sysops.png";
 // import ArrowIcon from "./icons/arrow";
 import { AnimatedGroup } from "./ui/animated/animated-groups";
 import { InView } from "./ui/animated/in-view";
@@ -71,8 +73,50 @@ const SecurityCertifications: React.FC = () => {
             <Image
               width={500}
               height={500}
+              src={sysops}
+              alt={"Sysops  Badge"}
+              className="w-32 md:size-24"
+            />
+            <Image
+              width={500}
+              height={500}
+              src={devops}
+              alt={"Devops  Badge"}
+              className="w-32 md:size-24"
+            />
+            <Image
+              width={500}
+              height={500}
+              src={cloud}
+              alt={"Cloud Badge"}
+              className="w-32 md:size-24"
+            />
+            <Image
+              width={500}
+              height={500}
+              src={data}
+              alt={"Data Badge"}
+              className="w-32 md:size-24"
+            />
+            <Image
+              width={500}
+              height={500}
+              src={security}
+              alt={"Security Badge"}
+              className="w-32 md:size-24"
+            />
+            <Image
+              width={500}
+              height={500}
+              src={archi}
+              alt={"Archi Badge"}
+              className="w-32 md:size-24"
+            />
+            <Image
+              width={500}
+              height={500}
               src={okta_certificate}
-              alt={"AWS SysOps Administrator Badge"}
+              alt={"Okta Certificate Badge"}
               className="w-32 md:size-24"
             />
 
@@ -81,6 +125,13 @@ const SecurityCertifications: React.FC = () => {
               height={500}
               src={okta_admin}
               alt="AWS Security Badge"
+              className="w-32 md:h-24 md:w-24"
+            />
+            <Image
+              width={500}
+              height={500}
+              src={okta_developer}
+              alt="Okta Developer Badge"
               className="w-32 md:h-24 md:w-24"
             />
             <Image

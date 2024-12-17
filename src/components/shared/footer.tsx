@@ -1,7 +1,6 @@
 import React from "react";
 
 import Image from "next/image";
-// For social icons
 import Link from "next/link";
 
 import { FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
@@ -12,15 +11,15 @@ const Footer: React.FC = () => {
     <footer className="bg-darkblue-900 py-12 text-white">
       <div className="mx-auto max-w-7xl px-4 lg:px-8 sm:px-6">
         <div className="grid grid-cols-2 justify-between gap-8 sm:grid-cols-1">
-          <div className="grid grid-cols-3 gap-2 lg:grid-cols-2">
+          <div className="grid grid-cols-2 gap-2 lg:grid-cols-1">
             {/* Contact Us Section */}
-            <div>
-              {/* <h4 className="font-sora text-lg font-semibold">Contact us</h4> */}
-              <p className="mt-2 text-sm text-neutral-400">
+            {/* <div> */}
+            {/* <h4 className="font-sora text-lg font-semibold">Contact us</h4> */}
+            {/* <p className="mt-2 text-sm text-neutral-400">
                 contact@teversemulti
-              </p>
-              <p className="py-3 text-sm text-neutral-400">+421 221 020 694</p>
-            </div>
+              </p> */}
+            {/* <p className="py-3 text-sm text-neutral-400">+421 221 020 694</p> */}
+            {/* </div> */}
 
             {/* Company Section */}
             <div>
@@ -96,7 +95,7 @@ const Footer: React.FC = () => {
             {/* Social Media Icons */}
             <div className="mt-10 flex space-x-4">
               <Link
-                href="https://instagram.com"
+                href=" https://www.instagram.com/teversegram?igsh=MWxqcnZndG1vN3A0Mg=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-orange-650 p-2 text-black"
@@ -104,7 +103,7 @@ const Footer: React.FC = () => {
                 <FaInstagram size={24} />
               </Link>
               <Link
-                href="https://youtube.com"
+                href="http://www.youtube.com/@TEVERSE-tube"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-orange-650 p-2 text-black"
