@@ -6,9 +6,6 @@ import aws_grey from "/public/svg/aws_grey.svg";
 import azure from "/public/svg/azure.svg";
 import azure_grey from "/public/svg/azure_grey.svg";
 import gcp from "/public/svg/gcp.svg";
-import googlecloud from "/public/svg/googlecloud.svg";
-import googlecloud_svg from "/public/svg/googlecloud_svg.svg";
-import okta from "/public/svg/okta.svg";
 import okta_grey from "/public/svg/okta_grey.svg";
 import sailpoint from "/public/svg/sailpoint.svg";
 import sailpoint_grey from "/public/svg/sailpoint_grey.svg";
@@ -19,14 +16,11 @@ import Marquee from "../ui/animated/marquee";
 
 export const partners = [
   zeco,
-  googlecloud,
   savyint,
   sailpoint,
   gcp,
   azure,
   aws,
-  okta,
-  googlecloud_svg,
   savyint_grey,
   sailpoint_grey,
   azure_grey,
