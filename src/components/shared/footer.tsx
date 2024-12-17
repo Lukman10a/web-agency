@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-3 gap-2 lg:grid-cols-2">
             {/* Contact Us Section */}
             <div>
-              <h4 className="font-sora text-lg font-semibold">Contact us</h4>
+              {/* <h4 className="font-sora text-lg font-semibold">Contact us</h4> */}
               <p className="mt-2 text-sm text-neutral-400">
                 contact@teversemulti
               </p>
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href={""}>AWS Map</Link>
+                  <Link href={""}>AWS MAP</Link>
                 </li>
                 <li>
                   <Link href={""}>Gen AI</Link>
@@ -67,7 +67,9 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href={"/solutions/idam/iga"}>IGA</Link>
+                  <Link href={"/solutions/idam/iga"}>
+                    Identity Governance and Administration
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -80,17 +82,15 @@ const Footer: React.FC = () => {
               alt="brand logo"
             />
             <p className="mt-4 text-sm text-neutral-400">
-              {/* Subscribe to our newsletter and get a 20% <br /> discount coupon
-              for your next order. */}
-              Get the latest news on Amazon Web Services, the cloud,
-              <br /> emerging tech, and more with our weekly newsletter.
-              <br /> Every Thursday, direct to your inbox.
+              Get the latest news on AI, cloud, emerging tech, <br />
+              and more with our weekly newsletter. Every <br />
+              Thursday, direct to your inbox.
             </p>
             <Link
               href="mailto:hi@teversemultiuniverse"
               className="mt-2 block text-lg font-semibold text-white"
             >
-              hi@teversemultiuniverse
+              info@teverse.com.au
             </Link>
 
             {/* Social Media Icons */}

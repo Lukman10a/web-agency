@@ -19,42 +19,42 @@ const benefits = [
     img: management,
     title: "Cloud Management",
     description:
-      "Teverse delivers seamless cloud management solutions to optimize performance, enhance scalability, and drive innovation for your business.",
+      "Teverse provides cloud management solutions to optimize performance, boost scalability, and drive innovation.",
     link: "/services",
   },
   {
     img: security,
     title: "Cloud Migration",
     description:
-      "Teverse simplifies cloud migration, ensuring a smooth, secure, and efficient transition to the cloud with minimal disruption.",
+      "Teverse streamlines cloud migration for a smooth, secure, and efficient transition.",
     link: "/services/professional-services/aws-migration",
   },
   {
     img: expert,
     title: "AWS Map",
     description:
-      "Teverse accelerates your cloud journey with AWS MAP, offering tailored migration support, cost optimization, and expert guidance for a seamless transition to AWS",
+      "Teverse accelerates your cloud journey with AWS MAP through tailored support, cost optimization, and expert guidance.",
     link: "/services/professional-services/aws-modernization",
   },
   {
     img: efficiency,
     title: "Gen AI",
     description:
-      "Teverse harnesses the power of Generative AI to drive innovation, automate processes, and deliver intelligent solutions tailored to your business needs.",
+      "Teverse leverages Generative AI to drive innovation, automate processes, and deliver tailored solutions.",
     link: "/solutions/generative-ai",
   },
   {
     img: migration,
     title: "IDAM Migration",
     description:
-      "Teverse ensures a seamless and secure IDAM migration, enhancing identity management while minimizing risks and downtime.",
+      "Teverse enables secure IDAM migration, improving management while reducing risks and downtime.",
     link: "/services/idam#idam-migration",
   },
   {
     img: expert,
     title: "IGA",
     description:
-      "Teverse empowers organizations with Identity Governance and Administration (IGA) solutions, ensuring secure, compliant, and efficient access management",
+      "Teverse delivers IGA solutions for secure, compliant, and efficient access management.",
     link: "/solutions/idam/iga",
   },
 ];

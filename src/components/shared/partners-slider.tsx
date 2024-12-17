@@ -1,35 +1,44 @@
 import Image from "next/image";
 
 import aws from "/public/svg/aws-logo.svg";
+import aws_grey from "/public/svg/aws_grey.svg";
 import azure from "/public/svg/azure.svg";
-import boltshift from "/public/svg/boltshift.svg";
-import featherdev from "/public/svg/featherdev.svg";
+import azure_grey from "/public/svg/azure_grey.svg";
 import gcp from "/public/svg/gcp.svg";
-import globalbank from "/public/svg/globalbank.svg";
-import lightbox from "/public/svg/lightbox.svg";
-import magellan from "/public/svg/magellan.svg";
+import googlecloud from "/public/svg/googlecloud.svg";
+import googlecloud_svg from "/public/svg/googlecloud_svg.svg";
 import okta from "/public/svg/okta.svg";
-import playbill from "/public/svg/playbill.svg";
-import radar from "/public/svg/radar.svg";
-import space from "/public/svg/space.svg";
-import thrive from "/public/svg/thrive.svg";
+import okta_grey from "/public/svg/okta_grey.svg";
+import sailpoint from "/public/svg/sailpoint.svg";
+import sailpoint_grey from "/public/svg/sailpoint_grey.svg";
+import savyint from "/public/svg/savyint.svg";
+import savyint_grey from "/public/svg/savyint_grey.svg";
 
 import Marquee from "../ui/animated/marquee";
 
 export const partners = [
+  googlecloud,
+  savyint,
+  sailpoint,
   gcp,
   azure,
   aws,
   okta,
-  lightbox,
-  featherdev,
-  globalbank,
-  boltshift,
-  radar,
-  space,
-  thrive,
-  magellan,
-  playbill,
+  googlecloud_svg,
+  savyint_grey,
+  sailpoint_grey,
+  azure_grey,
+  aws_grey,
+  okta_grey,
+  // lightbox,
+  // featherdev,
+  // globalbank,
+  // boltshift,
+  // radar,
+  // space,
+  // thrive,
+  // magellan,
+  // playbill,
 ];
 
 export function PartnersSlider() {
