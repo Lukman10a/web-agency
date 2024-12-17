@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import databricks from "/public/assets/databricks.png";
 import apache from "/public/svg/apache.svg";
 import apachespark from "/public/svg/apachespark.svg";
 import deepspeed from "/public/svg/deepspeed.svg";
@@ -24,6 +25,7 @@ import { Button } from "./ui/button";
 
 const Hero = () => {
   const partners = [
+    databricks,
     apache,
     apachespark,
     pytorch,
