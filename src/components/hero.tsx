@@ -14,12 +14,16 @@ import apache from "/public/svg/apache.svg";
 import apachespark from "/public/svg/apachespark.svg";
 import aws from "/public/svg/aws-logo.svg";
 import azure from "/public/svg/azure.svg";
+import azure_grey from "/public/svg/azure_grey.svg";
 import gcp from "/public/svg/gcp.svg";
 import neptune from "/public/svg/neptune_ai.svg";
+import okta_grey from "/public/svg/okta_grey.svg";
 import okta from "/public/svg/Okta_logo.svg";
 import pytorch from "/public/svg/pytorch.svg";
 import sailpoint from "/public/svg/sailpoint.svg";
+import sailpoint_grey from "/public/svg/sailpoint_grey.svg";
 import savyint from "/public/svg/savyint.svg";
+import savyint_grey from "/public/svg/savyint_grey.svg";
 import tableau from "/public/svg/tableau.svg";
 
 // import haddop from "/public/svg/tableau.svg";
@@ -50,6 +54,10 @@ const Hero = () => {
     kubeflow,
     jlx,
     detectron,
+    azure_grey,
+    okta_grey,
+    sailpoint_grey,
+    savyint_grey,
   ];
 
   return (
@@ -145,8 +153,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="mx-auto mt-4 overflow-hidden bg-white">
-        <PartnersSlider images={partners} />
-        <PartnersSlider images={partners} grayscale reverse />
+        <PartnersSlider images={partners} grayscale />
       </div>
     </header>
   );

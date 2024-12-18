@@ -24,7 +24,7 @@ export function PartnersSlider({
   return (
     <Marquee
       className={cn("my-4 overflow-hidden", grayscale && "grayscale")}
-      applyMask={false}
+      applyMask
       pauseOnHover
       reverse={reverse}
     >
