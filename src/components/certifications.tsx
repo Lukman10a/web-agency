@@ -17,7 +17,7 @@ import okta_developer from "../../public/assets/okta_developer.png";
 import pingaccess from "../../public/assets/pingaccess.png";
 import sailpoint_certificate from "../../public/assets/sailpoint_certificate.png";
 import sailpoint_engineer from "../../public/assets/sailpoint_engineer.png";
-import saviynt_iga from "../../public/assets/saviynt_iga.webp";
+// import saviynt_iga from "../../public/assets/saviynt_iga.webp";
 import security from "../../public/assets/security.png";
 import star from "../../public/assets/starfour.png";
 import sysops from "../../public/assets/sysops.png";
