@@ -6,7 +6,7 @@ import Link from "next/link";
 import useContactForm from "@/hooks/use-contact";
 
 const ContactSection: React.FC = () => {
-  const { formData, handleChange, handleSubmit } = useContactForm(); // Destructure form logic
+  const { formData, handleChange, handleSubmit, errors } = useContactForm(); // Destructure form logic
 
   return (
     <section className="space-y-14 bg-white py-16">
@@ -37,7 +37,6 @@ const ContactSection: React.FC = () => {
         {/* Image */}
         <div className="w-full">
           <Image
-            // src="/assets/cloud-vision.png"
             src="/svg/gatewayillust.svg"
             alt="Cloud Service"
             className="w-full rounded-lg px-5"
@@ -59,31 +58,37 @@ const ContactSection: React.FC = () => {
 
             <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="message" className="sr-only">
-                  Message
-                </label>
-                <input
-                  type="text"
+                <textarea
                   id="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="block w-full border-b-2 border-b-gray-300 p-3 shadow-sm outline-none"
+                  className={`block w-full border-b-2 p-3 shadow-sm outline-none ${
+                    errors.message ? "border-b-red-500" : "border-b-gray-300"
+                  }`}
                   placeholder="Message"
-                />
+                ></textarea>
+                {errors.message && (
+                  <p className="mt-1 text-sm text-red-500">{errors.message}</p>
+                )}
               </div>
 
-              <div>
-                <label htmlFor="email" className="sr-only">
-                  Email address
-                </label>
+              <div className="relative">
                 <input
                   type="email"
                   id="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="block w-full border-b-2 border-b-gray-300 p-3 shadow-sm outline-none"
+                  className={`block w-full border-b-2 p-3 pr-10 shadow-sm outline-none ${
+                    errors.email ? "border-b-red-500" : "border-b-gray-300"
+                  }`}
                   placeholder="Email address"
                 />
+                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">
+                  @
+                </span>
+                {errors.email && (
+                  <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+                )}
               </div>
 
               <div className="flex items-start">
