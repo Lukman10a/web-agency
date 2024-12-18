@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
                 </li>
                 <li>
                   <Link href={"/solutions/idam/iga"}>
-                    Identity Governance and Administration
+                    Identity Governance and Administration (IGA)
                   </Link>
                 </li>
               </ul>
