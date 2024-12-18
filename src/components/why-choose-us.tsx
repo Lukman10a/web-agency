@@ -11,7 +11,7 @@ import migration from "../../public/assets/migration.jpg";
 import efficiency from "../../public/svg/efficiency.svg";
 import expert from "../../public/svg/expert.svg";
 import security from "../../public/svg/security.svg";
-import MoreClients from "./shared/our-clients";
+// import MoreClients from "./shared/our-clients";
 import AnimatedBorderTrail from "./ui/animated/border-trail-simple";
 
 const benefits = [
@@ -133,7 +133,7 @@ export default function WhyChooseUs() {
         ))}
       </section>
 
-      <MoreClients />
+      {/* <MoreClients /> */}
     </section>
   );
 }

@@ -69,7 +69,7 @@ const BusinessOffer = () => {
       <div className="rounded-2xl bg-orange-100 p-2 pt-16">
         <h3 className="mx-auto mb-[1em] text-center font-sora text-4xl font-semibold uppercase leading-tight lg:text-3xl md:text-2xl">
           <span className="text-orange-650">Services </span> that don’t just{" "}
-          <br className="md:hidden" /> support your business -they{" "}
+          <br className="md:hidden" /> support your business, they{" "}
           <br className="md:hidden" /> supercharge it! 🚀
         </h3>
 

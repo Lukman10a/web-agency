@@ -15,7 +15,7 @@ import savyint_grey from "/public/svg/savyint_grey.svg";
 import { PartnersSlider } from "./partners-slider";
 
 const MoreClients: React.FC = () => {
-  const partners = [
+   const partners = [
     zeco,
     savyint,
     sailpoint,
