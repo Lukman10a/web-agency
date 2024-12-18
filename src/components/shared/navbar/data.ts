@@ -4,10 +4,10 @@ export interface NavItem {
   items: {
     category: string;
     href?: string;
-    description: string;
+    description?: string;
     subitems?: {
       title: string;
-      description: string;
+      description?: string;
       href: string;
     }[];
   }[];
@@ -34,31 +34,31 @@ export const navItems: NavItem[] = [
         subitems: [
           {
             title: "Teverse Control",
-            description:
-              "Cloud services platform providing visibility, guidance & support for your cloud",
+            // description:
+            //   "Cloud services platform providing visibility, guidance & support for your cloud",
             href: "/solutions/teverse-control",
           },
           {
             title: "Teverse Gateway",
-            description:
-              "AWS guidance for efficient cloud growth and foundational best practices",
+            // description:
+            //   "AWS guidance for efficient cloud growth and foundational best practices",
             href: "/solutions/teverse-gateway",
           },
           {
             title: "Teverse Engagements",
-            description:
-              "Get transparent reporting and live updates on your team's status",
+            // description:
+            //   "Get transparent reporting and live updates on your team's status",
             href: "/solutions/cloud-engagements",
           },
           {
             title: "Teverse Cloud Score",
-            description:
-              "Proprietary scoring of your cloud architecture against AWS best practices",
+            // description:
+            //   "Proprietary scoring of your cloud architecture against AWS best practices",
             href: "/solutions/cloud-score",
           },
           {
             title: "Teverse Cloud Secure",
-            description: "Fully managed security, detection, and response",
+            // description: "Fully managed security, detection, and response",
             href: "/solutions/cloud-secure",
           },
         ],
@@ -66,39 +66,39 @@ export const navItems: NavItem[] = [
       {
         category: "IDAM Solutions",
         // href: "/solutions/idam",
-        description: "Comprehensive Identity & Access Management Solutions",
+        // description: "Comprehensive Identity & Access Management Solutions",
         subitems: [
           {
             title: "Identity Governance and Administration (IGA)",
-            description: "Manage user identities and access privileges",
+            // description: "Manage user identities and access privileges",
             href: "/solutions/idam/iga",
           },
           {
             title: "Single Sign-On (SSO) and MFA",
-            description: "Simplify user authentication across multiple apps",
+            // description: "Simplify user authentication across multiple apps",
             href: "/solutions/idam/sso",
           },
           {
             title: "Identity Federation",
-            description:
-              "Enable seamless integration of identity systems across organizations or domains.",
+            // description:
+            //   "Enable seamless integration of identity systems across organizations or domains.",
             href: "/solutions/idam/idf",
           },
           {
             title: "Privileged Access Management (PAM)",
-            description: "Secure privileged accounts and credentials",
+            // description: "Secure privileged accounts and credentials",
             href: "/solutions/idam/pam",
           },
           {
             title: "Customer Identity and Access Management (CIAM)",
-            description:
-              "Deliver secure, seamless, and personalized user experiences for your customers.",
+            // description:
+            //   "Deliver secure, seamless, and personalized user experiences for your customers.",
             href: "/solutions/idam/ciam",
           },
           {
             title: "Managing machine identities and BoTs",
-            description:
-              "Ensure secure authentication and lifecycle management for machine and bot identities.",
+            // description:
+            //   "Ensure secure authentication and lifecycle management for machine and bot identities.",
             href: "/solutions/idam/mmib",
           },
         ],
@@ -110,17 +110,17 @@ export const navItems: NavItem[] = [
         subitems: [
           {
             title: "Document Reader",
-            description: "AI-powered document analysis and extraction",
+            // description: "AI-powered document analysis and extraction",
             href: "/solutions/generative-ai/document-reader",
           },
           {
             title: "Safety Alerts",
-            description: "AI-based safety monitoring and alert system",
+            // description: "AI-based safety monitoring and alert system",
             href: "/solutions/generative-ai/safety-alerts",
           },
           {
             title: "Foundation Models",
-            description: "Leverage large-scale AI models for advanced tasks",
+            // description: "Leverage large-scale AI models for advanced tasks",
             href: "/solutions/generative-ai/foundation-models",
           },
         ],
@@ -137,31 +137,31 @@ export const navItems: NavItem[] = [
         subitems: [
           {
             title: "Cloud Managed Services",
-            description:
-              "We offer a comprehensive range of services for every challenge companies face on AWS.",
+            // description:
+            //   "We offer a comprehensive range of services for every challenge companies face on AWS.",
             href: "/services",
           },
           {
             title: "Cloud Foundation",
-            description:
-              "Manage costs, support your teams, and build to scale.",
+            // description:
+            //   "Manage costs, support your teams, and build to scale.",
             href: "/services/cloud-management-services/cloud-foundation",
           },
           {
             title: "Cloud GoTo",
-            description:
-              "Our comprehensive service for AWS optimization, operations, and security",
+            // description:
+            //   "Our comprehensive service for AWS optimization, operations, and security",
             href: "/services/cloud-management-services/cloud-goto",
           },
           {
             title: "AWS Migration",
-            description:
-              "Minimize downtime, forecast costs, and migrate efficiently",
+            // description:
+            //   "Minimize downtime, forecast costs, and migrate efficiently",
             href: "/services/professional-services/aws-migration",
           },
           {
             title: "AWS Modernization",
-            description: "Containerization, serverless, and microservices",
+            // description: "Containerization, serverless, and microservices",
             href: "/services/professional-services/aws-modernization",
           },
         ],
@@ -174,50 +174,50 @@ export const navItems: NavItem[] = [
         subitems: [
           {
             title: "IDAM Migration",
-            description:
-              "Seamless migration of existing identity and access systems with minimal downtime and maximum security.",
+            // description:
+            //   "Seamless migration of existing identity and access systems with minimal downtime and maximum security.",
             href: "/services/idam#idam-migration",
           },
           {
             title: "Implementation & Integration ",
-            description:
-              "End-to-end implementation and integration of IDAM solutions tailored to your business needs.",
+            // description:
+            //   "End-to-end implementation and integration of IDAM solutions tailored to your business needs.",
             href: "/services/idam#idam-implementation-integration",
           },
           {
             title: "Customisation",
-            description:
-              "Personalized customization of IDAM platforms to align with unique organizational requirements.",
+            // description:
+            //   "Personalized customization of IDAM platforms to align with unique organizational requirements.",
             href: "/services/idam#idam-customization",
           },
           {
             title: "IDAM Strategy ",
-            description:
-              "Personalized IDAM strategy platforms to align with unique organizational requirements.",
+            // description:
+            //   "Personalized IDAM strategy platforms to align with unique organizational requirements.",
             href: "/services/idam#idam-strategy",
           },
           {
             title: "Evaluation & Recommendation",
-            description:
-              "Comprehensive assessment and actionable recommendations for optimizing IDAM systems.",
+            // description:
+            //   "Comprehensive assessment and actionable recommendations for optimizing IDAM systems.",
             href: "/services/idam#idam-evaluation-recommendation",
           },
           {
             title: "Technology Roadmap & Planning",
-            description:
-              "Strategic planning and roadmap development for future-proof IDAM implementations.",
+            // description:
+            //   "Strategic planning and roadmap development for future-proof IDAM implementations.",
             href: "/services/idam#idam-technology-roadmap",
           },
           {
             title: "Standard API Connectors",
-            description:
-              "Pre-built API connectors for seamless integration with existing applications and systems.",
+            // description:
+            //   "Pre-built API connectors for seamless integration with existing applications and systems.",
             href: "/services/idam#idam-api-connectors",
           },
           {
             title: "Managed Services",
-            description:
-              "Ongoing management and support for maintaining a secure and efficient IDAM environment.",
+            // description:
+            //   "Ongoing management and support for maintaining a secure and efficient IDAM environment.",
             href: "/services/idam#idam-managed-services",
           },
         ],
@@ -229,38 +229,38 @@ export const navItems: NavItem[] = [
         subitems: [
           {
             title: "Software Architecture and Design",
-            description:
-              "Crafting scalable and robust software architecture tailored to your business goals.",
+            // description:
+            //   "Crafting scalable and robust software architecture tailored to your business goals.",
             href: "/services/software-engineering#software_archi",
           },
           {
             title: "Application Management Services",
-            description:
-              "End-to-end management of software applications, ensuring performance and reliability.",
+            // description:
+            //   "End-to-end management of software applications, ensuring performance and reliability.",
             href: "/services/software-engineering#application-management-services",
           },
           {
             title: "Software and App Development",
-            description:
-              "Developing custom software and applications to meet your unique business requirements.",
+            // description:
+            //   "Developing custom software and applications to meet your unique business requirements.",
             href: "/services/software-engineering#software-app-development",
           },
           {
             title: "Hire DevOps Engineers",
-            description:
-              "Access highly skilled DevOps professionals to streamline and optimize your development pipeline.",
+            // description:
+            //   "Access highly skilled DevOps professionals to streamline and optimize your development pipeline.",
             href: "/services/software-engineering#devops",
           },
           {
             title: "System, Data, and API Integration",
-            description:
-              "Seamlessly integrate systems, data, and APIs for enhanced interoperability and efficiency.",
+            // description:
+            //   "Seamlessly integrate systems, data, and APIs for enhanced interoperability and efficiency.",
             href: "/services/software-engineering#system-data-api-integration",
           },
           {
             title: "Strategic IT Consulting",
-            description:
-              "Expert guidance on IT strategy and execution to align with business objectives.",
+            // description:
+            //   "Expert guidance on IT strategy and execution to align with business objectives.",
             href: "/services/software-engineering#strategic-it-consulting",
           },
         ],
@@ -271,8 +271,8 @@ export const navItems: NavItem[] = [
         subitems: [
           {
             title: "Cybersecurity",
-            description:
-              "Protect your digital assets with our comprehensive cybersecurity services",
+            // description:
+            //   "Protect your digital assets with our comprehensive cybersecurity services",
             href: "/services/security/cyber",
           },
         ],
@@ -285,13 +285,13 @@ export const navItems: NavItem[] = [
         subitems: [
           {
             title: "AI Management Services",
-            description: "Leverage AI solutions",
+            // description: "Leverage AI solutions",
             href: "/services/ai-management",
           },
           {
             title: "AI Foundation",
-            description:
-              "Cost management and foundational best practices for AI solutions on AWS",
+            // description:
+            //   "Cost management and foundational best practices for AI solutions on AWS",
             href: "/services/ai-management/ai-foundation",
           },
         ],
