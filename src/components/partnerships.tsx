@@ -45,14 +45,18 @@ const PartnershipSection: React.FC = () => {
               height={200}
             />
           </div>
+          {/* <div className="flex h-20 w-20 transform items-center justify-center transition-transform hover:-translate-y-2">
+            <Image src="/svg/newokta.svg" alt="Okta" width={200} height={200} />
+          </div>
           <div className="flex h-20 w-20 transform items-center justify-center transition-transform hover:-translate-y-2">
             <Image
-              src="/assets/google.png"
-              alt="Google Cloud"
+              src="/assets/sail.png"
+              alt="Sail"
               width={200}
               height={200}
+              className="bg-black"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
