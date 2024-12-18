@@ -119,7 +119,7 @@ const Footer: React.FC = () => {
                 <FaLinkedin size={24} />
               </Link>
               <Link
-                href="https://twitter.com"
+                href="https://x.com/HelloTeverse "
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-orange-650 p-2 text-black"

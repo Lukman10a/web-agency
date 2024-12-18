@@ -2,6 +2,8 @@ import React from "react";
 
 import Image from "next/image";
 
+import newteverse from "../../../public/assets/newteverse.jpg";
+
 const CallToAction: React.FC = () => {
   return (
     <div className="relative flex w-full flex-col items-center justify-between space-y-6 rounded-2xl bg-orange-650 p-8 text-black lg:space-y-0">
@@ -12,7 +14,7 @@ const CallToAction: React.FC = () => {
       </div>
       <div className="flex items-center space-x-4 sm:flex-col sm:space-x-2 sm:space-y-4">
         <Image
-          src="https://via.placeholder.com/50"
+          src={newteverse}
           alt="Ivan Sakin"
           className="h-12 w-12 rounded-full"
           width={48}

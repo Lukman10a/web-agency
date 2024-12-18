@@ -62,7 +62,8 @@ const SecurityCertifications: React.FC = () => {
         {/* Certifications Badges */}
         <div className="mx-auto flex items-center justify-center gap-12 px-5 lg:space-y-0 2md:flex-col md:gap-8">
           <AnimatedGroup
-            className="grid grid-cols-6 place-items-center gap-5 md:grid-cols-3"
+            // className="grid grid-cols-6 place-items-center gap-5 md:grid-cols-3"
+            className="flex flex-wrap justify-center gap-16"
             viewport={{
               once: false,
               amount: 0.5,
@@ -144,13 +145,6 @@ const SecurityCertifications: React.FC = () => {
             <Image
               width={500}
               height={500}
-              src={pingaccess}
-              alt="AWS Cloud Practitioner Badge"
-              className="w-32 md:h-24 md:w-24"
-            />
-            <Image
-              width={500}
-              height={500}
               src={sailpoint_certificate}
               alt="AWS DevOps Engineer Badge"
               className="h-32 w-32 md:h-24 md:w-24"
@@ -165,10 +159,17 @@ const SecurityCertifications: React.FC = () => {
             <Image
               width={500}
               height={500}
+              src={pingaccess}
+              alt="AWS Cloud Practitioner Badge"
+              className="w-32 md:h-24 md:w-24"
+            />
+            {/* <Image
+              width={500}
+              height={500}
               src={saviynt_iga}
               alt="AWS Data Analytics Badge"
               className="w-32 md:h-24 md:w-24"
-            />
+            /> */}
             <Image
               width={500}
               height={500}

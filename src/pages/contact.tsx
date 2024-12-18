@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import useContactForm from "@/hooks/use-contact";
 
@@ -23,9 +24,15 @@ export default function Contact() {
                 minutes
               </p>
             </div>
-            <button className="mx-auto flex w-1/4 justify-center rounded-full bg-orange-650 px-6 py-3 text-center font-semibold text-white ring-1 ring-darkblue-850 transition duration-300 hover:bg-orange-600 sm:w-full sm:px-2">
-              Schedule Your Call →
-            </button>
+            <Link
+              href={
+                "https://outlook.office365.com/book/ScheduleaCallwithUs@teverse.com.au/"
+              }
+            >
+              <button className="mx-auto flex w-1/4 justify-center rounded-full bg-orange-650 px-6 py-3 text-center font-semibold text-white ring-1 ring-darkblue-850 transition duration-300 hover:bg-orange-600 sm:w-full sm:px-2">
+                Schedule Your Call →
+              </button>
+            </Link>
           </div>
         </div>
 
