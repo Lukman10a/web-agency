@@ -5,12 +5,15 @@ import Link from "next/link";
 
 import AirflowLogo from "/public/assets/AirflowLogo.png";
 import databricks from "/public/assets/databricks.png";
+import deepspeed from "/public/assets/deepspeed.png";
+import detectron from "/public/assets/detectron.png";
 import hadoop from "/public/assets/hadoop_logo.svg.png";
+import jlx from "/public/assets/jlx.png";
+import kubeflow from "/public/assets/kubeflow.png";
 import apache from "/public/svg/apache.svg";
 import apachespark from "/public/svg/apachespark.svg";
 import aws from "/public/svg/aws-logo.svg";
 import azure from "/public/svg/azure.svg";
-import deepspeed from "/public/svg/deepspeed.svg";
 import gcp from "/public/svg/gcp.svg";
 import neptune from "/public/svg/neptune_ai.svg";
 import okta from "/public/svg/Okta_logo.svg";
@@ -44,6 +47,9 @@ const Hero = () => {
     hadoop,
     AirflowLogo,
     okta,
+    kubeflow,
+    jlx,
+    detectron,
   ];
 
   return (
