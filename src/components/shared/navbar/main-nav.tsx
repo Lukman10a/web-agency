@@ -8,8 +8,9 @@ import { usePathname } from "next/navigation";
 import { useRouter } from "next/router";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronRight, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 
+// ChevronRight,
 import { cn } from "@/lib/utils";
 
 import { useScrollLock } from "@/hooks/use-scroll-lock";
@@ -207,10 +208,10 @@ export function MainNav() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 20 }}
                       transition={{ duration: 0.3, delay: 0.1 }}
-                      className="grid grid-cols-3 gap-10 md:grid-cols-2"
+                      className="grid grid-cols-3 gap-10 gap-y-5 md:grid-cols-2"
                     >
                       {item.items.map((section) => (
-                        <div key={section.category} className="space-y-4">
+                        <div key={section.category} className="space-y-3">
                           <h4 className="group w-fit cursor-pointer items-center justify-between border-b-2 border-transparent text-lg font-semibold transition-all duration-300 ease-in hover:border-gray-700">
                             {section.href ? (
                               <Link href={section.href} className="h-full">
@@ -221,24 +222,24 @@ export function MainNav() {
                             )}
                           </h4>
 
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-xs text-muted-foreground">
                             {section.description}
                           </p>
                           {section.subitems && (
                             <hr className="border-gray-900 bg-gray-900" />
                           )}
-                          <div className="grid gap-4">
+                          <div className="grid gap-2">
                             {section?.subitems?.map((subitem) => (
                               <Link
                                 key={subitem.title}
                                 href={subitem.href}
-                                className="group space-y-2 rounded-lg p-4 hover:bg-muted"
+                                className="group rounded-lg p-2 hover:bg-muted"
                               >
                                 <div className="flex items-center justify-between">
                                   <h4 className="text-sm font-medium group-hover:text-primary">
                                     {subitem.title}
                                   </h4>
-                                  <ChevronRight className="ease h-4 w-4 transition-all group-hover:translate-x-1" />
+                                  {/* <ChevronRight className="ease h-4 w-4 transition-all group-hover:translate-x-1" /> */}
                                 </div>
                                 <p className="text-xs text-muted-foreground">
                                   {subitem.description}

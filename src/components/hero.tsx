@@ -3,19 +3,23 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import AirflowLogo from "/public/assets/AirflowLogo.png";
 import databricks from "/public/assets/databricks.png";
+import hadoop from "/public/assets/hadoop_logo.svg.png";
 import apache from "/public/svg/apache.svg";
 import apachespark from "/public/svg/apachespark.svg";
+import aws from "/public/svg/aws-logo.svg";
+import azure from "/public/svg/azure.svg";
 import deepspeed from "/public/svg/deepspeed.svg";
-// import aws from "/public/svg/aws-logo.svg";
-// import azure from "/public/svg/azure.svg";
-// import gcp from "/public/svg/gcp.svg";
-import neptune from "/public/svg/neptune.svg";
+import gcp from "/public/svg/gcp.svg";
+import neptune from "/public/svg/neptune_ai.svg";
+import okta from "/public/svg/Okta_logo.svg";
 import pytorch from "/public/svg/pytorch.svg";
-// import sailpoint from "/public/svg/sailpoint.svg";
-// import savyint from "/public/svg/savyint.svg";
+import sailpoint from "/public/svg/sailpoint.svg";
+import savyint from "/public/svg/savyint.svg";
 import tableau from "/public/svg/tableau.svg";
 
+// import haddop from "/public/svg/tableau.svg";
 import ArrowIcon from "./icons/arrow";
 import { PartnersSlider } from "./shared/partners-slider";
 import AnimatedBorderTrail from "./ui/animated/border-trail-simple";
@@ -32,11 +36,14 @@ const Hero = () => {
     tableau,
     neptune,
     deepspeed,
-    // savyint,
-    // sailpoint,
-    // gcp,
-    // azure,
-    // aws,
+    savyint,
+    sailpoint,
+    gcp,
+    azure,
+    aws,
+    hadoop,
+    AirflowLogo,
+    okta,
   ];
 
   return (
@@ -73,9 +80,6 @@ const Hero = () => {
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <p className="mt-3 font-mono text-base lg:mx-0 md:mt-5 md:text-xl sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg">
-                {/* We provide expert consulting services to help businesses achieve
-                secure, efficient, and scalable cloud environments. From cloud
-                migration to security audits, we&lsquo;ve got you covered. */}
                 We make your cloud smarter, your access seamless, and your AI
                 transformative. From effortless migrations to robust security
                 audits, IDAM strategies, and cutting-edge AI solutions -we
@@ -134,8 +138,9 @@ const Hero = () => {
           </InView>
         </div>
       </div>
-      <div className="mx-auto overflow-hidden bg-white">
+      <div className="mx-auto mt-4 overflow-hidden bg-white">
         <PartnersSlider images={partners} />
+        <PartnersSlider images={partners} grayscale reverse />
       </div>
     </header>
   );

@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
             {/* Social Media Icons */}
             <div className="mt-10 flex space-x-4">
               <Link
-                href=" https://www.instagram.com/teversegram?igsh=MWxqcnZndG1vN3A0Mg=="
+                href="https://www.instagram.com/teversegram"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-orange-650 p-2 text-black"
@@ -132,7 +132,6 @@ const Footer: React.FC = () => {
 
         {/* Copyright Section */}
         <div className="mt-12 text-center text-sm text-gray-400">
-          {/* Copyright © 2021 All rights reserved. @teversemultiuniverse */}
           Copyright ©️ 2024 Teverse Pty Ltd. All Rights Reserved. All trademarks
           are property of their legal owners.
         </div>

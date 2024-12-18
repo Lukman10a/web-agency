@@ -66,7 +66,7 @@ export const navItems: NavItem[] = [
       {
         category: "IDAM Solutions",
         // href: "/solutions/idam",
-        // description: "Comprehensive Identity & Access Management Solutions",
+        description: "Comprehensive Identity & Access Management Solutions",
         subitems: [
           {
             title: "Identity Governance and Administration (IGA)",
@@ -170,7 +170,7 @@ export const navItems: NavItem[] = [
         category: "Identity and Access Management (IDAM) ",
         // href: "/services/professional-services",
         description:
-          "Expert consultation and implementation for robust Identity and Access Management solutions.",
+          "Expert consultation and implementation for robust Identity and Access Management.",
         subitems: [
           {
             title: "IDAM Migration",
