@@ -90,23 +90,26 @@ export function MainNav() {
             </Link>
             <div className="flex gap-6 md:hidden">
               {navItems.map((item) => (
-                <Button
-                  key={item.title}
-                  variant="ghost"
-                  className={cn(
-                    `text-sm font-medium transition-colors hover:text-primary ${
-                      activeItem === item.title
-                        ? "text-orange-650"
-                        : "text-black"
-                    }`,
-                    isActive(item?.href as string) && "text-orange-650",
-                  )}
-                  onClick={() =>
-                    setActiveItem(activeItem === item.title ? null : item.title)
-                  }
-                >
-                  {item.title}
-                </Button>
+                <Link href="/soon" key={item.title}>
+                  <Button
+                    variant="ghost"
+                    className={cn(
+                      `text-sm font-medium transition-colors hover:text-primary ${
+                        activeItem === item.title
+                          ? "text-orange-650"
+                          : "text-black"
+                      }`,
+                      isActive(item?.href as string) && "text-orange-650",
+                    )}
+                    onClick={() =>
+                      setActiveItem(
+                        activeItem === item.title ? null : item.title,
+                      )
+                    }
+                  >
+                    {item.title}
+                  </Button>
+                </Link>
               ))}
             </div>
           </div>

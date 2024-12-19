@@ -5,9 +5,11 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 
-import migration from "../../public/assets/migration.jpg";
+// import migration from "../../public/assets/migration.jpg";
 import efficiency from "../../public/svg/efficiency.svg";
 import expert from "../../public/svg/expert.svg";
+import idam from "../../public/svg/idam.svg";
+import iga from "../../public/svg/iga.svg";
 // import cloud from "../../public/assets/cloud-managed-services.svg";
 import management from "../../public/svg/management.svg";
 import security from "../../public/svg/security.svg";
@@ -44,15 +46,15 @@ const benefits = [
     link: "/solutions/generative-ai",
   },
   {
-    img: migration,
+    img: idam,
     title: "IDAM Migration",
     description:
       "Teverse enables secure IDAM migration, improving management while reducing risks and downtime.",
     link: "/services/idam#idam-migration",
   },
   {
-    img: expert,
-    title: "IGA",
+    img: iga,
+    title: "Identity Governance and Administration (IGA)",
     description:
       "Teverse delivers IGA solutions for secure, compliant, and efficient access management.",
     link: "/solutions/idam/iga",

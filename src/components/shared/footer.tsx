@@ -26,16 +26,20 @@ const Footer: React.FC = () => {
               <h4 className="font-sora text-lg font-semibold">Company </h4>
               <ul className="mt-2 space-y-2 text-neutral-400">
                 <li>
-                  <Link href="/company/about-us">About Us </Link>
+                  {/* <Link href="/company/about-us">About Us </Link> */}
+                  <Link href="/soon">About Us </Link>
                 </li>
                 <li>
-                  <Link href="/company/culture">Our Culture</Link>
+                  {/* <Link href="/company/culture">Our Culture</Link> */}
+                  <Link href="/soon">Our Culture</Link>
                 </li>
                 <li>
-                  <Link href="/company/careers">Careers</Link>
+                  {/* <Link href="/company/careers">Careers</Link> */}
+                  <Link href="/soon">Careers</Link>
                 </li>
                 <li>
-                  <Link href="/contact">Contact</Link>
+                  {/* <Link href="/contact">Contact</Link> */}
+                  <Link href="/soon">Contact</Link>
                 </li>
               </ul>
             </div>
@@ -45,28 +49,26 @@ const Footer: React.FC = () => {
               <h4 className="font-sora text-lg font-semibold">Solutions </h4>
               <ul className="mt-2 space-y-2 text-neutral-400">
                 <li>
-                  <Link href={"/services/professional-services/aws-migration"}>
-                    Cloud Management
-                  </Link>
+                  {/* <Link href={"/services/professional-services/aws-migration"}> */}
+                  <Link href={"/soon"}>Cloud Management</Link>
                 </li>
                 <li>
-                  <Link href={"/services/professional-services/aws-migration"}>
-                    Cloud Migration
-                  </Link>
+                  {/* <Link href={"/services/professional-services/aws-migration"}> */}
+                  <Link href={"/soon"}>Cloud Migration</Link>
                 </li>
                 <li>
-                  <Link href={""}>AWS MAP</Link>
+                  <Link href={"/soon"}>AWS MAP</Link>
                 </li>
                 <li>
-                  <Link href={""}>Gen AI</Link>
+                  <Link href={"/soon"}>Gen AI</Link>
                 </li>
                 <li>
-                  <Link href={"/services/idam#idam-migration"}>
-                    IDAM Migration
-                  </Link>
+                  {/* <Link href={"/services/idam#idam-migration"}> */}
+                  <Link href={"/soon"}>IDAM Migration</Link>
                 </li>
                 <li>
-                  <Link href={"/solutions/idam/iga"}>
+                  {/* <Link href={"/solutions/idam/iga"}> */}
+                  <Link href={"/soon"}>
                     Identity Governance and Administration (IGA)
                   </Link>
                 </li>

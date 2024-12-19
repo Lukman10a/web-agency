@@ -24,7 +24,7 @@ if (typeof window !== "undefined") {
 export const navItems: NavItem[] = [
   {
     title: "Solutions",
-    href: "/solutions",
+    // href: "/solutions",
     items: [
       {
         category: "Cloud Solutions",
