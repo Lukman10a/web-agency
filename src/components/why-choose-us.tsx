@@ -5,11 +5,11 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 
-// import cloud from "../../public/assets/cloud-managed-services.svg";
-import management from "../../public/assets/management.jpg";
 import migration from "../../public/assets/migration.jpg";
 import efficiency from "../../public/svg/efficiency.svg";
 import expert from "../../public/svg/expert.svg";
+// import cloud from "../../public/assets/cloud-managed-services.svg";
+import management from "../../public/svg/management.svg";
 import security from "../../public/svg/security.svg";
 // import MoreClients from "./shared/our-clients";
 import AnimatedBorderTrail from "./ui/animated/border-trail-simple";
