@@ -22,42 +22,48 @@ const benefits = [
     title: "Cloud Management",
     description:
       "Teverse provides cloud management solutions to optimize performance, boost scalability, and drive innovation.",
-    link: "/services",
+    // link: "/services",
+    link: "/soon",
   },
   {
     img: security,
     title: "Cloud Migration",
     description:
       "Teverse streamlines cloud migration for a smooth, secure, and efficient transition.",
-    link: "/services/professional-services/aws-migration",
+    // link: "/services/professional-services/aws-migration",
+    link: "/soon",
   },
   {
     img: expert,
     title: "AWS Map",
     description:
       "Teverse accelerates your cloud journey with AWS MAP through tailored support, cost optimization, and expert guidance.",
-    link: "/services/professional-services/aws-modernization",
+    // link: "/services/professional-services/aws-modernization",
+    link: "/soon",
   },
   {
     img: efficiency,
     title: "Gen AI",
     description:
       "Teverse leverages Generative AI to drive innovation, automate processes, and deliver tailored solutions.",
-    link: "/solutions/generative-ai",
+    // link: "/solutions/generative-ai",
+    link: "/soon",
   },
   {
     img: idam,
     title: "IDAM Migration",
     description:
       "Teverse enables secure IDAM migration, improving management while reducing risks and downtime.",
-    link: "/services/idam#idam-migration",
+    // link: "/services/idam#idam-migration",
+    link: "/soon",
   },
   {
     img: iga,
     title: "Identity Governance and Administration (IGA)",
     description:
       "Teverse delivers IGA solutions for secure, compliant, and efficient access management.",
-    link: "/solutions/idam/iga",
+    // link: "/solutions/idam/iga",
+    link: "/soon",
   },
 ];
 
@@ -112,7 +118,7 @@ export default function WhyChooseUs() {
               whileHover="hover"
             >
               <Link href={benefit.link} passHref>
-                <article className="group relative flex w-full transform cursor-pointer flex-col items-center space-y-4 rounded-2xl p-8 text-center transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
+                <article className="group relative flex size-72 w-full transform cursor-pointer flex-col items-center space-y-4 rounded-2xl p-8 text-center transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:bg-orange-650 hover:text-white">
                   <motion.div variants={iconVariants}>
                     <Image
                       src={benefit.img}
